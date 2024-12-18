@@ -2610,7 +2610,6 @@ const result = calculateFactorial(number);
 console.log(' The factorial of ${number} is:\n$ {result}');
 </pre>
 
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js110">110. Check if a Number is a Strong Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3041,11 +3040,11 @@ console.log('The game is a tie!');
 // game();
 </pre>
 
-
-
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- another list of js code -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-1">1. Convert Celsius to Fahrenheit</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 celsiusToFahrenheit allows you to convert a temperature from Celsius to
 Fahrenheit. It takes a value in Celsius as input and uses the formula (Celsius
 * 9/5) + 32 to perform the conversion.exadecimal representation.
@@ -3123,7 +3122,9 @@ document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new
 Date(0).toUTCString()};path=/`));
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-10">10. Generate Random Hex</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can generate random hex colors with Math.random and padEnd
 properties.
 <pre>
@@ -3210,7 +3211,9 @@ console.log(shuffleArray([1, 2, 3, 4]));
 // Result: [ 1, 4, 3, 2 ]
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-20">20. Detect Dark Mode</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Check if a user's device is in dark mode with the following code.
 <pre>
 const isDarkMode = window.matchMedia &&
@@ -3304,7 +3307,9 @@ getLastElement([1, 2, 3, 4]);
 // Result: 4
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-30">30. Sort an Array of Numbers in Ascending Order</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Sort a given array of numbers in ascending order.
 <pre>
 const sortAscending = (arr) => arr.slice().sort((a, b) => a - b);
@@ -3386,6 +3391,7 @@ return result;
 };
 fibonacci(8);
 // Result: [0, 1, 1, 2, 3, 5, 8, 13]
+</pre>
 
 <h2 id="js-39">39. Count the Number of Words in a String</h2>
 Count the number of words in a given string.
@@ -3393,8 +3399,9 @@ Count the number of words in a given string.
 const countWords = (str) => str.trim().split(/\s+/).length;
 console.log(countWords("Hello world, how are you?")); // Output: 5
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-40">40. Reverse an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Reverse the elements of a given array.
 <pre>
 const reverseArray = (arr) => arr.slice().reverse();
@@ -3487,7 +3494,9 @@ console.log(startsWithChar("Hello, world!", "h"));
 // Output: false
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-50">50. Convert a String to Title Case</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Convert a given string to title case (capitalize the first letter of each word).
 <pre>
 const toTitleCase = (str) => str.replace(/\b\w/g, match =>
@@ -3581,7 +3590,9 @@ console.log(exponentiate(2, 3));
 // Output: 8
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-60">60. Find the Difference between Two Dates in Days</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Find the difference between two dates in days.
 <pre>
 const dateDifferenceInDays = (date1, date2) => Math.abs(Math.floor((date2
@@ -3683,7 +3694,9 @@ console.log(hasEvenNumber([1, 3, 5, 7, 9]));
 // Output: false
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-70">70. Get the Month Name from a Date</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Get the name of the month from a given date.
 <pre>
 const getMonthName = (date) => {
@@ -3783,7 +3796,9 @@ console.log(degToRad(90));
 // Output: 1.5707963267948966
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-80">80. Check if a String is a Valid URL</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Check if a given string is a valid URL.
 <pre>
 const isValidURL = (url) => {
@@ -3888,7 +3903,9 @@ console.log(firstNElements([1, 2, 3, 4, 5], 3));
 // Output: [1, 2, 3]
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-90">90. Check if a Number is Odd</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Get the first N elements from the beginning of an array.
 <pre>
 const isOdd = (num) => num % 2 !== 0;
@@ -3994,7 +4011,9 @@ console.log(findLongestWord("Hello, how are you doing?"));
 // Output: "doing?"
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-100">100. Count the Occurrences of a Character in a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Count the occurrences of a character in a string.
 <pre>
 const countOccurrences = (str, char) => str.split(char).length - 1;
@@ -4120,7 +4139,9 @@ console.log(isSubset([1, 2, 3], [2, 3, 1, 5, 6]));
 // Output: true
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-110">110. Find the Minimum and Maximum Numbers in an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The minMax function calculates both the minimum and maximum values
 within an array. It achieves this by employing the Math.min and Math.max
 functions alongside the spread operator to extract the elements' values from
