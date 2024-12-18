@@ -303,8 +303,9 @@ console.log(
 console.log("Please enter valid positive numbers for base and height.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js5">5. Swap Two Variables</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter two variables and swaps their values. It then displays the variables
 before and after the swap.
 let variable 1 = promptf'Enter the first variable:");
@@ -529,8 +530,9 @@ console.log(
 );
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js15">15. Find the Factorial of a Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the factorial of a given number. The factorial of a non-negative integer n , denoted
 as n!, is the product of all positive integers less than or equal to n .
 <pre>
@@ -803,8 +805,9 @@ lcm += largerNumber;
 console.log("Please enter valid positive integers.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js25">25. Find the Factors of a Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a positive integer and calculates and displays its factors.
 <pre>
 // Prompt user for a positive integer
@@ -1052,8 +1055,9 @@ console.log(sortedWords.join(','));
 console.log("Please enter a valid string.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js35">35. Replace Characters of a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a string, a target character, and a replacement character. It then
 replaces all occurrences of the target character with the replacement character and displays the modified
 string.
@@ -1234,8 +1238,9 @@ let randomstring = generateRandomString(8);
 // Display the random string
 console.log(' Random String: $ {randomstring}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js45">45. Check if a String Starts with Another String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a string starts with another string using the startsWit h method.
 <pre>
 // Example strings
@@ -1384,8 +1389,9 @@ let formattedDate = currentDate.toLocaleDateString('en-US');
 // Display the result
 console.log(' Current Date: ${formattedDate}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js55">55. Compare The Value of Two Dates</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Compare the values of two dates using standard comparison operators ( < , < = , > ,
 II Example dates
 <pre>
@@ -1547,8 +1553,9 @@ console.log("The variable is either undefined or null.");
 console.log("The variable is defined and not null.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js65">65. Generate a Random Number Between Two Numbers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To generate a random number between two specific numbers in JavaScript, you can use the Math.random()
 function along with some arithmetic.
 <pre>
@@ -1773,8 +1780,9 @@ console.log("Dequeued element:", queue.dequeue()); // Outputs: 1
 console.log("Queue size:", queue.sizeQ); // Outputs: 2
 console.logf'Is the queue empty?", queue.isEmptyO); // Outputs: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js75">75. Check if a Number is Float or Integer</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can check if a number is a float or an integer by examining its fractional part.
 <pre>
 function checkNumberType(number) {
@@ -1951,8 +1959,9 @@ const nonEmptyString = "Hello, world!";
 console.log("Is emptystring empty?", isEmptyString(emptyString)); // Outputs: true
 console.logf'Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outputs: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js85">85. Capitalize the First Letter of a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To capitalize the first letter of a string in JavaScript, you can use a combination of the charAt(),
 toUpperCase(), and slice() methods.
 <pre>
@@ -2157,8 +2166,9 @@ console.log(' Interest Rate: $ {interestRate}%');
 console.log(' Investment Time: $ {investmentTime} years');
 console.log(' Simple Interest: $${interestAmount}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js95">95. Implement a Basic Stopwatch</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To implement a basic stopwatch in JavaScript, you can use the Dat e object to measure the elapsed time.
 <pre>
 let startTime;
@@ -2409,8 +2419,9 @@ const testNumber = 25;
 const result = isPerfectSquare(testNumber);
 console.log(' Is $ {testNumber} a perfect square? $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js105">105. Find the Area of a Rectangle</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the area of a rectangle in JavaScript, you can create a function that takes the length and width as
 parameters and applies the formula:
 Area=Length x Width Area=Length x Width
@@ -2631,9 +2642,9 @@ const trapezoidHeight = 4;
 const result = trapezoidArea(baselLength, base2Length, trapezoidHeight);
 console.log(' The area of the trapezoid is: $ {result}');
 </pre>
-
-<h2 id="js115">115. Calculate the Greatest Common Divisor</h2>
-(GCD) of Two Numbers
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js115">115. Calculate the Greatest Common Divisor (GCD) of Two Numbers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The Greatest Common Divisor (GCD), also known as the Greatest Common Factor (GCF) or Highest Common
 Factor (HCF), is the largest positive integer that divides both numbers without leaving a remainder. There
 are different algorithms to calculate the GCD of two numbers, and one commonly used algorithm is the
@@ -2771,8 +2782,6 @@ function areAnagrams(strl, str2) {
           console.log(' ${stringl} and ${string2} are anagrams: ${result&rbrack;');
       }
 </pre>
-
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js120">120. Generate Pascal's Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2876,8 +2885,9 @@ const areaResult = parallelogramArea(parallelogramBase, parallelogramHeight);
 console.log(' The area of the parallelogram is: $ {areaResult}');
 </pre>
 
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js123">123. Basic Rock, Paper, Scissors Game</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Here's a basic implementation of a Rock, Paper, Scissors game using JavaScript.
 <pre>
 function computerPlayO {
@@ -2930,6 +2940,2407 @@ console.log('The game is a tie!');
 // Uncomment the line below to start the game
 // game();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js124">124. Basic Slot Machine Game</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a basic slot machine game in which three symbols are randomly selected. If all three
+symbols are the same, the player wins; otherwise, they are encouraged to try again.
+<pre>
+// Array of symbols for the slot machine
+const symbols = ['
+'];
+// Function to get a random symbol from the array
+function getRandomSymbol() {
+const randomindex = Math.floor(Math.random() * symbols.length);
+return symbols[randomlndex];
+}
+// Function to simulate a spin of the slot machine
+function spin() {
+// Get three random symbols
+const result 1 = getRandomSymbol();
+const result2 = getRandomSymbol();
+const results = getRandomSymbol();
+// Display the results
+console.log(' Result: $ {result 1} - $ {result2} - $ {results}');
+// Check for a win
+if (result 1 = = = result2 && result2 = = = results) {
+console.logC Congratulations! You won! ');
+} else {
+console.logC Try again. Better luck next time! ');
+// Example usage - simulate a spin
+spin();
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+125. Check if a Number is a Smith Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given positive integer is a Smith number. A Smith number is a composite number
+for which the sum of its digits is equal to the sum of the prime factors' digits. The sum of the prime factors'
+digits is computed recursively until prime factors are obtained.
+function isPrime(num) {
+if (num < 2) return false;
+for (let i = 2; i < = Math.sqrt(num); i++) {
+if (num % i = = = 0) return false;
+1
+return true;
+function sumOfDigits(number) {
+return number.toString().split(").reduce((sum, digit) => sum + parselnt(digit, 10), 0);
+}
+function primeFactors(number) {
+const factors = [];
+for (let i = 2; i < = number; i+ +) {
+while (isPrime(i) && number % i = = = 0) {
+factors.push(i);
+number/= i;
+return factors;
+function isSmithNumber(number) {
+const originalSum = sumOfDigits(number);
+const primeFactorSum = primeFactors(number).reduce((sum, factor) => sum + sumOfDigits(factor), 0);
+return originalSum = = = primeFactorSum;
+}
+// Example: Check if 728 is a Smith number
+console.log(isSmithNumber(728)); // Output: true
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+126. Basic Chessboard
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a basic representation of a chessboard using characters. It creates an 8x8 grid with
+alternating black and white squares, providing a simple visual representation of a chessboard.
+// Function to generate a basic chessboard
+function generateChessboard() {
+const size = 8; // Size of the chessboard (8x8)
+const chessboard = [];
+for (let row = 0; row < size; row+ +) {
+const currentRow = [];
+for (let col = 0; col < size; col++) {
+// Use 'X' for black squares and'' for white squares
+const isBlack = (row + col) % 2 = = = 1;
+const square = isBlack ? 'X':'
+currentRow.push(square);
+}
+chessboard.push(currentRow.join(''));
+}
+return chessboard.join('\n');
+}
+// Example usage
+const chessboard = generateChessboard();
+console.log(chessboard);
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+127. Generate a Random Password with Specific Criteria
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a random password based on specified criteria, including the length and the types
+of characters (uppercase letters, lowercase letters, numbers, and special characters).
+// Function to generate a random password
+function generateRandomPassword(length, includeUppercase, includeLowercase, includeNumbers,
+includeSpecialChars) {
+const uppercaseChars = ABCDEFGHIJKLMNOPQRSTUV WXYZ';
+const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+const numberChars = '0123456789';
+const specialchars = ,!@#$%A&*()-=_+[]{}l;:,.<>?';
+let validChars =
+let password =
+if (includeUppercase) validChars + = uppercaseChars;
+if (includeLowercase) validChars + = lowercaseChars;
+if (includeNumbers) validChars + = numberChars;
+if (includeSpecialChars) validChars + = specialchars;
+if (validChars.length = = = 0) {
+console.error('Error: At least one character type must be selected.');
+return null;
+}
+for (let i = 0; i < length; i++) {
+const randomindex = Math.floor(Math.random() * validChars.length);
+password + = validChars.charAt(randomlndex);
+return password;
+1
+// Example usage
+const passwordLength = 12;
+const includeUppercase = true;
+const includeLowercase = true;
+const includeNumbers = true;
+const includeSpecialChars = true;
+const randomPassword = generateRandomPassword(passwordLength, includeUppercase, includeLowercase,
+includeNumbers, includeSpecialChars);
+if (randomPassword) {
+console.log(' Random Password: ${randomPassword}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+128. Basic Maze Solver
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a basic maze solver that navigates through a maze represented by a 2D array. The
+solver uses a simple depth-first search algorithm to find a path from the starting point to the exit.
+// Function to solve a maze using depth-first search
+function solveMaze(maze) {
+const rows = maze.length;
+const cols = maze[O].length;
+const visited = Array.from({ length: rows}, () = > Array(cols).fill(false));
+function isSafe(row, col) {
+return row > = 0 && row < rows &.& col > = 0 && col < cols && maze[row][col] = = = 1 && !visited[row][col];
+}
+function dfs(row, col) {
+if (ro w = = = ro ws -1 && col = = = cols -1){
+// Reached the exit
+return true;
+if (isSafe(row, col)) {
+visited[row][col] = true;
+// Move in all possible directions (up, down, left, right)
+const directions = [
+[-1,0], // Up
+[1, 0], // Down
+[0,-1],// Left
+[0,1] //Right
+];
+for (const [dr, de] of directions) {
+const newRow = row + dr;
+const newCol = col + de;
+if (dfs(newRow, newCol)) {
+return true;
+1
+}
+visited[row][col] = false; // Backtrack
+}
+return false;
+}
+// Start the depth-first search from the top-left corner
+if (dfs(0,0)) {
+console.log('Path found! ');
+} else {
+console.log('No path found. ');
+// Example usage
+const maze = [
+11,0,1,1,1],
+[1,1,1,0,1],
+[0,0,1,1,1],
+[0,0,1, 0,1],
+[0,0,1,1,1]
+];
+solveMaze(maze);
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+129. Check if a String is Pangram or Not
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks whether a given string is a pangram or not. A pangram is a sentence that contains every
+letter of the alphabet at least once.
+// Function to check if a string is a pangram
+function isPangram(str) {
+const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+const lowercasedStr = str.toLowerCase();
+for (const char of alphabet) {
+if (llowercasedStr.includes(char)) {
+return false;
+1
+}
+return true;
+}
+// Example usage
+const inputstring = "The quick brown fox jumps over the lazy dog";
+if (isPangram(inputString)) {
+console.log('The given string is a pangram! ');
+} else {
+console.log('The given string is not a pangram. ');
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+130. Basic Sudoku Solver
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program solves a basic 9x9 Sudoku puzzle using a backtracking algorithm. The solver fills in the empty
+cells of the Sudoku grid by recursively trying numbers until a solution is found.
+// Function to check if a number can be placed in a particular cell
+function isSafe(board, row, col, num) {
+// Check if ’num' is not present in the current row and column
+for (leti = 0;i < 9;i++) {
+if (board[row][i] = = = num 11 board[i][col] = = = num) {
+return false;
+}
+// Check if'num' is not present in the 3x3 subgrid
+const startRow = Math.floor(row / 3) * 3;
+const startCol = Math.floor(col / 3) * 3;
+for (leti = 0;i < 3;i++){
+for (let j = 0; j < 3;j++){
+if (board[startRow + i][startCol + j] = = = num) {
+return false;
+1
+1
+1
+return true;
+}
+// Function to find an empty cell in the Sudoku grid
+function findEmptyCell(board) {
+for (let row = 0; row < 9; row++) {
+for (let col = 0; col < 9; col++) {
+if (board[row][col] = = = 0) {
+return [row, col];
+}
+1
+}
+return null;
+1
+// Function to solve the Sudoku puzzle using backtracking
+function solveSudoku(board) {
+const emptyCell = findEmptyCell(board);
+if (’emptyCell) {
+// No empty cell found, the puzzle is solved
+return true;
+}
+const [row, col] = emptyCell;
+
+// Try filling the empty cell with numbers 1 to 9
+for (let num = l;num <= 9;num++) {
+if (isSafe(board, row, col, num)) {
+// If placing 'num' in the current cell is safe, try the next step
+board[row][col] = num;
+// Recursively attempt to solve the rest of the puzzle
+if (solveSudoku(board)) {
+return true;
+}
+// If placing 'num' in the current cell leads to an invalid solution, backtrack
+board[row][col] = 0;
+// No number from 1 to 9 can be placed in the current cell, backtrack
+return false;
+}
+// Example usage
+const sudokuBoard = [
+[5,3,0, 0, 7,0,0, 0, 0],
+[6,0, 0,1, 9, 5,0, 0, 0],
+[0, 9, 8, 0, 0, 0, 0, 6, 0],
+[8, 0, 0, 0, 6, 0, 0, 0, 3],
+[4, 0, 0,8, 0,3,0, 0,1],
+[7, 0, 0, 0, 2, 0, 0, 0, 6],
+[0, 6, 0, 0, 0, 0, 2, 8, 0],
+[0, 0, 0, 4, 1,9,0, 0,5],
+[0, 0, 0, 0, 8, 0, 0, 7, 9]
+];
+if (solveSudoku(sudokuBoard)) {
+console.log('Sudoku solved successfully:');
+console.log(sudokuBoard.map(row => row.join(' ')).join('\n'));
+} else {
+console.log('No solution exists for the given Sudoku puzzle.');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+131. Convert Objects to Strings
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program convert JavaScript objects to strings, you can use the JSON.stringify() method.
+// Example object
+let person = {
+firstName: "John",
+lastName: "Doe",
+age: 30
+};
+// Convert object to a JSON-formatted string
+let jsonString = JSON.stringify(person);
+// Display the result
+console.log("Original Object:");
+console.log(person);
+console. log("\nJSON-formatted String:");
+console.log(jsonString);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+132. Find the Area of an Ellipse
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the area of an ellipse given its semi-major axis (a) and semi-minor axis (b). The
+formula for the area of an ellipse is * $ * ^71 * Cl * b.
+II Function to calculate the area of an ellipse
+function calculateEllipseArea(semiMajorAxis, semiMinorAxis) {
+const pi = Math.PI;
+const area = pi * semiMajorAxis * semiMinorAxis;
+return area;
+}
+// Example usage
+const semiMajorAxis = 5;
+const semiMinorAxis = 3;
+const ellipseArea = calculateEllipseArea(semiMajorAxis, semiMinorAxis);
+console.log(' The area of the ellipse is: ${ellipseArea.toFixed(2)}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+133. Check if a Number is a Palindrome in Binary
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks whether a given number is a palindrome in binary representation. A palindrome in
+binary reads the same backward as forward.
+// Function to check if a number is a palindrome in binary
+function isBinaryPalindrome(number) {
+const binaryRepresentation = number.toString(2);
+const reversedBinary = binaryRepresentation.split(").reverse().join(");
+return binaryRepresentation = = = reversedBinary;
+// Example usage
+const numberToCheck = 9; // Replace with the number you want to check
+if (isBinaryPalindrome(numberToCheck)) {
+console.log(' ${numberToCheck} is a binary palindrome!
+');
+} else {
+console.log(' $ {numberToCheck} is not a binary palindrome. ');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+134. Find the Area of a Rhombus
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the area of a rhombus given the lengths of its diagonals ( d 1 and d 2 ). The formula
+for the area of a rhombus is Area = (dl * d2) / 2 , where d 1 and d 2 are the lengths of the diagonals.
+// Function to calculate the area of a rhombus
+function calculateRhombusArea(diagonall, diagonal) {
+const area = (diagonal 1 * diagonal) / 2;
+return area;
+}
+// Example usage
+const diagonal 1 Length = 8;
+const diagonal2Length = 6;
+const rhombusArea = calculateRhombusArea(diagonallLength, diagonal2Length);
+console.log(' The area of the rhombus is: $ {rhombus Area.toFixed(2)j');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+135. Check if a Number is a Catalan Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Cn = (2n)!/((n+ l)!*n!) .
+This program checks if a given non-negative integer is a Catalan number. Catalan numbers are a sequence
+of natural numbers that occur in various counting problems, often involving recursive structures. The nth
+Catalan number is given by the formula:
+// Function to calculate binomial coefficient (n choose k)
+function binomialCoefficient(n, k) {
+if(k>n-k){
+k = n - k;
+1
+let result = 1;
+for (let i = 0; i < k; i++) {
+result *= (n - i);
+result /= (i + 1);
+1
+return result;
+// Function to check if a number is a Catalan number
+function isCatalanNumber(num) {
+for (let i = 0; i < = num; i++) {
+if (binomialCoefficient(2 * i, i) = = = num / (i + 1)) {
+return true;
+return false;
+// Example usage
+const numberToCheck = M-JI Replace with the number you want to check
+if (isCatalanNumber(numberToCheck)) {
+console.log(' ${numberToCheck} is a Catalan number!
+');
+} else {
+console.log(' ${numberToCheck} is not a Catalan number.
+');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+136. Find the Luhn Algorithm Check Digit
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, is a simple checksum formula
+used to validate various identification numbers, such as credit card numbers. The algorithm is used to detect
+accidental errors in these numbers.
+function calculateLuhnCheckDigit(input) {
+// Convert the input string to an array of digits
+const digits = input.toString().split(").map(Number);
+// Double every second digit from the right
+for (let i = digits.length - 2; i > = 0; i -= 2) {
+let doubledDigit = digits[i] * 2;
+// If doubling results in a number greater than 9, subtract 9
+if (doubledDigit > 9) {
+doubledDigit-= 9;
+digitsfi] = doubledDigit;
+1
+// Calculate the sum of all digits
+const sum = digits.reduce((acc, digit) = > acc + digit, 0);
+// Find the smallest number (x) such that (sum + x) is a multiple of 10
+const checkDigit = (10 - (sum % 10)) % 10;
+return checkDigit;
+// Example usage
+const partialNumber = 123456789;// Replace with the partial number for which you want to calculate the check digit
+const checkDigit = calculateLuhnCheckDigit(partialNumber);
+const fullNumber = ' $ {partialNumber} $ {checkDigit}';
+console.log(' Partial Number: ${partialNumber}');
+console.log(' Check Digit: ${checkDigit}');
+console.log(' Full Number with Check Digit: $ {fullNumber}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+137. Basic Maze Generator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic maze generator involves using an algorithm to generate a random maze layout. One
+common algorithm for maze generation is the recursive backtracking algorithm.
+class MazeGenerator {
+constructor(rows, cols) {
+this.rows = rows;
+this.cols = cols;
+this.grid = Array.from({ length: rows },()=> Array(cols).fill(0));
+}
+generateMaze() {
+this.visitCell(0,0);
+1
+visitCell(row, col) {
+this.grid[row][col] = 1; // Mark the current cell as visited
+// Define the possible directions (up, down, left, right)
+const directions = [
+[0,-2],
+[0, 2],
+[-2, 0],
+[2,0]
+// Shuffle the directions randomly
+directions.sort(() => Math.random() - 0.5);
+for (const [dr, de] of directions) {
+const newRow = row + dr;
+const newCol = col + de;
+// Check if the new cell is within bounds and unvisited
+if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid[newRow][newCol] = = =
+0){
+// Mark the cell between the current and new cell as visited
+this.grid[row + dr / 2][col + de / 2] = 1;
+// Recursively visit the new cell
+this.visitCell(newRow, newCol);
+1
+}
+}
+printMaze() {
+for (const row of this.grid) {
+console.log(row.map(cell => (cell = = = 1 ? ": '#')).join("));
+// Example usage
+const mazeRows =11;
+const mazeCols = 21;
+const mazeGenerator = new MazeGenerator(mazeRows, mazeCols);
+mazeGenerator.generateMaze();
+mazeGenerator.printMazeO;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+138. Check if a Year is a Magic Year
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+A magic year is a year in which the product of the month and day (in two-digit form) equals the last two
+digits of the year. For example, in the year 1978, the product of the month (7) and the day (8) is 56, which
+matches the last two digits of the year.
+function isMagicYear(year) {
+const yearStr = year.toStringO;
+const month = parse!nt(yearStr.substring(O, 2), 10);
+const day = parse!nt(yearStr.substring(2,4), 10);
+return month * day = = = parse!nt(yearStr.substring(4), 10);
+// Example usage
+const yearToCheck = 1978; // Replace with the year you want to check
+if (isMagicYear(yearToCheck)) {
+console.log(' ${yearToCheck} is a Magic Year! ');
+} else {
+console.log('${yearToCheck}isnotaMagicYear. ');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+139. Basic Crossword Puzzle
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic crossword puzzle involves defining a grid and placing words into it, ensuring that they
+intersect correctly. Below is a simple JavaScript program that generates a crossword puzzle with a few words.
+The generated puzzle is displayed in the console:
+class CrosswordPuzzle {
+constructor(rows, cols) {
+this.rows = rows;
+this.cols = cols;
+this.grid = Array.from({ length: rows },()=> Array(cols).fill(''));
+this.words = [];
+}
+addWord(word, row, col, direction) {
+if (direction = = = 'across') {
+for (let i = 0; i < word.length; i++) {
+this.grid[row][col + i] = word[i];
+1
+} else if (direction = = = 'down') {
+for (let i = 0; i < word.length; i++) {
+this.grid[row + i][col] = word[i];
+1
+}
+this.words.push({ word, row, col, direction});
+}
+printPuzzleO {
+for (const row of this.grid) {
+console.log(row.join(''));
+}
+1
+}
+// Example usage
+const crossword = new CrosswordPuzzle(5, 5);
+crossword.addWordfapple', 1,1,'across');
+crossword.addWord('banana', 3, 0, 'down');
+crossword.addWord('grape', 0, 3, 'across');
+crossword.printPuzzleQ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+140. Find the Area of a Regular Polygon
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the area of a regular polygon given the number of sides ( n ) and the side length ( s ).
+The formula for the area of a regular polygon is Area = (n * s*2) / (4 * tan(it/n)), where n is the number of
+sides, s is the side length, and tan is the tangent function.
+function calculateRegularPolygonArea(n, s) {
+const numerator = 1 / 4 * n * Math.pow(s, 2);
+const denominator = Math.tan(Math.PI I n);
+const area = numerator / denominator;
+return area;
+// Example usage
+const numberOfSides = 6; // Replace with the number of sides of your polygon
+const sideLength = 5; // Replace with the length of each side of your polygon
+const polygonArea = calculateRegularPolygonArea(numberOfSides, sideLength);
+console.log(' The area of the regular polygon is: ${polygonArea.toFixed(2)}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+141. Check if a Number is an Abundant Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+An abundant number (or excessive number) is a positive integer that is smaller than the sum of its proper
+divisors, excluding itself. The sum of proper divisors is greater than the number itself.
+function getProperDivisorsSum(number) {
+let sum = 0;
+for (let i = 1; i < = Math.floor(number I 2); i++) {
+if (number % i === 0) {
+sum + = i;
+}
+return sum;
+function isAbundantNumber(number) {
+const divisorsSum = getProperDivisorsSum(number);
+return divisorsSum > number;
+}
+// Example usage
+const numberToCheck = 12;// Replace with the number you want to check
+if (isAbundantNumber(numberToCheck)) {
+console.logC ${numberToCheck} is an Abundant Number!
+');
+} else {
+console.logC ${numberToCheck} is not an Abundant Number. ');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+142. Basic Word Guessing Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic word guessing game in a console environment involves generating a random word, allowing
+the player to make guesses, and providing feedback on correct and incorrect guesses.
+class WordGuessingGame {
+constructorwordList) {
+this.wordList = wordList;
+this.selectedWord = this.getRandomWord();
+this.guesses = [];
+this.maxAttempts = 6;
+}
+getRandomWord() {
+const randomindex = Math.floor(Math.random() * this.wordList.length);
+return this.wordList[randomIndex].toUpperCase();
+1
+displayWordO {
+return this.selectedWord
+.split(")
+.map(letter => (this.guesses.includes(letter) ? letter:
+•joinf');
+}
+makeGuess(letter) {
+letter = letter.toUpperCase();
+if (!this.guesses.includes(letter)) {
+this.guesses.push(letter);
+if (Ithis.selectedWord.includes(letter)) {
+this.maxAttempts—;
+if (this.maxAttempts = = = 0) {
+console.log(' Sorry, you're out of attempts. The word was: ${this.selectedWord}');
+process.exit();
+}
+console.log(' Attempts left: $ {this.maxAttempts}');
+console.log(' Current word: ${this.displayWord()}');
+if (!this.displayWord().includes('_')) {
+console.log('Congratulations! You guessed the word!');
+process.exitQ;
+// Example usage
+const wordList = ['javascript', 'python', 'java', 'ruby', 'typescript'];
+const game = new WordGuessingGame(wordList);
+console.log('Welcome to the Word Guessing Game!');
+console.log(' Attempts left: ${game.maxAttempts}');
+console.log(' Current word: ${game.displayWord()}');
+// Simulate the game loop (you can replace this with actual user input in a real environment)
+game.makeGuess('a');
+game.makeGuess('e');
+game.makeGuess('i');
+game.makeGuess('o');
+game.makeGuess('u');
+game.makeGuess('s');
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+143. Calculate the Euler's Totient Function
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates Euler's Totient Function, also known as Euler's Phi Function, which counts the
+positive integers up to a given integer n that are relatively prime to n . The formula for Euler's Totient
+Function is: cf>(n) = n * (1 - 1/pl) * (1 - l/p2) * ... * (1 - 1/pk), where pl, p2,..., pk are the distinct prime factors
+of n .
+function eulerTotientFunction(n) {
+if(n<=0){
+return "Input must be a positive integer.";
+}
+let result = n; // Initialize result as n
+// Iterate through all prime factors of n
+for (letp = 2;p *p < = n;p++) {
+if (n % p = = = 0) {
+while (n % p = = = 0) {
+n/=p;
+result -= result / p; // Apply the formula for prime factors
+}
+// If n is a prime number greater than 1
+if (n > 1) {
+result -= result / n;
+return Math.floor(result); // Return the result as an integer
+// Example usage
+const n = 12;// Replace with the positive integer for which you want to calculate Euler's Totient Function
+const result = eulerTotientFunction(n);
+console.log(' Euler's Totient Function for ${n} is: $ {result}');
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+144. Basic Memory Matching Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic memory matching game involves displaying a grid of face-down cards, allowing the player
+to flip two cards at a time, and checking for matches.
+class MemoryMatchingGame {
+constructor(cards) {
+this.cards = cards.concat(cards); // Duplicate the cards to create pairs
+this.shuffleCardsO;
+this.board = this.createBoardQ;
+this.flippedCards = [];
+this.attempts = 0;
+this.matches = 0;
+shuffleCardsO {
+for (let i = this.cards.length -1; i > 0; i—) {
+constj = Math.floor(Math.random() * (i + 1));
+[this.cards[i], this.cards[j]] = [this.cards[j], this.cardsfi]];
+}
+createBoard() {
+const board = [];
+for (let i = 0; i < 4; i++) {
+const row = [];
+for (let j = 0; j <4;j++){
+row.push(this.cards[i * 4 + j]);
+board.push(row);
+return board;
+displayBoard() {
+for (const row of this.board) {
+console.log(row.map(card => (card.faceUp ? card.value : 'X')).join(''));
+}
+flipCard(row, col) {
+const card = this.board[row][col];
+if (’card.faceUp && this.flippedCards.length < 2) {
+card.faceUp = true;
+this.flippedCards.push(card);
+if (this.flippedCards.length = = = 2) {
+this.attempts++;
+if (this.flippedCards[O].value = = = this.flippedCards[l].value) {
+this.matches++;
+console.log('Match found!');
+} else {
+console.logfNo match. Try again.');
+this.flippedCards.forEach(card => (card.faceUp = false));
+this.flippedCards = [];
+}
+this.displayBoard();
+if (this.matches = = = this.cards.length / 2) {
+console.log(' Congratulations! You completed the game in ${this.attempts} attempts.');
+process.exitO;
+// Example usage
+const cards = [
+{value: 'A', faceUp: false},
+{value: 'B', faceUp: false},
+{value: '0, faceUp: false},
+{value: 'D', faceUp: false},
+{value: 'A', faceUp: false},
+{value: 'B', faceUp: false},
+{value: 'C, faceUp: false},
+{value: 'D', faceUp: false}
+];
+const game = new MemoryMatchingGame(cards);
+console.logC Welcome to the Memory Matching Game!');
+game.displayBoard();
+// Simulate the game loop (you can replace this with actual user input in a real environment)
+game.flipCard(O, 0);
+game.flipCard(l, 1);
+game.flipCard(2, 2);
+game.flipCard(3, 3);
+game.flipCard(0,1);
+game.flipCard(l, 0);
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+145. Check if a Number is a Vampire Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+A vampire number is a composite (non-prime) natural number with an even number of digits, which can be
+factored into two integers, both having half as many digits as the original number, and where the digits of
+the original number can be rearranged to form the digits of the two smaller numbers. For example, 1260 is a
+vampire number because it can be factored into 21 and 60, and the digits of 1260 can be rearranged to form
+the digits of 21 and 60.
+function isVampireNumber(number) {
+const strNumber = number.toStringO;
+const length = strNumber.length;
+if (length % 2 !== 0) {
+// Vampire numbers must have an even number of digits
+return false;
+}
+const pairs = getDigitPairs(strNumber);
+for (const [pairl, pair2] of pairs) {
+if (pairl = = = 0 || pair2 = = = 0) {
+// Exclude cases where one of the pairs has a leading zero
+continue;
+if (number = = = pairl * pair2) {
+return true;
+}
+return false;
+}
+function getDigitPairs(strNumber) {
+const pairs = [];
+const length = strNumber.length;
+for (let i = 0; i < length; i++) {
+for (let j = 0;j < length; j++) {
+if (i !==j){
+const pairl = parse!nt(strNumber[i] + strNumber[j], 10);
+const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index != = j).join("), 10);
+pairs.push([pairl, pair 2]);
+}
+}
+1
+return pairs;
+// Example usage
+const vampireNumber = 1260;// Replace with the number you want to check
+if (isVampireNumber(vampireNumber)) {
+console.log(' ${vampireNumber} is a Vampire Number! ');
+} else {
+console.logC ${vampireNumber} is not a Vampire Number.
+');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+146. Basic Simon Says Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic Simon Says game involves generating and displaying a sequence of colors, then challenging
+the player to repeat the sequence.
+class SimonSaysGame {
+constructor(colors) {
+this.colors = colors;
+this.sequence = [];
+this.playerSequence = [];
+this.round = 1;
+this.generateSequenceQ;
+generateSequenceO {
+for (let i = 0; i < this.round; i++) {
+const randomindex = Math.floor(Math.random() *this.colors.length);
+this.sequence.push(this.colors[randomlndex]);
+}
+displaySequenceO {
+console.log(' Round ${this.round} - Simon says:');
+for (const color of this.sequence) {
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+146. Basic Simon Says Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic Simon Says game involves generating and displaying a sequence of colors, then challenging
+the player to repeat the sequence.
+class SimonSaysGame {
+constructor(colors) {
+this.colors = colors;
+this.sequence = [];
+this.playerSequence = [];
+this.round = 1;
+this.generateSequenceQ;
+generateSequenceO {
+for (let i = 0; i < this.round; i++) {
+const randomindex = Math.floor(Math.random() *this.colors.length);
+this.sequence.push(this.colors[randomlndex]);
+}
+displaySequenceO {
+console.log(' Round ${this.round} - Simon says:');
+for (const color of this.sequence) {
+console.log(color);
+// Simulate a delay between colors (you can replace this with actual delays in a real environment)
+this.sleep(lOOO);
+console.clearO;
+getPlayerlnputO {
+console.log('Your turn! Enter the sequence (e.g., "red blue green"):');
+// Simulate user input (you can replace this with actual user input in a real environment)
+const userinput = promptfEnter the sequence:').toLowerCase();
+this.playerSequence = userlnput.split('');
+}
+checkSequenceO {
+for (let i = 0; i < this.round; i++) {
+if (this.playerSequence[i] !== this.sequencefi]) {
+console.log('Wrong sequence! Game over.1);
+process.exitO;
+1
+}
+console.log('Correct sequence! Next round.');
+this.round++;
+1
+sleep(ms) {
+return new Promise(resolve => setTimeout(resolve, ms));
+}
+async play() {
+while (true) {
+this.displaySequenceO;
+this.getPlayerlnputO;
+this.checkSequenceO;
+}
+1
+}
+// Example usage
+const colors = ['red’, 'blue', 'green', 'yellow'];
+const simonSaysGame = new SimonSaysGame(colors);
+console.log('Welcome to Simon Says! Repeat the sequence correctly to advance.');
+// Start the game loop
+simonSaysGame.playO;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+147. Calculate the Area of a Hexagon
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the area of a regular hexagon given the side length ( s ). The formula for the area of
+a regular hexagon is Area = (3 * V3 * s*2) / 2 , where s is the side length.
+function calculateHexagonArea(sideLength) {
+const area = (3 * Math.sqrt(3) / 2) * Math.pow(sideLength, 2);
+return area;
+// Example usage
+const sideLength = 5; // Replace with the length of a side of your hexagon
+const hexagonArea = calculateHexagonArea(sideLength);
+console.log(' The area of the hexagon is: ${hexagonArea.toFixed(2)}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+148. Check if a Number is a Pronic Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given non-negative integer is a pronic number, also known as a rectangular number
+or oblong number. A pronic number is a product of two consecutive integers. The nth pronic number is given
+by the formula: n * (n + 1) .
+function isPronicNumber(number) {
+for (let i = O;i*(i + 1) <= number; i++) {
+if (i* (i + 1)=== number) {
+return true;
+}
+return false;
+// Example usage
+const pronicNumber = 6; // Replace with the number you want to check
+if (isPronicNumber(pronicNumber)) {
+console.log(' $ {pronicNumber} is a Pronic Number!');
+} else {
+console.log(' $ {pronicNumber} is not a Pronic Number.');
+}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+149. Basic Minesweeper Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic Minesweeper game involves generating a grid with mines and numbers, allowing the player
+to uncover cells, and providing feedback on the presence of mines.
+class MinesweeperGame {
+constructor(rows, cols, numMines) {
+this.rows = rows;
+this.cols = cols;
+this.numMines = numMines;
+this.board = this.createBoardQ;
+this.gameOver = false;
+createBoard() {
+const board = Array.from({ length: this.rows },()=> Array(this.cols).fill(0));
+// Place mines randomly
+for (let i = 0; i < this.numMines; i++) {
+let row, col;
+do {
+row = Math.floor(Math.random() * this.rows);
+col = Math.floor(Math.random() * this.cols);
+} while (board[row][col] = = = 'X');
+board[row][col] = 'X';
+// Calculate numbers around mines
+for (let i = 0; i < this.rows; i++) {
+for (letj = 0; j < this.cols; j ++) {
+if (board[i][j] ==='X') {
+continue;
+for (let row = i- l;row <= i + l;row++) {
+for (let col = j - l;col<= j + l;col++){
+if (row > = 0 && row < this.rows && col > = 0 && col < this.cols && board[row][col] = = = 'X') {
+board[i][j]++;
+}
+}
+}
+}
+1
+return board;
+}
+displayBoard() {
+console.log('Minesweeper Board:');
+for (const row of this.board) {
+console Jog(row.map(cell => (cell = = = 'X' ? 'X':' ')).join(''));
+uncoverCell(row, col) {
+if (this.gameO ver 11 row < 0 || row >= this.rows || col < 0 || col >= this.cols) {
+return;
+const cell = this.board[row][col];
+if (cell = = ='X') {
+console.log('Game over! You hit a mine.');
+this.gameOver = true;
+} else if (cell = = = 0) {
+this.board[row][col] = '';
+this.uncoverNeighbors(row, col);
+} else {
+this.board[row][col] = cell.toStringO;
+}
+this.checkWinO;
+}
+uncoverNeighbors(row, col) {
+for (let i = row - l;i <= row + l;i++) {
+for (let j = col - l;j <= col + l;j++) {
+if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board[i][j] = = = 0) {
+this.board[i][j] = '
+this.uncoverNeighbors(i, j);
+} else if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board[i][j] !== 'X') {
+this.board[i][j] = this.board[i][j].toString();
+checkWinO {
+let uncoveredCount = 0;
+for (const row of this.board) {
+uncoveredCount += row.filter(cell => cell !== 'X').length;
+if (uncoveredCount = = = this.rows * this.cols - this.numMines) {
+console.log('Congratulations! You win!');
+this.gameOver = true;
+}
+1
+}
+// Example usage
+const minesweeperGame = new MinesweeperGame(5, 5, 3);
+minesweeperGame.displayBoard();
+// Simulate the game loop (you can replace this with actual user input in a real environment)
+minesweeperGame.uncoverCell(0, 0);
+minesweeperGame.uncoverCell(2, 2);
+minesweeperGame.uncoverCell( 1,1);
+minesweeperGame.uncoverCell(3, 3);
+minesweeperGame.uncoverCell(4,4);
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+150. Find the Area of a Pentagon
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the area of a regular pentagon given the side length ( s ). The formula for the area of
+a regular pentagon is Area = (1/4) * V(5 * (5 + 2 * V5)) * s* 2 , where s is the side length.
+function calculatePentagonArea(sideLength) {
+const area = (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * Math.pow(sideLength, 2);
+return area;
+// Example usage
+const sideLength = 4; // Replace with the length of a side of your pentagon
+const pentagonArea = calculatePentagonArea(sideLength);
+console.log(' The area of the pentagon is: ${pentagonArea.toFixed(2)}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+151. Check if a Number is a Cube Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given non-negative integer is a cube number. A cube number is a number that can
+be expressed as the cube of an integer. The nth cube number is given by the formula: nA 3 .
+function isCubeNumber(number) {
+const cubeRoot = Math.round(Math.pow(number, 1/3));
+return Math.pow(cubeRoot, 3) = = = number;
+// Example usage
+const numberToCheck = 27; // Replace with the number you want to check
+if (isCubeNumber(numberToCheck)) {
+console.log('$ {numberToCheck} is a Cube Number! ');
+} else {
+console.log( '$ {numberToCheck} is not a Cube Number. ');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+152. Basic Typing Speed Test
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Creating a basic typing speed test involves generating a random string, measuring the time it takes for the
+user to type the string, and calculating the typing speed.
+class TypingSpeedTest {
+constructor) {
+this.words = [
+'programming', 'javascript', 'developer', 'challenge', keyboard',
+'speed', 'test', 'accuracy', 'practice', 'learning'
+];
+this.text = this.generateRandomText();
+this.startTime = 0;
+this.endTime = 0;
+this.userlnput =
+}
+generateRandomText() {
+const randomindex = Math.floor(Math.random() * this.words.length);
+return this.words[randomlndex];
+1
+startTest() {
+this.text = this.generateRandomText();
+this.startTime = Date.nowQ;
+console.log(' Type the following text:\n"${this.text}"');
+endTest() {
+this.endTime = Date.now();
+const elapsedTime = (this.endTime - this.startTime) / 1000; // Convert to seconds
+const wordsPerMinute = (this.text.splitf ').length / elapsedTime) * 60;
+console.log(' You typed at a speed of ${wordsPerMinute.toFixed(2)} words per minute.');
+}
+getUserlnput(input) {
+this.userlnput = input.trim();
+if (this.userlnput = = = this.text) {
+console.logfCongratulations! You typed the correct text.1);
+this.endTest();
+} else {
+console.logflncorrect. Try again.1);
+}
+1
+}
+// Example usage
+const typingTest = new TypingSpeedTest();
+typingTest.startTest();
+// Simulate user input (you can replace this with actual user input in a real environment)
+const userinput = 'javascript developer';
+typingTest.getUserlnput(userlnput);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+153. Find the Area of a Cube
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the surface area of a cube given the length of its side ( s ). The formula for the
+surface area of a cube is Surface Area = 6 * s* 2 , where s is the length of a side.
+function calculateCubeSurfaceArea(sideLength) {
+const surface Area = 6 * Math.pow(sideLength, 2);
+return surfaceArea;
+// Example usage
+const sideLength = 4; // Replace with the length of a side of your cube
+const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
+console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+154. Find the Area of a Cone
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the surface area of a cone given the radius of its base ( r ) and the slant height (1).
+The formula for the surface area of a cone is Surface Area = 7t * r * (r +1), where n is the mathematical constant
+Pi.
+function calculateCubeSurfaceArea(sideLength) {
+const surface Area = 6 * Math.pow(sideLength, 2);
+return surfaceArea;
+// Example usage
+const sideLength = 4; // Replace with the length of a side of your cube
+const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
+console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+155. Check if a Number is a Happy Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+A happy number is a positive integer that, when repeatedly replaced by the sum of the squares of its digits,
+eventually reaches the number 1. If a number becomes 1, it is a happy number; otherwise, it falls into a cycle
+that does not include 1.
+function isHappyNumber(number) {
+const seenNumbers = new Set();
+while (number !== 1 && ’seenNumbers.has(number)) {
+seenNumbers.add(number);
+number = sumOfSquaredDigits(number);
+1
+return number = = = 1;
+function sumOfSquaredDigits(number) {
+return Array.from(String(number), Number)
+.reduce((sum, digit) => sum + Math.pow(digit, 2), 0);
+}
+// Example usage
+const happyNumber = 19; // Replace with the number you want to check
+if (isHappyNumber(happyNumber)) {
+console.logC ${happyNumber} is a Happy Number! ');
+} else {
+console.logC ${happyNumber} is not a Happy Number. ');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+156. Calculate the Area of a Triangular Prism
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the surface area of a triangular prism given the lengths of its base sides ( a , b , and
+c ) and the height of the prism ( h ). The formula for the surface area of a triangular prism is Surface Area =
+(Perimeter of the base * Height) + (2 * Area of the base), where the perimeter of the base is Perimeter = a + b + c
+and the area of the base is calculated using Heron's formula.
+function calculateTriangularPrismSurfaceArea(a, b, c, height) {
+const baseArea = 0.25 * Math.sqrt((-a + b + c)*(a-b + c)*(a + b-c)*(a + b + c));
+const perimeter = a + b + c;
+const surfaceArea = baseArea + perimeter * height;
+return surfaceArea;
+// Example usage
+const side A = 3; // Replace with the length of side A of the triangular base
+const sideB = 4; // Replace with the length of side B of the triangular base
+const sideC = 5; // Replace with the length of side C of the triangular base
+const prismHeight = 6; // Replace with the height of the triangular prism
+const triangularPrismSurfaceArea = calculateTriangularPrismSurfaceArea(sideA, sideB, sideC, prismHeight);
+console.log(' The surface area of the triangular prism is: ${triangularPrismSurfaceArea.toFixed(2)}');
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+157. Check if a Number is a Fibonacci Prime
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given positive integer is both a Fibonacci number and a prime number. A Fibonacci
+prime is a number that is both a Fibonacci number and a prime number.
+function isPrime(number) {
+if (number <= 1) {
+return false;
+}
+for (let i = 2; i < = Math.sqrt(number); i++) {
+if (number % i = = = 0) {
+return false;
+}
+return true;
+function isPerfectSquare(number) {
+const sqrt = Math.sqrt(number);
+return sqrt = = = Math.floor(sqrt);
+function isFibonacciPrime(number) {
+return isPrime(number) && isPerfectSquare(5 * Math.pow(number, 2) + 4) || isPerfectSquare(5 * Math.pow(number, 2)
+-4);
+}
+// Example usage
+const fibonacciPrimeCandidate = 13;// Replace with the number you want to check
+if (isFibonacciPrime(fibonacciPrimeCandidate)) {
+console.log(' ${fibonacciPrimeCandidate} is a Fibonacci Prime!');
+} else {
+console.log(' ${fibonacciPrimeCandidate} is not a Fibonacci Prime.');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+158. Check if a Number is a Squareful Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given positive integer is a squareful number. A squareful number is a positive
+integer where the square of each prime factor occurs in its prime factorization.
+function isSquarefulNumber(number) {
+const factors = getFactors(number);
+const uniqueFactors = [...new Set(factors)];
+for (const factor of uniqueFactors) {
+const count = factors.filter((num) => num = = = factor).length;
+if (count % 2 !== 0) {
+return false;
+}
+1
+return true;
+function getFactors(number) {
+const factors = [];
+for (let i = 1; i < = Math.sqrt(number); i++) {
+if (number % i = = = 0) {
+factors.push(i);
+if (i !== Math.sqrt(number)) {
+factors.push(number / i);
+return factors;
+// Example usage
+const squarefulNumber = 36; // Replace with the number you want to check
+if (isSquarefulNumber(squarefulNumber)) {
+console.log(' ${squarefulNumber} is a Squareful Number!');
+} else {
+console.log(' ${squarefulNumber} is not a Squareful Number.');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+159. Find the Area of a Tetrahedron
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the surface area of a regular tetrahedron given the length of its edges ( a ). The
+formula for the surface area of a regular tetrahedron is Surface Area = V3 * aA 2 , where a is the length of an
+edge.
+function calculateTetrahedronSurfaceArea(edgeLength) {
+const surfaceArea = Math.sqrt(3) * Math.pow(edgeLength, 2);
+return surfaceArea;
+1
+// Example usage
+const edgeLength = 5; // Replace with the length of an edge of the tetrahedron
+const tetrahedronSurfaceArea = calculateTetrahedronSurfaceArea(edgeLength);
+console.log(' The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.toFixed(2)}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+160. Check if a Number is an Automorphic Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given positive integer is an automorphic number. An automorphic number is a
+number whose square ends with the number itself. For example, 5 is an automorphic number because 5 A2 =
+25, and 25 ends with 5.
+function isAutomorphicNumber(number) {
+const square = number * number;
+const numberDigits = String(number);
+const squareDigits = String(square);
+return squareDigits.endsWith(numberDigits);
+// Example usage
+const automorphicNumber = 25; // Replace with the number you want to check
+if (isAutomorphicNumber(automorphicNumber)) {
+console.log(' ${automorphicNumber} is an Automorphic Number!');
+} else {
+console.log(' ${automorphicNumber} is not an Automorphic Number.');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+161. Calculate the Area of a Pyramid
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the surface area of a square pyramid given the length of the base side ( s ) and the
+slant height (1). The formula for the surface area of a square pyramid is Surface Area = s*2 + 2 * s * 1, where
+s is the length of a base side and 1 is the slant height.
+function calculatePyramidSurfaceArea(sideLength, slantHeight) {
+const baseArea = Math.pow(sideLength, 2);
+const lateralArea = 2 * sideLength * slantHeight;
+const surfaceArea = baseArea + lateralArea;
+return surfaceArea;
+// Example usage
+const sideLength = 4; // Replace with the length of a side of the pyramid's base
+const slantHeight = 5; // Replace with the slant height of the pyramid
+const pyramidSurfaceArea = calculatePyramidSurfaceArea(sideLength, slantHeight);
+console.log(' The surface area of the pyramid is: ${pyramidSurfaceArea.toFixed(2)}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+162. Check if a Number is a Smith-Morra Gambit Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given positive integer is a Smith-Morra Gambit number. A Smith-Morra Gambit
+number is a positive integer that can be expressed as the sum of the digits of its prime factors, including
+repetitions.
+function isSmithMorraGambitNumber(number) {
+// Function to calculate the sum of digits
+const digitSum = (n) => n.toString().split(").reduce((acc, digit) => acc + parselnt(digit), 0);
+// Function to calculate the prime factorization of a number
+const primeFactorization = (n) = > {
+const factors = [];
+for (let i = 2;i<=n;i++){
+while (n % i = = = 0) {
+factors.push(i);
+n/= i;
+}
+return factors;
+1;
+// Get the prime factorization of the number and calculate the sum of its digits
+const factors = primeFactorization(number);
+const sumOfDigits = factors.reduce((acc, factor) = > acc + digitSum(factor), 0);
+// Check if the sum of digits of prime factors equals the original number
+return sumOfDigits = = = digitSum(number);
+// Example: Check if 22 is a Smith-Morra Gambit Number
+console Jog(isSmithMorraGambitNumber(22)); // Output: true
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+163. Check if a Number is a Solitary Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a number is a solitary number:
+function getProperDivisorsSum(number) {
+let sum = 1; // Start with 1 as every number is divisible by 1
+for (let i = 2; i < = Math.sqrt(number); i++) {
+if (number % i = = = 0) {
+sum + = i;
+if (i !== number / i) {
+sum + = number / i;
+return sum;
+function isSolitaryNumber(number) {
+const sum = getProperDivisorsSum(number);
+return number !== sum;
+}
+// Example usage
+const solitaryNumber = 28; // Replace with the number you want to check
+if (isSolitaryNumber(solitaryNumber)) {
+console.log(' ${solitaryNumber} is a Solitary Number!');
+} else {
+console.log(' ${solitaryNumber} is not a Solitary Number.');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+164. Basic Tower of Hanoi Puzzle
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The Tower of Hanoi is a classic problem in computer science and mathematics. It consists of three pegs and
+a number of disks of different sizes, which can slide onto any peg. The puzzle starts with the disks in a neat
+stack in ascending order of size on one peg, the smallest at the top. The objective is to move the entire stack
+to another peg, obeying the following simple rules:
+1. Only one disk can be moved at a time.
+2. Each move consists of taking the upper disk from one of the stacks and placing it on top of
+another stack or on an empty peg.
+3. No disk may be placed on top of a smaller disk.
+function towerOfHanoi(n, source, auxiliary, target) {
+if(n=== 1) {
+console.log(' Move disk 1 from $ {source} to $ {target}');
+return;
+}
+towerOfHanoi(n -1, source, target, auxiliary);
+console.log(' Move disk ${n} from $ {source} to $ {target}');
+towerOfHanoi(n -1, auxiliary, source, target);
+}
+// Example usage
+const numberOfDisks = 3;
+const sourcePeg = 'A1;
+const auxiliaryPeg = 'B';
+const targetPeg = 'C;
+console.log(' Tower of Hanoi solution for ${numberOfDisks} disks:');
+towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+165. Calculate the Area of a Frustum
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program calculates the surface area of a frustum of a cone given the radii of its top and bottom bases ( r 1
+and r 2 ) and the slant height (1). The formula for the surface area of a frustum of a cone is Surface Area = n
+* (rl + r2) * 1 + it * rl*2 + it * r2* 2 , where it is the mathematical constant Pi.
+function surfaceAreaOfFrustum(rl, r2,1) {
+const surfaceArea = Math.PI * (rl + r2) * 1 + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
+console.log(' Surface Area of the frustum is: $ {surfaceArea}');
+// Example: Calculate the surface area of a frustum with top radius 4, bottom radius 8, and slant height 6
+surfaceAreaOfFrustum(4, 8, 6);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+166. Check if a Number is a Motzkin Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given positive integer is a Motzkin number. A Motzkin number is a number in
+the sequence of Motzkin numbers, which counts the number of different ways of drawing non-intersecting
+chords between points on a circle (not necessarily touching every point with a chord).
+function isMotzkinNumber(number) {
+if (number < 0) {
+return false;
+}
+// Use dynamic programming to calculate Motzkin numbers
+const motzkinNumbers = [1,1];
+for (let n = 2; n < = number; n+ +) {
+const nextMotzkin = ((2 *n + 1)*motzkinNumbers[n-l] + (3*n-3)*motzkinNumbers[n- 2]) / (n + 2);
+motzkinNumbers.push(nextMotzkin);
+1
+return motzkinNumbers.includes(number);
+// Example usage
+const motzkinNumber = 5; // Replace with the number you want to check
+if (isMotzkinNumber(motzkinNumber)) {
+console.log(' ${motzkinNumber} is a Motzkin Number!');
+} else {
+console.log(' ${motzkinNumber} is not a Motzkin Number.');
+}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+167. Check if a Number is a Padovan Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks if a given positive integer is a Padovan number. A Padovan number is a number in the
+Padovan sequence, which is similar to the Fibonacci sequence but uses a recurrence relation of P(n) = P(n-2)
++ P(n-3) with initial values P(0) = P(l) = P(2) = 1.
+function isPadovanNumber(number) {
+if (number < 0) {
+return false;
+}
+const padovanNumbers = [1,1,1];
+while (padovanNumbers[padovanNumbers.length - 1] <= number) {
+const nextPadovan = padovanNumbers[padovanNumbers.length - 2] + padovanNumbers[padovanNumbers.length -
+3];
+padovanNumbers.push(nextPadovan);
+}
+return padovanNumbers.includes(number);
+}
+// Example usage
+const padovanNumber = 9; // Replace with the number you want to check
+if (isPadovanNumber(padovanNumber)) {
+console.log(' ${padovanNumber} is a Padovan Number!');
+} else {
+console.log(' ${padovanNumber} is not a Padovan Number.');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+168. Calculate the Area of a Koch Snowflake
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The Koch snowflake is a mathematical curve and one of the earliest fractal curves to have been described.
+It can be constructed by starting with an equilateral triangle and repeatedly adding smaller equilateral
+triangles to each side of the existing triangles.
+function calculateKochSnowflakeArea(sideLength, iterations) {
+const sqrt3 = Math.sqrt(3);
+const area = (4 * sqrt3 / 5) * Math.pow((sideLength / 3), 2) * Math.pow(3 I 2, iterations);
+return area;
+// Example usage
+const sideLength = 100; // Replace with the side length of the original equilateral triangle
+const iterations = 4; // Replace with the number of iterations
+const kochSnowflakeArea = calculateKochSnowflakeArea(sideLength, iterations);
+console.log(' The area of the Koch snowflake is: ${kochSnowflakeArea.toFixed(2)}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+169. Basic Chatbot
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program is a simple and interactive script that allows users to engage in a text-based conversation with
+a virtual assistant.
+function chatbot(message) {
+// Simple rule-based responses
+if (message.toLowerCaseO.includesChello1)) {
+return ‘Hello! How can I help you?';
+} else if (message.toLowerCase().includes('how are you')) {
+return 'I am just a computer program, but thanks for asking!';
+} else if (message.toLowerCase().includes('bye‘)) {
+return ‘Goodbye!1;
+} else {
+return 'I didnVt understand that. Can you please rephrase?';
+}
+function startChat() {
+const userinput = prompt('You:');
+if (userinput !== null) {
+const response = chatbot(userlnput);
+console.log('Chatbot:‘, response);
+startChatO; // Continue the conversation
+} else {
+console Jog('Goodbye!');
+console.logfChatbot: Hello! How can I help you today?1);
+startChatQ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+170. RGB to HEX Converter
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program allows you to convert RBG values to hexadecimal.
+function convertToHex(red, green, blue) {
+const toHex = value => {
+const hex = parselnt(value, 10).toString(16);
+return hex.length = = = 1 ? 'O' + hex: hex;
+};
+const hexRed = toHex(red);
+const hexGreen = toHex(green);
+const hexBlue = toHex(blue);
+return ' #$ {hexRed} $ {hexGreen} $ {hexBlue}';
+// Example usage
+const redValue = prompt('Enter the Red value (0-255):');
+const greenValue = promptfEnter the Green value (0-255):');
+const blue Value = prompt('Enter the Blue value (0-255):');
+const hexResult = convertToHex(redValue, greenValue, blue Value);
+console.log(' HEX: $ {hexResult}');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+171. Counter
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program allows you to increment, decrement and reset a counter.
+let count = 0;
+function incrementCounter() {
+count++;
+console.log(' Counter: $ {count}');
+}
+function decrementCounter() {
+count-;
+console.log(' Counter: $ {count}');
+function resetCounter() {
+count = 0;
+console.log("Counter reset to 0");
+}
+// Example usage
+incrementCounterO;
+incrementCounterO;
+decrementCounterO;
+resetCounterQ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+172. Stop The Bomb
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program to allow you stop an active bomb.
+let bombTimer;
+let countdowninterval;
+let timeLeft = 10; // Initial time in seconds
+function startBomb() {
+console.log("The bomb is ticking! Hurry defuse it!");
+displayTimeLeft();
+bombTimer = setTimeout(() = > {
+console.log("BOOM! The bomb exploded. Game over!");
+clearlnterval(countdownlnterval);
+}, timeLeft* 1000);
+}
+function defuseBomb() {
+clearTimeout(bombTimer);
+console.log("Whew! You successfully defused the bomb!");
+clearlnterval(countdownlnterval);
+function displayTimeLeft() {
+countdowninterval = setlnterval(() = > {
+console.clearO;
+console.log(' Time remaining: $ {timeLeft} seconds');
+timeLeft—;
+if (timeLeft < 0) {
+clearTimeout(bombTimer);
+console.logC'BOOM! The bomb exploded. Game over!");
+clearlnterval(countdownlnterval);
+}, 1000);
+// Example usage
+startBombO;
+// Uncomment the line below to simulate successfully defusing the bomb
+// defuseBomb();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+173. IP Address Generator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Generating IP addresses programmatically can be done using a programming language like JavaScript.
+Below is a simple example of an IP address generator in JavaScript. Note that this example generates random
+IP addresses for educational purposes and should not be used for any malicious activities.
+function generateRandomlpO {
+const octet = () => Math.floor(Math.random() * 256);
+return ' ${octet()}.${octet()}.${octet()}.${octet()}';
+function generateMultipleRandomlps(count) {
+const ipAddresses = [];
+for (let i = 0; i < count; i++) {
+ipAddresses.push(generateRandomlpO);
+}
+return ipAddresses;
+// Example: Generate and print 5 random IP addresses
+const numberOflps = 5;
+const randomlps = generateMultipleRandomlps(numberOflps);
+console.log('Random IP Addresses:’, randomlps);
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+174. Digital clock
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Deploy a digital clock with this awesome program.
+function updateClock() {
+const now = new Date();
+const hours = now.getHours();
+const minutes = now.getMinutes();
+const seconds = now.getSeconds();
+const formattedTime = ' $ {hours} :$ {minutes} :$ {seconds}';
+console.clearO; // Clears the console to update the time
+console.log("Current Time:" + formattedTime);
+}
+// Update the clock every second
+set!nterval(updateClock, 1000);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+175. Random Number Generator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a random number between 1 and 10 and displays it in the console.
+function generateRandomNumber(min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+const randomNumber = generateRandomNumber(l, 10);
+console.log("Random Number:", randomNumber);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+176. Simple JavaScript Quiz
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program presents a simple JavaScript quiz with multiple-choice questions. It asks the user for answers
+and provides feedback in the console.
+function runQuiz() {
+const questions = [
+question: "What is the capital of France?",
+options: ["Berlin", "Madrid", "Paris", "Rome"],
+correctAnswer: "Paris"
+},
+{
+question: "Which programming language is this quiz written in?",
+options: ["JavaScript", "Python", "Java", "C++"],
+correctAnswer: "JavaScript"
+},
+{
+question: "What is the largest mammal?",
+options: ["Elephant", "Whale Shark", "Blue Whale", "Giraffe"],
+correctAnswer: "Blue Whale"
+];
+let score = 0;
+for (const question of questions) {
+console.log(question.question);
+for (let i = 0; i < question.options.length; i+ +) {
+console.log(' ${i + 1}. ${question.options[i]}');
+const userAnswerlndex = prompt("Enter the number of your answer:");
+const user Answer = question.options[user Answerindex -1];
+if (userAnswer = = = question.correctAnswer) {
+console.log("Correct!\n");
+score++;
+} else {
+console.log(' Wrong! The correct answer is $ {question.correct Ans wer}\n');
+console.log(' Your final score: $ {score} out of ${questions.length}');
+}
+// Run the quiz
+runQuizQ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+177. Text-based RPG Adventure
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program takes the user on a simple text-based RPG adventure where they make choices to navigate
+through a story.
+function textRPGAdventure() {
+console.logC'Welcome to the Text-based RPG Adventure!");
+console.log("You find yourself in a dark cave. What do you want to do?");
+const choices = [
+{option: "Explore the cave", outcome: "You discover a hidden treasure!", next: "treasure"},
+{option: "Go deeper into the cave", outcome: "Uh-oh! A dragon appears! You narrowly escape.", next: "dragon"},
+{option: "Exit the cave", outcome: "You emerge into the sunlight. Adventure awaits!", next: "end"}
+];
+let currentchoice = 0;
+while (currentchoice < choices.length) {
+const userChoice = prompt(choices[currentChoice].option);
+console.log(choices[currentChoice].outcome);
+if (userChoice.toLowerCaseO = = = "exit") {
+console.log("You exit the adventure. Goodbye!");
+break;
+currentchoice = choices.findlndex(choice => choice.next = = = userChoice.toLowerCaseO);
+if (currentchoice = = = -1) {
+console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
+}
+// Start the text-based RPG adventure
+textRPGAdventureQ;
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+178. Dice Rolling Simulator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates rolling a six-sided die, providing a random result between 1 and 6.
+function rollDice() {
+const result = Math.floor(Math.random() * 6) + 1;
+console.log(' You rolled a $ {result}');
+// Simulate rolling the dice
+rollDiceQ;
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+179. Seconds to Time Converter
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program takes a number of seconds as input and converts it into hours, minutes, and seconds,
+displaying the result in the console.
+function convertSecondsToTime(seconds) {
+const hours = Math.floor(seconds / 3600);
+const minutes = Math.floor((seconds % 3600) / 60);
+const remainingSeconds = seconds % 60;
+console.log(' Time: $ {hours} hours, $ {minutes} minutes, $ {remainingSeconds} seconds');
+}
+// Example: Convert 3665 seconds to time
+const inputSeconds = 3665;
+convertSecondsToTime(inputSeconds);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+180. Bar Chart Generator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program takes an array of numerical values and creates a simple horizontal bar chart in the console.
+function generateBarChart(data) {
+const maxValue = Math.max(...data);
+for (let value of data) {
+const barLength = Math.round((value / maxValue) * 20);
+const bar = '■'.repeat(barLength).padEnd(20,'');
+console.log(' $ {value} I ${bar}');
+// Example: Generate a bar chart for data
+const chartData = [5,8,12,4,6];
+generateBarChart(chartData);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+181. Right-Angled Triangle Pattern
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a right-angled triangle pattern using asterisks and displays it in the console.
+function generateRightAngledTriangle(height) {
+for (let i = 1; i < = height; i++) {
+const stars = '*'.repeat(i);
+console.log(stars);
+}
+// Example: Generate a right-angled triangle with a height of 5
+const triangleHeight = 5;
+generateRightAngledTriangle(triangleHeight);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+182. Text-Based Calculator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program allows the user to input mathematical expressions (e.g., "2 + 3 * 4") and evaluates and displays
+the result in the console.
+function textBasedCalculator(expression) {
+try{
+const result = eval(expression);
+console.log(' Result: $ {result}');
+} catch (error) {
+console.errorCError:1, error.message);
+}
+// Example: Evaluate a mathematical expression
+const userinput = promptfEnter a mathematical expression:');
+textBasedCalculator(userlnput);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+183. Number Pyramid Generator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a number pyramid pattern and displays it in the console.
+function generateNumberPyramid(height) {
+for (let i = 1; i < = height; i++) {
+const spaces = ' '.repeat(height - i);
+const numbers = Array.from({ length: i}, (_, index) => index + l).join(' ');
+console.log(spaces + numbers);
+}
+// Example: Generate a number pyramid with a height of 4
+const pyramidHeight = 4;
+generateNumberPyramid(pyramidHeight);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+184. Diamond Pattern Generator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a diamond pattern using characters and displays it in the console.
+function generateDiamondPattern(height) {
+const midpoint = Math.ceil(height / 2);
+for (let i = l;i < = height; i++) {
+const spaces = Math.abs(midpoint - i);
+const stars = '*'.repeat(height - 2 * spaces);
+console.logC ’.repeat(spaces) + stars);
+1
+}
+// Example: Generate a diamond pattern with a height of 5
+const diamondHeight = 5;
+generateDiamondPattern(diamondHeight);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+185. Hangman Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Hangman game. The player tries to guess a word by suggesting letters,
+and the program displays the progress and remaining attempts.
+function hangmanGame() {
+const words = ["javascript", "hangman", "programming", "developer", "challenge"];
+const selectedWord = words[Math.floor(Math.random() * words.length)];
+let guessedWord = "_".repeat(selectedWord.length);
+let remainingAttempts = 6;
+const guessedLetters = [];
+console.log("Welcome to the Hangman Game!");
+console.log("Try to guess the word.");
+while (remainingAttempts > 0) {
+console.log(' Word: ${guessedWord}');
+console.log(' Guessed Letters: ${guessedLetters.join(",")}');
+console.log(' Attempts Remaining: $ {remainingAttempts}');
+const userGuess = prompt("Enter a letter:").toLowerCase();
+if (’userGuess || !userGuess.match(/[a-z]/) || userGuess.length ’ = = 1) {
+console.log("Invalid input. Please enter a single letter.");
+continue;
+if (guessedLetters.includes(userGuess)) {
+console.log("You already guessed that letter. Try again.");
+continue;
+guessedLetters.push(userGuess);
+if (selectedWord.includes(userGuess)) {
+for (let i = 0; i < selectedWord.length; i++) {
+if (selectedWord[i] = = = userGuess) {
+guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i + 1);
+}
+if (!guessedWord.includes("_")) {
+console.log(' Congratulations! You guessed the word: ${selectedWord}');
+break;
+1
+} else {
+console.log("Incorrect guess. Try again.");
+remainingAttempts--;
+if (remainingAttempts = = = 0) {
+console.log(' Out of attempts. The word was: ${selectedWord}');
+// Start the Hangman game
+hangmanGameO;
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+186. Countdown Timer
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program allows the user to set a countdown time in seconds. The timer counts down, and the program
+displays the remaining time.
+function countdownTimer() {
+const userTime = promptf'Enter the countdown time in seconds:");
+const countdownTime = parse!nt(userTime, 10);
+if (isNaN(countdownTime) 11 countdownTime <= 0) {
+console.log("Invalid input. Please enter a positive number.");
+return;
+1
+console.log(' Countdown started for ${countdownTime} seconds.');
+let secondsRemaining = countdownTime;
+const intervalld = setlnterval(() = > {
+console.clearO;
+console.log(' Time Remaining: $ {secondsRemaining} seconds ' );
+if (secondsRemaining = = = 0) {
+console.log("Countdown completed!");
+clearlnterval(intervalld);
+} else {
+secondsRemaining—;
+L 1000);
+// Start the countdown timer
+countdownTimer();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+187. Mad Libs Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program prompts the user for various types of words (e.g., nouns, verbs) and constructs a humorous
+story using those inputs.
+function madLibsGame() {
+console.logC'Welcome to the Mad Libs Game!");
+console.logC'Let's create a funny story.");
+const noun = promptf'Enter a noun:");
+const verb = prompt("Enter a verb:");
+const adjective = promptf'Enter an adjective:");
+const adverb = promptf'Enter an adverb:");
+const animal = promptf'Enter an animal:");
+const sound = prompt("Enter a sound:");
+console.clearO;
+console.logC'Here’s your Mad Libs story:");
+console.log(' Once upon a time, there was a ${adjective] ${noun] that loved to ${verb} ${adverb}.');
+console.log(' One day, it met a $ {animal} that made a $ {sound} noise.');
+console.log("Everyone in the neighborhood heard the noise and started to join the fun!");
+console.log("And they all lived happily ever after.");
+console.log("The end.");
+// Start the Mad Libs game
+madLibsGameO;
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+188. Guess the Number Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a random number, and the player has to guess it within a certain number of
+attempts. The game provides feedback on whether the guess is too high, too low, or correct.
+function guessTheNumberGame() {
+const maxNumber = 100;
+const maxAttempts =10;
+const secretNumber = Math.floor(Math.random() * maxNumber) + 1;
+console.log("Welcome to the Guess the Number Game!");
+console.log(' I've picked a number between 1 and ${maxNumber}. Try to guess it!');
+for (let attempts = 1; attempts <= maxAttempts; attempts++) {
+const userGuess = parse!nt(prompt("Enter your guess:"), 10);
+if (isNaN(userGuess) 11 userGuess < 1 || userGuess > maxNumber) {
+console.log(' Invalid guess. Please enter a number between 1 and ${maxNumber}.');
+attempts—;
+continue;
+}
+if (userGuess = = = secretNumber) {
+console.log(' Congratulations! You guessed the number in $ {attempts} attempts.');
+return;
+} else if (userGuess < secretNumber) {
+console.log("Too low. Try again!");
+} else {
+console.log("Too high. Try again!");
+console.log(' Sorry, you've run out of attempts. The number was ${secretNumber}.');
+// Start the Guess the Number Game
+guessTheNumberGameO;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+189. Whack-a-Mole Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Whack-a-Mole game. The player must "whack" the mole as it randomly
+appears in different holes.
+function whackAMoleGame() {
+const totalHoles = 5;
+const molesToWhack = 3;
+const moleSymbol = "M";
+const emptyHoleSymbol =
+let score = 0;
+let remainingAttempts =10;
+console.log("Welcome to the Whack-a-Mole Game!");
+console.log(' Try to whack $ {molesToWhack} moles within $ {remainingAttempts} attempts.');
+while (remainingAttempts > 0 && molesToWhack > 0) {
+const holes = Array.from({ length: totalHoles },()=> emptyHoleSymbol);
+const randomMolelndex = Math.floor(Math.random() * totalHoles);
+holes[randomMoleIndex] = moleSymbol;
+console.log(' \nHoles: ${holes.join("")}');
+const userWhacklndex = parse!nt(prompt("Enter the index to whack the mole:"), 10);
+if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
+console.log(' Invalid input. Please enter a number between 0 and ${totalHoles -1}.');
+continue;
+}
+if (holes[userWhack!ndex] = = = moleSymbol) {
+console.log("Whack! You got the mole!");
+score++;
+molesToWhack—;
+} else {
+console.log("Missed! No mole at that hole.");
+remainingAttempts—;
+console.log(' Score: $ {score} I Attempts remaining: $ {remainingAttempts}');
+}
+if (molesToWhack = = = 0) {
+console.log("Congratulations! You whacked all the moles!");
+} else {
+console.log("Game over. You ran out of attempts.");
+}
+// Start the Whack-a-Mole Game
+whackAMoleGameQ;
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+190. Coin Tossing Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a coin tossing game. The player guesses whether the next coin toss will result in
+heads or tails.
+function coinTossingGame() {
+const coinSides = ["Heads", "Tails"];
+let correctGuesses = 0;
+lettotalGuesses = 0;
+console.log("Welcome to the Coin Tossing Game!");
+while (true) {
+const playerGuess = prompt("Heads or Tails?").toLowerCase();
+if (’["heads", "tails"].includes(playerGuess)) {
+console.log("Invalid input. Please enter 'Heads' or 'Tails'.");
+continue;
+}
+const coinResult = coinSides[Math.floor(Math.random() * 2)];
+console.log(' Coin toss result: $ {coinResult}');
+if (playerGuess = = = coinResult.toLowerCaseO) {
+console.log("Correct guess’ Well done’");
+correctGuesses++;
+} else {
+console.log("Wrong guess. Better luck next time!");
+totalGuesses++;
+const play Again = confirmf'Do you want to toss the coin again?");
+if (!playAgain) {
+console.log(' Game over. You made ${correctGuesses} correct guesses out of ${totalGuesses} total guesses.');
+break;
+}
+1
+}
+// Start the Coin Tossing Game
+coinTossingGame();
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+191. Fibonacci Number Generator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates and displays Fibonacci numbers up to a specified limit.
+function fibonacciNumberGenerator() {
+const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
+if (isNaN(limit) 11 limit < 1) {
+console.log("Invalid input. Please enter a positive number.");
+return;
+1
+let fibonacciNumbers = [0, 1];
+for (let i = 2; i < = limit; i+ +) {
+fibonacciNumbers[i] = fibonacciNumbers[i -1] + fibonacciNumbers[i - 2];
+}
+console.log(' Fibonacci numbers up to $ {limit}:' );
+console.log(fibonacciNumbers.slice(0, limit + 1));
+// Start the Fibonacci Number Generator
+fibonacciNumberGeneratorO;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+192. Math Quiz Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Math Quiz game. The player is asked random addition questions and
+scores points for correct answers.
+function mathQuizGame() {
+const maxQuestions = 5;
+let score = 0;
+console.log("Welcome to the Math Quiz Game!");
+console.log("Answer the following addition questions:");
+for (let i = 0; i < maxQuestions; i++) {
+const numl = Math.floor(Math.random() * 10) + 1;
+const num2 = Math.floor(Math.random() * 10) + 1;
+const correctAnswer = numl + num2;
+const userAnswer = parselnt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
+if (’isNaN(userAnswer) && userAnswer = = = correctAnswer) {
+console.log("Correct! Well done!");
+score++;
+} else {
+console.log(' Wrong! The correct answer is: ${correctAnswer}');
+console.log(' Quiz complete! Your final score is: $ {score} out of ${maxQuestions}');
+}
+// Start the Math Quiz Game
+mathQuizGameO;
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+193. Color Guessing Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Color Guessing game. The player is given RGB values, and they need to
+guess the correct color.
+function colorGuessingGame() {
+const colors = ["red", "green", "blue", "yellow", "orange", "purple"];
+const maxAttempts = 3;
+console.log("Welcome to the Color Guessing Game!");
+console.log("Guess the color based on the RGB values.");
+for (let attempts = 1; attempts <= maxAttempts; attempts++) {
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+const rgb Values = generateRandomRGBValues();
+console.log(' RGB: ${rgbValues.join(",")}');
+const userGuess = promptf'Enter your color guess:").toLowerCase();
+if (!colors.includes(userGuess)) {
+console.log("Invalid guess. Please enter a valid color.");
+attempts—;
+continue;
+if (userGuess = = = randomColor) {
+console JogC'Congratulations! You guessed the correct color!");
+return;
+} else {
+console.log(' Wrong guess. Remaining attempts: ${maxAttempts - attempts}');
+console.log("Sorry, you've run out of attempts. The correct color was revealed above.");
+function generateRandomRGBValues() {
+return Array.from({ length: 3 }, () => Math.floor(Math.random() * 256));
+}
+// Start the Color Guessing Game
+colorGuessingGameQ;
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+194. Word Scramble Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Word Scramble game. The player is presented with a scrambled word
+and needs to unscramble it.
+function wordScrambleGame() {
+const words = ["javascript", "programming", "web", "hangman", "developer"];
+const maxAttempts = 3;
+console.log("Welcome to the Word Scramble Game!");
+console.log("Unscramble the word and enter your guess.");
+for (let attempts = 1; attempts <= maxAttempts; attempts++) {
+const randomWord = words[Math.floor(Math.random() * words.length)];
+const scrambledWord = scrambleWord(randomWord);
+console.log(' Scrambled word: $ {scrambledWord}');
+const userGuess = prompt("Enter your unscrambled word guess:").toLowerCase();
+if (!words.includes(userGuess)) {
+console.log("Invalid guess. Please enter a valid word.");
+attempts—;
+continue;
+if (userGuess = = = randomWord) {
+console Jog("Congratulations! You unscrambled the word!");
+return;
+} else {
+console.log(' Wrong guess. Remaining attempts: ${maxAttempts - attempts}');
+console.log("Sorry, you've run out of attempts. The correct word was revealed above.");
+function scrambleWord(word) {
+return word.split("").sort(() => Math.random() - O.5).join("");
+}
+// Start the Word Scramble Game
+wordScrambleGame();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+195. Country Capital Quiz Game
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Country Capital Quiz game. The player is asked to match countries with
+their respective capitals.
+function countryCapitalQuizGame() {
+const countryCapitalPairs = [
+{country: "France", capital: "Paris"},
+{country: "Japan", capital: "Tokyo"},
+{country: "Brazil", capital: "Brasilia"},
+{country: "India", capital: "New Delhi"},
+{country: "Australia", capital: "Canberra"}
+];
+let score = 0;
+console.log("Welcome to the Country Capital Quiz Game!");
+console.log("Match the country with its capital:");
+for (const {country, capital} of countryCapitalPairs) {
+console.log(' \nCountry: $ {country}');
+const userCapital = prompt(' Enter the capital of ${country}:' ).trim();
+if (userCapital.toLowerCaseQ = = = capital.toLowerCaseO) {
+console.log("Correct! Well done!");
+score++;
+} else {
+console.log(' Wrong! The correct capital is: $ {capital}');
+console.log(' Quiz complete! Your final score is: $ {score} out of ${countryCapitalPairs.length}');
+// Start the Country Capital Quiz Game
+countryCapitalQuizGameO;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+196. Guess the Animal
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Guess the Animal game. The player is provided with clues and needs to
+guess the correct animal.
+function guessTheAnimalGame() {
+const animals = [
+{name: "elephant", clues: ["I have a long trunk.", "I am the largest land animal."]},
+{name: "giraffe", clues: ["I have a long neck.", "I am the tallest living terrestrial animal."]},
+{name: "penguin", clues: ["I cannot fly.", "I live in cold climates like Antarctica."]}
+];
+let score = 0;
+console.logC'Welcome to the Guess the Animal Game!");
+console.log("Read the clues and guess the correct animal:");
+for (const {name, clues} of animals) {
+console.log(' \nAnimal Clues:');
+for (const clue of clues) {
+console.log(clue);
+}
+const userGuess = prompt("Enter your guess:").toLowerCase();
+if (userGuess = = = name) {
+console.logC'Correct! Well done!");
+score++;
+} else {
+console.log(' Wrong! The correct answer is: ${name}');
+console.log(' Game complete! Your final score is: $ {score} out of ${animals.length}');
+// Start the Guess the Animal Game
+guessTheAnimalGame();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+197. Joke Teller
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Joke Teller. It randomly selects a joke category and tells a joke from that
+category.
+function jokeTellerProgram() {
+const jokeCategories = ["knock-knock", "dad", "animal", "puns"];
+const selectedCategory = jokeCategories[Math.floor(Math.random() * jokeCategories.length)];
+console.log("Welcome to the Joke Teller Program!");
+console.log(' Category: ${selectedCategory.toUpperCase()}');
+console.log("Get ready for a good laugh!");
+switch (selectedCategory) {
+case "knock-knock":
+console.logf'Knock, knock.");
+prompt("Who's there?");
+console.log("Tank.");
+promptC'Tank who?");
+console.logC'You're welcome!");
+break;
+case "dad":
+console.log("Why did the scarecrow win an award?");
+prompt("I don't know, why?");
+console.log("Because he was outstanding in his field!");
+break;
+case "animal":
+console.log("Why don't scientists trust atoms?");
+prompt("I'm not sure. Why?");
+console.log("Because they make up everything!");
+break;
+case "puns":
+console.log("I used to be a baker because I kneaded dough.");
+break;
+default:
+console.log("Oops! Something went wrong. No joke for you!");
+// Start the Joke Teller Program
+jokeTellerProgramQ;
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+198. Shopping List
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simulates a text-based Shopping List. The user can add items, remove items, and view the
+current shopping list.
+function shoppingListProgram() {
+const shoppingList = [];
+console.log("Welcome to the Shopping List Program!");
+console.log("You can add items, remove items, and view your current shopping list.");
+while (true) {
+const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, or 'view' to see your shopping list. Type
+'exit' to end the program:").toLowerCase();
+if (action = = = "exit") {
+console.log("Exiting the Shopping List Program. Goodbye!");
+break;
+switch (action) {
+case "add":
+const newltem = prompt("Enter the item you want to add:");
+shoppingList.push(newItem);
+console.log(' ${newltem} added to your shopping list.');
+break;
+case "remove":
+if (shoppingList.length = = = 0) {
+console.logC'Your shopping list is empty. Nothing to remove.");
+} else {
+const itemToRemove = prompt("Enter the item you want to remove:");
+const indexTo Remove = shoppingList.indexOf(itemToRemove);
+if (indexToRemove !== -1) {
+shoppingList.splice(indexTo Remove, 1);
+console.log(' $ {itemToRemove} removed from your shopping list.');
+} else {
+console.log(' $ {itemToRemove} not found in your shopping list.');
+}
+}
+break;
+case "view":
+if (shoppingList.length = = = 0) {
+console.logC'Your shopping list is empty.");
+} else {
+console.logC'Your Shopping List:");
+for (const item of shoppingList) {
+console.log(' - ${item}');
+}
+break;
+default:
+console.log("Invalid action. Please enter 'add', 'remove', 'view', or 'exit'.");
+}
+}
+// Start the Shopping List Program
+shoppingListProgram();
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+199. FizzBuzzGame
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+The program prints numbers from 1 to 100, but for multiples of 3, it prints "Fizz," for multiples of 5, it prints
+"Buzz," and for multiples of both 3 and 5, it prints "FizzBuzz":
+function fizzBuzzGame() {
+console.logf'Welcome to the FizzBuzz Game!");
+console.logf'Let's play FizzBuzz!");
+for (let i = l;i <= 100; i++) {
+let output =
+if (i % 3 = = = 0) {
+output + = "Fizz";
+if (i % 5 = = = 0) {
+output += "Buzz";
+}
+console.log(output 11 i);
+// Start the FizzBuzz Game
+fizzBuzzGameO;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+200. Swap Pairs of Adjacent Digits
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program takes an even-length integer and swaps pairs of adjacent digits. For example, for the number
+123456, the program will swap pairs of adjacent digits to produce the number 214365.
+function swapPairsOfAdjacentDigits(number) {
+// Convert the number to a string to manipulate individual digits
+const numberStr = String(number);
+const length = numberStr.length;
+// Check if the number has an even length
+if (length % 2 !== 0) {
+console.log("Please enter an integer with an even length.");
+return;
+1
+// Swap pairs of adjacent digits
+let swappedNumber =
+for (let i = 0; i < length; i + = 2) {
+swappedNumber += numberStr[i + 1] + numberStr[i];
+// Convert the result back to an integer
+const result = parse!nt(swappedNumber, 10);
+console.log(' Original Number: $ {number}');
+console.log(' Number with Swapped Pairs of Adjacent Digits: $ {result}');
+// Example: Swap pairs of adjacent digits of the number 123456
+s wapPairsOfAdjacentDigits( 123456);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+201. Capitalization Changer
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program takes a string as input and changes the capitalization of all letters. Uppercase letters are
+converted to lowercase, and lowercase letters are converted to uppercase.
+function changeCapitalization(inputString) {
+let resultstring =
+for (const char of inputstring) {
+// Check if the character is uppercase
+if (char = = = char.toUpperCaseO) {
+// Convert uppercase to lowercase
+resultstring + = char.toLowerCase();
+} else {
+// Convert lowercase to uppercase
+resultstring + = char.toUpperCaseO;
+}
+1
+console.log(' Original String: $ {inputstring}');
+console.log(' String with Changed Capitalization: $ {resultstring}');
+// Example: Change the capitalization of the string "Hello World"
+changeCapitalization("Hello World");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+202. Array Halves Swapper
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program takes an array of integers with an even length and swaps its two halves.
+function swapArrayHalves(arr) {
+const length = arr.length;
+// Check if the array has an even length
+if (length % 2 !== 0) {
+console.log("Please provide an array with an even length.");
+return;
+1
+// Calculate the midpoint of the array
+const midpoint = length I 2;
+// Swap the two halves of the array
+for (let i = 0; i < midpoint; i++) {
+const temp = arr [i];
+arr[i] = arr[midpoint + i];
+arr[midpoint + i] = temp;
+1
+console.log("Original Array:" + arr.join(","));
+console.logf Array with Swapped Halves:" + arr.join(","));
+// Example: Swap halves of the array [1, 2, 3,4, 5, 6]
+swapArrayHalves([l, 2, 3,4, 5, 6]);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+203. Sum of Digits in String
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program computes the sum of all the digits that occur in a given string. It identifies digits in the string
+and adds them up to calculate the total sum.
+function sumOfDigitsInString(inputString) {
+let digitSum = 0;
+for (const char of inputstring) {
+// Check if the character is a digit
+if (/\d/.test(char)) {
+// Convert the digit character to its numerical value and add to sum
+digitSum += parselnt(char, 10);
+console.log(' Original String: $ {inputstring}');
+console.log(' Sum of Digits in the String: $ {digitSum}');
+// Example: Compute the sum of digits in the string "abcl23xyz456"
+sumOfDigitsInString("abc 12 3xyz45 6");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+204. Sum of Cubes
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program computes the sum of cubes of all integers from 1 to a given integer. It calculates the cube of
+each integer in the specified range and adds them up to find the total sum.
+function sumOfCubes(upToInteger) {
+let cubesSum = 0;
+for (let i = 1; i < = upToInteger; i++) {
+// Calculate the cube of each integer and add to sum
+cubesSum += Math.pow(i, 3);
+}
+console.log(' Sum of Cubes from 1 to $ {upToInteger}: ${cubesSum}' );
+}
+// Example: Compute the sum of cubes up to the integer 5
+sumOfCubes(5);
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+205. Maximum Integer for Sum
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program finds the maximum integer n such that the sum of integers from 1 to n (inclusive) does not
+exceed a given target sum targetSum . It calculates the sum using the formula Sum = n * (n + 1) / 2 .
+function findMaxIntegerForSum(targetSum) {
+let currentSum = 0;
+let maxinteger = 0;
+while (currentSum + maxinteger + 1 < = targetSum) {
+maxlnteger++;
+currentSum + = maxinteger;
+1
+console.log(' Maximum Integer (n) for Sum <= $ {targetSum}: $ {maxinteger}');
+// Example: Find the maximum integer for the sum <=15
+findMaxIntegerForSum(l 5);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+206. URL Breakdown
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program breaks a URL address into its parts and puts them into an array. The URL structure considered
+is scheme://domain[/:path ], where pat h is optional.
+function breakURL(url) {
+const urlParts = {};
+const urlRegex = /A(\w+):\/\/([\w.-]+)(\/.*)?$/;
+const matches = url.match(urlRegex);
+if (’matches) {
+console.log("Invalid URL format.");
+return;
+1
+urlParts.scheme = matches! 1];
+urlParts.domain = matches[2];
+urlParts.path = matches! 3] 11
+console.log("URL Parts:");
+console.log(urlParts);
+}
+// Example: Breakdown the URL "https://www.example.org/page"
+breakURL("https://www.example.org/page");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+207. Sort Strings by Length
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program sorts the strings of a given array of strings in order of increasing length. It uses the Array.sor t
+method to achieve the desired order.
+function sortStringsByLength(stringsArray) {
+const sortedArray = stringsArray.slice().sort((a, b) => a.length - b.length);
+console.log("Original Array of Strings:");
+console.log(stringsArray);
+console.log("Array of Strings Sorted by Length:");
+console.log(sortedArray);
+}
+// Example: Sort strings by length
+sortStringsByLength(["apple", "banana", "orange", "kiwi", "grape"]);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+208. Simplify Absolute Path
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program simplifies a given absolute path for a file in Unix-style. It takes a string representing the
+absolute path and simplifies it by resolving any redundant slashes ( // ), parent directory references ( ..),
+and current directory references (.).
+function simplifyAbsolutePath(path) {
+const parts = path.split(7');
+const simplifiedParts = [];
+for (const part of parts) {
+if (part = = ='..'){
+simplifiedParts.popO; // Move up one level for
+} else if (part!== " && part !=='.'){
+simplifiedParts.push(part);
+}
+1
+const simplifiedPath = 7' + simplifiedParts.join(7');
+console.log(' Original Absolute Path: ${path}');
+console.log(' Simplified Absolute Path: ${simplifiedPath}');
+}
+// Example: Simplify an absolute path
+simplifyAbsolutePath(7home/user/../documents/./file.txt');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+209. Count Common Elements in Arrays
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program finds the number of common elements between two arrays. It compares the elements in both
+arrays and counts the occurrences of common elements.
+function countCommonElements(arrl, arr2) {
+const commonElements = arrl.filter(element => arr2.includes(element));
+const numberOfCommonElements = commonElements.length;
+console.log("Array 1:", arrl);
+console.log("Array 2:", arr2);
+console.log("Common Elements:”, commonElements);
+console.logC'Number of Common Elements:”, numberOfCommonElements);
+}
+// Example: Count common elements between two arrays
+countCommonElements([l, 2, 3,4, 5], [3,4, 5, 6, 7]);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+210. Check Same Digits in a Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program checks whether all the digits in a given number are the same or not. It converts the number to
+a string and compares each digit to the first digit.
+function areAllDigitsSame(number) {
+const numberStr = String(number);
+const firstDigit = numberStr[0];
+for (let i = 1; i < numberStr.length; i++) {
+if (numberStr[i] !== firstDigit) {
+console.log(' Digits in $ {number} are not all the same.');
+return;
+}
+}
+console.log(' Digits in $ {number} are all the same.');
+// Example: Check if all digits in the number 22222 are the same
+are AllDigitsSame(2 2222);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+211. Rightmost Round Number Position
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program finds the position of the rightmost round number in an array of integers. A round number is
+informally considered to be an integer that ends with one or more zeros. The program iterates through the
+array from right to left and identifies the rightmost round number, if any.
+function rightmostRoundNumberPosition(arr) {
+for (let i = arr.length -1; i > = 0; i—) {
+if (arr[i] % 10= = =0){
+console.log(' Rightmost Round Number: ${arr[i]}, Position: ${i + 1}');
+return;
+}
+console.log("No round numbers found in the array. Position: 0");
+}
+// Example: Find the position of the rightmost round number
+rightmostRoundNumberPosition([123,450, 678, 900]);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+212. Reverse Bits of 16-Bit Unsigned Short Integer
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program reverses the bits of a given 16-bit unsigned short integer. It converts the integer to its binary
+representation, reverses the bits, and converts it back to an integer.
+function reverseBitsl6BitUnsignedShort(integer) {
+const binaryRepresentation = integer.toString(2).padStart(16, '0');
+const reversedBinary = binaryRepresentation.split(").reverse().join(");
+const reversedlnteger = parseInt(reversedBinary, 2);
+console.log(' Original Integer: $ {integer}');
+console.log(' Binary Representation: ${binaryRepresentation}');
+console.log(' Reversed Binary: $ {reversedBinary}');
+console.log(' Reversed Integer: ${reversedlnteger}');
+}
+// Example: Reverse bits of the 16-bit unsigned short integer 5678
+reverseBits 16BitUnsignedShort(5 6 7 8);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+213. Greater Than 15 Checker
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program tests whether a given integer is greater than 15. If the integer is greater than 15, it returns the
+given number; otherwise, it returns 15.
+function greaterThanl5Checker(number) {
+const result = number >15? number: 15;
+console.log(' Given Number: $ {number}');
+console.log(' Result: $ {result}');
+// Example: Test whether the number 20 is greater than 15
+greaterThanl5Checker(20);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+214. Replace First Digit with $
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program replaces the first digit in a string (assuming the string has at least one digit) with the $
+character.
+function replaceFirstDigitWithDollar(inputString) {
+const modifiedString = inputString.replace(/\d/,
+console.log(' Original String: $ {inputstring}');
+console.log(' Modified String: $ {modifiedString}');
+}
+// Example: Replace the first digit with $ in the string "abcl23xyz456"
+replaceFirstDigitWithDollar("abc 12 3xyz4 5 6");
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+215. Prefix Sums
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program creates an array of prefix sums for a given array. The prefix sum of a sequence is a new
+sequence where each element is the sum of all preceding elements in the original sequence.
+function prefixSums(inputArray) {
+let prefixSum = 0;
+const prefixSumArray = [];
+for (const num of inputArray) {
+prefixSum + = num;
+prefixSumArray.push(prefixSum);
+1
+console.log("Original Array:", inputArray);
+console.log("Prefix Sums Array:", prefixSumArray);
+// Example: Create prefix sums for the array [1, 2, 3, 4, 5]
+prefixSums([l, 2, 3,4, 5]);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+216. Next Prime Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program finds the smallest prime number strictly greater than a given number. It checks numbers one
+by one starting from the given number until it finds the next prime.
+function isPrime(num) {
+if (num < 2) return false;
+for (let i = 2; i < = Math.sqrt(num); i++) {
+if (num % i = = = 0) return false;
+}
+return true;
+function nextPrimeNumber(givenNumber) {
+let nextNumber = givenNumber + 1;
+while (!isPrime(nextNumber)) {
+nextNumber++;
+console.log(' Given Number: $ {givenNumber}');
+console.log(' Next Prime Number: ${nextNumber}');
+}
+// Example: Find the next prime number greater than 10
+nextPrimeNumber( 10);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+217. Reverse Order of Bits
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program reverses the order of bits in an integer. It converts the integer to its binary representation,
+reverses the bits, and converts it back to an integer.
+function reverseOrderOfBits(integer) {
+const binaryRepresentation = integer.toString(2).padStart(8, ’O'); // Assuming 8 bits for simplicity
+const reversedBinary = binaryRepresentation.split(").reverse().join(");
+const reversedlnteger = parseInt(reversedBinary, 2);
+console.log(' Original Integer: $ {integer}');
+console.log(' Binary Representation: ${binaryRepresentation}');
+console.log(' Reversed Binary: $ {reversedBinary}');
+console.log(' Reversed Integer: ${reversedlnteger}');
+// Examples: Reverse order of bits for given integers
+reverseOrderOfBits( 14);
+reverseOrderOfBits(5 6);
+reverseOrderOfBits(2 3 4);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+218. Pyramid
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+This program generates a triangle pattern using ASCII characters and displays it in the console.
+function generateAsciiTriangle(height) {
+for (let i = 1; i < = height; i++) {
+const spaces = ' '.repeat(height - i);
+const stars = '*'.repeat(i * 2 -1);
+console.log(spaces + stars);
+}
+const triangleHeight = 5;
+generateAsciiTriangle(triangleHeight);
+
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- 110 more javascript samples -->
