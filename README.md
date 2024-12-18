@@ -1357,7 +1357,7 @@ console.log(' Modified String: ${modifiedString}');
 </pre>
 
 
-51. Replace All Line Breaks with
+<h2 id="js51">51. Replace All Line Breaks with</h2>
 This program replace all line breaks (newline characters) in a string with a specific string or character, you
 can use the replace() method with a regular expression.
 <pre>
@@ -1375,7 +1375,7 @@ console.log(stringWithoutLineBreaks);
 </pre>
 
 
-52. Check Leap Year
+<h2 id="js52">52. Check Leap Year</h2>
 This program checks if a year is a leap year with a simple function. A leap year is a year that is evenly divisible
 by 4, except for years that are divisible by 100. However, years divisible by 400 are leap years.
 <pre>
@@ -1396,7 +1396,7 @@ console.log(' $ {yearToCheck} is not a leap year.');
 </pre>
 
 
-53. Format the Date
+<h2 id="js53">53. Format the Date</h2>
 Formatting a date in JavaScript typically involves using the toLocaleDateString() method or constructing a
 formatted string manually. The toLocaleDateString() method provides a way to format a date based on the
 user's locale, including options for formatting the date, such as specifying the date style and time zone.
@@ -1416,7 +1416,7 @@ console.log(' Formatted Date: $ {formattedDate}');
 </pre>
 
 
-54. Display Current Date
+<h2 id="js54">54. Display Current Date</h2>
 Display the current date in JavaScript, you can use the Dat e object to get the current date and time and then
 format it as needed.
 <pre>
@@ -1429,7 +1429,7 @@ console.log(' Current Date: ${formattedDate}');
 </pre>
 
 
-55. Compare The Value of Two Dates
+<h2 id="js55">55. Compare The Value of Two Dates</h2>
 Compare the values of two dates using standard comparison operators ( < , < = , > ,
 II Example dates
 <pre>
@@ -1446,7 +1446,7 @@ console.log(' ${datel} is equal to ${date2}');
 </pre>
 
 
-56. Create Countdown Timer
+<h2 id="js56">56. Create Countdown Timer</h2>
 Create a countdown timer in JavaScript, you can use the setlnterval() function to update the timer at
 regular intervals and calculate the remaining time.
 <pre>
@@ -1475,7 +1475,7 @@ document.getElementById('countdown').innerHTML = 'Countdown expired!';
 </pre>
 
 
-57. Remove Specific Item From an Array
+<h2 id="js57">57. Remove Specific Item From an Array</h2>
 Remove a specific item from an array in JavaScript, you can use the filter() method or the splice() method:
 <pre>
 // Example array
@@ -1492,7 +1492,7 @@ console.log("Original Array:", originalArray);
 </pre>
 
 
-58. Check if An Array Contains a Specified Value
+<h2 id="js58">58. Check if An Array Contains a Specified Value</h2>
 Check if an array contains a specified value in JavaScript, you can use the includes() method or the
 indexOf() method.
 <pre>
@@ -1506,7 +1506,7 @@ console.log(' Does the array include ${valueToCheck}? ${containsValue}');
 </pre>
 
 
-59. Insert Item in an Array
+<h2 id="js59">59. Insert Item in an Array</h2>
 Insert an item into an array in JavaScript, you can use the push() method to add the item at the end of the
 array, or the splice() method to insert the item at a specific index.
 <pre>
@@ -1521,7 +1521,7 @@ console.log("Array after inserting:", myArray);
 
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-60. Get Random Item From an Array
+<h2 id="js60">60. Get Random Item From an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To get a random item from an array in JavaScript, you can use the Math.random() function to generate a
 random index within the array length.
@@ -1537,7 +1537,7 @@ console.log("Random Item:", randomitem);
 </pre>
 
 
-61. Perform Intersection Between Two Arrays
+<h2 id="js61">61. Perform Intersection Between Two Arrays</h2>
 To find the intersection (common elements) between two arrays in JavaScript, you can use various methods.
 <pre>
 // Example arrays
@@ -1550,7 +1550,7 @@ console.log("Intersection:", intersection);
 </pre>
 
 
-62. Split Array into Smaller Chunks
+<h2 id="js62">62. Split Array into Smaller Chunks</h2>
 To split an array into smaller chunks in JavaScript, you can use a loop and the slice() method.
 <pre>
 function chunkArray(array, chunksize) {
@@ -1565,7 +1565,1086 @@ let myArray = [1, 2, 3,4, 5, 6, 7, 8, 9,10];
 // Split the array into chunks of size 3
 let chunks = chunkArray (my Array, 3);
 // Display the result
-console.log("Original Array:", myArr
+console.log("Original Array:", myArray);
+console.log("Chunks:", chunks);
 </pre>
+
+
+<h2 id="js63">63. Get File Extension</h2>
+To get the file extension from a string representing a file name in JavaScript, you can use various methods.
+One common approach is to use the split() method to split the file name based on the dot ( .) and then
+extract the last part of the resulting array.
+<pre>
+function getFileExtension(fileName) {
+// Split the file name based on the dot
+let parts = fileName.split('.');
+// Get the last part of the array (the file extension)
+let extension = parts[parts.length -1];
+return extension;
+}
+// Example usage
+let fileName = "example.txt";
+let fileExtension = getFileExtension(fileName);
+console.log(' File Extension: ${fileExtension}');
+</pre>
+
+
+<h2 id="js64">64. Check If a Variable Is undefined or null</h2>
+To check if a variable is undefine d or mil 1 in JavaScript, you can use a simple conditional statement.
+<pre>
+// Example variable
+let my Variable = null;
+// Check if the variable is undefined or null
+if (my Variable = = = undefined 11 my Variable = = = null) {
+console.log("The variable is either undefined or null.");
+} else {
+console.log("The variable is defined and not null.");
+}
+</pre>
+
+
+<h2 id="js65">65. Generate a Random Number Between Two Numbers</h2>
+To generate a random number between two specific numbers in JavaScript, you can use the Math.random()
+function along with some arithmetic.
+<pre>
+function getRandomNumber(min, max) {
+// Generate a random decimal between 0 (inclusive) and 1 (exclusive)
+const randomDecimal = Math.random();
+// Scale the random decimal to the desired range
+const randomNumber = Math.floor(randomDecimal * (max - min + 1)) + min;
+return randomNumber;
+}
+// Example usage: Generate a random number between 1 and 100
+letrandomNum = getRandomNumber(l, 100);
+console.log("Random Number:", randomNum);
+</pre>
+
+
+<h2 id="js66">66. Get The Current URL</h2>
+To get the current URL in a web browser using JavaScript, you can use the window.locatio n object.
+<pre>
+// Get the domain
+const domain = window.location.hostname;
+// Get the path
+const path = window.location.pathname;
+// Get the query parameters
+const queryParams = window.location.search;
+// Display the results
+console.log("Domain:", domain);
+console.log("Path:", path);
+console.log("Query Parameters:", queryParams);
+</pre>
+
+
+<h2 id="js67">67. Validate An Email Address</h2>
+To validate an email address in JavaScript, you can use a regular expression.
+<pre>
+function validateEmail(email) {
+// Regular expression for a basic email validation
+const emailRegex = /A[A\s@]+@[A\s@]+\.[A\s@]+$/;
+// Test the email against the regular expression
+return emailRegex.test(email);
+}
+// Example usage:
+const emailTo Validate = "example@email.com";
+if (validateEmail(emailToValidate)) {
+console.logC'Email is valid");
+} else {
+console.logC'Email is not valid");
+}
+</pre>
+
+
+<h2 id="js68">68. Check If a Variable is of Function Type</h2>
+To check if a variable is of the function type in JavaScript, you can use the typeo f operator.
+<pre>
+// Example variable
+let myFunction = function() {
+console.logf'Hello, world!");
+};
+// Check if the variable is a function
+if (typeof myFunction = = = 'function') {
+console.log("The variable is of function type");
+} else {
+console.log("The variable is not of function type");
+}
+</pre>
+
+
+<h2 id="js69">69. Work With Constants</h2>
+You can work with constants using the const keyword to declare variables whose values should not be
+reassigned.
+<pre>
+// Define a constant
+const PI = 3.14159;
+// Attempt to reassign a constant (will result in an error)
+// PI = 3.14; // Uncommenting this line will result in an error
+// Display the value of the constant
+console.log("The value of PI is:", PI);
+</pre>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js70">70. Pass Parameter to a setTimeout() Function</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+To pass parameters to a function inside setTimeout(), you can use an anonymous function or an arrow
+function.
+<pre>
+function myFunction(parameter) {
+  console.logC'Parameter received:", parameter);
+}
+// Using an anonymous function to pass parameters to setTimeout
+let myParameter = "Hello, world!";
+setTimeout(function() {
+  myFunction(myParameter);
+}, 1000);
+</pre>
+
+
+<h2 id="js71">71. Generate a Range of Numbers and Characters</h2>
+To generate a range of numbers or characters in JavaScript, you can use a loop or other methods depending
+on your specific requirements.
+<pre>
+function generateNumberRange(start, end) {
+let result = [];
+for (let i = start; i < = end; i+ +) {
+result.push(i);
+}
+return result;
+}
+// Example usage: Generate numbers from 1 to 5
+let numberRange = generateNumberRange(l, 5);
+console.log("Number Range:", numberRange);
+</pre>
+
+
+<h2 id="js72">72. Perform Function Overloading</h2>
+JavaScript does not support traditional function overloading like some other programming languages do,
+where you can define multiple functions with the same name but different parameter types or counts.
+However, you can achieve similar behavior in JavaScript by checking the number or types of arguments
+within a function.
+<pre>
+function exampleFunction() {
+if (arguments.length = = = 0) {
+// No arguments provided
+console.log("No arguments");
+} else if (arguments.length = = = 1 && typeof arguments[0] = = = "number") {
+// One argument of type number provided
+console.log("One number argument:", arguments[0]);
+} else if (arguments.length = = = 2 && typeof arguments[0] = = = "string" && typeof arguments! 1] = = = "number") {
+// Two arguments: a string followed by a number
+console.log("String and number arguments:", arguments[0], arguments! 1]);
+} else {
+// Default case
+console.log("Invalid arguments");
+}
+}
+// Example usage
+exampleFunction();
+exampleFunction(42);
+exampleFunction("Hello", 7);
+exampleFunction(true, "world"); // Invalid arguments
+</pre>
+
+
+73. Implement a Stack
+You can implement a basic stack data structure in JavaScript using an array.
+<pre>
+class Stack {
+constructor) {
+this.items = [];
+}
+// Push an element onto the stack
+push(element) {
+this.items.push(element);
+}
+// Pop the top element from the stack
+pop() {
+if (this.isEmptyO) {
+return "Underflow";
+}
+return this.items.popO;
+}
+// Peek at the top element without removing it
+peek() {
+return this.items[this.items.length -1];
+// Check if the stack is empty
+isEmpty() {
+return this.items.length = = = 0;
+}
+// Get the size of the stack
+size() {
+return this.items.length;
+}
+// Print the stack elements
+print() {
+console.log(this.items);
+}
+}
+// Example usage:
+const stack = new Stack();
+stack.push(l);
+stack.push(2);
+stack.push(3);
+console.log("Stack elements:");
+stack.printO; // Outputs: [1,2,3]
+
+console.log("Top element:", stack.peek()); // Outputs: 3
+console.log("Popped element:", stack.popO); // Outputs: 3
+console.log("Stack size:", stack.sizeO); // Outputs: 2
+console.log("Is the stack empty?", stack.isEmptyO); // Outputs: false
+</pre>
+
+
+<h2 id="js74">74. Implement a Queue</h2>
+You can implement a basic queue data structure in JavaScript using an array.
+<pre>
+class Queue {
+constructor) {
+this.items = [];
+// Enqueue an element at the end of the queue
+enqueue(element) {
+this.items.push(element);
+// Dequeue the element from the front of the queue
+dequeue() {
+if (this.isEmptyO) {
+return "Underflow";
+return this.items.shift();
+// Peek at the front element without removing it
+front() {
+if (this.isEmptyO) {
+return "Queue is empty";
+}
+return this.items[O];
+}
+// Check if the queue is empty
+isEmptyO {
+return this.items.length = = = 0;
+// Get the size of the queue
+size() {
+return this.items.length;
+// Print the queue elements
+print() {
+console.log(this.items);
+// Example usage:
+const queue = new Queue();
+queue.enqueue( 1);
+queue.enqueue(2);
+queue.enqueue(3);
+console.log("Queue elements:");
+queue.printO; // Outputs: [1, 2, 3]
+console.log("Front element:", queue.front()); // Outputs: 1
+console.log("Dequeued element:", queue.dequeue()); // Outputs: 1
+console.log("Queue size:", queue.sizeQ); // Outputs: 2
+console.logf'Is the queue empty?", queue.isEmptyO); // Outputs: false
+</pre>
+
+
+<h2 id="js75">75. Check if a Number is Float or Integer</h2>
+You can check if a number is a float or an integer by examining its fractional part.
+<pre>
+function checkNumberType(number) {
+// Check if the number has a fractional part
+if (Number.islnteger(number)) {
+console.log(number + " is an integer.");
+} else {
+console.log(number + " is a float.");
+// Example usage:
+checkNumberType(5); // Outputs: 5 is an integer.
+checkNumberType(3.14); // Outputs: 3.14 is afloat.
+checkNumberType(7.0); // Outputs: 7 is an integer.
+checkNumberType(-2.5); // Outputs: -2.5 is a float.
+checkNumberType(NaN); // Outputs: NaN is not a valid number.
+checkNumberType("abc"); // Outputs: abc is not a valid number.
+</pre>
+
+
+<h2 id="js76">76. Pass a Function as Parameter</h2>
+You can pass a function as a parameter to another function. This allows you to create higher-order
+functions, which are functions that can accept other functions as arguments.
+<pre>
+// Function that takes another function as a parameter
+function operateOnNumbers(a, b, operation) {
+  return operation(a, b);
+}
+// Example functions to be passed as parameters
+function add(x, y) {
+  return x + y;
+}
+function multiply(x, y) {
+  return x * y;
+}
+// Example usage
+let resultl = operateOnNumbers(3, 5, add);
+console.log("Result of addition:", resultl); // Outputs: 8
+let result2 = operateOnNumbers(3, 5, multiply);
+console.log("Result of multiplication:", result2); // Outputs: 15
+</pre>
+
+<h2 id="js77">77. Get the Dimensions of an Image</h2>
+To get the dimensions (width and height) of an image in JavaScript, you can create an Imag e object, load the
+image, and then access the width and height properties.
+<pre>
+function getlmageDimensions(imageSrc) {
+// Create an Image object
+var img = new Image();
+// Set the source of the image
+img.src = imageSrc;
+// Wait for the image to load
+img.onload = function() {
+// Access the width and height properties
+var width = img.width;
+var height = img.height;
+// Display the dimensions
+console.log("Width:", width);
+console.log("Height:", height);
+};
+// Handle image loading error
+img.onerror = function() {
+console.error("Error loading the image.");
+}
+}
+// Example usage
+var imageUrl = "path/to/your/image.jpg";
+getlmageDimensions(imageUrl);
+</pre>
+
+
+<h2 id="js78">78. Remove All Whitespaces From a Text</h2>
+To remove all whitespaces from a text in JavaScript, you can use a regular expression and the replace
+method.
+<pre>
+function removeWhitespaces(inputText) {
+// Use a regular expression to replace all whitespaces with an empty string
+return inputText.replace(/\s/g,"");
+}
+// Example usage
+let textWithWhitespaces = "This is a text with spaces";
+let textWithoutWhitespaces = removeWhitespaces(textWithWhitespaces);
+console.log("Original Text:", textWithWhitespaces);
+console.log("Text without Whitespaces:", textWithoutWhitespaces);
+</pre>
+
+
+<h2 id="js79">79. Write to Console</h2>
+Writing to the console in JavaScript is typically done using the console.log() method.
+<pre>
+// Write a message to the console
+console.logf'Hello, world!");
+// You can also log variables or expressions
+let number = 42;
+console.log("The answer is:", number);
+// Multiple values can be logged in a single statement
+let firstName = "John";
+let lastName = "Doe";
+console.log("Full Name:", firstName, lastName);
+</pre>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js80">80. Convert Date to Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+To convert a JavaScript Date object to a numeric value representing the number of milliseconds since the
+Unix Epoch (January 1,1970), you can use the getTime() method.
+<pre>
+// Create a Date object
+const currentDate = new Date();
+// Get the numeric representation of the date (milliseconds since the Unix Epoch)
+const numericDate = currentDate.getTime();
+console.log("Current Date:", currentDate);
+console.log("Numeric Representation:", numericDate);
+</pre>
+
+
+<h2 id="js81">81. Find the Average of Two Numbers</h2>
+To find the average of two numbers in JavaScript, you can add the two numbers together and then divide the
+sum by 2.
+<pre>
+function findAverage(numl, num2) {
+// Calculate the sum of the two numbers
+let sum = numl + num 2;
+// Calculate the average by dividing the sum by 2
+let average = sum I 2;
+return average;
+}
+// Example usage:
+let number 1 = 10;
+let number2 = 20;
+let result = findAverage(numberl, number2);
+console.log(' The average of $ {number 1} and $ {number 2} is: $ {result}');
+</pre>
+
+
+<h2 id="js82">82. Calculate the Area of a Circle</h2>
+This program calculate the area of a circle in JavaScript:
+<pre>
+function calculateCircleArea(radius) {
+// Check if the radius is a valid number
+if (isNaN(radius) 11 radius <= 0) {
+return "Invalid radius. Please provide a positive number.";
+}
+// Calculate the area
+const area = Math.PI * Math.pow(radius, 2);
+return area;
+}
+// Example usage:
+const radius = 5;
+const area = calculateCircleArea(radius);
+console.log(' The area of a circle with radius $ {radius} is: ${area}');
+</pre>
+
+
+<h2 id="js83">83. Random Color Generator</h2>
+To generate a random color in JavaScript, you can create a function that generates random values for the red,
+green, and blue components of the color.
+<pre>
+function generateRandomColor() {
+// Generate random values for red, green, and blue components
+const red = Math.floor(Math.random() * 256);
+const green = Math.floor(Math.random() * 256);
+const blue = Math.floor(Math.random() * 256);
+// Create the RGB color string
+const color = ' rgb(${red}, $ {green}, ${blue})';
+return color;
+}
+// Example usage:
+const randomColor = generateRandomColorQ;
+console.log("Random Color:", randomColor);
+</pre>
+
+
+<h2 id="js84">84. Check if a String is Empty</h2>
+To check if a string is empty in JavaScript, you can use the lengt h property of the string. If the length is zero,
+it means the string is empty.
+<pre>
+function isEmptyString(str) {
+return str.length = = = 0;
+}
+// Example usage:
+const emptystring =
+const nonEmptyString = "Hello, world!";
+console.log("Is emptystring empty?", isEmptyString(emptyString)); // Outputs: true
+console.logf'Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outputs: false
+</pre>
+
+
+<h2 id="js85">85. Capitalize the First Letter of a String</h2>
+To capitalize the first letter of a string in JavaScript, you can use a combination of the charAt(),
+toUpperCase(), and slice() methods.
+<pre>
+function capitalizeFirstLetter(str) {
+// Check if the string is not empty
+if (str.length === 0) {
+return "Empty string";
+// Capitalize the first letter and concatenate the rest of the string
+return str.charAt(0).toUpperCase() + str.slice(l);
+}
+// Example usage:
+const originalString = "hello, world!";
+const capitalizedString = capitalizeFirstLetter(originalString);
+console.log("Original String:", originalString);
+console.log("Capitalized String:", capitalizedString);
+</pre>
+
+
+<h2 id="js86">86. Find the Maximum Element in an Array</h2>
+To find the maximum element in an array in JavaScript, you can use the Math.max() function along with
+the spread operator (...) to pass the array elements as individual arguments.
+<pre>
+function findMaxElement(arr) {
+// Check if the array is not empty
+if (arr.length = = = 0) {
+return "Empty array";
+// Use Math.max() with the spread operator to find the maximum element
+const maxElement = Math.max(...arr);
+return maxElement;
+// Example usage:
+const numbers = [5, 2, 9,1, 7];
+const maxNumber = findMaxElement(numbers);
+console.log("Array:", numbers);
+console.logC'Maximum Element:", maxNumber);
+</pre>
+
+
+<h2 id="js87">87. Reverse an Array</h2>
+To reverse an array in JavaScript, you can use the reverse() method, which is available for arrays. This
+method reverses the elements of an array in place.
+<pre>
+function reverseArray(arr) {
+// Use the reverse() method to reverse the array in place
+return arr.reverse();
+// Example usage:
+const originalArray = [1, 2, 3,4, 5];
+const reversedArray = reverseArray(originalArray);
+console.log("Original Array:", originalArray);
+console.log("Reversed Array:", reversedArray);
+</pre>
+
+
+<h2 id="js88">88. Calculate the Power of a Number</h2>
+To calculate the power of a number in JavaScript, you can use the Math.pow() method or the exponentiation
+operator (**).
+<pre>
+// Using Math.pow()
+function calculatePowerWithMathPow(base, exponent) {
+return Math.pow(base, exponent);
+// Using the exponentiation operator (**)
+function calculatePowerWithExponentiationOperator(base, exponent) {
+return base ** exponent;
+1
+// Example usage:
+const baseNumber = 2;
+const exponentNumber = 3;
+const resultWithMathPow = calculatePowerWithMathPow(baseNumber, exponentNumber);
+const resultWithExponentiationOperator = calculatePowerWithExponentiationOperator(baseNumber,
+exponentNumber);
+console.log(' $ {baseNumber} to the power of $ {exponentNumber} using Math.pow(): $ {resultWithMathPow}');
+console.log('${baseNumber} to the power of $ {exponentNumber} using the exponentiation operator (**): $
+{resultWithExponentiationOperator}');
+</pre>
+
+
+<h2 id="js89">89. Find the Minimum Element in an Array</h2>
+To find the minimum element in an array in JavaScript, you can use the Math.min() function along with the
+spread operator (...) to pass the array elements as individual arguments.
+<pre>
+function findMinElement(arr) {
+// Check if the array is not empty
+if (arr.length = = = 0) {
+return "Empty array";
+// Use Math.min() with the spread operator to find the minimum element
+const minElement = Math.min(...arr);
+return minElement;
+// Example usage:
+const numbers = [5, 2, 9,1, 7];
+const minNumber = findMinElement(numbers);
+console.log("Array:", numbers);
+console.log("Minimum Element:", minNumber);
+</pre>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js90">90. Convert Minutes to Hours and Minutes</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+To convert a total number of minutes to hours and remaining minutes in JavaScript, you can use simple
+mathematical operations.
+<pre>
+function convertMinutesToHoursAndMinutes(totalMinutes) {
+// Check if the input is a valid positive number
+if (isNaN(totalMinutes) 11 totalMinutes < 0) {
+return "Invalid input. Please provide a non-negative number of minutes.";
+// Calculate hours and remaining minutes
+const hours = Math.floor(totalMinutes / 60);
+const minutes = totalMinutes % 60;
+// Construct the result string
+const result = ' $ {hours} hours and $ {minutes} minutes';
+return result;
+}
+// Example usage:
+const totalMinutes =135;
+const convertedTime = convertMinutesToHoursAndMinutes(totalMinutes);
+console.log(' ${totalMinutes} minutes is equivalent to: ${convertedTime}');
+</pre>
+
+
+<h2 id="js91">91. Find the Sum of Digits in a Number</h2>
+To find the sum of digits in a number using JavaScript, you can use a loop to iterate through each digit and
+add them together.
+<pre>
+function sumOfDigits(number) {
+// Check if the input is a valid number
+if (isNaN(number) 11 ’Number.isInteger(number) 11 number < 0) {
+return "Invalid input. Please provide a non-negative integer.";
+// Convert the number to a string to iterate through its digits
+const digitsArray = String(number).split(").map(Number);
+// Calculate the sum of digits
+const sum = digitsArray.reduce((acc, digit) = > acc + digit, 0);
+return sum;
+}
+// Example usage:
+const inputNumber = 12345;
+const result = sumOfDigits(inputNumber);
+console.log(' The sum of digits in $ {inputNumber} is: $ {result}');
+</pre>
+
+
+<h2 id="js92">92. Check if a String is a Palindromic Phrase</h2>
+To check if a string is a palindromic phrase in JavaScript, you can create a function that removes non­
+alphanumeric characters and compares the string with its reversed version.
+<pre>
+function isPalindromicPhrase(str) {
+// Check if the input is a valid string
+if (typeof str !== 'string') {
+return "Invalid input. Please provide a string.";
+}
+// Remove non-alphanumeric characters and convert to lowercase
+const cleanedStr = str.replace(/[Aa-zA-ZO-9]/g, ").toLowerCase();
+// Compare the cleaned string with its reversed version
+return cleanedStr = = = cleanedStr.split(").reverse().join(");
+}
+// Example usage:
+const phrase 1 = "A man, a plan, a canal, Panama!";
+const phrase2 = "Hello, world!";
+console.log(' Is "${phrasel}" a palindromic phrase? ${isPalindromicPhrase(phrasel)}');
+console.log(' Is "${phrase2}" a palindromic phrase? ${isPalindromicPhrase(phrase2)}');
+</pre>
+
+
+<h2 id="js93">93. Generate a Random Password</h2>
+To generate a random password in JavaScript, you can create a function that combines random characters
+from various character sets.
+<pre>
+function generateRandomPassword(length) {
+// Define character sets
+const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+const numericChars = '0123456789';
+const specialchars = '!©#$%A&*()-_+=';
+// Combine character sets
+const allChars = uppercaseChars + lowercaseChars + numericChars + specialchars;
+// Check if the input length is a valid positive number
+if (!Number.isInteger(length) 11 length <= 0) {
+return "Invalid input. Please provide a positive integer for the password length.";
+}
+// Generate the random password
+let password =";
+for (let i = 0; i < length; i++) {
+const randomindex = Math.floor(Math.random() * allChars.length);
+password += allChars.charAt(randomlndex);
+}
+return password;
+}
+// Example usage:
+const passwordLength =12;
+const randomPassword = generateRandomPassword(passwordLength);
+console.log(' Generated Password: ${randomPassword}');
+</pre>
+
+
+<h2 id="js94">94. Calculate Simple Interest</h2>
+Program To calculate simple interest in JavaScript:
+<pre>
+function calculateSimpleInterest(principal, rate, time) {
+// Check if the inputs are valid positive numbers
+if (isNaN(principal) 11 isNaN(rate) 11 isNaN(time) 11 principal <= 0 11 rate < = 0 || time <= 0) {
+return "Invalid inputs. Please provide valid positive numbers.";
+}
+// Calculate simple interest
+const simplelnterest = (principal * rate * time) / 100;
+return simplelnterest;
+}
+// Example usage:
+const principalAmount = 1000;
+const interestRate = 5; // 5%
+const investmentTime = 2; // 2 years
+const interestAmount = calculateSimpleInterest(principalAmount, interestRate, investmentTime);
+console.log(' Principal Amount: $$ {principalAmount}');
+console.log(' Interest Rate: $ {interestRate}%');
+console.log(' Investment Time: $ {investmentTime} years');
+console.log(' Simple Interest: $${interestAmount}');
+</pre>
+
+
+<h2 id="js95">95. Implement a Basic Stopwatch</h2>
+To implement a basic stopwatch in JavaScript, you can use the Dat e object to measure the elapsed time.
+<pre>
+let startTime;
+let stopwatchinterval;
+function startStopwatch() {
+startTime = new Date().getTime();
+stopwatchinterval = setInterval(updateDisplay, 1000);
+}
+function stopStopwatch() {
+clearlnterval(stopwatchlnterval);
+}
+function resetStopwatch() {
+stopStopwatchO;
+updateDisplay(O);
+}
+function updateDisplayO {
+const currentTime = new Date().getTime();
+const elapsedTime = Math.floor((currentTime - startTime) / 1000);
+const minutes = Math.floor(elapsedTime / 60);
+const seconds = elapsedTime % 60;
+const formattedTime = ' ${minutes}:${seconds < 10 ? "0": ""}${seconds}';
+document.getElementById("display").textContent = formattedTime;
+}
+</pre>
+
+
+
+<h2 id="js96">96. Check if a Number is a Perfect Number</h2>
+A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding itself).
+<pre>
+function isPerfectNumber(number) {
+
+// Check if the input is a positive integer
+if (’Number.isInteger(number) 11 number <= 0) {
+return "Invalid input. Please provide a positive integer.";
+
+// Find divisors and calculate sum
+let sum = 0;
+for (let i = 1; i <= Math.floor(number / 2); i++) {
+if (number % i = = = 0) {
+sum += i;
+}
+}
+
+// Check if the sum of divisors equals the original number
+return sum = = = number;
+
+// Example usage:
+const testNumber = 28;
+const result = isPerfectNumber(testNumber);
+console.log(' Is ${testNumber} a perfect number? $ {result}');
+</pre>
+
+
+<h2 id="js97">97. This program calculates the Volume of a Cylinder</h2>
+This program calculates the Volume of a Cylinder:
+<pre>
+function calculateCylinderVolume(radius, height) {
+
+// Check if the inputs are valid positive numbers
+if (isNaN(radius) || isNaN(height) 11 radius < = 0 || height <= 0) {
+return "Invalid inputs. Please provide valid positive numbers.";
+}
+
+// Calculate the volume of the cylinder
+const volume = Math.PI * Math.pow(radius, 2) * height;
+return volume;
+}
+
+// Example usage:
+const cylinderRadius = 5;
+const cylinderHeight =10;
+const cylindervolume = calculateCylinderVolume(cylinderRadius, cylinderHeight);
+console.log(' Cylinder Volume: $ {cylinderVolume.toFixed(2)} cubic units');
+</pre>
+
+
+<h2 id="js98">98. Generate a Random Quote</h2>
+To generate a random quote in JavaScript, you can create an array of quotes and use a function to pick a
+random quote from that array.
+<pre>
+function generateRandomQuote() {
+const quotes = [
+"The only way to do great work is to love what you do. - Steve Jobs",
+"In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+"The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+"Life is what happens when you're busy making other plans. - John Lennon",
+"Get busy living or get busy dying. - Stephen King"
+
+// Add more quotes as needed
+];
+
+// Generate a random index to pick a quote from the array
+const randomindex = Math.floor(Math.random() * quotes.length);
+
+// Return the randomly selected quote
+return quotes[randomlndex];
+
+// Example usage:
+const randomQuote = generateRandomQuote();
+console.logC'Random Quote:", randomQuote);
+</pre>
+
+
+<h2 id="js99">99. Find the Intersection of Two Arrays</h2>
+To find the intersection of two arrays in JavaScript, you can create a function that iterates through both
+arrays and identifies the common elements.
+<pre>
+function findlntersection(arrl, arr2) {
+
+// Check if the inputs are valid arrays
+if (’Array.isArray(arrl) || !Array.isArray(arr2)) {
+return "Invalid inputs. Please provide valid arrays.";
+}
+
+// Use a Set to store unique elements of the first array
+const set = new Set(arrl);
+
+// Filter the second array to include only elements present in the set
+const intersection = arr2.filter(element => set.has(element));
+return intersection;
+}
+
+// Example usage:
+const arrayl = [1, 2, 3,4, 5];
+const array2 = [3, 4, 5, 6, 7];
+const result = findlntersection(arrayl, array2);
+console.logf'Intersection of Arrays:", result);
+</pre>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js100">100. Convert Feet to Meters</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To convert feet to meters in JavaScript, you can use the following conversion formula:</p>
+<p>Meters=Feet*0.3048 Meters=Feet*0.3048</p>
+
+<p>Here's a simple function that performs the conversion:</p>
+<pre>
+function feetToMeters(feet) {
+// Check if the input is a valid number
+if (isNaN(feet)) {
+return "Invalid input. Please provide a valid number of feet.";
+
+// Perform the conversion
+const meters = feet * 0.3048;
+return meters;
+
+// Example usage:
+const feetValue =10;
+const meters Value = feetToMeters(feetValue);
+console.log(' ${feetValue} feet is equal to ${metersValue.toFixed(2)} meters “);
+</pre>
+
+
+<h2 id="js101">101. Convert Days to Years, Months, and Days</h2>
+To convert a given number of days into years, months, and remaining days in JavaScript, you can use the
+following function:
+<pre>
+function convertDaysToYearsMonthsDays(days) {
+
+// Check if the input is a valid positive number
+if (isNaN(days) 11 days <= 0) {
+return "Invalid input. Please provide a valid positive number of days.";
+}
+
+// Calculate years
+const years = Math.floor(days / 365);
+
+// Calculate remaining days after removing years
+const remainingDaysAfterYears = days % 365;
+
+// Calculate months
+const months = Math.floor(remainingDaysAfterYears / 30);
+
+// Calculate remaining days after removing months
+const remainingDaysAfterMonths = remainingDaysAfterYears % 30;
+return {
+years,
+months,
+days: remainingDaysAfterMonths
+};
+}
+
+// Example usage:
+const totalDays = 1000;
+const result = convertDaysToYearsMonthsDays(totalDays);
+console.log( '$ {totalDays} days is approximately $ {result.years} years, $ {result.months} months, and ${result.days}
+days.');
+</pre>
+
+
+<h2 id="js102">102. Find the Median of an Array</h2>
+To find the median of an array in JavaScript, you can create a function that sorts the array and then
+determines the median based on its length.
+<pre>
+function findMedian(arr) {
+// Check if the input is a valid array
+if (’Array.isArray(arr) 11 arr.length = = = 0) {
+return "Invalid input. Please provide a non-empty array.";
+}
+// Sort the array
+const sortedArray = arr.slice().sort((a, b) = > a - b);
+// Calculate the median
+const middleindex = Math.floor(sortedArray.length I 2);
+if (sortedArray.length % 2 = = = 0) {
+// If the array has an even number of elements, return the average of the middle two
+const median = (sortedArray[middleIndex -1] + sortedArray[middleIndex]) I 2;
+return median;
+} else {
+// If the array has an odd number of elements, return the middle element
+return sortedArray[middleIndex];
+}
+// Example usage:
+const numbers = [5, 2, 8,1, 7, 3];
+const result = findMedian(numbers);
+console.logf'Median:", result);
+</pre>
+
+
+<h2 id="js103">103. Calculate the Distance Between Two Points</h2>
+To calculate the distance between two points (xl, yl) and (x2, y2) in a two-dimensional plane:
+<pre>
+function calculateDistance(xl, yl, x2, y2) {
+// Check if the inputs are valid numbers
+if (isNaN(xl) || isNaN(yl) || isNaN(x2) || isNaN(y2)) {
+return "Invalid inputs. Please provide valid numerical coordinates.";
+}
+// Calculate the distance using the distance formula
+const distance = Math.sqrt(Math.pow((x2 - xl), 2) + Math.pow((y2 - yl), 2));
+return distance;
+}
+// Example usage:
+const xl = 1;
+const yl = 2;
+const x2 = 4;
+const y2 = 6;
+const result = calculateDistance(xl, yl, x2, y2);
+console.log(' The distance between (${xl}, ${y 1}) and (${x2}, ${y2}) is ${result.toFixed(2)}');
+</pre>
+
+
+<h2 id="js104">104. Check if a Number is a Perfect Square</h2>
+To check if a number is a perfect square in JavaScript, you can calculate the square root of the number and
+then check if the square of the integer part of the square root is equal to the original number.
+<pre>
+function isPerfectSquare(number) {
+// Check if the input is a valid positive number
+if (isNaN(number) 11 number < 0) {
+return "Invalid input. Please provide a valid non-negative number.";
+}
+// Calculate the square root
+const squareRoot = Math.sqrt(number);
+// Check if the square of the integer part of the square root is equal to the original number
+return squareRoot = = = Math.floor(squareRoot);
+}
+// Example usage:
+const testNumber = 25;
+const result = isPerfectSquare(testNumber);
+console.log(' Is $ {testNumber} a perfect square? $ {result}');
+</pre>
+
+
+<h2 id="js105">105. Find the Area of a Rectangle</h2>
+To find the area of a rectangle in JavaScript, you can create a function that takes the length and width as
+parameters and applies the formula:
+Area=Length x Width Area=Length x Width
+<pre>
+function calculateRectangleArea(length, width) {
+// Check if the inputs are valid positive numbers
+if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
+return "Invalid inputs. Please provide valid positive numbers for length and width.";
+// Calculate the area of the rectangle
+const area = length * width;
+return area;
+// Example usage:
+const rectangleLength = 5;
+const rectangle Width = 8;
+const result = calculateRectangleArea(rectangleLength, rectangleWidth);
+console.log(' The area of the rectangle with length $ {rectangleLength} and width $ {rectangleWidth} is $ {result}');
+</pre>
+
+
+<h2 id="js106">106. Convert Binary to Decimal</h2>
+To convert a binary number to a decimal number in JavaScript, you can create a function that takes a binary
+string as input and calculates the decimal equivalent.
+<pre>
+function binaryToDecimal(binaryString) {
+// Check if the input is a valid binary string
+if (!/A[01] + $/.test(binaryString)) {
+return "Invalid input. Please provide a valid binary string.";
+// Convert binary to decimal
+const decimalvalue = parse!nt(binaryString, 2);
+return decimalvalue;
+// Example usage:
+const binaryNumber = "1101";
+const decimalResult = binaryToDecimal(binaryNumber);
+console.log(' The decimal equivalent of binary $ {binaryNumber} is $ {decimalResult}');
+</pre>
+
+
+<h2 id="js107">107. Count the Number of Words in a Sentence</h2>
+To count the number of words in a sentence in JavaScript, you can create a function that splits the sentence
+into words and then counts the number of resulting elements in the array.
+<pre>
+function countWords(sentence) {
+// Check if the input is a valid string
+if (typeof sentence !== 'string') {
+return "Invalid input. Please provide a valid sentence.";
+// Use a regular expression to split the sentence into words
+const words = sentence.split(/\s+/);
+// Filter out empty strings
+const nonEmptyWords = words.filter(word = > word.length > 0);
+// Count the number of words
+const wordCount = nonEmptyWords.length;
+return wordCount;
+// Example usage:
+const sentence = "This is a sample sentence.";
+const result = countWords(sentence);
+console.log(' The sentence "${sentence}" has ${result] words.');
+</pre>
+
+
+<h2 id="js108">108. Find the Union of Two Arrays</h2>
+To find the union of two arrays in JavaScript, you can create a function that concatenates the arrays and
+removes duplicate elements.
+<pre>
+function findUnion(arrl, arr2) {
+// Check if the inputs are valid arrays
+if (’Array.isArray(arrl) 11 !Array.isArray(arr2)) {
+return "Invalid inputs. Please provide valid arrays.";
+// Concatenate the arrays and remove duplicates
+const unionArray = Array.from(new Set([...arrl, ...arr2]));
+return unionArray;
+// Example usage:
+const arrayl = [1, 2, 3,4, 5];
+const array2 = [3, 4, 5, 6, 7];
+const result = findUnion(arrayl, array2);
+console.log("Union of Arrays:", result);
+</pre>
+
+
+<h2 id="js109">109. Calculate the Factorial of a Large Number</h2>
+Calculating the factorial of a large number can quickly lead to very large results, and JavaScript has
+limitations in terms of precision. To handle large factorials, you can use libraries that support arbitrary-
+precision arithmetic. One such library is the "Biglnt" type in JavaScript, which is available in modern
+environments.
+<pre>
+function calculateFactorial(n) {
+// Check if the input is a valid non-negative integer
+if (INumber.isInteger(n) 11 n < 0) {
+return "Invalid input. Please provide a non-negative integer.";
+}
+// Use Biglnt to handle large factorials
+let result = Biglnt(l);
+for (let i = 2;i<=n;i++){
+result *= Biglnt(i);
+}
+return result.toStringO;
+}
+// Example usage:
+const number = 50;
+const result = calculateFactorial(number);
+console.log(' The factorial of ${number} is:\n$ {result}');
+</pre>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js110">110. Check if a Number is a Strong Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+A strong number (or digital factorial) is a number such that the sum of its individual digits, each
+factorialized, is equal to the number itself. To check if a number is a strong number in JavaScript, you
+can create a function that calculates the factorial of each digit and checks if their sum equals the original
+number.
+<pre>
+function calculateFactorial(number) {
+let result = 1;
+for (let i = 2; i < = number; i+ +) {
+result *= i;
+}
+return result;
+}
+function isStrongNumber(num) {
+// Check if the input is a non-negative integer
+if (!Number.is!nteger(num) 11 num < 0) {
+return false;
+}
+// Convert the number to an array of digits
+const digits = Array.from(String(num), Number);
+// Calculate the factorial of each digit and sum them
+const digitFactorialSum = digits.reduce((sum, digit) = > sum + calculateFactorial(digit), 0);
+// Check if the sum equals the original number
+return digitFactorialSum = = = num;
+}
+// Example usage:
+const testNumber = 145;
+const result = isStrongNumber(testNumber);
+console.log(' $ {testNumber} is a strong number: $ {result}');
+</pre>
+
 
 
