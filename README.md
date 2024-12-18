@@ -240,7 +240,9 @@ own ideas into a reality without even having to think about it.</p>
 218. Pyramid
 
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js1">1. Print Hello World</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The "Hello World" program is a classic in programming and is often the first program written when learning
 a new programming language. In this case, the goal is to print the text string "Hello, World!" to the browser
 console.</p>
@@ -248,7 +250,7 @@ console.</p>
 console.log("Hello, World!");
 </pre>
 
-<h2>2. Add Two Numbers</h2>
+<h2 id="js2">2. Add Two Numbers</h2>
 <p>This program focuses on taking two numbers as input and then displaying their sum. It prompts the user to
 enter two numbers, adds them together, and prints the result.</p>
 <pre>
@@ -262,7 +264,7 @@ console.log("Please enter valid numbers.");
 }
 </pre>
 
-<h2>3. Find the Square Root</h2>
+<h2 id="js3">3. Find the Square Root</h2>
 <p>This program prompts the user to enter a number and calculates its square root. It then displays the result,
 ensuring that the entered number is non-negative.</p>
 <pre>
@@ -275,7 +277,7 @@ console.log("Please enter a valid non-negative number.");
 }
 </pre>
 
-4. Calculate the Area of a Triangle</h2>
+<h2 id="js4">4. Calculate the Area of a Triangle</h2>
 This program prompts the user to enter the base and height of a triangle and calculates its area using the
 formula: Area= 12 xBase*HeightArea=21 xBasex Height. It then displays the calculated area.
 <pre>
@@ -292,7 +294,7 @@ console.log("Please enter valid positive numbers for base and height.");
 </pre>
 
 
-5. Swap Two Variables</h2>
+<h2 id="js5">5. Swap Two Variables</h2>
 This program prompts the user to enter two variables and swaps their values. It then displays the variables
 before and after the swap.
 let variable 1 = promptf'Enter the first variable:");
@@ -310,7 +312,7 @@ console.log(
 </pre>
 
 
-6. Solve Quadratic Equation</h2>
+<h2 id="js6">6. Solve Quadratic Equation</h2>
 This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, and c are coefficients. It
 uses the quadratic formula to find the roots of the equation.
 <pre>
@@ -400,7 +402,9 @@ console.log(
 </pre>
 
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js10">10. Check if a number is Positive, Negative, or Zero</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a number and checks whether it is positive, negative, or zero. It then
 displays the result.
 <pre>
@@ -422,7 +426,7 @@ console.log("Please enter a valid number.");
 </pre>
 
 
-11. Check if a Number is Odd or Even
+<h2 id="js11">11. Check if a Number is Odd or Even</h2>
 This program prompts the user to enter a number and checks whether it is odd or even. It then displays the
 result.
 <pre>
@@ -442,7 +446,7 @@ console.log("Please enter a valid integer.");
 </pre>
 
 
-12. Find the Largest Among Three Numbers
+<h2 id="js12">12. Find the Largest Among Three Numbers</h2>
 This program prompts the user to enter three numbers and determines and displays the largest among
 them.
 <pre>
@@ -463,7 +467,7 @@ console.log("Please enter valid numbers for all three inputs.");
 </pre>
 
 
-13. Check Prime Number
+<h2 id="js13">13. Check Prime Number</h2>
 This program prompts the user to enter a number and checks whether it is a prime number or not. It then
 displays the result.
 <pre>
@@ -488,7 +492,7 @@ console.log("Please enter a valid integer greater than 1.");
 </pre>
 
 
-14. Print All Prime Numbers in an Interval
+<h2 id="js14">14. Print All Prime Numbers in an Interval</h2>
 This program prompts the user to enter a starting and ending number for an interval and then prints all the
 prime numbers within that interval.
 <pre>
@@ -518,7 +522,7 @@ break;
 if (isPrime) {
 console.log(i);
 }
-1
+}
 } else {
 console.log(
 "Please enter valid integers, ensuring that the starting number is less than the ending number and greater than 1."
@@ -527,7 +531,7 @@ console.log(
 </pre>
 
 
-15. Find the Factorial of a Number
+<h2 id="js15">15. Find the Factorial of a Number</h2>
 This program calculates the factorial of a given number. The factorial of a non-negative integer n , denoted
 as n!, is the product of all positive integers less than or equal to n .
 <pre>
@@ -547,7 +551,7 @@ console.log("Please enter a valid non-negative integer.");
 </pre>
 
 
-16. Display the Multiplication Table
+<h2 id="js16">16. Display the Multiplication Table</h2>
 This program prompts the user to enter a number and displays its multiplication table up to a specified range
 (e.g., up to 10).
 <pre>
@@ -569,7 +573,7 @@ console.log("Please enter a valid integer.");
 </pre>
 
 
-17. Print the Fibonacci Sequence
+<h2 id="js17">17. Print the Fibonacci Sequence</h2>
 This program prompts the user to enter the number of terms and then prints the Fibonacci sequence up to
 that number of terms. The Fibonacci sequence is a series of numbers where each number is the sum of the
 two preceding ones, usually starting with 0 and 1.
@@ -593,7 +597,7 @@ console.log("Please enter a valid positive integer for the number of terms.");
 </pre>
 
 
-18. Check Armstrong Number
+<h2 id="js18">18. Check Armstrong Number</h2>
 This program prompts the user to enter a number and checks whether it is an Armstrong number or not. An
 Armstrong number (also known as a narcissistic number or pluperfect digital invariant) is a number that is
 the sum of its own digits each raised to the power of the number of digits in the number. For example, 15 3 is
@@ -623,7 +627,7 @@ console.log("Please enter a valid positive integer.");
 </pre>
 
 
-19. Find Armstrong Number in an Interval
+<h2 id="js19">19. Find Armstrong Number in an Interval</h2>
 This program prompts the user to enter a range (start and end) and then prints all Armstrong numbers
 within that interval.
 <pre>
@@ -666,7 +670,9 @@ greater than 0."
 </pre>
 
 
-20. Make a Simple Calculator
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js20">20. Make a Simple Calculator</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program implements a simple calculator that can perform basic arithmetic operations. It prompts the
 user to enter two numbers and choose an operation (addition, subtraction, multiplication, or division). It
 then performs the selected operation and displays the result.
@@ -714,7 +720,7 @@ console.log("Please enter valid numbers.");
 </pre>
 
 
-21. Find the Sum of Natural Numbers
+<h2 id="js21">21. Find the Sum of Natural Numbers</h2>
 This program calculates the sum of natural numbers up to a given positive integer n . The sum is calculated
 using the formula: sum = n*(n + l) / 2.
 <pre>
@@ -731,7 +737,7 @@ console.log(”Please enter a valid positive integer.");
 </pre>
 
 
-22. Check if the Numbers Have the Same Last Digit
+<h2 id="js22">22. Check if the Numbers Have the Same Last Digit</h2>
 This program prompts the user to enter two numbers and checks if they have the same last digit.
 <pre>
 // Prompt user for two numbers
@@ -762,7 +768,7 @@ console.log("Please enter valid integers.");
 </pre>
 
 
-23. Find HCF or GCD
+<h2 id="js23">23. Find HCF or GCD</h2>
 This program prompts the user to enter two positive integers and calculates their Highest Common Factor
 (HCF) or Greatest Common Divisor (GCD).
 <pre>
@@ -785,7 +791,7 @@ console.log("Please enter valid positive integers.");
 </pre>
 
 
-24. Find LCM
+<h2 id="js24">24. Find LCM</h2>
 This program prompts the user to enter two positive integers and calculates their Least Common Multiple
 (LCM).
 <pre>
@@ -809,7 +815,7 @@ console.log("Please enter valid positive integers.");
 </pre>
 
 
-25. Find the Factors of a Number
+<h2 id="js25">25. Find the Factors of a Number</h2>
 This program prompts the user to enter a positive integer and calculates and displays its factors.
 <pre>
 // Prompt user for a positive integer
@@ -829,7 +835,7 @@ console.log("Please enter a valid positive integer.");
 </pre>
 
 
-26. Find Sum of Natural Numbers Using Recursion
+<h2 id="js26">26. Find Sum of Natural Numbers Using Recursion</h2>
 This program calculates the sum of natural numbers up to a given positive integer using recursion. It
 prompts the user to enter a positive integer n and then calculates and displays the sum using a recursive
 function.
@@ -858,7 +864,7 @@ console.log("Please enter a valid positive integer.");
 </pre>
 
 
-27. Guess a Random Number
+<h2 id="js27">27. Guess a Random Number</h2>
 This program generates a random number between a specified range and allows the user to guess the
 number. It provides feedback on whether the guessed number is too high, too low, or correct. The user
 continues guessing until they correctly identify the random number.
@@ -888,7 +894,7 @@ console.log("Please enter a valid number.");
 </pre>
 
 
-28. Shuffle Deck of Cards
+<h2 id="js28">28. Shuffle Deck of Cards</h2>
 This program simulates shuffling a standard deck of playing cards. It generates a deck of cards, displays the
 initial order, shuffles the deck, and then displays the shuffled order.
 <pre>
@@ -920,7 +926,7 @@ console.log(shuffledDeck);
 </pre>
 
 
-29. Display Fibonacci Sequence Using Recursion
+<h2 id="js29">29. Display Fibonacci Sequence Using Recursion</h2>
 This program displays the Fibonacci sequence up to a specified number of terms using recursion. It prompts
 the user to enter the number of terms and then uses a recursive function to generate and display the
 Fibonacci sequence.
@@ -948,7 +954,9 @@ console.logf'Please enter a valid non-negative integer for the number of terms."
 </pre>
 
 
-30. Find Factorial of Number Using Recursion
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js30">30. Find Factorial of Number Using Recursion</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the factorial of a given non-negative integer using recursion. It prompts the user to
 enter a non-negative integer and then uses a recursive function to compute and display its factorial.
 <pre>
@@ -973,7 +981,7 @@ console.log("Please enter a valid non-negative integer.");
 </pre>
 
 
-31. Convert Decimal to Binary
+<h2 id="js31">31. Convert Decimal to Binary</h2>
 This program converts a decimal number to its binary equivalent. It prompts the user to enter a decimal
 number and then calculates and displays its binary representation.
 <pre>
@@ -1002,7 +1010,8 @@ console.log("Please enter a valid non-negative integer.");
 }
 </pre>
 
-32. Find ASCII Value of Character
+
+<h2 id="js32">32. Find ASCII Value of Character</h2>
 This program prompts the user to enter a character and then calculates and displays its ASCII val
 <pre>
 // Prompt user for a character
@@ -1018,7 +1027,7 @@ console.log("Please enter a valid single character.");
 </pre>
 
 
-33. Check Whether a String is Palindrome or Not
+<h2 id="js33">33. Check Whether a String is Palindrome or Not</h2>
 This program checks whether a given string is a palindrome or not. A palindrome is a string that reads the
 same forward as backward.
 <pre>
@@ -1045,7 +1054,7 @@ console.log("Please enter a valid string.");
 </pre>
 
 
-34. Sort Words in Alphabetical Order
+<h2 id="js34">34. Sort Words in Alphabetical Order</h2>
 This program prompts the user to enter a sentence or a list of words and then sorts and displays the words
 in alphabetical order.
 <pre>
@@ -1066,7 +1075,7 @@ console.log("Please enter a valid string.");
 </pre>
 
 
-35. Replace Characters of a String
+<h2 id="js35">35. Replace Characters of a String</h2>
 This program prompts the user to enter a string, a target character, and a replacement character. It then
 replaces all occurrences of the target character with the replacement character and displays the modified
 string.
@@ -1093,7 +1102,7 @@ console.log("Please enter a valid string.");
 </pre>
 
 
-36. Reverse a String
+<h2 id="js36">36. Reverse a String</h2>
 This program prompts the user to enter a string and then reverses and displays the characters of the string.
 <pre>
 // Prompt user for a string
@@ -1109,7 +1118,7 @@ console.log("Please enter a valid string.");
 </pre>
 
 
-37. Check the Number of Occurrences of a Character in the String
+<h2 id="js37">37. Check the Number of Occurrences of a Character in the String</h2>
 This program checks the number of occurrences of a character in a given string:
 <pre>
 // Prompt user for a string and a character
@@ -1131,7 +1140,7 @@ console.log("Please enter a valid string and a single character.");
 </pre>
 
 
-38. Convert the First Letter of a String into Uppercase
+<h2 id="js38">38. Convert the First Letter of a String into Uppercase</h2>
 This program converts the first letter of a string to uppercase:
 <pre>
 // Prompt user for a string
@@ -1149,7 +1158,7 @@ console.log("Please enter a valid string.");
 </pre>
 
 
-39. Count the Number of Vowels in a String
+<h2 id="js39">39. Count the Number of Vowels in a String</h2>
 This program counts the number of vowels in a given string:
 <pre>
 // Prompt user for a string
@@ -1173,7 +1182,9 @@ console.log("Please enter a valid string.");
 </pre>
 
 
-<h2>40. Check Whether a String Starts and Ends</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js40">40. Check Whether a String Starts and Ends</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 With Certain Characters
 This program checks whether a string starts and ends with certain characters using the startsWith and
 endsWith methods in JavaScript:
@@ -1195,7 +1206,7 @@ console.log("Please enter a valid string.");
 </pre>
 
 
-41. Replace All Occurrences of a String
+<h2 id="js41">41. Replace All Occurrences of a String</h2>
 Replace all occurrences of a substring in a string in JavaScript, you can use the replace() method along with
 a regular expression with the global ( g ) flag.
 <pre>
@@ -1213,7 +1224,7 @@ console.log(' Modified String: ${modifiedString}');
 </pre>
 
 
-42. Create Multiline Strings
+<h2 id="js42">42. Create Multiline Strings</h2>
 This program creates multiline strings using template literals (introduced in ECMAScript 6).
 <pre>
 // Multiline string using template literals
@@ -1225,7 +1236,7 @@ console.log(multilineString);
 </pre>
 
 
-43. Format Numbers as Currency Strings
+<h2 id="js43">43. Format Numbers as Currency Strings</h2>
 This program format numbers as currency strings:
 <pre>
 // Example number
@@ -1237,7 +1248,7 @@ console.log(' Formatted Amount: $ {formattedAmount}');
 </pre>
 
 
-44. Generate Random String
+<h2 id="js44">44. Generate Random String</h2>
 This program generates a random string in JavaScript, you can create a function that generates a string with
 random characters.
 <pre>
@@ -1257,7 +1268,7 @@ console.log(' Random String: $ {randomstring}');
 </pre>
 
 
-45. Check if a String Starts with Another String
+<h2 id="js45">45. Check if a String Starts with Another String</h2>
 This program checks if a string starts with another string using the startsWit h method.
 <pre>
 // Example strings
@@ -1270,7 +1281,7 @@ console.log(' Does the string start with '${searchString}'? ${startsWith}');
 </pre>
 
 
-46. Trim a String
+<h2 id="js46">46. Trim a String</h2>
 This program trims leading and trailing whitespaces from a string using the trim() method.
 <pre>
 // Example string with leading and trailing whitespaces
@@ -1283,7 +1294,7 @@ console.log(' Trimmed String: '${trimmedString}'');
 </pre>
 
 
-47. Check Whether a String Contains a Substring
+<h2 id="js47">47. Check Whether a String Contains a Substring</h2>
 This program checks whether a string contains a substring in JavaScript using the includes() method or the
 indexOf() method.
 <pre>
@@ -1297,7 +1308,7 @@ console.log(' Does the string contain '$ {substringToCheck}'? ${containsSubstrin
 </pre>
 
 
-48. Compare Two Strings
+<h2 id="js48">48. Compare Two Strings</h2>
 This program compare two strings in JavaScript, you can use the standard comparison operators ( = = = , != = ,
 < , > , <= , >= ).
 <pre>
@@ -1314,7 +1325,7 @@ console.log(' Case-insensitive comparison: $ {caselnsensitiveComparison}');
 </pre>
 
 
-49. Encode a String to Base64
+<h2 id="js49">49. Encode a String to Base64</h2>
 This program encode a string to Base64 in JavaScript, you can use the btoa() function.
 <pre>
 let originalstring = "Hello, !";
@@ -1326,7 +1337,9 @@ console.log(' Base64 Encoded String: ${base64EncodedString}');
 </pre>
 
 
-50. Replace all Instances of a Character in a String
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js50">50. Replace all Instances of a Character in a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program replace all instances of a character in a string in JavaScript, you can use the replace() method
 with a regular expression.
 <pre>
@@ -1464,6 +1477,7 @@ document.getElementById('countdown').innerHTML = 'Countdown expired!';
 
 57. Remove Specific Item From an Array
 Remove a specific item from an array in JavaScript, you can use the filter() method or the splice() method:
+<pre>
 // Example array
 let original Array = [1, 2, 3,4, 5];
 let itemTo Remove = 3;
@@ -1475,11 +1489,13 @@ originalArray.splice(indexTo Remove, 1);
 }
 // Display the result
 console.log("Original Array:", originalArray);
+</pre>
 
 
 58. Check if An Array Contains a Specified Value
 Check if an array contains a specified value in JavaScript, you can use the includes() method or the
 indexOf() method.
+<pre>
 // Example array
 let my Array = [1, 2, 3,4, 5];
 let valueToCheck = 3;
@@ -1487,11 +1503,13 @@ let valueToCheck = 3;
 let containsValue = myArray.includes(valueToCheck);
 // Display the result
 console.log(' Does the array include ${valueToCheck}? ${containsValue}');
+</pre>
 
 
 59. Insert Item in an Array
 Insert an item into an array in JavaScript, you can use the push() method to add the item at the end of the
 array, or the splice() method to insert the item at a specific index.
+<pre>
 // Example array
 let myArray = [1, 2, 3,4, 5];
 let itemToInsert = 6;
@@ -1499,5 +1517,55 @@ let itemToInsert = 6;
 myArray.push(itemToInsert);
 // Display the result
 console.log("Array after inserting:", myArray);
+</pre>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+60. Get Random Item From an Array
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+To get a random item from an array in JavaScript, you can use the Math.random() function to generate a
+random index within the array length.
+<pre>
+// Example array
+letmyArray = [1, 2, 3,4, 5, 6, 7, 8, 9,10];
+// Get a random index
+let randomindex = Math.floor(Math.random() * myArray.length);
+// Get the random item from the array
+let randomitem = myArray[randomIndex];
+// Display the result
+console.log("Random Item:", randomitem);
+</pre>
+
+
+61. Perform Intersection Between Two Arrays
+To find the intersection (common elements) between two arrays in JavaScript, you can use various methods.
+<pre>
+// Example arrays
+let arrayl = [1, 2, 3,4, 5];
+let array2 = [3, 4, 5, 6, 7];
+// Find the intersection using filter
+let intersection = arrayl.filter(value => array2.includes(value));
+// Display the result
+console.log("Intersection:", intersection);
+</pre>
+
+
+62. Split Array into Smaller Chunks
+To split an array into smaller chunks in JavaScript, you can use a loop and the slice() method.
+<pre>
+function chunkArray(array, chunksize) {
+let result = [];
+for (let i = 0; i < array.length; i + = chunksize) {
+result.push(array.slice(i, i + chunksize));
+}
+return result;
+}
+// Example array
+let myArray = [1, 2, 3,4, 5, 6, 7, 8, 9,10];
+// Split the array into chunks of size 3
+let chunks = chunkArray (my Array, 3);
+// Display the result
+console.log("Original Array:", myArr
+</pre>
 
 
