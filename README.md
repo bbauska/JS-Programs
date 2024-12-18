@@ -117,128 +117,126 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js97">97. This program calculates the Volume of a Cylinder</a></li>
   <li><a href="#js98">98. Generate a Random Quote</a></li>
   <li><a href="#js99">99. Find the Intersection of Two Arrays</a></li>
+  <li><a href="#js100">100. Convert Feet to Meters</a></li>
+  <li><a href="#js101">101. Convert Days to Years, Months, and Days</a></li>
+  <li><a href="#js102">102. Find the Median of an Array</a></li>
+  <li><a href="#js103">103. Calculate the Distance Between Two Points</a></li>
+  <li><a href="#js104">104. Check if a Number is a Perfect Square</a></li>
+  <li><a href="#js105">105. Find the Area of a Rectangle</a></li>
+  <li><a href="#js106">106. Convert Binary to Decimal</a></li>
+  <li><a href="#js107">107. Count the Number of Words in a Sentence</a></li>
+  <li><a href="#js108">108. Find the Union of Two Arrays</a></li>
+  <li><a href="#js109">109. Calculate the Factorial of a Large Number</a></li>
+  <li><a href="#js110">110. Check if a Number is a Strong Number</a></li>
+  <li><a href="#js111">111. Check if a Number is a Narcissistic Number</a></li>
+  <li><a href="#js112">112. Count the Number of Consonants in a String</a></li>
+  <li><a href="#js113">113. Check if a Number is a Triangular Number</a></li>
+  <li><a href="#js114">114. Find the Area of a Trapezoid</a></li>
+  <li><a href="#js115">115. Calculate the Greatest Common Divisor (GCD) of Two Numbers</a></li>
+  <li><a href="#js116">116. Check if a Number is a Fibonacci Number</a></li>
+  <li><a href="#js117">117. Find the Perimeter of a Rectangle</a></li>
+  <li><a href="#js118">118. Convert Roman Numerals to Numbers</a></li>
+  <li><a href="#js119">119. Check if a String is Anagram of Another String</a></li>
+  <li><a href="#js120">120. Generate Pascal's Triangle</a></li>
+  <li><a href="#js121">121. Convert Decimal to Roman Numerals</a></li>
+  <li><a href="#js122">122. Find the Area of a Parallelogram</a></li>
+  <li><a href="#js123">123. Basic Rock, Paper, Scissors Game</a></li>
+  <li><a href="#js124">124. Basic Slot Machine Game</a></li>
+  <li><a href="#js125">125. Check if a Number is a Smith Number</a></li>
+  <li><a href="#js126">126. Basic Chessboard</a></li>
+  <li><a href="#js127">127. Generate a Random Password with Specific Criteria</a></li>
+  <li><a href="#js128">128. Basic Maze Solver</a></li>
+  <li><a href="#js129">129. Check if a String is Pangram or Not</a></li>
+  <li><a href="#js130">130. Basic Sudoku Solver</a></li>
+  <li><a href="#js131">131. Convert Objects to Strings</a></li>
+  <li><a href="#js132">132. Find the Area of an Ellipse</a></li>
+  <li><a href="#js133">133. Check if a Number is a Palindrome in Binary</a></li>
+  <li><a href="#js134">134. Find the Area of a Rhombus</a></li>
+  <li><a href="#js135">135. Check if a Number is a Catalan Number</a></li>
+  <li><a href="#js136">136. Find the Luhn Algorithm Check Digit</a></li>
+  <li><a href="#js137">137. Basic Maze Generator</a></li>
+  <li><a href="#js138">138. Check if a Year is a Magic Year</a></li>
+  <li><a href="#js139">139. Basic Crossword Puzzle</a></li>
+  <li><a href="#js140">140. Find the Area of a Regular Polygon</a></li>
+  <li><a href="#js141">141. Check if a Number is an Abundant Number</a></li>
+  <li><a href="#js142">142. Basic Word Guessing Game</a></li>
+  <li><a href="#js143">143. Calculate the Euler's Totient Function</a></li>
+  <li><a href="#js144">144. Basic Memory Matching Game</a></li>
+  <li><a href="#js145">145. Check if a Number is a Vampire Number</a></li>
+  <li><a href="#js146">146. Basic Simon Says Game</a></li>
+  <li><a href="#js147">147. Calculate the Area of a Hexagon</a></li>
+  <li><a href="#js148">148. Check if a Number is a Pronic Number</a></li>
+  <li><a href="#js149">149. Basic Minesweeper Game</a></li>
+  <li><a href="#js150">150. Find the Area of a Pentagon</a></li>
+  <li><a href="#js151">151. Check if a Number is a Cube Number</a></li>
+  <li><a href="#js152">152. Basic Typing Speed Test</a></li>
+  <li><a href="#js153">153. Find the Area of a Cube</a></li>
+  <li><a href="#js154">154. Find the Area of a Cone</a></li>
+  <li><a href="#js155">155. Check if a Number is a Happy Number</a></li>
+  <li><a href="#js156">156. Calculate the Area of a Triangular Prism</a></li>
+  <li><a href="#js157">157. Check if a Number is a Fibonacci Prime</a></li>
+  <li><a href="#js158">158. Check if a Number is a Squareful Number</a></li>
+  <li><a href="#js159">159. Find the Area of a Tetrahedron</a></li>
+  <li><a href="#js160">160. Check if a Number is an Automorphic Number</a></li>
+  <li><a href="#js161">161. Calculate the Area of a Pyramid</a></li>
+  <li><a href="#js162">162. Check if a Number is a Smith-Morra Gambit Number</a></li>
+  <li><a href="#js163">163. Check if a Number is a Solitary Number</a></li>
+  <li><a href="#js164">164. Basic Tower of Hanoi Puzzle</a></li>
+  <li><a href="#js165">165. Calculate the Area of a Frustum</a></li>
+  <li><a href="#js166">166. Check if a Number is a Motzkin Number</a></li>
+  <li><a href="#js167">167. Check if a Number is a Padovan Number</a></li>
+  <li><a href="#js168">168. Calculate the Area of a Koch Snowflake</a></li>
+  <li><a href="#js169">169. Basic Chatbot</a></li>
+  <li><a href="#js170">170. RGB to HEX Converter</a></li>
+  <li><a href="#js171">171. Counter</a></li>
+  <li><a href="#js172">172. Stop The Bomb</a></li>
+  <li><a href="#js173">173. IP Address Generator</a></li>
+  <li><a href="#js174">174. Digital clock</a></li>
+  <li><a href="#js175">175. Random Number Generator</a></li>
+  <li><a href="#js176">176. Simple JavaScript Quiz</a></li>
+  <li><a href="#js177">177. Text-based RPG Adventure</a></li>
+  <li><a href="#js178">178. Dice Rolling Simulator</a></li>
+  <li><a href="#js179">179. Seconds to Time Converter</a></li>
+  <li><a href="#js180">180. Bar Chart Generator</a></li>
+  <li><a href="#js181">181. Right-Angled Triangle Pattern</a></li>
+  <li><a href="#js182">182. Text-Based Calculator</a></li>
+  <li><a href="#js183">183. Number Pyramid Generator</a></li>
+  <li><a href="#js184">184. Diamond Pattern Generator</a></li>
+  <li><a href="#js185">185. Hangman Game</a></li>
+  <li><a href="#js186">186. Countdown Timer</a></li>
+  <li><a href="#js187">187. Mad Libs Game</a></li>
+  <li><a href="#js188">188. Guess the Number Game</a></li>
+  <li><a href="#js189">189. Whack-a-Mole Game</a></li>
+  <li><a href="#js190">190. Coin Tossing Game</a></li>
+  <li><a href="#js191">191. Fibonacci Number Generator</a></li>
+  <li><a href="#js192">192. Math Quiz Game</a></li>
+  <li><a href="#js193">193. Color Guessing Game</a></li>
+  <li><a href="#js194">194. Word Scramble Game</a></li>
+  <li><a href="#js195">195. Country Capital Quiz Game</a></li>
+  <li><a href="#js196">196. Guess the Animal</a></li>
+  <li><a href="#js197">197. Joke Teller</a></li>
+  <li><a href="#js198">198. Shopping List</a></li>
+  <li><a href="#js199">199. FizzBuzzGame</a></li>
+  <li><a href="#js200">200. Swap Pairs of Adjacent Digits</a></li>
+  <li><a href="#js201">201. Capitalization Changer</a></li>
+  <li><a href="#js202">202. Array Halves Swapper</a></li>
+  <li><a href="#js203">203. Sum of Digits in String</a></li>
+  <li><a href="#js204">204. Sum of Cubes</a></li>
+  <li><a href="#js205">205. Maximum Integer for Sum</a></li>
+  <li><a href="#js206">206. URL Breakdown</a></li>
+  <li><a href="#js207">207. Sort Strings by Length</a></li>
+  <li><a href="#js208">208. Simplify Absolute Path</a></li>
+  <li><a href="#js209">209. Count Common Elements in Arrays</a></li>
+  <li><a href="#js210">210. Check Same Digits in a Number</a></li>
+  <li><a href="#js211">211. Rightmost Round Number Position</a></li>
+  <li><a href="#js212">212. Reverse Bits of 16-Bit Unsigned Short Integer</a></li>
+  <li><a href="#js213">213. Greater Than 15 Checker</a></li>
+  <li><a href="#js214">214. Replace First Digit with $</a></li>
+  <li><a href="#js215">215. Prefix Sums</a></li>
+  <li><a href="#js216">216. Next Prime Number</a></li>
+  <li><a href="#js217">217. Reverse Order of Bits</a></li>
+  <li><a href="#js218">218. Pyramid</a></li>
 </ol>
-
-100. Convert Feet to Meters
-101. Convert Days to Years, Months, and Days
-102. Find the Median of an Array
-103. Calculate the Distance Between Two Points
-104. Check if a Number is a Perfect Square
-105. Find the Area of a Rectangle
-106. Convert Binary to Decimal
-107. Count the Number of Words in a Sentence
-108. Find the Union of Two Arrays
-109. Calculate the Factorial of a Large Number
-110. Check if a Number is a Strong Number
-111. Check if a Number is a Narcissistic Number
-112. Count the Number of Consonants in a String
-113. Check if a Number is a Triangular Number
-114. Find the Area of a Trapezoid
-115. Calculate the Greatest Common Divisor (GCD) of Two Numbers
-116. Check if a Number is a Fibonacci Number
-117. Find the Perimeter of a Rectangle
-118. Convert Roman Numerals to Numbers
-119. Check if a String is Anagram of Another String
-120. Generate Pascal's Triangle
-121. Convert Decimal to Roman Numerals
-122. Find the Area of a Parallelogram
-123. Basic Rock, Paper, Scissors Game
-124. Basic Slot Machine Game
-125. Check if a Number is a Smith Number
-126. Basic Chessboard
-127. Generate a Random Password with Specific Criteria
-128. Basic Maze Solver
-129. Check if a String is Pangram or Not
-130. Basic Sudoku Solver
-131. Convert Objects to Strings
-132. Find the Area of an Ellipse
-133. Check if a Number is a Palindrome in Binary
-134. Find the Area of a Rhombus
-135. Check if a Number is a Catalan Number
-136. Find the Luhn Algorithm Check Digit
-137. Basic Maze Generator
-138. Check if a Year is a Magic Year
-139. Basic Crossword Puzzle
-140. Find the Area of a Regular Polygon
-141. Check if a Number is an Abundant Number
-142. Basic Word Guessing Game
-143. Calculate the Euler's Totient Function
-144. Basic Memory Matching Game
-145. Check if a Number is a Vampire Number
-146. Basic Simon Says Game
-147. Calculate the Area of a Hexagon
-148. Check if a Number is a Pronic Number
-149. Basic Minesweeper Game
-150. Find the Area of a Pentagon
-151. Check if a Number is a Cube Number
-152. Basic Typing Speed Test
-153. Find the Area of a Cube
-154. Find the Area of a Cone
-155. Check if a Number is a Happy Number
-156. Calculate the Area of a Triangular Prism
-157. Check if a Number is a Fibonacci Prime
-158. Check if a Number is a Squareful Number
-159. Find the Area of a Tetrahedron
-160. Check if a Number is an Automorphic Number
-161. Calculate the Area of a Pyramid
-162. Check if a Number is a Smith-Morra Gambit Number
-163. Check if a Number is a Solitary Number
-164. Basic Tower of Hanoi Puzzle
-165. Calculate the Area of a Frustum
-166. Check if a Number is a Motzkin Number
-167. Check if a Number is a Padovan Number
-168. Calculate the Area of a Koch Snowflake
-169. Basic Chatbot
-170. RGB to HEX Converter
-171. Counter
-172. Stop The Bomb
-173. IP Address Generator
-174. Digital clock
-175. Random Number Generator
-176. Simple JavaScript Quiz
-177. Text-based RPG Adventure
-178. Dice Rolling Simulator
-179. Seconds to Time Converter
-180. Bar Chart Generator
-181. Right-Angled Triangle Pattern
-182. Text-Based Calculator
-183. Number Pyramid Generator
-184. Diamond Pattern Generator
-185. Hangman Game
-186. Countdown Timer
-187. Mad Libs Game
-188. Guess the Number Game
-189. Whack-a-Mole Game
-190. Coin Tossing Game
-191. Fibonacci Number Generator
-192. Math Quiz Game
-193. Color Guessing Game
-194. Word Scramble Game
-195. Country Capital Quiz Game
-196. Guess the Animal
-197. Joke Teller
-198. Shopping List
-199. FizzBuzzGame
-200. Swap Pairs of Adjacent Digits
-201. Capitalization Changer
-202. Array Halves Swapper
-203. Sum of Digits in String
-204. Sum of Cubes
-205. Maximum Integer for Sum
-206. URL Breakdown
-207. Sort Strings by Length
-208. Simplify Absolute Path
-209. Count Common Elements in Arrays
-210. Check Same Digits in a Number
-211. Rightmost Round Number Position
-212. Reverse Bits of 16-Bit Unsigned Short Integer
-213. Greater Than 15 Checker
-214. Replace First Digit with $
-215. Prefix Sums
-216. Next Prime Number
-217. Reverse Order of Bits
-218. Pyramid
-
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js1">1. Print Hello World</h2>
