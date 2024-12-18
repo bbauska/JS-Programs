@@ -1571,7 +1571,9 @@ letrandomNum = getRandomNumber(l, 100);
 console.log("Random Number:", randomNum);
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js66">66. Get The Current URL</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To get the current URL in a web browser using JavaScript, you can use the window.locatio n object.
 <pre>
 // Get the domain
@@ -1586,7 +1588,9 @@ console.log("Path:", path);
 console.log("Query Parameters:", queryParams);
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js67">67. Validate An Email Address</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To validate an email address in JavaScript, you can use a regular expression.
 <pre>
 function validateEmail(email) {
@@ -1619,7 +1623,9 @@ console.log("The variable is not of function type");
 }
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js69">69. Work With Constants</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can work with constants using the const keyword to declare variables whose values should not be
 reassigned.
 <pre>
@@ -1646,7 +1652,9 @@ setTimeout(function() {
 }, 1000);
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js71">71. Generate a Range of Numbers and Characters</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To generate a range of numbers or characters in JavaScript, you can use a loop or other methods depending
 on your specific requirements.
 <pre>
@@ -1662,7 +1670,9 @@ let numberRange = generateNumberRange(l, 5);
 console.log("Number Range:", numberRange);
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js72">72. Perform Function Overloading</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 JavaScript does not support traditional function overloading like some other programming languages do,
 where you can define multiple functions with the same name but different parameter types or counts.
 However, you can achieve similar behavior in JavaScript by checking the number or types of arguments
@@ -1690,7 +1700,9 @@ exampleFunction("Hello", 7);
 exampleFunction(true, "world"); // Invalid arguments
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js73">73. Implement a Stack</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can implement a basic stack data structure in JavaScript using an array.
 <pre>
 class Stack {
@@ -1738,7 +1750,9 @@ console.log("Stack size:", stack.sizeO); // Outputs: 2
 console.log("Is the stack empty?", stack.isEmptyO); // Outputs: false
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js74">74. Implement a Queue</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can implement a basic queue data structure in JavaScript using an array.
 <pre>
 class Queue {
@@ -1821,8 +1835,9 @@ console.log("Result of addition:", resultl); // Outputs: 8
 let result2 = operateOnNumbers(3, 5, multiply);
 console.log("Result of multiplication:", result2); // Outputs: 15
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js77">77. Get the Dimensions of an Image</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To get the dimensions (width and height) of an image in JavaScript, you can create an Imag e object, load the
 image, and then access the width and height properties.
 <pre>
@@ -1849,8 +1864,9 @@ console.error("Error loading the image.");
 var imageUrl = "path/to/your/image.jpg";
 getlmageDimensions(imageUrl);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js78">78. Remove All Whitespaces From a Text</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To remove all whitespaces from a text in JavaScript, you can use a regular expression and the replace
 method.
 <pre>
@@ -1864,8 +1880,9 @@ let textWithoutWhitespaces = removeWhitespaces(textWithWhitespaces);
 console.log("Original Text:", textWithWhitespaces);
 console.log("Text without Whitespaces:", textWithoutWhitespaces);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js79">79. Write to Console</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Writing to the console in JavaScript is typically done using the console.log() method.
 <pre>
 // Write a message to the console
@@ -1891,8 +1908,9 @@ const numericDate = currentDate.getTime();
 console.log("Current Date:", currentDate);
 console.log("Numeric Representation:", numericDate);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js81">81. Find the Average of Two Numbers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the average of two numbers in JavaScript, you can add the two numbers together and then divide the
 sum by 2.
 <pre>
@@ -1909,8 +1927,9 @@ let number2 = 20;
 let result = findAverage(numberl, number2);
 console.log(' The average of $ {number 1} and $ {number 2} is: $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js82">82. Calculate the Area of a Circle</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculate the area of a circle in JavaScript:
 <pre>
 function calculateCircleArea(radius) {
@@ -1927,8 +1946,9 @@ const radius = 5;
 const area = calculateCircleArea(radius);
 console.log(' The area of a circle with radius $ {radius} is: ${area}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js83">83. Random Color Generator</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To generate a random color in JavaScript, you can create a function that generates random values for the red,
 green, and blue components of the color.
 <pre>
@@ -1945,8 +1965,9 @@ return color;
 const randomColor = generateRandomColorQ;
 console.log("Random Color:", randomColor);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js84">84. Check if a String is Empty</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To check if a string is empty in JavaScript, you can use the lengt h property of the string. If the length is zero,
 it means the string is empty.
 <pre>
@@ -1978,8 +1999,9 @@ const capitalizedString = capitalizeFirstLetter(originalString);
 console.log("Original String:", originalString);
 console.log("Capitalized String:", capitalizedString);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js86">86. Find the Maximum Element in an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the maximum element in an array in JavaScript, you can use the Math.max() function along with
 the spread operator (...) to pass the array elements as individual arguments.
 <pre>
@@ -1996,8 +2018,9 @@ const maxNumber = findMaxElement(numbers);
 console.log("Array:", numbers);
 console.logC'Maximum Element:", maxNumber);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js87">87. Reverse an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To reverse an array in JavaScript, you can use the reverse() method, which is available for arrays. This
 method reverses the elements of an array in place.
 <pre>
@@ -2010,8 +2033,9 @@ const reversedArray = reverseArray(originalArray);
 console.log("Original Array:", originalArray);
 console.log("Reversed Array:", reversedArray);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js88">88. Calculate the Power of a Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To calculate the power of a number in JavaScript, you can use the Math.pow() method or the exponentiation
 operator (**).
 <pre>
@@ -2032,8 +2056,9 @@ console.log(' $ {baseNumber} to the power of $ {exponentNumber} using Math.pow()
 console.log('${baseNumber} to the power of $ {exponentNumber} using the exponentiation operator (**): $
 {resultWithExponentiationOperator}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js89">89. Find the Minimum Element in an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the minimum element in an array in JavaScript, you can use the Math.min() function along with the
 spread operator (...) to pass the array elements as individual arguments.
 <pre>
@@ -2072,8 +2097,9 @@ const totalMinutes =135;
 const convertedTime = convertMinutesToHoursAndMinutes(totalMinutes);
 console.log(' ${totalMinutes} minutes is equivalent to: ${convertedTime}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js91">91. Find the Sum of Digits in a Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the sum of digits in a number using JavaScript, you can use a loop to iterate through each digit and
 add them together.
 <pre>
@@ -2092,8 +2118,9 @@ const inputNumber = 12345;
 const result = sumOfDigits(inputNumber);
 console.log(' The sum of digits in $ {inputNumber} is: $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js92">92. Check if a String is a Palindromic Phrase</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To check if a string is a palindromic phrase in JavaScript, you can create a function that removes non­
 alphanumeric characters and compares the string with its reversed version.
 <pre>
@@ -2113,8 +2140,9 @@ const phrase2 = "Hello, world!";
 console.log(' Is "${phrasel}" a palindromic phrase? ${isPalindromicPhrase(phrasel)}');
 console.log(' Is "${phrase2}" a palindromic phrase? ${isPalindromicPhrase(phrase2)}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js93">93. Generate a Random Password</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To generate a random password in JavaScript, you can create a function that combines random characters
 from various character sets.
 <pre>
@@ -2143,8 +2171,9 @@ const passwordLength =12;
 const randomPassword = generateRandomPassword(passwordLength);
 console.log(' Generated Password: ${randomPassword}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js94">94. Calculate Simple Interest</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Program To calculate simple interest in JavaScript:
 <pre>
 function calculateSimpleInterest(principal, rate, time) {
@@ -2193,8 +2222,9 @@ const formattedTime = ' ${minutes}:${seconds < 10 ? "0": ""}${seconds}';
 document.getElementById("display").textContent = formattedTime;
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js96">96. Check if a Number is a Perfect Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding itself).
 <pre>
 function isPerfectNumber(number) {
@@ -2242,7 +2272,9 @@ const cylindervolume = calculateCylinderVolume(cylinderRadius, cylinderHeight);
 console.log(' Cylinder Volume: $ {cylinderVolume.toFixed(2)} cubic units');
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js98">98. Generate a Random Quote</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To generate a random quote in JavaScript, you can create an array of quotes and use a function to pick a
 random quote from that array.
 <pre>
@@ -2267,8 +2299,9 @@ return quotes&lbrack;randomlndex&rbrack;;
 const randomQuote = generateRandomQuote();
 console.logC'Random Quote:", randomQuote);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js99">99. Find the Intersection of Two Arrays</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the intersection of two arrays in JavaScript, you can create a function that iterates through both
 arrays and identifies the common elements.
 <pre>
@@ -2315,8 +2348,9 @@ const feetValue =10;
 const meters Value = feetToMeters(feetValue);
 console.log(' ${feetValue} feet is equal to ${metersValue.toFixed(2)} meters “);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js101">101. Convert Days to Years, Months, and Days</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To convert a given number of days into years, months, and remaining days in JavaScript, you can use the
 following function:
 <pre>
@@ -2352,7 +2386,9 @@ console.log( '$ {totalDays} days is approximately $ {result.years} years, $ {res
 days.');
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js102">102. Find the Median of an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the median of an array in JavaScript, you can create a function that sorts the array and then
 determines the median based on its length.
 <pre>
@@ -2379,7 +2415,9 @@ const result = findMedian(numbers);
 console.logf'Median:", result);
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js103">103. Calculate the Distance Between Two Points</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To calculate the distance between two points (xl, yl) and (x2, y2) in a two-dimensional plane:
 <pre>
 function calculateDistance(xl, yl, x2, y2) {
@@ -2399,8 +2437,9 @@ const y2 = 6;
 const result = calculateDistance(xl, yl, x2, y2);
 console.log(' The distance between (${xl}, ${y 1}) and (${x2}, ${y2}) is ${result.toFixed(2)}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js104">104. Check if a Number is a Perfect Square</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To check if a number is a perfect square in JavaScript, you can calculate the square root of the number and
 then check if the square of the integer part of the square root is equal to the original number.
 <pre>
@@ -2439,8 +2478,9 @@ const rectangle Width = 8;
 const result = calculateRectangleArea(rectangleLength, rectangleWidth);
 console.log(' The area of the rectangle with length $ {rectangleLength} and width $ {rectangleWidth} is $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js106">106. Convert Binary to Decimal</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To convert a binary number to a decimal number in JavaScript, you can create a function that takes a binary
 string as input and calculates the decimal equivalent.
 <pre>
@@ -2477,8 +2517,9 @@ const sentence = "This is a sample sentence.";
 const result = countWords(sentence);
 console.log(' The sentence "${sentence}" has ${result&rbrack; words.');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js108">108. Find the Union of Two Arrays</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the union of two arrays in JavaScript, you can create a function that concatenates the arrays and
 removes duplicate elements.
 <pre>
@@ -2495,8 +2536,9 @@ const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
 const result = findUnion(arrayl, array2);
 console.log("Union of Arrays:", result);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js109">109. Calculate the Factorial of a Large Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculating the factorial of a large number can quickly lead to very large results, and JavaScript has
 limitations in terms of precision. To handle large factorials, you can use libraries that support arbitrary-
 precision arithmetic. One such library is the "Biglnt" type in JavaScript, which is available in modern
@@ -2551,8 +2593,9 @@ const testNumber = 145;
 const result = isStrongNumber(testNumber);
 console.log(' $ {testNumber} is a strong number: $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js111">111. Check if a Number is a Narcissistic Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 A Narcissistic Number (or Armstrong Number) is a number that is the sum of its own digits each raised to
 the power of the number of digits. For example, 15 3 is a narcissistic number because 1A3 + 5A3 + 3A3 equals
 153.
@@ -2576,8 +2619,9 @@ const testNumber = 1634;
 const result = isNarcissisticNumber(testNumber);
 console.log(' ${testNumber} is a Narcissistic Number: $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js112">112. Count the Number of Consonants in a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can create a JavaScript function to count the number of consonants in a given string.
 <pre>
 function countConsonants(str) {
@@ -2597,8 +2641,9 @@ const teststring = "Hello World";
 const result = countConsonants(testString);
 console.log(' The number of consonants in "${testString}" is: ${result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js113">113. Check if a Number is a Triangular Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a triangular number. A triangular number is a number that
 can be represented in the form of a triangle with dots. Mathematically, a triangular number T_ n is given by
 the formula: T_n = n*(n+l)/2.
@@ -2623,8 +2668,9 @@ const testNumber = 10;
 const result = isTriangularNumber(testNumber);
 console.log(' $ {testNumber} is a triangular number: $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js114">114. Find the Area of a Trapezoid</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a trapezoid given the lengths of its bases ( a and b ) and its height ( h ).
 The formula for the area of a trapezoid is:
 <pre>
@@ -2667,8 +2713,9 @@ const number2 = 18;
 const gcdResult = calculateGCD(numberl, number 2);
 console.log(' The GCD of ${numberl} and ${number2} is: ${gcdResult}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js116">116. Check if a Number is a Fibonacci Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 A Fibonacci number is a number in the Fibonacci sequence, which is a series of numbers where each number
 is the sum of the two preceding ones. The sequence starts with 0 and 1.
 <pre>
@@ -2688,8 +2735,9 @@ const testNumber = 8;
 const result = isFibonacciNumber(testNumber);
 console.log(' $ {testNumber} is a Fibonacci number: $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js117">117. Find the Perimeter of a Rectangle</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the perimeter of a rectangle given the lengths of its sides (lengt h and widt h ). The
 formula for the perimeter of a rectangle is: Perimeter = 2 * (length + width).
 <pre>
@@ -2706,8 +2754,9 @@ const rectangle Width = 8;
 const perimeterResult = rectanglePerimeter(rectangleLength, rectangleWidth);
 console.log(' The perimeter of the rectangle is: $ {perimeterResult}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js118">118. Convert Roman Numerals to Numbers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Converting Roman numerals to numbers involves understanding the Roman numeral system and its rules.
 <pre>
 function romanToNumber(roman) {
@@ -2744,8 +2793,9 @@ function romanToNumber(roman) {
     const numericValue = romanToNumber(romanNumeral);
     console.log(' The numeric value of $ {romanNumeral} is: ${numericValue}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js119">119. Check if a String is Anagram of Another Strin</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 An anagram is a word or phrase formed by rearranging the letters of another. To check if two strings are
 anagrams, you can compare whether the characters in both strings have the same frequency.
 <pre>
@@ -2818,9 +2868,9 @@ const triangle = generatePascalsTriangle(numberOfRows);
 console.log(' Pascal’s Triangle with ${numberOfRows} rows:');
 console.log(triangle);
 </pre>
-
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js121">121. Convert Decimal to Roman Numerals</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Converting a decimal number to Roman numerals involves finding the combination of Roman numeral
 symbols that represent the given decimal value.
 <pre>
@@ -2863,9 +2913,9 @@ const decimalNumber = 1984;
 const romanNumeral = decimalToRoman(decimalNumber);
 console.log(' The Roman numeral representation of ${decimalNumber} is: ${romanNumeral}');
 </pre>
-
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js122">122. Find the Area of a Parallelogram</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a parallelogram given the length of its base and the corresponding
 perpendicular height.
 <pre>
