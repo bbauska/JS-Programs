@@ -38,87 +38,87 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js18">18. Check Armstrong Number</a></li>
   <li><a href="#js19">19. Find Armstrong Number in an Interval</a></li>
   <li><a href="#js20">20. Make a Simple Calculator</a></li>
+  <li><a href="#js21">21. Find the Sum of Natural Numbers</a></li>
+  <li><a href="#js22">22. Check if the Numbers Have the Same Last Digit</a></li>
+  <li><a href="#js23">23. Find HCForGCD</a></li>
+  <li><a href="#js24">24. Find LCM</a></li>
+  <li><a href="#js25">25. Find the Factors of a Number</a></li>
+  <li><a href="#js26">26. Find Sum of Natural Numbers Using Recursion</a></li>
+  <li><a href="#js27">27. Guess a Random Number</a></li>
+  <li><a href="#js28">28. Shuffle Deck of Cards</a></li>
+  <li><a href="#js29">29. Display Fibonacci Sequence Using Recursion</a></li>
+  <li><a href="#js30">30. Find Factorial of Number Using Recursion</a></li>
+  <li><a href="#js31">31. Convert Decimal to Binary</a></li>
+  <li><a href="#js32">32. Find ASCII Value of Character</a></li>
+  <li><a href="#js33">33. Check Whether a String is Palindrome or Not</a></li>
+  <li><a href="#js34">34. Sort Words in Alphabetical Order</a></li>
+  <li><a href="#js35">35. Replace Characters of a String</a></li>
+  <li><a href="#js36">36. Reverse a String</a></li>
+  <li><a href="#js37">37. Check the Number of Occurrences of a Character in the String</a></li>
+  <li><a href="#js38">38. Convert the First Letter of a String into Uppercase</a></li>
+  <li><a href="#js39">39. Count the Number of Vowels in a String</a></li>
+  <li><a href="#js40">40. Check Whether a String Starts and Ends With Certain Characters</a></li>
+  <li><a href="#js41">41. Replace All Occurrences of a String</a></li>
+  <li><a href="#js42">42. Create Multiline Strings</a></li>
+  <li><a href="#js43">43. Format Numbers as Currency Strings</a></li>
+  <li><a href="#js44">44. Generate Random String</a></li>
+  <li><a href="#js45">45. Check if a String Starts with Another String</a></li>
+  <li><a href="#js46">46. Trim a String</a></li>
+  <li><a href="#js47">47. Check Whether a String Contains a Substring</a></li>
+  <li><a href="#js48">48. Compare Two Strings</a></li>
+  <li><a href="#js49">49. Encode a String to Base64</a></li>
+  <li><a href="#js50">50. Replace all Instances of a Character in a String</a></li>
+  <li><a href="#js51">51. Replace All Line Breaks with</a></li>
+  <li><a href="#js52">52. Check Leap Year</a></li>
+  <li><a href="#js53">53. Format the Date</a></li>
+  <li><a href="#js54">54. Display Current Date</a></li>
+  <li><a href="#js55">55. Compare The Value of Two Dates</a></li>
+  <li><a href="#js56">56. Create Countdown Timer</a></li>
+  <li><a href="#js57">57. Remove Specific Item From an Array</a></li>
+  <li><a href="#js58">58. Check if An Array Contains a Specified Value</a></li>
+  <li><a href="#js59">59. Insert Item in an Array</a></li>
+  <li><a href="#js60">60. Get Random Item From an Array</a></li>
+  <li><a href="#js61">61. Perform Intersection Between Two Arrays</a></li>
+  <li><a href="#js62">62. Split Array into Smaller Chunks</a></li>
+  <li><a href="#js63">63. Get File Extension</a></li>
+  <li><a href="#js64">64. Check If a Variable Is undefined or null</a></li>
+  <li><a href="#js65">65. Generate a Random Number Between Two Numbers</a></li>
+  <li><a href="#js66">66. Get The Current URL</a></li>
+  <li><a href="#js67">67. Validate An Email Address</a></li>
+  <li><a href="#js68">68. Check If a Variable is of Function Type</a></li>
+  <li><a href="#js69">69. Work With Constants</a></li>
+  <li><a href="#js70">70. Pass Parameter to a setTimeout() Function</a></li>
+  <li><a href="#js71">71. Generate a Range of Numbers and Characters</a></li>
+  <li><a href="#js72">72. Perform Function Overloading</a></li>
+  <li><a href="#js73">73. Implement a Stack</a></li>
+  <li><a href="#js74">74. Implement a Queue</a></li>
+  <li><a href="#js75">75. Check if a Number is Float or Integer</a></li>
+  <li><a href="#js76">76. Pass a Function as Parameter</a></li>
+  <li><a href="#js77">77. Get the Dimensions of an Image</a></li>
+  <li><a href="#js78">78. Remove All Whitespaces From a Text</a></li>
+  <li><a href="#js79">79. Write to Console</a></li>
+  <li><a href="#js80">80. Convert Date to Number</a></li>
+  <li><a href="#js81">81. Find the Average of Two Numbers</a></li>
+  <li><a href="#js82">82. Calculate the Area of a Circle</a></li>
+  <li><a href="#js83">83. Random Color Generator</a></li>
+  <li><a href="#js84">84. Check if a String is Empty</a></li>
+  <li><a href="#js85">85. Capitalize the First Letter of a String</a></li>
+  <li><a href="#js86">86. Find the Maximum Element in an Array</a></li>
+  <li><a href="#js87">87. Reverse an Array</a></li>
+  <li><a href="#js88">88. Calculate the Power of a Number</a></li>
+  <li><a href="#js89">89. Find the Minimum Element in an Array</a></li>
+  <li><a href="#js90">90. Convert Minutes to Hours and Minutes</a></li>
+  <li><a href="#js91">91. Find the Sum of Digits in a Number</a></li>
+  <li><a href="#js92">92. Check if a String is a Palindromic Phrase</a></li>
+  <li><a href="#js93">93. Generate a Random Password</a></li>
+  <li><a href="#js94">94. Calculate Simple Interest</a></li>
+  <li><a href="#js95">95. Implement a Basic Stopwatch</a></li>
+  <li><a href="#js96">96. Check if a Number is a Perfect Number</a></li>
+  <li><a href="#js97">97. This program calculates the Volume of a Cylinder</a></li>
+  <li><a href="#js98">98. Generate a Random Quote</a></li>
+  <li><a href="#js99">99. Find the Intersection of Two Arrays</a></li>
 </ol>
 
-21. Find the Sum of Natural Numbers
-22. Check if the Numbers Have the Same Last Digit
-23. Find HCForGCD
-24. Find LCM
-25. Find the Factors of a Number
-26. Find Sum of Natural Numbers Using Recursion
-27. Guess a Random Number
-28. Shuffle Deck of Cards
-29. Display Fibonacci Sequence Using Recursion
-30. Find Factorial of Number Using Recursion
-31. Convert Decimal to Binary
-32. Find ASCII Value of Character
-33. Check Whether a String is Palindrome or Not
-34. Sort Words in Alphabetical Order
-3 5. Replace Characters of a String
-36. Reverse a String
-37. Check the Number of Occurrences of a Character in the String
-38. Convert the First Letter of a String into Uppercase
-39. Count the Number of Vowels in a String
-40. Check Whether a String Starts and Ends With Certain Characters
-41. Replace All Occurrences of a String
-42. Create Multiline Strings
-43. Format Numbers as Currency Strings
-44. Generate Random String
-45. Check if a String Starts with Another String
-46. Trim a String
-47. Check Whether a String Contains a Substring
-48. Compare Two Strings
-49. Encode a String to Base64
-50. Replace all Instances of a Character in a String
-51. Replace All Line Breaks with
-52. Check Leap Year
-53. Format the Date
-54. Display Current Date
-55. Compare The Value of Two Dates
-56. Create Countdown Timer
-57. Remove Specific Item From an Array
-58. Check if An Array Contains a Specified Value
-59. Insert Item in an Array
-60. Get Random Item From an Array
-61. Perform Intersection Between Two Arrays
-62. Split Array into Smaller Chunks
-63. Get File Extension
-64. Check If a Variable Is undefined or null
-65. Generate a Random Number Between Two Numbers
-66. Get The Current URL
-67. Validate An Email Address
-68. Check If a Variable is of Function Type
-69. Work With Constants
-70. Pass Parameter to a setTimeout() Function
-71. Generate a Range of Numbers and Characters
-72. Perform Function Overloading
-73. Implement a Stack
-74. Implement a Queue
-75. Check if a Number is Float or Integer
-76. Pass a Function as Parameter
-77. Get the Dimensions of an Image
-78. Remove All Whitespaces From a Text
-79. Write to Console
-80. Convert Date to Number
-81. Find the Average of Two Numbers
-82. Calculate the Area of a Circle
-83. Random Color Generator
-84. Check if a String is Empty
-85. Capitalize the First Letter of a String
-86. Find the Maximum Element in an Array
-87. Reverse an Array
-88. Calculate the Power of a Number
-89. Find the Minimum Element in an Array
-90. Convert Minutes to Hours and Minutes
-91. Find the Sum of Digits in a Number
-92. Check if a String is a Palindromic Phrase
-93. Generate a Random Password
-94. Calculate Simple Interest
-95. Implement a Basic Stopwatch
-96. Check if a Number is a Perfect Number
-97. This program calculates the Volume of a Cylinder
-98. Generate a Random Quote
-99. Find the Intersection of Two Arrays
 100. Convert Feet to Meters
 101. Convert Days to Years, Months, and Days
 102. Find the Median of an Array
