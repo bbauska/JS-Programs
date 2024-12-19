@@ -3328,7 +3328,7 @@ const ellipseArea = calculateEllipseArea(semiMajorAxis, semiMinorAxis);
 console.log(' The area of the ellipse is: ${ellipseArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-133. Check if a Number is a Palindrome in Binary
+<h2 id="js133">133. Check if a Number is a Palindrome in Binary</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks whether a given number is a palindrome in binary representation. A palindrome in
 binary reads the same backward as forward.
@@ -3347,7 +3347,7 @@ console.log(' ${numberToCheck} is a binary palindrome!
 console.log(' $ {numberToCheck} is not a binary palindrome. ');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-134. Find the Area of a Rhombus
+<h2 id="js134">134. Find the Area of a Rhombus</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a rhombus given the lengths of its diagonals ( d 1 and d 2 ). The formula
 for the area of a rhombus is Area = (dl * d2) / 2 , where d 1 and d 2 are the lengths of the diagonals.
@@ -3364,7 +3364,7 @@ const rhombusArea = calculateRhombusArea(diagonallLength, diagonal2Length);
 console.log(' The area of the rhombus is: $ {rhombus Area.toFixed(2)j');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-135. Check if a Number is a Catalan Number
+<h2 id="js135">135. Check if a Number is a Catalan Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Cn = (2n)!/((n+ l)!*n!) .
 This program checks if a given non-negative integer is a Catalan number. Catalan numbers are a sequence
@@ -3375,12 +3375,12 @@ Catalan number is given by the formula:
 function binomialCoefficient(n, k) {
 if(k>n-k){
 k = n - k;
-1
+}
 let result = 1;
 for (let i = 0; i < k; i++) {
 result *= (n - i);
 result /= (i + 1);
-1
+}
 return result;
 // Function to check if a number is a Catalan number
 function isCatalanNumber(num) {
@@ -3398,7 +3398,7 @@ console.log(' ${numberToCheck} is not a Catalan number.
 ');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-136. Find the Luhn Algorithm Check Digit
+<h2 id="js136">136. Find the Luhn Algorithm Check Digit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, is a simple checksum formula
 used to validate various identification numbers, such as credit card numbers. The algorithm is used to detect
@@ -3414,7 +3414,7 @@ let doubledDigit = digits&lbrack;i&rbrack; * 2;
 if (doubledDigit > 9) {
 doubledDigit-= 9;
 digitsfi&rbrack; = doubledDigit;
-1
+}
 // Calculate the sum of all digits
 const sum = digits.reduce((acc, digit) = > acc + digit, 0);
 // Find the smallest number (x) such that (sum + x) is a multiple of 10
@@ -3429,7 +3429,7 @@ console.log(' Check Digit: ${checkDigit}');
 console.log(' Full Number with Check Digit: $ {fullNumber}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-137. Basic Maze Generator
+<h2 id="js137">137. Basic Maze Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic maze generator involves using an algorithm to generate a random maze layout. One
 common algorithm for maze generation is the recursive backtracking algorithm.
@@ -3513,11 +3513,11 @@ addWord(word, row, col, direction) {
 if (direction = = = 'across') {
 for (let i = 0; i < word.length; i++) {
 this.grid&lbrack;row&rbrack;&lbrack;col + i&rbrack; = word&lbrack;i&rbrack;;
-1
+}
 } else if (direction = = = 'down') {
 for (let i = 0; i < word.length; i++) {
 this.grid&lbrack;row + i&rbrack;&lbrack;col&rbrack; = word&lbrack;i&rbrack;;
-1
+}
 }
 this.words.push({ word, row, col, direction});
 }
@@ -3525,7 +3525,7 @@ printPuzzleO {
 for (const row of this.grid) {
 console.log(row.join(''));
 }
-1
+}
 }
 // Example usage
 const crossword = new CrosswordPuzzle(5, 5);
@@ -3593,7 +3593,7 @@ this.maxAttempts = 6;
 getRandomWord() {
 const randomindex = Math.floor(Math.random() * this.wordList.length);
 return this.wordList&lbrack;randomIndex&rbrack;.toUpperCase();
-1
+}
 displayWordO {
 return this.selectedWord
 .split(")
@@ -5458,10 +5458,10 @@ console.log(' Reversed Integer: ${reversedlnteger}');
 reverseBits 16BitUnsignedShort(5 6 7 8);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-213. Greater Than 15 Checker
+<h2 id="js213">213. Greater Than 15 Checker</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program tests whether a given integer is greater than 15. If the integer is greater than 15, it returns the
-given number; otherwise, it returns 15.
+<p>This program tests whether a given integer is greater than 15. If the integer is 
+greater than 15, it returns the given number; otherwise, it returns 15.</p>
 <pre>
 function greaterThanl5Checker(number) {
 const result = number >15? number: 15;
@@ -5487,8 +5487,9 @@ replaceFirstDigitWithDollar("abc 12 3xyz4 5 6");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js215">215. Prefix Sums</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program creates an array of prefix sums for a given array. The prefix sum of a sequence is a new
-sequence where each element is the sum of all preceding elements in the original sequence.
+<p>This program creates an array of prefix sums for a given array. The prefix sum of a 
+sequence is a new sequence where each element is the sum of all preceding elements in 
+the original sequence.</p>
 <pre>
 function prefixSums(inputArray) {
   let prefixSum = 0;
@@ -5595,7 +5596,7 @@ rgbToHex(0, 51, 255);
 </pre>
 
 <h2 id="js-4">4. Copy to Clipboard</h2>
-Easily copy any text to clipboard using navigator.clipboard.writeText.
+<p>Easily copy any text to clipboard using navigator.clipboard.writeText.</p>
 <pre>
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);
 copyToClipboard("Hello World");
@@ -5604,7 +5605,7 @@ copyToClipboard("Hello World");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-5">5. Check if Date is Valid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Use the following snippet to check if a given date is valid or not.
+<p>Use the following snippet to check if a given date is valid or not.</p>
 <pre>
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 isDateValid("December 17, 1995 03:24:00");
@@ -5612,7 +5613,7 @@ isDateValid("December 17, 1995 03:24:00");
 </pre>
 
 <h2 id="js-6">6. Find the day of year</h2>
-Find which is the day by a given date.
+<p>Find which is the day by a given date.</p>
 <pre>
 const dayOfYear = (date) =>
 Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
@@ -5620,8 +5621,8 @@ dayOfYear(new Date()); // Result: 272
 </pre>
 
 <h2 id="js-7">7. Capitalise a String</h2>
-Javascript doesn't have an inbuilt capitalise function, so we can use the
-following code for the purpose.
+<p>Javascript doesn't have an inbuilt capitalise function, so we can use the
+following code for the purpose.</p>
 <pre>
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 capitalize("follow for more")
@@ -5629,17 +5630,17 @@ capitalize("follow for more")
 </pre>
 
 <h2 id="js-8">8. Find the number of days between two days</h2>
-Find the days between 2 given days using the following snippet.
-const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() -
+<p>Find the days between 2 given days using the following snippet.</p>
 <pre>
+const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() -
 date2.getTime()) / 86400000)
 dayDif(new Date("2020-10-21"), new Date("2021-10-22"))
 // Result: 366
 </pre>
 
 <h2 id="js-9">9. Clear All Cookies</h2>
-You can easily clear all cookies stored in a web page by accessing the
-cookie using document.cookie and clearing it.
+<p>You can easily clear all cookies stored in a web page by accessing the
+cookie using document.cookie and clearing it.</p>
 <pre>
 const clearCookies = document.cookie.split(';').forEach(cookie =>
 document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new
@@ -5648,8 +5649,7 @@ Date(0).toUTCString()};path=/`));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-10">10. Generate Random Hex</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can generate random hex colors with Math.random and padEnd
-properties.
+<p>You can generate random hex colors with Math.random and padEnd properties.</p>
 <pre>
 const randomHex = () => `#${Math.floor(Math.random() *
 0xffffff).toString(16).padEnd(6, "0")}`;
@@ -5658,8 +5658,8 @@ console.log(randomHex());
 </pre>
 
 <h2 id="js-11">11. Get Query Params from URL</h2>
-You can easily retrieve query params from a url either by passing
-window.location or the raw URL goole.com?search=easy&page=3
+<p>You can easily retrieve query params from a url either by passing window.location or the 
+raw URL goole.com?search=easy&page=3</p>
 <pre>
 const getParameters = (URL) => {
 URL = JSON.parse('{"' + decodeURI(URL.split("?")&lbrack;1&rbrack;).replace(/"/g,
@@ -5753,8 +5753,7 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));
 </pre>
 
 <h2 id="js-22">22. Get the Length of a String</h2>
-getLength efficiently calculates the length of a given string using .length
-property.
+<p>getLength efficiently calculates the length of a given string using .length property.</p>
 <pre>
 const getLength = (str) => str.length;
 getLength("Hello, world!");
@@ -5762,7 +5761,7 @@ getLength("Hello, world!");
 </pre>
 
 <h2 id="js-23">23. Calculate the Area of a Circle</h2>
-Calculate the area of a circle given its radius.
+<p>Calculate the area of a circle given its radius.</p>
 <pre>
 const calculateCircleArea = (radius) => Math.PI * Math.pow(radius, 2);
 calculateCircleArea(5);
@@ -5770,7 +5769,7 @@ calculateCircleArea(5);
 </pre>
 
 <h2 id="js-24">24. Check if a Number is Prime</h2>
-Determine if a given number is a prime number.
+<p>Determine if a given number is a prime number.</p>
 <pre>
 const isPrime = (num) => {
 if (num <= 1) return false;
@@ -5810,8 +5809,7 @@ randomInRange(1, 10);
 </pre>
 
 <h2 id="js-28">28. Convert Seconds to HH:MM:SS Format</h2>
-Convert a given number of seconds into the "hours:minutes:seconds"
-format.
+<p>Convert a given number of seconds into the "hours:minutes:seconds" format.</p>
 <pre>
 const secondsToHHMMSS = (seconds) => {
 const pad = (num) => String(num).padStart(2, '0');
@@ -5824,7 +5822,7 @@ secondsToHHMMSS(3660); // Result: "01:01:00"
 </pre>
 
 <h2 id="js-29">29. Get the Last Element of an Array</h2>
-Retrieve the last element of a given array.
+<p>Retrieve the last element of a given array.</p>
 <pre>
 const getLastElement = (arr) => arr&lbrack;arr.length - 1&rbrack;;
 getLastElement(&lbrack;1, 2, 3, 4&rbrack;);
