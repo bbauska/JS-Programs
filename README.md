@@ -5489,7 +5489,7 @@ Uppercase letters are converted to lowercase, and lowercase letters are converte
 uppercase.</p>
 <pre>
 function changeCapitalization(inputString) {
-let resultstring =
+let resultstring = "";
 for (const char of inputstring) {
 // Check if the character is uppercase
 if (char = = = char.toUpperCaseO) {
@@ -5502,6 +5502,7 @@ resultstring + = char.toUpperCaseO;
 }
 console.log(' Original String: $ {inputstring}');
 console.log(' String with Changed Capitalization: $ {resultstring}');
+}
 // Example: Change the capitalization of the string "Hello World"
 changeCapitalization("Hello World");
 </pre>
@@ -5511,24 +5512,25 @@ changeCapitalization("Hello World");
 <p>This program takes an array of integers with an even length and swaps its two halves.</p>
 <pre>
 function swapArrayHalves(arr) {
-const length = arr.length;
-// Check if the array has an even length
-if (length % 2 !== 0) {
-console.log("Please provide an array with an even length.");
-return;
+  const length = arr.length;
+  // Check if the array has an even length
+  if (length % 2 !== 0) {
+    console.log("Please provide an array with an even length.");
+    return;
+  }
+  // Calculate the midpoint of the array
+  const midpoint = length I 2;
+  // Swap the two halves of the array
+  for (let i = 0; i < midpoint; i++) {
+    const temp = arr &lbrack;i&rbrack;;
+    arr&lbrack;i&rbrack; = arr&lbrack;midpoint + i&rbrack;;
+    arr&lbrack;midpoint + i&rbrack; = temp;
+  }
+  console.log("Original Array:" + arr.join(","));
+  console.logf Array with Swapped Halves:" + arr.join(","));
 }
-// Calculate the midpoint of the array
-const midpoint = length I 2;
-// Swap the two halves of the array
-for (let i = 0; i < midpoint; i++) {
-const temp = arr &lbrack;i&rbrack;;
-arr&lbrack;i&rbrack; = arr&lbrack;midpoint + i&rbrack;;
-arr&lbrack;midpoint + i&rbrack; = temp;
-}
-console.log("Original Array:" + arr.join(","));
-console.logf Array with Swapped Halves:" + arr.join(","));
-// Example: Swap halves of the array &lbrack;1, 2, 3, 4, 5, 6&rbrack;
-swapArrayHalves(&lbrack;l, 2, 3,4, 5, 6&rbrack;);
+// Example: Swap halves of the array &lbrack;1,2,3,4,5,6&rbrack;
+swapArrayHalves(&lbrack;l,2,3,4,5,6&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js203">203. Sum of Digits in String</h2>
@@ -5537,14 +5539,17 @@ swapArrayHalves(&lbrack;l, 2, 3,4, 5, 6&rbrack;);
 identifies digits in the string and adds them up to calculate the total sum.</p>
 <pre>
 function sumOfDigitsInString(inputString) {
-let digitSum = 0;
-for (const char of inputstring) {
-// Check if the character is a digit
-if (/\d/.test(char)) {
-// Convert the digit character to its numerical value and add to sum
-digitSum += parselnt(char, 10);
-console.log(' Original String: $ {inputstring}');
-console.log(' Sum of Digits in the String: $ {digitSum}');
+  let digitSum = 0;
+  for (const char of inputstring) {
+    // Check if the character is a digit
+    if (/\d/.test(char)) {
+      // Convert the digit character to its numerical value and add to sum
+      digitSum += parselnt(char, 10);
+    }
+  }
+  console.log(' Original String: $ {inputstring}');
+  console.log(' Sum of Digits in the String: $ {digitSum}');
+}
 // Example: Compute the sum of digits in the string "abcl23xyz456"
 sumOfDigitsInString("abc 12 3xyz45 6");
 </pre>
@@ -5556,12 +5561,12 @@ calculates the cube of each integer in the specified range and adds them up to f
 total sum.</p>
 <pre>
 function sumOfCubes(upToInteger) {
-let cubesSum = 0;
-for (let i = 1; i < = upToInteger; i++) {
-// Calculate the cube of each integer and add to sum
-cubesSum += Math.pow(i, 3);
-}
-console.log(' Sum of Cubes from 1 to $ {upToInteger}: ${cubesSum}' );
+  let cubesSum = 0;
+  for (let i = 1; i < = upToInteger; i++) {
+    // Calculate the cube of each integer and add to sum
+    cubesSum += Math.pow(i, 3);
+  }
+  console.log('Sum of Cubes from 1 to ${upToInteger}: ${cubesSum}' );
 }
 // Example: Compute the sum of cubes up to the integer 5
 sumOfCubes(5);
@@ -5570,17 +5575,18 @@ sumOfCubes(5);
 <h2 id="js205">205. Maximum Integer for Sum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program finds the maximum integer n such that the sum of integers from 1 to n 
-(inclusive) does not exceed a given target sum targetSum . It calculates the sum using 
-the formula Sum = n &ast; (n + 1) / 2.</p>
+(inclusive) does not exceed a given target sum <b>targetSum</b>. It calculates the sum using 
+the formula <b>Sum = n &ast; (n + 1) / 2.</b></p>
 <pre>
 function findMaxIntegerForSum(targetSum) {
-let currentSum = 0;
-let maxinteger = 0;
-while (currentSum + maxinteger + 1 < = targetSum) {
-maxlnteger++;
-currentSum + = maxinteger;
+  let currentSum = 0;
+  let maxinteger = 0;
+  while (currentSum + maxinteger + 1 < = targetSum) {
+    maxlnteger++;
+    currentSum + = maxinteger;
+  }
+  console.log('Maximum Integer (n) for Sum <= ${targetSum}: ${maxinteger}');
 }
-console.log(' Maximum Integer (n) for Sum <= $ {targetSum}: $ {maxinteger}');
 // Example: Find the maximum integer for the sum <=15
 findMaxIntegerForSum(l 5);
 </pre>
@@ -5591,18 +5597,18 @@ findMaxIntegerForSum(l 5);
 structure considered is scheme://domain&lbrack;/:path &rbrack;, where pat h is optional.</p>
 <pre>
 function breakURL(url) {
-const urlParts = {};
-const urlRegex = /A(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.*)?$/;
-const matches = url.match(urlRegex);
-if (’matches) {
-console.log("Invalid URL format.");
-return;
-}
-urlParts.scheme = matches! 1&rbrack;;
-urlParts.domain = matches&lbrack;2&rbrack;;
-urlParts.path = matches! 3&rbrack; 11
-console.log("URL Parts:");
-console.log(urlParts);
+  const urlParts = {};
+  const urlRegex = /^(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.*)?$/;
+  const matches = url.match(urlRegex);
+  if (’matches) {
+    console.log("Invalid URL format.");
+    return;
+  }
+  urlParts.scheme = matches! 1&rbrack;;
+  urlParts.domain = matches&lbrack;2&rbrack;;
+  urlParts.path = matches! 3&rbrack; 11
+  console.log("URL Parts:");
+  console.log(urlParts);
 }
 // Example: Breakdown the URL "https://www.example.org/page"
 breakURL("https://www.example.org/page");
@@ -5628,24 +5634,24 @@ sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simplifies a given absolute path for a file in Unix-style. It takes a 
 string representing the absolute path and simplifies it by resolving any redundant 
-slashes ( // ), parent directory references ( ..), and current directory references (.).</p>
+slashes (//), parent directory references (..), and current directory references (.).</p>
 <pre>
 function simplifyAbsolutePath(path) {
-const parts = path.split(7');
+const parts = path.split('/');
 const simplifiedParts = &lbrack;&rbrack;;
 for (const part of parts) {
 if (part = = ='..'){
-simplifiedParts.popO; // Move up one level for
+simplifiedParts.pop(); // Move up one level for '..'
 } else if (part!== " && part !=='.'){
 simplifiedParts.push(part);
 }
 }
-const simplifiedPath = 7' + simplifiedParts.join(7');
-console.log(' Original Absolute Path: ${path}');
-console.log(' Simplified Absolute Path: ${simplifiedPath}');
+const simplifiedPath = '/' + simplifiedParts.join('/');
+console.log('Original Absolute Path:${path}');
+console.log('Simplified Absolute Path: ${simplifiedPath}');
 }
 // Example: Simplify an absolute path
-simplifyAbsolutePath(7home/user/../documents/./file.txt');
+simplifyAbsolutePath('/home/user/../documents/./file.txt');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js209">209. Count Common Elements in Arrays</h2>
@@ -5662,7 +5668,7 @@ console.log("Common Elements:”, commonElements);
 console.logC'Number of Common Elements:”, numberOfCommonElements);
 }
 // Example: Count common elements between two arrays
-countCommonElements(&lbrack;l, 2, 3,4, 5&rbrack;, &lbrack;3,4, 5, 6, 7&rbrack;);
+countCommonElements(&lbrack;l,2,3,4,5&rbrack;, &lbrack;3,4,5,6,7&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js210">210. Check Same Digits in a Number</h2>
@@ -5680,6 +5686,7 @@ return;
 }
 }
 console.log(' Digits in $ {number} are all the same.');
+}
 // Example: Check if all digits in the number 22222 are the same are AllDigitsSame(22222);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5696,10 +5703,11 @@ if (arr&lbrack;i&rbrack; % 10= = =0){
 console.log(' Rightmost Round Number: ${arr&lbrack;i&rbrack;}, Position: ${i + 1}');
 return;
 }
+}
 console.log("No round numbers found in the array. Position: 0");
 }
 // Example: Find the position of the rightmost round number
-rightmostRoundNumberPosition(&lbrack;123,450, 678, 900&rbrack;);
+rightmostRoundNumberPosition(&lbrack;123,450,678,900&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js212">212. Reverse Bits of 16-Bit Unsigned Short Integer</h2>
@@ -5718,7 +5726,7 @@ console.log(' Reversed Binary: $ {reversedBinary}');
 console.log(' Reversed Integer: ${reversedlnteger}');
 }
 // Example: Reverse bits of the 16-bit unsigned short integer 5678
-reverseBits 16BitUnsignedShort(5 6 7 8);
+reverseBits 16BitUnsignedShort(5678);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js213">213. Greater Than 15 Checker</h2>
@@ -5730,6 +5738,7 @@ function greaterThanl5Checker(number) {
 const result = number >15? number: 15;
 console.log(' Given Number: $ {number}');
 console.log(' Result: $ {result}');
+}
 // Example: Test whether the number 20 is greater than 15
 greaterThanl5Checker(20);
 </pre>
@@ -5803,7 +5812,7 @@ function reverseOrderOfBits(integer) {
   const reversedlnteger = parseInt(reversedBinary, 2);
   console.log(' Original Integer: $ {integer}');
   console.log(' Binary Representation: ${binaryRepresentation}');
-  console.log(' Reversed Binary: $ {reversedBinary}');
+  console.log(' Reversed Binary: ${reversedBinary}');
   console.log(' Reversed Integer: ${reversedlnteger}');
 }
 // Examples: Reverse order of bits for given integers
