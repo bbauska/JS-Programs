@@ -4065,6 +4065,7 @@ return surfaceArea;
 const sideLength = 4; // Replace with the length of a side of your cube
 const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
 console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js155">155. Check if a Number is a Happy Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
