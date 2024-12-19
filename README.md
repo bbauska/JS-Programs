@@ -2761,7 +2761,8 @@ console.log(' The perimeter of the rectangle is: $ {perimeterResult}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js118">118. Convert Roman Numerals to Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Converting Roman numerals to numbers involves understanding the Roman numeral system and its rules.
+<p>Converting Roman numerals to numbers involves understanding the Roman numeral system 
+and its rules.</p>
 <pre>
 function romanToNumber(roman) {
   // Define a mapping of Roman numeral symbols to their numeric values
@@ -2800,8 +2801,9 @@ function romanToNumber(roman) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js119">119. Check if a String is Anagram of Another Strin</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-An anagram is a word or phrase formed by rearranging the letters of another. To check if two strings are
-anagrams, you can compare whether the characters in both strings have the same frequency.
+<p>An anagram is a word or phrase formed by rearranging the letters of another. To check 
+if two strings are anagrams, you can compare whether the characters in both strings have 
+the same frequency.</p>
 <pre>
 function areAnagrams(strl, str2) {
   // Check if the inputs are valid strings
@@ -2839,8 +2841,8 @@ function areAnagrams(strl, str2) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js120">120. Generate Pascal's Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Pascal's Triangle is a triangular array of binomial coefficients. Each number in the triangle is the sum of the
-two directly above it.
+<p>Pascal's Triangle is a triangular array of binomial coefficients. Each number in the 
+triangle is the sum of the two directly above it.</p>
 <pre>
 function generatePascalsTriangle(numRows) {
   // Check if the input is a positive integer
@@ -2875,8 +2877,8 @@ console.log(triangle);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js121">121. Convert Decimal to Roman Numerals</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Converting a decimal number to Roman numerals involves finding the combination of Roman numeral
-symbols that represent the given decimal value.
+<p>Converting a decimal number to Roman numerals involves finding the combination of 
+Roman numeral symbols that represent the given decimal value.</p>
 <pre>
 function decimalToRoman(num) {
 
@@ -2920,8 +2922,8 @@ console.log(' The Roman numeral representation of ${decimalNumber} is: ${romanNu
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js122">122. Find the Area of a Parallelogram</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the area of a parallelogram given the length of its base and the corresponding
-perpendicular height.
+<p>This program calculates the area of a parallelogram given the length of its base and 
+the corresponding perpendicular height.</p>
 <pre>
 function parallelogramArea(base, height) {
 // Check if the inputs are valid numbers
@@ -2942,7 +2944,7 @@ console.log(' The area of the parallelogram is: $ {areaResult}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js123">123. Basic Rock, Paper, Scissors Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Here's a basic implementation of a Rock, Paper, Scissors game using JavaScript.
+<p>Here's a basic implementation of a Rock, Paper, Scissors game using JavaScript.</p>
 <pre>
 function computerPlayO {
 const options = &lbrack;'rock', ‘paper1, 'scissors'&rbrack;;
@@ -2997,8 +2999,9 @@ console.log('The game is a tie!');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js124">124. Basic Slot Machine Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program simulates a basic slot machine game in which three symbols are randomly selected. If all three
-symbols are the same, the player wins; otherwise, they are encouraged to try again.
+<p>This program simulates a basic slot machine game in which three symbols are randomly 
+selected. If all three symbols are the same, the player wins; otherwise, they are 
+encouraged to try again.</p>
 <pre>
 // Array of symbols for the slot machine
 const symbols = &lbrack;'
@@ -3025,17 +3028,18 @@ console.logC Try again. Better luck next time! ');
 spin();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js124">125. Check if a Number is a Smith Number
+<h2 id="js125">125. Check if a Number is a Smith Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks if a given positive integer is a Smith number. A Smith number is a composite number
-for which the sum of its digits is equal to the sum of the prime factors' digits. The sum of the prime factors'
-digits is computed recursively until prime factors are obtained.
+<p>This program checks if a given positive integer is a Smith number. A Smith number is 
+a composite number for which the sum of its digits is equal to the sum of the prime 
+factors' digits. The sum of the prime factors' digits is computed recursively until prime 
+factors are obtained.</p>
 <pre>
 function isPrime(num) {
 if (num < 2) return false;
 for (let i = 2; i < = Math.sqrt(num); i++) {
 if (num % i = = = 0) return false;
-1
+}
 return true;
 function sumOfDigits(number) {
 return number.toString().split(").reduce((sum, digit) => sum + parselnt(digit, 10), 0);
@@ -3056,10 +3060,11 @@ return originalSum = = = primeFactorSum;
 console.log(isSmithNumber(728)); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js124">126. Basic Chessboard
+<h2 id="js126">126. Basic Chessboard</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a basic representation of a chessboard using characters. It creates an 8x8 grid with
-alternating black and white squares, providing a simple visual representation of a chessboard.
+<p>This program generates a basic representation of a chessboard using characters. It 
+creates an 8x8 grid with alternating black and white squares, providing a simple visual 
+representation of a chessboard.</p>
 <pre>
 // Function to generate a basic chessboard
 function generateChessboard() {
@@ -3082,10 +3087,11 @@ const chessboard = generateChessboard();
 console.log(chessboard);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js124">127. Generate a Random Password with Specific Criteria
+<h2 id="js127">127. Generate a Random Password with Specific Criteria</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a random password based on specified criteria, including the length and the types
-of characters (uppercase letters, lowercase letters, numbers, and special characters).
+<p>This program generates a random password based on specified criteria, including the 
+length and the types of characters (uppercase letters, lowercase letters, numbers, and 
+special characters).</p>
 <pre>
 // Function to generate a random password
 function generateRandomPassword(length, includeUppercase, includeLowercase, includeNumbers,
@@ -3108,7 +3114,7 @@ for (let i = 0; i < length; i++) {
 const randomindex = Math.floor(Math.random() * validChars.length);
 password + = validChars.charAt(randomlndex);
 return password;
-1
+}
 // Example usage
 const passwordLength = 12;
 const includeUppercase = true;
@@ -3121,10 +3127,11 @@ if (randomPassword) {
 console.log(' Random Password: ${randomPassword}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js124">128. Basic Maze Solver
+<h2 id="js128">128. Basic Maze Solver</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program simulates a basic maze solver that navigates through a maze represented by a 2D array. The
-solver uses a simple depth-first search algorithm to find a path from the starting point to the exit.
+<p>This program simulates a basic maze solver that navigates through a maze represented by 
+a 2D array. The solver uses a simple depth-first search algorithm to find a path from 
+the starting point to the exit.</p>
 <pre>
 // Function to solve a maze using depth-first search
 function solveMaze(maze) {
@@ -3152,7 +3159,7 @@ const newRow = row + dr;
 const newCol = col + de;
 if (dfs(newRow, newCol)) {
 return true;
-1
+}
 }
 visited&lbrack;row&rbrack;&lbrack;col&rbrack; = false; // Backtrack
 }
@@ -3174,10 +3181,10 @@ const maze = &lbrack;
 solveMaze(maze);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js124">129. Check if a String is Pangram or Not
+<h2 id="js129">129. Check if a String is Pangram or Not</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks whether a given string is a pangram or not. A pangram is a sentence that contains every
-letter of the alphabet at least once.
+<p>This program checks whether a given string is a pangram or not. A pangram is a sentence 
+that contains every letter of the alphabet at least once.</p>
 <pre>
 // Function to check if a string is a pangram
 function isPangram(str) {
@@ -3186,7 +3193,7 @@ const lowercasedStr = str.toLowerCase();
 for (const char of alphabet) {
 if (llowercasedStr.includes(char)) {
 return false;
-1
+}
 }
 return true;
 }
@@ -3200,8 +3207,9 @@ console.log('The given string is not a pangram. ');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js130">130. Basic Sudoku Solver</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program solves a basic 9x9 Sudoku puzzle using a backtracking algorithm. The solver fills in the empty
-cells of the Sudoku grid by recursively trying numbers until a solution is found.
+<p>This program solves a basic 9x9 Sudoku puzzle using a backtracking algorithm. The 
+solver fills in the empty cells of the Sudoku grid by recursively trying numbers until 
+a solution is found.</p>
 <pre>
 // Function to check if a number can be placed in a particular cell
 function isSafe(board, row, col, num) {
@@ -3284,7 +3292,8 @@ if (solveSudoku(sudokuBoard)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js131">131. Convert Objects to Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program convert JavaScript objects to strings, you can use the JSON.stringify() method.
+<p>This program convert JavaScript objects to strings, you can use the JSON.stringify() 
+method.</p>
 <pre>
 // Example object
 let person = {
