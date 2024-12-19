@@ -2997,12 +2997,12 @@ This program simulates a basic slot machine game in which three symbols are rand
 symbols are the same, the player wins; otherwise, they are encouraged to try again.
 <pre>
 // Array of symbols for the slot machine
-const symbols = ['
-'];
+const symbols = &lbrack;'
+'&rbrack;;
 // Function to get a random symbol from the array
 function getRandomSymbol() {
 const randomindex = Math.floor(Math.random() * symbols.length);
-return symbols[randomlndex];
+return symbols&lbrack;randomlndex&rbrack;;
 }
 // Function to simulate a spin of the slot machine
 function spin() {
@@ -3021,11 +3021,12 @@ console.logC Try again. Better luck next time! ');
 spin();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-125. Check if a Number is a Smith Number
+<h2 id="js124">125. Check if a Number is a Smith Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a Smith number. A Smith number is a composite number
 for which the sum of its digits is equal to the sum of the prime factors' digits. The sum of the prime factors'
 digits is computed recursively until prime factors are obtained.
+<pre>
 function isPrime(num) {
 if (num < 2) return false;
 for (let i = 2; i < = Math.sqrt(num); i++) {
@@ -3036,7 +3037,7 @@ function sumOfDigits(number) {
 return number.toString().split(").reduce((sum, digit) => sum + parselnt(digit, 10), 0);
 }
 function primeFactors(number) {
-const factors = [];
+const factors = &lbrack;&rbrack;;
 for (let i = 2; i < = number; i+ +) {
 while (isPrime(i) && number % i = = = 0) {
 factors.push(i);
@@ -3049,17 +3050,19 @@ return originalSum = = = primeFactorSum;
 }
 // Example: Check if 728 is a Smith number
 console.log(isSmithNumber(728)); // Output: true
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-126. Basic Chessboard
+<h2 id="js124">126. Basic Chessboard
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a basic representation of a chessboard using characters. It creates an 8x8 grid with
 alternating black and white squares, providing a simple visual representation of a chessboard.
+<pre>
 // Function to generate a basic chessboard
 function generateChessboard() {
 const size = 8; // Size of the chessboard (8x8)
-const chessboard = [];
+const chessboard = &lbrack;&rbrack;;
 for (let row = 0; row < size; row+ +) {
-const currentRow = [];
+const currentRow = &lbrack;&rbrack;;
 for (let col = 0; col < size; col++) {
 // Use 'X' for black squares and'' for white squares
 const isBlack = (row + col) % 2 = = = 1;
@@ -3073,19 +3076,20 @@ return chessboard.join('\n');
 // Example usage
 const chessboard = generateChessboard();
 console.log(chessboard);
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-127. Generate a Random Password with Specific Criteria
+<h2 id="js124">127. Generate a Random Password with Specific Criteria
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a random password based on specified criteria, including the length and the types
 of characters (uppercase letters, lowercase letters, numbers, and special characters).
+<pre>
 // Function to generate a random password
 function generateRandomPassword(length, includeUppercase, includeLowercase, includeNumbers,
 includeSpecialChars) {
 const uppercaseChars = ABCDEFGHIJKLMNOPQRSTUV WXYZ';
 const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
 const numberChars = '0123456789';
-const specialchars = ,!@#$%A&*()-=_+[]{}l;:,.<>?';
+const specialchars = ,!@#$%A&*()-=_+&lbrack;&rbrack;{}l;:,.<>?';
 let validChars =
 let password =
 if (includeUppercase) validChars + = uppercaseChars;
@@ -3111,40 +3115,42 @@ const randomPassword = generateRandomPassword(passwordLength, includeUppercase, 
 includeNumbers, includeSpecialChars);
 if (randomPassword) {
 console.log(' Random Password: ${randomPassword}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-128. Basic Maze Solver
+<h2 id="js124">128. Basic Maze Solver
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a basic maze solver that navigates through a maze represented by a 2D array. The
 solver uses a simple depth-first search algorithm to find a path from the starting point to the exit.
+<pre>
 // Function to solve a maze using depth-first search
 function solveMaze(maze) {
 const rows = maze.length;
-const cols = maze[O].length;
+const cols = maze&lbrack;O&rbrack;.length;
 const visited = Array.from({ length: rows}, () = > Array(cols).fill(false));
 function isSafe(row, col) {
-return row > = 0 && row < rows &.& col > = 0 && col < cols && maze[row][col] = = = 1 && !visited[row][col];
+return row > = 0 && row < rows &.& col > = 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
 }
 function dfs(row, col) {
 if (ro w = = = ro ws -1 && col = = = cols -1){
 // Reached the exit
 return true;
 if (isSafe(row, col)) {
-visited[row][col] = true;
+visited&lbrack;row&rbrack;&lbrack;col&rbrack; = true;
 // Move in all possible directions (up, down, left, right)
-const directions = [
-[-1,0], // Up
-[1, 0], // Down
-[0,-1],// Left
-[0,1] //Right
-];
-for (const [dr, de] of directions) {
+const directions = &lbrack;
+&lbrack;-1,0&rbrack;, // Up
+&lbrack;1, 0&rbrack;, // Down
+&lbrack;0,-1&rbrack;,// Left
+&lbrack;0,1&rbrack; //Right
+&rbrack;;
+for (const &lbrack;dr, de&rbrack; of directions) {
 const newRow = row + dr;
 const newCol = col + de;
 if (dfs(newRow, newCol)) {
 return true;
 1
 }
-visited[row][col] = false; // Backtrack
+visited&lbrack;row&rbrack;&lbrack;col&rbrack; = false; // Backtrack
 }
 return false;
 }
@@ -3154,20 +3160,21 @@ console.log('Path found! ');
 } else {
 console.log('No path found. ');
 // Example usage
-const maze = [
-11,0,1,1,1],
-[1,1,1,0,1],
-[0,0,1,1,1],
-[0,0,1, 0,1],
-[0,0,1,1,1]
-];
+const maze = &lbrack;
+11,0,1,1,1&rbrack;,
+&lbrack;1,1,1,0,1&rbrack;,
+&lbrack;0,0,1,1,1&rbrack;,
+&lbrack;0,0,1, 0,1&rbrack;,
+&lbrack;0,0,1,1,1&rbrack;
+&rbrack;;
 solveMaze(maze);
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-129. Check if a String is Pangram or Not
+<h2 id="js124">129. Check if a String is Pangram or Not
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks whether a given string is a pangram or not. A pangram is a sentence that contains every
 letter of the alphabet at least once.
+<pre>
 // Function to check if a string is a pangram
 function isPangram(str) {
 const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -3185,86 +3192,96 @@ if (isPangram(inputString)) {
 console.log('The given string is a pangram! ');
 } else {
 console.log('The given string is not a pangram. ');
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-130. Basic Sudoku Solver
+<h2 id="js130">130. Basic Sudoku Solver</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program solves a basic 9x9 Sudoku puzzle using a backtracking algorithm. The solver fills in the empty
 cells of the Sudoku grid by recursively trying numbers until a solution is found.
+<pre>
 // Function to check if a number can be placed in a particular cell
 function isSafe(board, row, col, num) {
-// Check if ’num' is not present in the current row and column
-for (leti = 0;i < 9;i++) {
-if (board[row][i] = = = num 11 board[i][col] = = = num) {
-return false;
-}
-// Check if'num' is not present in the 3x3 subgrid
-const startRow = Math.floor(row / 3) * 3;
-const startCol = Math.floor(col / 3) * 3;
-for (leti = 0;i < 3;i++){
-for (let j = 0; j < 3;j++){
-if (board[startRow + i][startCol + j] = = = num) {
-return false;
-1
-1
-1
-return true;
-}
-// Function to find an empty cell in the Sudoku grid
-function findEmptyCell(board) {
-for (let row = 0; row < 9; row++) {
-for (let col = 0; col < 9; col++) {
-if (board[row][col] = = = 0) {
-return [row, col];
-}
-1
-}
-return null;
-1
-// Function to solve the Sudoku puzzle using backtracking
-function solveSudoku(board) {
-const emptyCell = findEmptyCell(board);
-if (’emptyCell) {
-// No empty cell found, the puzzle is solved
-return true;
-}
-const [row, col] = emptyCell;
+  // Check if ’num' is not present in the current row and column
+  for (leti = 0;i < 9;i++) {
+    if (board&lbrack;row&rbrack;&lbrack;i&rbrack; = = = num 11 board&lbrack;i&rbrack;&lbrack;col&rbrack; = = = num) {
+      return false;
+    }
+    // Check if'num' is not present in the 3x3 subgrid
+    const startRow = Math.floor(row / 3) * 3;
+    const startCol = Math.floor(col / 3) * 3;
+    for (leti = 0;i < 3;i++){
+      for (let j = 0; j < 3;j++){
+        if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; = = = num) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+  // Function to find an empty cell in the Sudoku grid
+  function findEmptyCell(board) {
+    for (let row = 0; row < 9; row++) {
+      for (let col = 0; col < 9; col++) {
+        if (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 0) {
+          return &lbrack;row, col&rbrack;;
+        }
+      }
+    }
+    return null;
+  }
+  // Function to solve the Sudoku puzzle using backtracking
+  function solveSudoku(board) {
+    const emptyCell = findEmptyCell(board);
+    if (’emptyCell) {
 
-// Try filling the empty cell with numbers 1 to 9
-for (let num = l;num <= 9;num++) {
-if (isSafe(board, row, col, num)) {
-// If placing 'num' in the current cell is safe, try the next step
-board[row][col] = num;
-// Recursively attempt to solve the rest of the puzzle
-if (solveSudoku(board)) {
-return true;
-}
-// If placing 'num' in the current cell leads to an invalid solution, backtrack
-board[row][col] = 0;
-// No number from 1 to 9 can be placed in the current cell, backtrack
-return false;
-}
+      // No empty cell found, the puzzle is solved
+      return true;
+    }
+    const &lbrack;row, col&rbrack; = emptyCell;
+
+    // Try filling the empty cell with numbers 1 to 9
+    for (let num = l;num <= 9;num++) {
+      if (isSafe(board, row, col, num)) {
+
+        // If placing 'num' in the current cell is safe, try the next step
+        board&lbrack;row&rbrack;&lbrack;col&rbrack; = num;
+
+        // Recursively attempt to solve the rest of the puzzle
+        if (solveSudoku(board)) {
+          return true;
+        }
+
+        // If placing 'num' in the current cell leads to an invalid solution, backtrack
+        board&lbrack;row&rbrack;&lbrack;col&rbrack; = 0;
+
+        // No number from 1 to 9 can be placed in the current cell, backtrack
+        return false;
+      }
+
 // Example usage
-const sudokuBoard = [
-[5,3,0, 0, 7,0,0, 0, 0],
-[6,0, 0,1, 9, 5,0, 0, 0],
-[0, 9, 8, 0, 0, 0, 0, 6, 0],
-[8, 0, 0, 0, 6, 0, 0, 0, 3],
-[4, 0, 0,8, 0,3,0, 0,1],
-[7, 0, 0, 0, 2, 0, 0, 0, 6],
-[0, 6, 0, 0, 0, 0, 2, 8, 0],
-[0, 0, 0, 4, 1,9,0, 0,5],
-[0, 0, 0, 0, 8, 0, 0, 7, 9]
-];
+const sudokuBoard = &lbrack;
+&lbrack;5,3,0, 0, 7,0,0, 0, 0&rbrack;,
+&lbrack;6,0, 0,1, 9, 5,0, 0, 0&rbrack;,
+&lbrack;0, 9, 8, 0, 0, 0, 0, 6, 0&rbrack;,
+&lbrack;8, 0, 0, 0, 6, 0, 0, 0, 3&rbrack;,
+&lbrack;4, 0, 0,8, 0,3,0, 0,1&rbrack;,
+&lbrack;7, 0, 0, 0, 2, 0, 0, 0, 6&rbrack;,
+&lbrack;0, 6, 0, 0, 0, 0, 2, 8, 0&rbrack;,
+&lbrack;0, 0, 0, 4, 1,9,0, 0,5&rbrack;,
+&lbrack;0, 0, 0, 0, 8, 0, 0, 7, 9&rbrack;
+&rbrack;;
 if (solveSudoku(sudokuBoard)) {
-console.log('Sudoku solved successfully:');
-console.log(sudokuBoard.map(row => row.join(' ')).join('\n'));
+  console.log('Sudoku solved successfully:');
+  console.log(sudokuBoard.map(row => row.join(' ')).join('\n'));
 } else {
-console.log('No solution exists for the given Sudoku puzzle.');
+  console.log('No solution exists for the given Sudoku puzzle.');
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-131. Convert Objects to Strings
+<h2 id="js131">131. Convert Objects to Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program convert JavaScript objects to strings, you can use the JSON.stringify() method.
+<pre>
 // Example object
 let person = {
 firstName: "John",
@@ -3278,22 +3295,25 @@ console.log("Original Object:");
 console.log(person);
 console. log("\nJSON-formatted String:");
 console.log(jsonString);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-132. Find the Area of an Ellipse
+<h2 id="js132">132. Find the Area of an Ellipse</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of an ellipse given its semi-major axis (a) and semi-minor axis (b). The
 formula for the area of an ellipse is * $ * ^71 * Cl * b.
-II Function to calculate the area of an ellipse
+<h3>Function to calculate the area of an ellipse</h3>
+<pre>
 function calculateEllipseArea(semiMajorAxis, semiMinorAxis) {
-const pi = Math.PI;
-const area = pi * semiMajorAxis * semiMinorAxis;
-return area;
+  const pi = Math.PI;
+  const area = pi * semiMajorAxis * semiMinorAxis;
+  return area;
 }
 // Example usage
 const semiMajorAxis = 5;
 const semiMinorAxis = 3;
 const ellipseArea = calculateEllipseArea(semiMajorAxis, semiMinorAxis);
 console.log(' The area of the ellipse is: ${ellipseArea.toFixed(2)}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 133. Check if a Number is a Palindrome in Binary
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3369,11 +3389,11 @@ function calculateLuhnCheckDigit(input) {
 const digits = input.toString().split(").map(Number);
 // Double every second digit from the right
 for (let i = digits.length - 2; i > = 0; i -= 2) {
-let doubledDigit = digits[i] * 2;
+let doubledDigit = digits&lbrack;i&rbrack; * 2;
 // If doubling results in a number greater than 9, subtract 9
 if (doubledDigit > 9) {
 doubledDigit-= 9;
-digitsfi] = doubledDigit;
+digitsfi&rbrack; = doubledDigit;
 1
 // Calculate the sum of all digits
 const sum = digits.reduce((acc, digit) = > acc + digit, 0);
@@ -3402,23 +3422,23 @@ generateMaze() {
 this.visitCell(0,0);
 1
 visitCell(row, col) {
-this.grid[row][col] = 1; // Mark the current cell as visited
+this.grid&lbrack;row&rbrack;&lbrack;col&rbrack; = 1; // Mark the current cell as visited
 // Define the possible directions (up, down, left, right)
-const directions = [
-[0,-2],
-[0, 2],
-[-2, 0],
-[2,0]
+const directions = &lbrack;
+&lbrack;0,-2&rbrack;,
+&lbrack;0, 2&rbrack;,
+&lbrack;-2, 0&rbrack;,
+&lbrack;2,0&rbrack;
 // Shuffle the directions randomly
 directions.sort(() => Math.random() - 0.5);
-for (const [dr, de] of directions) {
+for (const &lbrack;dr, de&rbrack; of directions) {
 const newRow = row + dr;
 const newCol = col + de;
 // Check if the new cell is within bounds and unvisited
-if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid[newRow][newCol] = = =
+if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid&lbrack;newRow&rbrack;&lbrack;newCol&rbrack; = = =
 0){
 // Mark the cell between the current and new cell as visited
-this.grid[row + dr / 2][col + de / 2] = 1;
+this.grid&lbrack;row + dr / 2&rbrack;&lbrack;col + de / 2&rbrack; = 1;
 // Recursively visit the new cell
 this.visitCell(newRow, newCol);
 1
@@ -3461,16 +3481,16 @@ constructor(rows, cols) {
 this.rows = rows;
 this.cols = cols;
 this.grid = Array.from({ length: rows },()=> Array(cols).fill(''));
-this.words = [];
+this.words = &lbrack;&rbrack;;
 }
 addWord(word, row, col, direction) {
 if (direction = = = 'across') {
 for (let i = 0; i < word.length; i++) {
-this.grid[row][col + i] = word[i];
+this.grid&lbrack;row&rbrack;&lbrack;col + i&rbrack; = word&lbrack;i&rbrack;;
 1
 } else if (direction = = = 'down') {
 for (let i = 0; i < word.length; i++) {
-this.grid[row + i][col] = word[i];
+this.grid&lbrack;row + i&rbrack;&lbrack;col&rbrack; = word&lbrack;i&rbrack;;
 1
 }
 this.words.push({ word, row, col, direction});
@@ -3535,12 +3555,12 @@ class WordGuessingGame {
 constructorwordList) {
 this.wordList = wordList;
 this.selectedWord = this.getRandomWord();
-this.guesses = [];
+this.guesses = &lbrack;&rbrack;;
 this.maxAttempts = 6;
 }
 getRandomWord() {
 const randomindex = Math.floor(Math.random() * this.wordList.length);
-return this.wordList[randomIndex].toUpperCase();
+return this.wordList&lbrack;randomIndex&rbrack;.toUpperCase();
 1
 displayWordO {
 return this.selectedWord
@@ -3564,7 +3584,7 @@ if (!this.displayWord().includes('_')) {
 console.log('Congratulations! You guessed the word!');
 process.exitQ;
 // Example usage
-const wordList = ['javascript', 'python', 'java', 'ruby', 'typescript'];
+const wordList = &lbrack;'javascript', 'python', 'java', 'ruby', 'typescript'&rbrack;;
 const game = new WordGuessingGame(wordList);
 console.log('Welcome to the Word Guessing Game!');
 console.log(' Attempts left: ${game.maxAttempts}');
@@ -3615,20 +3635,20 @@ constructor(cards) {
 this.cards = cards.concat(cards); // Duplicate the cards to create pairs
 this.shuffleCardsO;
 this.board = this.createBoardQ;
-this.flippedCards = [];
+this.flippedCards = &lbrack;&rbrack;;
 this.attempts = 0;
 this.matches = 0;
 shuffleCardsO {
 for (let i = this.cards.length -1; i > 0; i—) {
 constj = Math.floor(Math.random() * (i + 1));
-[this.cards[i], this.cards[j]] = [this.cards[j], this.cardsfi]];
+&lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; = &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
 }
 createBoard() {
-const board = [];
+const board = &lbrack;&rbrack;;
 for (let i = 0; i < 4; i++) {
-const row = [];
+const row = &lbrack;&rbrack;;
 for (let j = 0; j <4;j++){
-row.push(this.cards[i * 4 + j]);
+row.push(this.cards&lbrack;i * 4 + j&rbrack;);
 board.push(row);
 return board;
 displayBoard() {
@@ -3636,26 +3656,26 @@ for (const row of this.board) {
 console.log(row.map(card => (card.faceUp ? card.value : 'X')).join(''));
 }
 flipCard(row, col) {
-const card = this.board[row][col];
+const card = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
 if (’card.faceUp && this.flippedCards.length < 2) {
 card.faceUp = true;
 this.flippedCards.push(card);
 if (this.flippedCards.length = = = 2) {
 this.attempts++;
-if (this.flippedCards[O].value = = = this.flippedCards[l].value) {
+if (this.flippedCards&lbrack;O&rbrack;.value = = = this.flippedCards&lbrack;l&rbrack;.value) {
 this.matches++;
 console.log('Match found!');
 } else {
 console.logfNo match. Try again.');
 this.flippedCards.forEach(card => (card.faceUp = false));
-this.flippedCards = [];
+this.flippedCards = &lbrack;&rbrack;;
 }
 this.displayBoard();
 if (this.matches = = = this.cards.length / 2) {
 console.log(' Congratulations! You completed the game in ${this.attempts} attempts.');
 process.exitO;
 // Example usage
-const cards = [
+const cards = &lbrack;
 {value: 'A', faceUp: false},
 {value: 'B', faceUp: false},
 {value: '0, faceUp: false},
@@ -3664,7 +3684,7 @@ const cards = [
 {value: 'B', faceUp: false},
 {value: 'C, faceUp: false},
 {value: 'D', faceUp: false}
-];
+&rbrack;;
 const game = new MemoryMatchingGame(cards);
 console.logC Welcome to the Memory Matching Game!');
 game.displayBoard();
@@ -3692,7 +3712,7 @@ if (length % 2 !== 0) {
 return false;
 }
 const pairs = getDigitPairs(strNumber);
-for (const [pairl, pair2] of pairs) {
+for (const &lbrack;pairl, pair2&rbrack; of pairs) {
 if (pairl = = = 0 || pair2 = = = 0) {
 // Exclude cases where one of the pairs has a leading zero
 continue;
@@ -3702,14 +3722,14 @@ return true;
 return false;
 }
 function getDigitPairs(strNumber) {
-const pairs = [];
+const pairs = &lbrack;&rbrack;;
 const length = strNumber.length;
 for (let i = 0; i < length; i++) {
 for (let j = 0;j < length; j++) {
 if (i !==j){
-const pairl = parse!nt(strNumber[i] + strNumber[j], 10);
+const pairl = parse!nt(strNumber&lbrack;i&rbrack; + strNumber&lbrack;j&rbrack;, 10);
 const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index != = j).join("), 10);
-pairs.push([pairl, pair 2]);
+pairs.push(&lbrack;pairl, pair 2&rbrack;);
 }
 }
 1
@@ -3729,14 +3749,14 @@ the player to repeat the sequence.
 class SimonSaysGame {
 constructor(colors) {
 this.colors = colors;
-this.sequence = [];
-this.playerSequence = [];
+this.sequence = &lbrack;&rbrack;;
+this.playerSequence = &lbrack;&rbrack;;
 this.round = 1;
 this.generateSequenceQ;
 generateSequenceO {
 for (let i = 0; i < this.round; i++) {
 const randomindex = Math.floor(Math.random() *this.colors.length);
-this.sequence.push(this.colors[randomlndex]);
+this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
 }
 displaySequenceO {
 console.log(' Round ${this.round} - Simon says:');
@@ -3749,14 +3769,14 @@ the player to repeat the sequence.
 class SimonSaysGame {
 constructor(colors) {
 this.colors = colors;
-this.sequence = [];
-this.playerSequence = [];
+this.sequence = &lbrack;&rbrack;;
+this.playerSequence = &lbrack;&rbrack;;
 this.round = 1;
 this.generateSequenceQ;
 generateSequenceO {
 for (let i = 0; i < this.round; i++) {
 const randomindex = Math.floor(Math.random() *this.colors.length);
-this.sequence.push(this.colors[randomlndex]);
+this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
 }
 displaySequenceO {
 console.log(' Round ${this.round} - Simon says:');
@@ -3773,7 +3793,7 @@ this.playerSequence = userlnput.split('');
 }
 checkSequenceO {
 for (let i = 0; i < this.round; i++) {
-if (this.playerSequence[i] !== this.sequencefi]) {
+if (this.playerSequence&lbrack;i&rbrack; !== this.sequencefi&rbrack;) {
 console.log('Wrong sequence! Game over.1);
 process.exitO;
 1
@@ -3793,7 +3813,7 @@ this.checkSequenceO;
 1
 }
 // Example usage
-const colors = ['red’, 'blue', 'green', 'yellow'];
+const colors = &lbrack;'red’, 'blue', 'green', 'yellow'&rbrack;;
 const simonSaysGame = new SimonSaysGame(colors);
 console.log('Welcome to Simon Says! Repeat the sequence correctly to advance.');
 // Start the game loop
@@ -3849,17 +3869,17 @@ let row, col;
 do {
 row = Math.floor(Math.random() * this.rows);
 col = Math.floor(Math.random() * this.cols);
-} while (board[row][col] = = = 'X');
-board[row][col] = 'X';
+} while (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X');
+board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
 // Calculate numbers around mines
 for (let i = 0; i < this.rows; i++) {
 for (letj = 0; j < this.cols; j ++) {
-if (board[i][j] ==='X') {
+if (board&lbrack;i&rbrack;&lbrack;j&rbrack; ==='X') {
 continue;
 for (let row = i- l;row <= i + l;row++) {
 for (let col = j - l;col<= j + l;col++){
-if (row > = 0 && row < this.rows && col > = 0 && col < this.cols && board[row][col] = = = 'X') {
-board[i][j]++;
+if (row > = 0 && row < this.rows && col > = 0 && col < this.cols && board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X') {
+board&lbrack;i&rbrack;&lbrack;j&rbrack;++;
 }
 }
 }
@@ -3874,26 +3894,26 @@ console Jog(row.map(cell => (cell = = = 'X' ? 'X':' ')).join(''));
 uncoverCell(row, col) {
 if (this.gameO ver 11 row < 0 || row >= this.rows || col < 0 || col >= this.cols) {
 return;
-const cell = this.board[row][col];
+const cell = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
 if (cell = = ='X') {
 console.log('Game over! You hit a mine.');
 this.gameOver = true;
 } else if (cell = = = 0) {
-this.board[row][col] = '';
+this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = '';
 this.uncoverNeighbors(row, col);
 } else {
-this.board[row][col] = cell.toStringO;
+this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = cell.toStringO;
 }
 this.checkWinO;
 }
 uncoverNeighbors(row, col) {
 for (let i = row - l;i <= row + l;i++) {
 for (let j = col - l;j <= col + l;j++) {
-if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board[i][j] = = = 0) {
-this.board[i][j] = '
+if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = = = 0) {
+this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = '
 this.uncoverNeighbors(i, j);
-} else if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board[i][j] !== 'X') {
-this.board[i][j] = this.board[i][j].toString();
+} else if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; !== 'X') {
+this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = this.board&lbrack;i&rbrack;&lbrack;j&rbrack;.toString();
 checkWinO {
 let uncoveredCount = 0;
 for (const row of this.board) {
@@ -3947,10 +3967,10 @@ Creating a basic typing speed test involves generating a random string, measurin
 user to type the string, and calculating the typing speed.
 class TypingSpeedTest {
 constructor) {
-this.words = [
+this.words = &lbrack;
 'programming', 'javascript', 'developer', 'challenge', keyboard',
 'speed', 'test', 'accuracy', 'practice', 'learning'
-];
+&rbrack;;
 this.text = this.generateRandomText();
 this.startTime = 0;
 this.endTime = 0;
@@ -3958,7 +3978,7 @@ this.userlnput =
 }
 generateRandomText() {
 const randomindex = Math.floor(Math.random() * this.words.length);
-return this.words[randomlndex];
+return this.words&lbrack;randomlndex&rbrack;;
 1
 startTest() {
 this.text = this.generateRandomText();
@@ -4088,7 +4108,7 @@ This program checks if a given positive integer is a squareful number. A squaref
 integer where the square of each prime factor occurs in its prime factorization.
 function isSquarefulNumber(number) {
 const factors = getFactors(number);
-const uniqueFactors = [...new Set(factors)];
+const uniqueFactors = &lbrack;...new Set(factors)&rbrack;;
 for (const factor of uniqueFactors) {
 const count = factors.filter((num) => num = = = factor).length;
 if (count % 2 !== 0) {
@@ -4097,7 +4117,7 @@ return false;
 1
 return true;
 function getFactors(number) {
-const factors = [];
+const factors = &lbrack;&rbrack;;
 for (let i = 1; i < = Math.sqrt(number); i++) {
 if (number % i = = = 0) {
 factors.push(i);
@@ -4168,7 +4188,7 @@ function isSmithMorraGambitNumber(number) {
 const digitSum = (n) => n.toString().split(").reduce((acc, digit) => acc + parselnt(digit), 0);
 // Function to calculate the prime factorization of a number
 const primeFactorization = (n) = > {
-const factors = [];
+const factors = &lbrack;&rbrack;;
 for (let i = 2;i<=n;i++){
 while (n % i = = = 0) {
 factors.push(i);
@@ -4255,9 +4275,9 @@ if (number < 0) {
 return false;
 }
 // Use dynamic programming to calculate Motzkin numbers
-const motzkinNumbers = [1,1];
+const motzkinNumbers = &lbrack;1,1&rbrack;;
 for (let n = 2; n < = number; n+ +) {
-const nextMotzkin = ((2 *n + 1)*motzkinNumbers[n-l] + (3*n-3)*motzkinNumbers[n- 2]) / (n + 2);
+const nextMotzkin = ((2 *n + 1)*motzkinNumbers&lbrack;n-l&rbrack; + (3*n-3)*motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
 motzkinNumbers.push(nextMotzkin);
 1
 return motzkinNumbers.includes(number);
@@ -4278,10 +4298,10 @@ function isPadovanNumber(number) {
 if (number < 0) {
 return false;
 }
-const padovanNumbers = [1,1,1];
-while (padovanNumbers[padovanNumbers.length - 1] <= number) {
-const nextPadovan = padovanNumbers[padovanNumbers.length - 2] + padovanNumbers[padovanNumbers.length -
-3];
+const padovanNumbers = &lbrack;1,1,1&rbrack;;
+while (padovanNumbers&lbrack;padovanNumbers.length - 1&rbrack; <= number) {
+const nextPadovan = padovanNumbers&lbrack;padovanNumbers.length - 2&rbrack; + padovanNumbers&lbrack;padovanNumbers.length -
+3&rbrack;;
 padovanNumbers.push(nextPadovan);
 }
 return padovanNumbers.includes(number);
@@ -4416,7 +4436,7 @@ function generateRandomlpO {
 const octet = () => Math.floor(Math.random() * 256);
 return ' ${octet()}.${octet()}.${octet()}.${octet()}';
 function generateMultipleRandomlps(count) {
-const ipAddresses = [];
+const ipAddresses = &lbrack;&rbrack;;
 for (let i = 0; i < count; i++) {
 ipAddresses.push(generateRandomlpO);
 }
@@ -4455,28 +4475,28 @@ console.log("Random Number:", randomNumber);
 This program presents a simple JavaScript quiz with multiple-choice questions. It asks the user for answers
 and provides feedback in the console.
 function runQuiz() {
-const questions = [
+const questions = &lbrack;
 question: "What is the capital of France?",
-options: ["Berlin", "Madrid", "Paris", "Rome"],
+options: &lbrack;"Berlin", "Madrid", "Paris", "Rome"&rbrack;,
 correctAnswer: "Paris"
 },
 {
 question: "Which programming language is this quiz written in?",
-options: ["JavaScript", "Python", "Java", "C++"],
+options: &lbrack;"JavaScript", "Python", "Java", "C++"&rbrack;,
 correctAnswer: "JavaScript"
 },
 {
 question: "What is the largest mammal?",
-options: ["Elephant", "Whale Shark", "Blue Whale", "Giraffe"],
+options: &lbrack;"Elephant", "Whale Shark", "Blue Whale", "Giraffe"&rbrack;,
 correctAnswer: "Blue Whale"
-];
+&rbrack;;
 let score = 0;
 for (const question of questions) {
 console.log(question.question);
 for (let i = 0; i < question.options.length; i+ +) {
-console.log(' ${i + 1}. ${question.options[i]}');
+console.log(' ${i + 1}. ${question.options&lbrack;i&rbrack;}');
 const userAnswerlndex = prompt("Enter the number of your answer:");
-const user Answer = question.options[user Answerindex -1];
+const user Answer = question.options&lbrack;user Answerindex -1&rbrack;;
 if (userAnswer = = = question.correctAnswer) {
 console.log("Correct!\n");
 score++;
@@ -4494,15 +4514,15 @@ through a story.
 function textRPGAdventure() {
 console.logC'Welcome to the Text-based RPG Adventure!");
 console.log("You find yourself in a dark cave. What do you want to do?");
-const choices = [
+const choices = &lbrack;
 {option: "Explore the cave", outcome: "You discover a hidden treasure!", next: "treasure"},
 {option: "Go deeper into the cave", outcome: "Uh-oh! A dragon appears! You narrowly escape.", next: "dragon"},
 {option: "Exit the cave", outcome: "You emerge into the sunlight. Adventure awaits!", next: "end"}
-];
+&rbrack;;
 let currentchoice = 0;
 while (currentchoice < choices.length) {
-const userChoice = prompt(choices[currentChoice].option);
-console.log(choices[currentChoice].outcome);
+const userChoice = prompt(choices&lbrack;currentChoice&rbrack;.option);
+console.log(choices&lbrack;currentChoice&rbrack;.outcome);
 if (userChoice.toLowerCaseO = = = "exit") {
 console.log("You exit the adventure. Goodbye!");
 break;
@@ -4548,7 +4568,7 @@ const barLength = Math.round((value / maxValue) * 20);
 const bar = '■'.repeat(barLength).padEnd(20,'');
 console.log(' $ {value} I ${bar}');
 // Example: Generate a bar chart for data
-const chartData = [5,8,12,4,6];
+const chartData = &lbrack;5,8,12,4,6&rbrack;;
 generateBarChart(chartData);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 181. Right-Angled Triangle Pattern
@@ -4611,11 +4631,11 @@ generateDiamondPattern(diamondHeight);
 This program simulates a text-based Hangman game. The player tries to guess a word by suggesting letters,
 and the program displays the progress and remaining attempts.
 function hangmanGame() {
-const words = ["javascript", "hangman", "programming", "developer", "challenge"];
-const selectedWord = words[Math.floor(Math.random() * words.length)];
+const words = &lbrack;"javascript", "hangman", "programming", "developer", "challenge"&rbrack;;
+const selectedWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
 let guessedWord = "_".repeat(selectedWord.length);
 let remainingAttempts = 6;
-const guessedLetters = [];
+const guessedLetters = &lbrack;&rbrack;;
 console.log("Welcome to the Hangman Game!");
 console.log("Try to guess the word.");
 while (remainingAttempts > 0) {
@@ -4623,7 +4643,7 @@ console.log(' Word: ${guessedWord}');
 console.log(' Guessed Letters: ${guessedLetters.join(",")}');
 console.log(' Attempts Remaining: $ {remainingAttempts}');
 const userGuess = prompt("Enter a letter:").toLowerCase();
-if (’userGuess || !userGuess.match(/[a-z]/) || userGuess.length ’ = = 1) {
+if (’userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length ’ = = 1) {
 console.log("Invalid input. Please enter a single letter.");
 continue;
 if (guessedLetters.includes(userGuess)) {
@@ -4632,7 +4652,7 @@ continue;
 guessedLetters.push(userGuess);
 if (selectedWord.includes(userGuess)) {
 for (let i = 0; i < selectedWord.length; i++) {
-if (selectedWord[i] = = = userGuess) {
+if (selectedWord&lbrack;i&rbrack; = = = userGuess) {
 guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i + 1);
 }
 if (!guessedWord.includes("_")) {
@@ -4689,7 +4709,7 @@ const animal = promptf'Enter an animal:");
 const sound = prompt("Enter a sound:");
 console.clearO;
 console.logC'Here’s your Mad Libs story:");
-console.log(' Once upon a time, there was a ${adjective] ${noun] that loved to ${verb} ${adverb}.');
+console.log(' Once upon a time, there was a ${adjective&rbrack; ${noun&rbrack; that loved to ${verb} ${adverb}.');
 console.log(' One day, it met a $ {animal} that made a $ {sound} noise.');
 console.log("Everyone in the neighborhood heard the noise and started to join the fun!");
 console.log("And they all lived happily ever after.");
@@ -4742,14 +4762,14 @@ console.log(' Try to whack $ {molesToWhack} moles within $ {remainingAttempts} a
 while (remainingAttempts > 0 && molesToWhack > 0) {
 const holes = Array.from({ length: totalHoles },()=> emptyHoleSymbol);
 const randomMolelndex = Math.floor(Math.random() * totalHoles);
-holes[randomMoleIndex] = moleSymbol;
+holes&lbrack;randomMoleIndex&rbrack; = moleSymbol;
 console.log(' \nHoles: ${holes.join("")}');
 const userWhacklndex = parse!nt(prompt("Enter the index to whack the mole:"), 10);
 if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
 console.log(' Invalid input. Please enter a number between 0 and ${totalHoles -1}.');
 continue;
 }
-if (holes[userWhack!ndex] = = = moleSymbol) {
+if (holes&lbrack;userWhack!ndex&rbrack; = = = moleSymbol) {
 console.log("Whack! You got the mole!");
 score++;
 molesToWhack—;
@@ -4772,17 +4792,17 @@ whackAMoleGameQ;
 This program simulates a coin tossing game. The player guesses whether the next coin toss will result in
 heads or tails.
 function coinTossingGame() {
-const coinSides = ["Heads", "Tails"];
+const coinSides = &lbrack;"Heads", "Tails"&rbrack;;
 let correctGuesses = 0;
 lettotalGuesses = 0;
 console.log("Welcome to the Coin Tossing Game!");
 while (true) {
 const playerGuess = prompt("Heads or Tails?").toLowerCase();
-if (’["heads", "tails"].includes(playerGuess)) {
+if (’&lbrack;"heads", "tails"&rbrack;.includes(playerGuess)) {
 console.log("Invalid input. Please enter 'Heads' or 'Tails'.");
 continue;
 }
-const coinResult = coinSides[Math.floor(Math.random() * 2)];
+const coinResult = coinSides&lbrack;Math.floor(Math.random() * 2)&rbrack;;
 console.log(' Coin toss result: $ {coinResult}');
 if (playerGuess = = = coinResult.toLowerCaseO) {
 console.log("Correct guess’ Well done’");
@@ -4810,9 +4830,9 @@ if (isNaN(limit) 11 limit < 1) {
 console.log("Invalid input. Please enter a positive number.");
 return;
 1
-let fibonacciNumbers = [0, 1];
+let fibonacciNumbers = &lbrack;0, 1&rbrack;;
 for (let i = 2; i < = limit; i+ +) {
-fibonacciNumbers[i] = fibonacciNumbers[i -1] + fibonacciNumbers[i - 2];
+fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibonacciNumbers&lbrack;i - 2&rbrack;;
 }
 console.log(' Fibonacci numbers up to $ {limit}:' );
 console.log(fibonacciNumbers.slice(0, limit + 1));
@@ -4849,12 +4869,12 @@ mathQuizGameO;
 This program simulates a text-based Color Guessing game. The player is given RGB values, and they need to
 guess the correct color.
 function colorGuessingGame() {
-const colors = ["red", "green", "blue", "yellow", "orange", "purple"];
+const colors = &lbrack;"red", "green", "blue", "yellow", "orange", "purple"&rbrack;;
 const maxAttempts = 3;
 console.log("Welcome to the Color Guessing Game!");
 console.log("Guess the color based on the RGB values.");
 for (let attempts = 1; attempts <= maxAttempts; attempts++) {
-const randomColor = colors[Math.floor(Math.random() * colors.length)];
+const randomColor = colors&lbrack;Math.floor(Math.random() * colors.length)&rbrack;;
 const rgb Values = generateRandomRGBValues();
 console.log(' RGB: ${rgbValues.join(",")}');
 const userGuess = promptf'Enter your color guess:").toLowerCase();
@@ -4880,12 +4900,12 @@ colorGuessingGameQ;
 This program simulates a text-based Word Scramble game. The player is presented with a scrambled word
 and needs to unscramble it.
 function wordScrambleGame() {
-const words = ["javascript", "programming", "web", "hangman", "developer"];
+const words = &lbrack;"javascript", "programming", "web", "hangman", "developer"&rbrack;;
 const maxAttempts = 3;
 console.log("Welcome to the Word Scramble Game!");
 console.log("Unscramble the word and enter your guess.");
 for (let attempts = 1; attempts <= maxAttempts; attempts++) {
-const randomWord = words[Math.floor(Math.random() * words.length)];
+const randomWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
 const scrambledWord = scrambleWord(randomWord);
 console.log(' Scrambled word: $ {scrambledWord}');
 const userGuess = prompt("Enter your unscrambled word guess:").toLowerCase();
@@ -4910,13 +4930,13 @@ wordScrambleGame();
 This program simulates a text-based Country Capital Quiz game. The player is asked to match countries with
 their respective capitals.
 function countryCapitalQuizGame() {
-const countryCapitalPairs = [
+const countryCapitalPairs = &lbrack;
 {country: "France", capital: "Paris"},
 {country: "Japan", capital: "Tokyo"},
 {country: "Brazil", capital: "Brasilia"},
 {country: "India", capital: "New Delhi"},
 {country: "Australia", capital: "Canberra"}
-];
+&rbrack;;
 let score = 0;
 console.log("Welcome to the Country Capital Quiz Game!");
 console.log("Match the country with its capital:");
@@ -4937,11 +4957,11 @@ countryCapitalQuizGameO;
 This program simulates a text-based Guess the Animal game. The player is provided with clues and needs to
 guess the correct animal.
 function guessTheAnimalGame() {
-const animals = [
-{name: "elephant", clues: ["I have a long trunk.", "I am the largest land animal."]},
-{name: "giraffe", clues: ["I have a long neck.", "I am the tallest living terrestrial animal."]},
-{name: "penguin", clues: ["I cannot fly.", "I live in cold climates like Antarctica."]}
-];
+const animals = &lbrack;
+{name: "elephant", clues: &lbrack;"I have a long trunk.", "I am the largest land animal."&rbrack;},
+{name: "giraffe", clues: &lbrack;"I have a long neck.", "I am the tallest living terrestrial animal."&rbrack;},
+{name: "penguin", clues: &lbrack;"I cannot fly.", "I live in cold climates like Antarctica."&rbrack;}
+&rbrack;;
 let score = 0;
 console.logC'Welcome to the Guess the Animal Game!");
 console.log("Read the clues and guess the correct animal:");
@@ -4965,8 +4985,8 @@ guessTheAnimalGame();
 This program simulates a text-based Joke Teller. It randomly selects a joke category and tells a joke from that
 category.
 function jokeTellerProgram() {
-const jokeCategories = ["knock-knock", "dad", "animal", "puns"];
-const selectedCategory = jokeCategories[Math.floor(Math.random() * jokeCategories.length)];
+const jokeCategories = &lbrack;"knock-knock", "dad", "animal", "puns"&rbrack;;
+const selectedCategory = jokeCategories&lbrack;Math.floor(Math.random() * jokeCategories.length)&rbrack;;
 console.log("Welcome to the Joke Teller Program!");
 console.log(' Category: ${selectedCategory.toUpperCase()}');
 console.log("Get ready for a good laugh!");
@@ -5002,7 +5022,7 @@ jokeTellerProgramQ;
 This program simulates a text-based Shopping List. The user can add items, remove items, and view the
 current shopping list.
 function shoppingListProgram() {
-const shoppingList = [];
+const shoppingList = &lbrack;&rbrack;;
 console.log("Welcome to the Shopping List Program!");
 console.log("You can add items, remove items, and view your current shopping list.");
 while (true) {
@@ -5082,7 +5102,7 @@ return;
 // Swap pairs of adjacent digits
 let swappedNumber =
 for (let i = 0; i < length; i + = 2) {
-swappedNumber += numberStr[i + 1] + numberStr[i];
+swappedNumber += numberStr&lbrack;i + 1&rbrack; + numberStr&lbrack;i&rbrack;;
 // Convert the result back to an integer
 const result = parse!nt(swappedNumber, 10);
 console.log(' Original Number: $ {number}');
@@ -5125,14 +5145,14 @@ return;
 const midpoint = length I 2;
 // Swap the two halves of the array
 for (let i = 0; i < midpoint; i++) {
-const temp = arr [i];
-arr[i] = arr[midpoint + i];
-arr[midpoint + i] = temp;
+const temp = arr &lbrack;i&rbrack;;
+arr&lbrack;i&rbrack; = arr&lbrack;midpoint + i&rbrack;;
+arr&lbrack;midpoint + i&rbrack; = temp;
 1
 console.log("Original Array:" + arr.join(","));
 console.logf Array with Swapped Halves:" + arr.join(","));
-// Example: Swap halves of the array [1, 2, 3,4, 5, 6]
-swapArrayHalves([l, 2, 3,4, 5, 6]);
+// Example: Swap halves of the array &lbrack;1, 2, 3,4, 5, 6&rbrack;
+swapArrayHalves(&lbrack;l, 2, 3,4, 5, 6&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 203. Sum of Digits in String
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5184,18 +5204,18 @@ findMaxIntegerForSum(l 5);
 206. URL Breakdown
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program breaks a URL address into its parts and puts them into an array. The URL structure considered
-is scheme://domain[/:path ], where pat h is optional.
+is scheme://domain&lbrack;/:path &rbrack;, where pat h is optional.
 function breakURL(url) {
 const urlParts = {};
-const urlRegex = /A(\w+):\/\/([\w.-]+)(\/.*)?$/;
+const urlRegex = /A(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.*)?$/;
 const matches = url.match(urlRegex);
 if (’matches) {
 console.log("Invalid URL format.");
 return;
 1
-urlParts.scheme = matches! 1];
-urlParts.domain = matches[2];
-urlParts.path = matches! 3] 11
+urlParts.scheme = matches! 1&rbrack;;
+urlParts.domain = matches&lbrack;2&rbrack;;
+urlParts.path = matches! 3&rbrack; 11
 console.log("URL Parts:");
 console.log(urlParts);
 }
@@ -5214,7 +5234,7 @@ console.log("Array of Strings Sorted by Length:");
 console.log(sortedArray);
 }
 // Example: Sort strings by length
-sortStringsByLength(["apple", "banana", "orange", "kiwi", "grape"]);
+sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 208. Simplify Absolute Path
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5223,7 +5243,7 @@ absolute path and simplifies it by resolving any redundant slashes ( // ), paren
 and current directory references (.).
 function simplifyAbsolutePath(path) {
 const parts = path.split(7');
-const simplifiedParts = [];
+const simplifiedParts = &lbrack;&rbrack;;
 for (const part of parts) {
 if (part = = ='..'){
 simplifiedParts.popO; // Move up one level for
@@ -5251,7 +5271,7 @@ console.log("Common Elements:”, commonElements);
 console.logC'Number of Common Elements:”, numberOfCommonElements);
 }
 // Example: Count common elements between two arrays
-countCommonElements([l, 2, 3,4, 5], [3,4, 5, 6, 7]);
+countCommonElements(&lbrack;l, 2, 3,4, 5&rbrack;, &lbrack;3,4, 5, 6, 7&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 210. Check Same Digits in a Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5259,9 +5279,9 @@ This program checks whether all the digits in a given number are the same or not
 a string and compares each digit to the first digit.
 function areAllDigitsSame(number) {
 const numberStr = String(number);
-const firstDigit = numberStr[0];
+const firstDigit = numberStr&lbrack;0&rbrack;;
 for (let i = 1; i < numberStr.length; i++) {
-if (numberStr[i] !== firstDigit) {
+if (numberStr&lbrack;i&rbrack; !== firstDigit) {
 console.log(' Digits in $ {number} are not all the same.');
 return;
 }
@@ -5277,14 +5297,14 @@ informally considered to be an integer that ends with one or more zeros. The pro
 array from right to left and identifies the rightmost round number, if any.
 function rightmostRoundNumberPosition(arr) {
 for (let i = arr.length -1; i > = 0; i—) {
-if (arr[i] % 10= = =0){
-console.log(' Rightmost Round Number: ${arr[i]}, Position: ${i + 1}');
+if (arr&lbrack;i&rbrack; % 10= = =0){
+console.log(' Rightmost Round Number: ${arr&lbrack;i&rbrack;}, Position: ${i + 1}');
 return;
 }
 console.log("No round numbers found in the array. Position: 0");
 }
 // Example: Find the position of the rightmost round number
-rightmostRoundNumberPosition([123,450, 678, 900]);
+rightmostRoundNumberPosition(&lbrack;123,450, 678, 900&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 212. Reverse Bits of 16-Bit Unsigned Short Integer
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5332,15 +5352,15 @@ This program creates an array of prefix sums for a given array. The prefix sum o
 sequence where each element is the sum of all preceding elements in the original sequence.
 function prefixSums(inputArray) {
 let prefixSum = 0;
-const prefixSumArray = [];
+const prefixSumArray = &lbrack;&rbrack;;
 for (const num of inputArray) {
 prefixSum + = num;
 prefixSumArray.push(prefixSum);
 1
 console.log("Original Array:", inputArray);
 console.log("Prefix Sums Array:", prefixSumArray);
-// Example: Create prefix sums for the array [1, 2, 3, 4, 5]
-prefixSums([l, 2, 3,4, 5]);
+// Example: Create prefix sums for the array &lbrack;1, 2, 3, 4, 5&rbrack;
+prefixSums(&lbrack;l, 2, 3,4, 5&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 216. Next Prime Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6520,7 +6540,7 @@ The isNarcissisticNumber function evaluates whether a given number is a
 narcissistic number.
 <pre>
 const isNarcissisticNumber = (num) => {
-const digits = [...String(num)].map(Number);
+const digits = &lbrack;...String(num)&rbrack;.map(Number);
 const numDigits = digits.length;
 const sumOfPowers = digits.reduce((sum, digit) => sum +
 Math.pow(digit, numDigits), 0);
@@ -6541,8 +6561,8 @@ containing only the non-null and non-undefined elements.
 <pre>
 const removeNullAndUndefined = (arr) => arr.filter(item => item !== null
 && item !== undefined);
-console.log(removeNullAndUndefined([1, null, 2, 3, undefined, 4, null]));
-// Output: [1, 2, 3, 4]
+console.log(removeNullAndUndefined(&lbrack;1, null, 2, 3, undefined, 4, null&rbrack;));
+// Output: &lbrack;1, 2, 3, 4&rbrack;
 </pre>
 
 113. Reverse the Order of Words in a String
@@ -6561,7 +6581,7 @@ accumulating the sum of cubes by raising each value to the power of 3 and
 adding it to the accumulator.
 <pre>
 const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val ** 3, 0);
-console.log(sumOfCubes([1, 2, 3, 4, 5]));
+console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;));
 // Output: 225
 </pre>
 
@@ -6636,15 +6656,15 @@ as the initial common prefix.
 <pre>
 const longestCommonPrefix = (strs) => {
 if (strs.length === 0) return '';
-let prefix = strs[0];
+let prefix = strs&lbrack;0&rbrack;;
 for (let i = 1; i < strs.length; i++) {
-while (!strs[i].startsWith(prefix)) {
+while (!strs&lbrack;i&rbrack;.startsWith(prefix)) {
 prefix = prefix.slice(0, prefix.length - 1);
 }
 }
 return prefix;
 };
-console.log(longestCommonPrefix(['apple', 'apricot', 'appetizer']));
+console.log(longestCommonPrefix(&lbrack;'apple', 'apricot', 'appetizer'&rbrack;));
 // Output: "app"
 </pre>
 
@@ -6667,9 +6687,9 @@ locate the first character with a count of 1.
 const firstNonRepeatedChar = (str) => {
 const charCount = {};
 for (const char of str) {
-charCount[char] = (charCount[char] || 0) + 1;
+charCount&lbrack;char&rbrack; = (charCount&lbrack;char&rbrack; || 0) + 1;
 }
-return str.split('').find((char) => charCount[char] === 1);
+return str.split('').find((char) => charCount&lbrack;char&rbrack; === 1);
 };
 console.log(firstNonRepeatedChar('abacabad'));
 // Output: "c"
@@ -6680,15 +6700,15 @@ The sortByProperty function arranges an array of objects based on a
 specified property's value. It employs the sort method with a custom
 comparison function that compares the property values of two objects.
 <pre>
-const sortByProperty = (arr, prop) => arr.sort((a, b) => a[prop] - b[prop]);
-const people = [
+const sortByProperty = (arr, prop) => arr.sort((a, b) => a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
+const people = &lbrack;
 { name: 'Alice', age: 25 },
 { name: 'Bob', age: 20 },
 { name: 'Charlie', age: 30 }
-];
+&rbrack;;
 console.log(sortByProperty(people, 'age'));
-// Output: [{ name: 'Bob', age: 20 }, { name: 'Alice', age: 25 }, { name:
-'Charlie', age: 30 }]
+// Output: &lbrack;{ name: 'Bob', age: 20 }, { name: 'Alice', age: 25 }, { name:
+'Charlie', age: 30 }&rbrack;
 </pre>
 
 124. Calculate the Exponential of a Number
@@ -6719,7 +6739,7 @@ given number. Factors are the positive integers that evenly divide the input
 number.
 <pre>
 const factors = (num) => {
-const result = [];
+const result = &lbrack;&rbrack;;
 for (let i = 1; i <= num; i++) {
 if (num % i === 0) {
 result.push(i);
@@ -6728,7 +6748,7 @@ result.push(i);
 return result;
 };
 console.log(factors(12));
-// Output: [1, 2, 3, 4, 6, 12]
+// Output: &lbrack;1, 2, 3, 4, 6, 12&rbrack;
 </pre>
 
 127. Check if a Number is a Neon Number
@@ -6738,7 +6758,7 @@ square is equal to the number itself.
 <pre>
 const isNeonNumber = (num) => {
 const squared = num ** 2;
-const digitSum = [...String(squared)].map(Number).reduce((sum, digit) =>
+const digitSum = &lbrack;...String(squared)&rbrack;.map(Number).reduce((sum, digit) =>
 sum + digit, 0);
 return squared === digitSum;
 };
@@ -6754,15 +6774,15 @@ includes all possible subsets of the set, including the empty set and the set
 itself.
 <pre>
 const powerSet = (set) => {
-const result = [[]];
+const result = &lbrack;&lbrack;&rbrack;&rbrack;;
 for (const item of set) {
-const subsets = result.map((subset) => [...subset, item]);
+const subsets = result.map((subset) => &lbrack;...subset, item&rbrack;);
 result.push(...subsets);
 }
 return result;
 };
-console.log(powerSet([1, 2, 3]));
-// Output: [ [], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3] ]
+console.log(powerSet(&lbrack;1, 2, 3&rbrack;));
+// Output: &lbrack; &lbrack;&rbrack;, &lbrack;1&rbrack;, &lbrack;2&rbrack;, &lbrack;3&rbrack;, &lbrack;1, 2&rbrack;, &lbrack;1, 3&rbrack;, &lbrack;2, 3&rbrack;, &lbrack;1, 2, 3&rbrack; &rbrack;
 </pre>
 
 129. Check if a Number is a Disarium Number
@@ -6770,7 +6790,7 @@ The isDisariumNumber function determines whether a given number is a
 disarium number.
 <pre>
 const isDisariumNumber = (num) => {
-const digits = [...String(num)].map(Number);
+const digits = &lbrack;...String(num)&rbrack;.map(Number);
 const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit **
 (index + 1), 0);
 return sumOfPowers === num;
@@ -6788,7 +6808,7 @@ The removeVowels function eliminates all vowels (both uppercase and
 lowercase) from a given string using the replace method along with a
 regular expression.
 <pre>
-const removeVowels = (str) => str.replace(/[aeiouAEIOU]/g, '');
+const removeVowels = (str) => str.replace(/&lbrack;aeiouAEIOU&rbrack;/g, '');
 console.log(removeVowels("Hello, World!"));
 // Output: "Hll, Wrld!"
 </pre>
@@ -6800,7 +6820,7 @@ numbers within a specified range.
 const consecutiveNumbers = (start, end) => Array.from({ length: end - start
 + 1 }, (_, i) => start + i);
 console.log(consecutiveNumbers(1, 5));
-// Output: [1, 2, 3, 4, 5]
+// Output: &lbrack;1, 2, 3, 4, 5&rbrack;
 </pre>
 
 132. Check if a Number is a Pronic Number
@@ -6824,7 +6844,7 @@ The isPangram function checks whether a given string is a pangram, which
 is a sentence that contains every letter of the alphabet at least once.
 <pre>
 const isPangram = (str) => {
-const letters = new Set(str.toLowerCase().match(/[a-z]/g));
+const letters = new Set(str.toLowerCase().match(/&lbrack;a-z&rbrack;/g));
 return letters.size === 26;
 };
 console.log(isPangram("The quick brown fox jumps over the lazy dog"));
@@ -6862,7 +6882,7 @@ const oddNumbers = arr.filter(num => num % 2 !== 0);
 return oddNumbers.reduce((sum, num) => sum + num, 0) /
 oddNumbers.length;
 };
-5console.log(averageOfOddNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // Output:
+5console.log(averageOfOddNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;)); // Output:
 </pre>
 
 137. Count the Letters in a String (case-insensitive)
@@ -6871,10 +6891,10 @@ string, considering both uppercase and lowercase versions as the same
 letter.
 <pre>
 const countLetters = (str) => {
-const letters = str.toLowerCase().match(/[a-z]/g);
+const letters = str.toLowerCase().match(/&lbrack;a-z&rbrack;/g);
 const letterCount = {};
 for (const letter of letters) {
-letterCount[letter] = (letterCount[letter] || 0) + 1;
+letterCount&lbrack;letter&rbrack; = (letterCount&lbrack;letter&rbrack; || 0) + 1;
 }
 return letterCount;
 };
@@ -6947,7 +6967,7 @@ console.log(isPronicSquare(21));
 The sumOfDigits function calculates the sum of the digits of a given
 number.
 <pre>
-const sumOfDigits = (num) => [...String(num)].reduce((sum, digit) => sum
+const sumOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum
 + Number(digit), 0);
 console.log(sumOfDigits(12345));
 // Output: 15
@@ -6960,10 +6980,10 @@ median is the middle value of a dataset when it is ordered.
 const median = (arr) => {
 const sorted = arr.sort((a, b) => a - b);
 const mid = Math.floor(sorted.length / 2);
-return sorted.length % 2 === 0 ? (sorted[mid - 1] + sorted[mid]) / 2 :
-sorted[mid];
+return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
+sorted&lbrack;mid&rbrack;;
 };
-console.log(median([1, 3, 5, 7, 9]));
+console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));
 // Output: 5
 </pre>
 
@@ -6987,7 +7007,7 @@ const isHappyNumber = (num) => {
 const seen = new Set();
 while (num !== 1 && !seen.has(num)) {
 seen.add(num);
-num = [...String(num)].reduce((sum, digit) => sum + digit ** 2, 0);
+num = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum + digit ** 2, 0);
 }
 return num === 1;
 };
@@ -7008,7 +7028,7 @@ if (num % i === 0) return false;
 return true;
 };
 const firstNPrimes = (n) => {
-const primes = [];
+const primes = &lbrack;&rbrack;;
 let num = 2;
 while (primes.length < n) {
 if (isPrime(num)) primes.push(num);
@@ -7017,7 +7037,7 @@ num++;
 return primes;
 };
 console.log(firstNPrimes(5));
-// Output: [2, 3, 5, 7, 11]
+// Output: &lbrack;2, 3, 5, 7, 11&rbrack;
 </pre>
 
 147. Calculate the Volume of a Sphere
@@ -7048,7 +7068,7 @@ The isArmstrongNumber function checks if a number is an Armstrong
 number, also known as a narcissistic number.
 <pre>
 const isArmstrongNumber = (num) => {
-const digits = [...String(num)].map(Number);
+const digits = &lbrack;...String(num)&rbrack;.map(Number);
 const numDigits = digits.length;
 const sumOfPowers = digits.reduce((sum, digit) => sum + digit **
 numDigits, 0);
@@ -7082,7 +7102,7 @@ the number itself.
 <pre>
 const factorial = (num) => (num === 0 ? 1 : num * factorial(num - 1));
 const isStrongNumber = (num) => {
-const sumOfFactorials = [...String(num)].reduce((sum, digit) => sum +
+const sumOfFactorials = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum +
 factorial(Number(digit)), 0);
 return sumOfFactorials === num;
 };
@@ -7097,8 +7117,8 @@ The reverseArray function reverses the order of elements in an array using
 the reverse method.
 <pre>
 const reverseArray = (arr) => arr.reverse();
-console.log(reverseArray([1, 2, 3, 4, 5]));
-// Output: [5, 4, 3, 2, 1]
+console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));
+// Output: &lbrack;5, 4, 3, 2, 1&rbrack;
 </pre>
 
 153. Find the Area of a Rectangle
@@ -7118,7 +7138,7 @@ then uses the reduce method to compute their sum.
 <pre>
 const sumOfEvenNumbers = (arr) => arr.filter(num => num % 2 ===
 0).reduce((sum, num) => sum + num, 0);
-console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(sumOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;));
 // Output: 30
 </pre>
 
@@ -7152,7 +7172,7 @@ console.log(cylinderVolume(5, 10));
 The isSmithNumber function checks whether a given number is a Smith
 number.
 <pre>
-const sumOfDigits = (num) => [...String(num)].reduce((sum, digit) => sum
+const sumOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum
 + Number(digit), 0);
 const sumOfPrimeFactors = (num) => {
 let factor = 2;
@@ -7243,14 +7263,14 @@ than the given number, checking if the given number is divisible by each of
 those numbers.
 <pre>
 const factors = (num) => {
-const result = [];
+const result = &lbrack;&rbrack;;
 for (let i = 2; i < num; i++) {
 if (num % i === 0) result.push(i);
 }
 return result;
 };
 console.log(factors(12));
-// Output: [2, 3, 4, 6]
+// Output: &lbrack;2, 3, 4, 6&rbrack;
 </pre>
 
 164. Calculate the Area of a Triangle given the Base and Height
@@ -7282,7 +7302,7 @@ method with a mapping function to create the desired array.
 const randomArrayInRange = (min, max, length) => Array.from({ length },
 () => Math.floor(Math.random() * (max - min + 1)) + min);
 console.log(randomArrayInRange(1, 100, 5));
-// Output: [34, 87, 19, 56, 72]
+// Output: &lbrack;34, 87, 19, 56, 72&rbrack;
 </pre>
 
 167. Check if a Number is a Magic Number
@@ -7308,8 +7328,8 @@ console.log(isMagicNumber(123));
 The isValidIPv4 function checks whether a given string represents a valid
 IPv4 address.
 <pre>
-const isValidIPv4 = (ip) => /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.)
-{3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(ip);
+const isValidIPv4 = (ip) => /^(?:(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)\.)
+{3}(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)$/.test(ip);
 console.log(isValidIPv4("192.168.1.1"));
 // Output: true
 console.log(isValidIPv4("256.0.0.1"));
@@ -7345,7 +7365,7 @@ applying the formula (lcm * num) / gcd(lcm, num).
 <pre>
 const lcmArray = (arr) => arr.reduce((lcm, num) => (lcm * num) / gcd(lcm,
 num));
-console.log(lcmArray([2, 3, 4, 5]));
+console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;));
 // Output: 60
 </pre>
 
@@ -7354,11 +7374,11 @@ console.log(lcmArray([2, 3, 4, 5]));
 character)
 The isValidPassword function uses a regular expression to validate a
 password. The regular expression requires that the password contains at
-least one letter ([A-Za-z]), one digit (\d), and one special character
-([@$!%*?&]).
+least one letter (&lbrack;A-Za-z&rbrack;), one digit (\d), and one special character
+(&lbrack;@$!%*?&&rbrack;).
 <pre>
-const isValidPassword = (password) => /^(?=.*[A-Za-z])(?=.*\d)(?=.*
-[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+const isValidPassword = (password) => /^(?=.*&lbrack;A-Za-z&rbrack;)(?=.*\d)(?=.*
+&lbrack;@$!%*?&&rbrack;)&lbrack;A-Za-z\d@$!%*?&&rbrack;{8,}$/.test(password);
 console.log(isValidPassword("P@ssw0rd"));
 // Output: true
 console.log(isValidPassword("password123"));
@@ -7432,8 +7452,8 @@ console.log(cubeVolume(5));
 The isValidCreditCard function uses a regular expression to validate a
 credit card number.
 <pre>
-const isValidCreditCard = (card) => /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-
-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13})$/.test(card);
+const isValidCreditCard = (card) => /^(?:4&lbrack;0-9&rbrack;{12}(?:&lbrack;0-9&rbrack;{3})?|5&lbrack;1-5&rbrack;&lbrack;0-
+9&rbrack;{14}|6(?:011|5&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;)&lbrack;0-9&rbrack;{12}|3&lbrack;47&rbrack;&lbrack;0-9&rbrack;{13})$/.test(card);
 console.log(isValidCreditCard("4012-3456-7890-1234"));
 // Output: true
 console.log(isValidCreditCard("1234-5678-9012-3456"));
@@ -7457,14 +7477,14 @@ number.
 const isVampireNumber = (num) => {
 const numStr = String(num);
 const numLen = numStr.length;
-const numDigits = [...numStr];
+const numDigits = &lbrack;...numStr&rbrack;;
 const numFactors = getFactors(num);
 for (const factor1 of numFactors) {
 const factor2 = num / factor1;
 if (factor1 % 10 === 0 && factor2 % 10 === 0) continue;
 const factorStr = String(factor1) + String(factor2);
 if (factorStr.length === numLen && areAnagrams(numDigits,
-[...factorStr])) {
+&lbrack;...factorStr&rbrack;)) {
 return true;
 }
 }
@@ -7479,7 +7499,7 @@ sumOfDigitsRaisedToPower calculates the sum of digits raised to the power
 of their respective positions.
 <pre>
 const sumOfDigitsRaisedToPower = (num) => {
-const digits = [...String(num)].map(Number);
+const digits = &lbrack;...String(num)&rbrack;.map(Number);
 return digits.reduce((sum, digit, index) => sum + digit ** (index + 1), 0);
 };
 console.log(sumOfDigitsRaisedToPower(12345));
@@ -7492,7 +7512,7 @@ number. A duck number is a number that contains the digit "0" but does not
 start with "0".
 <pre>
 const isDuckNumber = (num) => String(num).includes('0') &&
-String(num)[0] !== '0';
+String(num)&lbrack;0&rbrack; !== '0';
 console.log(isDuckNumber(1023));
 // Output: true
 console.log(isDuckNumber(12345));
@@ -7554,7 +7574,7 @@ The isValidUSPhoneNumber function uses a regular expression to validate
 US phone numbers.
 <pre>
 const isValidUSPhoneNumber = (phone) => /^(?:(?:\+1\s?)?(?:\(?\d{3}\)?
-[\s.-]?)?\d{3}[\s.-]?\d{4})$/.test(phone);
+&lbrack;\s.-&rbrack;?)?\d{3}&lbrack;\s.-&rbrack;?\d{4})$/.test(phone);
 console.log(isValidUSPhoneNumber("+1 (123) 456-7890"));
 // Output: true
 console.log(isValidUSPhoneNumber("123-456-7890"));
@@ -7662,9 +7682,9 @@ console.log(regularPolygonArea(5, 6));
 Remove duplicates from an array while preserving the order of the
 elements.
 <pre>
-const removeDuplicates = (arr) => [...new Set(arr)];
-console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6])); // Output: [ 1, 2, 3,
-4, 5, 6 ]
+const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
+console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Output: &lbrack; 1, 2, 3,
+4, 5, 6 &rbrack;
 </pre>
 
 197. Calculate the Area of an Ellipse
@@ -7702,7 +7722,7 @@ console.log(isLeylandNumber(100));
 Generate a random Universally Unique Identifier (UUID).
 <pre>
 const randomUUID = () => {
-return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,
+return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/&lbrack;xy&rbrack;/g,
 function(c) {
 const r = Math.random() * 16 | 0;
 const v = c === "x" ? r : (r & 0x3 | 0x8);
@@ -7716,7 +7736,7 @@ console.log(randomUUID());
 200. Check if a String is a Valid IPv6 Address
 Check if a given string represents a valid IPv6 address.
 <pre>
-const isValidIPv6 = (ip) => /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]
+const isValidIPv6 = (ip) => /^(&lbrack;0-9a-fA-F&rbrack;{1,4}:){7}&lbrack;0-9a-fA-F&rbrack;
 {1,4}$/.test(ip);
 console.log(isValidIPv6("2001:0db8:85a3:0000:0000:8a2e:0370:7334"));
 // Output: true
@@ -7738,8 +7758,8 @@ console.log(parallelogramArea(5, 10));
 Address
 Check if a given string is a valid MAC address.
 <pre>
-const isValidMACAddress = (mac) => /^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-
-f]{2})$/.test(mac);
+const isValidMACAddress = (mac) => /^(&lbrack;0-9A-Fa-f&rbrack;{2}&lbrack;:-&rbrack;){5}(&lbrack;0-9A-Fa-
+f&rbrack;{2})$/.test(mac);
 console.log(isValidMACAddress("00:1A:2B:3C:4D:5E"));
 // Output: true
 console.log(isValidMACAddress("00:1A:2B:3C:4D"));
@@ -7751,8 +7771,8 @@ Convert an RGB color value to its corresponding HSL representation (Hue,
 Saturation, Lightness).
 <pre>
 const rgbToHSL = (r, g, b) => {
-[r, g, b] = [r, g, b].map(val => val / 255);
-const [max, min] = [Math.max(r, g, b), Math.min(r, g, b)];
+&lbrack;r, g, b&rbrack; = &lbrack;r, g, b&rbrack;.map(val => val / 255);
+const &lbrack;max, min&rbrack; = &lbrack;Math.max(r, g, b), Math.min(r, g, b)&rbrack;;
 let h = (max !== min) ? ((max === r ? g - b : (max === g ? b - r : r - g)) /
 (max - min) + (max === g ? 2 : (max === b ? 4 : 0))) / 6 : 0;
 let s = (max !== min) ? (l => l > 0.5 ? (max - min) / (2 - max - min) : (max
@@ -7809,7 +7829,7 @@ Find the least common multiple (LCM) of an array of numbers.
 <pre>
 const lcmArray = (arr) => arr.reduce((lcm, num) => lcm * num /
 gcdArray(arr), 1);
-console.log(lcmArray([2, 3, 4]));
+console.log(lcmArray(&lbrack;2, 3, 4&rbrack;));
 // Output: 12
 </pre>
 
@@ -7836,7 +7856,7 @@ console.log(isPowerfulNumber(36));
 
 209. Find the Product of Digits of a Number
 Find the product of the digits of a given number.
-const productOfDigits = (num) => [...String(num)].reduce((product, digit)
+const productOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((product, digit)
 => product * Number(digit), 1);
 console.log(productOfDigits(12345));
 // Output: 120
@@ -8168,7 +8188,7 @@ console.log(ellipsoidVolume(5, 3, 2));
 238. Check if a String is a Valid URL (Alternative Approach)
 Check if a given string is a valid URL using an alternative approach.
 <pre>
-const isValidURLAlt = (url) => /^(ftp|http|https):\/\/[^ "]+$/.test(url);
+const isValidURLAlt = (url) => /^(ftp|http|https):\/\/&lbrack;^ "&rbrack;+$/.test(url);
 console.log(isValidURLAlt("https://www.example.com"));
 // Output: true
 console.log(isValidURLAlt("invalid url"));
@@ -8179,7 +8199,7 @@ console.log(isValidURLAlt("invalid url"));
 Identification Number (TIN)
 Check if a given string is a valid Tax Identification Number (TIN).
 <pre>
-const isValidTIN = (tin) => /^[A-Z]{2}\d{6}[A-Z\d]{2}$/.test(tin);
+const isValidTIN = (tin) => /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
 console.log(isValidTIN("AB123456CD"));
 // Output: true
 console.log(isValidTIN("invalid tin"));
@@ -8190,8 +8210,8 @@ console.log(isValidTIN("invalid tin"));
 Check if a given string is a valid International Standard Book Number
 (ISBN).
 <pre>
-const isValidISBN = (isbn) => /^(?:\d{9}[\dX]|(?:\d{3}-){2}\d{1}
-[\dX])$/.test(isbn);
+const isValidISBN = (isbn) => /^(?:\d{9}&lbrack;\dX&rbrack;|(?:\d{3}-){2}\d{1}
+&lbrack;\dX&rbrack;)$/.test(isbn);
 console.log(isValidISBN("123456789"));
 // Output: true
 console.log(isValidISBN("invalid isbn"));
@@ -8201,8 +8221,8 @@ console.log(isValidISBN("invalid isbn"));
 241. Check if a String is a Valid IP Address
 Check if a given string is a valid IP address.
 <pre>
-const isValidIPAddress = (ip) => /^((25[0-5]|2[0-4]\d|[0-1]?\d{1,2})\.){3}
-(25[0-5]|2[0-4]\d|[0-1]?\d{1,2})$/.test(ip);
+const isValidIPAddress = (ip) => /^((25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})\.){3}
+(25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})$/.test(ip);
 console.log(isValidIPAddress("192.168.1.1"));
 // Output: true
 console.log(isValidIPAddress("invalid ip"));
@@ -8221,9 +8241,9 @@ console.log(reverseStringRecursive('hello')); // Output: 'olleh'
 Count the occurrences of each element in a given array and return the
 counts in an object.
 <pre>
-const countOccurrences = arr => arr.reduce((acc, curr) => (acc[curr] =
-(acc[curr] || 0) + 1, acc), {});
-console.log(countOccurrences([1, 2, 1, 3, 2, 4, 1])); // Output: { '1': 3, '2': 2,
+const countOccurrences = arr => arr.reduce((acc, curr) => (acc&lbrack;curr&rbrack; =
+(acc&lbrack;curr&rbrack; || 0) + 1, acc), {});
+console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;)); // Output: { '1': 3, '2': 2,
 '3': 1, '4': 1 }
 </pre>
 
@@ -8232,23 +8252,23 @@ Check if two arrays are equal through a shallow comparison of their
 elements.
 <pre>
 const arraysAreEqual = (arr1, arr2) => arr1.length === arr2.length &&
-arr1.every((val, index) => val === arr2[index]);
-console.log(arraysAreEqual([1, 2, 3], [1, 2, 3])); // Output: true
-console.log(arraysAreEqual([1, 2, 3], [1, 2, 4])); // Output: false
+arr1.every((val, index) => val === arr2&lbrack;index&rbrack;);
+console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 3&rbrack;)); // Output: true
+console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;)); // Output: false
 </pre>
 
 245. Find the Minimum Value in an Array
 Find the minimum value in a given array of numbers.
 <pre>
 const findMinValue = arr => Math.min(...arr);
-console.log(findMinValue([2, 7, 1, 9, 4])); // Output: 1
+console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;)); // Output: 1
 </pre>
 
 246. Flatten an Array of Nested Arrays (Using concat)
 Flatten an array of nested arrays using the concat method.
 <pre>
-const flattenArray = arr => [].concat(...arr);
-console.log(flattenArray([[1, 2], [3, 4], [5, 6]])); // Output: [1, 2, 3, 4, 5, 6]
+const flattenArray = arr => &lbrack;&rbrack;.concat(...arr);
+console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lbrack;5, 6&rbrack;&rbrack;)); // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 
 247. Find the Average of Numbers in an Array
@@ -8256,14 +8276,14 @@ Calculate the average of numbers in a given array.
 <pre>
 const findAverage = arr => arr.reduce((sum, num) => sum + num, 0) /
 arr.length;
-console.log(findAverage([1, 2, 3, 4, 5])); // Output: 3
+console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 </pre>
 
 248. Sum the Squares of Numbers in an Array
 Calculate the sum of the squares of numbers in a given array.
 <pre>
 const sumSquares = arr => arr.reduce((sum, num) => sum + num ** 2, 0);
-console.log(sumSquares([1, 2, 3, 4, 5])); // Output: 55
+console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 </pre>
 
 249. Check if a String is a Palindrome
@@ -8272,7 +8292,7 @@ Check if a given string is a palindrome, ignoring non-alphanumeric
 characters and considering case-insensitivity.
 <pre>
 const isPalindromeIgnoringNonAlphaNumeric = str => {
-const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+const cleanedStr = str.replace(/&lbrack;^a-zA-Z0-9&rbrack;/g, '').toLowerCase();
 return cleanedStr === cleanedStr.split('').reverse().join('');
 };
 console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a
@@ -8286,24 +8306,24 @@ Shuffle the elements of an array using the Fisher-Yates shuffle algorithm.
 const shuffleArrayFisherYates = arr => {
 for (let i = arr.length - 1; i > 0; i--) {
 const j = Math.floor(Math.random() * (i + 1));
-[arr[i], arr[j]] = [arr[j], arr[i]];
+&lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; = &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
 }
 return arr;
 };
-console.log(shuffleArrayFisherYates([1, 2, 3, 4, 5])); // Output: [3, 1, 4, 2,
-5] (randomly shuffled)
+console.log(shuffleArrayFisherYates(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: &lbrack;3, 1, 4, 2,
+5&rbrack; (randomly shuffled)
 </pre>
 
 251. Sort an Array of Objects by a Specific
 Property
 Sort an array of objects based on a specific property value.
 <pre>
-const sortByProperty = (arr, prop) => arr.sort((a, b) => a[prop] - b[prop]);
-const data = [{ name: 'Alice', age: 25 }, { name: 'Bob', age: 20 }, { name:
-'Carol', age: 30 }];
+const sortByProperty = (arr, prop) => arr.sort((a, b) => a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
+const data = &lbrack;{ name: 'Alice', age: 25 }, { name: 'Bob', age: 20 }, { name:
+'Carol', age: 30 }&rbrack;;
 console.log(sortByProperty(data, 'age'));
-// Output: [{ name: 'Bob', age: 20 }, { name: 'Alice', age: 25 }, { name:
-'Carol', age: 30 }]
+// Output: &lbrack;{ name: 'Bob', age: 20 }, { name: 'Alice', age: 25 }, { name:
+'Carol', age: 30 }&rbrack;
 </pre>
 
 252. Reverse Words in a Sentence
@@ -8320,16 +8340,16 @@ Find the median value of numbers in a given array.
 const findMedian = arr => {
 const sortedArr = arr.sort((a, b) => a - b);
 const middle = Math.floor(sortedArr.length / 2);
-return sortedArr.length % 2 === 0 ? (sortedArr[middle - 1] +
-sortedArr[middle]) / 2 : sortedArr[middle];
+return sortedArr.length % 2 === 0 ? (sortedArr&lbrack;middle - 1&rbrack; +
+sortedArr&lbrack;middle&rbrack;) / 2 : sortedArr&lbrack;middle&rbrack;;
 };
-console.log(findMedian([1, 3, 2, 4, 5])); // Output: 3
+console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;)); // Output: 3
 </pre>
 
 254. Count the Vowels in a String
 Count the number of vowels in a given string.
 <pre>
-const countVowels = str => (str.match(/[aeiou]/gi) || []).length;
+const countVowels = str => (str.match(/&lbrack;aeiou&rbrack;/gi) || &lbrack;&rbrack;).length;
 console.log(countVowels('Hello, how are you?')); // Output: 7
 </pre>
 
@@ -8337,19 +8357,19 @@ console.log(countVowels('Hello, how are you?')); // Output: 7
 Check if a given number is a Tribonacci number using an alternative
 approach.
 <pre>
-const isTribonacciNumberAlt = num => [0, 0,
-1].concat([...Array(num)]).slice(3).map((_, i, arr) => arr[i - 3] + arr[i - 2] +
-arr[i - 1]).includes(num);
+const isTribonacciNumberAlt = num => &lbrack;0, 0,
+1&rbrack;.concat(&lbrack;...Array(num)&rbrack;).slice(3).map((_, i, arr) => arr&lbrack;i - 3&rbrack; + arr&lbrack;i - 2&rbrack; +
+arr&lbrack;i - 1&rbrack;).includes(num);
 console.log(isTribonacciNumberAlt(21)); // Output: true
 </pre>
 
 256. Calculate the Fibonacci Sequence (Up to N Terms)
 Generate the Fibonacci sequence up to a given number of terms n.
 <pre>
-const fibonacciSequence = n => [...Array(n)].reduce((fibSeq, _, i) =>
-fibSeq.concat(i > 1 ? fibSeq[i - 1] + fibSeq[i - 2] : i), [0, 1]);
+const fibonacciSequence = n => &lbrack;...Array(n)&rbrack;.reduce((fibSeq, _, i) =>
+fibSeq.concat(i > 1 ? fibSeq&lbrack;i - 1&rbrack; + fibSeq&lbrack;i - 2&rbrack; : i), &lbrack;0, 1&rbrack;);
 console.log(fibonacciSequence(10));
-// Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+// Output: &lbrack;0, 1, 1, 2, 3, 5, 8, 13, 21, 34&rbrack;
 </pre>
 
 257. Find the ASCII Value of a Character
@@ -8372,8 +8392,8 @@ console.log(isIsogram('world')); // Output: true
 Calculate the Hamming distance between two equal-length strings, which is
 the count of differing characters at corresponding positions.
 <pre>
-const hammingDistance = (str1, str2) => [...str1].reduce((distance, char, i)
-=> distance + (char !== str2[i]), 0);
+const hammingDistance = (str1, str2) => &lbrack;...str1&rbrack;.reduce((distance, char, i)
+=> distance + (char !== str2&lbrack;i&rbrack;), 0);
 console.log(hammingDistance('karolin', 'kathrin')); // Output: 3
 </pre>
 
@@ -8381,9 +8401,9 @@ console.log(hammingDistance('karolin', 'kathrin')); // Output: 3
 Calculate the Euclidean distance between two points in a 2D plane using
 the Pythagorean theorem.
 <pre>
-const calculateDistance = ([x1, y1], [x2, y2]) => Math.sqrt((x2 - x1) ** 2 +
+const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) => Math.sqrt((x2 - x1) ** 2 +
 (y2 - y1) ** 2);
-console.log(calculateDistance([0, 0], [3, 4]));
+console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));
 // Output: 5 (Pythagorean triple: 3^2 + 4^2 = 5^2)
 </pre>
 
@@ -8391,7 +8411,7 @@ console.log(calculateDistance([0, 0], [3, 4]));
 Check if a given string represents a positive integer without any sign or
 decimal point.
 <pre>
-const isPositiveNumber = str => /^[0-9]+$/.test(str);
+const isPositiveNumber = str => /^&lbrack;0-9&rbrack;+$/.test(str);
 console.log(isPositiveNumber('123'));
 // Output: true
 console.log(isPositiveNumber('-123'));
@@ -8401,7 +8421,7 @@ console.log(isPositiveNumber('-123'));
 262. Find the First Non-Repeating Character in a String
 Find and return the first non-repeating character in a given string.
 <pre>
-const findFirstNonRepeating = str => [...str].find(char => str.indexOf(char)
+const findFirstNonRepeating = str => &lbrack;...str&rbrack;.find(char => str.indexOf(char)
 === str.lastIndexOf(char));
 console.log(findFirstNonRepeating('hello'));
 // Output: 'h'
