@@ -3477,11 +3477,11 @@ mazeGenerator.generateMaze();
 mazeGenerator.printMazeO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-138. Check if a Year is a Magic Year
+<h2 id="js138">138. Check if a Year is a Magic Year</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A magic year is a year in which the product of the month and day (in two-digit form) equals the last two
-digits of the year. For example, in the year 1978, the product of the month (7) and the day (8) is 56, which
-matches the last two digits of the year.
+<p>A magic year is a year in which the product of the month and day (in two-digit form) 
+equals the last two digits of the year. For example, in the year 1978, the product of 
+the month (7) and the day (8) is 56, which matches the last two digits of the year.</p>
 <pre>
 function isMagicYear(year) {
 const yearStr = year.toStringO;
@@ -3496,7 +3496,7 @@ console.log(' ${yearToCheck} is a Magic Year! ');
 console.log('${yearToCheck}isnotaMagicYear. ');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-139. Basic Crossword Puzzle
+<h2 id="js139">139. Basic Crossword Puzzle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic crossword puzzle involves defining a grid and placing words into it, ensuring that they
 intersect correctly. Below is a simple JavaScript program that generates a crossword puzzle with a few words.
@@ -3535,7 +3535,7 @@ crossword.addWord('grape', 0, 3, 'across');
 crossword.printPuzzleQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-140. Find the Area of a Regular Polygon
+<h2 id="js140">140. Find the Area of a Regular Polygon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular polygon given the number of sides ( n ) and the side length ( s ).
 The formula for the area of a regular polygon is Area = (n * s*2) / (4 * tan(it/n)), where n is the number of
@@ -3553,7 +3553,7 @@ const polygonArea = calculateRegularPolygonArea(numberOfSides, sideLength);
 console.log(' The area of the regular polygon is: ${polygonArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-141. Check if a Number is an Abundant Number
+<h2 id="js141">141. Check if a Number is an Abundant Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 An abundant number (or excessive number) is a positive integer that is smaller than the sum of its proper
 divisors, excluding itself. The sum of proper divisors is greater than the number itself.
@@ -3578,7 +3578,7 @@ console.logC ${numberToCheck} is an Abundant Number!
 console.logC ${numberToCheck} is not an Abundant Number. ');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-142. Basic Word Guessing Game
+<h2 id="js142">142. Basic Word Guessing Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic word guessing game in a console environment involves generating a random word, allowing
 the player to make guesses, and providing feedback on correct and incorrect guesses.
@@ -3630,7 +3630,7 @@ game.makeGuess('u');
 game.makeGuess('s');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-143. Calculate the Euler's Totient Function
+<h2 id="js143">143. Calculate the Euler's Totient Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates Euler's Totient Function, also known as Euler's Phi Function, 
 which counts the positive integers up to a given integer n that are relatively prime to n. 
@@ -3659,7 +3659,7 @@ const result = eulerTotientFunction(n);
 console.log(' Euler's Totient Function for ${n} is: $ {result}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-144. Basic Memory Matching Game
+<h2 id="js144">144. Basic Memory Matching Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic memory matching game involves displaying a grid of face-down cards, 
 allowing the player to flip two cards at a time, and checking for matches.</p>
@@ -3732,7 +3732,7 @@ game.flipCard(0,1);
 game.flipCard(l, 0);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-145. Check if a Number is a Vampire Number
+<h2 id="js145">145. Check if a Number is a Vampire Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A vampire number is a composite (non-prime) natural number with an even number of 
 digits, which can be factored into two integers, both having half as many digits as the 
@@ -3780,7 +3780,7 @@ console.logC ${vampireNumber} is not a Vampire Number.
 ');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-146. Basic Simon Says Game
+<h2 id="js146">146. Basic Simon Says Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic Simon Says game involves generating and displaying a sequence of 
 colors, then challenging the player to repeat the sequence.</p>
@@ -3839,7 +3839,7 @@ console.log('Welcome to Simon Says! Repeat the sequence correctly to advance.');
 simonSaysGame.playO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-147. Calculate the Area of a Hexagon
+<h2 id="js147">147. Calculate the Area of a Hexagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular hexagon given the side length ( s ). The formula for the area of
 a regular hexagon is Area = (3 * V3 * s*2) / 2 , where s is the side length.
@@ -3853,7 +3853,7 @@ const hexagonArea = calculateHexagonArea(sideLength);
 console.log(' The area of the hexagon is: ${hexagonArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-148. Check if a Number is a Pronic Number
+<h2 id="js148">148. Check if a Number is a Pronic Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a pronic number, also known as a 
 rectangular number or oblong number. A pronic number is a product of two consecutive 
@@ -3874,7 +3874,7 @@ console.log(' $ {pronicNumber} is not a Pronic Number.');
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-149. Basic Minesweeper Game
+<h2 id="js149">149. Basic Minesweeper Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic Minesweeper game involves generating a grid with mines and numbers, allowing the player
 to uncover cells, and providing feedback on the presence of mines.
@@ -3947,7 +3947,7 @@ if (uncoveredCount = = = this.rows * this.cols - this.numMines) {
 console.log('Congratulations! You win!');
 this.gameOver = true;
 }
-1
+}
 }
 // Example usage
 const minesweeperGame = new MinesweeperGame(5, 5, 3);
@@ -3960,7 +3960,7 @@ minesweeperGame.uncoverCell(3, 3);
 minesweeperGame.uncoverCell(4,4);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-150. Find the Area of a Pentagon
+<h2 id="js150">150. Find the Area of a Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular pentagon given the side length ( s ). The formula for the area of
 a regular pentagon is Area = (1/4) * V(5 * (5 + 2 * V5)) * s* 2 , where s is the side length.
@@ -3974,7 +3974,7 @@ const pentagonArea = calculatePentagonArea(sideLength);
 console.log(' The area of the pentagon is: ${pentagonArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-151. Check if a Number is a Cube Number
+<h2 id="js151">151. Check if a Number is a Cube Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given non-negative integer is a cube number. A cube number is a number that can
 be expressed as the cube of an integer. The nth cube number is given by the formula: nA 3 .
@@ -3990,7 +3990,7 @@ console.log('$ {numberToCheck} is a Cube Number! ');
 console.log( '$ {numberToCheck} is not a Cube Number. ');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-152. Basic Typing Speed Test
+<h2 id="js152">152. Basic Typing Speed Test</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic typing speed test involves generating a random string, measuring the time it takes for the
 user to type the string, and calculating the typing speed.
@@ -4038,7 +4038,7 @@ const userinput = 'javascript developer';
 typingTest.getUserlnput(userlnput);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-153. Find the Area of a Cube
+<h2 id="js153">153. Find the Area of a Cube</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a cube given the length of its side ( s ). The formula for the
 surface area of a cube is Surface Area = 6 * s* 2 , where s is the length of a side.
@@ -4052,7 +4052,7 @@ const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
 console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-154. Find the Area of a Cone
+<h2 id="js154">154. Find the Area of a Cone</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a cone given the radius of its base ( r ) and the slant height (1).
 The formula for the surface area of a cone is Surface Area = 7t * r * (r +1), where n is the mathematical constant
@@ -4066,7 +4066,7 @@ const sideLength = 4; // Replace with the length of a side of your cube
 const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
 console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-155. Check if a Number is a Happy Number
+<h2 id="js155">155. Check if a Number is a Happy Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A happy number is a positive integer that, when repeatedly replaced by the sum of the 
 squares of its digits, eventually reaches the number 1. If a number becomes 1, it is a 
@@ -4092,7 +4092,7 @@ if (isHappyNumber(happyNumber)) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-156. Calculate the Area of a Triangular Prism
+<h2 id="js156">156. Calculate the Area of a Triangular Prism</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a triangular prism given the lengths of its base sides ( a , b , and
 c ) and the height of the prism ( h ). The formula for the surface area of a triangular prism is Surface Area =
@@ -4113,7 +4113,7 @@ const triangularPrismSurfaceArea = calculateTriangularPrismSurfaceArea(sideA, si
 console.log(' The surface area of the triangular prism is: ${triangularPrismSurfaceArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-157. Check if a Number is a Fibonacci Prime
+<h2 id="js157">157. Check if a Number is a Fibonacci Prime</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is both a Fibonacci number and a prime number. A Fibonacci
 prime is a number that is both a Fibonacci number and a prime number.
@@ -4142,7 +4142,7 @@ console.log(' ${fibonacciPrimeCandidate} is a Fibonacci Prime!');
 console.log(' ${fibonacciPrimeCandidate} is not a Fibonacci Prime.');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-158. Check if a Number is a Squareful Number
+<h2 id="js158">158. Check if a Number is a Squareful Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a squareful number. A squareful number is a positive
 integer where the square of each prime factor occurs in its prime factorization.
@@ -4173,7 +4173,7 @@ console.log(' ${squarefulNumber} is a Squareful Number!');
 console.log(' ${squarefulNumber} is not a Squareful Number.');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-159. Find the Area of a Tetrahedron
+<h2 id="js159">159. Find the Area of a Tetrahedron</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a regular tetrahedron given the length of its edges ( a ). The
 formula for the surface area of a regular tetrahedron is Surface Area = V3 * aA 2 , where a is the length of an
@@ -4189,7 +4189,7 @@ const tetrahedronSurfaceArea = calculateTetrahedronSurfaceArea(edgeLength);
 console.log(' The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-160. Check if a Number is an Automorphic Number
+<h2 id="js160">160. Check if a Number is an Automorphic Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is an automorphic number. An automorphic number is a
 number whose square ends with the number itself. For example, 5 is an automorphic number because 5 A2 =
@@ -4208,7 +4208,7 @@ console.log(' ${automorphicNumber} is an Automorphic Number!');
 console.log(' ${automorphicNumber} is not an Automorphic Number.');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-161. Calculate the Area of a Pyramid
+<h2 id="js161">161. Calculate the Area of a Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a square pyramid given the length of the base side ( s ) and the
 slant height (1). The formula for the surface area of a square pyramid is Surface Area = s*2 + 2 * s * 1, where
@@ -4226,7 +4226,7 @@ const pyramidSurfaceArea = calculatePyramidSurfaceArea(sideLength, slantHeight);
 console.log(' The surface area of the pyramid is: ${pyramidSurfaceArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-162. Check if a Number is a Smith-Morra Gambit Number
+<h2 id="js162">162. Check if a Number is a Smith-Morra Gambit Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a Smith-Morra Gambit number. A Smith-Morra Gambit
 number is a positive integer that can be expressed as the sum of the digits of its prime factors, including
@@ -4254,7 +4254,7 @@ return sumOfDigits = = = digitSum(number);
 console Jog(isSmithMorraGambitNumber(22)); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-163. Check if a Number is a Solitary Number
+<h2 id="js163">163. Check if a Number is a Solitary Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a number is a solitary number:
 <pre>
@@ -4278,7 +4278,7 @@ console.log(' ${solitaryNumber} is a Solitary Number!');
 console.log(' ${solitaryNumber} is not a Solitary Number.');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-164. Basic Tower of Hanoi Puzzle
+<h2 id="js164">164. Basic Tower of Hanoi Puzzle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The Tower of Hanoi is a classic problem in computer science and mathematics. It consists of three pegs and
 a number of disks of different sizes, which can slide onto any peg. The puzzle starts with the disks in a neat
@@ -4307,7 +4307,7 @@ console.log(' Tower of Hanoi solution for ${numberOfDisks} disks:');
 towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-165. Calculate the Area of a Frustum
+<h2 id="js165">165. Calculate the Area of a Frustum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a frustum of a cone given the radii of its top and bottom bases ( r 1
 and r 2 ) and the slant height (1). The formula for the surface area of a frustum of a cone is Surface Area = n
@@ -4320,7 +4320,7 @@ function surfaceAreaOfFrustum(rl, r2,1) {
 surfaceAreaOfFrustum(4, 8, 6);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-166. Check if a Number is a Motzkin Number
+<h2 id="js166">166. Check if a Number is a Motzkin Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a Motzkin number. A Motzkin number is a number in
 the sequence of Motzkin numbers, which counts the number of different ways of drawing non-intersecting
@@ -4347,7 +4347,7 @@ console.log(' ${motzkinNumber} is not a Motzkin Number.');
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-167. Check if a Number is a Padovan Number
+<h2 id="js167">167. Check if a Number is a Padovan Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a Padovan number. A Padovan number is a number in the
 Padovan sequence, which is similar to the Fibonacci sequence but uses a recurrence relation of P(n) = P(n-2)
@@ -4373,7 +4373,7 @@ console.log(' ${padovanNumber} is a Padovan Number!');
 console.log(' ${padovanNumber} is not a Padovan Number.');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-168. Calculate the Area of a Koch Snowflake
+<h2 id="js168">168. Calculate the Area of a Koch Snowflake</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The Koch snowflake is a mathematical curve and one of the earliest fractal curves to have been described.
 It can be constructed by starting with an equilateral triangle and repeatedly adding smaller equilateral
@@ -4390,7 +4390,7 @@ const kochSnowflakeArea = calculateKochSnowflakeArea(sideLength, iterations);
 console.log(' The area of the Koch snowflake is: ${kochSnowflakeArea.toFixed(2)}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-169. Basic Chatbot
+<h2 id="js169">169. Basic Chatbot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program is a simple and interactive script that allows users to engage in a text-based conversation with
 a virtual assistant.
@@ -4418,7 +4418,7 @@ console.logfChatbot: Hello! How can I help you today?1);
 startChatQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-170. RGB to HEX Converter
+<h2 id="js170">170. RGB to HEX Converter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program allows you to convert RBG values to hexadecimal.
 <pre>
@@ -4439,7 +4439,7 @@ const hexResult = convertToHex(redValue, greenValue, blue Value);
 console.log(' HEX: $ {hexResult}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-171. Counter
+<h2 id="js171">171. Counter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program allows you to increment, decrement and reset a counter.
 <pre>
@@ -4462,7 +4462,7 @@ decrementCounterO;
 resetCounterQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-172. Stop The Bomb
+<h2 id="js172">172. Stop The Bomb</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program to allow you stop an active bomb.
 <pre>
@@ -4497,7 +4497,7 @@ startBombO;
 // defuseBomb();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-173. IP Address Generator
+<h2 id="js173">173. IP Address Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Generating IP addresses programmatically can be done using a programming language like JavaScript.
 Below is a simple example of an IP address generator in JavaScript. Note that this example generates random
@@ -4518,9 +4518,9 @@ const randomlps = generateMultipleRandomlps(numberOflps);
 console.log('Random IP Addresses:’, randomlps);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-174. Digital clock
+<h2 id="js174">174. Digital clock</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Deploy a digital clock with this awesome program.
+<p>Deploy a digital clock with this awesome program.</p>
 <pre>
 function updateClock() {
 const now = new Date();
@@ -4535,20 +4535,21 @@ console.log("Current Time:" + formattedTime);
 set!nterval(updateClock, 1000);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-175. Random Number Generator
+<h2 id="js175">175. Random Number Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a random number between 1 and 10 and displays it in the console.
+<p>This program generates a random number between 1 and 10 and displays it in the console.</p>
 <pre>
 function generateRandomNumber(min, max) {
-return Math.floor(Math.random() * (max - min + 1)) + min;
-const randomNumber = generateRandomNumber(l, 10);
-console.log("Random Number:", randomNumber);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+  const randomNumber = generateRandomNumber(l, 10);
+  console.log("Random Number:", randomNumber);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-176. Simple JavaScript Quiz
+<h2 id="js176">176. Simple JavaScript Quiz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program presents a simple JavaScript quiz with multiple-choice questions. It asks the user for answers
-and provides feedback in the console.
+<p>This program presents a simple JavaScript quiz with multiple-choice questions. It asks 
+the user for answers and provides feedback in the console.</p>
 <pre>
 function runQuiz() {
 const questions = &lbrack;
@@ -4584,7 +4585,7 @@ console.log(' Your final score: $ {score} out of ${questions.length}');
 runQuizQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-177. Text-based RPG Adventure
+<h2 id="js177">177. Text-based RPG Adventure</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program takes the user on a simple text-based RPG adventure where they make choices to navigate
 through a story.
@@ -4612,7 +4613,7 @@ console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
 textRPGAdventureQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-178. Dice Rolling Simulator
+<h2 id="js178">178. Dice Rolling Simulator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates rolling a six-sided die, providing a random result between 1 and 6.
 <pre>
@@ -4623,7 +4624,7 @@ console.log(' You rolled a $ {result}');
 rollDiceQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-179. Seconds to Time Converter
+<h2 id="js179">179. Seconds to Time Converter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program takes a number of seconds as input and converts it into hours, minutes, and seconds,
 displaying the result in the console.
@@ -4639,7 +4640,7 @@ const inputSeconds = 3665;
 convertSecondsToTime(inputSeconds);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-180. Bar Chart Generator
+<h2 id="js180">180. Bar Chart Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program takes an array of numerical values and creates a simple horizontal bar chart in the console.
 <pre>
@@ -4700,7 +4701,7 @@ const pyramidHeight = 4;
 generateNumberPyramid(pyramidHeight);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-184. Diamond Pattern Generator
+<h2 id="js184">184. Diamond Pattern Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a diamond pattern using characters and displays it in the console.
 <pre>
@@ -4717,7 +4718,7 @@ const diamondHeight = 5;
 generateDiamondPattern(diamondHeight);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-185. Hangman Game
+<h2 id="js185">185. Hangman Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Hangman game. The player tries to guess a word by suggesting letters,
 and the program displays the progress and remaining attempts.
@@ -4760,7 +4761,7 @@ console.log(' Out of attempts. The word was: ${selectedWord}');
 hangmanGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-186. Countdown Timer
+<h2 id="js186">186. Countdown Timer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program allows the user to set a countdown time in seconds. The timer counts down, and the program
 displays the remaining time.
@@ -4787,7 +4788,7 @@ L 1000);
 countdownTimer();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-187. Mad Libs Game
+<h2 id="js187">187. Mad Libs Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user for various types of words (e.g., nouns, verbs) and constructs a humorous
 story using those inputs.
@@ -4812,7 +4813,7 @@ console.log("The end.");
 madLibsGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-188. Guess the Number Game
+<h2 id="js188">188. Guess the Number Game<h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a random number, and the player has to guess it within a certain number of
 attempts. The game provides feedback on whether the guess is too high, too low, or correct.
@@ -4842,7 +4843,7 @@ console.log(' Sorry, you've run out of attempts. The number was ${secretNumber}.
 guessTheNumberGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-189. Whack-a-Mole Game
+<h2 id="js189">189. Whack-a-Mole Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Whack-a-Mole game. The player must "whack" the mole as it randomly
 appears in different holes.
@@ -4884,7 +4885,7 @@ console.log("Game over. You ran out of attempts.");
 whackAMoleGameQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-190. Coin Tossing Game
+<h2 id="js190">190. Coin Tossing Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a coin tossing game. The player guesses whether the next coin toss will result in
 heads or tails.
@@ -4919,7 +4920,7 @@ break;
 coinTossingGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-191. Fibonacci Number Generator
+<h2 id="js191">191. Fibonacci Number Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates and displays Fibonacci numbers up to a specified limit.
 <pre>
@@ -4939,7 +4940,7 @@ console.log(fibonacciNumbers.slice(0, limit + 1));
 fibonacciNumberGeneratorO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-192. Math Quiz Game
+<h2 id="js192">192. Math Quiz Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Math Quiz game. The player is asked random addition questions and
 scores points for correct answers.
@@ -4965,7 +4966,7 @@ console.log(' Quiz complete! Your final score is: $ {score} out of ${maxQuestion
 mathQuizGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-193. Color Guessing Game
+<h2 id="js193">193. Color Guessing Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Color Guessing game. The player is given RGB values, and they need to
 guess the correct color.
@@ -4997,7 +4998,7 @@ return Array.from({ length: 3 }, () => Math.floor(Math.random() * 256));
 colorGuessingGameQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-194. Word Scramble Game
+<h2 id="js194">194. Word Scramble Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Word Scramble game. The player is presented with a scrambled word
 and needs to unscramble it.
@@ -5029,7 +5030,7 @@ return word.split("").sort(() => Math.random() - O.5).join("");
 wordScrambleGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-195. Country Capital Quiz Game
+<h2 id="js195">195. Country Capital Quiz Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Country Capital Quiz game. The player is asked to match countries with
 their respective capitals.
@@ -5058,7 +5059,7 @@ console.log(' Quiz complete! Your final score is: $ {score} out of ${countryCapi
 countryCapitalQuizGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-196. Guess the Animal
+<h2 id="js196">196. Guess the Animal</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Guess the Animal game. The player is provided with clues and needs to
 guess the correct animal.
@@ -5088,7 +5089,7 @@ console.log(' Game complete! Your final score is: $ {score} out of ${animals.len
 guessTheAnimalGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-197. Joke Teller
+<h2 id="js197">197. Joke Teller</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Joke Teller. It randomly selects a joke category and tells a joke from that
 category.
@@ -5126,7 +5127,7 @@ console.log("Oops! Something went wrong. No joke for you!");
 jokeTellerProgramQ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-198. Shopping List
+<h2 id="js198">198. Shopping List</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates a text-based Shopping List. The user can add items, remove items, and view the
 current shopping list.
@@ -5178,7 +5179,7 @@ console.log("Invalid action. Please enter 'add', 'remove', 'view', or 'exit'.");
 shoppingListProgram();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-199. FizzBuzzGame
+<h2 id="js199">199. FizzBuzzGame</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The program prints numbers from 1 to 100, but for multiples of 3, it prints "Fizz," for multiples of 5, it prints
 "Buzz," and for multiples of both 3 and 5, it prints "FizzBuzz":
@@ -5198,7 +5199,7 @@ console.log(output 11 i);
 fizzBuzzGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-200. Swap Pairs of Adjacent Digits
+<h2 id="js200">200. Swap Pairs of Adjacent Digits</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program takes an even-length integer and swaps pairs of adjacent digits. For example, for the number
 123456, the program will swap pairs of adjacent digits to produce the number 214365.
@@ -5224,7 +5225,7 @@ console.log(' Number with Swapped Pairs of Adjacent Digits: $ {result}');
 s wapPairsOfAdjacentDigits( 123456);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-201. Capitalization Changer
+<h2 id="js201">201. Capitalization Changer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program takes a string as input and changes the capitalization of all letters. Uppercase letters are
 converted to lowercase, and lowercase letters are converted to uppercase.
@@ -5247,7 +5248,7 @@ console.log(' String with Changed Capitalization: $ {resultstring}');
 changeCapitalization("Hello World");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-202. Array Halves Swapper
+<h2 id="js202">202. Array Halves Swapper</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes an array of integers with an even length and swaps its two halves.</p>
 <pre>
@@ -5272,7 +5273,7 @@ console.logf Array with Swapped Halves:" + arr.join(","));
 swapArrayHalves(&lbrack;l, 2, 3,4, 5, 6&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-203. Sum of Digits in String
+<h2 id="js203">203. Sum of Digits in String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program computes the sum of all the digits that occur in a given string. It identifies digits in the string
 and adds them up to calculate the total sum.
@@ -5290,7 +5291,7 @@ console.log(' Sum of Digits in the String: $ {digitSum}');
 sumOfDigitsInString("abc 12 3xyz45 6");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-204. Sum of Cubes
+<h2 id="js204">204. Sum of Cubes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program computes the sum of cubes of all integers from 1 to a given integer. It calculates the cube of
 each integer in the specified range and adds them up to find the total sum.
@@ -5307,7 +5308,7 @@ console.log(' Sum of Cubes from 1 to $ {upToInteger}: ${cubesSum}' );
 sumOfCubes(5);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-205. Maximum Integer for Sum
+<h2 id="js205">205. Maximum Integer for Sum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program finds the maximum integer n such that the sum of integers from 1 to n (inclusive) does not
 exceed a given target sum targetSum . It calculates the sum using the formula Sum = n * (n + 1) / 2 .
@@ -5324,7 +5325,7 @@ console.log(' Maximum Integer (n) for Sum <= $ {targetSum}: $ {maxinteger}');
 findMaxIntegerForSum(l 5);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-206. URL Breakdown
+<h2 id="js206">206. URL Breakdown</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program breaks a URL address into its parts and puts them into an array. The URL structure considered
 is scheme://domain&lbrack;/:path &rbrack;, where pat h is optional.
@@ -5347,7 +5348,7 @@ console.log(urlParts);
 breakURL("https://www.example.org/page");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-207. Sort Strings by Length
+<h2 id="js207">207. Sort Strings by Length</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program sorts the strings of a given array of strings in order of increasing length. It uses the Array.sor t
 method to achieve the desired order.
@@ -5363,7 +5364,7 @@ console.log(sortedArray);
 sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-208. Simplify Absolute Path
+<h2 id="js208">208. Simplify Absolute Path</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simplifies a given absolute path for a file in Unix-style. It takes a string representing the
 absolute path and simplifies it by resolving any redundant slashes ( // ), parent directory references ( ..),
@@ -5387,7 +5388,7 @@ console.log(' Simplified Absolute Path: ${simplifiedPath}');
 simplifyAbsolutePath(7home/user/../documents/./file.txt');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-209. Count Common Elements in Arrays
+<h2 id="js209">209. Count Common Elements in Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program finds the number of common elements between two arrays. It compares the elements in both
 arrays and counts the occurrences of common elements.
@@ -5404,7 +5405,7 @@ console.logC'Number of Common Elements:”, numberOfCommonElements);
 countCommonElements(&lbrack;l, 2, 3,4, 5&rbrack;, &lbrack;3,4, 5, 6, 7&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-210. Check Same Digits in a Number
+<h2 id="js210">210. Check Same Digits in a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks whether all the digits in a given number are the same or not. It converts the number to
 a string and compares each digit to the first digit.
@@ -5422,7 +5423,7 @@ console.log(' Digits in $ {number} are all the same.');
 // Example: Check if all digits in the number 22222 are the same are AllDigitsSame(22222);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-211. Rightmost Round Number Position
+<h2 id="js211">211. Rightmost Round Number Position</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program finds the position of the rightmost round number in an array of integers. A round number is
 informally considered to be an integer that ends with one or more zeros. The program iterates through the
@@ -5440,7 +5441,7 @@ console.log("No round numbers found in the array. Position: 0");
 rightmostRoundNumberPosition(&lbrack;123,450, 678, 900&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-212. Reverse Bits of 16-Bit Unsigned Short Integer
+<h2 id="js212">212. Reverse Bits of 16-Bit Unsigned Short Integer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program reverses the bits of a given 16-bit unsigned short integer. It converts the integer to its binary
 representation, reverses the bits, and converts it back to an integer.
