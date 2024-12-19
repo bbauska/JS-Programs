@@ -1,6 +1,6 @@
 <!-- 2 times 200+ JS Programs for Beginners readme.md -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1>200+ JavaScript Programs for Beginners</h1>
+<h1>482 (218 + 264) JavaScript Programs for Beginners</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14,9 +14,9 @@ code, make great decisions, and much more.</p>
 solved a certain number of programs, you will be able to develop yourself and turn your
 own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="toc">Table of Contents</h2>
+<h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="js0">218 Simple JavaScript Samples<h3>
+<h2><a href="#js0">218 Simple JavaScript Samples</a></h2>
 
 <ol type="1" start="1">
   <li><a href="#js1">1. Print Hello World</a></li>
@@ -239,22 +239,273 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js218">218. Pyramid</a></li>
 </ol>
 
-<h3 id="#js-0">264 More Simple JavaScript Samples<h3>
+<h2><a href="#js-0">264 More Simple JavaScript Samples</a></h2>
 <ul>
-  <li><a href="#js-1">-1. </a></li>
-  <li><a href="#js-2">-2. </a></li>
-  <li><a href="#js-3">-3. </a></li>
-  <li><a href="#js-4">-4. </a></li>
-  <li><a href="#js-5">-5. </a></li>
-  <li><a href="#js-6">-6. </a></li>
-  <li><a href="#js-7">-7. </a></li>
-  <li><a href="#js-8">-8. </a></li>
-  <li><a href="#js-9">-9. </a></li>
-  <li><a href="#js-10">-10. </a></li>
-  <li><a href="#js-11">-11. </a></li>
-
-  <li><a href="#js-115">115. Shuffle the Characters of a String</a></li>
-  <li><a href="#js-264">264. Calculate the Area of a Sector</a></li>
+  <li><a href="#js-1">js-1. Convert Celsius to Fahrenheit</a></li>
+  <li><a href="#js-2">js-2. Get Value of a browser Cookie</a></li>
+  <li><a href="#js-3">js-3. </a></li>
+  <li><a href="#js-4">js-4. </a></li>
+  <li><a href="#js-5">js-5. </a></li>
+  <li><a href="#js-6">js-6. </a></li>
+  <li><a href="#js-7">js-7. </a></li>
+  <li><a href="#js-8">js-8. </a></li>
+  <li><a href="#js-9">js-9. </a></li>
+  <li><a href="#js-10">js-10. </a></li>
+  <li><a href="#js-11">js-11. </a></li>
+  <li><a href="#js-12">js-12. </a></li>
+  <li><a href="#js-13">js-13. </a></li>
+  <li><a href="#js-14">js-14. </a></li>
+  <li><a href="#js-15">js-15. </a></li>
+  <li><a href="#js-16">js-16. </a></li>
+  <li><a href="#js-17">js-17. </a></li>
+  <li><a href="#js-18">js-18. </a></li>
+  <li><a href="#js-19">js-19. </a></li>
+  <li><a href="#js-20">js-20. </a></li>
+  <li><a href="#js-21">js-21. </a></li>
+  <li><a href="#js-22">js-22. </a></li>
+  <li><a href="#js-23">js-23. </a></li>
+  <li><a href="#js-24">js-24. </a></li>
+  <li><a href="#js-25">js-25. </a></li>
+  <li><a href="#js-26">js-26. </a></li>
+  <li><a href="#js-27">js-27. </a></li>
+  <li><a href="#js-28">js-28. </a></li>
+  <li><a href="#js-29">js-29. </a></li>
+  <li><a href="#js-30">js-30. </a></li>
+  <li><a href="#js-31">js-31. </a></li>
+  <li><a href="#js-32">js-32. </a></li>
+  <li><a href="#js-33">js-33. </a></li>
+  <li><a href="#js-34">js-34. </a></li>
+  <li><a href="#js-35">js-35. </a></li>
+  <li><a href="#js-36">js-36. </a></li>
+  <li><a href="#js-37">js-37. </a></li>
+  <li><a href="#js-38">js-38. </a></li>
+  <li><a href="#js-39">js-39. </a></li>
+  <li><a href="#js-40">js-40. </a></li>
+  <li><a href="#js-41">js-41. </a></li>
+  <li><a href="#js-42">js-42. </a></li>
+  <li><a href="#js-43">js-43. </a></li>
+  <li><a href="#js-44">js-44. </a></li>
+  <li><a href="#js-45">js-45. </a></li>
+  <li><a href="#js-46">js-46. </a></li>
+  <li><a href="#js-47">js-47. </a></li>
+  <li><a href="#js-48">js-48. </a></li>
+  <li><a href="#js-49">js-49. </a></li>
+  <li><a href="#js-50">js-50. </a></li>
+  <li><a href="#js-51">js-51. </a></li>
+  <li><a href="#js-52">js-52. </a></li>
+  <li><a href="#js-53">js-53. </a></li>
+  <li><a href="#js-54">js-54. </a></li>
+  <li><a href="#js-55">js-55. </a></li>
+  <li><a href="#js-56">js-56. </a></li>
+  <li><a href="#js-57">js-57. </a></li>
+  <li><a href="#js-58">js-58. </a></li>
+  <li><a href="#js-59">js-59. </a></li>
+  <li><a href="#js-60">js-60. </a></li>
+  <li><a href="#js-61">js-61. </a></li>
+  <li><a href="#js-62">js-62. </a></li>
+  <li><a href="#js-63">js-63. </a></li>
+  <li><a href="#js-64">js-64. </a></li>
+  <li><a href="#js-65">js-65. </a></li>
+  <li><a href="#js-66">js-66. </a></li>
+  <li><a href="#js-67">js-67. </a></li>
+  <li><a href="#js-68">js-68. </a></li>
+  <li><a href="#js-69">js-69. </a></li>
+  <li><a href="#js-70">js-70. </a></li>
+  <li><a href="#js-71">js-71. </a></li>
+  <li><a href="#js-72">js-72. </a></li>
+  <li><a href="#js-73">js-73. </a></li>
+  <li><a href="#js-74">js-74. </a></li>
+  <li><a href="#js-75">js-75. </a></li>
+  <li><a href="#js-76">js-76. </a></li>
+  <li><a href="#js-77">js-77. </a></li>
+  <li><a href="#js-78">js-78. </a></li>
+  <li><a href="#js-79">js-79. </a></li>
+  <li><a href="#js-80">js-80. </a></li>
+  <li><a href="#js-81">js-81. </a></li>
+  <li><a href="#js-82">js-82. </a></li>
+  <li><a href="#js-83">js-83. </a></li>
+  <li><a href="#js-84">js-84. </a></li>
+  <li><a href="#js-85">js-85. </a></li>
+  <li><a href="#js-86">js-86. </a></li>
+  <li><a href="#js-87">js-87. </a></li>
+  <li><a href="#js-88">js-88. </a></li>
+  <li><a href="#js-89">js-89. </a></li>
+  <li><a href="#js-90">js-90. </a></li>
+  <li><a href="#js-91">js-91. </a></li>
+  <li><a href="#js-92">js-92. </a></li>
+  <li><a href="#js-93">js-93. </a></li>
+  <li><a href="#js-94">js-94. </a></li>
+  <li><a href="#js-95">js-95. </a></li>
+  <li><a href="#js-96">js-96. </a></li>
+  <li><a href="#js-97">js-97. </a></li>
+  <li><a href="#js-98">js-98. </a></li>
+  <li><a href="#js-99">js-99. </a></li>
+  <li><a href="#js-100">js-100. </a></li>
+  <li><a href="#js-101">js-101. </a></li>
+  <li><a href="#js-102">js-102. </a></li>
+  <li><a href="#js-103">js-103. </a></li>
+  <li><a href="#js-104">js-104. </a></li>
+  <li><a href="#js-105">js-105. </a></li>
+  <li><a href="#js-106">js-106. </a></li>
+  <li><a href="#js-107">js-107. </a></li>
+  <li><a href="#js-108">js-108. </a></li>
+  <li><a href="#js-109">js-109. </a></li>
+  <li><a href="#js-110">js-110. </a></li>
+  <li><a href="#js-111">js-111. </a></li>
+  <li><a href="#js-112">js-112. </a></li>
+  <li><a href="#js-113">js-113. </a></li>
+  <li><a href="#js-114">js-114. </a></li>
+  <li><a href="#js-115">js-115. </a></li>
+  <li><a href="#js-116">js-116. </a></li>
+  <li><a href="#js-117">js-117. </a></li>
+  <li><a href="#js-118">js-118. </a></li>
+  <li><a href="#js-119">js-119. </a></li>
+  <li><a href="#js-120">js-120. </a></li>
+  <li><a href="#js-121">js-121. </a></li>
+  <li><a href="#js-122">js-122. </a></li>
+  <li><a href="#js-123">js-123. </a></li>
+  <li><a href="#js-124">js-124. </a></li>
+  <li><a href="#js-125">js-125. </a></li>
+  <li><a href="#js-126">js-126. </a></li>
+  <li><a href="#js-127">js-127. </a></li>
+  <li><a href="#js-128">js-128. </a></li>
+  <li><a href="#js-129">js-129. </a></li>
+  <li><a href="#js-130">js-130. </a></li>
+  <li><a href="#js-131">js-131. </a></li>
+  <li><a href="#js-132">js-132. </a></li>
+  <li><a href="#js-133">js-133. </a></li>
+  <li><a href="#js-134">js-134. </a></li>
+  <li><a href="#js-135">js-135. </a></li>
+  <li><a href="#js-136">js-136. </a></li>
+  <li><a href="#js-137">js-137. </a></li>
+  <li><a href="#js-138">js-138. </a></li>
+  <li><a href="#js-139">js-139. </a></li>
+  <li><a href="#js-140">js-140. </a></li>
+  <li><a href="#js-141">js-141. </a></li>
+  <li><a href="#js-142">js-142. </a></li>
+  <li><a href="#js-143">js-143. </a></li>
+  <li><a href="#js-144">js-144. </a></li>
+  <li><a href="#js-145">js-145. </a></li>
+  <li><a href="#js-146">js-146. </a></li>
+  <li><a href="#js-147">js-147. </a></li>
+  <li><a href="#js-148">js-148. </a></li>
+  <li><a href="#js-149">js-149. </a></li>
+  <li><a href="#js-150">js-150. </a></li>
+  <li><a href="#js-151">js-151. </a></li>
+  <li><a href="#js-152">js-152. </a></li>
+  <li><a href="#js-154">js-153. </a></li>
+  <li><a href="#js-154">js-154. </a></li>
+  <li><a href="#js-155">js-155. </a></li>
+  <li><a href="#js-156">js-156. </a></li>
+  <li><a href="#js-157">js-157. </a></li>
+  <li><a href="#js-158">js-158. </a></li>
+  <li><a href="#js-159">js-159. </a></li>
+  <li><a href="#js-160">js-160. </a></li>
+  <li><a href="#js-161">js-161. </a></li>
+  <li><a href="#js-162">js-162. </a></li>
+  <li><a href="#js-163">js-163. </a></li>
+  <li><a href="#js-164">js-164. </a></li>
+  <li><a href="#js-165">js-165. </a></li>
+  <li><a href="#js-166">js-166. </a></li>
+  <li><a href="#js-167">js-167. </a></li>
+  <li><a href="#js-168">js-168. </a></li>
+  <li><a href="#js-169">js-169. </a></li>
+  <li><a href="#js-170">js-170. </a></li>
+  <li><a href="#js-171">js-171. </a></li>
+  <li><a href="#js-172">js-172. </a></li>
+  <li><a href="#js-173">js-173. </a></li>
+  <li><a href="#js-174">js-174. </a></li>
+  <li><a href="#js-175">js-175. </a></li>
+  <li><a href="#js-176">js-176. </a></li>
+  <li><a href="#js-177">js-177. </a></li>
+  <li><a href="#js-178">js-178. </a></li>
+  <li><a href="#js-179">js-179. </a></li>
+  <li><a href="#js-180">js-180. </a></li>
+  <li><a href="#js-181">js-181. </a></li>
+  <li><a href="#js-182">js-182. </a></li>
+  <li><a href="#js-183">js-183. </a></li>
+  <li><a href="#js-184">js-184. </a></li>
+  <li><a href="#js-185">js-185. </a></li>
+  <li><a href="#js-186">js-186. </a></li>
+  <li><a href="#js-187">js-187. </a></li>
+  <li><a href="#js-188">js-188. </a></li>
+  <li><a href="#js-189">js-189. </a></li>
+  <li><a href="#js-190">js-190. </a></li>
+  <li><a href="#js-191">js-191. </a></li>
+  <li><a href="#js-192">js-192. </a></li>
+  <li><a href="#js-193">js-193. </a></li>
+  <li><a href="#js-194">js-194. </a></li>
+  <li><a href="#js-195">js-195. </a></li>
+  <li><a href="#js-196">js-196. </a></li>
+  <li><a href="#js-197">js-197. </a></li>
+  <li><a href="#js-198">js-198. </a></li>
+  <li><a href="#js-199">js-199. </a></li>
+  <li><a href="#js-200">js-200. </a></li>
+  <li><a href="#js-201">js-201. </a></li>
+  <li><a href="#js-202">js-202. </a></li>
+  <li><a href="#js-203">js-203. </a></li>
+  <li><a href="#js-204">js-204. </a></li>
+  <li><a href="#js-205">js-205. </a></li>
+  <li><a href="#js-206">js-206. </a></li>
+  <li><a href="#js-207">js-207. </a></li>
+  <li><a href="#js-208">js-208. </a></li>
+  <li><a href="#js-209">js-209. </a></li>
+  <li><a href="#js-210">js-210. </a></li>
+  <li><a href="#js-211">js-211. </a></li>
+  <li><a href="#js-212">js-212. </a></li>
+  <li><a href="#js-213">js-213. </a></li>
+  <li><a href="#js-214">js-214. </a></li>
+  <li><a href="#js-215">js-215. </a></li>
+  <li><a href="#js-216">js-216. </a></li>
+  <li><a href="#js-217">js-217. </a></li>
+  <li><a href="#js-218">js-218. </a></li>
+  <li><a href="#js-219">js-219. </a></li>
+  <li><a href="#js-220">js-220. </a></li>
+  <li><a href="#js-221">js-221. </a></li>
+  <li><a href="#js-222">js-222. </a></li>
+  <li><a href="#js-223">js-223. </a></li>
+  <li><a href="#js-224">js-224. </a></li>
+  <li><a href="#js-225">js-225. </a></li>
+  <li><a href="#js-226">js-226. </a></li>
+  <li><a href="#js-227">js-227. </a></li>
+  <li><a href="#js-228">js-228. </a></li>
+  <li><a href="#js-229">js-229. </a></li>
+  <li><a href="#js-230">js-230. </a></li>
+  <li><a href="#js-231">js-231. </a></li>
+  <li><a href="#js-232">js-232. </a></li>
+  <li><a href="#js-233">js-233. </a></li>
+  <li><a href="#js-234">js-234. </a></li>
+  <li><a href="#js-235">js-235. </a></li>
+  <li><a href="#js-236">js-236. </a></li>
+  <li><a href="#js-237">js-237. </a></li>
+  <li><a href="#js-238">js-238. </a></li>
+  <li><a href="#js-239">js-239. </a></li>
+  <li><a href="#js-240">js-240. </a></li>
+  <li><a href="#js-241">js-241. </a></li>
+  <li><a href="#js-242">js-242. </a></li>
+  <li><a href="#js-243">js-243. </a></li>
+  <li><a href="#js-244">js-244. </a></li>
+  <li><a href="#js-245">js-245. </a></li>
+  <li><a href="#js-246">js-246. </a></li>
+  <li><a href="#js-247">js-247. </a></li>
+  <li><a href="#js-248">js-248. </a></li>
+  <li><a href="#js-249">js-249. </a></li>
+  <li><a href="#js-250">js-250. </a></li>
+  <li><a href="#js-251">js-251. </a></li>
+  <li><a href="#js-252">js-252. </a></li>
+  <li><a href="#js-253">js-253. </a></li>
+  <li><a href="#js-254">js-254. </a></li>
+  <li><a href="#js-255">js-255. </a></li>
+  <li><a href="#js-256">js-256. </a></li>
+  <li><a href="#js-257">js-257. </a></li>
+  <li><a href="#js-258">js-258. </a></li>
+  <li><a href="#js-259">js-259. </a></li>
+  <li><a href="#js-115">js-115. Shuffle the Characters of a String</a></li>
+  <li><a href="#js-260">js-260. </a></li>
+  <li><a href="#js-261">js-261. </a></li>
+  <li><a href="#js-262">js-262. </a></li>
+  <li><a href="#js-263">js-263. </a></li>
+  <li><a href="#js-264">js-264. Calculate the Area of a Sector</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js0">218 JS Samples</h2>
@@ -5570,7 +5821,7 @@ const triangleHeight = 5;
 generateAsciiTriangle(triangleHeight);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1 id="js-0">264 More JavaScript Samples</h1>
+<h2 id="js-0">264 More JavaScript Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 264 more javascript samples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5584,9 +5835,9 @@ const celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32;
 celsiusToFahrenheit(25); // Result: 77
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js-2">2. Get Value of a brower Cookie</h2>
+<h2 id="js-2">2. Get Value of a browser Cookie</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Retrieve the value of a cookie by accessing with document.cookie
+<p>Retrieve the value of a cookie by accessing with document.cookie.</p>
 <pre>
 const cookie = name => `; ${document.cookie}`.split(`;
 ${name}=`).pop().split(';').shift();
