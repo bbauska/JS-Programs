@@ -1,6 +1,6 @@
 <!-- 2 times 200+ JS Programs for Beginners readme.md -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<header>200+ JavaScript Programs for Beginners</header>
+<h1>200+ JavaScript Programs for Beginners</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16,7 +16,7 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1>218 Simple JavaScript Samples<h1>
+<h3 id="js0">218 Simple JavaScript Samples<h3>
 
 <ol type="1" start="1">
   <li><a href="#js1">1. Print Hello World</a></li>
@@ -239,8 +239,8 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js218">218. Pyramid</a></li>
 </ol>
 
-<h4 id="#js-0">264 More Simple JavaScript Samples<h4>
-<ol type="1" start="1">
+<h3 id="#js-0">264 More Simple JavaScript Samples<h3>
+<ul>
   <li><a href="#js-1">-1. </a></li>
   <li><a href="#js-2">-2. </a></li>
   <li><a href="#js-3">-3. </a></li>
@@ -255,7 +255,9 @@ own ideas into a reality without even having to think about it.</p>
 
   <li><a href="#js-115">115. Shuffle the Characters of a String</a></li>
   <li><a href="#js-264">264. Calculate the Area of a Sector</a></li>
-</ol>
+</ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js0">218 JS Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js1">1. Print Hello World</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
