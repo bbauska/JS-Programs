@@ -1,9 +1,8 @@
-<!-- 200+ JS Programs for Beginners readme.md -->
-
+<!-- 2 times 200+ JS Programs for Beginners readme.md -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>200+ JavaScript Programs for Beginners</h2>
+<header>200+ JavaScript Programs for Beginners</header>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Intro</h3>
+<h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Programming in JS was complicated until you appreciated this wonderful book.
 Focus on the most important thing writing code, starting from the first program to the last
@@ -15,9 +14,10 @@ code, make great decisions, and much more.</p>
 solved a certain number of programs, you will be able to develop yourself and turn your
 own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3 id="toc">Table of Contents</h3>
+<h2 id="toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>218 Simple JavaScript Samples<h4>
+<h1>218 Simple JavaScript Samples<h1>
+
 <ol type="1" start="1">
   <li><a href="#js1">1. Print Hello World</a></li>
   <li><a href="#js2">2. Add Two Numbers</a></li>
@@ -4814,7 +4814,7 @@ console.log("The end.");
 madLibsGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js188">188. Guess the Number Game<h2>
+<h2 id="js188">188. Guess the Number Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a random number, and the player has to guess it within a certain number of
 attempts. The game provides feedback on whether the guess is too high, too low, or correct.
@@ -5549,6 +5549,7 @@ function reverseOrderOfBits(integer) {
 reverseOrderOfBits(14);
 reverseOrderOfBits(56);
 reverseOrderOfBits(234);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js218">218. Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5565,6 +5566,8 @@ function generateAsciiTriangle(height) {
 const triangleHeight = 5;
 generateAsciiTriangle(triangleHeight);
 </pre>
+
+<h1>264 More JavaScript Samples</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- 264 more javascript samples -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
