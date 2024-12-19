@@ -3323,6 +3323,7 @@ console.log(' The area of the ellipse is: ${ellipseArea.toFixed(2)}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks whether a given number is a palindrome in binary representation. A palindrome in
 binary reads the same backward as forward.
+<pre>
 // Function to check if a number is a palindrome in binary
 function isBinaryPalindrome(number) {
 const binaryRepresentation = number.toString(2);
@@ -3335,11 +3336,13 @@ console.log(' ${numberToCheck} is a binary palindrome!
 ');
 } else {
 console.log(' $ {numberToCheck} is not a binary palindrome. ');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 134. Find the Area of a Rhombus
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a rhombus given the lengths of its diagonals ( d 1 and d 2 ). The formula
 for the area of a rhombus is Area = (dl * d2) / 2 , where d 1 and d 2 are the lengths of the diagonals.
+<pre>
 // Function to calculate the area of a rhombus
 function calculateRhombusArea(diagonall, diagonal) {
 const area = (diagonal 1 * diagonal) / 2;
@@ -3350,6 +3353,7 @@ const diagonal 1 Length = 8;
 const diagonal2Length = 6;
 const rhombusArea = calculateRhombusArea(diagonallLength, diagonal2Length);
 console.log(' The area of the rhombus is: $ {rhombus Area.toFixed(2)j');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 135. Check if a Number is a Catalan Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3357,6 +3361,7 @@ Cn = (2n)!/((n+ l)!*n!) .
 This program checks if a given non-negative integer is a Catalan number. Catalan numbers are a sequence
 of natural numbers that occur in various counting problems, often involving recursive structures. The nth
 Catalan number is given by the formula:
+<pre>
 // Function to calculate binomial coefficient (n choose k)
 function binomialCoefficient(n, k) {
 if(k>n-k){
@@ -3382,12 +3387,14 @@ console.log(' ${numberToCheck} is a Catalan number!
 } else {
 console.log(' ${numberToCheck} is not a Catalan number.
 ');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 136. Find the Luhn Algorithm Check Digit
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, is a simple checksum formula
 used to validate various identification numbers, such as credit card numbers. The algorithm is used to detect
 accidental errors in these numbers.
+<pre>
 function calculateLuhnCheckDigit(input) {
 // Convert the input string to an array of digits
 const digits = input.toString().split(").map(Number);
@@ -3411,11 +3418,13 @@ const fullNumber = ' $ {partialNumber} $ {checkDigit}';
 console.log(' Partial Number: ${partialNumber}');
 console.log(' Check Digit: ${checkDigit}');
 console.log(' Full Number with Check Digit: $ {fullNumber}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 137. Basic Maze Generator
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic maze generator involves using an algorithm to generate a random maze layout. One
 common algorithm for maze generation is the recursive backtracking algorithm.
+<pre>
 class MazeGenerator {
 constructor(rows, cols) {
 this.rows = rows;
@@ -3424,7 +3433,7 @@ this.grid = Array.from({ length: rows },()=> Array(cols).fill(0));
 }
 generateMaze() {
 this.visitCell(0,0);
-1
+}
 visitCell(row, col) {
 this.grid&lbrack;row&rbrack;&lbrack;col&rbrack; = 1; // Mark the current cell as visited
 // Define the possible directions (up, down, left, right)
@@ -3445,7 +3454,7 @@ if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && 
 this.grid&lbrack;row + dr / 2&rbrack;&lbrack;col + de / 2&rbrack; = 1;
 // Recursively visit the new cell
 this.visitCell(newRow, newCol);
-1
+}
 }
 }
 printMaze() {
@@ -3457,12 +3466,14 @@ const mazeCols = 21;
 const mazeGenerator = new MazeGenerator(mazeRows, mazeCols);
 mazeGenerator.generateMaze();
 mazeGenerator.printMazeO;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 138. Check if a Year is a Magic Year
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 A magic year is a year in which the product of the month and day (in two-digit form) equals the last two
 digits of the year. For example, in the year 1978, the product of the month (7) and the day (8) is 56, which
 matches the last two digits of the year.
+<pre>
 function isMagicYear(year) {
 const yearStr = year.toStringO;
 const month = parse!nt(yearStr.substring(O, 2), 10);
@@ -3474,12 +3485,14 @@ if (isMagicYear(yearToCheck)) {
 console.log(' ${yearToCheck} is a Magic Year! ');
 } else {
 console.log('${yearToCheck}isnotaMagicYear. ');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 139. Basic Crossword Puzzle
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic crossword puzzle involves defining a grid and placing words into it, ensuring that they
 intersect correctly. Below is a simple JavaScript program that generates a crossword puzzle with a few words.
 The generated puzzle is displayed in the console:
+<pre>
 class CrosswordPuzzle {
 constructor(rows, cols) {
 this.rows = rows;
@@ -3511,12 +3524,14 @@ crossword.addWordfapple', 1,1,'across');
 crossword.addWord('banana', 3, 0, 'down');
 crossword.addWord('grape', 0, 3, 'across');
 crossword.printPuzzleQ;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 140. Find the Area of a Regular Polygon
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular polygon given the number of sides ( n ) and the side length ( s ).
 The formula for the area of a regular polygon is Area = (n * s*2) / (4 * tan(it/n)), where n is the number of
 sides, s is the side length, and tan is the tangent function.
+<pre>
 function calculateRegularPolygonArea(n, s) {
 const numerator = 1 / 4 * n * Math.pow(s, 2);
 const denominator = Math.tan(Math.PI I n);
@@ -3527,11 +3542,13 @@ const numberOfSides = 6; // Replace with the number of sides of your polygon
 const sideLength = 5; // Replace with the length of each side of your polygon
 const polygonArea = calculateRegularPolygonArea(numberOfSides, sideLength);
 console.log(' The area of the regular polygon is: ${polygonArea.toFixed(2)}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 141. Check if a Number is an Abundant Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 An abundant number (or excessive number) is a positive integer that is smaller than the sum of its proper
 divisors, excluding itself. The sum of proper divisors is greater than the number itself.
+<pre>
 function getProperDivisorsSum(number) {
 let sum = 0;
 for (let i = 1; i < = Math.floor(number I 2); i++) {
@@ -3550,11 +3567,13 @@ console.logC ${numberToCheck} is an Abundant Number!
 ');
 } else {
 console.logC ${numberToCheck} is not an Abundant Number. ');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 142. Basic Word Guessing Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic word guessing game in a console environment involves generating a random word, allowing
 the player to make guesses, and providing feedback on correct and incorrect guesses.
+<pre>
 class WordGuessingGame {
 constructorwordList) {
 this.wordList = wordList;
@@ -3600,14 +3619,15 @@ game.makeGuess('i');
 game.makeGuess('o');
 game.makeGuess('u');
 game.makeGuess('s');
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 143. Calculate the Euler's Totient Function
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates Euler's Totient Function, also known as Euler's Phi Function, which counts the
-positive integers up to a given integer n that are relatively prime to n . The formula for Euler's Totient
-Function is: cf>(n) = n * (1 - 1/pl) * (1 - l/p2) * ... * (1 - 1/pk), where pl, p2,..., pk are the distinct prime factors
-of n .
+<p>This program calculates Euler's Totient Function, also known as Euler's Phi Function, 
+which counts the positive integers up to a given integer n that are relatively prime to n. 
+The formula for Euler's Totient Function is: cf>(n) = n * (1 - 1/pl) * (1 - l/p2) * ... * 
+(1 - 1/pk), where pl, p2,..., pk are the distinct prime factors of n.</p>
+<pre>
 function eulerTotientFunction(n) {
 if(n<=0){
 return "Input must be a positive integer.";
@@ -3625,15 +3645,16 @@ if (n > 1) {
 result -= result / n;
 return Math.floor(result); // Return the result as an integer
 // Example usage
-const n = 12;// Replace with the positive integer for which you want to calculate Euler's Totient Function
+const n = 12; // Replace with the positive integer for which you want to calculate Euler's Totient Function
 const result = eulerTotientFunction(n);
 console.log(' Euler's Totient Function for ${n} is: $ {result}');
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 144. Basic Memory Matching Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic memory matching game involves displaying a grid of face-down cards, allowing the player
-to flip two cards at a time, and checking for matches.
+<p>Creating a basic memory matching game involves displaying a grid of face-down cards, 
+allowing the player to flip two cards at a time, and checking for matches.</p>
+<pre>
 class MemoryMatchingGame {
 constructor(cards) {
 this.cards = cards.concat(cards); // Duplicate the cards to create pairs
@@ -3645,7 +3666,8 @@ this.matches = 0;
 shuffleCardsO {
 for (let i = this.cards.length -1; i > 0; i—) {
 constj = Math.floor(Math.random() * (i + 1));
-&lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; = &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
+&lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; = 
+&lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
 }
 createBoard() {
 const board = &lbrack;&rbrack;;
@@ -3699,15 +3721,17 @@ game.flipCard(2, 2);
 game.flipCard(3, 3);
 game.flipCard(0,1);
 game.flipCard(l, 0);
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 145. Check if a Number is a Vampire Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A vampire number is a composite (non-prime) natural number with an even number of digits, which can be
-factored into two integers, both having half as many digits as the original number, and where the digits of
-the original number can be rearranged to form the digits of the two smaller numbers. For example, 1260 is a
-vampire number because it can be factored into 21 and 60, and the digits of 1260 can be rearranged to form
-the digits of 21 and 60.
+<p>A vampire number is a composite (non-prime) natural number with an even number of 
+digits, which can be factored into two integers, both having half as many digits as the 
+original number, and where the digits of the original number can be rearranged to form 
+the digits of the two smaller numbers. For example, 1260 is a vampire number because it 
+can be factored into 21 and 60, and the digits of 1260 can be rearranged to form the 
+digits of 21 and 60.</p>
+<pre>
 function isVampireNumber(number) {
 const strNumber = number.toStringO;
 const length = strNumber.length;
@@ -3736,7 +3760,7 @@ const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && in
 pairs.push(&lbrack;pairl, pair 2&rbrack;);
 }
 }
-1
+}
 return pairs;
 // Example usage
 const vampireNumber = 1260;// Replace with the number you want to check
@@ -3745,31 +3769,13 @@ console.log(' ${vampireNumber} is a Vampire Number! ');
 } else {
 console.logC ${vampireNumber} is not a Vampire Number.
 ');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 146. Basic Simon Says Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic Simon Says game involves generating and displaying a sequence of colors, then challenging
-the player to repeat the sequence.
-class SimonSaysGame {
-constructor(colors) {
-this.colors = colors;
-this.sequence = &lbrack;&rbrack;;
-this.playerSequence = &lbrack;&rbrack;;
-this.round = 1;
-this.generateSequenceQ;
-generateSequenceO {
-for (let i = 0; i < this.round; i++) {
-const randomindex = Math.floor(Math.random() *this.colors.length);
-this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
-}
-displaySequenceO {
-console.log(' Round ${this.round} - Simon says:');
-for (const color of this.sequence) {
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-146. Basic Simon Says Game
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic Simon Says game involves generating and displaying a sequence of colors, then challenging
-the player to repeat the sequence.
+<p>Creating a basic Simon Says game involves generating and displaying a sequence of 
+colors, then challenging the player to repeat the sequence.</p>
+<pre>
 class SimonSaysGame {
 constructor(colors) {
 this.colors = colors;
@@ -3800,11 +3806,11 @@ for (let i = 0; i < this.round; i++) {
 if (this.playerSequence&lbrack;i&rbrack; !== this.sequencefi&rbrack;) {
 console.log('Wrong sequence! Game over.1);
 process.exitO;
-1
+}
 }
 console.log('Correct sequence! Next round.');
 this.round++;
-1
+}
 sleep(ms) {
 return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -3814,7 +3820,7 @@ this.displaySequenceO;
 this.getPlayerlnputO;
 this.checkSequenceO;
 }
-1
+}
 }
 // Example usage
 const colors = &lbrack;'red’, 'blue', 'green', 'yellow'&rbrack;;
@@ -3822,11 +3828,13 @@ const simonSaysGame = new SimonSaysGame(colors);
 console.log('Welcome to Simon Says! Repeat the sequence correctly to advance.');
 // Start the game loop
 simonSaysGame.playO;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 147. Calculate the Area of a Hexagon
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular hexagon given the side length ( s ). The formula for the area of
 a regular hexagon is Area = (3 * V3 * s*2) / 2 , where s is the side length.
+<pre>
 function calculateHexagonArea(sideLength) {
 const area = (3 * Math.sqrt(3) / 2) * Math.pow(sideLength, 2);
 return area;
@@ -3834,17 +3842,19 @@ return area;
 const sideLength = 5; // Replace with the length of a side of your hexagon
 const hexagonArea = calculateHexagonArea(sideLength);
 console.log(' The area of the hexagon is: ${hexagonArea.toFixed(2)}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 148. Check if a Number is a Pronic Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks if a given non-negative integer is a pronic number, also known as a rectangular number
-or oblong number. A pronic number is a product of two consecutive integers. The nth pronic number is given
-by the formula: n * (n + 1) .
+<p>This program checks if a given non-negative integer is a pronic number, also known as a 
+rectangular number or oblong number. A pronic number is a product of two consecutive 
+integers. The nth pronic number is given by the formula: n * (n + 1).</p>
+<pre>
 function isPronicNumber(number) {
-for (let i = O;i*(i + 1) <= number; i++) {
-if (i* (i + 1)=== number) {
-return true;
-}
+  for (let i = O;i*(i + 1) <= number; i++) {
+    if (i* (i + 1)=== number) {
+      return true;
+    }
 return false;
 // Example usage
 const pronicNumber = 6; // Replace with the number you want to check
@@ -3853,11 +3863,13 @@ console.log(' $ {pronicNumber} is a Pronic Number!');
 } else {
 console.log(' $ {pronicNumber} is not a Pronic Number.');
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 149. Basic Minesweeper Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic Minesweeper game involves generating a grid with mines and numbers, allowing the player
 to uncover cells, and providing feedback on the presence of mines.
+<pre>
 class MinesweeperGame {
 constructor(rows, cols, numMines) {
 this.rows = rows;
@@ -3888,7 +3900,7 @@ board&lbrack;i&rbrack;&lbrack;j&rbrack;++;
 }
 }
 }
-1
+}
 return board;
 }
 displayBoard() {
@@ -3937,12 +3949,13 @@ minesweeperGame.uncoverCell(2, 2);
 minesweeperGame.uncoverCell( 1,1);
 minesweeperGame.uncoverCell(3, 3);
 minesweeperGame.uncoverCell(4,4);
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 150. Find the Area of a Pentagon
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular pentagon given the side length ( s ). The formula for the area of
 a regular pentagon is Area = (1/4) * V(5 * (5 + 2 * V5)) * s* 2 , where s is the side length.
+<pre>
 function calculatePentagonArea(sideLength) {
 const area = (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * Math.pow(sideLength, 2);
 return area;
@@ -3950,11 +3963,13 @@ return area;
 const sideLength = 4; // Replace with the length of a side of your pentagon
 const pentagonArea = calculatePentagonArea(sideLength);
 console.log(' The area of the pentagon is: ${pentagonArea.toFixed(2)}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 151. Check if a Number is a Cube Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given non-negative integer is a cube number. A cube number is a number that can
 be expressed as the cube of an integer. The nth cube number is given by the formula: nA 3 .
+<pre>
 function isCubeNumber(number) {
 const cubeRoot = Math.round(Math.pow(number, 1/3));
 return Math.pow(cubeRoot, 3) = = = number;
@@ -3964,11 +3979,13 @@ if (isCubeNumber(numberToCheck)) {
 console.log('$ {numberToCheck} is a Cube Number! ');
 } else {
 console.log( '$ {numberToCheck} is not a Cube Number. ');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 152. Basic Typing Speed Test
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Creating a basic typing speed test involves generating a random string, measuring the time it takes for the
 user to type the string, and calculating the typing speed.
+<pre>
 class TypingSpeedTest {
 constructor) {
 this.words = &lbrack;
@@ -3983,7 +4000,7 @@ this.userlnput =
 generateRandomText() {
 const randomindex = Math.floor(Math.random() * this.words.length);
 return this.words&lbrack;randomlndex&rbrack;;
-1
+}
 startTest() {
 this.text = this.generateRandomText();
 this.startTime = Date.nowQ;
@@ -4002,7 +4019,7 @@ this.endTest();
 } else {
 console.logflncorrect. Try again.1);
 }
-1
+}
 }
 // Example usage
 const typingTest = new TypingSpeedTest();
@@ -4010,11 +4027,13 @@ typingTest.startTest();
 // Simulate user input (you can replace this with actual user input in a real environment)
 const userinput = 'javascript developer';
 typingTest.getUserlnput(userlnput);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 153. Find the Area of a Cube
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a cube given the length of its side ( s ). The formula for the
 surface area of a cube is Surface Area = 6 * s* 2 , where s is the length of a side.
+<pre>
 function calculateCubeSurfaceArea(sideLength) {
 const surface Area = 6 * Math.pow(sideLength, 2);
 return surfaceArea;
@@ -4022,12 +4041,14 @@ return surfaceArea;
 const sideLength = 4; // Replace with the length of a side of your cube
 const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
 console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 154. Find the Area of a Cone
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a cone given the radius of its base ( r ) and the slant height (1).
 The formula for the surface area of a cone is Surface Area = 7t * r * (r +1), where n is the mathematical constant
 Pi.
+<pre>
 function calculateCubeSurfaceArea(sideLength) {
 const surface Area = 6 * Math.pow(sideLength, 2);
 return surfaceArea;
@@ -4038,16 +4059,17 @@ console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 155. Check if a Number is a Happy Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A happy number is a positive integer that, when repeatedly replaced by the sum of the squares of its digits,
-eventually reaches the number 1. If a number becomes 1, it is a happy number; otherwise, it falls into a cycle
-that does not include 1.
+<p>A happy number is a positive integer that, when repeatedly replaced by the sum of the 
+squares of its digits, eventually reaches the number 1. If a number becomes 1, it is a 
+happy number; otherwise, it falls into a cycle that does not include 1.</p>
+<pre>
 function isHappyNumber(number) {
-const seenNumbers = new Set();
-while (number !== 1 && ’seenNumbers.has(number)) {
-seenNumbers.add(number);
-number = sumOfSquaredDigits(number);
-1
-return number = = = 1;
+  const seenNumbers = new Set();
+  while (number !== 1 && ’seenNumbers.has(number)) {
+    seenNumbers.add(number);
+    number = sumOfSquaredDigits(number);
+  }
+  return number = = = 1;
 function sumOfSquaredDigits(number) {
 return Array.from(String(number), Number)
 .reduce((sum, digit) => sum + Math.pow(digit, 2), 0);
@@ -4055,9 +4077,11 @@ return Array.from(String(number), Number)
 // Example usage
 const happyNumber = 19; // Replace with the number you want to check
 if (isHappyNumber(happyNumber)) {
-console.logC ${happyNumber} is a Happy Number! ');
+  console.logC ${happyNumber} is a Happy Number! ');
 } else {
-console.logC ${happyNumber} is not a Happy Number. ');
+  console.logC ${happyNumber} is not a Happy Number. ');
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 156. Calculate the Area of a Triangular Prism
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4065,6 +4089,7 @@ This program calculates the surface area of a triangular prism given the lengths
 c ) and the height of the prism ( h ). The formula for the surface area of a triangular prism is Surface Area =
 (Perimeter of the base * Height) + (2 * Area of the base), where the perimeter of the base is Perimeter = a + b + c
 and the area of the base is calculated using Heron's formula.
+<pre>
 function calculateTriangularPrismSurfaceArea(a, b, c, height) {
 const baseArea = 0.25 * Math.sqrt((-a + b + c)*(a-b + c)*(a + b-c)*(a + b + c));
 const perimeter = a + b + c;
@@ -4077,12 +4102,13 @@ const sideC = 5; // Replace with the length of side C of the triangular base
 const prismHeight = 6; // Replace with the height of the triangular prism
 const triangularPrismSurfaceArea = calculateTriangularPrismSurfaceArea(sideA, sideB, sideC, prismHeight);
 console.log(' The surface area of the triangular prism is: ${triangularPrismSurfaceArea.toFixed(2)}');
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 157. Check if a Number is a Fibonacci Prime
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is both a Fibonacci number and a prime number. A Fibonacci
 prime is a number that is both a Fibonacci number and a prime number.
+<pre>
 function isPrime(number) {
 if (number <= 1) {
 return false;
@@ -4105,11 +4131,13 @@ if (isFibonacciPrime(fibonacciPrimeCandidate)) {
 console.log(' ${fibonacciPrimeCandidate} is a Fibonacci Prime!');
 } else {
 console.log(' ${fibonacciPrimeCandidate} is not a Fibonacci Prime.');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 158. Check if a Number is a Squareful Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a squareful number. A squareful number is a positive
 integer where the square of each prime factor occurs in its prime factorization.
+<pre>
 function isSquarefulNumber(number) {
 const factors = getFactors(number);
 const uniqueFactors = &lbrack;...new Set(factors)&rbrack;;
@@ -4118,7 +4146,7 @@ const count = factors.filter((num) => num = = = factor).length;
 if (count % 2 !== 0) {
 return false;
 }
-1
+}
 return true;
 function getFactors(number) {
 const factors = &lbrack;&rbrack;;
@@ -4134,26 +4162,30 @@ if (isSquarefulNumber(squarefulNumber)) {
 console.log(' ${squarefulNumber} is a Squareful Number!');
 } else {
 console.log(' ${squarefulNumber} is not a Squareful Number.');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 159. Find the Area of a Tetrahedron
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a regular tetrahedron given the length of its edges ( a ). The
 formula for the surface area of a regular tetrahedron is Surface Area = V3 * aA 2 , where a is the length of an
 edge.
+<pre>
 function calculateTetrahedronSurfaceArea(edgeLength) {
 const surfaceArea = Math.sqrt(3) * Math.pow(edgeLength, 2);
 return surfaceArea;
-1
+}
 // Example usage
 const edgeLength = 5; // Replace with the length of an edge of the tetrahedron
 const tetrahedronSurfaceArea = calculateTetrahedronSurfaceArea(edgeLength);
 console.log(' The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.toFixed(2)}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 160. Check if a Number is an Automorphic Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is an automorphic number. An automorphic number is a
 number whose square ends with the number itself. For example, 5 is an automorphic number because 5 A2 =
 25, and 25 ends with 5.
+<pre>
 function isAutomorphicNumber(number) {
 const square = number * number;
 const numberDigits = String(number);
@@ -4165,12 +4197,14 @@ if (isAutomorphicNumber(automorphicNumber)) {
 console.log(' ${automorphicNumber} is an Automorphic Number!');
 } else {
 console.log(' ${automorphicNumber} is not an Automorphic Number.');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 161. Calculate the Area of a Pyramid
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a square pyramid given the length of the base side ( s ) and the
 slant height (1). The formula for the surface area of a square pyramid is Surface Area = s*2 + 2 * s * 1, where
 s is the length of a base side and 1 is the slant height.
+<pre>
 function calculatePyramidSurfaceArea(sideLength, slantHeight) {
 const baseArea = Math.pow(sideLength, 2);
 const lateralArea = 2 * sideLength * slantHeight;
@@ -4181,12 +4215,14 @@ const sideLength = 4; // Replace with the length of a side of the pyramid's base
 const slantHeight = 5; // Replace with the slant height of the pyramid
 const pyramidSurfaceArea = calculatePyramidSurfaceArea(sideLength, slantHeight);
 console.log(' The surface area of the pyramid is: ${pyramidSurfaceArea.toFixed(2)}');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 162. Check if a Number is a Smith-Morra Gambit Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a given positive integer is a Smith-Morra Gambit number. A Smith-Morra Gambit
 number is a positive integer that can be expressed as the sum of the digits of its prime factors, including
 repetitions.
+<pre>
 function isSmithMorraGambitNumber(number) {
 // Function to calculate the sum of digits
 const digitSum = (n) => n.toString().split(").reduce((acc, digit) => acc + parselnt(digit), 0);
@@ -4207,11 +4243,12 @@ const sumOfDigits = factors.reduce((acc, factor) = > acc + digitSum(factor), 0);
 return sumOfDigits = = = digitSum(number);
 // Example: Check if 22 is a Smith-Morra Gambit Number
 console Jog(isSmithMorraGambitNumber(22)); // Output: true
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 163. Check if a Number is a Solitary Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a number is a solitary number:
+<pre>
 function getProperDivisorsSum(number) {
 let sum = 1; // Start with 1 as every number is divisible by 1
 for (let i = 2; i < = Math.sqrt(number); i++) {
@@ -4230,6 +4267,7 @@ if (isSolitaryNumber(solitaryNumber)) {
 console.log(' ${solitaryNumber} is a Solitary Number!');
 } else {
 console.log(' ${solitaryNumber} is not a Solitary Number.');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 164. Basic Tower of Hanoi Puzzle
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4241,6 +4279,7 @@ to another peg, obeying the following simple rules:
 2. Each move consists of taking the upper disk from one of the stacks and placing it on top of
 another stack or on an empty peg.
 3. No disk may be placed on top of a smaller disk.
+<pre>
 function towerOfHanoi(n, source, auxiliary, target) {
 if(n=== 1) {
 console.log(' Move disk 1 from $ {source} to $ {target}');
@@ -4257,17 +4296,20 @@ const auxiliaryPeg = 'B';
 const targetPeg = 'C;
 console.log(' Tower of Hanoi solution for ${numberOfDisks} disks:');
 towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 165. Calculate the Area of a Frustum
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a frustum of a cone given the radii of its top and bottom bases ( r 1
 and r 2 ) and the slant height (1). The formula for the surface area of a frustum of a cone is Surface Area = n
 * (rl + r2) * 1 + it * rl*2 + it * r2* 2 , where it is the mathematical constant Pi.
+<pre>
 function surfaceAreaOfFrustum(rl, r2,1) {
-const surfaceArea = Math.PI * (rl + r2) * 1 + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
-console.log(' Surface Area of the frustum is: $ {surfaceArea}');
+  const surfaceArea = Math.PI * (rl + r2) * 1 + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
+  console.log(' Surface Area of the frustum is: $ {surfaceArea}');
 // Example: Calculate the surface area of a frustum with top radius 4, bottom radius 8, and slant height 6
 surfaceAreaOfFrustum(4, 8, 6);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 166. Check if a Number is a Motzkin Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4282,9 +4324,10 @@ return false;
 // Use dynamic programming to calculate Motzkin numbers
 const motzkinNumbers = &lbrack;1,1&rbrack;;
 for (let n = 2; n < = number; n+ +) {
-const nextMotzkin = ((2 *n + 1)*motzkinNumbers&lbrack;n-l&rbrack; + (3*n-3)*motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
-motzkinNumbers.push(nextMotzkin);
-1
+  const nextMotzkin = ((2 *n + 1)<i>motzkinNumbers&lbrack;n-l&rbrack; 
+    + (3*n-3)</i>motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
+  motzkinNumbers.push(nextMotzkin);
+}
 return motzkinNumbers.includes(number);
 // Example usage
 const motzkinNumber = 5; // Replace with the number you want to check
@@ -4390,6 +4433,7 @@ console.log(' HEX: $ {hexResult}');
 171. Counter
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program allows you to increment, decrement and reset a counter.
+<pre>
 let count = 0;
 function incrementCounter() {
 count++;
@@ -4412,6 +4456,7 @@ resetCounterQ;
 172. Stop The Bomb
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program to allow you stop an active bomb.
+<pre>
 let bombTimer;
 let countdowninterval;
 let timeLeft = 10; // Initial time in seconds
@@ -4448,6 +4493,7 @@ startBombO;
 Generating IP addresses programmatically can be done using a programming language like JavaScript.
 Below is a simple example of an IP address generator in JavaScript. Note that this example generates random
 IP addresses for educational purposes and should not be used for any malicious activities.
+<pre>
 function generateRandomlpO {
 const octet = () => Math.floor(Math.random() * 256);
 return ' ${octet()}.${octet()}.${octet()}.${octet()}';
@@ -4466,6 +4512,7 @@ console.log('Random IP Addresses:’, randomlps);
 174. Digital clock
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Deploy a digital clock with this awesome program.
+<pre>
 function updateClock() {
 const now = new Date();
 const hours = now.getHours();
@@ -4482,6 +4529,7 @@ set!nterval(updateClock, 1000);
 175. Random Number Generator
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a random number between 1 and 10 and displays it in the console.
+<pre>
 function generateRandomNumber(min, max) {
 return Math.floor(Math.random() * (max - min + 1)) + min;
 const randomNumber = generateRandomNumber(l, 10);
@@ -4492,6 +4540,7 @@ console.log("Random Number:", randomNumber);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program presents a simple JavaScript quiz with multiple-choice questions. It asks the user for answers
 and provides feedback in the console.
+<pre>
 function runQuiz() {
 const questions = &lbrack;
 question: "What is the capital of France?",
@@ -4553,11 +4602,11 @@ console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
 // Start the text-based RPG adventure
 textRPGAdventureQ;
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 178. Dice Rolling Simulator
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates rolling a six-sided die, providing a random result between 1 and 6.
+<pre>
 function rollDice() {
 const result = Math.floor(Math.random() * 6) + 1;
 console.log(' You rolled a $ {result}');
@@ -4652,7 +4701,7 @@ for (let i = l;i < = height; i++) {
 const spaces = Math.abs(midpoint - i);
 const stars = '*'.repeat(height - 2 * spaces);
 console.logC ’.repeat(spaces) + stars);
-1
+}
 }
 // Example: Generate a diamond pattern with a height of 5
 const diamondHeight = 5;
@@ -4692,7 +4741,7 @@ guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i 
 if (!guessedWord.includes("_")) {
 console.log(' Congratulations! You guessed the word: ${selectedWord}');
 break;
-1
+}
 } else {
 console.log("Incorrect guess. Try again.");
 remainingAttempts--;
@@ -4701,7 +4750,6 @@ console.log(' Out of attempts. The word was: ${selectedWord}');
 // Start the Hangman game
 hangmanGameO;
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 186. Countdown Timer
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4714,7 +4762,7 @@ const countdownTime = parse!nt(userTime, 10);
 if (isNaN(countdownTime) 11 countdownTime <= 0) {
 console.log("Invalid input. Please enter a positive number.");
 return;
-1
+}
 console.log(' Countdown started for ${countdownTime} seconds.');
 let secondsRemaining = countdownTime;
 const intervalld = setlnterval(() = > {
@@ -4754,7 +4802,6 @@ console.log("The end.");
 // Start the Mad Libs game
 madLibsGameO;
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 188. Guess the Number Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4827,7 +4874,6 @@ console.log("Game over. You ran out of attempts.");
 // Start the Whack-a-Mole Game
 whackAMoleGameQ;
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 190. Coin Tossing Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4858,12 +4904,11 @@ if (!playAgain) {
 console.log(' Game over. You made ${correctGuesses} correct guesses out of ${totalGuesses} total guesses.');
 break;
 }
-1
+}
 }
 // Start the Coin Tossing Game
 coinTossingGame();
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 191. Fibonacci Number Generator
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4910,7 +4955,6 @@ console.log(' Quiz complete! Your final score is: $ {score} out of ${maxQuestion
 // Start the Math Quiz Game
 mathQuizGameO;
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 193. Color Guessing Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4943,7 +4987,6 @@ return Array.from({ length: 3 }, () => Math.floor(Math.random() * 256));
 // Start the Color Guessing Game
 colorGuessingGameQ;
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 194. Word Scramble Game
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5073,7 +5116,6 @@ console.log("Oops! Something went wrong. No joke for you!");
 // Start the Joke Teller Program
 jokeTellerProgramQ;
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 198. Shopping List
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5126,7 +5168,6 @@ console.log("Invalid action. Please enter 'add', 'remove', 'view', or 'exit'.");
 // Start the Shopping List Program
 shoppingListProgram();
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 199. FizzBuzzGame
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5161,7 +5202,7 @@ const length = numberStr.length;
 if (length % 2 !== 0) {
 console.log("Please enter an integer with an even length.");
 return;
-1
+}
 // Swap pairs of adjacent digits
 let swappedNumber =
 for (let i = 0; i < length; i + = 2) {
@@ -5190,7 +5231,7 @@ resultstring + = char.toLowerCase();
 // Convert lowercase to uppercase
 resultstring + = char.toUpperCaseO;
 }
-1
+}
 console.log(' Original String: $ {inputstring}');
 console.log(' String with Changed Capitalization: $ {resultstring}');
 // Example: Change the capitalization of the string "Hello World"
@@ -5199,7 +5240,7 @@ changeCapitalization("Hello World");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 202. Array Halves Swapper
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program takes an array of integers with an even length and swaps its two halves.
+<p>This program takes an array of integers with an even length and swaps its two halves.</p>
 <pre>
 function swapArrayHalves(arr) {
 const length = arr.length;
@@ -5207,7 +5248,7 @@ const length = arr.length;
 if (length % 2 !== 0) {
 console.log("Please provide an array with an even length.");
 return;
-1
+}
 // Calculate the midpoint of the array
 const midpoint = length I 2;
 // Swap the two halves of the array
@@ -5215,10 +5256,10 @@ for (let i = 0; i < midpoint; i++) {
 const temp = arr &lbrack;i&rbrack;;
 arr&lbrack;i&rbrack; = arr&lbrack;midpoint + i&rbrack;;
 arr&lbrack;midpoint + i&rbrack; = temp;
-1
+}
 console.log("Original Array:" + arr.join(","));
 console.logf Array with Swapped Halves:" + arr.join(","));
-// Example: Swap halves of the array &lbrack;1, 2, 3,4, 5, 6&rbrack;
+// Example: Swap halves of the array &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 swapArrayHalves(&lbrack;l, 2, 3,4, 5, 6&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5256,7 +5297,6 @@ console.log(' Sum of Cubes from 1 to $ {upToInteger}: ${cubesSum}' );
 // Example: Compute the sum of cubes up to the integer 5
 sumOfCubes(5);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 205. Maximum Integer for Sum
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5269,7 +5309,7 @@ let maxinteger = 0;
 while (currentSum + maxinteger + 1 < = targetSum) {
 maxlnteger++;
 currentSum + = maxinteger;
-1
+}
 console.log(' Maximum Integer (n) for Sum <= $ {targetSum}: $ {maxinteger}');
 // Example: Find the maximum integer for the sum <=15
 findMaxIntegerForSum(l 5);
@@ -5287,7 +5327,7 @@ const matches = url.match(urlRegex);
 if (’matches) {
 console.log("Invalid URL format.");
 return;
-1
+}
 urlParts.scheme = matches! 1&rbrack;;
 urlParts.domain = matches&lbrack;2&rbrack;;
 urlParts.path = matches! 3&rbrack; 11
@@ -5329,7 +5369,7 @@ simplifiedParts.popO; // Move up one level for
 } else if (part!== " && part !=='.'){
 simplifiedParts.push(part);
 }
-1
+}
 const simplifiedPath = 7' + simplifiedParts.join(7');
 console.log(' Original Absolute Path: ${path}');
 console.log(' Simplified Absolute Path: ${simplifiedPath}');
@@ -5457,8 +5497,8 @@ prefixSums(&lbrack;l, 2, 3,4, 5&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js216">216. Next Prime Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program finds the smallest prime number strictly greater than a given number. It checks numbers one
-by one starting from the given number until it finds the next prime.
+<p>This program finds the smallest prime number strictly greater than a given number. It 
+checks numbers one by one starting from the given number until it finds the next prime.</p>
 <pre>
 function isPrime(num) {
   if (num < 2) return false;
@@ -5481,8 +5521,8 @@ nextPrimeNumber( 10);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js217">217. Reverse Order of Bits</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program reverses the order of bits in an integer. It converts the integer to its binary representation,
-reverses the bits, and converts it back to an integer.
+<p>This program reverses the order of bits in an integer. It converts the integer to its 
+binary representation, reverses the bits, and converts it back to an integer.</p>
 <pre>
 function reverseOrderOfBits(integer) {
   const binaryRepresentation = integer.toString(2).padStart(8, ’O'); // Assuming 8 bits for simplicity
@@ -5500,7 +5540,8 @@ reverseOrderOfBits(234);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js218">218. Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a triangle pattern using ASCII characters and displays it in the console.
+<p>This program generates a triangle pattern using ASCII characters and displays it in the 
+console.</p>
 <pre>
 function generateAsciiTriangle(height) {
   for (let i = 1; i < = height; i++) {
@@ -5512,9 +5553,8 @@ function generateAsciiTriangle(height) {
 const triangleHeight = 5;
 generateAsciiTriangle(triangleHeight);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- 110 more javascript samples -->
+<!-- 264 more javascript samples -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-1">1. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7662,12 +7702,10 @@ height;
 console.log(trapezoidArea(4, 8, 6));
 // Output: 36
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 185. Check if a Number is a Kaprekar Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The isKaprekarNumber function checks if a given number is a Kaprekar
-number.
+<p>The isKaprekarNumber function checks if a given number is a Kaprekar number.</p>
 <pre>
 const isKaprekarNumber = (num) => {
 const square = num ** 2;
@@ -7684,8 +7722,9 @@ console.log(isKaprekarNumber(297));
 console.log(isKaprekarNumber(45));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 186. Calculate the Volume of a Cone
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The coneVolume function calculates the volume of a cone using its base
 radius and height. It applies the formula for the volume of a cone: V = (1/3)
 * π * r² * h, where r is the radius of the base and h is the height of the cone.
@@ -7694,8 +7733,9 @@ const coneVolume = (radius, height) => (1 / 3) * Math.PI * radius ** 2 *
 console.log(coneVolume(5, 10));
 // Output: 261.79938779914943
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 187. Check if a String is a Valid US Phone Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The isValidUSPhoneNumber function uses a regular expression to validate
 US phone numbers.
 <pre>
@@ -7708,10 +7748,10 @@ console.log(isValidUSPhoneNumber("123-456-7890"));
 console.log(isValidUSPhoneNumber("1-800-ABC-DEFG"));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 188. Find the Sum of Digits Raised to the
-Power of their Respective Position (Up to
-1000)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Power of their Respective Position (Up to 1000)
 The sumOfDigitsRaisedToPowerUpToThousand function calculates the
 sum of numbers where each digit raised to the power of its respective
 position is equal to the number itself.
@@ -7728,8 +7768,9 @@ return sum;
 console.log(sumOfDigitsRaisedToPowerUpToThousand());
 // Output: 443839
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 189. Check if a Number is a Carol Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The isCarolNumber function checks if a given number is a Carol number.
 <pre>
 const isCarolNumber = (num) => {
@@ -7743,7 +7784,6 @@ console.log(isCarolNumber(47));
 console.log(isCarolNumber(6));
 // Output: false
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 190. Check if a Number is a Catalan Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7757,8 +7797,9 @@ console.log(isCatalanNumber(5));
 console.log(isCatalanNumber(10));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 191. Calculate the Volume of a Cuboid
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The cuboidVolume function calculates the volume of a cuboid given its
 length, width, and height.
 <pre>
@@ -7766,10 +7807,10 @@ const cuboidVolume = (length, width, height) => length * width * height;
 console.log(cuboidVolume(5, 10, 8));
 // Output: 400
 </pre>
-
-192. Check if a Number is a Dudeney
-Number
-The isDudeneyNumber function checks if a number is a Dudeney number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+192. Check if a Number is a Dudeney Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The isDudeneyNumber function checks if a number is a Dudeney number.</p>
 <pre>
 const isDudeneyNumber = (num) => num === sumOfDigitsCube(num);
 console.log(isDudeneyNumber(512));
@@ -7777,8 +7818,9 @@ console.log(isDudeneyNumber(512));
 console.log(isDudeneyNumber(64));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 193. Generate a Random Color (Hexadecimal Format)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Generate a random color in hexadecimal format (#RRGGBB).
 <pre>
 const randomColorHex = () => `#${Math.floor(Math.random() *
@@ -7786,8 +7828,9 @@ const randomColorHex = () => `#${Math.floor(Math.random() *
 console.log(randomColorHex());
 // Output: "#92b008"
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 194. Calculate the Area of a Circle Sector
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculate the area of a circle sector given the radius and the central angle in
 degrees.
 <pre>
@@ -7795,39 +7838,39 @@ const circleSectorArea = (radius, angle) => (angle / 360) * Math.PI * radius ** 
 console.log(circleSectorArea(5, 90));
 // Output: 11.780972450961725
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 195. Calculate the Area of a Regular Polygon
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Calculate the area of a regular polygon given the side length and the
-number of sides.
+<p>Calculate the area of a regular polygon given the side length and the number of sides.</p>
 <pre>
 const regularPolygonArea = (sideLength, numOfSides) => (numOfSides *
 sideLength ** 2) / (4 * Math.tan(Math.PI / numOfSides));
 console.log(regularPolygonArea(5, 6));
 // Output: 64.9519052838329
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 196. Remove Duplicates from Array
-Remove duplicates from an array while preserving the order of the
-elements.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Remove duplicates from an array while preserving the order of the elements.</p>
 <pre>
 const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
 console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Output: &lbrack; 1, 2, 3,
 4, 5, 6 &rbrack;
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 197. Calculate the Area of an Ellipse
-Calculate the area of an ellipse using its semi-major axis length (a) and
-semi-minor axis length (b).
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the area of an ellipse using its semi-major axis length (a) and semi-minor 
+axis length (b).</p>
 <pre>
 const ellipseArea = (a, b) => Math.PI * a * b;
 console.log(ellipseArea(5, 10));
 // Output: 157.07963267948966
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 198. Check if a Number is a Leyland Number
-Check if a given number is a Leyland number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a Leyland number.</p>
 <pre>
 const isLeylandNumber = (num) => {
 let found = false;
@@ -7847,8 +7890,9 @@ console.log(isLeylandNumber(30));
 console.log(isLeylandNumber(100));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 199. Generate a Random UUID
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Generate a random Universally Unique Identifier (UUID).
 <pre>
 const randomUUID = () => {
@@ -7862,7 +7906,6 @@ return v.toString(16);
 console.log(randomUUID());
 // Output: "a0f768f5-6bf2-4f6b-a512-c9121ea1b44a"
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 200. Check if a String is a Valid IPv6 Address
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7877,18 +7920,19 @@ console.log(isValidIPv6("2001:0db8:85a3::8a2e:0370:7334"));
 console.log(isValidIPv6("256.0.0.0"));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 201. Calculate the Area of a Parallelogram
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculate the area of a parallelogram using the given base and height.
 <pre>
 const parallelogramArea = (base, height) => base * height;
 console.log(parallelogramArea(5, 10));
 // Output: 50
 </pre>
-
-202. Check if a String is a Valid MAC
-Address
-Check if a given string is a valid MAC address.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+202. Check if a String is a Valid MAC Address
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given string is a valid MAC address.</p>
 <pre>
 const isValidMACAddress = (mac) => /^(&lbrack;0-9A-Fa-f&rbrack;{2}&lbrack;:-&rbrack;){5}(&lbrack;0-9A-Fa-
 f&rbrack;{2})$/.test(mac);
@@ -7897,10 +7941,11 @@ console.log(isValidMACAddress("00:1A:2B:3C:4D:5E"));
 console.log(isValidMACAddress("00:1A:2B:3C:4D"));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 203. Convert RGB to HSL (Hue, Saturation, Lightness)
-Convert an RGB color value to its corresponding HSL representation (Hue,
-Saturation, Lightness).
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Convert an RGB color value to its corresponding HSL representation (Hue, Saturation, 
+Lightness).</p>
 <pre>
 const rgbToHSL = (r, g, b) => {
 &lbrack;r, g, b&rbrack; = &lbrack;r, g, b&rbrack;.map(val => val / 255);
@@ -7917,9 +7962,10 @@ console.log(rgbToHSL(255, 0, 0)); // Output: { h: 0, s: 100, l: 50 }
 console.log(rgbToHSL(0, 255, 0)); // Output: { h: 120, s: 100, l: 50 }
 console.log(rgbToHSL(0, 0, 255)); // Output: { h: 240, s: 100, l: 50 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 204. Check if a Number is a Pandigital Number
-Check if a given number is a pandigital number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a pandigital number.</p>
 <pre>
 const isPandigitalNumber = (num) => {
 const numStr = String(num);
@@ -7934,7 +7980,6 @@ console.log(isPandigitalNumber(987654321));
 console.log(isPandigitalNumber(1023456789));
 // Output: false
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 205. Calculate the Sum of Proper Divisors of a Number
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7957,25 +8002,28 @@ console.log(sumOfProperDivisors(28));
 console.log(sumOfProperDivisors(12));
 // Output: 16
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 206. Find the Least Common Multiple (LCM) of an Array of Numbers
-Find the least common multiple (LCM) of an array of numbers.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Find the least common multiple (LCM) of an array of numbers.</p>
 <pre>
 const lcmArray = (arr) => arr.reduce((lcm, num) => lcm * num /
 gcdArray(arr), 1);
 console.log(lcmArray(&lbrack;2, 3, 4&rbrack;));
 // Output: 12
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 207. Calculate the Sum of Squares of First n Natural Numbers
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculate the sum of the squares of the first n natural numbers.
 <pre>
 const sumOfSquares = (n) => (n * (n + 1) * (2 * n + 1)) / 6;
 console.log(sumOfSquares(5));
 // Output: 55
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 208. Check if a Number is a Powerful Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Check if a given number is a powerful number.
 <pre>
 const isPowerfulNumber = (num) => {
@@ -7987,8 +8035,9 @@ console.log(isPowerfulNumber(16));
 console.log(isPowerfulNumber(36));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 209. Find the Product of Digits of a Number
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Find the product of the digits of a given number.
 const productOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((product, digit)
 => product * Number(digit), 1);
@@ -8017,17 +8066,19 @@ console.log(isPracticalNumber(12));
 console.log(isPracticalNumber(14));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 211. Calculate the Sum of Cubes of First n Natural Numbers
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculate the sum of the cubes of the first n natural numbers.
 <pre>
 const sumOfCubes = (n) => Math.pow((n * (n + 1)) / 2, 2);
 console.log(sumOfCubes(5));
 // Output: 225
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 212. Check if a Number is a Strange Number
-Check if a given number is a strange number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a strange number.</p>
 <pre>
 const isStrangeNumber = (num) => {
 const factors = primeFactors(num);
@@ -8041,9 +8092,10 @@ console.log(isStrangeNumber(22));
 console.log(isStrangeNumber(20));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 213. Check if a Number is a Tau Number
-Check if a given number is a Tau number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a Tau number.</p>
 <pre>
 const isTauNumber = (num) => {
 const factors = primeFactors(num);
@@ -8057,9 +8109,10 @@ console.log(isTauNumber(9));
 console.log(isTauNumber(25));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 214. Generate a Random Alphanumeric String
-Generate a random alphanumeric string of a given length.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Generate a random alphanumeric string of a given length.</p>
 <pre>
 const randomAlphanumericString = (length) => {
 const characters =
@@ -8075,7 +8128,6 @@ return result;
 console.log(randomAlphanumericString(8));
 // Output: "Yw83XmLb"
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 215. Calculate the Area of a Regular Hexagon
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8086,9 +8138,10 @@ sideLength ** 2) / 2;
 console.log(regularHexagonArea(5));
 // Output: 64.9519052838329
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 216. Calculate the Sum of Divisors of a Number
-Calculate the sum of divisors of a given number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the sum of divisors of a given number.</p>
 <pre>
 const sumOfDivisors = (num) => sumOfArray(divisors(num));
 console.log(sumOfDivisors(28));
@@ -8204,9 +8257,10 @@ console.log(isHarshadSmithNumber(22));
 console.log(isHarshadSmithNumber(10));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 227. Check if a Number is a Perfect Power
-Check if a given number is a perfect power.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a perfect power.</p>
 <pre>
 const isPerfectPower = (num) => {
 for (let i = 2; i * i <= num; i++) {
@@ -8227,10 +8281,10 @@ console.log(isPerfectPower(64));
 console.log(isPerfectPower(25));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 228. Calculate the Sum of Digits Raised to Their Own Power
-Calculate the sum of digits raised to their own power for a given number
-and power.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the sum of digits raised to their own power for a given number and power.</p>
 <pre>
 const sumOfDigitsToPower = (num, power) =>
 sumOfDigitsRaisedToPower(num, power);
@@ -8239,9 +8293,10 @@ console.log(sumOfDigitsToPower(123, 3));
 console.log(sumOfDigitsToPower(4150, 5));
 // Output: 4150
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 229. Check if a Number is a Dudeney Number
-Check if a given number is a Dudeney number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a Dudeney number.</p>
 <pre>
 const isDudeneyNumber = (num) => Math.cbrt(num) ===
 sumOfDigits(num);
@@ -8250,9 +8305,8 @@ console.log(isDudeneyNumber(512));
 console.log(isDudeneyNumber(27));
 // Output: false
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-230. Calculate the Area of a Regular Pentagon
+<h2 id="js-230">230. Calculate the Area of a Regular Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculate the area of a regular pentagon using its side length.
 <pre>
@@ -8261,17 +8315,19 @@ const regularPentagonArea = (sideLength) => (1 / 4) * Math.sqrt(5 * (5 + 2
 console.log(regularPentagonArea(5));
 // Output: 43.01193501472417
 </pre>
-
-231. Calculate the Volume of a Pyramid
-Calculate the volume of a pyramid using its base area and height.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-231">231. Calculate the Volume of a Pyramid</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the volume of a pyramid using its base area and height.</p>
 <pre>
 const pyramidVolume = (baseArea, height) => (1 / 3) * baseArea * height;
 console.log(pyramidVolume(25, 10));
 // Output: 83.33333333333333
 </pre>
-
-232. Check if a Number is a Wedderburn-Etherington Number
-Check if a given number is a Wedderburn-Etherington number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-232">232. Check if a Number is a Wedderburn-Etherington Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a Wedderburn-Etherington number.</p>
 <pre>
 const isWedderburnEtheringtonNumber = (num) => {
 const primes = primeFactors(num);
@@ -8284,17 +8340,19 @@ console.log(isWedderburnEtheringtonNumber(6));
 console.log(isWedderburnEtheringtonNumber(12));
 // Output: false
 </pre>
-
-233. Calculate the Surface Area of a Cube
-Calculate the surface area of a cube using its side length.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-233">233. Calculate the Surface Area of a Cube</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the surface area of a cube using its side length.</p>
 <pre>
 const cubeSurfaceArea = (sideLength) => 6 * sideLength ** 2;
 console.log(cubeSurfaceArea(5));
 // Output: 150
 </pre>
-
-234. Check if a Number is a Pluperfect Number
-Check if a given number is a pluperfect number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-234">234. Check if a Number is a Pluperfect Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a pluperfect number.</p>
 <pre>
 const isPluperfectNumber = (num) => num ===
 sumOfDivisors(sumOfDivisors(num)) - num;
@@ -8303,36 +8361,38 @@ console.log(isPluperfectNumber(28));
 console.log(isPluperfectNumber(20));
 // Output: false
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-235. Calculate the Area of a Regular Octagon
+<h2 id="js-235">235. Calculate the Area of a Regular Octagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Calculate the area of a regular octagon using its side length.
+<p>Calculate the area of a regular octagon using its side length.</p>
 <pre>
 const regularOctagonArea = (sideLength) => 2 * (1 + Math.sqrt(2)) *
 sideLength ** 2;
 console.log(regularOctagonArea(5));
 // Output: 86.60254037844387
 </pre>
-
-236. Check if a Number is a Repunit Number
-Check if a given number is a repunit number.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-236">236. Check if a Number is a Repunit Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given number is a repunit number.</p>
 <pre>
 const isRepunitNumber = num => /^1+$/.test(num.toString());
 console.log(isRepunitNumber(111)); // Output: true
 console.log(isRepunitNumber(11)); // Output: false
 </pre>
-
-237. Calculate the Volume of a Ellipsoid
-Calculate the volume of an ellipsoid using its semi-axes lengths.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-237">237. Calculate the Volume of a Ellipsoid</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the volume of an ellipsoid using its semi-axes lengths.</p>
 <pre>
 const ellipsoidVolume = (a, b, c) => (4 / 3) * Math.PI * a * b * c;
 console.log(ellipsoidVolume(5, 3, 2));
 // Output: 125.66370614359172
 </pre>
-
-238. Check if a String is a Valid URL (Alternative Approach)
-Check if a given string is a valid URL using an alternative approach.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-238">238. Check if a String is a Valid URL (Alternative Approach)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given string is a valid URL using an alternative approach.</p>
 <pre>
 const isValidURLAlt = (url) => /^(ftp|http|https):\/\/&lbrack;^ "&rbrack;+$/.test(url);
 console.log(isValidURLAlt("https://www.example.com"));
@@ -8340,10 +8400,10 @@ console.log(isValidURLAlt("https://www.example.com"));
 console.log(isValidURLAlt("invalid url"));
 // Output: false
 </pre>
-
-239. Check if a String is a Valid Tax
-Identification Number (TIN)
-Check if a given string is a valid Tax Identification Number (TIN).
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-239">239. Check if a String is a Valid Tax Identification Number (TIN)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given string is a valid Tax Identification Number (TIN).</p>
 <pre>
 const isValidTIN = (tin) => /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
 console.log(isValidTIN("AB123456CD"));
@@ -8351,12 +8411,10 @@ console.log(isValidTIN("AB123456CD"));
 console.log(isValidTIN("invalid tin"));
 // Output: false
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-240. Check if a String is a Valid ISBN (International Standard Book Number)
+<h2 id="js-240">240. Check if a String is a Valid ISBN (International Standard Book Number)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Check if a given string is a valid International Standard Book Number
-(ISBN).
+<p>Check if a given string is a valid International Standard Book Number (ISBN).</p>
 <pre>
 const isValidISBN = (isbn) => /^(?:\d{9}&lbrack;\dX&rbrack;|(?:\d{3}-){2}\d{1}
 &lbrack;\dX&rbrack;)$/.test(isbn);
@@ -8365,9 +8423,10 @@ console.log(isValidISBN("123456789"));
 console.log(isValidISBN("invalid isbn"));
 // Output: false
 </pre>
-
-241. Check if a String is a Valid IP Address
-Check if a given string is a valid IP address.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-241">241. Check if a String is a Valid IP Address</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given string is a valid IP address.</p>
 <pre>
 const isValidIPAddress = (ip) => /^((25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})\.){3}
 (25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})$/.test(ip);
@@ -8376,70 +8435,74 @@ console.log(isValidIPAddress("192.168.1.1"));
 console.log(isValidIPAddress("invalid ip"));
 // Output: false
 </pre>
-
-242. Reverse a String (Using Recursion)
-Reverse a string using a recursive approach.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-242">242. Reverse a String (Using Recursion)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Reverse a string using a recursive approach.</p>
 <pre>
 const reverseStringRecursive = str => str === '' ? '' :
 reverseStringRecursive(str.substr(1)) + str.charAt(0);
 console.log(reverseStringRecursive('hello')); // Output: 'olleh'
 </pre>
-
-243. Count the Occurrences of Each Element in an Array
-Count the occurrences of each element in a given array and return the
-counts in an object.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-243">243. Count the Occurrences of Each Element in an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Count the occurrences of each element in a given array and return the counts in an object.</p>
 <pre>
 const countOccurrences = arr => arr.reduce((acc, curr) => (acc&lbrack;curr&rbrack; =
 (acc&lbrack;curr&rbrack; || 0) + 1, acc), {});
 console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;)); // Output: { '1': 3, '2': 2,
 '3': 1, '4': 1 }
 </pre>
-
-244. Check if Two Arrays are Equal (Shallow Comparison)
-Check if two arrays are equal through a shallow comparison of their
-elements.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-244">244. Check if Two Arrays are Equal (Shallow Comparison)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if two arrays are equal through a shallow comparison of their elements.</p>
 <pre>
 const arraysAreEqual = (arr1, arr2) => arr1.length === arr2.length &&
 arr1.every((val, index) => val === arr2&lbrack;index&rbrack;);
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 3&rbrack;)); // Output: true
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;)); // Output: false
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-245. Find the Minimum Value in an Array
+<h2 id="js-245">245. Find the Minimum Value in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Find the minimum value in a given array of numbers.
+<p>Find the minimum value in a given array of numbers.</p>
 <pre>
 const findMinValue = arr => Math.min(...arr);
 console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;)); // Output: 1
 </pre>
-
-246. Flatten an Array of Nested Arrays (Using concat)
-Flatten an array of nested arrays using the concat method.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-246">246. Flatten an Array of Nested Arrays (Using concat)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Flatten an array of nested arrays using the concat method.</p>
 <pre>
 const flattenArray = arr => &lbrack;&rbrack;.concat(...arr);
-console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lbrack;5, 6&rbrack;&rbrack;)); // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
+console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 
+  4&rbrack;, &lbrack;5, 6&rbrack;&rbrack;)); // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
-
-247. Find the Average of Numbers in an Array
-Calculate the average of numbers in a given array.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-247">247. Find the Average of Numbers in an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the average of numbers in a given array.</p>
 <pre>
 const findAverage = arr => arr.reduce((sum, num) => sum + num, 0) /
 arr.length;
 console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 </pre>
-
-248. Sum the Squares of Numbers in an Array
-Calculate the sum of the squares of numbers in a given array.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-248">248. Sum the Squares of Numbers in an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the sum of the squares of numbers in a given array.</p>
 <pre>
 const sumSquares = arr => arr.reduce((sum, num) => sum + num ** 2, 0);
 console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 </pre>
-
-249. Check if a String is a Palindrome
-(Ignoring Non-Alphanumeric Characters)
-Check if a given string is a palindrome, ignoring non-alphanumeric
-characters and considering case-insensitivity.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-249">249. Check if a String is a Palindrome (Ignoring Non-Alphanumeric Characters)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given string is a palindrome, ignoring non-alphanumeric characters and 
+considering case-insensitivity.</p>
 <pre>
 const isPalindromeIgnoringNonAlphaNumeric = str => {
 const cleanedStr = str.replace(/&lbrack;^a-zA-Z0-9&rbrack;/g, '').toLowerCase();
@@ -8448,11 +8511,10 @@ return cleanedStr === cleanedStr.split('').reverse().join('');
 console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a
 canal, Panama!")); // Output: true
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-250">250. Shuffle an Array (Using Fisher-Yates Algorithm)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Shuffle the elements of an array using the Fisher-Yates shuffle algorithm.
+<p>Shuffle the elements of an array using the Fisher-Yates shuffle algorithm.</p>
 <pre>
 const shuffleArrayFisherYates = arr => {
 for (let i = arr.length - 1; i > 0; i--) {
@@ -8464,9 +8526,10 @@ return arr;
 console.log(shuffleArrayFisherYates(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: &lbrack;3, 1, 4, 2,
 5&rbrack; (randomly shuffled)
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-251">251. Sort an Array of Objects by a Specific Property</h2>
-Sort an array of objects based on a specific property value.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Sort an array of objects based on a specific property value.</p>
 <pre>
 const sortByProperty = (arr, prop) => 
   arr.sort((a, b) => 
@@ -8481,17 +8544,19 @@ console.log(sortByProperty(data, 'age'));
 // { name: 'Alice', age: 25 }, 
 // { name: 'Carol', age: 30 }&rbrack;
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-252">252. Reverse Words in a Sentence</h2>
-Reverse words in a sentence.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Reverse words in a sentence.</p>
 <pre>
 const originalSentence = "Hello world, how are you?";
 const reversedSentence = reverseWords(originalSentence);
 console.log(reversedSentence); // Output: "you? are how world, Hello"
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-253">253. Find the Median of Numbers in an Array</h2>
-Find the median value of numbers in a given array.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Find the median value of numbers in a given array.</p>
 <pre>
 const findMedian = arr => {
 const sortedArr = arr.sort((a, b) => a - b);
@@ -8501,19 +8566,18 @@ sortedArr&lbrack;middle&rbrack;) / 2 : sortedArr&lbrack;middle&rbrack;;
 };
 console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;)); // Output: 3
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-254">254. Count the Vowels in a String</h2>
-Count the number of vowels in a given string.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Count the number of vowels in a given string.</p>
 <pre>
 const countVowels = str => (str.match(/&lbrack;aeiou&rbrack;/gi) || &lbrack;&rbrack;).length;
 console.log(countVowels('Hello, how are you?')); // Output: 7
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-255">255. Check if a Number is a Tribonacci Number (Alternative Approach)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Check if a given number is a Tribonacci number using an alternative
-approach.
+<p>Check if a given number is a Tribonacci number using an alternative approach.</p>
 <pre>
 const isTribonacciNumberAlt = num => &lbrack;0, 0,
 1&rbrack;.concat(&lbrack;...Array(num)&rbrack;).slice(3).map((_, i, arr) => 
@@ -8522,9 +8586,10 @@ arr&lbrack;i - 2&rbrack; +
 arr&lbrack;i - 1&rbrack;).includes(num);
 console.log(isTribonacciNumberAlt(21)); // Output: true
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-256">256. Calculate the Fibonacci Sequence (Up to N Terms)</h2>
-Generate the Fibonacci sequence up to a given number of terms n.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Generate the Fibonacci sequence up to a given number of terms n.</p>
 <pre>
 const fibonacciSequence = n => 
   &lbrack;...Array(n)&rbrack;.reduce((fibSeq, _, i) =>
@@ -8533,26 +8598,29 @@ const fibonacciSequence = n =>
 console.log(fibonacciSequence(10));
 // Output: &lbrack;0, 1, 1, 2, 3, 5, 8, 13, 21, 34&rbrack;
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-257">257. Find the ASCII Value of a Character</h2>
-Get the ASCII value of a given character.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Get the ASCII value of a given character.</p>
 <pre>
 const getAsciiValue = char => char.charCodeAt(0);
 console.log(getAsciiValue('A')); // Output: 65
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-258">258. Check if a String is an Isogram (No Repeating Characters)</h2>
-Check if a given string is an isogram, meaning it has no repeating
-characters (case-insensitive).
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given string is an isogram, meaning it has no repeating characters 
+(case-insensitive).</p>
 <pre>
 const isIsogram = str => new Set(str.toLowerCase()).size === str.length;
 console.log(isIsogram('hello')); // Output: false
 console.log(isIsogram('world')); // Output: true
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-259">259. Calculate the Hamming Distance of Two Strings (Equal Length)</h2>
-Calculate the Hamming distance between two equal-length strings, which is
-the count of differing characters at corresponding positions.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the Hamming distance between two equal-length strings, which is
+the count of differing characters at corresponding positions.</p>
 <pre>
 const hammingDistance = (str1, str2) => 
 &lbrack;...str1&rbrack;.reduce((distance, char, i) => 
@@ -8562,18 +8630,18 @@ console.log(hammingDistance('karolin', 'kathrin')); // Output: 3
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-260">260. Calculate the Distance between Two Points in a 2D Plane</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Calculate the Euclidean distance between two points in a 2D plane using
-the Pythagorean theorem.
+<p>Calculate the Euclidean distance between two points in a 2D plane using the 
+Pythagorean theorem.</p>
 <pre>
 const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) => 
   Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
   console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));
   // Output: 5 (Pythagorean triple: 3^2 + 4^2 = 5^2)
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-261">261. Check if a String is a Positive Number (No Sign or Decimal Allowed)</h2>
-Check if a given string represents a positive integer without any sign or
-decimal point.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Check if a given string represents a positive integer without any sign or decimal point.</p>
 <pre>
 const isPositiveNumber = str => /^&lbrack;0-9&rbrack;+$/.test(str);
 console.log(isPositiveNumber('123'));
@@ -8581,18 +8649,20 @@ console.log(isPositiveNumber('123'));
 console.log(isPositiveNumber('-123'));
 // Output: false
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-262">262. Find the First Non-Repeating Character in a String</h2>
-Find and return the first non-repeating character in a given string.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Find and return the first non-repeating character in a given string.</p>
 <pre>
-const findFirstNonRepeating = str => &lbrack;...str&rbrack;.find(char => str.indexOf(char)
-=== str.lastIndexOf(char));
+const findFirstNonRepeating = str => &lbrack;...str&rbrack;.find(char => 
+  str.indexOf(char) === str.lastIndexOf(char));
 console.log(findFirstNonRepeating('hello'));
 // Output: 'h'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-263">263. Calculate the Area of a Kite</h2>
-Calculate the area of a kite using the lengths of its diagonals.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Calculate the area of a kite using the lengths of its diagonals.</p>
 <pre>
 const areaOfKite = (d1, d2) => 0.5 * d1 * d2;
 console.log("Area of the kite:", areaOfKite(10, 6)); // Output: 30
