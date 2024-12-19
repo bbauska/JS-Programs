@@ -4625,6 +4625,7 @@ if (isPadovanNumber(padovanNumber)) {
 console.log(' ${padovanNumber} is a Padovan Number!');
 } else {
 console.log(' ${padovanNumber} is not a Padovan Number.');
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js168">168. Calculate the Area of a Koch Snowflake</h2>
@@ -4635,8 +4636,9 @@ triangles to each side of the existing triangles.
 <pre>
 function calculateKochSnowflakeArea(sideLength, iterations) {
 const sqrt3 = Math.sqrt(3);
-const area = (4 * sqrt3 / 5) * Math.pow((sideLength / 3), 2) * Math.pow(3 I 2, iterations);
+const area = (4 &ast; sqrt3 / 5) * Math.pow((sideLength / 3), 2) &ast; Math.pow(3 / 2, iterations);
 return area;
+}
 // Example usage
 const sideLength = 100; // Replace with the side length of the original equilateral triangle
 const iterations = 4; // Replace with the number of iterations
@@ -4660,6 +4662,7 @@ return ‘Goodbye!1;
 } else {
 return 'I didnVt understand that. Can you please rephrase?';
 }
+}
 function startChat() {
 const userinput = prompt('You:');
 if (userinput !== null) {
@@ -4668,6 +4671,8 @@ console.log('Chatbot:‘, response);
 startChatO; // Continue the conversation
 } else {
 console Jog('Goodbye!');
+}
+}
 console.logfChatbot: Hello! How can I help you today?1);
 startChatQ;
 </pre>
@@ -4685,6 +4690,7 @@ const hexRed = toHex(red);
 const hexGreen = toHex(green);
 const hexBlue = toHex(blue);
 return ' #$ {hexRed} $ {hexGreen} $ {hexBlue}';
+}
 // Example usage
 const redValue = prompt('Enter the Red value (0-255):');
 const greenValue = promptfEnter the Green value (0-255):');
@@ -4705,6 +4711,7 @@ console.log(' Counter: $ {count}');
 function decrementCounter() {
 count-;
 console.log(' Counter: $ {count}');
+}
 function resetCounter() {
 count = 0;
 console.log("Counter reset to 0");
@@ -4729,12 +4736,13 @@ displayTimeLeft();
 bombTimer = setTimeout(() = > {
 console.log("BOOM! The bomb exploded. Game over!");
 clearlnterval(countdownlnterval);
-}, timeLeft* 1000);
+}, timeLeft &ast; 1000);
 }
 function defuseBomb() {
 clearTimeout(bombTimer);
 console.log("Whew! You successfully defused the bomb!");
 clearlnterval(countdownlnterval);
+}
 function displayTimeLeft() {
 countdowninterval = setlnterval(() = > {
 console.clearO;
@@ -4744,7 +4752,9 @@ if (timeLeft < 0) {
 clearTimeout(bombTimer);
 console.logC'BOOM! The bomb exploded. Game over!");
 clearlnterval(countdownlnterval);
+}
 }, 1000);
+}
 // Example usage
 startBombO;
 // Uncomment the line below to simulate successfully defusing the bomb
@@ -4757,15 +4767,17 @@ Generating IP addresses programmatically can be done using a programming languag
 Below is a simple example of an IP address generator in JavaScript. Note that this example generates random
 IP addresses for educational purposes and should not be used for any malicious activities.
 <pre>
-function generateRandomlpO {
-const octet = () => Math.floor(Math.random() * 256);
-return ' ${octet()}.${octet()}.${octet()}.${octet()}';
+function generateRandomlp() {
+const octet = () => Math.floor(Math.random() &ast; 256);
+return '${octet()}.${octet()}.${octet()}.${octet()}';
+}
 function generateMultipleRandomlps(count) {
 const ipAddresses = &lbrack;&rbrack;;
 for (let i = 0; i < count; i++) {
-ipAddresses.push(generateRandomlpO);
+ipAddresses.push(generateRandomlp());
 }
 return ipAddresses;
+}
 // Example: Generate and print 5 random IP addresses
 const numberOflps = 5;
 const randomlps = generateMultipleRandomlps(numberOflps);
@@ -4794,10 +4806,10 @@ set!nterval(updateClock, 1000);
 <p>This program generates a random number between 1 and 10 and displays it in the console.</p>
 <pre>
 function generateRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() &ast; (max - min + 1)) + min;
+  }
   const randomNumber = generateRandomNumber(l, 10);
   console.log("Random Number:", randomNumber);
-}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js176">176. Simple JavaScript Quiz</h2>
@@ -4807,6 +4819,7 @@ the user for answers and provides feedback in the console.</p>
 <pre>
 function runQuiz() {
 const questions = &lbrack;
+{
 question: "What is the capital of France?",
 options: &lbrack;"Berlin", "Madrid", "Paris", "Rome"&rbrack;,
 correctAnswer: "Paris"
@@ -4820,19 +4833,23 @@ correctAnswer: "JavaScript"
 question: "What is the largest mammal?",
 options: &lbrack;"Elephant", "Whale Shark", "Blue Whale", "Giraffe"&rbrack;,
 correctAnswer: "Blue Whale"
+}
 &rbrack;;
 let score = 0;
 for (const question of questions) {
 console.log(question.question);
 for (let i = 0; i < question.options.length; i+ +) {
-console.log(' ${i + 1}. ${question.options&lbrack;i&rbrack;}');
+console.log('${i + 1}. ${question.options&lbrack;i&rbrack;}');
+}
 const userAnswerlndex = prompt("Enter the number of your answer:");
 const user Answer = question.options&lbrack;user Answerindex -1&rbrack;;
 if (userAnswer = = = question.correctAnswer) {
 console.log("Correct!\n");
 score++;
 } else {
-console.log(' Wrong! The correct answer is $ {question.correct Ans wer}\n');
+console.log(' Wrong! The correct answer is $ {question.correct Answer}\n');
+}
+}
 console.log(' Your final score: $ {score} out of ${questions.length}');
 }
 // Run the quiz
@@ -4859,9 +4876,12 @@ console.log(choices&lbrack;currentChoice&rbrack;.outcome);
 if (userChoice.toLowerCaseO = = = "exit") {
 console.log("You exit the adventure. Goodbye!");
 break;
+}
 currentchoice = choices.findlndex(choice => choice.next = = = userChoice.toLowerCaseO);
 if (currentchoice = = = -1) {
 console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
+}
+}
 }
 // Start the text-based RPG adventure
 textRPGAdventureQ;
@@ -4873,7 +4893,8 @@ This program simulates rolling a six-sided die, providing a random result betwee
 <pre>
 function rollDice() {
 const result = Math.floor(Math.random() * 6) + 1;
-console.log(' You rolled a $ {result}');
+console.log('You rolled a ${result}');
+}
 // Simulate rolling the dice
 rollDiceQ;
 </pre>
@@ -4904,6 +4925,8 @@ for (let value of data) {
 const barLength = Math.round((value / maxValue) * 20);
 const bar = '■'.repeat(barLength).padEnd(20,'');
 console.log(' $ {value} I ${bar}');
+}
+}
 // Example: Generate a bar chart for data
 const chartData = &lbrack;5,8,12,4,6&rbrack;;
 generateBarChart(chartData);
@@ -4917,6 +4940,7 @@ function generateRightAngledTriangle(height) {
 for (let i = 1; i < = height; i++) {
 const stars = '*'.repeat(i);
 console.log(stars);
+}
 }
 // Example: Generate a right-angled triangle with a height of 5
 const triangleHeight = 5;
@@ -4935,6 +4959,7 @@ console.log(' Result: $ {result}');
 } catch (error) {
 console.errorCError:1, error.message);
 }
+}
 // Example: Evaluate a mathematical expression
 const userinput = promptfEnter a mathematical expression:');
 textBasedCalculator(userlnput);
@@ -4949,6 +4974,7 @@ for (let i = 1; i < = height; i++) {
 const spaces = ' '.repeat(height - i);
 const numbers = Array.from({ length: i}, (_, index) => index + l).join(' ');
 console.log(spaces + numbers);
+}
 }
 // Example: Generate a number pyramid with a height of 4
 const pyramidHeight = 4;
@@ -4993,14 +5019,17 @@ const userGuess = prompt("Enter a letter:").toLowerCase();
 if (’userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length ’ = = 1) {
 console.log("Invalid input. Please enter a single letter.");
 continue;
+}
 if (guessedLetters.includes(userGuess)) {
 console.log("You already guessed that letter. Try again.");
 continue;
+}
 guessedLetters.push(userGuess);
 if (selectedWord.includes(userGuess)) {
 for (let i = 0; i < selectedWord.length; i++) {
 if (selectedWord&lbrack;i&rbrack; = = = userGuess) {
 guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i + 1);
+}
 }
 if (!guessedWord.includes("_")) {
 console.log(' Congratulations! You guessed the word: ${selectedWord}');
@@ -5011,6 +5040,10 @@ console.log("Incorrect guess. Try again.");
 remainingAttempts--;
 if (remainingAttempts = = = 0) {
 console.log(' Out of attempts. The word was: ${selectedWord}');
+}
+}
+}
+}
 // Start the Hangman game
 hangmanGameO;
 </pre>
@@ -5036,8 +5069,10 @@ if (secondsRemaining = = = 0) {
 console.log("Countdown completed!");
 clearlnterval(intervalld);
 } else {
-secondsRemaining—;
-L 1000);
+secondsRemaining--;
+}
+}, 1000);
+}
 // Start the countdown timer
 countdownTimer();
 </pre>
@@ -5063,6 +5098,7 @@ console.log(' One day, it met a $ {animal} that made a $ {sound} noise.');
 console.log("Everyone in the neighborhood heard the noise and started to join the fun!");
 console.log("And they all lived happily ever after.");
 console.log("The end.");
+}
 // Start the Mad Libs game
 madLibsGameO;
 </pre>
@@ -5093,7 +5129,10 @@ return;
 console.log("Too low. Try again!");
 } else {
 console.log("Too high. Try again!");
+}
+}
 console.log(' Sorry, you've run out of attempts. The number was ${secretNumber}.');
+}
 // Start the Guess the Number Game
 guessTheNumberGameO;
 </pre>
@@ -5116,7 +5155,7 @@ while (remainingAttempts > 0 && molesToWhack > 0) {
 const holes = Array.from({ length: totalHoles },()=> emptyHoleSymbol);
 const randomMolelndex = Math.floor(Math.random() * totalHoles);
 holes&lbrack;randomMoleIndex&rbrack; = moleSymbol;
-console.log(' \nHoles: ${holes.join("")}');
+console.log('\nHoles: ${holes.join("")}');
 const userWhacklndex = parse!nt(prompt("Enter the index to whack the mole:"), 10);
 if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
 console.log(' Invalid input. Please enter a number between 0 and ${totalHoles -1}.');
@@ -5128,6 +5167,7 @@ score++;
 molesToWhack—;
 } else {
 console.log("Missed! No mole at that hole.");
+}
 remainingAttempts—;
 console.log(' Score: $ {score} I Attempts remaining: $ {remainingAttempts}');
 }
@@ -5135,6 +5175,7 @@ if (molesToWhack = = = 0) {
 console.log("Congratulations! You whacked all the moles!");
 } else {
 console.log("Game over. You ran out of attempts.");
+}
 }
 // Start the Whack-a-Mole Game
 whackAMoleGameQ;
@@ -5163,6 +5204,7 @@ console.log("Correct guess’ Well done’");
 correctGuesses++;
 } else {
 console.log("Wrong guess. Better luck next time!");
+}
 totalGuesses++;
 const play Again = confirmf'Do you want to toss the coin again?");
 if (!playAgain) {
@@ -5191,6 +5233,7 @@ fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibon
 }
 console.log(' Fibonacci numbers up to $ {limit}:' );
 console.log(fibonacciNumbers.slice(0, limit + 1));
+}
 // Start the Fibonacci Number Generator
 fibonacciNumberGeneratorO;
 </pre>
@@ -5215,6 +5258,8 @@ console.log("Correct! Well done!");
 score++;
 } else {
 console.log(' Wrong! The correct answer is: ${correctAnswer}');
+}
+}
 console.log(' Quiz complete! Your final score is: $ {score} out of ${maxQuestions}');
 }
 // Start the Math Quiz Game
@@ -5234,18 +5279,22 @@ console.log("Guess the color based on the RGB values.");
 for (let attempts = 1; attempts <= maxAttempts; attempts++) {
 const randomColor = colors&lbrack;Math.floor(Math.random() * colors.length)&rbrack;;
 const rgb Values = generateRandomRGBValues();
-console.log(' RGB: ${rgbValues.join(",")}');
+console.log('RGB:${rgbValues.join(",")}');
 const userGuess = promptf'Enter your color guess:").toLowerCase();
 if (!colors.includes(userGuess)) {
 console.log("Invalid guess. Please enter a valid color.");
 attempts—;
 continue;
+}
 if (userGuess = = = randomColor) {
 console JogC'Congratulations! You guessed the correct color!");
 return;
 } else {
 console.log(' Wrong guess. Remaining attempts: ${maxAttempts - attempts}');
+}
+}
 console.log("Sorry, you've run out of attempts. The correct color was revealed above.");
+}
 function generateRandomRGBValues() {
 return Array.from({ length: 3 }, () => Math.floor(Math.random() * 256));
 }
@@ -5259,27 +5308,31 @@ colorGuessingGameQ;
 scrambled word and needs to unscramble it.</p>
 <pre>
 function wordScrambleGame() {
-const words = &lbrack;"javascript", "programming", "web", "hangman", "developer"&rbrack;;
-const maxAttempts = 3;
-console.log("Welcome to the Word Scramble Game!");
-console.log("Unscramble the word and enter your guess.");
-for (let attempts = 1; attempts <= maxAttempts; attempts++) {
-const randomWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
-const scrambledWord = scrambleWord(randomWord);
-console.log(' Scrambled word: $ {scrambledWord}');
-const userGuess = prompt("Enter your unscrambled word guess:").toLowerCase();
-if (!words.includes(userGuess)) {
-console.log("Invalid guess. Please enter a valid word.");
-attempts—;
-continue;
-if (userGuess = = = randomWord) {
-console Jog("Congratulations! You unscrambled the word!");
-return;
-} else {
-console.log(' Wrong guess. Remaining attempts: ${maxAttempts - attempts}');
-console.log("Sorry, you've run out of attempts. The correct word was revealed above.");
+  const words = &lbrack;"javascript", "programming", "web", "hangman", "developer"&rbrack;;
+  const maxAttempts = 3;
+  console.log("Welcome to the Word Scramble Game!");
+  console.log("Unscramble the word and enter your guess.");
+  for (let attempts = 1; attempts <= maxAttempts; attempts++) {
+    const randomWord = words&lbrack;Math.floor(Math.random() &ast; words.length)&rbrack;;
+    const scrambledWord = scrambleWord(randomWord);
+    console.log(' Scrambled word: $ {scrambledWord}');
+    const userGuess = prompt("Enter your unscrambled word guess:").toLowerCase();
+    if (!words.includes(userGuess)) {
+      console.log("Invalid guess. Please enter a valid word.");
+      attempts—;
+      continue;
+    }
+    if (userGuess = = = randomWord) {
+      console Jog("Congratulations! You unscrambled the word!");
+      return;
+    } else {
+      console.log(' Wrong guess. Remaining attempts: ${maxAttempts - attempts}');
+    }
+  }
+  console.log("Sorry, you've run out of attempts. The correct word was revealed above.");
+}
 function scrambleWord(word) {
-return word.split("").sort(() => Math.random() - O.5).join("");
+  return word.split("").sort(() => Math.random() - O.5).join("");
 }
 // Start the Word Scramble Game
 wordScrambleGame();
@@ -5291,27 +5344,30 @@ wordScrambleGame();
 match countries with their respective capitals.</p>
 <pre>
 function countryCapitalQuizGame() {
-const countryCapitalPairs = &lbrack;
-{country: "France", capital: "Paris"},
-{country: "Japan", capital: "Tokyo"},
-{country: "Brazil", capital: "Brasilia"},
-{country: "India", capital: "New Delhi"},
-{country: "Australia", capital: "Canberra"}
-&rbrack;;
-let score = 0;
-console.log("Welcome to the Country Capital Quiz Game!");
-console.log("Match the country with its capital:");
-for (const {country, capital} of countryCapitalPairs) {
-console.log(' \nCountry: $ {country}');
-const userCapital = prompt(' Enter the capital of ${country}:' ).trim();
-if (userCapital.toLowerCaseQ = = = capital.toLowerCaseO) {
-console.log("Correct! Well done!");
-score++;
-} else {
-console.log(' Wrong! The correct capital is: $ {capital}');
-console.log(' Quiz complete! Your final score is: $ {score} out of ${countryCapitalPairs.length}');
+  const countryCapitalPairs = &lbrack;
+  {country: "France", capital: "Paris"},
+  {country: "Japan", capital: "Tokyo"},
+  {country: "Brazil", capital: "Brasilia"},
+  {country: "India", capital: "New Delhi"},
+  {country: "Australia", capital: "Canberra"}
+  &rbrack;;
+  let score = 0;
+  console.log("Welcome to the Country Capital Quiz Game!");
+  console.log("Match the country with its capital:");
+  for (const {country, capital} of countryCapitalPairs) {
+    console.log(' \nCountry: ${country}');
+    const userCapital = prompt(' Enter the capital of ${country}:' ).trim();
+    if (userCapital.toLowerCaseQ = = = capital.toLowerCaseO) {
+      console.log("Correct! Well done!");
+      score++;
+    } else {
+      console.log(' Wrong! The correct capital is: ${capital}');
+    }
+  }
+  console.log(' Quiz complete! Your final score is: ${score} out of ${countryCapitalPairs.length}');
+}
 // Start the Country Capital Quiz Game
-countryCapitalQuizGameO;
+countryCapitalQuizGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js196">196. Guess the Animal</h2>
@@ -5335,11 +5391,14 @@ console.log(clue);
 }
 const userGuess = prompt("Enter your guess:").toLowerCase();
 if (userGuess = = = name) {
-console.logC'Correct! Well done!");
+console.log('Correct! Well done!");
 score++;
 } else {
-console.log(' Wrong! The correct answer is: ${name}');
-console.log(' Game complete! Your final score is: $ {score} out of ${animals.length}');
+console.log('Wrong! The correct answer is: ${name}');
+}
+}
+console.log('Game complete! Your final score is: ${score} out of ${animals.length}');
+}
 // Start the Guess the Animal Game
 guessTheAnimalGame();
 </pre>
@@ -5378,6 +5437,8 @@ console.log("I used to be a baker because I kneaded dough.");
 break;
 default:
 console.log("Oops! Something went wrong. No joke for you!");
+}
+}
 // Start the Joke Teller Program
 jokeTellerProgramQ;
 </pre>
@@ -5397,6 +5458,7 @@ const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, o
 if (action = = = "exit") {
 console.log("Exiting the Shopping List Program. Goodbye!");
 break;
+}
 switch (action) {
 case "add":
 const newltem = prompt("Enter the item you want to add:");
@@ -5411,9 +5473,9 @@ const itemToRemove = prompt("Enter the item you want to remove:");
 const indexTo Remove = shoppingList.indexOf(itemToRemove);
 if (indexToRemove !== -1) {
 shoppingList.splice(indexTo Remove, 1);
-console.log(' $ {itemToRemove} removed from your shopping list.');
+console.log('${itemToRemove} removed from your shopping list.');
 } else {
-console.log(' $ {itemToRemove} not found in your shopping list.');
+console.log('${itemToRemove} not found in your shopping list.');
 }
 }
 break;
@@ -5425,9 +5487,11 @@ console.logC'Your Shopping List:");
 for (const item of shoppingList) {
 console.log(' - ${item}');
 }
+}
 break;
 default:
 console.log("Invalid action. Please enter 'add', 'remove', 'view', or 'exit'.");
+}
 }
 }
 // Start the Shopping List Program
@@ -5441,16 +5505,19 @@ for multiples of 5, it prints "Buzz," and for multiples of both 3 and 5, it prin
 "FizzBuzz":</p>
 <pre>
 function fizzBuzzGame() {
-console.logf'Welcome to the FizzBuzz Game!");
-console.logf'Let's play FizzBuzz!");
-for (let i = l;i <= 100; i++) {
-let output =
-if (i % 3 = = = 0) {
-output + = "Fizz";
-if (i % 5 = = = 0) {
-output += "Buzz";
+  console.logf'Welcome to the FizzBuzz Game!");
+  console.logf'Let's play FizzBuzz!");
+  for (let i = l;i <= 100; i++) {
+    let output = "";
+    if (i % 3 = = = 0) {
+      output += "Fizz";
+	}
+    if (i % 5 = = = 0) {
+      output += "Buzz";
+    }
+    console.log(output || i);
+  }
 }
-console.log(output 11 i);
 // Start the FizzBuzz Game
 fizzBuzzGameO;
 </pre>
@@ -5462,24 +5529,26 @@ example, for the number 123456, the program will swap pairs of adjacent digits t
 produce the number 214365.</p>
 <pre>
 function swapPairsOfAdjacentDigits(number) {
-// Convert the number to a string to manipulate individual digits
-const numberStr = String(number);
-const length = numberStr.length;
-// Check if the number has an even length
-if (length % 2 !== 0) {
-console.log("Please enter an integer with an even length.");
-return;
+  // Convert the number to a string to manipulate individual digits
+  const numberStr = String(number);
+  const length = numberStr.length;
+  // Check if the number has an even length
+  if (length % 2 !== 0) {
+    console.log("Please enter an integer with an even length.");
+    return;
+  }
+  // Swap pairs of adjacent digits
+  let swappedNumber =
+  for (let i = 0; i < length; i + = 2) {
+    swappedNumber += numberStr&lbrack;i + 1&rbrack; + numberStr&lbrack;i&rbrack;;
+  }
+  // Convert the result back to an integer
+  const result = parse!nt(swappedNumber, 10);
+  console.log(' Original Number: $ {number}');
+  console.log(' Number with Swapped Pairs of Adjacent Digits: $ {result}');
 }
-// Swap pairs of adjacent digits
-let swappedNumber =
-for (let i = 0; i < length; i + = 2) {
-swappedNumber += numberStr&lbrack;i + 1&rbrack; + numberStr&lbrack;i&rbrack;;
-// Convert the result back to an integer
-const result = parse!nt(swappedNumber, 10);
-console.log(' Original Number: $ {number}');
-console.log(' Number with Swapped Pairs of Adjacent Digits: $ {result}');
 // Example: Swap pairs of adjacent digits of the number 123456
-s wapPairsOfAdjacentDigits( 123456);
+swapPairsOfAdjacentDigits( 123456);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js201">201. Capitalization Changer</h2>
@@ -5489,19 +5558,19 @@ Uppercase letters are converted to lowercase, and lowercase letters are converte
 uppercase.</p>
 <pre>
 function changeCapitalization(inputString) {
-let resultstring = "";
-for (const char of inputstring) {
-// Check if the character is uppercase
-if (char = = = char.toUpperCaseO) {
-// Convert uppercase to lowercase
-resultstring + = char.toLowerCase();
-} else {
-// Convert lowercase to uppercase
-resultstring + = char.toUpperCaseO;
-}
-}
-console.log(' Original String: $ {inputstring}');
-console.log(' String with Changed Capitalization: $ {resultstring}');
+  let resultstring = "";
+  for (const char of inputstring) {
+    // Check if the character is uppercase
+    if (char = = = char.toUpperCaseO) {
+      // Convert uppercase to lowercase
+      resultstring + = char.toLowerCase();
+    } else {
+      // Convert lowercase to uppercase
+      resultstring + = char.toUpperCaseO;
+    }
+  }
+  console.log(' Original String: $ {inputstring}');
+  console.log(' String with Changed Capitalization: $ {resultstring}');
 }
 // Example: Change the capitalization of the string "Hello World"
 changeCapitalization("Hello World");
