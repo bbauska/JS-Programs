@@ -587,7 +587,7 @@ console.log(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, 
 and c are coefficients. It uses the quadratic formula to find the roots of the equation.</p>
-<pre>
+<pre><code>
 // Prompt user for coefficients
 let a = parseFloat(prompt("Enter the coefficient a:"));
 let b = parseFloat(prompt("Enter the coefficient b:"));
@@ -613,7 +613,7 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
 } else {
   console.log("Please enter valid numbers for coefficients.");
 }
-</pre>
+</code></pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js7">7. Convert Kilometers to Miles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
