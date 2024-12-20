@@ -4725,30 +4725,33 @@ console.log(' ${solitaryNumber} is not a Solitary Number.');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js164">164. Basic Tower of Hanoi Puzzle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The Tower of Hanoi is a classic problem in computer science and mathematics. It consists of three pegs and
-a number of disks of different sizes, which can slide onto any peg. The puzzle starts with the disks in a neat
-stack in ascending order of size on one peg, the smallest at the top. The objective is to move the entire stack
-to another peg, obeying the following simple rules:
-1. Only one disk can be moved at a time.
-2. Each move consists of taking the upper disk from one of the stacks and placing it on top of
-another stack or on an empty peg.
-3. No disk may be placed on top of a smaller disk.
+<p>The Tower of Hanoi is a classic problem in computer science and mathematics. It 
+consists of three pegs and a number of disks of different sizes, which can slide onto 
+any peg. The puzzle starts with the disks in a neat stack in ascending order of size 
+on one peg, the smallest at the top. The objective is to move the entire stack to 
+another peg, obeying the following simple rules:</p>
+<ol start="1">
+  <li>Only one disk can be moved at a time.</li>
+  <li>Each move consists of taking the upper disk from one of the stacks and placing it 
+    on top of another stack or on an empty peg.</li>
+  <li>No disk may be placed on top of a smaller disk.</li>
+</ol>
 <pre>
 function towerOfHanoi(n, source, auxiliary, target) {
-if(n=== 1) {
-console.log(' Move disk 1 from $ {source} to $ {target}');
-return;
-}
-towerOfHanoi(n -1, source, target, auxiliary);
-console.log(' Move disk ${n} from $ {source} to $ {target}');
-towerOfHanoi(n -1, auxiliary, source, target);
+  if(n=== 1) {
+    console.log('Move disk 1 from ${source} to ${target}');
+    return;
+  }
+  towerOfHanoi(n -1, source, target, auxiliary);
+  console.log('Move disk${n} from ${source} to ${target}');
+  towerOfHanoi(n -1, auxiliary, source, target);
 }
 // Example usage
 const numberOfDisks = 3;
 const sourcePeg = 'A1;
 const auxiliaryPeg = 'B';
 const targetPeg = 'C;
-console.log(' Tower of Hanoi solution for ${numberOfDisks} disks:');
+console.log('Tower of Hanoi solution for ${numberOfDisks} disks:');
 towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4759,7 +4762,7 @@ top and bottom bases ( <span class="consolas">r1</span> and
 <span class="consolas">r2</span> ) and the slant height (
 <span class="consolas">l</span>). The formula for the surface area of a frustum of a cone 
 is <span class="consolas">Surface Area = &pi; &ast; (rl + r2) &ast; l + &pi; &ast; rl^2 
-+ &pie; &ast; r2^2</span>, where <span class="consolas">&pie;</span> is the mathematical 
++ &pie; &ast; r2^2</span>, where <span class="consolas">&pi;</span> is the mathematical 
 constant Pi.</p>
 <pre>
 function surfaceAreaOfFrustum(rl, r2,1) {
