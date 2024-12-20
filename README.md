@@ -8,17 +8,20 @@
 Focus on the most important thing writing code, starting from the first program to the last
 will help you quickly increase your skills as a programmer and will give you the knowledge
 necessary to understand:</p>
-<p>The flow of a program, the syntax, the direction, how it works, what Add keywords to your
-code, make great decisions, and much more.</p>
+<blockquote>
+The flow of a program, the syntax, the direction, how it works, what Add keywords to your
+code, make great decisions, and much more.
+</blockquote>
 <p>This is a very essential guide with which you can learn to create more than... Once you have
 solved a certain number of programs, you will be able to develop yourself and turn your
 own ideas into a reality without even having to think about it.</p>
+<p>I've always considered JavaScript a 4th generation language. Perhaps even 5th.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#js0">218 Simple JavaScript Samples</a></h2>
+<h2><a href="#js0">First 218 Simple JavaScript Sample Scripts</a></h2>
 
-<ol type="1" start="1">
+<ul>
   <li><a href="#js1">1. Print Hello World</a></li>
   <li><a href="#js2">2. Add Two Numbers</a></li>
   <li><a href="#js3">3. Find the Square Root</a></li>
@@ -237,9 +240,9 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js216">216. Next Prime Number</a></li>
   <li><a href="#js217">217. Reverse Order of Bits</a></li>
   <li><a href="#js218">218. Pyramid</a></li>
-</ol>
+</ul>
 
-<h2><a href="#js-0">264 More Simple JavaScript Samples</a></h2>
+<h2><a href="#js-0">Next 264 JavaScript Sample Scripts</a></h2>
 <ul>
   <li><a href="#js-1">js-1. Convert Celsius to Fahrenheit</a></li>
   <li><a href="#js-2">js-2. Get Value of a browser Cookie</a></li>
