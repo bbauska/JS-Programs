@@ -587,7 +587,7 @@ console.log(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, 
 and c are coefficients. It uses the quadratic formula to find the roots of the equation.</p>
-<pre><code>
+<pre>
 // Prompt user for coefficients
 let a = parseFloat(prompt("Enter the coefficient a:"));
 let b = parseFloat(prompt("Enter the coefficient b:"));
@@ -602,7 +602,7 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
     let rootl = (-b + Math.sqrt(discriminant)) / (2 &ast; a);
     let root2 = (-b - Math.sqrt(discriminant)) / (2 &ast; a);
     console.log(
-	  'The roots of the quadratic equation are: ${rootl} and ${root2}'
+      'The roots of the quadratic equation are: ${rootl} and ${root2}'
     );
   } else if (discriminant === 0) {
     let root = -b / (2 &ast; a);
@@ -613,7 +613,7 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
 } else {
   console.log("Please enter valid numbers for coefficients.");
 }
-</code></pre>
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js7">7. Convert Kilometers to Miles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -818,7 +818,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 } else {
   console.log(
     "Please enter valid integers, ensuring that the starting number is less than the 
-	  ending number and greater than 1."
+      ending number and greater than 1."
   );
 }
 </pre>
@@ -993,9 +993,9 @@ if (lisNaN(numl) && !isNaN(num2)) {
   // Prompt user for the operation
   let operation = prompt(
     "Choose an operation (+ for addition, 
-	  - for subtraction, 
-	  &ast; for multiplication, 
-	  / for division):"
+      - for subtraction, 
+      &ast; for multiplication, 
+      / for division):"
   );
   // Perform the selected operation
   let result;
@@ -4718,9 +4718,9 @@ function isPadovanNumber(number) {
   const padovanNumbers = &lbrack;1,1,1&rbrack;;
   while (padovanNumbers&lbrack;padovanNumbers.length - 1&rbrack; <= number) {
     const nextPadovan = padovanNumbers&lbrack;padovanNumbers.length 
-	  - 2&rbrack; 
-	  + padovanNumbers&lbrack;padovanNumbers.length 
-	  - 3&rbrack;;
+      - 2&rbrack; 
+      + padovanNumbers&lbrack;padovanNumbers.length 
+      - 3&rbrack;;
     padovanNumbers.push(nextPadovan);
   }
   return padovanNumbers.includes(number);
@@ -5617,7 +5617,7 @@ function fizzBuzzGame() {
     let output = "";
     if (i % 3 = = = 0) {
       output += "Fizz";
-	}
+    }
     if (i % 5 = = = 0) {
       output += "Buzz";
     }
