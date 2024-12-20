@@ -549,15 +549,16 @@ if (!isNaN(inputNumber) && inputNumber >= 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js4">4. Calculate the Area of a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter the base and height of a triangle and calculates its area using the
-formula: Area= 12 xBase*HeightArea=21 xBasex Height. It then displays the calculated area.
+<p>This program prompts the user to enter the base and height of a triangle and 
+calculates its area using the formula: Area=12xBasexHeightArea=21xBasexHeight. It then 
+displays the calculated area.</p>
 <pre>
 let base = parseFloat(prompt("Enter the base of the triangle:"));
 let height = parseFloat(prompt("Enter the height of the triangle:"));
-if (lisNaN(base) && lisNaN(height) && base > 0 && height > 0) {
-  let area = 0.5 * base * height;
+if (!isNaN(base) && !isNaN(height) && base > 0 && height > 0) {
+  let area = 0.5 &ast; base &ast; height;
   console.log(
-  ' The area of the triangle with base ${base} and height $ {height} is: ${area}'
+  'The area of the triangle with base ${base} and height ${height} is: ${area}'
   );
 } else {
   console.log("Please enter valid positive numbers for base and height.");
@@ -591,10 +592,10 @@ and c are coefficients. It uses the quadratic formula to find the roots of the e
 // Prompt user for coefficients
 let a = parseFloat(prompt("Enter the coefficient a:"));
 let b = parseFloat(prompt("Enter the coefficient b:"));
-let c = parseFloat(prompt("Enter the coefficient c:”));
+let c = parseFloat(prompt("Enter the coefficient c:"));
 
 // Calculate the discriminant
-let discriminant = b**2-4*a*c;
+let discriminant = b &ast;&ast; 2 - 4 &ast; a &ast; c;
 
 // Check if roots are real
 if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
