@@ -2459,8 +2459,9 @@ console.log("Reversed Array:", reversedArray);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js88">88. Calculate the Power of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To calculate the power of a number in JavaScript, you can use the Math.pow() method or the exponentiation
-operator (**).
+<p>To calculate the power of a number in JavaScript, you can use the 
+<span class="consolas">Math.pow()</span> method or the exponentiation
+operator (<span class="consolas">&ast;&ast;</span>).</p>
 <pre>
 // Using Math.pow()
 function calculatePowerWithMathPow(base, exponent) {
@@ -2468,7 +2469,7 @@ return Math.pow(base, exponent);
 // Using the exponentiation operator (**)
 function calculatePowerWithExponentiationOperator(base, exponent) {
 return base ** exponent;
-1
+}
 // Example usage:
 const baseNumber = 2;
 const exponentNumber = 3;
@@ -2482,8 +2483,10 @@ console.log('${baseNumber} to the power of $ {exponentNumber} using the exponent
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js89">89. Find the Minimum Element in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the minimum element in an array in JavaScript, you can use the Math.min() function along with the
-spread operator (...) to pass the array elements as individual arguments.
+<p>To find the minimum element in an array in JavaScript, you can use the 
+<span class="consolas">Math.min()</span> function along with the
+spread operator (<span class="consolas">...</span>) to pass the array elements as 
+individual arguments.</p>
 <pre>
 function findMinElement(arr) {
 // Check if the array is not empty
@@ -2621,7 +2624,8 @@ console.log(' Simple Interest: $${interestAmount}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js95">95. Implement a Basic Stopwatch</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To implement a basic stopwatch in JavaScript, you can use the Dat e object to measure the elapsed time.
+<p>To implement a basic stopwatch in JavaScript, you can use the 
+<span class="consolas">Date</span> object to measure the elapsed time.</p>
 <pre>
 let startTime;
 let stopwatchinterval;
@@ -2753,8 +2757,8 @@ console.logf'Intersection of Arrays:", result);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js100">100. Convert Feet to Meters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To convert feet to meters in JavaScript, you can use the following conversion formula:</p>
-<p>Meters=Feet*0.3048 Meters=Feet*0.3048</p>
+<p>To convert feet to meters in JavaScript, you can use the following conversion formula:
+<span class="consolas">Meters=Feet&ast;0.3048</span>.</p>
 
 <p>Here's a simple function that performs the conversion:</p>
 <pre>
@@ -2762,15 +2766,16 @@ function feetToMeters(feet) {
 // Check if the input is a valid number
 if (isNaN(feet)) {
 return "Invalid input. Please provide a valid number of feet.";
-
+}
 // Perform the conversion
 const meters = feet * 0.3048;
 return meters;
+}
 
 // Example usage:
 const feetValue =10;
 const meters Value = feetToMeters(feetValue);
-console.log(' ${feetValue} feet is equal to ${metersValue.toFixed(2)} meters “);
+console.log(`${feetValue} feet is equal to ${metersValue.toFixed(2)} meters`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js101">101. Convert Days to Years, Months, and Days</h2>
@@ -3068,9 +3073,10 @@ console.log(' The number of consonants in "${testString}" is: ${result}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js113">113. Check if a Number is a Triangular Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks if a given positive integer is a triangular number. A triangular number is a number that
-can be represented in the form of a triangle with dots. Mathematically, a triangular number T_ n is given by
-the formula: T_n = n*(n+l)/2.
+<p>This program checks if a given positive integer is a triangular number. A triangular 
+number is a number that can be represented in the form of a triangle with dots. 
+Mathematically, a triangular number <span class="consolas">T_ n</span> is given by the 
+formula: <span class="consolas">T_n = n&ast;(n+l)/2</span>.</p>
 <pre>
 function isTriangularNumber(num) {
 // Check if the input is a non-negative integer
@@ -3095,8 +3101,10 @@ console.log(' $ {testNumber} is a triangular number: $ {result}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js114">114. Find the Area of a Trapezoid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the area of a trapezoid given the lengths of its bases ( a and b ) and its height ( h ).
-The formula for the area of a trapezoid is:
+<p>This program calculates the area of a trapezoid given the lengths of its bases ( 
+<span class="consolas">a and b</span> ) and its height ( 
+<span class="consolas">h</span> ). The formula for the area of a trapezoid is:
+<span class="consolas">Area = (a + b) &ast; h / 2</span>.</p>
 <pre>
 function trapezoidArea(basel, base2, height) {
 // Check if the inputs are valid numbers
@@ -3162,8 +3170,10 @@ console.log(' $ {testNumber} is a Fibonacci number: $ {result}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js117">117. Find the Perimeter of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the perimeter of a rectangle given the lengths of its sides (lengt h and widt h ). The
-formula for the perimeter of a rectangle is: Perimeter = 2 * (length + width).
+<p>This program calculates the perimeter of a rectangle given the lengths of its sides ( 
+<span class="consolas">length and width</span> ). The
+formula for the perimeter of a rectangle is: 
+<span class="consolas">Perimeter = 2 &ast; (length + width)</span>.</p>
 <pre>
 function rectanglePerimeter(length, width) {
 // Check if the inputs are valid numbers
@@ -3732,8 +3742,8 @@ console.log(jsonString);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js132">132. Find the Area of an Ellipse</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates the area of an ellipse given its semi-major axis (a) and 
-semi-minor axis (b). The formula for the area of an ellipse is;
+<p>This program calculates the area of an ellipse given its semi-major axis (&alpha;) and 
+semi-minor axis (&beta;). The formula for the area of an ellipse is;
 <span class="consolas">&pi; &ast; &alpha; &ast; &beta;</span>.</p>
 <h3>Function to calculate the area of an ellipse</h3>
 <pre>
