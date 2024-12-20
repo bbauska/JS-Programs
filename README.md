@@ -1485,13 +1485,13 @@ This program converts the first letter of a string to uppercase:
 let inputstring = prompt("Enter a string:");
 // Check if input is a valid string
 if (inputString.length > 0) {
-// Convert the first letter to uppercase
-let resultstring = inputString.charAt(0).toUpperCase() + inputString.slice(l);
-// Display the result
-console.log(' Original String: $ {inputstring}');
-console.log(' String with First Letter Uppercase: $ {resultstring}');
+  // Convert the first letter to uppercase
+  let resultstring = inputString.charAt(0).toUpperCase() + inputString.slice(l);
+  // Display the result
+  console.log(' Original String: $ {inputstring}');
+  console.log(' String with First Letter Uppercase: $ {resultstring}');
 } else {
-console.log("Please enter a valid string.");
+  console.log("Please enter a valid string.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1503,49 +1503,50 @@ This program counts the number of vowels in a given string:
 let inputstring = prompt("Enter a string:");
 // Check if input is a valid string
 if (inputString.length > 0) {
-// Function to count vowels in a string
-function countVowels(str) {
-const vowels = "aeiouAEIOU";
-let vowelCount = 0;
-for (let char of str) {
-if (vowels.includes(char)) {
-vowelCount++;
-return vowelCount;
-}
-// Call the function and display the result
-let numberOfVowels = countVowels(inputString);
-console.log(' Number of vowels in '${inputString}': ${numberOfVowels}');
+  // Function to count vowels in a string
+  function countVowels(str) {
+    const vowels = "aeiouAEIOU";
+    let vowelCount = 0;
+    for (let char of str) {
+      if (vowels.includes(char)) {
+        vowelCount++;
+      }
+    }
+    return vowelCount;
+  }
+  // Call the function and display the result
+  let numberOfVowels = countVowels(inputString);
+  console.log(' Number of vowels in '${inputString}': ${numberOfVowels}');
 } else {
-console.log("Please enter a valid string.");
+  console.log("Please enter a valid string.");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js40">40. Check Whether a String Starts and Ends</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-With Certain Characters
-This program checks whether a string starts and ends with certain characters using the startsWith and
-endsWith methods in JavaScript:
+<p>This program checks whether a string starts and ends with certain characters using 
+the startsWith and endsWith methods in JavaScript:</p>
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
 // Check if input is a valid string
 if (inputString.length > 0) {
-// Prompt user for start and end characters
-let startChar = prompt("Enter the starting characters:");
-let endChar = promptf'Enter the ending characters:");
-// Check if the string starts and ends with the specified characters
-if (inputString.startsWith(startChar) && inputString.endsWith(endChar)) {
-console.log(' The string '$ {inputstring}' starts with '${startChar}' and ends with '${endChar}'.');
+  // Prompt user for start and end characters
+  let startChar = prompt("Enter the starting characters:");
+  let endChar = promptf'Enter the ending characters:");
+  // Check if the string starts and ends with the specified characters
+  if (inputString.startsWith(startChar) && inputString.endsWith(endChar)) {
+    console.log(' The string '$ {inputstring}' starts with '${startChar}' and ends with '${endChar}'.');
+  } else {
+    console.log(' The string '$ {inputstring}' does not start with '${startChar}' or does not end with '${endChar}‘.');
 } else {
-console.log(' The string '$ {inputstring}' does not start with '${startChar}' or does not end with '${endChar}‘.');
-} else {
-console.log("Please enter a valid string.");
+  console.log("Please enter a valid string.");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js41">41. Replace All Occurrences of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Replace all occurrences of a substring in a string in JavaScript, you can use the 
-<span class="consolas">replace()</span> method along with
-a regular expression with the global ( <span class="consolas">g</span> ) flag.</p>
+<span class="consolas">replace()</span> method along with a regular expression with 
+the global ( <span class="consolas">g</span> ) flag.</p>
 <pre>
 // Example string
 let originalstring = "Hello world, world!";
@@ -1574,7 +1575,7 @@ console.log(multilineString);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js43">43. Format Numbers as Currency Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program format numbers as currency strings:
+<p>This program format numbers as currency strings:</p>
 <pre>
 // Example number
 let amount = 1234567.89;
@@ -1586,17 +1587,17 @@ console.log(' Formatted Amount: $ {formattedAmount}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js44">44. Generate Random String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a random string in JavaScript, you can create a function that generates a string with
-random characters.
+<p>This program generates a random string in JavaScript, you can create a function that 
+generates a string with random characters.</p>
 <pre>
 function generateRandomString(length) {
 const characters = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789l;
 let randomstring =
 for (let i = 0; i < length; i++) {
-const randomindex = Math.floor(Math.random() &ast; characters.length);
-randomstring += characters.charAt(randomlndex);
+  const randomindex = Math.floor(Math.random() &ast; characters.length);
+  randomstring += characters.charAt(randomlndex);
 }
-return randomstring;
+  return randomstring;
 }
 // Generate a random string of length 8
 let randomstring = generateRandomString(8);
@@ -1717,22 +1718,23 @@ console.log(stringWithoutLineBreaks);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js52">52. Check Leap Year</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks if a year is a leap year with a simple function. A leap year is a year that is evenly divisible
-by 4, except for years that are divisible by 100. However, years divisible by 400 are leap years.
+<p>This program checks if a year is a leap year with a simple function. A leap year is a 
+year that is evenly divisible by 4, except for years that are divisible by 100. However, 
+years divisible by 400 are leap years.</p>
 <pre>
 function isLeapYear(year) {
-if ((year % 4 = = = 0 &&year % 100 !== 0) || (year % 400 = = = 0)) {
-return true;
-} else {
-return false;
-}
+  if ((year % 4 = = = 0 &&year % 100 !== 0) || (year % 400 = = = 0)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // Example usage
 let yearToCheck = 2024;
 if (isLeapYear(yearToCheck)) {
-console.log(' $ {yearToCheck} is a leap year.');
+  console.log(' $ {yearToCheck} is a leap year.');
 } else {
-console.log(' $ {yearToCheck} is not a leap year.');
+  console.log(' $ {yearToCheck} is not a leap year.');
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1802,22 +1804,22 @@ consttargetDate = new Date('2O23-Ol-Ol OO:OO:OO').getTime();
 // Update the countdown every second
 const countdowninterval = setInterval(updateCountdown, 1000);
 function updateCountdown() {
-// Get the current date and time
-const currentDate = new Date().getTime();
-// Calculate the remaining time
-const timeDifference = targetDate - currentDate;
-// Calculate days, hours, minutes, and seconds
-const days = Math.floor(timeDifference / (1000 &ast; 60 &ast; 60 &ast; 24));
-const hours = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60 &ast; 24)) / (1000 &ast; 60 &ast; 60));
-const minutes = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60)) || (1000 &ast; 60));
-const seconds = Math.floor((timeDifference % (1000 &ast; 60)) / 1000);
-// Display the countdown
-document.getElementById('countdown').innerHTML = ' ${days}d ${hours}h ${minutes}m ${seconds}s';
-// Check if the countdown has reached zero
-if (timeDifference < = 0) {
-clearlnterval(countdownlnterval);
-document.getElementById('countdown').innerHTML = 'Countdown expired!';
-}
+  // Get the current date and time
+  const currentDate = new Date().getTime();
+  // Calculate the remaining time
+  const timeDifference = targetDate - currentDate;
+  // Calculate days, hours, minutes, and seconds
+  const days = Math.floor(timeDifference / (1000 &ast; 60 &ast; 60 &ast; 24));
+  const hours = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60 &ast; 24)) / (1000 &ast; 60 &ast; 60));
+  const minutes = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60)) || (1000 &ast; 60));
+  const seconds = Math.floor((timeDifference % (1000 &ast; 60)) / 1000);
+  // Display the countdown
+  document.getElementById('countdown').innerHTML = ' ${days}d ${hours}h ${minutes}m ${seconds}s';
+  // Check if the countdown has reached zero
+  if (timeDifference < = 0) {
+    clearlnterval(countdownlnterval);
+    document.getElementById('countdown').innerHTML = 'Countdown expired!';
+  }
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1834,7 +1836,7 @@ let itemTo Remove = 3;
 let indexToRemove = originalArray.indexOf(itemToRemove);
 // Remove the specific item using splice
 if (indexToRemove !== -1) {
-originalArray.splice(indexTo Remove, 1);
+  originalArray.splice(indexTo Remove, 1);
 }
 // Display the result
 console.log("Original Array:", originalArray);
@@ -1905,11 +1907,11 @@ console.log("Intersection:", intersection);
 <span class="consolas">slice()</span> method.</p>
 <pre>
 function chunkArray(array, chunksize) {
-let result = &lbrack;&rbrack;;
-for (let i = 0; i < array.length; i + = chunksize) {
-result.push(array.slice(i, i + chunksize));
-}
-return result;
+  let result = &lbrack;&rbrack;;
+  for (let i = 0; i < array.length; i + = chunksize) {
+    result.push(array.slice(i, i + chunksize));
+  }
+  return result;
 }
 // Example array
 let myArray = &lbrack;1, 2, 3,4, 5, 6, 7, 8, 9,10&rbrack;;
@@ -2029,9 +2031,9 @@ console.logf'Hello, world!");
 };
 // Check if the variable is a function
 if (typeof myFunction = = = 'function') {
-console.log("The variable is of function type");
+  console.log("The variable is of function type");
 } else {
-console.log("The variable is not of function type");
+  console.log("The variable is not of function type");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2222,14 +2224,16 @@ console.log("Is the queue empty?", queue.isEmpty()); // Outputs: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js75">75. Check if a Number is Float or Integer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can check if a number is a float or an integer by examining its fractional part.
+<p>You can check if a number is a float or an integer by examining its fractional part.</p>
 <pre>
 function checkNumberType(number) {
-// Check if the number has a fractional part
-if (Number.islnteger(number)) {
-console.log(number + " is an integer.");
-} else {
-console.log(number + " is a float.");
+  // Check if the number has a fractional part
+  if (Number.islnteger(number)) {
+    console.log(number + " is an integer.");
+  } else {
+    console.log(number + " is a float.");
+  }
+}
 // Example usage:
 checkNumberType(5); // Outputs: 5 is an integer.
 checkNumberType(3.14); // Outputs: 3.14 is afloat.
@@ -2241,8 +2245,8 @@ checkNumberType("abc"); // Outputs: abc is not a valid number.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js76">76. Pass a Function as Parameter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can pass a function as a parameter to another function. This allows you to create higher-order
-functions, which are functions that can accept other functions as arguments.
+<p>You can pass a function as a parameter to another function. This allows you to create 
+higher-order functions, which are functions that can accept other functions as arguments.</p>
 <pre>
 // Function that takes another function as a parameter
 function operateOnNumbers(a, b, operation) {
@@ -2269,23 +2273,23 @@ console.log("Result of multiplication:", result2); // Outputs: 15
 <span class="consolas">width</span> and <span class="consolas">height</span> properties.</p>
 <pre>
 function getlmageDimensions(imageSrc) {
-// Create an Image object
-var img = new Image();
-// Set the source of the image
-img.src = imageSrc;
-// Wait for the image to load
-img.onload = function() {
-// Access the width and height properties
-var width = img.width;
-var height = img.height;
-// Display the dimensions
-console.log("Width:", width);
-console.log("Height:", height);
-};
-// Handle image loading error
-img.onerror = function() {
-console.error("Error loading the image.");
-}
+  // Create an Image object
+  var img = new Image();
+  // Set the source of the image
+  img.src = imageSrc;
+  // Wait for the image to load
+  img.onload = function() {
+    // Access the width and height properties
+    var width = img.width;
+    var height = img.height;
+    // Display the dimensions
+    console.log("Width:", width);
+    console.log("Height:", height);
+  };
+  // Handle image loading error
+  img.onerror = function() {
+    console.error("Error loading the image.");
+  };
 }
 // Example usage
 var imageUrl = "path/to/your/image.jpg";
@@ -2340,15 +2344,15 @@ console.log("Numeric Representation:", numericDate);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js81">81. Find the Average of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the average of two numbers in JavaScript, you can add the two numbers together and then divide the
-sum by 2.
+<p>To find the average of two numbers in JavaScript, you can add the two numbers together 
+and then divide the sum by 2.</p>
 <pre>
 function findAverage(numl, num2) {
-// Calculate the sum of the two numbers
-let sum = numl + num 2;
-// Calculate the average by dividing the sum by 2
-let average = sum I 2;
-return average;
+  // Calculate the sum of the two numbers
+  let sum = numl + num 2;
+  // Calculate the average by dividing the sum by 2
+  let average = sum I 2;
+  return average;
 }
 // Example usage:
 let number 1 = 10;
@@ -2359,16 +2363,16 @@ console.log(' The average of $ {number 1} and $ {number 2} is: $ {result}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js82">82. Calculate the Area of a Circle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculate the area of a circle in JavaScript:
+<p>This program calculate the area of a circle in JavaScript:</p>
 <pre>
 function calculateCircleArea(radius) {
-// Check if the radius is a valid number
-if (isNaN(radius) 11 radius <= 0) {
-return "Invalid radius. Please provide a positive number.";
-}
-// Calculate the area
-const area = Math.PI &ast; Math.pow(radius, 2);
-return area;
+  // Check if the radius is a valid number
+  if (isNaN(radius) 11 radius <= 0) {
+    return "Invalid radius. Please provide a positive number.";
+  }
+  // Calculate the area
+  const area = Math.PI &ast; Math.pow(radius, 2);
+  return area;
 }
 // Example usage:
 const radius = 5;
@@ -2378,17 +2382,17 @@ console.log(' The area of a circle with radius $ {radius} is: ${area}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js83">83. Random Color Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To generate a random color in JavaScript, you can create a function that generates random values for the red,
-green, and blue components of the color.
+<p>To generate a random color in JavaScript, you can create a function that generates 
+random values for the red, green, and blue components of the color.</p>
 <pre>
 function generateRandomColor() {
-// Generate random values for red, green, and blue components
-const red = Math.floor(Math.random() &ast; 256);
-const green = Math.floor(Math.random() &ast; 256);
-const blue = Math.floor(Math.random() &ast; 256);
-// Create the RGB color string
-const color = ' rgb(${red}, $ {green}, ${blue})';
-return color;
+  // Generate random values for red, green, and blue components
+  const red = Math.floor(Math.random() &ast; 256);
+  const green = Math.floor(Math.random() &ast; 256);
+  const blue = Math.floor(Math.random() &ast; 256);
+  // Create the RGB color string
+  const color = ' rgb(${red}, $ {green}, ${blue})';
+  return color;
 }
 // Example usage:
 const randomColor = generateRandomColorQ;
@@ -2402,10 +2406,10 @@ console.log("Random Color:", randomColor);
 it means the string is empty.</p>
 <pre>
 function isEmptyString(str) {
-return str.length = = = 0;
+  return str.length === 0;
 }
 // Example usage:
-const emptystring =
+const emptystring = "";
 const nonEmptyString = "Hello, world!";
 console.log("Is emptystring empty?", isEmptyString(emptyString)); // Outputs: true
 console.logf'Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outputs: false
@@ -2418,11 +2422,12 @@ console.logf'Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outpu
 <span class="consolas">toUpperCase()</span>, and <span class="consolas">slice()</span> methods.</p>
 <pre>
 function capitalizeFirstLetter(str) {
-// Check if the string is not empty
-if (str.length === 0) {
-return "Empty string";
-// Capitalize the first letter and concatenate the rest of the string
-return str.charAt(0).toUpperCase() + str.slice(l);
+  // Check if the string is not empty
+  if (str.length === 0) {
+    return "Empty string";
+  }
+  // Capitalize the first letter and concatenate the rest of the string
+  return str.charAt(0).toUpperCase() + str.slice(l);
 }
 // Example usage:
 const originalString = "hello, world!";
@@ -2459,8 +2464,9 @@ console.logC'Maximum Element:", maxNumber);
 method reverses the elements of an array in place.</p>
 <pre>
 function reverseArray(arr) {
-// Use the reverse() method to reverse the array in place
-return arr.reverse();
+  // Use the reverse() method to reverse the array in place
+  return arr.reverse();
+}
 // Example usage:
 const originalArray = &lbrack;1, 2, 3,4, 5&rbrack;;
 const reversedArray = reverseArray(originalArray);
@@ -2476,10 +2482,11 @@ operator (<span class="consolas">&ast;&ast;</span>).</p>
 <pre>
 // Using Math.pow()
 function calculatePowerWithMathPow(base, exponent) {
-return Math.pow(base, exponent);
+  return Math.pow(base, exponent);
+}
 // Using the exponentiation operator (&ast;&ast;)
 function calculatePowerWithExponentiationOperator(base, exponent) {
-return base &ast;&ast; exponent;
+  return base &ast;&ast; exponent;
 }
 // Example usage:
 const baseNumber = 2;
@@ -2500,12 +2507,14 @@ spread operator (<span class="consolas">...</span>) to pass the array elements a
 individual arguments.</p>
 <pre>
 function findMinElement(arr) {
-// Check if the array is not empty
-if (arr.length = = = 0) {
-return "Empty array";
-// Use Math.min() with the spread operator to find the minimum element
-const minElement = Math.min(...arr);
-return minElement;
+  // Check if the array is not empty
+  if (arr.length = = = 0) {
+    return "Empty array";
+  }
+  // Use Math.min() with the spread operator to find the minimum element
+  const minElement = Math.min(...arr);
+  return minElement;
+}
 // Example usage:
 const numbers = &lbrack;5, 2, 9,1, 7&rbrack;;
 const minNumber = findMinElement(numbers);
@@ -2521,34 +2530,38 @@ mathematical operations.
 function convertMinutesToHoursAndMinutes(totalMinutes) {
 // Check if the input is a valid positive number
 if (isNaN(totalMinutes) 11 totalMinutes < 0) {
-return "Invalid input. Please provide a non-negative number of minutes.";
+  return "Invalid input. Please provide a non-negative number of minutes.";
+}
 // Calculate hours and remaining minutes
 const hours = Math.floor(totalMinutes / 60);
 const minutes = totalMinutes % 60;
+
 // Construct the result string
-const result = ' $ {hours} hours and $ {minutes} minutes';
+const result = `${hours} hours and $ {minutes} minutes`;
 return result;
 }
 // Example usage:
-const totalMinutes =135;
+const totalMinutes = 135;
 const convertedTime = convertMinutesToHoursAndMinutes(totalMinutes);
-console.log(' ${totalMinutes} minutes is equivalent to: ${convertedTime}');
+console.log(`${totalMinutes} minutes is equivalent to: ${convertedTime}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js91">91. Find the Sum of Digits in a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the sum of digits in a number using JavaScript, you can use a loop to iterate through each digit and
-add them together.
+<p>To find the sum of digits in a number using JavaScript, you can use a loop to iterate 
+through each digit and add them together.</p>
 <pre>
 function sumOfDigits(number) {
-// Check if the input is a valid number
-if (isNaN(number) 11 ’Number.isInteger(number) 11 number < 0) {
-return "Invalid input. Please provide a non-negative integer.";
-// Convert the number to a string to iterate through its digits
-const digitsArray = String(number).split(").map(Number);
-// Calculate the sum of digits
-const sum = digitsArray.reduce((acc, digit) = > acc + digit, 0);
-return sum;
+  // Check if the input is a valid number
+  if (isNaN(number) 11 ’Number.isInteger(number) 11 number < 0) {
+    return "Invalid input. Please provide a non-negative integer.";
+  }
+  // Convert the number to a string to iterate through its digits
+  const digitsArray = String(number).split(").map(Number);
+
+  // Calculate the sum of digits
+  const sum = digitsArray.reduce((acc, digit) = > acc + digit, 0);
+  return sum;
 }
 // Example usage:
 const inputNumber = 12345;
@@ -2558,69 +2571,69 @@ console.log(' The sum of digits in $ {inputNumber} is: $ {result}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js92">92. Check if a String is a Palindromic Phrase</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To check if a string is a palindromic phrase in JavaScript, you can create a function that removes non­
-alphanumeric characters and compares the string with its reversed version.
+<p>To check if a string is a palindromic phrase in JavaScript, you can create a function 
+that removes non­ alphanumeric characters and compares the string with its reversed version.</p>
 <pre>
 function isPalindromicPhrase(str) {
-// Check if the input is a valid string
-if (typeof str !== 'string') {
-return "Invalid input. Please provide a string.";
-}
-// Remove non-alphanumeric characters and convert to lowercase
-const cleanedStr = str.replace(/&lbrack;Aa-zA-ZO-9&rbrack;/g, ").toLowerCase();
-// Compare the cleaned string with its reversed version
-return cleanedStr = = = cleanedStr.split(").reverse().join(");
+  // Check if the input is a valid string
+  if (typeof str !== 'string') {
+    return "Invalid input. Please provide a string.";
+  }
+  // Remove non-alphanumeric characters and convert to lowercase
+  const cleanedStr = str.replace(/&lbrack;Aa-zA-ZO-9&rbrack;/g, ").toLowerCase();
+  // Compare the cleaned string with its reversed version
+  return cleanedStr === cleanedStr.split(").reverse().join(");
 }
 // Example usage:
 const phrase 1 = "A man, a plan, a canal, Panama!";
 const phrase2 = "Hello, world!";
-console.log(' Is "${phrasel}" a palindromic phrase? ${isPalindromicPhrase(phrasel)}');
-console.log(' Is "${phrase2}" a palindromic phrase? ${isPalindromicPhrase(phrase2)}');
+console.log(`Is "${phrasel}" a palindromic phrase? ${isPalindromicPhrase(phrasel)}`);
+console.log(`Is "${phrase2}" a palindromic phrase? ${isPalindromicPhrase(phrase2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js93">93. Generate a Random Password</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To generate a random password in JavaScript, you can create a function that combines random characters
-from various character sets.
+<p>To generate a random password in JavaScript, you can create a function that combines 
+random characters from various character sets.</p>
 <pre>
 function generateRandomPassword(length) {
-// Define character sets
-const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
-const numericChars = '0123456789';
-const specialchars = '!©#$%A&&ast;()-_+=';
-// Combine character sets
-const allChars = uppercaseChars + lowercaseChars + numericChars + specialchars;
-// Check if the input length is a valid positive number
-if (!Number.isInteger(length) 11 length <= 0) {
-return "Invalid input. Please provide a positive integer for the password length.";
-}
-// Generate the random password
-let password =";
-for (let i = 0; i < length; i++) {
-const randomindex = Math.floor(Math.random() &ast; allChars.length);
-password += allChars.charAt(randomlndex);
-}
-return password;
+  // Define character sets
+  const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+  const numericChars = '0123456789';
+  const specialchars = '!©#$%A&&ast;()-_+=';
+  // Combine character sets
+  const allChars = uppercaseChars + lowercaseChars + numericChars + specialchars;
+  // Check if the input length is a valid positive number
+  if (!Number.isInteger(length) 11 length <= 0) {
+    return "Invalid input. Please provide a positive integer for the password length.";
+  }
+  // Generate the random password
+  let password =";
+  for (let i = 0; i < length; i++) {
+    const randomindex = Math.floor(Math.random() &ast; allChars.length);
+    password += allChars.charAt(randomlndex);
+  }
+  return password;
 }
 // Example usage:
 const passwordLength =12;
 const randomPassword = generateRandomPassword(passwordLength);
-console.log(' Generated Password: ${randomPassword}');
+console.log(`Generated Password: ${randomPassword}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js94">94. Calculate Simple Interest</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Program To calculate simple interest in JavaScript:
+<p>Program To calculate simple interest in JavaScript:</p>
 <pre>
 function calculateSimpleInterest(principal, rate, time) {
-// Check if the inputs are valid positive numbers
-if (isNaN(principal) 11 isNaN(rate) 11 isNaN(time) 11 principal <= 0 11 rate < = 0 || time <= 0) {
-return "Invalid inputs. Please provide valid positive numbers.";
-}
-// Calculate simple interest
-const simplelnterest = (principal &ast; rate &ast; time) / 100;
-return simplelnterest;
+  // Check if the inputs are valid positive numbers
+  if (isNaN(principal) 11 isNaN(rate) 11 isNaN(time) 11 principal <= 0 11 rate < = 0 || time <= 0) {
+    return "Invalid inputs. Please provide valid positive numbers.";
+  }
+  // Calculate simple interest
+  const simplelnterest = (principal &ast; rate &ast; time) / 100;
+  return simplelnterest;
 }
 // Example usage:
 const principalAmount = 1000;
@@ -2641,99 +2654,96 @@ console.log(' Simple Interest: $${interestAmount}');
 let startTime;
 let stopwatchinterval;
 function startStopwatch() {
-startTime = new Date().getTime();
-stopwatchinterval = setInterval(updateDisplay, 1000);
+  startTime = new Date().getTime();
+  stopwatchinterval = setInterval(updateDisplay, 1000);
 }
 function stopStopwatch() {
-clearlnterval(stopwatchlnterval);
+  clearlnterval(stopwatchlnterval);
 }
 function resetStopwatch() {
-stopStopwatchO;
-updateDisplay(O);
+  stopStopwatchO;
+  updateDisplay(O);
 }
 function updateDisplayO {
-const currentTime = new Date().getTime();
-const elapsedTime = Math.floor((currentTime - startTime) / 1000);
-const minutes = Math.floor(elapsedTime / 60);
-const seconds = elapsedTime % 60;
-const formattedTime = ' ${minutes}:${seconds < 10 ? "0": ""}${seconds}';
-document.getElementById("display").textContent = formattedTime;
+  const currentTime = new Date().getTime();
+  const elapsedTime = Math.floor((currentTime - startTime) / 1000);
+  const minutes = Math.floor(elapsedTime / 60);
+  const seconds = elapsedTime % 60;
+  const formattedTime = ' ${minutes}:${seconds < 10 ? "0": ""}${seconds}';
+  document.getElementById("display").textContent = formattedTime;
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js96">96. Check if a Number is a Perfect Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A perfect number is a positive integer that is equal to the sum of its proper divisors (excluding itself).
+<p>A perfect number is a positive integer that is equal to the sum of its proper divisors 
+(excluding itself).</p>
 <pre>
 function isPerfectNumber(number) {
-
-// Check if the input is a positive integer
-if (’Number.isInteger(number) 11 number <= 0) {
-return "Invalid input. Please provide a positive integer.";
-
-// Find divisors and calculate sum
-let sum = 0;
-for (let i = 1; i <= Math.floor(number / 2); i++) {
-if (number % i = = = 0) {
-sum += i;
+  // Check if the input is a positive integer
+  if (’Number.isInteger(number) 11 number <= 0) {
+    return "Invalid input. Please provide a positive integer.";
+  }
+  // Find divisors and calculate sum
+  let sum = 0;
+  for (let i = 1; i <= Math.floor(number / 2); i++) {
+    if (number % i === 0) {
+      sum += i;
+    }
+  }
+  // Check if the sum of divisors equals the original number
+  return sum = = = number;
 }
-}
-
-// Check if the sum of divisors equals the original number
-return sum = = = number;
-
 // Example usage:
 const testNumber = 28;
 const result = isPerfectNumber(testNumber);
-console.log(' Is ${testNumber} a perfect number? $ {result}');
+console.log(`Is ${testNumber} a perfect number? ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js97">97. This program calculates the Volume of a Cylinder</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the Volume of a Cylinder:
+<p>This program calculates the Volume of a Cylinder:</p>
 <pre>
 function calculateCylinderVolume(radius, height) {
+  // Check if the inputs are valid positive numbers
+  if (isNaN(radius) || isNaN(height) 11 radius < = 0 || height <= 0) {
+    return "Invalid inputs. Please provide valid positive numbers.";
+  }
 
-// Check if the inputs are valid positive numbers
-if (isNaN(radius) || isNaN(height) 11 radius < = 0 || height <= 0) {
-return "Invalid inputs. Please provide valid positive numbers.";
-}
-
-// Calculate the volume of the cylinder
-const volume = Math.PI &ast; Math.pow(radius, 2) &ast; height;
-return volume;
+  // Calculate the volume of the cylinder
+  const volume = Math.PI &ast; Math.pow(radius, 2) &ast; height;
+  return volume;
 }
 
 // Example usage:
 const cylinderRadius = 5;
 const cylinderHeight =10;
 const cylindervolume = calculateCylinderVolume(cylinderRadius, cylinderHeight);
-console.log(' Cylinder Volume: $ {cylinderVolume.toFixed(2)} cubic units');
+console.log(`Cylinder Volume: $ {cylinderVolume.toFixed(2)} cubic units`);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js98">98. Generate a Random Quote</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To generate a random quote in JavaScript, you can create an array of quotes and use a function to pick a
-random quote from that array.
+<p>To generate a random quote in JavaScript, you can create an array of quotes and use a function to pick a
+random quote from that array.</p>
 <pre>
 function generateRandomQuote() {
-const quotes = &lbrack;
-"The only way to do great work is to love what you do. - Steve Jobs",
-"In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
-"The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
-"Life is what happens when you're busy making other plans. - John Lennon",
-"Get busy living or get busy dying. - Stephen King"
+  const quotes = &lbrack;
+  "The only way to do great work is to love what you do. - Steve Jobs",
+  "In three words I can sum up everything I've learned about life: it goes on. - Robert Frost",
+  "The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela",
+  "Life is what happens when you're busy making other plans. - John Lennon",
+  "Get busy living or get busy dying. - Stephen King"
 
-// Add more quotes as needed
-&rbrack;;
+  // Add more quotes as needed
+  &rbrack;;
 
-// Generate a random index to pick a quote from the array
-const randomindex = Math.floor(Math.random() &ast; quotes.length);
+  // Generate a random index to pick a quote from the array
+  const randomindex = Math.floor(Math.random() &ast; quotes.length);
 
-// Return the randomly selected quote
-return quotes&lbrack;randomlndex&rbrack;;
-
+  // Return the randomly selected quote
+  return quotes&lbrack;randomlndex&rbrack;;
+}
 // Example usage:
 const randomQuote = generateRandomQuote();
 console.logC'Random Quote:", randomQuote);
@@ -2741,29 +2751,29 @@ console.logC'Random Quote:", randomQuote);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js99">99. Find the Intersection of Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the intersection of two arrays in JavaScript, you can create a function that iterates through both
-arrays and identifies the common elements.
+<p>To find the intersection of two arrays in JavaScript, you can create a function 
+that iterates through both arrays and identifies the common elements.</p>
 <pre>
 function findlntersection(arrl, arr2) {
 
-// Check if the inputs are valid arrays
-if (’Array.isArray(arrl) || !Array.isArray(arr2)) {
-return "Invalid inputs. Please provide valid arrays.";
-}
+  // Check if the inputs are valid arrays
+  if (’Array.isArray(arrl) || !Array.isArray(arr2)) {
+    return "Invalid inputs. Please provide valid arrays.";
+  }
 
-// Use a Set to store unique elements of the first array
-const set = new Set(arrl);
+  // Use a Set to store unique elements of the first array
+  const set = new Set(arrl);
 
-// Filter the second array to include only elements present in the set
-const intersection = arr2.filter(element => set.has(element));
-return intersection;
+  // Filter the second array to include only elements present in the set
+  const intersection = arr2.filter(element => set.has(element));
+  return intersection;
 }
 
 // Example usage:
-const arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
+const arrayl = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
 const result = findlntersection(arrayl, array2);
-console.logf'Intersection of Arrays:", result);
+console.log("Intersection of Arrays:", result);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js100">100. Convert Feet to Meters</h2>
