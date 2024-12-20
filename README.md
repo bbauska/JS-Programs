@@ -541,7 +541,7 @@ ensuring that the entered number is non-negative.</p>
 let inputNumber = parseFloat(prompt("Enter a non-negative number:"));
 if (!isNaN(inputNumber) && inputNumber >= 0) {
   let squareRoot = Math.sqrt(inputNumber);
-  console.log(' The square root of $ {inputNumber} is: $ {squareRoot}');
+  console.log('The square root of ${inputNumber} is: ${squareRoot}');
 } else {
   console.log("Please enter a valid non-negative number.");
 }
@@ -566,8 +566,9 @@ if (lisNaN(base) && lisNaN(height) && base > 0 && height > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js5">5. Swap Two Variables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter two variables and swaps their values. It then displays the variables
-before and after the swap.
+<p>This program prompts the user to enter two variables and swaps their values. It then 
+displays the variables before and after the swap.</p>
+<pre>
 let variable1 = prompt("Enter the first variable:");
 let variable2 = prompt("Enter the second variable:");
 console.log(
@@ -584,27 +585,31 @@ console.log(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js6">6. Solve Quadratic Equation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, and c are coefficients. It
-uses the quadratic formula to find the roots of the equation.
+<p>This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, 
+and c are coefficients. It uses the quadratic formula to find the roots of the equation.</p>
 <pre>
 // Prompt user for coefficients
 let a = parseFloat(prompt("Enter the coefficient a:"));
 let b = parseFloat(prompt("Enter the coefficient b:"));
 let c = parseFloat(prompt("Enter the coefficient c:”));
+
 // Calculate the discriminant
 let discriminant = b**2-4*a*c;
+
 // Check if roots are real
 if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
   if (discriminant > 0) {
-    let rootl = (-b + Math.sqrt(discriminant)) / (2 * a);
-    let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-    console.log(' The roots of the quadratic equation are: $ {rootl} and ${root2}'
-  );
-} else if (discriminant = = = 0) {
-  let root = -b / (2 * a);
-  console.log(' The quadratic equation has a repeated root: ${root}');
-} else {
-  console.log("The quadratic equation has complex roots.");
+    let rootl = (-b + Math.sqrt(discriminant)) / (2 &ast; a);
+    let root2 = (-b - Math.sqrt(discriminant)) / (2 &ast; a);
+    console.log(
+	  'The roots of the quadratic equation are: ${rootl} and ${root2}'
+    );
+  } else if (discriminant === 0) {
+    let root = -b / (2 &ast; a);
+    console.log(' The quadratic equation has a repeated root: ${root}');
+  } else {
+    console.log("The quadratic equation has complex roots.");
+  }
 } else {
   console.log("Please enter valid numbers for coefficients.");
 }
@@ -612,9 +617,9 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js7">7. Convert Kilometers to Miles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a distance in kilometers and converts it to miles using the
-conversion factor: 1 kilometer is approximately equal to 0.621371 miles. It then displays the converted
-distance.
+<p>This program prompts the user to enter a distance in kilometers and converts it to 
+miles using the conversion factor: 1 kilometer is approximately equal to 0.621371 miles. 
+It then displays the converted distance.</p>
 <pre>
 // Prompt user for distance in kilometers
 let kilometers = parseFloat(prompt("Enter the distance in kilometers:"));
@@ -626,7 +631,7 @@ const kilometersToMilesConversionFactor = 0.621371;
 if (!isNaN(kilometers)) {
 
   // Convert kilometers to miles
-let miles = kilometers &ast; kilometersToMilesConversionFactor;
+  let miles = kilometers &ast; kilometersToMilesConversionFactor;
   console.log('${kilometers} kilometers is approximately ${miles} miles.');
 } else {
   console.log("Please enter a valid number for the distance in kilometers.");
@@ -635,19 +640,20 @@ let miles = kilometers &ast; kilometersToMilesConversionFactor;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js8">8. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program converts a temperature from Celsius to Fahrenheit using the formula: F = (C * 9/5) + 32, where
-F is the temperature in Fahrenheit and C is the temperature in Celsius.
+<p>This program converts a temperature from Celsius to Fahrenheit using the formula: 
+F = (C &ast; 9/5) + 32, where F is the temperature in Fahrenheit and C is the temperature 
+in Celsius.</p>
 <pre>
 // Prompt user for temperature in Celsius
-let Celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
+let celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
 
 // Check if input is a valid number
-if (lisNaN(celsius)) {
+if (!isNaN(celsius)) {
 
   // Convert Celsius to Fahrenheit
-  let fahrenheit = (celsius * 9) / 5 + 32;
+  let fahrenheit = (celsius &ast; 9) / 5 + 32;
   console.log(
-  ' $ {celsius} degrees Celsius is equal to $ {fahrenheit} degrees Fahrenheit.'
+  ' ${celsius} degrees Celsius is equal to ${fahrenheit} degrees Fahrenheit.'
   );
 } else {
   console.log("Please enter a valid number for the temperature in Celsius.");
@@ -656,16 +662,16 @@ if (lisNaN(celsius)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js9">9. Generate a Random Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a random number between a user-defined range. It prompts the user to enter the
-minimum and maximum values of the range, and then it displays the generated random number within
-that range.
+<p>This program generates a random number between a user-defined range. It prompts the 
+user to enter the minimum and maximum values of the range, and then it displays the 
+generated random number within that range.</p>
 <pre>
 // Prompt user for the range
 let minRange = parseFloat(prompt("Enter the minimum value of the range:"));
 let maxRange = parseFloat(prompt("Enter the maximum value of the range:"));
 
 // Check if input is a valid number
-if (!isNaN(minRange) && lisNaN(maxRange) && minRange &lt; maxRange) {
+if (!isNaN(minRange) && !isNaN(maxRange) && minRange &lt; maxRange) {
   // Generate a random number within the specified range
   let randomNumber = Math.random() &ast; (maxRange - minRange) + minRange;
   console.log(
@@ -687,12 +693,12 @@ displays the result.
 let number = parseFloat(prompt("Enter a number:"));
 
 // Check if input is a valid number
-if (lisNaN(number)) {
+if (!isNaN(number)) {
   // Check if the number is positive, negative, or zero
   if (number > 0) {
-    console.log(' $ {number} is a positive number.');
+    console.log('${number} is a positive number.');
   } else if (number < 0) {
-    console.log(' $ {number} is a negative number.');
+    console.log('${number} is a negative number.');
   } else {
     console.log("The entered number is zero.");
   }
@@ -703,14 +709,14 @@ if (lisNaN(number)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js11">11. Check if a Number is Odd or Even</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a number and checks whether it is odd or even. It then displays the
-result.
+<p>This program prompts the user to enter a number and checks whether it is odd or 
+even. It then displays the result.</p>
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
 
 // Check if input is a valid integer
-if (lisNaN(number) && Number.islnteger(number)) {
+if (!isNaN(number) && Number.isInteger(number)) {
   // Check if the number is odd or even
   if (number % 2 = = = 0) {
     console.log('${number} is an even number.');
@@ -724,8 +730,8 @@ if (lisNaN(number) && Number.islnteger(number)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js12">12. Find the Largest Among Three Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter three numbers and determines and displays the largest among
-them.
+<p>This program prompts the user to enter three numbers and determines and displays the 
+largest among them.</p>
 <pre>
 // Prompt user for three numbers
 let num1 = parseFloat(prompt("Enter the first number:"));
@@ -733,11 +739,11 @@ let num2 = parseFloat(prompt("Enter the second number:"));
 let num3 = parseFloat(prompt("Enter the third number:"));
 
 // Check if inputs are valid numbers
-if (’isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
+if (!isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
   // Find the largest among the three numbers
   let largestNumber = Math.max(numl, num2, num3);
   console.log (
-    'The largest number among ${numl), ${num2}, and ${num3} is: ${largestNumber}'
+    'The largest number among ${numl}, ${num2}, and ${num3} is: ${largestNumber}'
   );
 } else {
   console.log("Please enter valid numbers for all three inputs.");
@@ -746,15 +752,16 @@ if (’isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js13">13. Check Prime Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a number and checks whether it is a prime number or not. It then
-displays the result.
+<p>This program prompts the user to enter a number and checks whether it is a prime 
+number or not. It then displays the result.</p>
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
 
 // Check if input is a valid integer greater than 1
-if (lisNaN(number) && Number.islnteger(number) && number &gt; 1) {
+if (!isNaN(number) && Number.isInteger(number) && number &gt; 1) {
   let isPrime = true;
+  
   // Check for factors from 2 to the square root of the number
   for (let i = 2; i &lt;= Math.sqrt(number); i++) {
     if (number % i = = = 0) {
@@ -775,11 +782,11 @@ if (lisNaN(number) && Number.islnteger(number) && number &gt; 1) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js14">14. Print All Prime Numbers in an Interval</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a starting and ending number for an interval and then prints all the
-prime numbers within that interval.
+<p>This program prompts the user to enter a starting and ending number for an interval 
+and then prints all the prime numbers within that interval.</p>
 <pre>
 // Prompt user for the interval
-let startNumber = parselnt(
+let startNumber = parseInt(
   prompt("Enter the starting number of the interval:")
 );
 let endNumber = parseInt(prompt("Enter the ending number of the interval:"));
@@ -793,7 +800,7 @@ if(
   startNumber &lt; endNumber &&
   startNumber &gt; 1
 ){
-  console.log(* Prime numbers in the interval &lbrack;$ {startNumber}, ${endNumber}&rbrack;:');
+  console.log('Prime numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:');
 
 // Check for prime numbers in the interval
 for (let i = startNumber; i <= endNumber; i++) {
@@ -818,20 +825,21 @@ for (let i = startNumber; i <= endNumber; i++) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js15">15. Find the Factorial of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the factorial of a given number. The factorial of a non-negative integer n , denoted
-as n!, is the product of all positive integers less than or equal to n .
+<p>This program calculates the factorial of a given number. The factorial of a non-
+negative integer n , denoted as n!, is the product of all positive integers less than 
+or equal to n.</p>
 <pre>
 // Prompt user for a non-negative integer
 let number = parseInt(prompt("Enter a non-negative integer:"));
 
 // Check if input is a valid non-negative integer
-if (’isNaN(number) && Number.islnteger(number) && number >= 0) {
+if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
   // Calculate the factorial
   let factorial = 1;
   for (let i = 1; i < = number; i++) {
-    factorial *= i;
+    factorial &ast;= i;
   }
-  console.log(' The factorial of $ {number} is: $ {factorial}');
+  console.log('The factorial of ${number} is: ${factorial}');
 } else {
   console.log("Please enter a valid non-negative integer.");
 }
@@ -839,22 +847,22 @@ if (’isNaN(number) && Number.islnteger(number) && number >= 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js16">16. Display the Multiplication Table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a number and displays its multiplication table up to a specified range
-(e.g., up to 10).
+<p>This program prompts the user to enter a number and displays its multiplication table up to a specified range
+(e.g., up to 10).</p>
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number for the multiplication table:"));
 
 // Check if input is a valid integer
-if (lisNaN(number) && Number.islnteger(number)) {
+if (!isNaN(number) && Number.isInteger(number)) {
   // Specify the range for the multiplication table
   const range =10;
-  console.log(' Multiplication table for ${number} (up to ${range}):');
+  console.log('Multiplication table for ${number} (up to ${range}):');
 
   // Display the multiplication table
   for (let i = l;i < = range; i++) {
     let result = number &ast; i;
-    console.log(' ${number} x ${i} = ${result}');
+    console.log('${number} x ${i} = ${result}');
   }
 } else {
   console.log("Please enter a valid integer.");
@@ -863,18 +871,19 @@ if (lisNaN(number) && Number.islnteger(number)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js17">17. Print the Fibonacci Sequence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter the number of terms and then prints the Fibonacci sequence up to
-that number of terms. The Fibonacci sequence is a series of numbers where each number is the sum of the
-two preceding ones, usually starting with 0 and 1.
+<p>This program prompts the user to enter the number of terms and then prints the 
+Fibonacci sequence up to that number of terms. The Fibonacci sequence is a series of 
+numbers where each number is the sum of the two preceding ones, usually starting with 
+0 and 1.</p>
 <pre>
 // Prompt user for the number of terms in the Fibonacci sequence
-let numTerms = parselnt(
+let numTerms = parseInt(
   prompt("Enter the number of terms in the Fibonacci sequence:")
 );
 
 // Check if input is a valid integer
-if (’isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
-  console.log(* Fibonacci sequence of $ {numTerms} terms:');
+if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
+  console.log('Fibonacci sequence of ${numTerms} terms:');
   let fib Array = &lbrack;0,1&rbrack;;
   
   // Generate the Fibonacci sequence
@@ -889,10 +898,11 @@ if (’isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js18">18. Check Armstrong Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a number and checks whether it is an Armstrong number or not. An
-Armstrong number (also known as a narcissistic number or pluperfect digital invariant) is a number that is
-the sum of its own digits each raised to the power of the number of digits in the number. For example, 15 3 is
-an Armstrong number because 13 + 53 + 33 = 153 1<sub>3</sub> + 5<sub>3</sub> + 3<sub>3</sub>=153.
+<p>This program prompts the user to enter a number and checks whether it is an Armstrong 
+number or not. An Armstrong number (also known as a narcissistic number or pluperfect 
+digital invariant) is a number that is the sum of its own digits each raised to the power 
+of the number of digits in the number. For example, 153 is an Armstrong number because 
+13 + 53 + 33 = 1531<sub>3</sub> + 5<sub>3</sub> + 3<sub>3</sub>=153.</p>
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
@@ -903,18 +913,19 @@ if (fisNaN(number) && Number.islnteger(number) && number > 0) {
   let numberOfDigits = originalNumber.toString().length;
   let sum = 0;
 
-// Calculate the sum of digits each raised to the power of the number of digits
-while (originalNumber > 0) {
-  let digit = originalNumber % 10;
-  sum += Math.pow(digit, numberOfDigits);
-  originalNumber = Math.floor(originalNumber / 10);
-}
+  // Calculate the sum of digits each raised to the power of the number of digits
+  while (originalNumber > 0) {
+    let digit = originalNumber % 10;
+    sum += Math.pow(digit, numberOfDigits);
+    originalNumber = Math.floor(originalNumber / 10);
+  }
 
-// Check if the number is an Armstrong number
-if (sum = = = number) {
-  console.log(' $ {number} is an Armstrong number.');
-} else {
-  console.log(' $ {number} is not an Armstrong number.');
+  // Check if the number is an Armstrong number
+  if (sum === number) {
+    console.log('${number} is an Armstrong number.');
+  } else {
+    console.log('${number} is not an Armstrong number.');
+  }
 } else {
   console.log("Please enter a valid positive integer.");
 }
@@ -922,14 +933,14 @@ if (sum = = = number) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js19">19. Find Armstrong Number in an Interval</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a range (start and end) and then prints all Armstrong numbers
-within that interval.
+<p>This program prompts the user to enter a range (start and end) and then prints all 
+Armstrong numbers within that interval.</p>
 <pre>
 // Prompt user for the interval
-let startNumber = parselnt(
+let startNumber = parseInt(
   prompt("Enter the starting number of the interval:")
 );
-let endNumber = parse!nt(prompt("Enter the ending number of the interval:"));
+let endNumber = parseInt(prompt("Enter the ending number of the interval:"));
 // Check if inputs are valid positive integers and the startNumber is less than the endNumber
 if(
   !isNaN(startNumber) &&
@@ -954,7 +965,7 @@ for (let i = startNumber; i <= endNumber; i++) {
     sum += Math.pow(digit, numberOfDigits);
     originalNumber = Math.floor(originalNumber / 10);
   }
-  if (sum = = = i) {
+  if (sum === i) {
     console.log(i);
   }
 }
@@ -968,9 +979,10 @@ for (let i = startNumber; i <= endNumber; i++) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js20">20. Make a Simple Calculator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program implements a simple calculator that can perform basic arithmetic operations. It prompts the
-user to enter two numbers and choose an operation (addition, subtraction, multiplication, or division). It
-then performs the selected operation and displays the result.
+<p>This program implements a simple calculator that can perform basic arithmetic 
+operations. It prompts the user to enter two numbers and choose an operation (addition, 
+subtraction, multiplication, or division). It then performs the selected operation and 
+displays the result.</p>
 <pre>
 // Prompt user for two numbers
 let numl = parseFloat(prompt("Enter the first number:"));
@@ -980,7 +992,10 @@ let num2 = parseFloat(prompt("Enter the second number:"));
 if (lisNaN(numl) && !isNaN(num2)) {
   // Prompt user for the operation
   let operation = prompt(
-    "Choose an operation (+ for addition, - for subtraction, * for multiplication, / for division):"
+    "Choose an operation (+ for addition, 
+	  - for subtraction, 
+	  &ast; for multiplication, 
+	  / for division):"
   );
   // Perform the selected operation
   let result;
@@ -1017,8 +1032,8 @@ if (lisNaN(numl) && !isNaN(num2)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js21">21. Find the Sum of Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the sum of natural numbers up to a given positive integer n . The sum is calculated
-using the formula: sum = n*(n + l) / 2.
+<p>This program calculates the sum of natural numbers up to a given positive integer n. 
+The sum is calculated using the formula: sum = n&ast;(n + l) / 2.</p>
 <pre>
 // Prompt user for a positive integer
 let n = parseInt(prompt("Enter a positive integer:"));
@@ -1035,7 +1050,8 @@ if (!isNaN(n) && Number.isInteger(n) && n > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js22">22. Check if the Numbers Have the Same Last Digit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter two numbers and checks if they have the same last digit.
+<p>This program prompts the user to enter two numbers and checks if they have the same 
+last digit.</p>
 <pre>
 // Prompt user for two numbers
 let num 1 = parse!nt(prompt("Enter the first number:"));
@@ -1069,8 +1085,8 @@ if(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js23">23. Find HCF or GCD</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter two positive integers and calculates their Highest Common Factor
-(HCF) or Greatest Common Divisor (GCD).
+<p>This program prompts the user to enter two positive integers and calculates their 
+Highest Common Factor (HCF) or Greatest Common Divisor (GCD).</p>
 <pre>
 // Prompt user for two positive integers
 let numl = parse!nt(prompt("Enter the first positive integer:"));
@@ -1096,8 +1112,8 @@ if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js24">24. Find LCM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter two positive integers and calculates their Least Common Multiple
-(LCM).
+<p>This program prompts the user to enter two positive integers and calculates their Least 
+Common Multiple (LCM).</p>
 <pre>
 // Prompt user for two positive integers
 let numl = parse!nt(prompt("Enter the first positive integer:"));
@@ -1123,7 +1139,8 @@ if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js25">25. Find the Factors of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a positive integer and calculates and displays its factors.
+<p>This program prompts the user to enter a positive integer and calculates and displays 
+its factors.</p>
 <pre>
 // Prompt user for a positive integer
 let number = parseInt(prompt("Enter a positive integer:"));
@@ -1145,30 +1162,29 @@ if (’isNaN(number) && Number.isInteger(number) && number > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js26">26. Find Sum of Natural Numbers Using Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the sum of natural numbers up to a given positive integer using recursion. It
+<p>This program calculates the sum of natural numbers up to a given positive integer using recursion. It
 prompts the user to enter a positive integer n and then calculates and displays the sum using a recursive
-function.
+function.</p>
 
 <pre>
 // Define a recursive function to calculate the sum of natural numbers
 function sumOfNaturalNumbers(n) {
-if(n===l){
-return 1;
-} else {
-return n + sumOfNaturalNumbers(n -1);
-}
+  if(n===l){
+    return 1;
+  } else {
+    return n + sumOfNaturalNumbers(n -1);
+  }
 }
 // Prompt user for a positive integer
 let number = parseInt(prompt("Enter a positive integer:"));
 
 // Check if input is a valid positive integer
-if (lisNaN(number) && Number.islnteger(number) && number > 0) {
-
-// Calculate and display the sum using recursion
-let sum = sumOfNaturalNumbers(number);
-console.log(' The sum of natural numbers up to $ {number} is: ${sum}');
+if (!isNaN(number) && Number.isInteger(number) && number > 0) {
+  // Calculate and display the sum using recursion
+  let sum = sumOfNaturalNumbers(number);
+  console.log('The sum of natural numbers up to ${number} is: ${sum}');
 } else {
-console.log("Please enter a valid positive integer.");
+  console.log("Please enter a valid positive integer.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
