@@ -4880,109 +4880,112 @@ startChatQ;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js170">170. RGB to HEX Converter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program allows you to convert RBG values to hexadecimal.
+<p>This program allows you to convert RBG values to hexadecimal.</p>
 <pre>
 function convertToHex(red, green, blue) {
-const toHex = value => {
-const hex = parselnt(value, 10).toString(16);
-return hex.length = = = 1 ? 'O' + hex: hex;
-};
-const hexRed = toHex(red);
-const hexGreen = toHex(green);
-const hexBlue = toHex(blue);
-return ' #$ {hexRed} $ {hexGreen} $ {hexBlue}';
+  const toHex = value => {
+    const hex = parseInt(value, 10).toString(16);
+    return hex.length === 1 ? 'O' + hex:hex;
+  };
+  const hexRed = toHex(red);
+  const hexGreen = toHex(green);
+  const hexBlue = toHex(blue);
+  return `#${hexRed}${hexGreen}${hexBlue}`;
 }
 // Example usage
 const redValue = prompt('Enter the Red value (0-255):');
 const greenValue = promptfEnter the Green value (0-255):');
-const blue Value = prompt('Enter the Blue value (0-255):');
-const hexResult = convertToHex(redValue, greenValue, blue Value);
-console.log(' HEX: $ {hexResult}');
+const blueValue = prompt('Enter the Blue value (0-255):');
+const hexResult = convertToHex(redValue, greenValue, blueValue);
+console.log(`HEX: ${hexResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js171">171. Counter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program allows you to increment, decrement and reset a counter.
+<p>This program allows you to increment, decrement and reset a counter.</p>
 <pre>
 let count = 0;
 function incrementCounter() {
-count++;
-console.log(' Counter: $ {count}');
+  count++;
+  console.log(`Counter: ${count}`);
 }
 function decrementCounter() {
-count-;
-console.log(' Counter: $ {count}');
+  count--;
+  console.log(`Counter: ${count}`);
 }
 function resetCounter() {
-count = 0;
-console.log("Counter reset to 0");
+  count = 0;
+  console.log("Counter reset to 0");
 }
 // Example usage
-incrementCounterO;
-incrementCounterO;
-decrementCounterO;
-resetCounterQ;
+incrementCounter();
+incrementCounter();
+decrementCounter();
+resetCounter();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js172">172. Stop The Bomb</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program to allow you stop an active bomb.
+<p>This program to allow you stop an active bomb.</p>
 <pre>
 let bombTimer;
 let countdowninterval;
 let timeLeft = 10; // Initial time in seconds
+
 function startBomb() {
-console.log("The bomb is ticking! Hurry defuse it!");
-displayTimeLeft();
-bombTimer = setTimeout(() = > {
-console.log("BOOM! The bomb exploded. Game over!");
-clearlnterval(countdownlnterval);
-}, timeLeft &ast; 1000);
+  console.log("The bomb is ticking! Hurry defuse it!");
+  displayTimeLeft();
+  bombTimer = setTimeout(() =&gt; {
+    console.log("BOOM! The bomb exploded. Game over!");
+    clearlnterval(countdownlnterval);
+  }, timeLeft &ast; 1000);
 }
+
 function defuseBomb() {
-clearTimeout(bombTimer);
-console.log("Whew! You successfully defused the bomb!");
-clearlnterval(countdownlnterval);
+  clearTimeout(bombTimer);
+  console.log("Whew! You successfully defused the bomb!");
+  clearlnterval(countdownlnterval);
 }
+
 function displayTimeLeft() {
-countdowninterval = setlnterval(() = > {
-console.clearO;
-console.log(' Time remaining: $ {timeLeft} seconds');
-timeLeft—;
-if (timeLeft < 0) {
-clearTimeout(bombTimer);
-console.logC'BOOM! The bomb exploded. Game over!");
-clearlnterval(countdownlnterval);
-}
-}, 1000);
+  countdowninterval = setlnterval(() =&gt; {
+    console.clear();
+    console.log(`Time remaining: ${timeLeft} seconds`);
+    timeLeft--;
+    if (timeLeft &lt; 0) {
+      clearTimeout(bombTimer);
+      console.log("BOOM! The bomb exploded. Game over!");
+      clearlnterval(countdownlnterval);
+    }
+  }, 1000);
 }
 // Example usage
-startBombO;
+startBomb();
 // Uncomment the line below to simulate successfully defusing the bomb
 // defuseBomb();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js173">173. IP Address Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Generating IP addresses programmatically can be done using a programming language like JavaScript.
+<p>Generating IP addresses programmatically can be done using a programming language like JavaScript.
 Below is a simple example of an IP address generator in JavaScript. Note that this example generates random
-IP addresses for educational purposes and should not be used for any malicious activities.
+IP addresses for educational purposes and should not be used for any malicious activities.</p>
 <pre>
-function generateRandomlp() {
-const octet = () => Math.floor(Math.random() &ast; 256);
-return '${octet()}.${octet()}.${octet()}.${octet()}';
+function generateRandomIp() {
+  const octet = () =&gt; Math.floor(Math.random() &ast; 256);
+  return '${octet()}.${octet()}.${octet()}.${octet()}';
 }
-function generateMultipleRandomlps(count) {
-const ipAddresses = &lbrack;&rbrack;;
-for (let i = 0; i < count; i++) {
-ipAddresses.push(generateRandomlp());
-}
-return ipAddresses;
+function generateMultipleRandomIps(count) {
+  const ipAddresses = &lbrack;&rbrack;;
+  for (let i = 0; i &lt; count; i++) {
+    ipAddresses.push(generateRandomIp());
+  }
+  return ipAddresses;
 }
 // Example: Generate and print 5 random IP addresses
-const numberOflps = 5;
-const randomlps = generateMultipleRandomlps(numberOflps);
-console.log('Random IP Addresses:’, randomlps);
+const numberOfIps = 5;
+const randomIps = generateMultipleRandomIps(numberOfIps);
+console.log('Random IP Addresses:’, randomIps);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js174">174. Digital clock</h2>
@@ -4994,8 +4997,9 @@ const now = new Date();
 const hours = now.getHours();
 const minutes = now.getMinutes();
 const seconds = now.getSeconds();
-const formattedTime = ' $ {hours} :$ {minutes} :$ {seconds}';
-console.clearO; // Clears the console to update the time
+
+const formattedTime = `${hours}:${minutes}:${seconds}`;
+console.clear(); // Clears the console to update the time
 console.log("Current Time:" + formattedTime);
 }
 // Update the clock every second
@@ -5008,7 +5012,7 @@ set!nterval(updateClock, 1000);
 <pre>
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() &ast; (max - min + 1)) + min;
-  }
+}
   const randomNumber = generateRandomNumber(l, 10);
   console.log("Random Number:", randomNumber);
 </pre>
@@ -5019,114 +5023,117 @@ function generateRandomNumber(min, max) {
 the user for answers and provides feedback in the console.</p>
 <pre>
 function runQuiz() {
-const questions = &lbrack;
-{
-question: "What is the capital of France?",
-options: &lbrack;"Berlin", "Madrid", "Paris", "Rome"&rbrack;,
-correctAnswer: "Paris"
-},
-{
-question: "Which programming language is this quiz written in?",
-options: &lbrack;"JavaScript", "Python", "Java", "C++"&rbrack;,
-correctAnswer: "JavaScript"
-},
-{
-question: "What is the largest mammal?",
-options: &lbrack;"Elephant", "Whale Shark", "Blue Whale", "Giraffe"&rbrack;,
-correctAnswer: "Blue Whale"
-}
-&rbrack;;
-let score = 0;
-for (const question of questions) {
-console.log(question.question);
-for (let i = 0; i < question.options.length; i+ +) {
-console.log('${i + 1}. ${question.options&lbrack;i&rbrack;}');
-}
-const userAnswerlndex = prompt("Enter the number of your answer:");
-const user Answer = question.options&lbrack;user Answerindex -1&rbrack;;
-if (userAnswer = = = question.correctAnswer) {
-console.log("Correct!\n");
-score++;
-} else {
-console.log(' Wrong! The correct answer is $ {question.correct Answer}\n');
-}
-}
-console.log(' Your final score: $ {score} out of ${questions.length}');
+  const questions = &lbrack;
+  {
+    question: "What is the capital of France?",
+    options: &lbrack;"Berlin", "Madrid", "Paris", "Rome"&rbrack;,
+    correctAnswer: "Paris"
+  },
+  {
+    question: "Which programming language is this quiz written in?",
+    options: &lbrack;"JavaScript", "Python", "Java", "C++"&rbrack;,
+    correctAnswer: "JavaScript"
+  },
+  {
+    question: "What is the largest mammal?",
+    options: &lbrack;"Elephant", "Whale Shark", "Blue Whale", "Giraffe"&rbrack;,
+    correctAnswer: "Blue Whale"
+  }
+  &rbrack;;
+  let score = 0;
+  for (const question of questions) {
+    console.log(question.question);
+    for (let i = 0; i < question.options.length; i+ +) {
+      console.log(`${i + 1}.${question.options&lbrack;i&rbrack;}`);
+    }
+    const userAnswerlndex = prompt("Enter the number of your answer:");
+    const user Answer = question.options&lbrack;user Answerindex -1&rbrack;;
+    if (userAnswer = = = question.correctAnswer) {
+      console.log("Correct!\n");
+      score++;
+    } else {
+      console.log(`Wrong! The correct answer is ${question.correct Answer}\n`);
+    }
+  }
+  console.log(`Your final score: ${score} out of ${questions.length}`);
 }
 // Run the quiz
-runQuizQ;
+runQuiz();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js177">177. Text-based RPG Adventure</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program takes the user on a simple text-based RPG adventure where they make choices to navigate
-through a story.
+<p>This program takes the user on a simple text-based RPG adventure where they make 
+choices to navigate through a story.</p>
 <pre>
 function textRPGAdventure() {
-console.logC'Welcome to the Text-based RPG Adventure!");
-console.log("You find yourself in a dark cave. What do you want to do?");
-const choices = &lbrack;
-{option: "Explore the cave", outcome: "You discover a hidden treasure!", next: "treasure"},
-{option: "Go deeper into the cave", outcome: "Uh-oh! A dragon appears! You narrowly escape.", next: "dragon"},
-{option: "Exit the cave", outcome: "You emerge into the sunlight. Adventure awaits!", next: "end"}
-&rbrack;;
-let currentchoice = 0;
-while (currentchoice < choices.length) {
-const userChoice = prompt(choices&lbrack;currentChoice&rbrack;.option);
-console.log(choices&lbrack;currentChoice&rbrack;.outcome);
-if (userChoice.toLowerCaseO = = = "exit") {
-console.log("You exit the adventure. Goodbye!");
-break;
-}
-currentchoice = choices.findlndex(choice => choice.next = = = userChoice.toLowerCaseO);
-if (currentchoice = = = -1) {
-console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
-}
-}
+  console.log("Welcome to the Text-based RPG Adventure!");
+  console.log("You find yourself in a dark cave. What do you want to do?");
+  const choices = &lbrack;
+    {option: "Explore the cave", outcome: "You discover a hidden treasure!", next: "treasure"},
+    {option: "Go deeper into the cave", outcome: "Uh-oh! A dragon appears! You narrowly escape.", next: "dragon"},
+    {option: "Exit the cave", outcome: "You emerge into the sunlight. Adventure awaits!", next: "end"}
+  &rbrack;;
+  let currentchoice = 0;
+  while (currentchoice &lt; choices.length) {
+    const userChoice = prompt(choices&lbrack;currentChoice&rbrack;.option);
+    console.log(choices&lbrack;currentChoice&rbrack;.outcome);
+    if (userChoice.toLowerCase() === "exit") {
+      console.log("You exit the adventure. Goodbye!");
+      break;
+    }
+    currentchoice = choices.findlndex(choice => choice.next = = = userChoice.toLowerCase());
+    if (currentchoice === -1) {
+      console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
+    }
+  }
 }
 // Start the text-based RPG adventure
-textRPGAdventureQ;
+textRPGAdventure();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js178">178. Dice Rolling Simulator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program simulates rolling a six-sided die, providing a random result between 1 and 6.
+<p>This program simulates rolling a six-sided die, providing a random result between 1 and 6.</p>
 <pre>
 function rollDice() {
-const result = Math.floor(Math.random() * 6) + 1;
-console.log('You rolled a ${result}');
+  const result = Math.floor(Math.random() &ast; 6) + 1;
+  console.log(`You rolled a ${result}`);
 }
 // Simulate rolling the dice
-rollDiceQ;
+rollDice();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js179">179. Seconds to Time Converter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program takes a number of seconds as input and converts it into hours, minutes, and seconds,
-displaying the result in the console.
+<p>This program takes a number of seconds as input and converts it into hours, minutes, 
+and seconds, displaying the result in the console.</p>
 <pre>
 function convertSecondsToTime(seconds) {
-const hours = Math.floor(seconds / 3600);
-const minutes = Math.floor((seconds % 3600) / 60);
-const remainingSeconds = seconds % 60;
-console.log(' Time: $ {hours} hours, $ {minutes} minutes, $ {remainingSeconds} seconds');
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const remainingSeconds = seconds % 60;
+  console.log(`Time: ${hours} hours, ${minutes} minutes, ${remainingSeconds} seconds`);
 }
 // Example: Convert 3665 seconds to time
 const inputSeconds = 3665;
 convertSecondsToTime(inputSeconds);
+
+Time: 1 hours, 1 minutes, 5 seconds
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js180">180. Bar Chart Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program takes an array of numerical values and creates a simple horizontal bar chart in the console.
+<p>This program takes an array of numerical values and creates a simple horizontal bar 
+chart in the console.</p>
 <pre>
 function generateBarChart(data) {
-const maxValue = Math.max(...data);
-for (let value of data) {
-const barLength = Math.round((value / maxValue) * 20);
-const bar = '■'.repeat(barLength).padEnd(20,'');
-console.log(' $ {value} I ${bar}');
-}
+  const maxValue = Math.max(...data);
+  for (let value of data) {
+    const barLength = Math.round((value / maxValue) &ast; 20);
+    const bar = '■'.repeat(barLength).padEnd(20,'');
+    console.log(`${value} | ${bar}`);
+  }
 }
 // Example: Generate a bar chart for data
 const chartData = &lbrack;5,8,12,4,6&rbrack;;
@@ -5135,13 +5142,14 @@ generateBarChart(chartData);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js181">181. Right-Angled Triangle Pattern</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a right-angled triangle pattern using asterisks and displays it in the console.
+<p>This program generates a right-angled triangle pattern using asterisks and displays 
+it in the console.</p>
 <pre>
 function generateRightAngledTriangle(height) {
-for (let i = 1; i < = height; i++) {
-const stars = '*'.repeat(i);
-console.log(stars);
-}
+  for (let i = 1; i &lt;= height; i++) {
+    const stars = '&ast;'.repeat(i);
+    console.log(stars);
+  }
 }
 // Example: Generate a right-angled triangle with a height of 5
 const triangleHeight = 5;
@@ -5154,16 +5162,16 @@ generateRightAngledTriangle(triangleHeight);
 and evaluates and displays the result in the console.</p>
 <pre>
 function textBasedCalculator(expression) {
-try{
-const result = eval(expression);
-console.log(' Result: $ {result}');
-} catch (error) {
-console.errorCError:1, error.message);
-}
+  try {
+    const result = eval(expression);
+    console.log(`Result: ${result}`);
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
 }
 // Example: Evaluate a mathematical expression
-const userinput = promptfEnter a mathematical expression:');
-textBasedCalculator(userlnput);
+const userInput = prompt('Enter a mathematical expression:');
+textBasedCalculator(userInput);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js183">183. Number Pyramid Generator</h2>
@@ -5171,11 +5179,11 @@ textBasedCalculator(userlnput);
 <p>This program generates a number pyramid pattern and displays it in the console.</p>
 <pre>
 function generateNumberPyramid(height) {
-for (let i = 1; i < = height; i++) {
-const spaces = ' '.repeat(height - i);
-const numbers = Array.from({ length: i}, (_, index) => index + l).join(' ');
-console.log(spaces + numbers);
-}
+  for (let i = 1; i &lt;= height; i++) {
+    const spaces = ''.repeat(height - i);
+    const numbers = Array.from({length: i}, (_, index) => index + l).join(' ');
+    console.log(spaces + numbers);
+  }
 }
 // Example: Generate a number pyramid with a height of 4
 const pyramidHeight = 4;
@@ -5187,12 +5195,12 @@ generateNumberPyramid(pyramidHeight);
 <p>This program generates a diamond pattern using characters and displays it in the console.</p>
 <pre>
 function generateDiamondPattern(height) {
-const midpoint = Math.ceil(height / 2);
-for (let i = l;i < = height; i++) {
-const spaces = Math.abs(midpoint - i);
-const stars = '*'.repeat(height - 2 * spaces);
-console.logC ’.repeat(spaces) + stars);
-}
+  const midpoint = Math.ceil(height / 2);
+  for (let i = l;i &lt;= height; i++) {
+    const spaces = Math.abs(midpoint - i);
+    const stars = '&ast;'.repeat(height - 2 &ast; spaces);
+    console.log(''.repeat(spaces) + stars);
+  }
 }
 // Example: Generate a diamond pattern with a height of 5
 const diamondHeight = 5;
@@ -5205,48 +5213,48 @@ generateDiamondPattern(diamondHeight);
 suggesting letters, and the program displays the progress and remaining attempts.</p>
 <pre>
 function hangmanGame() {
-const words = &lbrack;"javascript", "hangman", "programming", "developer", "challenge"&rbrack;;
-const selectedWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
-let guessedWord = "_".repeat(selectedWord.length);
-let remainingAttempts = 6;
-const guessedLetters = &lbrack;&rbrack;;
-console.log("Welcome to the Hangman Game!");
-console.log("Try to guess the word.");
-while (remainingAttempts > 0) {
-console.log(' Word: ${guessedWord}');
-console.log(' Guessed Letters: ${guessedLetters.join(",")}');
-console.log(' Attempts Remaining: $ {remainingAttempts}');
-const userGuess = prompt("Enter a letter:").toLowerCase();
-if (’userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length ’ = = 1) {
-console.log("Invalid input. Please enter a single letter.");
-continue;
-}
-if (guessedLetters.includes(userGuess)) {
-console.log("You already guessed that letter. Try again.");
-continue;
-}
-guessedLetters.push(userGuess);
-if (selectedWord.includes(userGuess)) {
-for (let i = 0; i < selectedWord.length; i++) {
-if (selectedWord&lbrack;i&rbrack; = = = userGuess) {
-guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i + 1);
-}
-}
-if (!guessedWord.includes("_")) {
-console.log(' Congratulations! You guessed the word: ${selectedWord}');
-break;
-}
-} else {
-console.log("Incorrect guess. Try again.");
-remainingAttempts--;
-if (remainingAttempts = = = 0) {
-console.log(' Out of attempts. The word was: ${selectedWord}');
-}
-}
-}
+  const words = &lbrack;"javascript", "hangman", "programming", "developer", "challenge"&rbrack;;
+  const selectedWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
+  let guessedWord = "_".repeat(selectedWord.length);
+  let remainingAttempts = 6;
+  const guessedLetters = &lbrack;&rbrack;;
+  console.log("Welcome to the Hangman Game!");
+  console.log("Try to guess the word.");
+  while (remainingAttempts > 0) {
+    console.log(`Word: ${guessedWord}`);
+    console.log(`Guessed Letters: ${guessedLetters.join(",")}`);
+    console.log(`Attempts Remaining: ${remainingAttempts}`);
+    const userGuess = prompt("Enter a letter:").toLowerCase();
+    if (!userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length !== 1) {
+      console.log("Invalid input. Please enter a single letter.");
+      continue;
+    }
+    if (guessedLetters.includes(userGuess)) {
+      console.log("You already guessed that letter. Try again.");
+      continue;
+    }
+    guessedLetters.push(userGuess);
+    if (selectedWord.includes(userGuess)) {
+      for (let i = 0; i &lt; selectedWord.length; i++) {
+        if (selectedWord&lbrack;i&rbrack; === userGuess) {
+          guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i + 1);
+        }
+      }
+      if (!guessedWord.includes("_")) {
+        console.log(' Congratulations! You guessed the word: ${selectedWord}');
+        break;
+      }
+    } else {
+      console.log("Incorrect guess. Try again.");
+      remainingAttempts--;
+      if (remainingAttempts = = = 0) {
+        console.log(`Out of attempts. The word was: ${selectedWord}`);
+      }
+    }
+  }
 }
 // Start the Hangman game
-hangmanGameO;
+hangmanGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js186">186. Countdown Timer</h2>
@@ -5255,24 +5263,24 @@ hangmanGameO;
 down, and the program displays the remaining time.</p>
 <pre>
 function countdownTimer() {
-const userTime = promptf'Enter the countdown time in seconds:");
-const countdownTime = parse!nt(userTime, 10);
-if (isNaN(countdownTime) 11 countdownTime <= 0) {
-console.log("Invalid input. Please enter a positive number.");
-return;
-}
-console.log(' Countdown started for ${countdownTime} seconds.');
-let secondsRemaining = countdownTime;
-const intervalld = setlnterval(() = > {
-console.clearO;
-console.log(' Time Remaining: $ {secondsRemaining} seconds ' );
-if (secondsRemaining = = = 0) {
-console.log("Countdown completed!");
-clearlnterval(intervalld);
-} else {
-secondsRemaining--;
-}
-}, 1000);
+  const userTime = promptf'Enter the countdown time in seconds:");
+  const countdownTime = parseInt(userTime, 10);
+  if (isNaN(countdownTime) || countdownTime &lt;= 0) {
+    console.log("Invalid input. Please enter a positive number.");
+    return;
+  }
+  console.log(' Countdown started for ${countdownTime} seconds.');
+  let secondsRemaining = countdownTime;
+  const intervalId = setlnterval(() =&gt; {
+    console.clear();
+    console.log(`Time Remaining: ${secondsRemaining} seconds`);
+    if (secondsRemaining === 0) {
+      console.log("Countdown completed!");
+      clearlnterval(intervalId);
+    } else {
+      secondsRemaining--;
+    }
+  }, 1000);
 }
 // Start the countdown timer
 countdownTimer();
@@ -5284,24 +5292,25 @@ countdownTimer();
 constructs a humorous story using those inputs.</p>
 <pre>
 function madLibsGame() {
-console.logC'Welcome to the Mad Libs Game!");
-console.logC'Let's create a funny story.");
-const noun = promptf'Enter a noun:");
-const verb = prompt("Enter a verb:");
-const adjective = promptf'Enter an adjective:");
-const adverb = promptf'Enter an adverb:");
-const animal = promptf'Enter an animal:");
-const sound = prompt("Enter a sound:");
-console.clearO;
-console.logC'Here’s your Mad Libs story:");
-console.log(' Once upon a time, there was a ${adjective&rbrack; ${noun&rbrack; that loved to ${verb} ${adverb}.');
-console.log(' One day, it met a $ {animal} that made a $ {sound} noise.');
-console.log("Everyone in the neighborhood heard the noise and started to join the fun!");
-console.log("And they all lived happily ever after.");
-console.log("The end.");
+  console.log("Welcome to the Mad Libs Game!");
+  console.log("Let's create a funny story.");
+  const noun = prompt("Enter a noun:");
+  const verb = prompt("Enter a verb:");
+  const adjective = prompt("Enter an adjective:");
+  const adverb = prompt("Enter an adverb:");
+  const animal = prompt("Enter an animal:");
+  const sound = prompt("Enter a sound:");
+  console.clear();
+
+  console.log("Here’s your Mad Libs story:");
+  console.log(`Once upon a time, there was a ${adjective} ${noun} that loved to ${verb} ${adverb}.`);
+  console.log(`One day, it met a ${animal} that made a ${sound} noise.`);
+  console.log("Everyone in the neighborhood heard the noise and started to join the fun!");
+  console.log("And they all lived happily ever after.");
+  console.log("The end.");
 }
 // Start the Mad Libs game
-madLibsGameO;
+madLibsGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js188">188. Guess the Number Game</h2>
@@ -5311,31 +5320,31 @@ certain number of attempts. The game provides feedback on whether the guess is t
 high, too low, or correct.</p>
 <pre>
 function guessTheNumberGame() {
-const maxNumber = 100;
-const maxAttempts =10;
-const secretNumber = Math.floor(Math.random() * maxNumber) + 1;
-console.log("Welcome to the Guess the Number Game!");
-console.log(' I've picked a number between 1 and ${maxNumber}. Try to guess it!');
-for (let attempts = 1; attempts <= maxAttempts; attempts++) {
-const userGuess = parse!nt(prompt("Enter your guess:"), 10);
-if (isNaN(userGuess) 11 userGuess < 1 || userGuess > maxNumber) {
-console.log(' Invalid guess. Please enter a number between 1 and ${maxNumber}.');
-attempts—;
-continue;
-}
-if (userGuess = = = secretNumber) {
-console.log(' Congratulations! You guessed the number in $ {attempts} attempts.');
-return;
-} else if (userGuess < secretNumber) {
-console.log("Too low. Try again!");
-} else {
-console.log("Too high. Try again!");
-}
-}
-console.log(' Sorry, you've run out of attempts. The number was ${secretNumber}.');
+  const maxNumber = 100;
+  const maxAttempts =10;
+  const secretNumber = Math.floor(Math.random() * maxNumber) + 1;
+  console.log("Welcome to the Guess the Number Game!");
+  console.log(`I've picked a number between 1 and ${maxNumber}. Try to guess it!`);
+  for (let attempts = 1; attempts &lt;= maxAttempts; attempts++) {
+    const userGuess = parseInt(prompt("Enter your guess:"), 10);
+    if (isNaN(userGuess) || userGuess &lt; 1 || userGuess &gt; maxNumber) {
+      console.log(' Invalid guess. Please enter a number between 1 and ${maxNumber}.');
+      attempts—;
+      continue;
+    }
+    if (userGuess === secretNumber) {
+      console.log(`Congratulations! You guessed the number in ${attempts} attempts.`);
+      return;
+    } else if (userGuess < secretNumber) {
+      console.log("Too low. Try again!");
+    } else {
+      console.log("Too high. Try again!");
+    }
+  }
+  console.log(`Sorry, you've run out of attempts. The number was ${secretNumber}.`);
 }
 // Start the Guess the Number Game
-guessTheNumberGameO;
+guessTheNumberGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js189">189. Whack-a-Mole Game</h2>
