@@ -4,7 +4,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Programming in JS was complicated until you appreciated this wonderful book.
+<p>Programming in JS was complicated until you appreciated this wonderful blog.
 Focus on the most important thing writing code, starting from the first program to the last
 will help you quickly increase your skills as a programmer and will give you the knowledge
 necessary to understand:</p>
