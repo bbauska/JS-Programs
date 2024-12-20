@@ -523,11 +523,11 @@ console.log("Hello, World!");
 <p>This program focuses on taking two numbers as input and then displaying their sum. It prompts the user to
 enter two numbers, adds them together, and prints the result.</p>
 <pre>
-let num 1 = parseFloat(prompt("Enter the first number:"));
+let num1 = parseFloat(prompt("Enter the first number:"));
 letnum2 = parseFloat(prompt("Enter the second number:"));
 if (!isNaN(numl) && !isNaN(num2)) {
   let sum = numl + num2;
-  console.log(' The sum of ${numl} and ${num2} is: ${sum}');
+  console.log('The sum of ${numl} and ${num2} is: ${sum}');
 } else {
   console.log("Please enter valid numbers.");
 }
@@ -550,7 +550,8 @@ if (!isNaN(inputNumber) && inputNumber >= 0) {
 <h2 id="js4">4. Calculate the Area of a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter the base and height of a triangle and 
-calculates its area using the formula: Area=12xBasexHeightArea=21xBasexHeight. It then 
+calculates its area using the formula: 
+<span class="consolas">Area=12xBasexHeightArea=21xBasexHeight</span>. It then 
 displays the calculated area.</p>
 <pre>
 let base = parseFloat(prompt("Enter the base of the triangle:"));
@@ -642,8 +643,8 @@ if (!isNaN(kilometers)) {
 <h2 id="js8">8. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program converts a temperature from Celsius to Fahrenheit using the formula: 
-F = (C &ast; 9/5) + 32, where F is the temperature in Fahrenheit and C is the temperature 
-in Celsius.</p>
+<span class="consolas">F = (C &ast; 9/5) + 32</span>, where F is the temperature in 
+Fahrenheit and C is the temperature in Celsius.</p>
 <pre>
 // Prompt user for temperature in Celsius
 let celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
@@ -827,8 +828,8 @@ for (let i = startNumber; i <= endNumber; i++) {
 <h2 id="js15">15. Find the Factorial of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the factorial of a given number. The factorial of a non-
-negative integer n , denoted as n!, is the product of all positive integers less than 
-or equal to n.</p>
+negative integer <span class="consolas">n</span> , denoted as <span class="consolas">n!</span>, 
+is the product of all positive integers less than or equal to <span class="consolas">n</span>.</p>
 <pre>
 // Prompt user for a non-negative integer
 let number = parseInt(prompt("Enter a non-negative integer:"));
@@ -903,7 +904,7 @@ if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
 number or not. An Armstrong number (also known as a narcissistic number or pluperfect 
 digital invariant) is a number that is the sum of its own digits each raised to the power 
 of the number of digits in the number. For example, 153 is an Armstrong number because 
-13 + 53 + 33 = 1531<sub>3</sub> + 5<sub>3</sub> + 3<sub>3</sub>=153.</p>
+<span class="consolas">13 + 53 + 33 = 1531<sub>3</sub> + 5<sub>3</sub> + 3<sub>3</sub>=153</span>.</p>
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
@@ -1033,8 +1034,10 @@ if (lisNaN(numl) && !isNaN(num2)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js21">21. Find the Sum of Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates the sum of natural numbers up to a given positive integer n. 
-The sum is calculated using the formula: sum = n&ast;(n + l) / 2.</p>
+<p>This program calculates the sum of natural numbers up to a given positive integer 
+<span class="consolas">n</span>. 
+The sum is calculated using the formula: 
+<span class="consolas">sum = n&ast;(n + l) / 2</span>.</p>
 <pre>
 // Prompt user for a positive integer
 let n = parseInt(prompt("Enter a positive integer:"));
@@ -1529,8 +1532,9 @@ console.log("Please enter a valid string.");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js41">41. Replace All Occurrences of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Replace all occurrences of a substring in a string in JavaScript, you can use the replace() method along with
-a regular expression with the global ( g ) flag.
+<p>Replace all occurrences of a substring in a string in JavaScript, you can use the 
+<span class="consolas">replace()</span> method along with
+a regular expression with the global ( <span class="consolas">g</span> ) flag.</p>
 <pre>
 // Example string
 let originalstring = "Hello world, world!";
@@ -1591,7 +1595,8 @@ console.log(' Random String: $ {randomstring}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js45">45. Check if a String Starts with Another String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks if a string starts with another string using the startsWit h method.
+<p>This program checks if a string starts with another string using the 
+<span class="consolas">startsWith</span> method.</p>
 <pre>
 // Example strings
 let mainString = "Hello, World!";
@@ -1604,7 +1609,8 @@ console.log(' Does the string start with '${searchString}'? ${startsWith}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js46">46. Trim a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program trims leading and trailing whitespaces from a string using the trim() method.
+<p>This program trims leading and trailing whitespaces from a string using the 
+<span class="consolas">trim()</span> method.</p>
 <pre>
 // Example string with leading and trailing whitespaces
 let stringWithSpaces = " Hello, World!
@@ -1614,24 +1620,28 @@ let trimmedString = stringWithSpaces.trim();
 console.log(' Original String: '$ {stringWithSpaces}'');
 console.log(' Trimmed String: '${trimmedString}'');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js47">47. Check Whether a String Contains a Substring</h2>
-This program checks whether a string contains a substring in JavaScript using the includes() method or the
-indexOf() method.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>This program checks whether a string contains a substring in JavaScript using the 
+<span class="consolas">includes()</span> method or the
+<span class="consolas">indexOf()</span> method.</p>
 <pre>
 // Example string
 let mainString = "Hello, World!";
 let substringToCheck = "World";
+
 // Check if mainString contains substringToCheck
 let containsSubstring = mainString.includes(substringToCheck);
+
 // Display the result
-console.log(' Does the string contain '$ {substringToCheck}'? ${containsSubstring}');
+console.log(' Does the string contain '${substringToCheck}'? ${containsSubstring}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js48">48. Compare Two Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program compare two strings in JavaScript, you can use the standard comparison operators ( = = = , != = ,
-< , > , <= , >= ).
+<p>This program compare two strings in JavaScript, you can use the standard comparison 
+operators ( <span class="consolas">=== , !== , &lt; , &gt; , &lt;= , &gt;=</span> ).</p>
 <pre>
 // Example strings
 let string 1 = "Hello";
@@ -1647,7 +1657,8 @@ console.log(' Case-insensitive comparison: $ {caselnsensitiveComparison}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js49">49. Encode a String to Base64</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program encode a string to Base64 in JavaScript, you can use the btoa() function.
+<p>This program encode a string to Base64 in JavaScript, you can use the 
+<span class="consolas">btoa()</span> function.</p>
 <pre>
 let originalstring = "Hello, !";
 // Encode the string to Base64 (for non-ASCII characters)
@@ -1659,8 +1670,8 @@ console.log(' Base64 Encoded String: ${base64EncodedString}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js50">50. Replace all Instances of a Character in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program replace all instances of a character in a string in JavaScript, you can use the replace() method
-with a regular expression.
+<p>This program replace all instances of a character in a string in JavaScript, you can use 
+the <span class="consolas">replace()</span> method with a regular expression.</p>
 <pre>
 // Example string
 let originalstring = "Hello, World!";
@@ -1678,7 +1689,7 @@ console.log(' Modified String: ${modifiedString}');
 <h2 id="js51">51. Replace All Line Breaks with</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program replace all line breaks (newline characters) in a string with a specific string or character, you
-can use the replace() method with a regular expression.
+can use the <span class="consolas">replace()</span> method with a regular expression.
 <pre>
 // Example string with line breaks
 let stringWithLineBreaks = "Hello,\nWorld!\nThis is a new line.";
@@ -1716,9 +1727,11 @@ console.log(' $ {yearToCheck} is not a leap year.');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js53">53. Format the Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Formatting a date in JavaScript typically involves using the toLocaleDateString() method or constructing a
-formatted string manually. The toLocaleDateString() method provides a way to format a date based on the
-user's locale, including options for formatting the date, such as specifying the date style and time zone.
+<p>Formatting a date in JavaScript typically involves using the 
+<span class="consolas">toLocaleDateString()</span> method or constructing a
+formatted string manually. The <span class="consolas">toLocaleDateString()</span> method 
+provides a way to format a date based on the user's locale, including options for 
+formatting the date, such as specifying the date style and time zone.</p>
 <pre>
 // Example date
 let currentDate = new Date();
@@ -1736,8 +1749,9 @@ console.log(' Formatted Date: $ {formattedDate}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js54">54. Display Current Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Display the current date in JavaScript, you can use the Dat e object to get the current date and time and then
-format it as needed.
+<p>Display the current date in JavaScript, you can use the 
+<span class="consolas">Date</span> object to get the current date and time and then
+format it as needed.</p>
 <pre>
 // Get the current date
 let currentDate = new Date();
@@ -1749,8 +1763,10 @@ console.log(' Current Date: ${formattedDate}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js55">55. Compare The Value of Two Dates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Compare the values of two dates using standard comparison operators ( < , < = , > ,
-II Example dates
+<p>Compare the values of two dates using standard comparison operators ( 
+<span class="consolas">&lt; , &lt;= , &gt; , &gt;=</span> ).
+
+// Example dates
 <pre>
 letdatel = new Date('2022-01-0r);
 let date2 = new Date('2023-01-0r);
@@ -1766,8 +1782,9 @@ console.log(' ${datel} is equal to ${date2}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js56">56. Create Countdown Timer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Create a countdown timer in JavaScript, you can use the setlnterval() function to update the timer at
-regular intervals and calculate the remaining time.
+<p>Create a countdown timer in JavaScript, you can use the 
+<span class="consolas">setlnterval()</span> function to update the timer at regular 
+intervals and calculate the remaining time.</p>
 <pre>
 // Set the target date for the countdown
 consttargetDate = new Date('2O23-Ol-Ol OO:OO:OO').getTime();
@@ -1795,7 +1812,9 @@ document.getElementById('countdown').innerHTML = 'Countdown expired!';
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js57">57. Remove Specific Item From an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Remove a specific item from an array in JavaScript, you can use the filter() method or the splice() method:
+<p>Remove a specific item from an array in JavaScript, you can use the 
+<span class="consolas">filter()</span> method or the 
+<span class="consolas">splice()</span> method:</p>
 <pre>
 // Example array
 let original Array = &lbrack;1, 2, 3,4, 5&rbrack;;
@@ -1812,8 +1831,9 @@ console.log("Original Array:", originalArray);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js58">58. Check if An Array Contains a Specified Value</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Check if an array contains a specified value in JavaScript, you can use the includes() method or the
-indexOf() method.
+<p>Check if an array contains a specified value in JavaScript, you can use the 
+<span class="consolas">includes()</span> method or the
+<span class="consolas">indexOf()</span> method.</p>
 <pre>
 // Example array
 let my Array = &lbrack;1, 2, 3,4, 5&rbrack;;
@@ -1826,8 +1846,9 @@ console.log(' Does the array include ${valueToCheck}? ${containsValue}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js59">59. Insert Item in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Insert an item into an array in JavaScript, you can use the push() method to add the item at the end of the
-array, or the splice() method to insert the item at a specific index.
+<p>Insert an item into an array in JavaScript, you can use the 
+<span class="consolas">push()</span> method to add the item at the end of the array, or 
+the <span class="consolas">splice()</span> method to insert the item at a specific index.</p>
 <pre>
 // Example array
 let myArray = &lbrack;1, 2, 3,4, 5&rbrack;;
@@ -1840,8 +1861,9 @@ console.log("Array after inserting:", myArray);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js60">60. Get Random Item From an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To get a random item from an array in JavaScript, you can use the Math.random() function to generate a
-random index within the array length.
+<p>To get a random item from an array in JavaScript, you can use the 
+<span class="consolas">Math.random()</span> function to generate a random index within 
+the array length.</p>
 <pre>
 // Example array
 letmyArray = &lbrack;1, 2, 3,4, 5, 6, 7, 8, 9,10&rbrack;;
@@ -1868,7 +1890,8 @@ console.log("Intersection:", intersection);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js62">62. Split Array into Smaller Chunks</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To split an array into smaller chunks in JavaScript, you can use a loop and the slice() method.
+<p>To split an array into smaller chunks in JavaScript, you can use a loop and the 
+<span class="consolas">slice()</span> method.</p>
 <pre>
 function chunkArray(array, chunksize) {
 let result = &lbrack;&rbrack;;
@@ -1888,49 +1911,58 @@ console.log("Chunks:", chunks);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js63">63. Get File Extension</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To get the file extension from a string representing a file name in JavaScript, you can use various methods.
-One common approach is to use the split() method to split the file name based on the dot ( .) and then
-extract the last part of the resulting array.
+<p>To get the file extension from a string representing a file name in JavaScript, you 
+can use various methods. One common approach is to use the <span class="consolas">split()
+</span> method to split the file name based on the dot <span class="consolas">(.)</span>
+and then extract the last part of the resulting array.</p>
 <pre>
 function getFileExtension(fileName) {
-// Split the file name based on the dot
-let parts = fileName.split('.');
-// Get the last part of the array (the file extension)
-let extension = parts&lbrack;parts.length -1&rbrack;;
-return extension;
+
+  // Split the file name based on the dot
+  let parts = fileName.split('.');
+
+  // Get the last part of the array (the file extension)
+  let extension = parts&lbrack;parts.length -1&rbrack;;
+  return extension;
 }
+
 // Example usage
 let fileName = "example.txt";
 let fileExtension = getFileExtension(fileName);
-console.log(' File Extension: ${fileExtension}');
+console.log('File Extension: ${fileExtension}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js64">64. Check If a Variable Is undefined or null</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To check if a variable is undefine d or mil 1 in JavaScript, you can use a simple conditional statement.
+<p>To check if a variable is <span class="consolas">undefined</span> or 
+<span class="consolas">null</span> in JavaScript, you can use a simple 
+conditional statement.</p>
 <pre>
 // Example variable
 let my Variable = null;
+
 // Check if the variable is undefined or null
-if (my Variable = = = undefined 11 my Variable = = = null) {
-console.log("The variable is either undefined or null.");
+if (myVariable === undefined || myVariable === null) {
+  console.log("The variable is either undefined or null.");
 } else {
-console.log("The variable is defined and not null.");
+  console.log("The variable is defined and not null.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js65">65. Generate a Random Number Between Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To generate a random number between two specific numbers in JavaScript, you can use the Math.random()
-function along with some arithmetic.
+<p>To generate a random number between two specific numbers in JavaScript, you can use 
+the <span class="consolas">Math.random()</span> function along with some arithmetic.</p>
 <pre>
 function getRandomNumber(min, max) {
-// Generate a random decimal between 0 (inclusive) and 1 (exclusive)
-const randomDecimal = Math.random();
-// Scale the random decimal to the desired range
-const randomNumber = Math.floor(randomDecimal * (max - min + 1)) + min;
-return randomNumber;
+  // Generate a random decimal between 0 (inclusive) and 1 (exclusive)
+  const randomDecimal = Math.random();
+
+  // Scale the random decimal to the desired range
+  const randomNumber = Math.floor(randomDecimal &ast; (max - min + 1)) + min;
+  return randomNumber;
 }
+
 // Example usage: Generate a random number between 1 and 100
 letrandomNum = getRandomNumber(l, 100);
 console.log("Random Number:", randomNum);
@@ -1938,14 +1970,18 @@ console.log("Random Number:", randomNum);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js66">66. Get The Current URL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To get the current URL in a web browser using JavaScript, you can use the window.locatio n object.
+<p>To get the current URL in a web browser using JavaScript, you can use the 
+<span class="consolas">window.location</span> object.</p>
 <pre>
 // Get the domain
 const domain = window.location.hostname;
+
 // Get the path
 const path = window.location.pathname;
+
 // Get the query parameters
 const queryParams = window.location.search;
+
 // Display the results
 console.log("Domain:", domain);
 console.log("Path:", path);
@@ -1954,26 +1990,27 @@ console.log("Query Parameters:", queryParams);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js67">67. Validate An Email Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To validate an email address in JavaScript, you can use a regular expression.
+<p>To validate an email address in JavaScript, you can use a regular expression.</p>
 <pre>
 function validateEmail(email) {
-// Regular expression for a basic email validation
-const emailRegex = /A&lbrack;A\s@&rbrack;+@&lbrack;A\s@&rbrack;+\.&lbrack;A\s@&rbrack;+$/;
-// Test the email against the regular expression
-return emailRegex.test(email);
+  // Regular expression for a basic email validation
+  const emailRegex = /^&lbrack;^\s@&rbrack;+@&lbrack;^\s@&rbrack;+\.&lbrack;^\s@&rbrack;+$/;
+  // Test the email against the regular expression
+  return emailRegex.test(email);
 }
 // Example usage:
-const emailTo Validate = "example@email.com";
+const emailToValidate = "example@email.com";
 if (validateEmail(emailToValidate)) {
-console.logC'Email is valid");
+  console.log("Email is valid");
 } else {
-console.logC'Email is not valid");
+console.log("Email is not valid");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js68">68. Check If a Variable is of Function Type</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To check if a variable is of the function type in JavaScript, you can use the typeo f operator.
+<p>To check if a variable is of the function type in JavaScript, you can use the 
+<span class="consolas">typeof</span> operator.</p>
 <pre>
 // Example variable
 let myFunction = function() {
@@ -1989,24 +2026,26 @@ console.log("The variable is not of function type");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js69">69. Work With Constants</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can work with constants using the const keyword to declare variables whose values should not be
-reassigned.
+<p>You can work with constants using the const keyword to declare variables whose values 
+should not be reassigned.</p>
 <pre>
 // Define a constant
 const PI = 3.14159;
+
 // Attempt to reassign a constant (will result in an error)
 // PI = 3.14; // Uncommenting this line will result in an error
+
 // Display the value of the constant
 console.log("The value of PI is:", PI);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js70">70. Pass Parameter to a setTimeout() Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To pass parameters to a function inside setTimeout(), you can use an anonymous function or an arrow
-function.
+<p>To pass parameters to a function inside setTimeout(), you can use an anonymous 
+function or an arrow function.</p>
 <pre>
 function myFunction(parameter) {
-  console.logC'Parameter received:", parameter);
+  console.log('Parameter received:", parameter);
 }
 // Using an anonymous function to pass parameters to setTimeout
 let myParameter = "Hello, world!";
@@ -2017,15 +2056,15 @@ setTimeout(function() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js71">71. Generate a Range of Numbers and Characters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To generate a range of numbers or characters in JavaScript, you can use a loop or other methods depending
-on your specific requirements.
+<p>To generate a range of numbers or characters in JavaScript, you can use a loop or 
+other methods depending on your specific requirements.</p>
 <pre>
 function generateNumberRange(start, end) {
-let result = &lbrack;&rbrack;;
-for (let i = start; i < = end; i+ +) {
-result.push(i);
-}
-return result;
+  let result = &lbrack;&rbrack;;
+  for (let i = start; i &lt;= end; i++) {
+    result.push(i);
+  }
+  return result;
 }
 // Example usage: Generate numbers from 1 to 5
 let numberRange = generateNumberRange(l, 5);
@@ -2034,26 +2073,27 @@ console.log("Number Range:", numberRange);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js72">72. Perform Function Overloading</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript does not support traditional function overloading like some other programming languages do,
-where you can define multiple functions with the same name but different parameter types or counts.
-However, you can achieve similar behavior in JavaScript by checking the number or types of arguments
-within a function.
+<p>JavaScript does not support traditional function overloading like some other 
+programming languages do, where you can define multiple functions with the same name but 
+different parameter types or counts. However, you can achieve similar behavior in 
+JavaScript by checking the number or types of arguments within a function.</p>
 <pre>
 function exampleFunction() {
-if (arguments.length = = = 0) {
-// No arguments provided
-console.log("No arguments");
-} else if (arguments.length = = = 1 && typeof arguments&lbrack;0&rbrack; = = = "number") {
-// One argument of type number provided
-console.log("One number argument:", arguments&lbrack;0&rbrack;);
-} else if (arguments.length = = = 2 && typeof arguments&lbrack;0&rbrack; = = = "string" && typeof arguments! 1&rbrack; = = = "number") {
-// Two arguments: a string followed by a number
-console.log("String and number arguments:", arguments&lbrack;0&rbrack;, arguments! 1&rbrack;);
-} else {
-// Default case
-console.log("Invalid arguments");
+  if (arguments.length === 0) {
+    // No arguments provided
+    console.log("No arguments");
+  } else if (arguments.length === 1 && typeof arguments&lbrack;0&rbrack; === "number") {
+    // One argument of type number provided
+    console.log("One number argument:", arguments&lbrack;0&rbrack;);
+  } else if (arguments.length === 2 && typeof arguments&lbrack;0&rbrack; === "string" && typeof arguments! 1&rbrack; === "number") {
+    // Two arguments: a string followed by a number
+    console.log("String and number arguments:", arguments&lbrack;0&rbrack;, arguments! 1&rbrack;);
+  } else {
+    // Default case
+    console.log("Invalid arguments");
+  }
 }
-}
+
 // Example usage
 exampleFunction();
 exampleFunction(42);
@@ -2063,95 +2103,110 @@ exampleFunction(true, "world"); // Invalid arguments
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js73">73. Implement a Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can implement a basic stack data structure in JavaScript using an array.
+<p>You can implement a basic stack data structure in JavaScript using an array.</p>
 <pre>
 class Stack {
-constructor) {
-this.items = &lbrack;&rbrack;;
+  constructor) {
+    this.items = &lbrack;&rbrack;;
+  }
+
+  // Push an element onto the stack
+  push(element) {
+    this.items.push(element);
+  }
+
+  // Pop the top element from the stack
+  pop() {
+    if (this.isEmpty()) {
+      return "Underflow";
+    }
+      return this.items.pop();
+  }
+  // Peek at the top element without removing it
+  peek() {
+    return this.items&lbrack;this.items.length -1&rbrack;;
+  }
+  // Check if the stack is empty
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  // Get the size of the stack
+  size() {
+    return this.items.length;
+  }
+	
+  // Print the stack elements
+  print() {
+    console.log(this.items);
+  }
 }
-// Push an element onto the stack
-push(element) {
-this.items.push(element);
-}
-// Pop the top element from the stack
-pop() {
-if (this.isEmptyO) {
-return "Underflow";
-}
-return this.items.popO;
-}
-// Peek at the top element without removing it
-peek() {
-return this.items&lbrack;this.items.length -1&rbrack;;
-// Check if the stack is empty
-isEmpty() {
-return this.items.length = = = 0;
-}
-// Get the size of the stack
-size() {
-return this.items.length;
-}
-// Print the stack elements
-print() {
-console.log(this.items);
-}
-}
+
 // Example usage:
 const stack = new Stack();
 stack.push(l);
 stack.push(2);
 stack.push(3);
 console.log("Stack elements:");
-stack.printO; // Outputs: &lbrack;1,2,3&rbrack;
+stack.print(); // Outputs: &lbrack;1,2,3&rbrack;
 
 console.log("Top element:", stack.peek()); // Outputs: 3
-console.log("Popped element:", stack.popO); // Outputs: 3
-console.log("Stack size:", stack.sizeO); // Outputs: 2
-console.log("Is the stack empty?", stack.isEmptyO); // Outputs: false
+console.log("Popped element:", stack.pop()); // Outputs: 3
+console.log("Stack size:", stack.size()); // Outputs: 2
+console.log("Is the stack empty?", stack.isEmpty()); // Outputs: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js74">74. Implement a Queue</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can implement a basic queue data structure in JavaScript using an array.
+<p>You can implement a basic queue data structure in JavaScript using an array.</p>
 <pre>
 class Queue {
-constructor) {
-this.items = &lbrack;&rbrack;;
-// Enqueue an element at the end of the queue
-enqueue(element) {
-this.items.push(element);
-// Dequeue the element from the front of the queue
-dequeue() {
-if (this.isEmptyO) {
-return "Underflow";
-return this.items.shift();
-// Peek at the front element without removing it
-front() {
-if (this.isEmptyO) {
-return "Queue is empty";
+  constructor) {
+    this.items = &lbrack;&rbrack;;
+  }
+  // Enqueue an element at the end of the queue
+  enqueue(element) {
+    this.items.push(element);
+  }
+  // Dequeue the element from the front of the queue
+  dequeue() {
+    if (this.isEmptyO) {
+      return "Underflow";
+	}
+    return this.items.shift();
+  }
+  // Peek at the front element without removing it
+  front() {
+    if (this.isEmpty()) {
+      return "Queue is empty";
+    }
+    return this.items&lbrack;O&rbrack;;
+  }
+  // Check if the queue is empty
+  isEmpty() {
+    return this.items.length === 0;
+  }
+  // Get the size of the queue
+  size() {
+    return this.items.length;
+  }
+  // Print the queue elements
+  print() {
+    console.log(this.items);
+  }
 }
-return this.items&lbrack;O&rbrack;;
-}
-// Check if the queue is empty
-isEmptyO {
-return this.items.length = = = 0;
-// Get the size of the queue
-size() {
-return this.items.length;
-// Print the queue elements
-print() {
-console.log(this.items);
+
 // Example usage:
 const queue = new Queue();
-queue.enqueue( 1);
+queue.enqueue(1);
 queue.enqueue(2);
 queue.enqueue(3);
 console.log("Queue elements:");
-queue.printO; // Outputs: &lbrack;1, 2, 3&rbrack;
+queue.print(); // Outputs: &lbrack;1, 2, 3&rbrack;
 console.log("Front element:", queue.front()); // Outputs: 1
 console.log("Dequeued element:", queue.dequeue()); // Outputs: 1
-console.log("Queue size:", queue.sizeQ); // Outputs: 2
-console.logf'Is the queue empty?", queue.isEmptyO); // Outputs: false
+console.log("Queue size:", queue.size()); // Outputs: 2
+console.log("Is the queue empty?", queue.isEmpty()); // Outputs: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js75">75. Check if a Number is Float or Integer</h2>
@@ -3649,8 +3704,8 @@ if (solveSudoku(sudokuBoard)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js131">131. Convert Objects to Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program convert JavaScript objects to strings, you can use the JSON.stringify() 
-method.</p>
+<p>This program convert JavaScript objects to strings, you can use the 
+<span class="consolas">JSON.stringify()</span> method.</p>
 <pre>
 // Example object
 let person = {
@@ -3669,13 +3724,14 @@ console.log(jsonString);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js132">132. Find the Area of an Ellipse</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the area of an ellipse given its semi-major axis (a) and semi-minor axis (b). The
-formula for the area of an ellipse is * $ * ^71 * Cl * b.
+<p>This program calculates the area of an ellipse given its semi-major axis (a) and 
+semi-minor axis (b). The formula for the area of an ellipse is;
+<span class="consolas">&pi; &ast; &alpha; &ast; &beta;</span>.</p>
 <h3>Function to calculate the area of an ellipse</h3>
 <pre>
 function calculateEllipseArea(semiMajorAxis, semiMinorAxis) {
   const pi = Math.PI;
-  const area = pi * semiMajorAxis * semiMinorAxis;
+  const area = pi &ast; semiMajorAxis &ast; semiMinorAxis;
   return area;
 }
 // Example usage
@@ -3706,8 +3762,10 @@ console.log(' $ {numberToCheck} is not a binary palindrome. ');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js134">134. Find the Area of a Rhombus</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the area of a rhombus given the lengths of its diagonals ( d 1 and d 2 ). The formula
-for the area of a rhombus is Area = (dl * d2) / 2 , where d 1 and d 2 are the lengths of the diagonals.
+<p>This program calculates the area of a rhombus given the lengths of its diagonals 
+( <span class="consolas">d1</span> and <span class="consolas">d2</span> ). The formula
+for the area of a rhombus is <span class="consolas">Area = (dl &ast; d2) / 2</span>, where 
+<span class="consolas">d1 and d2</span> are the lengths of the diagonals.</p>
 <pre>
 // Function to calculate the area of a rhombus
 function calculateRhombusArea(diagonall, diagonal) {
@@ -3723,10 +3781,10 @@ console.log(' The area of the rhombus is: $ {rhombus Area.toFixed(2)j');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js135">135. Check if a Number is a Catalan Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Cn = (2n)!/((n+ l)!*n!) .
-This program checks if a given non-negative integer is a Catalan number. Catalan numbers are a sequence
-of natural numbers that occur in various counting problems, often involving recursive structures. The nth
-Catalan number is given by the formula:
+<p>This program checks if a given non-negative integer is a Catalan number. Catalan 
+numbers are a sequence of natural numbers that occur in various counting problems, 
+often involving recursive structures. The nth Catalan number is given by the formula:
+<span class="consolas">Cn = (2n)!/((n + l)!&ast;n!)</span>.</p>
 <pre>
 // Function to calculate binomial coefficient (n choose k)
 function binomialCoefficient(n, k) {
@@ -3894,9 +3952,13 @@ crossword.printPuzzleQ;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js140">140. Find the Area of a Regular Polygon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the area of a regular polygon given the number of sides ( n ) and the side length ( s ).
-The formula for the area of a regular polygon is Area = (n * s*2) / (4 * tan(it/n)), where n is the number of
-sides, s is the side length, and tan is the tangent function.
+<p>This program calculates the area of a regular polygon given the number of sides ( 
+<span class="consolas">n</span> ) and the side length ( 
+<span class="consolas">s</span> ). The formula for the area of a regular polygon is 
+<span class="consolas">Area = (n &ast; s^2) / (4 &ast; tan(&pi;/n))</span>, where 
+<span class="consolas">n</span> is the number of
+sides, <span class="consolas">s</span> is the side length, and 
+<span class="consolas">tan</span> is the tangent function.</p>
 <pre>
 function calculateRegularPolygonArea(n, s) {
 const numerator = 1 / 4 * n * Math.pow(s, 2);
