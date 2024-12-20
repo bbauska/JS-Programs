@@ -517,47 +517,50 @@ console.</p>
 <pre>
 console.log("Hello, World!");
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js2">2. Add Two Numbers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program focuses on taking two numbers as input and then displaying their sum. It prompts the user to
 enter two numbers, adds them together, and prints the result.</p>
 <pre>
 let num 1 = parseFloat(prompt("Enter the first number:"));
 letnum2 = parseFloat(prompt("Enter the second number:"));
 if (!isNaN(numl) && !isNaN(num2)) {
-let sum = numl + num2;
-console.log(' The sum of ${numl} and ${num2} is: ${sum}');
+  let sum = numl + num2;
+  console.log(' The sum of ${numl} and ${num2} is: ${sum}');
 } else {
-console.log("Please enter valid numbers.");
+  console.log("Please enter valid numbers.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js3">3. Find the Square Root</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and calculates its square root. It then displays the result,
 ensuring that the entered number is non-negative.</p>
 <pre>
 let inputNumber = parseFloat(prompt("Enter a non-negative number:"));
 if (!isNaN(inputNumber) && inputNumber >= 0) {
-let squareRoot = Math.sqrt(inputNumber);
-console.log(' The square root of $ {inputNumber} is: $ {squareRoot}');
+  let squareRoot = Math.sqrt(inputNumber);
+  console.log(' The square root of $ {inputNumber} is: $ {squareRoot}');
 } else {
-console.log("Please enter a valid non-negative number.");
+  console.log("Please enter a valid non-negative number.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js4">4. Calculate the Area of a Triangle</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter the base and height of a triangle and calculates its area using the
 formula: Area= 12 xBase*HeightArea=21 xBasex Height. It then displays the calculated area.
 <pre>
 let base = parseFloat(prompt("Enter the base of the triangle:"));
 let height = parseFloat(prompt("Enter the height of the triangle:"));
 if (lisNaN(base) && lisNaN(height) && base > 0 && height > 0) {
-let area = 0.5 * base * height;
-console.log(
-' The area of the triangle with base ${base} and height $ {height} is: ${area}'
-);
+  let area = 0.5 * base * height;
+  console.log(
+  ' The area of the triangle with base ${base} and height $ {height} is: ${area}'
+  );
 } else {
-console.log("Please enter valid positive numbers for base and height.");
+  console.log("Please enter valid positive numbers for base and height.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -565,21 +568,22 @@ console.log("Please enter valid positive numbers for base and height.");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter two variables and swaps their values. It then displays the variables
 before and after the swap.
-let variable 1 = promptf'Enter the first variable:");
-let variable2 = promptf'Enter the second variable:");
+let variable1 = prompt("Enter the first variable:");
+let variable2 = prompt("Enter the second variable:");
 console.log(
-' Before swapping: Variablel = ${variablel}, Variable2 = ${variable2}'
+  'Before swapping: Variablel = ${variablel}, Variable2 = ${variable2}'
 );
 // Swapping the variables
 let temp = variablel;
 variablel = variable2;
-variable 2 = temp;
+variable2 = temp;
 console.log(
-' After swapping: Variablel = $ {variablel}, Variable 2 = $ {variable 2}'
+  'After swapping: Variablel = ${variablel}, Variable2 = ${variable2}'
 );
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js6">6. Solve Quadratic Equation</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, and c are coefficients. It
 uses the quadratic formula to find the roots of the equation.
 <pre>
@@ -591,59 +595,67 @@ let c = parseFloat(prompt("Enter the coefficient c:”));
 let discriminant = b**2-4*a*c;
 // Check if roots are real
 if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
-if (discriminant > 0) {
-let rootl = (-b + Math.sqrt(discriminant)) / (2 * a);
-let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-console.log(' The roots of the quadratic equation are: $ {rootl} and ${root2}'
-);
+  if (discriminant > 0) {
+    let rootl = (-b + Math.sqrt(discriminant)) / (2 * a);
+    let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+    console.log(' The roots of the quadratic equation are: $ {rootl} and ${root2}'
+  );
 } else if (discriminant = = = 0) {
-let root = -b / (2 * a);
-console.log(' The quadratic equation has a repeated root: ${root}');
+  let root = -b / (2 * a);
+  console.log(' The quadratic equation has a repeated root: ${root}');
 } else {
-console.log("The quadratic equation has complex roots.");
+  console.log("The quadratic equation has complex roots.");
 } else {
-console.log("Please enter valid numbers for coefficients.");
+  console.log("Please enter valid numbers for coefficients.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js7">7. Convert Kilometers to Miles</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a distance in kilometers and converts it to miles using the
 conversion factor: 1 kilometer is approximately equal to 0.621371 miles. It then displays the converted
 distance.
 <pre>
 // Prompt user for distance in kilometers
 let kilometers = parseFloat(prompt("Enter the distance in kilometers:"));
+
 // Conversion factor
 const kilometersToMilesConversionFactor = 0.621371;
+
 // Check if input is a valid number
 if (!isNaN(kilometers)) {
-// Convert kilometers to miles
-let miles = kilometers * kilometersToMilesConversionFactor;
-console.log(' $ {kilometers} kilometers is approximately $ {miles} miles.');
+
+  // Convert kilometers to miles
+let miles = kilometers &ast; kilometersToMilesConversionFactor;
+  console.log('${kilometers} kilometers is approximately ${miles} miles.');
 } else {
-console.log("Please enter a valid number for the distance in kilometers.");
+  console.log("Please enter a valid number for the distance in kilometers.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js8">8. Convert Celsius to Fahrenheit</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program converts a temperature from Celsius to Fahrenheit using the formula: F = (C * 9/5) + 32, where
 F is the temperature in Fahrenheit and C is the temperature in Celsius.
 <pre>
 // Prompt user for temperature in Celsius
 let Celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
+
 // Check if input is a valid number
 if (lisNaN(celsius)) {
-// Convert Celsius to Fahrenheit
-let fahrenheit = (celsius * 9) / 5 + 32;
-console.log(
-' $ {celsius} degrees Celsius is equal to $ {fahrenheit} degrees Fahrenheit.'
-);
+
+  // Convert Celsius to Fahrenheit
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  console.log(
+  ' $ {celsius} degrees Celsius is equal to $ {fahrenheit} degrees Fahrenheit.'
+  );
 } else {
-console.log("Please enter a valid number for the temperature in Celsius.");
+  console.log("Please enter a valid number for the temperature in Celsius.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js9">9. Generate a Random Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a random number between a user-defined range. It prompts the user to enter the
 minimum and maximum values of the range, and then it displays the generated random number within
 that range.
@@ -651,17 +663,18 @@ that range.
 // Prompt user for the range
 let minRange = parseFloat(prompt("Enter the minimum value of the range:"));
 let maxRange = parseFloat(prompt("Enter the maximum value of the range:"));
+
 // Check if input is a valid number
-if (!isNaN(minRange) && lisNaN(maxRange) && minRange < maxRange) {
-// Generate a random number within the specified range
-let randomNumber = Math.random() * (maxRange - minRange) + minRange;
-console.log(
-' A random number between ${minRange} and ${maxRange} is: ${randomNumber}'
-);
+if (!isNaN(minRange) && lisNaN(maxRange) && minRange &lt; maxRange) {
+  // Generate a random number within the specified range
+  let randomNumber = Math.random() &ast; (maxRange - minRange) + minRange;
+  console.log(
+    'A random number between ${minRange} and ${maxRange} is: ${randomNumber}'
+  );
 } else {
-console.log(
-"Please enter valid numbers, ensuring that the minimum value is less than the maximum value."
-);
+  console.log(
+  "Please enter valid numbers, ensuring that the minimum value is less than the maximum value."
+  );
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -672,119 +685,134 @@ displays the result.
 <pre>
 // Prompt user for a number
 let number = parseFloat(prompt("Enter a number:"));
+
 // Check if input is a valid number
 if (lisNaN(number)) {
-// Check if the number is positive, negative, or zero
-if (number > 0) {
-console.log(' $ {number} is a positive number.');
-} else if (number < 0) {
-console.log(' $ {number} is a negative number.');
+  // Check if the number is positive, negative, or zero
+  if (number > 0) {
+    console.log(' $ {number} is a positive number.');
+  } else if (number < 0) {
+    console.log(' $ {number} is a negative number.');
+  } else {
+    console.log("The entered number is zero.");
+  }
 } else {
-console.log("The entered number is zero.");
-}
-} else {
-console.log("Please enter a valid number.");
+  console.log("Please enter a valid number.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js11">11. Check if a Number is Odd or Even</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a number and checks whether it is odd or even. It then displays the
 result.
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
+
 // Check if input is a valid integer
 if (lisNaN(number) && Number.islnteger(number)) {
-// Check if the number is odd or even
-if (number % 2 = = = 0) {
-console.log(' $ {number} is an even number.');
+  // Check if the number is odd or even
+  if (number % 2 = = = 0) {
+    console.log('${number} is an even number.');
+  } else {
+    console.log('${number} is an odd number.');
+  }
 } else {
-console.log(' $ {number} is an odd number.');
-}
-} else {
-console.log("Please enter a valid integer.");
+  console.log("Please enter a valid integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js12">12. Find the Largest Among Three Numbers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter three numbers and determines and displays the largest among
 them.
 <pre>
 // Prompt user for three numbers
-let num 1 = parseFloat(prompt("Enter the first number:"));
-letnum2 = parseFloat(prompt("Enter the second number:"));
-letnum3 = parseFloat(prompt("Enter the third number:"));
+let num1 = parseFloat(prompt("Enter the first number:"));
+let num2 = parseFloat(prompt("Enter the second number:"));
+let num3 = parseFloat(prompt("Enter the third number:"));
+
 // Check if inputs are valid numbers
 if (’isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
-// Find the largest among the three numbers
-let largestNumber = Math.max(numl, num2, num3);
-console.log(
-' The largest number among ${numl), ${num2}, and ${num3} is: ${largestNumber}'
-);
+  // Find the largest among the three numbers
+  let largestNumber = Math.max(numl, num2, num3);
+  console.log (
+    'The largest number among ${numl), ${num2}, and ${num3} is: ${largestNumber}'
+  );
 } else {
-console.log("Please enter valid numbers for all three inputs.");
+  console.log("Please enter valid numbers for all three inputs.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js13">13. Check Prime Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a number and checks whether it is a prime number or not. It then
 displays the result.
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
+
 // Check if input is a valid integer greater than 1
-if (lisNaN(number) && Number.islnteger(number) && number > 1) {
-let isPrime = true;
-// Check for factors from 2 to the square root of the number
-for (let i = 2; i < = Math.sqrt(number); i+ +) {
-if (number % i = = = 0) {
-isPrime = false;
-break;
-// Display the result
-if (isPrime) {
-console.log(' $ {number} is a prime number.');
+if (lisNaN(number) && Number.islnteger(number) && number &gt; 1) {
+  let isPrime = true;
+  // Check for factors from 2 to the square root of the number
+  for (let i = 2; i &lt;= Math.sqrt(number); i++) {
+    if (number % i = = = 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  // Display the result
+  if (isPrime) {
+    console.log(' $ {number} is a prime number.');
+  } else {
+    console.log(' $ {number} is not a prime number.');
+  }
 } else {
-console.log(' $ {number} is not a prime number.');
-} else {
-console.log("Please enter a valid integer greater than 1.");
+  console.log("Please enter a valid integer greater than 1.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js14">14. Print All Prime Numbers in an Interval</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a starting and ending number for an interval and then prints all the
 prime numbers within that interval.
 <pre>
 // Prompt user for the interval
 let startNumber = parselnt(
-prompt("Enter the starting number of the interval:")
+  prompt("Enter the starting number of the interval:")
 );
 let endNumber = parseInt(prompt("Enter the ending number of the interval:"));
+
 // Check if inputs are valid integers and the startNumber is less than the endNumber
 if(
-!isNaN(startNumber) &&
-!isNaN(endNumber) &&
-Number.isInteger(startNumber) &&
-Number.isInteger(endNumber) &&
-startNumber < endNumber &&
-startNumber > 1
+  !isNaN(startNumber) &&
+  !isNaN(endNumber) &&
+  Number.isInteger(startNumber) &&
+  Number.isInteger(endNumber) &&
+  startNumber &lt; endNumber &&
+  startNumber &gt; 1
 ){
-console.log(* Prime numbers in the interval &lbrack;$ {startNumber}, ${endNumber}&rbrack;:');
+  console.log(* Prime numbers in the interval &lbrack;$ {startNumber}, ${endNumber}&rbrack;:');
+
 // Check for prime numbers in the interval
 for (let i = startNumber; i <= endNumber; i++) {
-let isPrime = true;
-for (letj = 2; j <= Math.sqrt(i); j ++) {
-if (i % j = = = 0) {
-isPrime = false;
-break;
-}
-if (isPrime) {
-console.log(i);
-}
+  let isPrime = true;
+  for (let j = 2; j <= Math.sqrt(i); j++) {
+    if (i % j === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log(i);
+  }
 }
 } else {
-console.log(
-"Please enter valid integers, ensuring that the starting number is less than the ending number and greater than 1."
-);
+  console.log(
+    "Please enter valid integers, ensuring that the starting number is less than the 
+	  ending number and greater than 1."
+  );
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -795,134 +823,148 @@ as n!, is the product of all positive integers less than or equal to n .
 <pre>
 // Prompt user for a non-negative integer
 let number = parseInt(prompt("Enter a non-negative integer:"));
+
 // Check if input is a valid non-negative integer
 if (’isNaN(number) && Number.islnteger(number) && number >= 0) {
-// Calculate the factorial
-let factorial = 1;
-for (let i = 1; i < = number; i++) {
-factorial *= i;
-1
-console.log(' The factorial of $ {number} is: $ {factorial}');
+  // Calculate the factorial
+  let factorial = 1;
+  for (let i = 1; i < = number; i++) {
+    factorial *= i;
+  }
+  console.log(' The factorial of $ {number} is: $ {factorial}');
 } else {
-console.log("Please enter a valid non-negative integer.");
+  console.log("Please enter a valid non-negative integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js16">16. Display the Multiplication Table</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a number and displays its multiplication table up to a specified range
 (e.g., up to 10).
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number for the multiplication table:"));
+
 // Check if input is a valid integer
 if (lisNaN(number) && Number.islnteger(number)) {
-// Specify the range for the multiplication table
-const range =10;
-console.log(' Multiplication table for $ {number} (up to $ {range}):');
-// Display the multiplication table
-for (let i = l;i < = range; i++) {
-let result = number * i;
-console.log(' $ {number} x ${i} = $ {result}');
-}
+  // Specify the range for the multiplication table
+  const range =10;
+  console.log(' Multiplication table for ${number} (up to ${range}):');
+
+  // Display the multiplication table
+  for (let i = l;i < = range; i++) {
+    let result = number &ast; i;
+    console.log(' ${number} x ${i} = ${result}');
+  }
 } else {
-console.log("Please enter a valid integer.");
+  console.log("Please enter a valid integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js17">17. Print the Fibonacci Sequence</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter the number of terms and then prints the Fibonacci sequence up to
 that number of terms. The Fibonacci sequence is a series of numbers where each number is the sum of the
 two preceding ones, usually starting with 0 and 1.
 <pre>
 // Prompt user for the number of terms in the Fibonacci sequence
 let numTerms = parselnt(
-prompt("Enter the number of terms in the Fibonacci sequence:")
+  prompt("Enter the number of terms in the Fibonacci sequence:")
 );
+
 // Check if input is a valid integer
 if (’isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
-console.log(* Fibonacci sequence of $ {numTerms} terms:');
-let fib Array = &lbrack;0,1&rbrack;;
-// Generate the Fibonacci sequence
-for (let i = 2; i < numTerms; i++) {
-fibArray&lbrack;i&rbrack; = fibArray&lbrack;i -1&rbrack; + fibArray&lbrack;i - 2&rbrack;;
-}
-console.log(fibArray.join(","));
+  console.log(* Fibonacci sequence of $ {numTerms} terms:');
+  let fib Array = &lbrack;0,1&rbrack;;
+  
+  // Generate the Fibonacci sequence
+  for (let i = 2; i < numTerms; i++) {
+    fibArray&lbrack;i&rbrack; = fibArray&lbrack;i -1&rbrack; + fibArray&lbrack;i - 2&rbrack;;
+  }
+  console.log(fibArray.join(","));
 } else {
-console.log("Please enter a valid positive integer for the number of terms.");
+  console.log("Please enter a valid positive integer for the number of terms.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js18">18. Check Armstrong Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a number and checks whether it is an Armstrong number or not. An
 Armstrong number (also known as a narcissistic number or pluperfect digital invariant) is a number that is
 the sum of its own digits each raised to the power of the number of digits in the number. For example, 15 3 is
-an Armstrong number because 13 + 53 + 33 = 15313 + 53 + 33=153.
+an Armstrong number because 13 + 53 + 33 = 153 1<sub>3</sub> + 5<sub>3</sub> + 3<sub>3</sub>=153.
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
+
 // Check if input is a valid positive integer
 if (fisNaN(number) && Number.islnteger(number) && number > 0) {
-let originalNumber = number;
-let numberOfDigits = originalNumber.toString().length;
-let sum = 0;
+  let originalNumber = number;
+  let numberOfDigits = originalNumber.toString().length;
+  let sum = 0;
+
 // Calculate the sum of digits each raised to the power of the number of digits
 while (originalNumber > 0) {
-let digit = originalNumber % 10;
-sum += Math.pow(digit, numberOfDigits);
-originalNumber = Math.floor(originalNumber / 10);
-1
+  let digit = originalNumber % 10;
+  sum += Math.pow(digit, numberOfDigits);
+  originalNumber = Math.floor(originalNumber / 10);
+}
+
 // Check if the number is an Armstrong number
 if (sum = = = number) {
-console.log(' $ {number} is an Armstrong number.');
+  console.log(' $ {number} is an Armstrong number.');
 } else {
-console.log(' $ {number} is not an Armstrong number.');
+  console.log(' $ {number} is not an Armstrong number.');
 } else {
-console.log("Please enter a valid positive integer.");
+  console.log("Please enter a valid positive integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js19">19. Find Armstrong Number in an Interval</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a range (start and end) and then prints all Armstrong numbers
 within that interval.
 <pre>
 // Prompt user for the interval
 let startNumber = parselnt(
-prompt("Enter the starting number of the interval:")
+  prompt("Enter the starting number of the interval:")
 );
 let endNumber = parse!nt(prompt("Enter the ending number of the interval:"));
 // Check if inputs are valid positive integers and the startNumber is less than the endNumber
 if(
-!isNaN(startNumber) &&
-!isNaN(endNumber) &&
-Number.isInteger(startNumber) &&
-Number.isInteger(endNumber) &&
-startNumber > 0 &&
-startNumber < endNumber
+  !isNaN(startNumber) &&
+  !isNaN(endNumber) &&
+  Number.isInteger(startNumber) &&
+  Number.isInteger(endNumber) &&
+  startNumber > 0 &&
+  startNumber < endNumber
 ){
 console.log(
-' Armstrong numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:'
+  'Armstrong numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:'
 );
+
 // Check for Armstrong numbers in the interval
-for (let i = startNumber; i < = endNumber; i++) {
-let originalNumber = i;
-let numberOfDigits = originalNumber.toString().length;
-let sum = 0;
-while (originalNumber > 0) {
-let digit = originalNumber % 10;
-sum += Math.pow(digit, numberOfDigits);
-originalNumber = Math.floor(originalNumber / 10);
-if (sum = = = i) {
-console.log(i);
-}
+for (let i = startNumber; i <= endNumber; i++) {
+  let originalNumber = i;
+  let numberOfDigits = originalNumber.toString().length;
+  let sum = 0;
+  
+  while (originalNumber > 0) {
+    let digit = originalNumber % 10;
+    sum += Math.pow(digit, numberOfDigits);
+    originalNumber = Math.floor(originalNumber / 10);
+  }
+  if (sum = = = i) {
+    console.log(i);
+  }
 }
 } else {
-console.log(
-"Please enter valid positive integers, ensuring that the starting number is less than the ending number and both are
-greater than 0."
-);
+  console.log(
+  "Please enter valid positive integers, ensuring that the starting number is less than 
+    the ending number and both are greater than 0."
+  );
 }
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js20">20. Make a Simple Calculator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -933,133 +975,149 @@ then performs the selected operation and displays the result.
 // Prompt user for two numbers
 let numl = parseFloat(prompt("Enter the first number:"));
 let num2 = parseFloat(prompt("Enter the second number:"));
+
 // Check if inputs are valid numbers
 if (lisNaN(numl) && !isNaN(num2)) {
-// Prompt user for the operation
-let operation = prompt(
-"Choose an operation (+ for addition, - for subtraction, * for multiplication, / for division):"
-);
-// Perform the selected operation
-let result;
-switch (operation) {
-case
-result = numl + num2;
-break;
-case
-result = numl - num2;
-break;
-case
-result = numl * num2;
-break;
-case"/":
-if (num2 !== 0) {
-result = numl / num2;
+  // Prompt user for the operation
+  let operation = prompt(
+    "Choose an operation (+ for addition, - for subtraction, * for multiplication, / for division):"
+  );
+  // Perform the selected operation
+  let result;
+  switch (operation) {
+    case
+      result = numl + num2;
+      break;
+    case
+      result = numl - num2;
+      break;
+    case
+      result = numl * num2;
+      break;
+    case"/":
+      if (num2 !== 0) {
+        result = numl / num2;
+      } else {
+        console.log("Cannot divide by zero.");
+        break;
+      }
+    break;
+    default:
+    console.logf'Invalid operation.");
+    break;
+  }
+  // Display the result
+  if (result !== undefined) {
+    console.log('Result of ${numl} ${operation} ${num2} is: ${result}');
+  }
 } else {
-console.log("Cannot divide by zero.");
-break;
-}
-break;
-default:
-console.logf'Invalid operation.");
-break;
-}
-// Display the result
-if (result !== undefined) {
-console.log(' Result of ${numl} $ {operation} ${num2} is: $ {result}');
-}
-} else {
-console.log("Please enter valid numbers.");
+  console.log("Please enter valid numbers.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js21">21. Find the Sum of Natural Numbers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the sum of natural numbers up to a given positive integer n . The sum is calculated
 using the formula: sum = n*(n + l) / 2.
 <pre>
 // Prompt user for a positive integer
-let n = parse!nt(prompt("Enter a positive integer:”));
+let n = parseInt(prompt("Enter a positive integer:"));
+
 // Check if input is a valid positive integer
-if (!isNaN(n) && Number.islnteger(n) && n > 0) {
-// Calculate the sum of natural numbers
-let sum = (n * (n + l))/2;
-console.log(' The sum of natural numbers from 1 to ${n} is: ${sum}');
+if (!isNaN(n) && Number.isInteger(n) && n > 0) {
+  // Calculate the sum of natural numbers
+  let sum = (n * (n + l))/2;
+  console.log(' The sum of natural numbers from 1 to ${n} is: ${sum}');
 } else {
-console.log(”Please enter a valid positive integer.");
+  console.log(”Please enter a valid positive integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js22">22. Check if the Numbers Have the Same Last Digit</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter two numbers and checks if they have the same last digit.
 <pre>
 // Prompt user for two numbers
 let num 1 = parse!nt(prompt("Enter the first number:"));
 let num2 = parse!nt(prompt("Enter the second number:"));
+
 // Check if inputs are valid integers
 if(
-!isNaN(numl) &&
-!isNaN(num2) &&
-Number.islnteger(numl) &&
-Number.islnteger(num2)
+  !isNaN(numl) &&
+  !isNaN(num2) &&
+  Number.islnteger(numl) &&
+  Number.islnteger(num2)
 ){
-// Extract the last digit of each number
-let lastDigitl = Math.abs(numl % 10);
-let lastDigit2 = Math.abs(num2 % 10);
-// Check if the last digits are the same
-if (lastDigitl = = = lastDigit2) {
-console.log(
-' The last digit of ${numl} is the same as the last digit of ${num2}.'
-);
+  // Extract the last digit of each number
+  let lastDigitl = Math.abs(numl % 10);
+  let lastDigit2 = Math.abs(num2 % 10);
+
+  // Check if the last digits are the same
+  if (lastDigitl = = = lastDigit2) {
+    console.log(
+      'The last digit of ${numl} is the same as the last digit of ${num2}.'
+    );
+  }
 } else {
-console.log(
-' The last digit of ${numl} is different from the last digit of ${num2}.'
-);
+  console.log(
+    'The last digit of ${numl} is different from the last digit of ${num2}.'
+  );
 } else {
-console.log("Please enter valid integers.");
+    console.log("Please enter valid integers.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js23">23. Find HCF or GCD</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter two positive integers and calculates their Highest Common Factor
 (HCF) or Greatest Common Divisor (GCD).
 <pre>
 // Prompt user for two positive integers
 let numl = parse!nt(prompt("Enter the first positive integer:"));
 let num2 = parseInt(prompt("Enter the second positive integer:"));
+
 // Check if inputs are valid positive integers
-if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger(num2) && numl > 0 &&
-num2 > 0) {
-// Find the HCF or GCD
-let smallerNumber = Math.min(numl, num2);
-let hcf = 1;
-for (let i = 1; i < = smallerNumber; i++) {
-if (numl % i = = = 0 && num2 % i = = = 0) {
-hcf = i;
-console.log(' The HCF (GCD) of ${numl} and ${num2} is: ${hcf}');
+if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger(num2) 
+  && numl > 0 && num2 > 0) {
+
+  // Find the HCF or GCD
+  let smallerNumber = Math.min(numl, num2);
+  let hcf = 1;
+  for (let i = 1; i < = smallerNumber; i++) {
+    if (numl % i = = = 0 && num2 % i = = = 0) {
+      hcf = i;
+    }
+  }
+  console.log(' The HCF (GCD) of ${numl} and ${num2} is: ${hcf}');
 } else {
-console.log("Please enter valid positive integers.");
+  console.log("Please enter valid positive integers.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js24">24. Find LCM</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter two positive integers and calculates their Least Common Multiple
 (LCM).
 <pre>
 // Prompt user for two positive integers
 let numl = parse!nt(prompt("Enter the first positive integer:"));
 let num2 = parse!nt(prompt("Enter the second positive integer:"));
+
 // Check if inputs are valid positive integers
-if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger(num2) && numl > 0 &&
-num2 > 0) {
-// Find the LCM
-let largerNumber = Math.max(numl, num2);
-let 1cm = largerNumber;
-while (true) {
-if (1cm % numl = = = 0 && 1cm % num2 = = = 0) {
-console.log(' The LCM of ${numl) and ${num2} is: ${lcm}');
-break;
-lcm += largerNumber;
+if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger(num2) && numl > 0 
+  && num2 > 0) {
+  // Find the LCM
+  let largerNumber = Math.max(numl, num2);
+  let 1cm = largerNumber;
+  while (true) {
+    if (1cm % numl = = = 0 && 1cm % num2 = = = 0) {
+      console.log(' The LCM of ${numl} and ${num2} is: ${lcm}');
+      break;
+    }
+    lcm += largerNumber;
+  }
 } else {
-console.log("Please enter valid positive integers.");
+  console.log("Please enter valid positive integers.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1069,21 +1127,24 @@ This program prompts the user to enter a positive integer and calculates and dis
 <pre>
 // Prompt user for a positive integer
 let number = parseInt(prompt("Enter a positive integer:"));
+
 // Check if input is a valid positive integer
-if (’isNaN(number) && Number.islnteger(number) && number > 0) {
-console.log(' Factors of $ {number}:');
-// Find and display the factors
-for (let i = 1; i < = number; i++) {
-if (number % i = = = 0) {
-console.log(i);
-}
-}
+if (’isNaN(number) && Number.isInteger(number) && number > 0) {
+  console.log(' Factors of $ {number}:');
+
+  // Find and display the factors
+  for (let i = 1; i < = number; i++) {
+    if (number % i = = = 0) {
+      console.log(i);
+    }
+  }
 } else {
-console.log("Please enter a valid positive integer.");
+  console.log("Please enter a valid positive integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js26">26. Find Sum of Natural Numbers Using Recursion</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the sum of natural numbers up to a given positive integer using recursion. It
 prompts the user to enter a positive integer n and then calculates and displays the sum using a recursive
 function.
@@ -1110,8 +1171,9 @@ console.log(' The sum of natural numbers up to $ {number} is: ${sum}');
 console.log("Please enter a valid positive integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js27">27. Guess a Random Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a random number between a specified range and allows the user to guess the
 number. It provides feedback on whether the guessed number is too high, too low, or correct. The user
 continues guessing until they correctly identify the random number.
@@ -1139,8 +1201,9 @@ console.log(' Congratulations! You guessed the correct number ${randomNumber} in
 console.log("Please enter a valid number.");
 } while (userGuess !== randomNumber);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js28">28. Shuffle Deck of Cards</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program simulates shuffling a standard deck of playing cards. It generates a deck of cards, displays the
 initial order, shuffles the deck, and then displays the shuffled order.
 <pre>
@@ -1170,8 +1233,9 @@ shuffleDeck(shuffledDeck);
 console.log("\nShuffled Deck:");
 console.log(shuffledDeck);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js29">29. Display Fibonacci Sequence Using Recursion</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program displays the Fibonacci sequence up to a specified number of terms using recursion. It prompts
 the user to enter the number of terms and then uses a recursive function to generate and display the
 Fibonacci sequence.
@@ -1222,8 +1286,9 @@ console.log(' The factorial of $ {number} is: $ {result}' );
 console.log("Please enter a valid non-negative integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js31">31. Convert Decimal to Binary</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program converts a decimal number to its binary equivalent. It prompts the user to enter a decimal
 number and then calculates and displays its binary representation.
 <pre>
@@ -1251,8 +1316,9 @@ console.log(' The binary equivalent of ${decimalNumber} is: ${binaryEquivalent}'
 console.log("Please enter a valid non-negative integer.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js32">32. Find ASCII Value of Character</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a character and then calculates and displays its ASCII val
 <pre>
 // Prompt user for a character
@@ -1266,8 +1332,9 @@ console.log(' The ASCII value of ^{character}1 is: ${asciiValue}');
 console.log("Please enter a valid single character.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js33">33. Check Whether a String is Palindrome or Not</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks whether a given string is a palindrome or not. A palindrome is a string that reads the
 same forward as backward.
 <pre>
@@ -1292,8 +1359,9 @@ console.log(' "${inputString}" is not a palindrome.');
 console.log("Please enter a valid string.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js34">34. Sort Words in Alphabetical Order</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a sentence or a list of words and then sorts and displays the words
 in alphabetical order.
 <pre>
@@ -1339,8 +1407,9 @@ console.log("Please enter a valid target character (single character).");
 console.log("Please enter a valid string.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js36">36. Reverse a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program prompts the user to enter a string and then reverses and displays the characters of the string.
 <pre>
 // Prompt user for a string
@@ -1354,8 +1423,9 @@ console.log(' Reversed String: $ {reversedString}');
 } else {
 console.log("Please enter a valid string.");
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js37">37. Check the Number of Occurrences of a Character in the String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks the number of occurrences of a character in a given string:
 <pre>
 // Prompt user for a string and a character
@@ -1375,8 +1445,9 @@ console.log(' Number of occurrences of'$ {targetChar}' in '$ {inputstring}': ${c
 } else {
 console.log("Please enter a valid string and a single character.");
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js38">38. Convert the First Letter of a String into Uppercase</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program converts the first letter of a string to uppercase:
 <pre>
 // Prompt user for a string
@@ -1392,8 +1463,9 @@ console.log(' String with First Letter Uppercase: $ {resultstring}');
 console.log("Please enter a valid string.");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js39">39. Count the Number of Vowels in a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program counts the number of vowels in a given string:
 <pre>
 // Prompt user for a string
@@ -1437,8 +1509,9 @@ console.log(' The string '$ {inputstring}' does not start with '${startChar}' or
 } else {
 console.log("Please enter a valid string.");
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js41">41. Replace All Occurrences of a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Replace all occurrences of a substring in a string in JavaScript, you can use the replace() method along with
 a regular expression with the global ( g ) flag.
 <pre>
@@ -1454,8 +1527,9 @@ let modifiedString = originalString.replace(new RegExp(searchString, 'g'), repla
 console.log(' Original String: ${originalString}' );
 console.log(' Modified String: ${modifiedString}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js42">42. Create Multiline Strings</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program creates multiline strings using template literals (introduced in ECMAScript 6).
 <pre>
 // Multiline string using template literals
@@ -1465,8 +1539,9 @@ It spans multiple lines.
 You can include line breaks and indentation easily.
 console.log(multilineString);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js43">43. Format Numbers as Currency Strings</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program format numbers as currency strings:
 <pre>
 // Example number
@@ -1476,8 +1551,9 @@ let formattedAmount = amount.toLocaleString('en-US', {style: ’currency', curre
 // Display the formatted currency string
 console.log(' Formatted Amount: $ {formattedAmount}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js44">44. Generate Random String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program generates a random string in JavaScript, you can create a function that generates a string with
 random characters.
 <pre>
@@ -1508,8 +1584,9 @@ let startsWith = mainString.startsWith(searchString);
 // Display the result
 console.log(' Does the string start with '${searchString}'? ${startsWith}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js46">46. Trim a String</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program trims leading and trailing whitespaces from a string using the trim() method.
 <pre>
 // Example string with leading and trailing whitespaces
@@ -1533,8 +1610,9 @@ let containsSubstring = mainString.includes(substringToCheck);
 // Display the result
 console.log(' Does the string contain '$ {substringToCheck}'? ${containsSubstring}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js48">48. Compare Two Strings</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program compare two strings in JavaScript, you can use the standard comparison operators ( = = = , != = ,
 < , > , <= , >= ).
 <pre>
@@ -1549,8 +1627,9 @@ let caselnsensitiveComparison = string l.toLowerCaseQ = = = string2.toLowerCase(
 console.log(' Case-sensitive comparison: $ {caseSensitiveComparison}');
 console.log(' Case-insensitive comparison: $ {caselnsensitiveComparison}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js49">49. Encode a String to Base64</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program encode a string to Base64 in JavaScript, you can use the btoa() function.
 <pre>
 let originalstring = "Hello, !";
@@ -1578,8 +1657,9 @@ let modifiedString = originalString.replace(new RegExp(charToReplace, 'g'), repl
 console.log(' Original String: ${originalString}' );
 console.log(' Modified String: ${modifiedString}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js51">51. Replace All Line Breaks with</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program replace all line breaks (newline characters) in a string with a specific string or character, you
 can use the replace() method with a regular expression.
 <pre>
@@ -1595,8 +1675,9 @@ console.log(stringWithLineBreaks);
 console.log("\nString without Line Breaks:");
 console.log(stringWithoutLineBreaks);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js52">52. Check Leap Year</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program checks if a year is a leap year with a simple function. A leap year is a year that is evenly divisible
 by 4, except for years that are divisible by 100. However, years divisible by 400 are leap years.
 <pre>
@@ -1615,8 +1696,9 @@ console.log(' $ {yearToCheck} is a leap year.');
 console.log(' $ {yearToCheck} is not a leap year.');
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js53">53. Format the Date</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Formatting a date in JavaScript typically involves using the toLocaleDateString() method or constructing a
 formatted string manually. The toLocaleDateString() method provides a way to format a date based on the
 user's locale, including options for formatting the date, such as specifying the date style and time zone.
@@ -1634,8 +1716,9 @@ timeZone: 'UTC
 // Display the result
 console.log(' Formatted Date: $ {formattedDate}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js54">54. Display Current Date</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Display the current date in JavaScript, you can use the Dat e object to get the current date and time and then
 format it as needed.
 <pre>
@@ -1663,8 +1746,9 @@ console.log(' ${datel} is later than ${date2}');
 console.log(' ${datel} is equal to ${date2}');
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js56">56. Create Countdown Timer</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Create a countdown timer in JavaScript, you can use the setlnterval() function to update the timer at
 regular intervals and calculate the remaining time.
 <pre>
@@ -1691,8 +1775,9 @@ document.getElementById('countdown').innerHTML = 'Countdown expired!';
 }
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js57">57. Remove Specific Item From an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Remove a specific item from an array in JavaScript, you can use the filter() method or the splice() method:
 <pre>
 // Example array
@@ -1707,8 +1792,9 @@ originalArray.splice(indexTo Remove, 1);
 // Display the result
 console.log("Original Array:", originalArray);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js58">58. Check if An Array Contains a Specified Value</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Check if an array contains a specified value in JavaScript, you can use the includes() method or the
 indexOf() method.
 <pre>
@@ -1720,8 +1806,9 @@ let containsValue = myArray.includes(valueToCheck);
 // Display the result
 console.log(' Does the array include ${valueToCheck}? ${containsValue}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js59">59. Insert Item in an Array</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Insert an item into an array in JavaScript, you can use the push() method to add the item at the end of the
 array, or the splice() method to insert the item at a specific index.
 <pre>
@@ -1748,8 +1835,9 @@ let randomitem = myArray&lbrack;randomIndex&rbrack;;
 // Display the result
 console.log("Random Item:", randomitem);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js61">61. Perform Intersection Between Two Arrays</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To find the intersection (common elements) between two arrays in JavaScript, you can use various methods.
 <pre>
 // Example arrays
@@ -1760,8 +1848,9 @@ let intersection = arrayl.filter(value => array2.includes(value));
 // Display the result
 console.log("Intersection:", intersection);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js62">62. Split Array into Smaller Chunks</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To split an array into smaller chunks in JavaScript, you can use a loop and the slice() method.
 <pre>
 function chunkArray(array, chunksize) {
@@ -1779,8 +1868,9 @@ let chunks = chunkArray (my Array, 3);
 console.log("Original Array:", myArray);
 console.log("Chunks:", chunks);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js63">63. Get File Extension</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To get the file extension from a string representing a file name in JavaScript, you can use various methods.
 One common approach is to use the split() method to split the file name based on the dot ( .) and then
 extract the last part of the resulting array.
@@ -1797,8 +1887,9 @@ let fileName = "example.txt";
 let fileExtension = getFileExtension(fileName);
 console.log(' File Extension: ${fileExtension}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js64">64. Check If a Variable Is undefined or null</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To check if a variable is undefine d or mil 1 in JavaScript, you can use a simple conditional statement.
 <pre>
 // Example variable
@@ -1827,7 +1918,6 @@ return randomNumber;
 letrandomNum = getRandomNumber(l, 100);
 console.log("Random Number:", randomNum);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js66">66. Get The Current URL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1844,7 +1934,6 @@ console.log("Domain:", domain);
 console.log("Path:", path);
 console.log("Query Parameters:", queryParams);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js67">67. Validate An Email Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1864,8 +1953,9 @@ console.logC'Email is valid");
 console.logC'Email is not valid");
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js68">68. Check If a Variable is of Function Type</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 To check if a variable is of the function type in JavaScript, you can use the typeo f operator.
 <pre>
 // Example variable
@@ -1879,7 +1969,6 @@ console.log("The variable is of function type");
 console.log("The variable is not of function type");
 }
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js69">69. Work With Constants</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1908,7 +1997,6 @@ setTimeout(function() {
   myFunction(myParameter);
 }, 1000);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js71">71. Generate a Range of Numbers and Characters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1926,7 +2014,6 @@ return result;
 let numberRange = generateNumberRange(l, 5);
 console.log("Number Range:", numberRange);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js72">72. Perform Function Overloading</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1956,7 +2043,6 @@ exampleFunction(42);
 exampleFunction("Hello", 7);
 exampleFunction(true, "world"); // Invalid arguments
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js73">73. Implement a Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2006,7 +2092,6 @@ console.log("Popped element:", stack.popO); // Outputs: 3
 console.log("Stack size:", stack.sizeO); // Outputs: 2
 console.log("Is the stack empty?", stack.isEmptyO); // Outputs: false
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js74">74. Implement a Queue</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2070,8 +2155,9 @@ checkNumberType(-2.5); // Outputs: -2.5 is a float.
 checkNumberType(NaN); // Outputs: NaN is not a valid number.
 checkNumberType("abc"); // Outputs: abc is not a valid number.
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js76">76. Pass a Function as Parameter</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 You can pass a function as a parameter to another function. This allows you to create higher-order
 functions, which are functions that can accept other functions as arguments.
 <pre>
@@ -2506,8 +2592,9 @@ const testNumber = 28;
 const result = isPerfectNumber(testNumber);
 console.log(' Is ${testNumber} a perfect number? $ {result}');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js97">97. This program calculates the Volume of a Cylinder</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the Volume of a Cylinder:
 <pre>
 function calculateCylinderVolume(radius, height) {
@@ -4581,23 +4668,24 @@ the sequence of Motzkin numbers, which counts the number of different ways of dr
 chords between points on a circle (not necessarily touching every point with a chord).
 <pre>
 function isMotzkinNumber(number) {
-if (number < 0) {
-return false;
-}
-// Use dynamic programming to calculate Motzkin numbers
-const motzkinNumbers = &lbrack;1,1&rbrack;;
-for (let n = 2; n < = number; n+ +) {
-  const nextMotzkin = ((2 *n + 1)<i>motzkinNumbers&lbrack;n-l&rbrack; 
-    + (3*n-3)</i>motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
-  motzkinNumbers.push(nextMotzkin);
+  if (number < 0) {
+    return false;
+  }
+  // Use dynamic programming to calculate Motzkin numbers
+  const motzkinNumbers = &lbrack;1,1&rbrack;;
+  for (let n = 2; n < = number; n+ +) {
+    const nextMotzkin = ((2 *n + 1)<i>motzkinNumbers&lbrack;n-l&rbrack; 
+      + (3*n-3)</i>motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
+    motzkinNumbers.push(nextMotzkin);
+  }
 }
 return motzkinNumbers.includes(number);
 // Example usage
 const motzkinNumber = 5; // Replace with the number you want to check
 if (isMotzkinNumber(motzkinNumber)) {
-console.log(' ${motzkinNumber} is a Motzkin Number!');
+  console.log(' ${motzkinNumber} is a Motzkin Number!');
 } else {
-console.log(' ${motzkinNumber} is not a Motzkin Number.');
+  console.log(' ${motzkinNumber} is not a Motzkin Number.');
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4608,23 +4696,25 @@ Padovan sequence, which is similar to the Fibonacci sequence but uses a recurren
 + P(n-3) with initial values P(0) = P(l) = P(2) = 1.
 <pre>
 function isPadovanNumber(number) {
-if (number < 0) {
-return false;
-}
-const padovanNumbers = &lbrack;1,1,1&rbrack;;
-while (padovanNumbers&lbrack;padovanNumbers.length - 1&rbrack; <= number) {
-const nextPadovan = padovanNumbers&lbrack;padovanNumbers.length - 2&rbrack; + padovanNumbers&lbrack;padovanNumbers.length -
-3&rbrack;;
-padovanNumbers.push(nextPadovan);
-}
-return padovanNumbers.includes(number);
+  if (number < 0) {
+    return false;
+  }
+  const padovanNumbers = &lbrack;1,1,1&rbrack;;
+  while (padovanNumbers&lbrack;padovanNumbers.length - 1&rbrack; <= number) {
+    const nextPadovan = padovanNumbers&lbrack;padovanNumbers.length 
+	  - 2&rbrack; 
+	  + padovanNumbers&lbrack;padovanNumbers.length 
+	  - 3&rbrack;;
+    padovanNumbers.push(nextPadovan);
+  }
+  return padovanNumbers.includes(number);
 }
 // Example usage
 const padovanNumber = 9; // Replace with the number you want to check
 if (isPadovanNumber(padovanNumber)) {
-console.log(' ${padovanNumber} is a Padovan Number!');
+  console.log(' ${padovanNumber} is a Padovan Number!');
 } else {
-console.log(' ${padovanNumber} is not a Padovan Number.');
+  console.log(' ${padovanNumber} is not a Padovan Number.');
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
