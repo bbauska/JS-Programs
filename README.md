@@ -637,7 +637,7 @@ if (!isNaN(kilometers)) {
 
   // Convert kilometers to miles
   let miles = kilometers &ast; kilometersToMilesConversionFactor;
-  console.log('${kilometers} kilometers is approximately ${miles} miles.');
+  console.log(`${kilometers} kilometers is approximately ${miles} miles.`);
 } else {
   console.log("Please enter a valid number for the distance in kilometers.");
 }
@@ -658,7 +658,7 @@ if (!isNaN(celsius)) {
   // Convert Celsius to Fahrenheit
   let fahrenheit = (celsius &ast; 9) / 5 + 32;
   console.log(
-  ' ${celsius} degrees Celsius is equal to ${fahrenheit} degrees Fahrenheit.'
+  `${celsius} degrees Celsius is equal to ${fahrenheit} degrees Fahrenheit.`
   );
 } else {
   console.log("Please enter a valid number for the temperature in Celsius.");
@@ -680,7 +680,7 @@ if (!isNaN(minRange) && !isNaN(maxRange) && minRange &lt; maxRange) {
   // Generate a random number within the specified range
   let randomNumber = Math.random() &ast; (maxRange - minRange) + minRange;
   console.log(
-    'A random number between ${minRange} and ${maxRange} is: ${randomNumber}'
+    `A random number between ${minRange} and ${maxRange} is: ${randomNumber}`
   );
 } else {
   console.log(
@@ -701,9 +701,9 @@ let number = parseFloat(prompt("Enter a number:"));
 if (!isNaN(number)) {
   // Check if the number is positive, negative, or zero
   if (number > 0) {
-    console.log('${number} is a positive number.');
+    console.log(`${number} is a positive number.`);
   } else if (number < 0) {
-    console.log('${number} is a negative number.');
+    console.log(`${number} is a negative number.`);
   } else {
     console.log("The entered number is zero.");
   }
@@ -723,10 +723,10 @@ let number = parseInt(prompt("Enter a number:"));
 // Check if input is a valid integer
 if (!isNaN(number) && Number.isInteger(number)) {
   // Check if the number is odd or even
-  if (number % 2 = = = 0) {
-    console.log('${number} is an even number.');
+  if (number % 2 === 0) {
+    console.log(`${number} is an even number.`);
   } else {
-    console.log('${number} is an odd number.');
+    console.log(`${number} is an odd number.`);
   }
 } else {
   console.log("Please enter a valid integer.");
@@ -748,7 +748,7 @@ if (!isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
   // Find the largest among the three numbers
   let largestNumber = Math.max(numl, num2, num3);
   console.log (
-    'The largest number among ${numl}, ${num2}, and ${num3} is: ${largestNumber}'
+    `The largest number among ${numl}, ${num2}, and ${num3} is: ${largestNumber}`
   );
 } else {
   console.log("Please enter valid numbers for all three inputs.");
@@ -776,9 +776,9 @@ if (!isNaN(number) && Number.isInteger(number) && number &gt; 1) {
   }
   // Display the result
   if (isPrime) {
-    console.log(' $ {number} is a prime number.');
+    console.log(`${number} is a prime number.`);
   } else {
-    console.log(' $ {number} is not a prime number.');
+    console.log(`${number} is not a prime number.`);
   }
 } else {
   console.log("Please enter a valid integer greater than 1.");
@@ -805,7 +805,7 @@ if(
   startNumber &lt; endNumber &&
   startNumber &gt; 1
 ){
-  console.log('Prime numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:');
+  console.log(`Prime numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:`);
 
 // Check for prime numbers in the interval
 for (let i = startNumber; i <= endNumber; i++) {
@@ -844,7 +844,7 @@ if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
   for (let i = 1; i < = number; i++) {
     factorial &ast;= i;
   }
-  console.log('The factorial of ${number} is: ${factorial}');
+  console.log(`The factorial of ${number} is: ${factorial}`);
 } else {
   console.log("Please enter a valid non-negative integer.");
 }
@@ -861,13 +861,13 @@ let number = parseInt(prompt("Enter a number for the multiplication table:"));
 // Check if input is a valid integer
 if (!isNaN(number) && Number.isInteger(number)) {
   // Specify the range for the multiplication table
-  const range =10;
-  console.log('Multiplication table for ${number} (up to ${range}):');
+  const range = 10;
+  console.log(`Multiplication table for ${number} (up to ${range}):`);
 
   // Display the multiplication table
-  for (let i = l;i < = range; i++) {
+  for (let i = l;i <= range; i++) {
     let result = number &ast; i;
-    console.log('${number} x ${i} = ${result}');
+    console.log(`${number} x ${i} = ${result}`);
   }
 } else {
   console.log("Please enter a valid integer.");
@@ -888,7 +888,7 @@ let numTerms = parseInt(
 
 // Check if input is a valid integer
 if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
-  console.log('Fibonacci sequence of ${numTerms} terms:');
+  console.log(`Fibonacci sequence of ${numTerms} terms:`);
   let fib Array = &lbrack;0,1&rbrack;;
   
   // Generate the Fibonacci sequence
@@ -927,9 +927,9 @@ if (fisNaN(number) && Number.islnteger(number) && number > 0) {
 
   // Check if the number is an Armstrong number
   if (sum === number) {
-    console.log('${number} is an Armstrong number.');
+    console.log(`${number} is an Armstrong number.`);
   } else {
-    console.log('${number} is not an Armstrong number.');
+    console.log(`${number} is not an Armstrong number.`);
   }
 } else {
   console.log("Please enter a valid positive integer.");
@@ -956,7 +956,7 @@ if(
   startNumber < endNumber
 ){
 console.log(
-  'Armstrong numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:'
+  `Armstrong numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:`
 );
 
 // Check for Armstrong numbers in the interval
@@ -1028,7 +1028,7 @@ if (lisNaN(numl) && !isNaN(num2)) {
   }
   // Display the result
   if (result !== undefined) {
-    console.log('Result of ${numl} ${operation} ${num2} is: ${result}');
+    console.log(`Result of ${numl} ${operation} ${num2} is: ${result}`);
   }
 } else {
   console.log("Please enter valid numbers.");
@@ -1049,9 +1049,9 @@ let n = parseInt(prompt("Enter a positive integer:"));
 if (!isNaN(n) && Number.isInteger(n) && n > 0) {
   // Calculate the sum of natural numbers
   let sum = (n &ast; (n + l))/2;
-  console.log(' The sum of natural numbers from 1 to ${n} is: ${sum}');
+  console.log(`The sum of natural numbers from 1 to ${n} is: ${sum}`);
 } else {
-  console.log(”Please enter a valid positive integer.");
+  console.log("Please enter a valid positive integer.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1078,12 +1078,12 @@ if(
   // Check if the last digits are the same
   if (lastDigitl = = = lastDigit2) {
     console.log(
-      'The last digit of ${numl} is the same as the last digit of ${num2}.'
+      `The last digit of ${numl} is the same as the last digit of ${num2}.`
     );
   }
 } else {
   console.log(
-    'The last digit of ${numl} is different from the last digit of ${num2}.'
+    `The last digit of ${numl} is different from the last digit of ${num2}.`
   );
 } else {
     console.log("Please enter valid integers.");
@@ -1107,11 +1107,11 @@ if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger
   let smallerNumber = Math.min(numl, num2);
   let hcf = 1;
   for (let i = 1; i < = smallerNumber; i++) {
-    if (numl % i = = = 0 && num2 % i = = = 0) {
+    if (numl % i === 0 && num2 % i === 0) {
       hcf = i;
     }
   }
-  console.log(' The HCF (GCD) of ${numl} and ${num2} is: ${hcf}');
+  console.log(`The HCF (GCD) of ${numl} and ${num2} is: ${hcf}`);
 } else {
   console.log("Please enter valid positive integers.");
 }
@@ -1134,7 +1134,7 @@ if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger
   let 1cm = largerNumber;
   while (true) {
     if (1cm % numl = = = 0 && 1cm % num2 = = = 0) {
-      console.log(' The LCM of ${numl} and ${num2} is: ${lcm}');
+      console.log(`The LCM of ${numl} and ${num2} is: ${lcm}`);
       break;
     }
     lcm += largerNumber;
@@ -1158,7 +1158,7 @@ if (’isNaN(number) && Number.isInteger(number) && number > 0) {
 
   // Find and display the factors
   for (let i = 1; i < = number; i++) {
-    if (number % i = = = 0) {
+    if (number % i === 0) {
       console.log(i);
     }
   }
@@ -1189,7 +1189,7 @@ let number = parseInt(prompt("Enter a positive integer:"));
 if (!isNaN(number) && Number.isInteger(number) && number > 0) {
   // Calculate and display the sum using recursion
   let sum = sumOfNaturalNumbers(number);
-  console.log('The sum of natural numbers up to ${number} is: ${sum}');
+  console.log(`The sum of natural numbers up to ${number} is: ${sum}`);
 } else {
   console.log("Please enter a valid positive integer.");
 }
@@ -1197,58 +1197,65 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js27">27. Guess a Random Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program generates a random number between a specified range and allows the user to guess the
-number. It provides feedback on whether the guessed number is too high, too low, or correct. The user
-continues guessing until they correctly identify the random number.
+<p>This program generates a random number between a specified range and allows the user 
+to guess the number. It provides feedback on whether the guessed number is too high, too 
+low, or correct. The user continues guessing until they correctly identify the random number.</p>
 <pre>
 // Generate a random number between 1 and 100 (you can adjust the range)
 const randomNumber = Math.floor(Math.random() &ast; 100) + 1;
+
 // Initialize variables
 let userGuess;
 let attempts = 0;
+
 // Game loop
 do {
-// Prompt user for a guess
-userGuess = parseInt(prompt("Guess the random number (between 1 and 100):"));
-// Check if the input is a valid number
-if (’isNaN(userGuess)) {
-attempts++;
-// Provide feedback to the user
-if (userGuess < randomNumber) {
-console.log("Too low! Try again.");
-} else if (userGuess > randomNumber) {
-console.log("Too high! Try again.");
+  // Prompt user for a guess
+  userGuess = parseInt(prompt("Guess the random number (between 1 and 100):"));
+  // Check if the input is a valid number
+  if (’isNaN(userGuess)) {
+    attempts++;
+    // Provide feedback to the user
+    if (userGuess < randomNumber) {
+      console.log("Too low! Try again.");
+    } else if (userGuess > randomNumber) {
+      console.log("Too high! Try again.");
 } else {
-console.log(' Congratulations! You guessed the correct number ${randomNumber} in $ {attempts} attempts.');
+  console.log(`Congratulations! You guessed the correct number ${randomNumber} in $ {attempts} attempts.`);
 } else {
-console.log("Please enter a valid number.");
+  console.log("Please enter a valid number.");
 } while (userGuess !== randomNumber);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js28">28. Shuffle Deck of Cards</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program simulates shuffling a standard deck of playing cards. It generates a deck of cards, displays the
-initial order, shuffles the deck, and then displays the shuffled order.
+<p>This program simulates shuffling a standard deck of playing cards. It generates a 
+deck of cards, displays the initial order, shuffles the deck, and then displays the 
+shuffled order.</p>
 <pre>
 // Function to create a standard deck of cards
 function createDeck() {
-const suits = &lbrack;"Hearts", "Diamonds", "Clubs", "Spades"&rbrack;;
-const ranks = &lbrack;"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"&rbrack;;
-let deck = &lbrack;&rbrack;;
-for (let suit of suits) {
-for (let rank of ranks) {
-deck.push(' ${rank} of ${suit}');
-return deck;
+  const suits = &lbrack;"Hearts", "Diamonds", "Clubs", "Spades"&rbrack;;
+  const ranks = &lbrack;"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"&rbrack;;
+  let deck = &lbrack;&rbrack;;
+  for (let suit of suits) {
+    for (let rank of ranks) {
+      deck.push(`${rank} of ${suit}`);
+	}
+  }
+  return deck;
+}
 // Function to shuffle the deck of cards
 function shuffleDeck(deck) {
-for (let i = deck.length -1; i > 0; i—) {
-const j = Math.floor(Math.random() &ast; (i + 1));
-&lbrack;deck&lbrack;i&rbrack;, deck&lbrack;j&rbrack;&rbrack; = &lbrack;deckfj&rbrack;, deck&lbrack;i&rbrack;&rbrack;; // Swap elements to shuffle
+  for (let i = deck.length -1; i > 0; i—) {
+    const j = Math.floor(Math.random() &ast; (i + 1));
+    &lbrack;deck&lbrack;i&rbrack;, deck&lbrack;j&rbrack;&rbrack; = &lbrack;deckfj&rbrack;, deck&lbrack;i&rbrack;&rbrack;; // Swap elements to shuffle
+  }
 }
-}
+
 // Create and display an initial deck of cards
 const initialDeck = createDeck();
-console.logC'Initial Deck:");
+console.log("Initial Deck:");
 console.log(initialDeck);
 // Shuffle the deck and display the shuffled deck
 const shuffledDeck = &lbrack;...initialDeck&rbrack;; // Create a copy to avoid modifying the original
@@ -1259,54 +1266,55 @@ console.log(shuffledDeck);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js29">29. Display Fibonacci Sequence Using Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program displays the Fibonacci sequence up to a specified number of terms using recursion. It prompts
-the user to enter the number of terms and then uses a recursive function to generate and display the
-Fibonacci sequence.
+<p>This program displays the Fibonacci sequence up to a specified number of terms using 
+recursion. It prompts the user to enter the number of terms and then uses a recursive 
+function to generate and display the Fibonacci sequence.</p>
 <pre>
 // Function to generate the Fibonacci sequence using recursion
 function fibonacci(n) {
-if(n<=l){
-return n;
-} else {
-return fibonacci(n -1) + fibonacci(n - 2);
-}
+  if(n<=l){
+    return n;
+  } else {
+    return fibonacci(n -1) + fibonacci(n - 2);
+  }
 }
 // Prompt user for the number of terms in the Fibonacci sequence
 let numTerms = parseInt(prompt("Enter the number of terms in the Fibonacci sequence:"));
 // Check if input is a valid non-negative integer
 if (’isNaN(numTerms) && Number.isInteger(numTerms) && numTerms >= 0) {
-console.log(' Fibonacci sequence of $ {numTerms} terms:');
-// Display the Fibonacci sequence using recursion
-for (let i = 0; i < numTerms; i++) {
-console.log(fibonacci(i));
-}
+  console.log(`Fibonacci sequence of $ {numTerms} terms:`);
+  // Display the Fibonacci sequence using recursion
+  for (let i = 0; i < numTerms; i++) {
+    console.log(fibonacci(i));
+  }
 } else {
-console.logf'Please enter a valid non-negative integer for the number of terms.");
+  console.log("Please enter a valid non-negative integer for the number of terms.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js30">30. Find Factorial of Number Using Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the factorial of a given non-negative integer using recursion. It prompts the user to
-enter a non-negative integer and then uses a recursive function to compute and display its factorial.
+<p>This program calculates the factorial of a given non-negative integer using recursion. 
+It prompts the user to enter a non-negative integer and then uses a recursive function to 
+compute and display its factorial.</p>
 <pre>
 // Function to calculate the factorial using recursion
 function factorial(n) {
-if (n === 0 || n === 1) {
-return 1;
-} else {
-return n &ast; factorial(n -1);
-}
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n &ast; factorial(n -1);
+  }
 }
 // Prompt user for a non-negative integer
 let number = parseInt(prompt("Enter a non-negative integer:"));
 // Check if input is a valid non-negative integer
 if (lisNaN(number) && Number.islnteger(number) && number >= 0) {
-// Calculate and display the factorial using recursion
-let result = factorial(number);
-console.log(' The factorial of $ {number} is: $ {result}' );
+  // Calculate and display the factorial using recursion
+  let result = factorial(number);
+  console.log(`The factorial of ${number} is: ${result}`);
 } else {
-console.log("Please enter a valid non-negative integer.");
+  console.log("Please enter a valid non-negative integer.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1317,26 +1325,26 @@ number and then calculates and displays its binary representation.
 <pre>
 // Function to convert decimal to binary
 function decimalToBinary(decimalNumber) {
-if (decimalNumber = = = 0){
-return "0";
-}
-let binaryResult =
-while (decimalNumber > 0) {
-let remainder = decimalNumber % 2;
-binaryResult = remainder + binaryResult;
-decimalNumber = Math.floor(decimalNumber / 2);
-}
-return binaryResult;
+  if (decimalNumber = = = 0){
+    return "0";
+  }
+  let binaryResult =
+  while (decimalNumber > 0) {
+    let remainder = decimalNumber % 2;
+    binaryResult = remainder + binaryResult;
+    decimalNumber = Math.floor(decimalNumber / 2);
+  }
+  return binaryResult;
 }
 // Prompt user for a decimal number
 let decimalNumber = parse!nt(prompt("Enter a decimal number:"));
 // Check if input is a valid integer
 if (!isNaN(decimalNumber) && Number jsInteger(decimalNumber) && decimalNumber >= 0) {
-// Convert and display the binary equivalent
-let binaryEquivalent = decimalToBinary(decimalNumber);
-console.log(' The binary equivalent of ${decimalNumber} is: ${binaryEquivalent}');
+  // Convert and display the binary equivalent
+  let binaryEquivalent = decimalToBinary(decimalNumber);
+  console.log(`The binary equivalent of ${decimalNumber} is: ${binaryEquivalent}`);
 } else {
-console.log("Please enter a valid non-negative integer.");
+  console.log("Please enter a valid non-negative integer.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1348,11 +1356,11 @@ This program prompts the user to enter a character and then calculates and displ
 let character = prompt("Enter a character:");
 // Check if input is a valid single character
 if (character.length = = = 1) {
-// Calculate and display the ASCII value
-let asciiValue = character.charCodeAt(O);
-console.log(' The ASCII value of ^{character}1 is: ${asciiValue}');
+  // Calculate and display the ASCII value
+  let asciiValue = character.charCodeAt(O);
+  console.log(`The ASCII value of ^{character}1 is: ${asciiValue}`);
 } else {
-console.log("Please enter a valid single character.");
+  console.log("Please enter a valid single character.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1363,71 +1371,71 @@ same forward as backward.
 <pre>
 // Function to check if a string is a palindrome
 function isPalindrome(str) {
-// Remove non-alphanumeric characters and convert to lowercase
-const cleanStr = str.replace(/&lbrack;Aa-zA-ZO-9&rbrack;/g, ").toLowerCase();
-// Compare the original and reversed strings
-return cleanStr = = = cleanStr.split(").reverse().join(");
+  // Remove non-alphanumeric characters and convert to lowercase
+  const cleanStr = str.replace(/&lbrack;Aa-zA-ZO-9&rbrack;/g, ").toLowerCase();
+  // Compare the original and reversed strings
+  return cleanStr === cleanStr.split(").reverse().join(");
 }
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
 // Check if input is a valid string
 if (inputString.length > 0) {
-// Check and display if the string is a palindrome
-if (isPalindrome(inputString)) {
-console.log(' "$ {input String}" is a palindrome.');
+  // Check and display if the string is a palindrome
+  if (isPalindrome(inputString)) {
+    console.log(`"$ {input String}" is a palindrome.`);
+  } else {
+    console.log(`"${inputString}" is not a palindrome.`);
+  }
 } else {
-console.log(' "${inputString}" is not a palindrome.');
-}
-} else {
-console.log("Please enter a valid string.");
+  console.log("Please enter a valid string.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js34">34. Sort Words in Alphabetical Order</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a sentence or a list of words and then sorts and displays the words
-in alphabetical order.
+<p>This program prompts the user to enter a sentence or a list of words and then sorts 
+and displays the words in alphabetical order.</p>
 <pre>
 // Prompt user for a sentence or a list of words
 let inputstring = prompt("Enter a sentence or a list of words:");
 // Check if input is a valid string
 if (inputString.length > 0) {
-// Split the input into an array of words
-let wordsArray = inputString.split(/\s+/);
-// Sort the array of words in alphabetical order
-let sortedWords = wordsArray.sort();
-// Display the sorted words
-console.log("Sorted Words:");
-console.log(sortedWords.join(','));
+  // Split the input into an array of words
+  let wordsArray = inputString.split(/\s+/);
+  // Sort the array of words in alphabetical order
+  let sortedWords = wordsArray.sort();
+  // Display the sorted words
+  console.log("Sorted Words:");
+  console.log(sortedWords.join(','));
 } else {
-console.log("Please enter a valid string.");
+  console.log("Please enter a valid string.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js35">35. Replace Characters of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a string, a target character, and a replacement character. It then
-replaces all occurrences of the target character with the replacement character and displays the modified
-string.
+<p>This program prompts the user to enter a string, a target character, and a replacement 
+character. It then replaces all occurrences of the target character with the replacement 
+character and displays the modified string.</p>
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
 // Check if input is a valid string
 if (inputString.length > 0) {
-// Prompt user for a target character and a replacement character
-let targetChar = promptf'Enter the target character:");
-let replacementchar = prompt("Enter the replacement character:");
-// Check if targetChar is a single character and input is not empty
-if (targetChar.length = = = 1) {
-// Replace all occurrences of targetChar with replacementchar
-let modifiedString = inputString.split(targetChar).join(replacementChar);
-// Display the modified string
-console.log(' Modified String: $ {modifiedString}');
+  // Prompt user for a target character and a replacement character
+  let targetChar = promptf'Enter the target character:");
+  let replacementchar = prompt("Enter the replacement character:");
+  // Check if targetChar is a single character and input is not empty
+  if (targetChar.length = = = 1) {
+    // Replace all occurrences of targetChar with replacementchar
+    let modifiedString = inputString.split(targetChar).join(replacementChar);
+    // Display the modified string
+    console.log(`Modified String: $ {modifiedString}`);
+  } else {
+    console.log("Please enter a valid target character (single character).");
+  }
 } else {
-console.log("Please enter a valid target character (single character).");
-}
-} else {
-console.log("Please enter a valid string.");
+  console.log("Please enter a valid string.");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1439,12 +1447,12 @@ This program prompts the user to enter a string and then reverses and displays t
 let inputstring = prompt("Enter a string:");
 // Check if input is a valid string
 if (inputString.length > 0) {
-// Reverse the string
-let reversedString = inputString.split(").reverse().join(");
-// Display the reversed string
-console.log(' Reversed String: $ {reversedString}');
+  // Reverse the string
+  let reversedString = inputString.split(").reverse().join(");
+  // Display the reversed string
+  console.log(`Reversed String: ${reversedString}`);
 } else {
-console.log("Please enter a valid string.");
+  console.log("Please enter a valid string.");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js37">37. Check the Number of Occurrences of a Character in the String</h2>
@@ -1456,17 +1464,17 @@ let inputstring = prompt("Enter a string:");
 let targetchar = promptf'Enter the character to count:");
 // Check if input is valid
 if (inputString.length > 0 && targetChar.length = = = 1) {
-// Count occurrences of the target character
-let count = 0;
-for (let i = 0; i < inputString.length; i++) {
-if (inputString&lbrack;i&rbrack; = = = targetChar) {
-count++;
-}
-}
-// Display the result
-console.log(' Number of occurrences of'$ {targetChar}' in '$ {inputstring}': ${count}');
+  // Count occurrences of the target character
+  let count = 0;
+  for (let i = 0; i < inputString.length; i++) {
+    if (inputString&lbrack;i&rbrack; = = = targetChar) {
+      count++;
+    }
+  }
+  // Display the result
+  console.log(`Number of occurrences of'${targetChar}' in '${inputstring}': ${count}`);
 } else {
-console.log("Please enter a valid string and a single character.");
+  console.log("Please enter a valid string and a single character.");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js38">38. Convert the First Letter of a String into Uppercase</h2>
