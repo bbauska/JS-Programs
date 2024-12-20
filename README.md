@@ -2026,7 +2026,7 @@ console.log("The variable is not of function type");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js69">69. Work With Constants</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>You can work with constants using the const keyword to declare variables whose values 
+<p>You can work with constants using the <span class="consolas">const</span> keyword to declare variables whose values 
 should not be reassigned.</p>
 <pre>
 // Define a constant
@@ -2041,7 +2041,7 @@ console.log("The value of PI is:", PI);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js70">70. Pass Parameter to a setTimeout() Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To pass parameters to a function inside setTimeout(), you can use an anonymous 
+<p>To pass parameters to a function inside <span class="consolas">setTimeout()</span>, you can use an anonymous 
 function or an arrow function.</p>
 <pre>
 function myFunction(parameter) {
@@ -2253,8 +2253,9 @@ console.log("Result of multiplication:", result2); // Outputs: 15
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js77">77. Get the Dimensions of an Image</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To get the dimensions (width and height) of an image in JavaScript, you can create an Imag e object, load the
-image, and then access the width and height properties.
+<p>To get the dimensions (width and height) of an image in JavaScript, you can create an 
+<span class="consolas">Image></span> object, load the image, and then access the 
+<span class="consolas">width</span> and <span class="consolas">height</span> properties.</p>
 <pre>
 function getlmageDimensions(imageSrc) {
 // Create an Image object
@@ -2282,8 +2283,8 @@ getlmageDimensions(imageUrl);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js78">78. Remove All Whitespaces From a Text</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To remove all whitespaces from a text in JavaScript, you can use a regular expression and the replace
-method.
+<p>To remove all whitespaces from a text in JavaScript, you can use a regular expression 
+and the <span class="consolas">replace</span> method.</p>
 <pre>
 function removeWhitespaces(inputText) {
   // Use a regular expression to replace all whitespaces with an empty string
@@ -2298,7 +2299,8 @@ console.log("Text without Whitespaces:", textWithoutWhitespaces);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js79">79. Write to Console</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Writing to the console in JavaScript is typically done using the console.log() method.
+<p>Writing to the console in JavaScript is typically done using the 
+<span class="consolas">console.log()</span> method.</p>
 <pre>
 // Write a message to the console
 console.logf'Hello, world!");
@@ -2313,8 +2315,9 @@ console.log("Full Name:", firstName, lastName);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js80">80. Convert Date to Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To convert a JavaScript Date object to a numeric value representing the number of milliseconds since the
-Unix Epoch (January 1,1970), you can use the getTime() method.
+<p>To convert a JavaScript <span class="consolas">Date</span> object to a numeric value 
+representing the number of milliseconds since the Unix Epoch (January 1,1970), you can use 
+the <span class="consolas">getTime()</span> method.</p>
 <pre>
 // Create a Date object
 const currentDate = new Date();
@@ -2383,8 +2386,9 @@ console.log("Random Color:", randomColor);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js84">84. Check if a String is Empty</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To check if a string is empty in JavaScript, you can use the lengt h property of the string. If the length is zero,
-it means the string is empty.
+<p>To check if a string is empty in JavaScript, you can use the 
+<span class="consolas">length</span> property of the string. If the length is zero,
+it means the string is empty.</p>
 <pre>
 function isEmptyString(str) {
 return str.length = = = 0;
@@ -2398,8 +2402,9 @@ console.logf'Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outpu
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js85">85. Capitalize the First Letter of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To capitalize the first letter of a string in JavaScript, you can use a combination of the charAt(),
-toUpperCase(), and slice() methods.
+<p>To capitalize the first letter of a string in JavaScript, you can use a combination of the 
+<span class="consolas">charAt()</span>,
+<span class="consolas">toUpperCase()</span>, and <span class="consolas">slice()</span> methods.</p>
 <pre>
 function capitalizeFirstLetter(str) {
 // Check if the string is not empty
@@ -2417,8 +2422,10 @@ console.log("Capitalized String:", capitalizedString);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js86">86. Find the Maximum Element in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the maximum element in an array in JavaScript, you can use the Math.max() function along with
-the spread operator (...) to pass the array elements as individual arguments.
+<p>To find the maximum element in an array in JavaScript, you can use the 
+<span class="consolas">Math.max()</span> function along with
+the spread operator (<span class="consolas">...</span>) to pass the array elements as 
+individual arguments.</p>
 <pre>
 function findMaxElement(arr) {
 // Check if the array is not empty
@@ -2436,8 +2443,9 @@ console.logC'Maximum Element:", maxNumber);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js87">87. Reverse an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To reverse an array in JavaScript, you can use the reverse() method, which is available for arrays. This
-method reverses the elements of an array in place.
+<p>To reverse an array in JavaScript, you can use the 
+<span class="consolas">reverse()</span> method, which is available for arrays. This
+method reverses the elements of an array in place.</p>
 <pre>
 function reverseArray(arr) {
 // Use the reverse() method to reverse the array in place
@@ -3784,7 +3792,7 @@ console.log(' The area of the rhombus is: $ {rhombus Area.toFixed(2)j');
 <p>This program checks if a given non-negative integer is a Catalan number. Catalan 
 numbers are a sequence of natural numbers that occur in various counting problems, 
 often involving recursive structures. The nth Catalan number is given by the formula:
-<span class="consolas">Cn = (2n)!/((n + l)!&ast;n!)</span>.</p>
+<span class="consolas">Cn = (2n)!/((n + l)! &ast; n!)</span>.</p>
 <pre>
 // Function to calculate binomial coefficient (n choose k)
 function binomialCoefficient(n, k) {
@@ -4052,9 +4060,12 @@ game.makeGuess('s');
 <h2 id="js143">143. Calculate the Euler's Totient Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates Euler's Totient Function, also known as Euler's Phi Function, 
-which counts the positive integers up to a given integer n that are relatively prime to n. 
-The formula for Euler's Totient Function is: cf>(n) = n * (1 - 1/pl) * (1 - l/p2) * ... * 
-(1 - 1/pk), where pl, p2,..., pk are the distinct prime factors of n.</p>
+which counts the positive integers up to a given integer 
+<span class="consolas">n</span> that are relatively prime to 
+<span class="consolas">n</span>. The formula for Euler's Totient Function is: 
+<span class="consolas">&#934;(n) = n &ast; (1 - 1/pl) &ast; (1 - l/p2) &ast; ... &ast; 
+(1 - 1/pk)</span>, where pl, p2,..., pk are the distinct prime factors of 
+<span class="consolas">n</span>.</p>
 <pre>
 function eulerTotientFunction(n) {
 if(n<=0){
@@ -4595,9 +4606,10 @@ console.log(' ${squarefulNumber} is not a Squareful Number.');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js159">159. Find the Area of a Tetrahedron</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the surface area of a regular tetrahedron given the length of its edges ( a ). The
-formula for the surface area of a regular tetrahedron is Surface Area = V3 * aA 2 , where a is the length of an
-edge.
+<p>This program calculates the surface area of a regular tetrahedron given the length of its 
+edges ( <span class="consolas">a</span> ). The formula for the surface area of a regular 
+tetrahedron is <span class="consolas">Surface Area = &radic;3 &ast; a^2</span>, where 
+<span class="consolas">a</span> is the length of an edge.</p>
 <pre>
 function calculateTetrahedronSurfaceArea(edgeLength) {
 const surfaceArea = Math.sqrt(3) * Math.pow(edgeLength, 2);
@@ -4630,13 +4642,16 @@ console.log(' ${automorphicNumber} is not an Automorphic Number.');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js161">161. Calculate the Area of a Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the surface area of a square pyramid given the length of the base side ( s ) and the
-slant height (1). The formula for the surface area of a square pyramid is Surface Area = s*2 + 2 * s * 1, where
-s is the length of a base side and 1 is the slant height.
+<p>This program calculates the surface area of a square pyramid given the length of the 
+base side ( <span class="consolas">s</span> ) and the slant height (
+<span class="consolas">l</span>). The formula for the surface area of a square pyramid is 
+<span class="consolas">Surface Area = s^2 + 2 &ast; s &ast; l</span>, where
+<span class="consolas">s</span> is the length of a base side and 
+<span class="consolas">l</span> is the slant height.</p>
 <pre>
 function calculatePyramidSurfaceArea(sideLength, slantHeight) {
 const baseArea = Math.pow(sideLength, 2);
-const lateralArea = 2 * sideLength * slantHeight;
+const lateralArea = 2 &ast; sideLength * slantHeight;
 const surfaceArea = baseArea + lateralArea;
 return surfaceArea;
 // Example usage
@@ -4729,9 +4744,13 @@ towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js165">165. Calculate the Area of a Frustum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the surface area of a frustum of a cone given the radii of its top and bottom bases ( r 1
-and r 2 ) and the slant height (1). The formula for the surface area of a frustum of a cone is Surface Area = n
-* (rl + r2) * 1 + it * rl*2 + it * r2* 2 , where it is the mathematical constant Pi.
+<p>This program calculates the surface area of a frustum of a cone given the radii of its 
+top and bottom bases ( <span class="consolas">r1</span> and 
+<span class="consolas">r2</span> ) and the slant height (
+<span class="consolas">l</span>). The formula for the surface area of a frustum of a cone 
+is <span class="consolas">Surface Area = &pi; &ast; (rl + r2) &ast; l + &pi; &ast; rl^2 
++ &pie; &ast; r2^2</span>, where <span class="consolas">&pie;</span> is the mathematical 
+constant Pi.</p>
 <pre>
 function surfaceAreaOfFrustum(rl, r2,1) {
   const surfaceArea = Math.PI * (rl + r2) * 1 + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
@@ -5812,9 +5831,10 @@ sumOfCubes(5);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js205">205. Maximum Integer for Sum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program finds the maximum integer n such that the sum of integers from 1 to n 
-(inclusive) does not exceed a given target sum <b>targetSum</b>. It calculates the sum using 
-the formula <b>Sum = n &ast; (n + 1) / 2.</b></p>
+<p>This program finds the maximum integer n such that the sum of integers from 1 to 
+<span class="consolas">n</span> (inclusive) does not exceed a given target sum 
+<span class="consolas">targetSum</span>. It calculates the sum using 
+the formula <span class="consolas">Sum = n &ast; (n + 1) / 2</span>.</p>
 <pre>
 function findMaxIntegerForSum(targetSum) {
   let currentSum = 0;
@@ -5832,7 +5852,9 @@ findMaxIntegerForSum(l 5);
 <h2 id="js206">206. URL Breakdown</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program breaks a URL address into its parts and puts them into an array. The URL 
-structure considered is scheme://domain&lbrack;/:path &rbrack;, where pat h is optional.</p>
+structure considered is 
+<span class="consolas">schema://domain&lbrack;/:path &rbrack;</span>, where 
+<span class="consolas">path</span> is optional.</p>
 <pre>
 function breakURL(url) {
   const urlParts = {};
@@ -5855,7 +5877,8 @@ breakURL("https://www.example.org/page");
 <h2 id="js207">207. Sort Strings by Length</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program sorts the strings of a given array of strings in order of increasing 
-length. It uses the Array.sort method to achieve the desired order.</p>
+length. It uses the 
+<span class="consolas">Array.sort</span> method to achieve the desired order.</p>
 <pre>
 function sortStringsByLength(stringsArray) {
 const sortedArray = stringsArray.slice().sort((a, b) => a.length - b.length);
@@ -5872,7 +5895,9 @@ sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simplifies a given absolute path for a file in Unix-style. It takes a 
 string representing the absolute path and simplifies it by resolving any redundant 
-slashes (//), parent directory references (..), and current directory references (.).</p>
+slashes (<span class="consolas">//</span>), parent directory references (
+<span class="consolas">..</span>), and current directory references (
+<span class="consolas">.</span>).</p>
 <pre>
 function simplifyAbsolutePath(path) {
 const parts = path.split('/');
@@ -5984,7 +6009,7 @@ greaterThanl5Checker(20);
 <h2 id="js214">214. Replace First Digit with $</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program replaces the first digit in a string (assuming the string has at least one 
-digit) with the $ character.</p>
+digit) with the <span class="consolas">$</span> character.</p>
 <pre>
 function replaceFirstDigitWithDollar(inputString) {
   const modifiedString = inputString.replace(/\d/,
