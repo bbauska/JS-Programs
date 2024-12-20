@@ -1012,7 +1012,7 @@ if (lisNaN(numl) && !isNaN(num2)) {
       result = numl - num2;
       break;
     case
-      result = numl * num2;
+      result = numl &ast; num2;
       break;
     case"/":
       if (num2 !== 0) {
@@ -1048,7 +1048,7 @@ let n = parseInt(prompt("Enter a positive integer:"));
 // Check if input is a valid positive integer
 if (!isNaN(n) && Number.isInteger(n) && n > 0) {
   // Calculate the sum of natural numbers
-  let sum = (n * (n + l))/2;
+  let sum = (n &ast; (n + l))/2;
   console.log(' The sum of natural numbers from 1 to ${n} is: ${sum}');
 } else {
   console.log(”Please enter a valid positive integer.");
@@ -1202,7 +1202,7 @@ number. It provides feedback on whether the guessed number is too high, too low,
 continues guessing until they correctly identify the random number.
 <pre>
 // Generate a random number between 1 and 100 (you can adjust the range)
-const randomNumber = Math.floor(Math.random() * 100) + 1;
+const randomNumber = Math.floor(Math.random() &ast; 100) + 1;
 // Initialize variables
 let userGuess;
 let attempts = 0;
@@ -1242,7 +1242,7 @@ return deck;
 // Function to shuffle the deck of cards
 function shuffleDeck(deck) {
 for (let i = deck.length -1; i > 0; i—) {
-const j = Math.floor(Math.random() * (i + 1));
+const j = Math.floor(Math.random() &ast; (i + 1));
 &lbrack;deck&lbrack;i&rbrack;, deck&lbrack;j&rbrack;&rbrack; = &lbrack;deckfj&rbrack;, deck&lbrack;i&rbrack;&rbrack;; // Swap elements to shuffle
 }
 }
@@ -1295,7 +1295,7 @@ function factorial(n) {
 if (n === 0 || n === 1) {
 return 1;
 } else {
-return n * factorial(n -1);
+return n &ast; factorial(n -1);
 }
 }
 // Prompt user for a non-negative integer
@@ -1585,7 +1585,7 @@ function generateRandomString(length) {
 const characters = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789l;
 let randomstring =
 for (let i = 0; i < length; i++) {
-const randomindex = Math.floor(Math.random() * characters.length);
+const randomindex = Math.floor(Math.random() &ast; characters.length);
 randomstring += characters.charAt(randomlndex);
 }
 return randomstring;
@@ -1799,10 +1799,10 @@ const currentDate = new Date().getTime();
 // Calculate the remaining time
 const timeDifference = targetDate - currentDate;
 // Calculate days, hours, minutes, and seconds
-const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) I (1000 * 60));
-const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+const days = Math.floor(timeDifference / (1000 &ast; 60 &ast; 60 &ast; 24));
+const hours = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60 &ast; 24)) / (1000 &ast; 60 &ast; 60));
+const minutes = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60)) || (1000 &ast; 60));
+const seconds = Math.floor((timeDifference % (1000 &ast; 60)) / 1000);
 // Display the countdown
 document.getElementById('countdown').innerHTML = ' ${days}d ${hours}h ${minutes}m ${seconds}s';
 // Check if the countdown has reached zero
@@ -1871,7 +1871,7 @@ the array length.</p>
 // Example array
 letmyArray = &lbrack;1, 2, 3,4, 5, 6, 7, 8, 9,10&rbrack;;
 // Get a random index
-let randomindex = Math.floor(Math.random() * myArray.length);
+let randomindex = Math.floor(Math.random() &ast; myArray.length);
 // Get the random item from the array
 let randomitem = myArray&lbrack;randomIndex&rbrack;;
 // Display the result
@@ -2245,7 +2245,7 @@ function add(x, y) {
   return x + y;
 }
 function multiply(x, y) {
-  return x * y;
+  return x &ast; y;
 }
 // Example usage
 let resultl = operateOnNumbers(3, 5, add);
@@ -2359,7 +2359,7 @@ if (isNaN(radius) 11 radius <= 0) {
 return "Invalid radius. Please provide a positive number.";
 }
 // Calculate the area
-const area = Math.PI * Math.pow(radius, 2);
+const area = Math.PI &ast; Math.pow(radius, 2);
 return area;
 }
 // Example usage:
@@ -2375,9 +2375,9 @@ green, and blue components of the color.
 <pre>
 function generateRandomColor() {
 // Generate random values for red, green, and blue components
-const red = Math.floor(Math.random() * 256);
-const green = Math.floor(Math.random() * 256);
-const blue = Math.floor(Math.random() * 256);
+const red = Math.floor(Math.random() &ast; 256);
+const green = Math.floor(Math.random() &ast; 256);
+const blue = Math.floor(Math.random() &ast; 256);
 // Create the RGB color string
 const color = ' rgb(${red}, $ {green}, ${blue})';
 return color;
@@ -2469,9 +2469,9 @@ operator (<span class="consolas">&ast;&ast;</span>).</p>
 // Using Math.pow()
 function calculatePowerWithMathPow(base, exponent) {
 return Math.pow(base, exponent);
-// Using the exponentiation operator (**)
+// Using the exponentiation operator (&ast;&ast;)
 function calculatePowerWithExponentiationOperator(base, exponent) {
-return base ** exponent;
+return base &ast;&ast; exponent;
 }
 // Example usage:
 const baseNumber = 2;
@@ -2480,7 +2480,7 @@ const resultWithMathPow = calculatePowerWithMathPow(baseNumber, exponentNumber);
 const resultWithExponentiationOperator = calculatePowerWithExponentiationOperator(baseNumber,
 exponentNumber);
 console.log(' $ {baseNumber} to the power of $ {exponentNumber} using Math.pow(): $ {resultWithMathPow}');
-console.log('${baseNumber} to the power of $ {exponentNumber} using the exponentiation operator (**): $
+console.log('${baseNumber} to the power of $ {exponentNumber} using the exponentiation operator (&ast;&ast;): $
 {resultWithExponentiationOperator}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2580,7 +2580,7 @@ function generateRandomPassword(length) {
 const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
 const numericChars = '0123456789';
-const specialchars = '!©#$%A&*()-_+=';
+const specialchars = '!©#$%A&&ast;()-_+=';
 // Combine character sets
 const allChars = uppercaseChars + lowercaseChars + numericChars + specialchars;
 // Check if the input length is a valid positive number
@@ -2590,7 +2590,7 @@ return "Invalid input. Please provide a positive integer for the password length
 // Generate the random password
 let password =";
 for (let i = 0; i < length; i++) {
-const randomindex = Math.floor(Math.random() * allChars.length);
+const randomindex = Math.floor(Math.random() &ast; allChars.length);
 password += allChars.charAt(randomlndex);
 }
 return password;
@@ -2611,7 +2611,7 @@ if (isNaN(principal) 11 isNaN(rate) 11 isNaN(time) 11 principal <= 0 11 rate < =
 return "Invalid inputs. Please provide valid positive numbers.";
 }
 // Calculate simple interest
-const simplelnterest = (principal * rate * time) / 100;
+const simplelnterest = (principal &ast; rate &ast; time) / 100;
 return simplelnterest;
 }
 // Example usage:
@@ -2692,7 +2692,7 @@ return "Invalid inputs. Please provide valid positive numbers.";
 }
 
 // Calculate the volume of the cylinder
-const volume = Math.PI * Math.pow(radius, 2) * height;
+const volume = Math.PI &ast; Math.pow(radius, 2) &ast; height;
 return volume;
 }
 
@@ -2721,7 +2721,7 @@ const quotes = &lbrack;
 &rbrack;;
 
 // Generate a random index to pick a quote from the array
-const randomindex = Math.floor(Math.random() * quotes.length);
+const randomindex = Math.floor(Math.random() &ast; quotes.length);
 
 // Return the randomly selected quote
 return quotes&lbrack;randomlndex&rbrack;;
@@ -2771,7 +2771,7 @@ if (isNaN(feet)) {
 return "Invalid input. Please provide a valid number of feet.";
 }
 // Perform the conversion
-const meters = feet * 0.3048;
+const meters = feet &ast; 0.3048;
 return meters;
 }
 
@@ -2902,7 +2902,7 @@ function calculateRectangleArea(length, width) {
 if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
 return "Invalid inputs. Please provide valid positive numbers for length and width.";
 // Calculate the area of the rectangle
-const area = length * width;
+const area = length &ast; width;
 return area;
 // Example usage:
 const rectangleLength = 5;
@@ -2984,7 +2984,7 @@ return "Invalid input. Please provide a non-negative integer.";
 // Use Biglnt to handle large factorials
 let result = Biglnt(l);
 for (let i = 2;i<=n;i++){
-result *= Biglnt(i);
+result &ast;= Biglnt(i);
 }
 return result.toStringO;
 }
@@ -3004,7 +3004,7 @@ number.
 function calculateFactorial(number) {
 let result = 1;
 for (let i = 2; i < = number; i+ +) {
-result *= i;
+result &ast;= i;
 }
 return result;
 }
@@ -3114,7 +3114,7 @@ function trapezoidArea(basel, base2, height) {
 if (isNaN(basel) 11 isNaN(base2) || isNaN(height) 11 basel <= 0 11 base2 <= 0 11 height <= 0) {
 return "Invalid input. Please provide valid numbers.";
 // Calculate the area of the trapezoid
-const area = 0.5 * height * (basel + base2);
+const area = 0.5 &ast; height &ast; (basel + base2);
 return area;
 // Example usage:
 const basel Length = 5;
@@ -3163,8 +3163,8 @@ const isPerfectSquare = (n) = > {
 const sqrt = Math.sqrt(n);
 return sqrt = = = Math.floor(sqrt);
 };
-// A number is a Fibonacci number if and only if one of (5 * numA2 + 4) or (5 * numA2 - 4) is a perfect square
-return isPerfectSquare(5 * num * num + 4) || isPerfectSquare(5 * num * num - 4);
+// A number is a Fibonacci number if and only if one of (5 &ast; numA2 + 4) or (5 &ast; numA2 - 4) is a perfect square
+return isPerfectSquare(5 &ast; num &ast; num + 4) || isPerfectSquare(5 &ast; num &ast; num - 4);
 // Example usage:
 const testNumber = 8;
 const result = isFibonacciNumber(testNumber);
@@ -3183,7 +3183,7 @@ function rectanglePerimeter(length, width) {
 if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
 return "Invalid input. Please provide valid positive numbers.";
 // Calculate the perimeter of the rectangle
-const perimeter = 2 * length + 2 * width;
+const perimeter = 2 &ast; length + 2 &ast; width;
 return perimeter;
 // Example usage:
 const rectangleLength = 5;
@@ -3287,7 +3287,7 @@ function generatePascalsTriangle(numRows) {
     const row = &lbrack;&rbrack;;
     for (let j = 0; j <= i; j++) {
       // Calculate the binomial coefficient using nCr formula
-      const coefficient = factorial(i) / (factorial(j) * factorial^ - j));
+      const coefficient = factorial(i) / (factorial(j) &ast; factorial^ - j));
       row.push(coefficient);
     }
     pascalsTriangle.push(row);
@@ -3299,7 +3299,7 @@ function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
   }
-  return n * factorial(n -1);
+  return n &ast; factorial(n -1);
 }
 // Example usage:
 const numberOfRows = 5;
@@ -3364,7 +3364,7 @@ if (isNaN(base) 11 isNaN(height) 11 base <= 0 11 height <= 0) {
 return "Invalid input. Please provide valid positive numbers.";
 }
 // Calculate the area of the parallelogram
-const area = base * height;
+const area = base &ast; height;
 return area;
 }
 // Example usage:
@@ -3381,7 +3381,7 @@ console.log(' The area of the parallelogram is: $ {areaResult}');
 <pre>
 function computerPlayO {
 const options = &lbrack;'rock', ‘paper1, 'scissors'&rbrack;;
-const randomindex = Math.floor(Math.random() * options.length);
+const randomindex = Math.floor(Math.random() &ast; options.length);
 return options&lbrack;randomlndex&rbrack;;
 }
 function playRound(playerSelection, computerselection) {
@@ -3441,7 +3441,7 @@ const symbols = &lbrack;'
 '&rbrack;;
 // Function to get a random symbol from the array
 function getRandomSymbol() {
-const randomindex = Math.floor(Math.random() * symbols.length);
+const randomindex = Math.floor(Math.random() &ast; symbols.length);
 return symbols&lbrack;randomlndex&rbrack;;
 }
 // Function to simulate a spin of the slot machine
@@ -3532,7 +3532,7 @@ includeSpecialChars) {
 const uppercaseChars = ABCDEFGHIJKLMNOPQRSTUV WXYZ';
 const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
 const numberChars = '0123456789';
-const specialchars = ,!@#$%A&*()-=_+&lbrack;&rbrack;{}l;:,.<>?';
+const specialchars = ,!@#$%A&&ast;()-=_+&lbrack;&rbrack;{}l;:,.<>?';
 let validChars =
 let password =
 if (includeUppercase) validChars + = uppercaseChars;
@@ -3544,7 +3544,7 @@ console.error('Error: At least one character type must be selected.');
 return null;
 }
 for (let i = 0; i < length; i++) {
-const randomindex = Math.floor(Math.random() * validChars.length);
+const randomindex = Math.floor(Math.random() &ast; validChars.length);
 password + = validChars.charAt(randomlndex);
 return password;
 }
@@ -3652,8 +3652,8 @@ function isSafe(board, row, col, num) {
       return false;
     }
     // Check if'num' is not present in the 3x3 subgrid
-    const startRow = Math.floor(row / 3) * 3;
-    const startCol = Math.floor(col / 3) * 3;
+    const startRow = Math.floor(row / 3) &ast; 3;
+    const startCol = Math.floor(col / 3) &ast; 3;
     for (leti = 0;i < 3;i++){
       for (let j = 0; j < 3;j++){
         if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; = = = num) {
@@ -3790,7 +3790,7 @@ for the area of a rhombus is <span class="consolas">Area = (dl &ast; d2) / 2</sp
 <pre>
 // Function to calculate the area of a rhombus
 function calculateRhombusArea(diagonall, diagonal) {
-const area = (diagonal 1 * diagonal) / 2;
+const area = (diagonal 1 &ast; diagonal) / 2;
 return area;
 }
 // Example usage
@@ -3814,14 +3814,14 @@ k = n - k;
 }
 let result = 1;
 for (let i = 0; i < k; i++) {
-result *= (n - i);
+result &ast;= (n - i);
 result /= (i + 1);
 }
 return result;
 // Function to check if a number is a Catalan number
 function isCatalanNumber(num) {
 for (let i = 0; i < = num; i++) {
-if (binomialCoefficient(2 * i, i) = = = num / (i + 1)) {
+if (binomialCoefficient(2 &ast; i, i) = = = num / (i + 1)) {
 return true;
 return false;
 // Example usage
@@ -3845,7 +3845,7 @@ function calculateLuhnCheckDigit(input) {
 const digits = input.toString().split(").map(Number);
 // Double every second digit from the right
 for (let i = digits.length - 2; i > = 0; i -= 2) {
-let doubledDigit = digits&lbrack;i&rbrack; * 2;
+let doubledDigit = digits&lbrack;i&rbrack; &ast; 2;
 // If doubling results in a number greater than 9, subtract 9
 if (doubledDigit > 9) {
 doubledDigit-= 9;
@@ -3923,7 +3923,7 @@ function isMagicYear(year) {
 const yearStr = year.toStringO;
 const month = parse!nt(yearStr.substring(O, 2), 10);
 const day = parse!nt(yearStr.substring(2,4), 10);
-return month * day = = = parse!nt(yearStr.substring(4), 10);
+return month &ast; day = = = parse!nt(yearStr.substring(4), 10);
 // Example usage
 const yearToCheck = 1978; // Replace with the year you want to check
 if (isMagicYear(yearToCheck)) {
@@ -3982,7 +3982,7 @@ sides, <span class="consolas">s</span> is the side length, and
 <span class="consolas">tan</span> is the tangent function.</p>
 <pre>
 function calculateRegularPolygonArea(n, s) {
-const numerator = 1 / 4 * n * Math.pow(s, 2);
+const numerator = 1 / 4 &ast; n &ast; Math.pow(s, 2);
 const denominator = Math.tan(Math.PI I n);
 const area = numerator / denominator;
 return area;
@@ -4031,7 +4031,7 @@ this.guesses = &lbrack;&rbrack;;
 this.maxAttempts = 6;
 }
 getRandomWord() {
-const randomindex = Math.floor(Math.random() * this.wordList.length);
+const randomindex = Math.floor(Math.random() &ast; this.wordList.length);
 return this.wordList&lbrack;randomIndex&rbrack;.toUpperCase();
 }
 displayWordO {
@@ -4086,7 +4086,7 @@ return "Input must be a positive integer.";
 }
 let result = n; // Initialize result as n
 // Iterate through all prime factors of n
-for (letp = 2;p *p < = n;p++) {
+for (letp = 2;p &ast;p < = n;p++) {
 if (n % p = = = 0) {
 while (n % p = = = 0) {
 n/=p;
@@ -4117,7 +4117,7 @@ this.attempts = 0;
 this.matches = 0;
 shuffleCardsO {
 for (let i = this.cards.length -1; i > 0; i—) {
-constj = Math.floor(Math.random() * (i + 1));
+constj = Math.floor(Math.random() &ast; (i + 1));
 &lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; = 
 &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
 }
@@ -4126,7 +4126,7 @@ const board = &lbrack;&rbrack;;
 for (let i = 0; i < 4; i++) {
 const row = &lbrack;&rbrack;;
 for (let j = 0; j <4;j++){
-row.push(this.cards&lbrack;i * 4 + j&rbrack;);
+row.push(this.cards&lbrack;i &ast; 4 + j&rbrack;);
 board.push(row);
 return board;
 displayBoard() {
@@ -4196,7 +4196,7 @@ for (const &lbrack;pairl, pair2&rbrack; of pairs) {
 if (pairl = = = 0 || pair2 = = = 0) {
 // Exclude cases where one of the pairs has a leading zero
 continue;
-if (number = = = pairl * pair2) {
+if (number = = = pairl &ast; pair2) {
 return true;
 }
 return false;
@@ -4237,7 +4237,7 @@ this.round = 1;
 this.generateSequenceQ;
 generateSequenceO {
 for (let i = 0; i < this.round; i++) {
-const randomindex = Math.floor(Math.random() *this.colors.length);
+const randomindex = Math.floor(Math.random() &ast;this.colors.length);
 this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
 }
 displaySequenceO {
@@ -4285,10 +4285,10 @@ simonSaysGame.playO;
 <h2 id="js147">147. Calculate the Area of a Hexagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular hexagon given the side length ( s ). The formula for the area of
-a regular hexagon is Area = (3 * V3 * s*2) / 2 , where s is the side length.
+a regular hexagon is Area = (3 &ast; V3 &ast; s&ast;2) / 2 , where s is the side length.
 <pre>
 function calculateHexagonArea(sideLength) {
-const area = (3 * Math.sqrt(3) / 2) * Math.pow(sideLength, 2);
+const area = (3 &ast; Math.sqrt(3) / 2) &ast; Math.pow(sideLength, 2);
 return area;
 // Example usage
 const sideLength = 5; // Replace with the length of a side of your hexagon
@@ -4300,11 +4300,11 @@ console.log(' The area of the hexagon is: ${hexagonArea.toFixed(2)}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a pronic number, also known as a 
 rectangular number or oblong number. A pronic number is a product of two consecutive 
-integers. The nth pronic number is given by the formula: n * (n + 1).</p>
+integers. The nth pronic number is given by the formula: n &ast; (n + 1).</p>
 <pre>
 function isPronicNumber(number) {
-  for (let i = O;i*(i + 1) <= number; i++) {
-    if (i* (i + 1)=== number) {
+  for (let i = O;i&ast;(i + 1) <= number; i++) {
+    if (i&ast; (i + 1)=== number) {
       return true;
     }
 return false;
@@ -4335,8 +4335,8 @@ const board = Array.from({ length: this.rows },()=> Array(this.cols).fill(0));
 for (let i = 0; i < this.numMines; i++) {
 let row, col;
 do {
-row = Math.floor(Math.random() * this.rows);
-col = Math.floor(Math.random() * this.cols);
+row = Math.floor(Math.random() &ast; this.rows);
+col = Math.floor(Math.random() &ast; this.cols);
 } while (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X');
 board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
 // Calculate numbers around mines
@@ -4386,7 +4386,7 @@ checkWinO {
 let uncoveredCount = 0;
 for (const row of this.board) {
 uncoveredCount += row.filter(cell => cell !== 'X').length;
-if (uncoveredCount = = = this.rows * this.cols - this.numMines) {
+if (uncoveredCount = = = this.rows &ast; this.cols - this.numMines) {
 console.log('Congratulations! You win!');
 this.gameOver = true;
 }
@@ -4406,10 +4406,10 @@ minesweeperGame.uncoverCell(4,4);
 <h2 id="js150">150. Find the Area of a Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the area of a regular pentagon given the side length ( s ). The formula for the area of
-a regular pentagon is Area = (1/4) * V(5 * (5 + 2 * V5)) * s* 2 , where s is the side length.
+a regular pentagon is Area = (1/4) &ast; V(5 &ast; (5 + 2 &ast; V5)) &ast; s&ast; 2 , where s is the side length.
 <pre>
 function calculatePentagonArea(sideLength) {
-const area = (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * Math.pow(sideLength, 2);
+const area = (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2 &ast; Math.sqrt(5))) &ast; Math.pow(sideLength, 2);
 return area;
 // Example usage
 const sideLength = 4; // Replace with the length of a side of your pentagon
@@ -4450,7 +4450,7 @@ this.endTime = 0;
 this.userlnput =
 }
 generateRandomText() {
-const randomindex = Math.floor(Math.random() * this.words.length);
+const randomindex = Math.floor(Math.random() &ast; this.words.length);
 return this.words&lbrack;randomlndex&rbrack;;
 }
 startTest() {
@@ -4460,7 +4460,7 @@ console.log(' Type the following text:\n"${this.text}"');
 endTest() {
 this.endTime = Date.now();
 const elapsedTime = (this.endTime - this.startTime) / 1000; // Convert to seconds
-const wordsPerMinute = (this.text.splitf ').length / elapsedTime) * 60;
+const wordsPerMinute = (this.text.splitf ').length / elapsedTime) &ast; 60;
 console.log(' You typed at a speed of ${wordsPerMinute.toFixed(2)} words per minute.');
 }
 getUserlnput(input) {
@@ -4484,10 +4484,10 @@ typingTest.getUserlnput(userlnput);
 <h2 id="js153">153. Find the Area of a Cube</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a cube given the length of its side ( s ). The formula for the
-surface area of a cube is Surface Area = 6 * s* 2 , where s is the length of a side.
+surface area of a cube is Surface Area = 6 &ast; s&ast; 2 , where s is the length of a side.
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
-const surface Area = 6 * Math.pow(sideLength, 2);
+const surface Area = 6 &ast; Math.pow(sideLength, 2);
 return surfaceArea;
 // Example usage
 const sideLength = 4; // Replace with the length of a side of your cube
@@ -4498,11 +4498,11 @@ console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
 <h2 id="js154">154. Find the Area of a Cone</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a cone given the radius of its base ( r ) and the slant height (1).
-The formula for the surface area of a cone is Surface Area = 7t * r * (r +1), where n is the mathematical constant
+The formula for the surface area of a cone is Surface Area = 7t &ast; r &ast; (r +1), where n is the mathematical constant
 Pi.
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
-const surface Area = 6 * Math.pow(sideLength, 2);
+const surface Area = 6 &ast; Math.pow(sideLength, 2);
 return surfaceArea;
 // Example usage
 const sideLength = 4; // Replace with the length of a side of your cube
@@ -4540,13 +4540,13 @@ if (isHappyNumber(happyNumber)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This program calculates the surface area of a triangular prism given the lengths of its base sides ( a , b , and
 c ) and the height of the prism ( h ). The formula for the surface area of a triangular prism is Surface Area =
-(Perimeter of the base * Height) + (2 * Area of the base), where the perimeter of the base is Perimeter = a + b + c
+(Perimeter of the base &ast; Height) + (2 &ast; Area of the base), where the perimeter of the base is Perimeter = a + b + c
 and the area of the base is calculated using Heron's formula.
 <pre>
 function calculateTriangularPrismSurfaceArea(a, b, c, height) {
-const baseArea = 0.25 * Math.sqrt((-a + b + c)*(a-b + c)*(a + b-c)*(a + b + c));
+const baseArea = 0.25 &ast; Math.sqrt((-a + b + c)&ast;(a-b + c)&ast;(a + b-c)&ast;(a + b + c));
 const perimeter = a + b + c;
-const surfaceArea = baseArea + perimeter * height;
+const surfaceArea = baseArea + perimeter &ast; height;
 return surfaceArea;
 // Example usage
 const side A = 3; // Replace with the length of side A of the triangular base
@@ -4575,7 +4575,7 @@ function isPerfectSquare(number) {
 const sqrt = Math.sqrt(number);
 return sqrt = = = Math.floor(sqrt);
 function isFibonacciPrime(number) {
-return isPrime(number) && isPerfectSquare(5 * Math.pow(number, 2) + 4) || isPerfectSquare(5 * Math.pow(number, 2)
+return isPrime(number) && isPerfectSquare(5 &ast; Math.pow(number, 2) + 4) || isPerfectSquare(5 &ast; Math.pow(number, 2)
 -4);
 }
 // Example usage
@@ -4625,7 +4625,7 @@ tetrahedron is <span class="consolas">Surface Area = &radic;3 &ast; a^2</span>, 
 <span class="consolas">a</span> is the length of an edge.</p>
 <pre>
 function calculateTetrahedronSurfaceArea(edgeLength) {
-const surfaceArea = Math.sqrt(3) * Math.pow(edgeLength, 2);
+const surfaceArea = Math.sqrt(3) &ast; Math.pow(edgeLength, 2);
 return surfaceArea;
 }
 // Example usage
@@ -4641,7 +4641,7 @@ number whose square ends with the number itself. For example, 5 is an automorphi
 25, and 25 ends with 5.
 <pre>
 function isAutomorphicNumber(number) {
-const square = number * number;
+const square = number &ast; number;
 const numberDigits = String(number);
 const squareDigits = String(square);
 return squareDigits.endsWith(numberDigits);
@@ -4664,7 +4664,7 @@ base side ( <span class="consolas">s</span> ) and the slant height (
 <pre>
 function calculatePyramidSurfaceArea(sideLength, slantHeight) {
 const baseArea = Math.pow(sideLength, 2);
-const lateralArea = 2 &ast; sideLength * slantHeight;
+const lateralArea = 2 &ast; sideLength &ast; slantHeight;
 const surfaceArea = baseArea + lateralArea;
 return surfaceArea;
 // Example usage
@@ -4769,7 +4769,7 @@ is <span class="consolas">Surface Area = &pi; &ast; (rl + r2) &ast; l + &pi; &as
 constant Pi.</p>
 <pre>
 function surfaceAreaOfFrustum(rl, r2,1) {
-  const surfaceArea = Math.PI * (rl + r2) * 1 + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
+  const surfaceArea = Math.PI &ast; (rl + r2) &ast; 1 + Math.PI &ast; rl &ast;&ast; 2 + Math.PI &ast; r2 &ast;&ast; 2;
   console.log(' Surface Area of the frustum is: $ {surfaceArea}');
 // Example: Calculate the surface area of a frustum with top radius 4, bottom radius 8, and slant height 6
 surfaceAreaOfFrustum(4, 8, 6);
@@ -4788,8 +4788,8 @@ function isMotzkinNumber(number) {
   // Use dynamic programming to calculate Motzkin numbers
   const motzkinNumbers = &lbrack;1,1&rbrack;;
   for (let n = 2; n < = number; n+ +) {
-    const nextMotzkin = ((2 *n + 1)<i>motzkinNumbers&lbrack;n-l&rbrack; 
-      + (3*n-3)</i>motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
+    const nextMotzkin = ((2 &ast;n + 1)<i>motzkinNumbers&lbrack;n-l&rbrack; 
+      + (3&ast;n-3)</i>motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
     motzkinNumbers.push(nextMotzkin);
   }
 }
@@ -4840,7 +4840,7 @@ triangles to each side of the existing triangles.
 <pre>
 function calculateKochSnowflakeArea(sideLength, iterations) {
 const sqrt3 = Math.sqrt(3);
-const area = (4 &ast; sqrt3 / 5) * Math.pow((sideLength / 3), 2) &ast; Math.pow(3 / 2, iterations);
+const area = (4 &ast; sqrt3 / 5) &ast; Math.pow((sideLength / 3), 2) &ast; Math.pow(3 / 2, iterations);
 return area;
 }
 // Example usage
@@ -5217,7 +5217,7 @@ suggesting letters, and the program displays the progress and remaining attempts
 <pre>
 function hangmanGame() {
   const words = &lbrack;"javascript", "hangman", "programming", "developer", "challenge"&rbrack;;
-  const selectedWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
+  const selectedWord = words&lbrack;Math.floor(Math.random() &ast; words.length)&rbrack;;
   let guessedWord = "_".repeat(selectedWord.length);
   let remainingAttempts = 6;
   const guessedLetters = &lbrack;&rbrack;;
@@ -5325,7 +5325,7 @@ high, too low, or correct.</p>
 function guessTheNumberGame() {
   const maxNumber = 100;
   const maxAttempts =10;
-  const secretNumber = Math.floor(Math.random() * maxNumber) + 1;
+  const secretNumber = Math.floor(Math.random() &ast; maxNumber) + 1;
   console.log("Welcome to the Guess the Number Game!");
   console.log(`I've picked a number between 1 and ${maxNumber}. Try to guess it!`);
   for (let attempts = 1; attempts &lt;= maxAttempts; attempts++) {
@@ -5356,42 +5356,42 @@ guessTheNumberGame();
 mole as it randomly appears in different holes.</p>
 <pre>
 function whackAMoleGame() {
-const totalHoles = 5;
-const molesToWhack = 3;
-const moleSymbol = "M";
-const emptyHoleSymbol =
-let score = 0;
-let remainingAttempts =10;
-console.log("Welcome to the Whack-a-Mole Game!");
-console.log(' Try to whack $ {molesToWhack} moles within $ {remainingAttempts} attempts.');
-while (remainingAttempts > 0 && molesToWhack > 0) {
-const holes = Array.from({ length: totalHoles },()=> emptyHoleSymbol);
-const randomMolelndex = Math.floor(Math.random() * totalHoles);
-holes&lbrack;randomMoleIndex&rbrack; = moleSymbol;
-console.log('\nHoles: ${holes.join("")}');
-const userWhacklndex = parse!nt(prompt("Enter the index to whack the mole:"), 10);
-if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
-console.log(' Invalid input. Please enter a number between 0 and ${totalHoles -1}.');
-continue;
-}
-if (holes&lbrack;userWhack!ndex&rbrack; = = = moleSymbol) {
-console.log("Whack! You got the mole!");
-score++;
-molesToWhack—;
-} else {
-console.log("Missed! No mole at that hole.");
-}
-remainingAttempts—;
-console.log(' Score: $ {score} I Attempts remaining: $ {remainingAttempts}');
-}
-if (molesToWhack = = = 0) {
-console.log("Congratulations! You whacked all the moles!");
-} else {
-console.log("Game over. You ran out of attempts.");
-}
+  const totalHoles = 5;
+  const molesToWhack = 3;
+  const moleSymbol = "M";
+  const emptyHoleSymbol =
+  let score = 0;
+  let remainingAttempts = 10;
+  console.log("Welcome to the Whack-a-Mole Game!");
+  console.log(`Try to whack ${molesToWhack} moles within ${remainingAttempts} attempts.`);
+  while (remainingAttempts > 0 && molesToWhack &gt; 0) {
+    const holes = Array.from({ length: totalHoles },()=&gt; emptyHoleSymbol);
+    const randomMolelndex = Math.floor(Math.random() &ast; totalHoles);
+    holes&lbrack;randomMoleIndex&rbrack; = moleSymbol;
+    console.log(`\nHoles: ${holes.join("")}`);
+    const userWhacklndex = parseInt(prompt("Enter the index to whack the mole:"), 10);
+    if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
+      console.log(`Invalid input. Please enter a number between 0 and ${totalHoles -1}.`);
+      continue;
+    }
+    if (holes&lbrack;userWhack!ndex&rbrack; === moleSymbol) {
+      console.log("Whack! You got the mole!");
+      score++;
+      molesToWhack--;
+    } else {
+      console.log("Missed! No mole at that hole.");
+    }
+    remainingAttempts--;
+    console.log(`Score: ${score} | Attempts remaining: ${remainingAttempts}`);
+  }
+  if (molesToWhack === 0) {
+    console.log("Congratulations! You whacked all the moles!");
+  } else {
+    console.log("Game over. You ran out of attempts.");
+  }
 }
 // Start the Whack-a-Mole Game
-whackAMoleGameQ;
+whackAMoleGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js190">190. Coin Tossing Game</h2>
@@ -5400,31 +5400,31 @@ whackAMoleGameQ;
 toss will result in heads or tails.</p>
 <pre>
 function coinTossingGame() {
-const coinSides = &lbrack;"Heads", "Tails"&rbrack;;
-let correctGuesses = 0;
-lettotalGuesses = 0;
-console.log("Welcome to the Coin Tossing Game!");
-while (true) {
-const playerGuess = prompt("Heads or Tails?").toLowerCase();
-if (’&lbrack;"heads", "tails"&rbrack;.includes(playerGuess)) {
-console.log("Invalid input. Please enter 'Heads' or 'Tails'.");
-continue;
-}
-const coinResult = coinSides&lbrack;Math.floor(Math.random() * 2)&rbrack;;
-console.log(' Coin toss result: $ {coinResult}');
-if (playerGuess = = = coinResult.toLowerCaseO) {
-console.log("Correct guess’ Well done’");
-correctGuesses++;
-} else {
-console.log("Wrong guess. Better luck next time!");
-}
-totalGuesses++;
-const play Again = confirmf'Do you want to toss the coin again?");
-if (!playAgain) {
-console.log(' Game over. You made ${correctGuesses} correct guesses out of ${totalGuesses} total guesses.');
-break;
-}
-}
+  const coinSides = &lbrack;"Heads", "Tails"&rbrack;;
+  let correctGuesses = 0;
+  lettotalGuesses = 0;
+  console.log("Welcome to the Coin Tossing Game!");
+  while (true) {
+    const playerGuess = prompt("Heads or Tails?").toLowerCase();
+    if (’&lbrack;"heads", "tails"&rbrack;.includes(playerGuess)) {
+      console.log("Invalid input. Please enter 'Heads' or 'Tails'.");
+      continue;
+    }
+    const coinResult = coinSides&lbrack;Math.floor(Math.random() &ast; 2)&rbrack;;
+    console.log(`Coin toss result: ${coinResult}`);
+    if (playerGuess = = = coinResult.toLowerCaseO) {
+      console.log("Correct guess! Well done!");
+      correctGuesses++;
+    } else {
+      console.log("Wrong guess. Better luck next time!");
+    }
+    totalGuesses++;
+    const play Again = confirm("Do you want to toss the coin again?");
+    if (!playAgain) {
+      console.log(`Game over. You made ${correctGuesses} correct guesses out of ${totalGuesses} total guesses.`);
+      break;
+    }
+  }
 }
 // Start the Coin Tossing Game
 coinTossingGame();
@@ -5437,18 +5437,19 @@ coinTossingGame();
 function fibonacciNumberGenerator() {
 const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
 if (isNaN(limit) 11 limit < 1) {
-console.log("Invalid input. Please enter a positive number.");
-return;
+  console.log("Invalid input. Please enter a positive number.");
+  return;
 }
 let fibonacciNumbers = &lbrack;0, 1&rbrack;;
 for (let i = 2; i < = limit; i+ +) {
 fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibonacciNumbers&lbrack;i - 2&rbrack;;
 }
-console.log(' Fibonacci numbers up to $ {limit}:' );
+
+console.log(`Fibonacci numbers up to $ {limit}:`);
 console.log(fibonacciNumbers.slice(0, limit + 1));
 }
 // Start the Fibonacci Number Generator
-fibonacciNumberGeneratorO;
+fibonacciNumberGenerator();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js192">192. Math Quiz Game</h2>
@@ -5457,26 +5458,26 @@ fibonacciNumberGeneratorO;
 addition questions and scores points for correct answers.</p>
 <pre>
 function mathQuizGame() {
-const maxQuestions = 5;
-let score = 0;
-console.log("Welcome to the Math Quiz Game!");
-console.log("Answer the following addition questions:");
-for (let i = 0; i < maxQuestions; i++) {
-const numl = Math.floor(Math.random() * 10) + 1;
-const num2 = Math.floor(Math.random() * 10) + 1;
-const correctAnswer = numl + num2;
-const userAnswer = parselnt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
-if (’isNaN(userAnswer) && userAnswer = = = correctAnswer) {
-console.log("Correct! Well done!");
-score++;
-} else {
-console.log(' Wrong! The correct answer is: ${correctAnswer}');
-}
-}
-console.log(' Quiz complete! Your final score is: $ {score} out of ${maxQuestions}');
+  const maxQuestions = 5;
+  let score = 0;
+  console.log("Welcome to the Math Quiz Game!");
+  console.log("Answer the following addition questions:");
+  for (let i = 0; i &lt; maxQuestions; i++) {
+    const numl = Math.floor(Math.random() &ast; 10) + 1;
+    const num2 = Math.floor(Math.random() &ast; 10) + 1;
+    const correctAnswer = numl + num2;
+    const userAnswer = parselnt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
+    if (’isNaN(userAnswer) && userAnswer = = = correctAnswer) {
+      console.log("Correct! Well done!");
+      score++;
+    } else {
+      console.log(`Wrong! The correct answer is: ${correctAnswer}`);
+    }
+  }
+  console.log(`Quiz complete! Your final score is: ${score} out of ${maxQuestions}`);
 }
 // Start the Math Quiz Game
-mathQuizGameO;
+mathQuizGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js193">193. Color Guessing Game</h2>
@@ -5485,34 +5486,34 @@ mathQuizGameO;
 values, and they need to guess the correct color.</p>
 <pre>
 function colorGuessingGame() {
-const colors = &lbrack;"red", "green", "blue", "yellow", "orange", "purple"&rbrack;;
-const maxAttempts = 3;
-console.log("Welcome to the Color Guessing Game!");
-console.log("Guess the color based on the RGB values.");
-for (let attempts = 1; attempts <= maxAttempts; attempts++) {
-const randomColor = colors&lbrack;Math.floor(Math.random() * colors.length)&rbrack;;
-const rgb Values = generateRandomRGBValues();
-console.log('RGB:${rgbValues.join(",")}');
-const userGuess = promptf'Enter your color guess:").toLowerCase();
-if (!colors.includes(userGuess)) {
-console.log("Invalid guess. Please enter a valid color.");
-attempts—;
-continue;
-}
-if (userGuess = = = randomColor) {
-console JogC'Congratulations! You guessed the correct color!");
-return;
-} else {
-console.log(' Wrong guess. Remaining attempts: ${maxAttempts - attempts}');
-}
-}
-console.log("Sorry, you've run out of attempts. The correct color was revealed above.");
+  const colors = &lbrack;"red", "green", "blue", "yellow", "orange", "purple"&rbrack;;
+  const maxAttempts = 3;
+  console.log("Welcome to the Color Guessing Game!");
+  console.log("Guess the color based on the RGB values.");
+  for (let attempts = 1; attempts <= maxAttempts; attempts++) {
+    const randomColor = colors&lbrack;Math.floor(Math.random() &ast; colors.length)&rbrack;;
+    const rgb Values = generateRandomRGBValues();
+    console.log(`RGB:${rgbValues.join(",")}`);
+    const userGuess = prompt("Enter your color guess:").toLowerCase();
+    if (!colors.includes(userGuess)) {
+      console.log("Invalid guess. Please enter a valid color.");
+      attempts--;
+      continue;
+    }
+    if (userGuess === randomColor) {
+      console log("Congratulations! You guessed the correct color!");
+      return;
+    } else {
+      console.log(`Wrong guess. Remaining attempts: ${maxAttempts - attempts}`);
+    }
+  }
+  console.log("Sorry, you've run out of attempts. The correct color was revealed above.");
 }
 function generateRandomRGBValues() {
-return Array.from({ length: 3 }, () => Math.floor(Math.random() * 256));
+  return Array.from({ length: 3 }, () => Math.floor(Math.random() &ast; 256));
 }
 // Start the Color Guessing Game
-colorGuessingGameQ;
+colorGuessingGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js194">194. Word Scramble Game</h2>
@@ -5528,24 +5529,24 @@ function wordScrambleGame() {
   for (let attempts = 1; attempts <= maxAttempts; attempts++) {
     const randomWord = words&lbrack;Math.floor(Math.random() &ast; words.length)&rbrack;;
     const scrambledWord = scrambleWord(randomWord);
-    console.log(' Scrambled word: $ {scrambledWord}');
+    console.log(`Scrambled word: ${scrambledWord}`);
     const userGuess = prompt("Enter your unscrambled word guess:").toLowerCase();
     if (!words.includes(userGuess)) {
       console.log("Invalid guess. Please enter a valid word.");
-      attempts—;
+      attempts--;
       continue;
     }
-    if (userGuess = = = randomWord) {
+    if (userGuess === randomWord) {
       console Jog("Congratulations! You unscrambled the word!");
       return;
     } else {
-      console.log(' Wrong guess. Remaining attempts: ${maxAttempts - attempts}');
+      console.log(`Wrong guess. Remaining attempts: ${maxAttempts - attempts}`);
     }
   }
   console.log("Sorry, you've run out of attempts. The correct word was revealed above.");
 }
 function scrambleWord(word) {
-  return word.split("").sort(() => Math.random() - O.5).join("");
+  return word.split("").sort(() => Math.random() - 0.5).join("");
 }
 // Start the Word Scramble Game
 wordScrambleGame();
@@ -5574,7 +5575,7 @@ function countryCapitalQuizGame() {
       console.log("Correct! Well done!");
       score++;
     } else {
-      console.log(' Wrong! The correct capital is: ${capital}');
+      console.log(`Wrong! The correct capital is: ${capital}`);
     }
   }
   console.log(' Quiz complete! Your final score is: ${score} out of ${countryCapitalPairs.length}');
@@ -5589,28 +5590,28 @@ countryCapitalQuizGame();
 with clues and needs to guess the correct animal.</p>
 <pre>
 function guessTheAnimalGame() {
-const animals = &lbrack;
-{name: "elephant", clues: &lbrack;"I have a long trunk.", "I am the largest land animal."&rbrack;},
-{name: "giraffe", clues: &lbrack;"I have a long neck.", "I am the tallest living terrestrial animal."&rbrack;},
-{name: "penguin", clues: &lbrack;"I cannot fly.", "I live in cold climates like Antarctica."&rbrack;}
-&rbrack;;
-let score = 0;
-console.logC'Welcome to the Guess the Animal Game!");
-console.log("Read the clues and guess the correct animal:");
-for (const {name, clues} of animals) {
-console.log(' \nAnimal Clues:');
-for (const clue of clues) {
-console.log(clue);
-}
-const userGuess = prompt("Enter your guess:").toLowerCase();
-if (userGuess = = = name) {
-console.log('Correct! Well done!");
-score++;
-} else {
-console.log('Wrong! The correct answer is: ${name}');
-}
-}
-console.log('Game complete! Your final score is: ${score} out of ${animals.length}');
+  const animals = &lbrack;
+    {name: "elephant", clues: &lbrack;"I have a long trunk.", "I am the largest land animal."&rbrack;},
+    {name: "giraffe", clues: &lbrack;"I have a long neck.", "I am the tallest living terrestrial animal."&rbrack;},
+    {name: "penguin", clues: &lbrack;"I cannot fly.", "I live in cold climates like Antarctica."&rbrack;}
+  &rbrack;;
+  let score = 0;
+  console.log("Welcome to the Guess the Animal Game!");
+  console.log("Read the clues and guess the correct animal:");
+  for (const {name, clues} of animals) {
+    console.log(' \nAnimal Clues:');
+    for (const clue of clues) {
+      console.log(clue);
+    }
+    const userGuess = prompt("Enter your guess:").toLowerCase();
+    if (userGuess === name) {
+      console.log('Correct! Well done!");
+      score++;
+    } else {
+      console.log(`Wrong! The correct answer is: ${name}`);
+    }
+  }
+  console.log(`Game complete! Your final score is: ${score} out of ${animals.length}`);
 }
 // Start the Guess the Animal Game
 guessTheAnimalGame();
@@ -5622,38 +5623,38 @@ guessTheAnimalGame();
 and tells a joke from that category.</p>
 <pre>
 function jokeTellerProgram() {
-const jokeCategories = &lbrack;"knock-knock", "dad", "animal", "puns"&rbrack;;
-const selectedCategory = jokeCategories&lbrack;Math.floor(Math.random() * jokeCategories.length)&rbrack;;
-console.log("Welcome to the Joke Teller Program!");
-console.log(' Category: ${selectedCategory.toUpperCase()}');
-console.log("Get ready for a good laugh!");
-switch (selectedCategory) {
-case "knock-knock":
-console.logf'Knock, knock.");
-prompt("Who's there?");
-console.log("Tank.");
-promptC'Tank who?");
-console.logC'You're welcome!");
-break;
-case "dad":
-console.log("Why did the scarecrow win an award?");
-prompt("I don't know, why?");
-console.log("Because he was outstanding in his field!");
-break;
-case "animal":
-console.log("Why don't scientists trust atoms?");
-prompt("I'm not sure. Why?");
-console.log("Because they make up everything!");
-break;
-case "puns":
-console.log("I used to be a baker because I kneaded dough.");
-break;
-default:
-console.log("Oops! Something went wrong. No joke for you!");
-}
+  const jokeCategories = &lbrack;"knock-knock", "dad", "animal", "puns"&rbrack;;
+  const selectedCategory = jokeCategories&lbrack;Math.floor(Math.random() &ast; jokeCategories.length)&rbrack;;
+  console.log("Welcome to the Joke Teller Program!");
+  console.log(`Category: ${selectedCategory.toUpperCase()}`);
+  console.log("Get ready for a good laugh!");
+  switch (selectedCategory) {
+    case "knock-knock":
+      console.log("Knock, knock.");
+      prompt("Who's there?");
+      console.log("Tank.");
+      prompt("Tank who?");
+      console.logC'You're welcome!");
+      break;
+    case "dad":
+      console.log("Why did the scarecrow win an award?");
+      prompt("I don't know, why?");
+      console.log("Because he was outstanding in his field!");
+      break;
+    case "animal":
+      console.log("Why don't scientists trust atoms?");
+      prompt("I'm not sure. Why?");
+      console.log("Because they make up everything!");
+      break;
+    case "puns":
+      console.log("I used to be a baker because I kneaded dough.");
+      break;
+      default:
+      console.log("Oops! Something went wrong. No joke for you!");
+  }
 }
 // Start the Joke Teller Program
-jokeTellerProgramQ;
+jokeTellerProgram();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js198">198. Shopping List</h2>
@@ -5662,50 +5663,50 @@ jokeTellerProgramQ;
 items, and view the current shopping list.</p>
 <pre>
 function shoppingListProgram() {
-const shoppingList = &lbrack;&rbrack;;
-console.log("Welcome to the Shopping List Program!");
-console.log("You can add items, remove items, and view your current shopping list.");
-while (true) {
-const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, or 'view' to see your shopping list. Type
-'exit' to end the program:").toLowerCase();
-if (action = = = "exit") {
-console.log("Exiting the Shopping List Program. Goodbye!");
-break;
-}
-switch (action) {
-case "add":
-const newltem = prompt("Enter the item you want to add:");
-shoppingList.push(newItem);
-console.log(' ${newltem} added to your shopping list.');
-break;
-case "remove":
-if (shoppingList.length = = = 0) {
-console.logC'Your shopping list is empty. Nothing to remove.");
-} else {
-const itemToRemove = prompt("Enter the item you want to remove:");
-const indexTo Remove = shoppingList.indexOf(itemToRemove);
-if (indexToRemove !== -1) {
-shoppingList.splice(indexTo Remove, 1);
-console.log('${itemToRemove} removed from your shopping list.');
-} else {
-console.log('${itemToRemove} not found in your shopping list.');
-}
-}
-break;
-case "view":
-if (shoppingList.length = = = 0) {
-console.logC'Your shopping list is empty.");
-} else {
-console.logC'Your Shopping List:");
-for (const item of shoppingList) {
-console.log(' - ${item}');
-}
-}
-break;
-default:
-console.log("Invalid action. Please enter 'add', 'remove', 'view', or 'exit'.");
-}
-}
+  const shoppingList = &lbrack;&rbrack;;
+  console.log("Welcome to the Shopping List Program!");
+  console.log("You can add items, remove items, and view your current shopping list.");
+  while (true) {
+    const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, or 'view' 
+	  to see your shopping list. Type 'exit' to end the program:").toLowerCase();
+    if (action = = = "exit") {
+      console.log("Exiting the Shopping List Program. Goodbye!");
+      break;
+    }
+    switch (action) {
+      case "add":
+        const newltem = prompt("Enter the item you want to add:");
+        shoppingList.push(newItem);
+        console.log(' ${newltem} added to your shopping list.');
+        break;
+      case "remove":
+        if (shoppingList.length = = = 0) {
+          console.logC'Your shopping list is empty. Nothing to remove.");
+        } else {
+          const itemToRemove = prompt("Enter the item you want to remove:");
+          const indexTo Remove = shoppingList.indexOf(itemToRemove);
+          if (indexToRemove !== -1) {
+            shoppingList.splice(indexTo Remove, 1);
+            console.log('${itemToRemove} removed from your shopping list.');
+          } else {
+            console.log('${itemToRemove} not found in your shopping list.');
+          }
+        }
+        break;
+      case "view":
+        if (shoppingList.length = = = 0) {
+          console.logC'Your shopping list is empty.");
+        } else {
+          console.logC'Your Shopping List:");
+          for (const item of shoppingList) {
+            console.log(' - ${item}');
+          }
+        }
+        break;
+      default:
+      console.log("Invalid action. Please enter 'add', 'remove', 'view', or 'exit'.");
+    }
+  }
 }
 // Start the Shopping List Program
 shoppingListProgram();
@@ -5722,10 +5723,10 @@ function fizzBuzzGame() {
   console.logf'Let's play FizzBuzz!");
   for (let i = l;i <= 100; i++) {
     let output = "";
-    if (i % 3 = = = 0) {
+    if (i % 3 === 0) {
       output += "Fizz";
     }
-    if (i % 5 = = = 0) {
+    if (i % 5 === 0) {
       output += "Buzz";
     }
     console.log(output || i);
@@ -5751,17 +5752,17 @@ function swapPairsOfAdjacentDigits(number) {
     return;
   }
   // Swap pairs of adjacent digits
-  let swappedNumber =
-  for (let i = 0; i < length; i + = 2) {
+  let swappedNumber = "";
+  for (let i = 0; i < length; i += 2) {
     swappedNumber += numberStr&lbrack;i + 1&rbrack; + numberStr&lbrack;i&rbrack;;
   }
   // Convert the result back to an integer
   const result = parse!nt(swappedNumber, 10);
-  console.log(' Original Number: $ {number}');
-  console.log(' Number with Swapped Pairs of Adjacent Digits: $ {result}');
+  console.log(`Original Number: ${number}`);
+  console.log(`Number with Swapped Pairs of Adjacent Digits: ${result}`);
 }
 // Example: Swap pairs of adjacent digits of the number 123456
-swapPairsOfAdjacentDigits( 123456);
+swapPairsOfAdjacentDigits(123456);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js201">201. Capitalization Changer</h2>
@@ -5771,19 +5772,19 @@ Uppercase letters are converted to lowercase, and lowercase letters are converte
 uppercase.</p>
 <pre>
 function changeCapitalization(inputString) {
-  let resultstring = "";
-  for (const char of inputstring) {
+  let resultString = "";
+  for (const char of inputString) {
     // Check if the character is uppercase
-    if (char = = = char.toUpperCaseO) {
+    if (char === char.toUpperCase()) {
       // Convert uppercase to lowercase
-      resultstring + = char.toLowerCase();
+      resultString += char.toLowerCase();
     } else {
       // Convert lowercase to uppercase
-      resultstring + = char.toUpperCaseO;
+      resultString += char.toUpperCase();
     }
   }
-  console.log(' Original String: $ {inputstring}');
-  console.log(' String with Changed Capitalization: $ {resultstring}');
+  console.log(`Original String: ${inputString}`);
+  console.log(`String with Changed Capitalization: ${resultString}`);
 }
 // Example: Change the capitalization of the string "Hello World"
 changeCapitalization("Hello World");
@@ -5801,7 +5802,7 @@ function swapArrayHalves(arr) {
     return;
   }
   // Calculate the midpoint of the array
-  const midpoint = length I 2;
+  const midpoint = length / 2;
   // Swap the two halves of the array
   for (let i = 0; i < midpoint; i++) {
     const temp = arr &lbrack;i&rbrack;;
@@ -5826,14 +5827,14 @@ function sumOfDigitsInString(inputString) {
     // Check if the character is a digit
     if (/\d/.test(char)) {
       // Convert the digit character to its numerical value and add to sum
-      digitSum += parselnt(char, 10);
+      digitSum += parseInt(char, 10);
     }
   }
-  console.log(' Original String: $ {inputstring}');
-  console.log(' Sum of Digits in the String: $ {digitSum}');
+  console.log(`Original String: ${inputstring}`);
+  console.log(`Sum of Digits in the String: ${digitSum}`);
 }
 // Example: Compute the sum of digits in the string "abcl23xyz456"
-sumOfDigitsInString("abc 12 3xyz45 6");
+sumOfDigitsInString("abc123xyz456");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js204">204. Sum of Cubes</h2>
@@ -5848,7 +5849,7 @@ function sumOfCubes(upToInteger) {
     // Calculate the cube of each integer and add to sum
     cubesSum += Math.pow(i, 3);
   }
-  console.log('Sum of Cubes from 1 to ${upToInteger}: ${cubesSum}' );
+  console.log(`Sum of Cubes from 1 to ${upToInteger}: ${cubesSum}`);
 }
 // Example: Compute the sum of cubes up to the integer 5
 sumOfCubes(5);
@@ -5864,11 +5865,11 @@ the formula <span class="consolas">Sum = n &ast; (n + 1) / 2</span>.</p>
 function findMaxIntegerForSum(targetSum) {
   let currentSum = 0;
   let maxinteger = 0;
-  while (currentSum + maxinteger + 1 < = targetSum) {
+  while (currentSum + maxinteger + 1 <= targetSum) {
     maxlnteger++;
-    currentSum + = maxinteger;
+    currentSum += maxinteger;
   }
-  console.log('Maximum Integer (n) for Sum <= ${targetSum}: ${maxinteger}');
+  console.log(`Maximum Integer (n) for Sum <= ${targetSum}: ${maxinteger}`);
 }
 // Example: Find the maximum integer for the sum <=15
 findMaxIntegerForSum(l 5);
@@ -5883,7 +5884,7 @@ structure considered is
 <pre>
 function breakURL(url) {
   const urlParts = {};
-  const urlRegex = /^(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.*)?$/;
+  const urlRegex = /^(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.&ast;)?$/;
   const matches = url.match(urlRegex);
   if (’matches) {
     console.log("Invalid URL format.");
@@ -5906,11 +5907,11 @@ length. It uses the
 <span class="consolas">Array.sort</span> method to achieve the desired order.</p>
 <pre>
 function sortStringsByLength(stringsArray) {
-const sortedArray = stringsArray.slice().sort((a, b) => a.length - b.length);
-console.log("Original Array of Strings:");
-console.log(stringsArray);
-console.log("Array of Strings Sorted by Length:");
-console.log(sortedArray);
+  const sortedArray = stringsArray.slice().sort((a, b) => a.length - b.length);
+  console.log("Original Array of Strings:");
+  console.log(stringsArray);
+  console.log("Array of Strings Sorted by Length:");
+  console.log(sortedArray);
 }
 // Example: Sort strings by length
 sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;);
@@ -5925,18 +5926,18 @@ slashes (<span class="consolas">//</span>), parent directory references (
 <span class="consolas">.</span>).</p>
 <pre>
 function simplifyAbsolutePath(path) {
-const parts = path.split('/');
-const simplifiedParts = &lbrack;&rbrack;;
-for (const part of parts) {
-if (part = = ='..'){
-simplifiedParts.pop(); // Move up one level for '..'
-} else if (part!== " && part !=='.'){
-simplifiedParts.push(part);
-}
-}
-const simplifiedPath = '/' + simplifiedParts.join('/');
-console.log('Original Absolute Path:${path}');
-console.log('Simplified Absolute Path: ${simplifiedPath}');
+  const parts = path.split('/');
+  const simplifiedParts = &lbrack;&rbrack;;
+  for (const part of parts) {
+    if (part = = ='..'){
+      simplifiedParts.pop(); // Move up one level for '..'
+   } else if (part!== " && part !=='.'){
+      simplifiedParts.push(part);
+   }
+  }
+  const simplifiedPath = '/' + simplifiedParts.join('/');
+  console.log(`Original Absolute Path:${path}`);
+  console.log(`Simplified Absolute Path: ${simplifiedPath}`);
 }
 // Example: Simplify an absolute path
 simplifyAbsolutePath('/home/user/../documents/./file.txt');
@@ -5948,12 +5949,12 @@ simplifyAbsolutePath('/home/user/../documents/./file.txt');
 elements in both arrays and counts the occurrences of common elements.</p>
 <pre>
 function countCommonElements(arrl, arr2) {
-const commonElements = arrl.filter(element => arr2.includes(element));
-const numberOfCommonElements = commonElements.length;
-console.log("Array 1:", arrl);
-console.log("Array 2:", arr2);
-console.log("Common Elements:”, commonElements);
-console.logC'Number of Common Elements:”, numberOfCommonElements);
+  const commonElements = arrl.filter(element => arr2.includes(element));
+  const numberOfCommonElements = commonElements.length;
+  console.log("Array 1:", arrl);
+  console.log("Array 2:", arr2);
+  console.log("Common Elements:", commonElements);
+  console.log("Number of Common Elements:", numberOfCommonElements);
 }
 // Example: Count common elements between two arrays
 countCommonElements(&lbrack;l,2,3,4,5&rbrack;, &lbrack;3,4,5,6,7&rbrack;);
@@ -5965,17 +5966,18 @@ countCommonElements(&lbrack;l,2,3,4,5&rbrack;, &lbrack;3,4,5,6,7&rbrack;);
 converts the number to a string and compares each digit to the first digit.</p>
 <pre>
 function areAllDigitsSame(number) {
-const numberStr = String(number);
-const firstDigit = numberStr&lbrack;0&rbrack;;
-for (let i = 1; i < numberStr.length; i++) {
-if (numberStr&lbrack;i&rbrack; !== firstDigit) {
-console.log(' Digits in $ {number} are not all the same.');
-return;
+  const numberStr = String(number);
+  const firstDigit = numberStr&lbrack;0&rbrack;;
+  for (let i = 1; i < numberStr.length; i++) {
+    if (numberStr&lbrack;i&rbrack; !== firstDigit) {
+      console.log(' Digits in ${number} are not all the same.');
+      return;
+    }
+  }
+  console.log(`Digits in ${number} are all the same.`);
 }
-}
-console.log(' Digits in $ {number} are all the same.');
-}
-// Example: Check if all digits in the number 22222 are the same are AllDigitsSame(22222);
+// Example: Check if all digits in the number 22222 are the same 
+areAllDigitsSame(22222);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js211">211. Rightmost Round Number Position</h2>
@@ -5986,13 +5988,13 @@ The program iterates through the array from right to left and identifies the rig
 round number, if any.</p>
 <pre>
 function rightmostRoundNumberPosition(arr) {
-for (let i = arr.length -1; i > = 0; i—) {
-if (arr&lbrack;i&rbrack; % 10= = =0){
-console.log(' Rightmost Round Number: ${arr&lbrack;i&rbrack;}, Position: ${i + 1}');
-return;
-}
-}
-console.log("No round numbers found in the array. Position: 0");
+  for (let i = arr.length -1; i > = 0; i--) {
+    if (arr&lbrack;i&rbrack; % 10 ===0){
+      console.log(`Rightmost Round Number: ${arr&lbrack;i&rbrack;}, Position: ${i + 1}`);
+      return;
+    }
+  }
+  console.log("No round numbers found in the array. Position: 0");
 }
 // Example: Find the position of the rightmost round number
 rightmostRoundNumberPosition(&lbrack;123,450,678,900&rbrack;);
@@ -6005,13 +6007,13 @@ the integer to its binary representation, reverses the bits, and converts it bac
 integer.</p>
 <pre>
 function reverseBitsl6BitUnsignedShort(integer) {
-const binaryRepresentation = integer.toString(2).padStart(16, '0');
-const reversedBinary = binaryRepresentation.split(").reverse().join(");
-const reversedlnteger = parseInt(reversedBinary, 2);
-console.log(' Original Integer: $ {integer}');
-console.log(' Binary Representation: ${binaryRepresentation}');
-console.log(' Reversed Binary: $ {reversedBinary}');
-console.log(' Reversed Integer: ${reversedlnteger}');
+  const binaryRepresentation = integer.toString(2).padStart(16, '0');
+  const reversedBinary = binaryRepresentation.split(").reverse().join(");
+  const reversedlnteger = parseInt(reversedBinary, 2);
+  console.log(`Original Integer: $ {integer}`);
+  console.log(`Binary Representation: ${binaryRepresentation}`);
+  console.log(`Reversed Binary: $ {reversedBinary}`);
+  console.log(`Reversed Integer: ${reversedlnteger}`);
 }
 // Example: Reverse bits of the 16-bit unsigned short integer 5678
 reverseBits 16BitUnsignedShort(5678);
@@ -6023,9 +6025,9 @@ reverseBits 16BitUnsignedShort(5678);
 greater than 15, it returns the given number; otherwise, it returns 15.</p>
 <pre>
 function greaterThanl5Checker(number) {
-const result = number >15? number: 15;
-console.log(' Given Number: $ {number}');
-console.log(' Result: $ {result}');
+  const result = number > 15 ? number: 15;
+  console.log(`Given Number: ${number}`);
+  console.log(`Result: ${result}`);
 }
 // Example: Test whether the number 20 is greater than 15
 greaterThanl5Checker(20);
@@ -6038,11 +6040,11 @@ digit) with the <span class="consolas">$</span> character.</p>
 <pre>
 function replaceFirstDigitWithDollar(inputString) {
   const modifiedString = inputString.replace(/\d/,
-  console.log(' Original String: $ {inputstring}');
-  console.log(' Modified String: $ {modifiedString}');
+  console.log(`Original String: $ {inputstring}`);
+  console.log(`Modified String: $ {modifiedString}`);
 }
 // Example: Replace the first digit with $ in the string "abcl23xyz456"
-replaceFirstDigitWithDollar("abc 12 3xyz4 5 6");
+replaceFirstDigitWithDollar("abc123xyz456");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js215">215. Prefix Sums</h2>
@@ -6073,7 +6075,7 @@ checks numbers one by one starting from the given number until it finds the next
 function isPrime(num) {
   if (num < 2) return false;
   for (let i = 2; i < = Math.sqrt(num); i++) {
-    if (num % i = = = 0) return false;
+    if (num % i === 0) return false;
   }
   return true;
 }
@@ -6082,8 +6084,8 @@ function nextPrimeNumber(givenNumber) {
   while (!isPrime(nextNumber)) {
     nextNumber++;
   }
-  console.log(' Given Number: $ {givenNumber}');
-  console.log(' Next Prime Number: ${nextNumber}');
+  console.log(`Given Number: $ {givenNumber}`);
+  console.log(`Next Prime Number: ${nextNumber}`);
 }
 // Example: Find the next prime number greater than 10
 nextPrimeNumber( 10);
@@ -6097,11 +6099,11 @@ binary representation, reverses the bits, and converts it back to an integer.</p
 function reverseOrderOfBits(integer) {
   const binaryRepresentation = integer.toString(2).padStart(8, ’O'); // Assuming 8 bits for simplicity
   const reversedBinary = binaryRepresentation.split(").reverse().join(");
-  const reversedlnteger = parseInt(reversedBinary, 2);
-  console.log(' Original Integer: $ {integer}');
-  console.log(' Binary Representation: ${binaryRepresentation}');
-  console.log(' Reversed Binary: ${reversedBinary}');
-  console.log(' Reversed Integer: ${reversedlnteger}');
+  const reversedInteger = parseInt(reversedBinary, 2);
+  console.log(`Original Integer: $ {integer}`);
+  console.log(`Binary Representation: ${binaryRepresentation}`);
+  console.log(`Reversed Binary: ${reversedBinary}`);
+  console.log(`Reversed Integer: ${reversedInteger}`);
 }
 // Examples: Reverse order of bits for given integers
 reverseOrderOfBits(14);
@@ -6117,7 +6119,7 @@ console.</p>
 function generateAsciiTriangle(height) {
   for (let i = 1; i < = height; i++) {
     const spaces = ' '.repeat(height - i);
-    const stars = '*'.repeat(i * 2 -1);
+    const stars = '&ast;'.repeat(i &ast; 2 -1);
     console.log(spaces + stars);
   }
 }
@@ -6135,7 +6137,7 @@ generateAsciiTriangle(triangleHeight);
 takes a value in Celsius as input and uses the formula (Celsius &ast; 9/5) + 32 to perform 
 the conversion.exadecimal representation.</p>
 <pre>
-const celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32;
+const celsiusToFahrenheit = (celsius) => (celsius &ast; 9/5) + 32;
 celsiusToFahrenheit(25); // Result: 77
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6212,7 +6214,7 @@ dayDif(new Date("2020-10-21"), new Date("2021-10-22"))
 cookie using document.cookie and clearing it.</p>
 <pre>
 const clearCookies = document.cookie.split(';').forEach(cookie =>
-document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new
+document.cookie = cookie.replace(/^ +/, '').replace(/=.&ast;/, `=;expires=${new
 Date(0).toUTCString()};path=/`));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6220,7 +6222,7 @@ Date(0).toUTCString()};path=/`));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can generate random hex colors with Math.random and padEnd properties.</p>
 <pre>
-const randomHex = () => `#${Math.floor(Math.random() *
+const randomHex = () => `#${Math.floor(Math.random() &ast;
 0xffffff).toString(16).padEnd(6, "0")}`;
 console.log(randomHex());
 // Result: #92b008
@@ -6343,7 +6345,7 @@ getLength("Hello, world!");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a circle given its radius.</p>
 <pre>
-const calculateCircleArea = (radius) => Math.PI * Math.pow(radius, 2);
+const calculateCircleArea = (radius) => Math.PI &ast; Math.pow(radius, 2);
 calculateCircleArea(5);
 // Result: 78.53981633974483
 </pre>
@@ -6385,7 +6387,7 @@ removeWhitespaces(" Hello, world! ");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random integer within a specified range.</p>
 <pre>
-const randomInRange = (min, max) => Math.floor(Math.random() * (max -
+const randomInRange = (min, max) => Math.floor(Math.random() &ast; (max -
 min + 1)) + min;
 randomInRange(1, 10);
 // Result: Random number between 1 and 10 (inclusive)
@@ -6438,7 +6440,7 @@ isPalindrome("level");
 <pre>
 const factorial = (num) => {
 if (num === 0 || num === 1) return 1;
-return num * factorial(num - 1);
+return num &ast; factorial(num - 1);
 };
 factorial(5);
 // Result: 120
@@ -6537,7 +6539,7 @@ console.log(currentYear());
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random integer between 1 and 10 (inclusive).</p>
 <pre>
-const random1To10 = () => Math.floor(Math.random() * 10) + 1;
+const random1To10 = () => Math.floor(Math.random() &ast; 10) + 1;
 console.log(random1To10());
 // Output: Random number between 1 and 10 (inclusive)
 </pre>
@@ -6588,7 +6590,7 @@ console.log(isMultipleOf5(7));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert minutes to seconds.</p>
 <pre>
-const minsToSecs = (mins) => mins * 60;
+const minsToSecs = (mins) => mins &ast; 60;
 console.log(minsToSecs(5)); // Output: 300
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6727,7 +6729,7 @@ console.log(exponentiate(2, 3));
 <p>Find the difference between two dates in days.</p>
 <pre>
 const dateDifferenceInDays = (date1, date2) => Math.abs(Math.floor((date2
-- date1) / (1000 * 60 * 60 * 24)));
+- date1) / (1000 &ast; 60 &ast; 60 &ast; 24)));
 const startDate = new Date("2023-08-01");
 const endDate = new Date("2023-08-10");
 console.log(dateDifferenceInDays(startDate, endDate)); // Output: 9
@@ -6863,7 +6865,7 @@ console.log(isPalindromeCaseInsensitive("Hello"));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given length in feet to meters.</p>
 <pre>
-const feetToMeters = (feet) => feet * 0.3048;
+const feetToMeters = (feet) => feet &ast; 0.3048;
 console.log(feetToMeters(10));
 // Output: 3.048
 </pre>
@@ -6939,7 +6941,7 @@ console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given angle from degrees to radians.</p>
 <pre>
-const degToRad = (degrees) => degrees * (Math.PI / 180);
+const degToRad = (degrees) => degrees &ast; (Math.PI / 180);
 console.log(degToRad(90));
 // Output: 1.5707963267948966
 </pre>
@@ -7004,7 +7006,7 @@ console.log(isEmptyObject({ name: "John", age: 30 }));
 <pre>
 const factorial = (num) => {
 if (num === 0 || num === 1) return 1;
-return num * factorial(num - 1);
+return num &ast; factorial(num - 1);
 };
 console.log(factorial(5));
 // Output: 120
@@ -7032,8 +7034,8 @@ console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Fibonacci number.</p>
 <pre>
-const isFibonacci = (num) => isPerfectSquare(5 * num * num + 4) ||
-isPerfectSquare(5 * num * num - 4);
+const isFibonacci = (num) => isPerfectSquare(5 &ast; num &ast; num + 4) ||
+isPerfectSquare(5 &ast; num &ast; num - 4);
 console.log(isFibonacci(5));
 // Output: true
 console.log(isFibonacci(6));
@@ -7044,7 +7046,7 @@ console.log(isFibonacci(6));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given number of hours to minutes.</p>
 <pre>
-const hoursToMinutes = (hours) => hours * 60;
+const hoursToMinutes = (hours) => hours &ast; 60;
 console.log(hoursToMinutes(2));
 // Output: 120
 </pre>
@@ -7098,7 +7100,7 @@ console.log(endsWithSubstring("Hello, world!", "Hello"));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of squares of an array of numbers.</p>
 <pre>
-const sumOfSquares = (arr) => arr.reduce((acc, val) => acc + val ** 2, 0);
+const sumOfSquares = (arr) => arr.reduce((acc, val) => acc + val &ast;&ast; 2, 0);
 console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));
 // Output: 55
 </pre>
@@ -7120,7 +7122,7 @@ console.log(isPalindromeCaseSensitive("Hello"));
 <p>Generate an array of random numbers.</p>
 <pre>
 const randomArray = (length) => Array.from({ length }, () =>
-Math.floor(Math.random() * 100));
+Math.floor(Math.random() &ast; 100));
 console.log(randomArray(5));
 // Output: Array with 5 random numbers, e.g., &lbrack;23, 45, 67, 11, 88&rbrack;
 </pre>
@@ -7160,7 +7162,7 @@ console.log(secsToHoursMinsSecs(7320));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the Least Common Multiple (LCM) of two numbers.</p>
 <pre>
-const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
+const lcm = (num1, num2) => (num1 &ast; num2) / gcd(num1, num2);
 console.log(lcm(6, 8)); // Output: 24
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7248,7 +7250,7 @@ using a reduce operation to calculate the decimal value by considering each
 digit's position and value.</p>
 <pre>
 const binaryToDecimalWithoutParseInt = (binary) =>
-binary.split('').reverse().reduce((dec, bit, index) => dec + bit * (2 ** index),
+binary.split('').reverse().reduce((dec, bit, index) => dec + bit &ast; (2 &ast;&ast; index),
 0);
 console.log(binaryToDecimalWithoutParseInt("1101"));
 // Output: 13
@@ -7375,7 +7377,7 @@ an array. It employs the reduce method to iterate through the array,
 accumulating the sum of cubes by raising each value to the power of 3 and
 adding it to the accumulator.</p>
 <pre>
-const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val ** 3, 0);
+const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val &ast;&ast; 3, 0);
 console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;));
 // Output: 225
 </pre>
@@ -7442,7 +7444,7 @@ console.log(isTriangularNumber(7));
 <p>The rectanglePerimeter function calculates the perimeter of a rectangle by
 summing twice the width and twice the height of the rectangle.</p>
 <pre>
-const rectanglePerimeter = (width, height) => 2 * (width + height);
+const rectanglePerimeter = (width, height) => 2 &ast; (width + height);
 console.log(rectanglePerimeter(5, 10));
 // Output: 30
 </pre>
@@ -7564,7 +7566,7 @@ number. A neon number is a number where the sum of the digits of its
 square is equal to the number itself.</p>
 <pre>
 const isNeonNumber = (num) => {
-const squared = num ** 2;
+const squared = num &ast;&ast; 2;
 const digitSum = &lbrack;...String(squared)&rbrack;.map(Number).reduce((sum, digit) =>
 sum + digit, 0);
 return squared === digitSum;
@@ -7599,7 +7601,7 @@ console.log(powerSet(&lbrack;1, 2, 3&rbrack;));
 <pre>
 const isDisariumNumber = (num) => {
 const digits = &lbrack;...String(num)&rbrack;.map(Number);
-const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit **
+const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit &ast;&ast;
 (index + 1), 0);
 return sumOfPowers === num;
 };
@@ -7640,7 +7642,7 @@ console.log(consecutiveNumbers(1, 5));
 <pre>
 const isPronicNumber = (num) => {
 const n = Math.floor(Math.sqrt(num));
-return n * (n + 1) === num;
+return n &ast; (n + 1) === num;
 };
 console.log(isPronicNumber(6));
 // Output: true
@@ -7829,7 +7831,7 @@ const isHappyNumber = (num) => {
   const seen = new Set();
   while (num !== 1 && !seen.has(num)) {
     seen.add(num);
-    num = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum + digit ** 2, 0);
+    num = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum + digit &ast;&ast; 2, 0);
   }
   return num === 1;
 };
@@ -7866,10 +7868,10 @@ console.log(firstNPrimes(5));
 <h2 id="js-147">147. Calculate the Volume of a Sphere</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The sphereVolume function calculates the volume of a sphere given its
-radius. It uses the formula (4/3) * π * r^3, where r is the radius of the
+radius. It uses the formula (4/3) &ast; π &ast; r^3, where r is the radius of the
 sphere.
 <pre>
-const sphereVolume = (radius) => (4 / 3) * Math.PI * radius ** 3;
+const sphereVolume = (radius) => (4 / 3) &ast; Math.PI &ast; radius &ast;&ast; 3;
 console.log(sphereVolume(5));
 // Output: 523.5987755982989
 </pre>
@@ -7896,7 +7898,7 @@ number, also known as a narcissistic number.
 const isArmstrongNumber = (num) => {
 const digits = &lbrack;...String(num)&rbrack;.map(Number);
 const numDigits = digits.length;
-const sumOfPowers = digits.reduce((sum, digit) => sum + digit **
+const sumOfPowers = digits.reduce((sum, digit) => sum + digit &ast;&ast;
 numDigits, 0);
 return sumOfPowers === num;
 };
@@ -7928,7 +7930,7 @@ The isStrongNumber function checks if a number is a strong number. A
 strong number is a number whose sum of factorials of its digits is equal to
 the number itself.
 <pre>
-const factorial = (num) => (num === 0 ? 1 : num * factorial(num - 1));
+const factorial = (num) => (num === 0 ? 1 : num &ast; factorial(num - 1));
 const isStrongNumber = (num) => {
 const sumOfFactorials = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum +
 factorial(Number(digit)), 0);
@@ -7953,9 +7955,9 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));
 <h2 id="js-153">153. Find the Area of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The rectangleArea function calculates the area of a rectangle given its
-length and width using the formula: length * width.
+length and width using the formula: length &ast; width.
 <pre>
-const rectangleArea = (length, width) => length * width;
+const rectangleArea = (length, width) => length &ast; width;
 console.log(rectangleArea(5, 10));
 // Output: 50
 </pre>
@@ -7993,9 +7995,9 @@ console.log(gcdIterative(48, 18));
 <h2 id="js-156">156. Calculate the Volume of a Cylinder</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The cylinderVolume function calculates the volume of a cylinder using the formula: π 
-* radius^2 * height.</p>
+&ast; radius^2 &ast; height.</p>
 <pre>
-const cylinderVolume = (radius, height) => Math.PI * radius ** 2 * height;
+const cylinderVolume = (radius, height) => Math.PI &ast; radius &ast;&ast; 2 &ast; height;
 console.log(cylinderVolume(5, 10));
 // Output: 785.3981633974483
 </pre>
@@ -8043,9 +8045,9 @@ console.log(decimalToOctal(27));
 <h2 id="js-159">159. Find the LCM of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The lcm function calculates the least common multiple (LCM) of two given
-numbers using the formula: (num1 * num2) / gcd(num1, num2).
+numbers using the formula: (num1 &ast; num2) / gcd(num1, num2).
 <pre>
-const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
+const lcm = (num1, num2) => (num1 &ast; num2) / gcd(num1, num2);
 console.log(lcm(24, 36)); // Output: 72
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8065,9 +8067,9 @@ console.log(isValidPhoneNumber("123-4567"));
 <h2 id="js-161">161. Find the Sum of the First N Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The sumOfNaturals function calculates the sum of the first N natural
-numbers using the formula: (n * (n + 1)) / 2.
+numbers using the formula: (n &ast; (n + 1)) / 2.
 <pre>
-const sumOfNaturals = (n) => (n * (n + 1)) / 2;
+const sumOfNaturals = (n) => (n &ast; (n + 1)) / 2;
 console.log(sumOfNaturals(10));
 // Output: 55
 </pre>
@@ -8112,9 +8114,9 @@ console.log(factors(12));
 <h2 id="js-164">164. Calculate the Area of a Triangle given the Base and Height</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The triangleArea function calculates the area of a triangle using the
-formula: 0.5 * base * height.
+formula: 0.5 &ast; base &ast; height.
 <pre>
-const triangleArea = (base, height) => 0.5 * base * height;
+const triangleArea = (base, height) => 0.5 &ast; base &ast; height;
 console.log(triangleArea(5, 10));
 // Output: 25
 </pre>
@@ -8140,7 +8142,7 @@ within a specified range and of a specified length. It uses the Array.from
 method with a mapping function to create the desired array.
 <pre>
 const randomArrayInRange = (min, max, length) => Array.from({ length },
-() => Math.floor(Math.random() * (max - min + 1)) + min);
+() => Math.floor(Math.random() &ast; (max - min + 1)) + min);
 console.log(randomArrayInRange(1, 100, 5));
 // Output: &lbrack;34, 87, 19, 56, 72&rbrack;
 </pre>
@@ -8206,9 +8208,9 @@ console.log(isValidDate("02-08-2023"));
 In this code, the gcd function calculates the greatest common divisor using
 the Euclidean algorithm. The lcmArray function then calculates the least
 common multiple (LCM) of an array of numbers by reducing the array and
-applying the formula (lcm * num) / gcd(lcm, num).
+applying the formula (lcm &ast; num) / gcd(lcm, num).
 <pre>
-const lcmArray = (arr) => arr.reduce((lcm, num) => (lcm * num) / gcd(lcm,
+const lcmArray = (arr) => arr.reduce((lcm, num) => (lcm &ast; num) / gcd(lcm,
 num));
 console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;));
 // Output: 60
@@ -8220,10 +8222,10 @@ console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;));
 The isValidPassword function uses a regular expression to validate a
 password. The regular expression requires that the password contains at
 least one letter (&lbrack;A-Za-z&rbrack;), one digit (\d), and one special character
-(&lbrack;@$!%*?&&rbrack;).
+(&lbrack;@$!%&ast;?&&rbrack;).
 <pre>
-const isValidPassword = (password) => /^(?=.*&lbrack;A-Za-z&rbrack;)(?=.*\d)(?=.*
-&lbrack;@$!%*?&&rbrack;)&lbrack;A-Za-z\d@$!%*?&&rbrack;{8,}$/.test(password);
+const isValidPassword = (password) => /^(?=.&ast;&lbrack;A-Za-z&rbrack;)(?=.&ast;\d)(?=.&ast;
+&lbrack;@$!%&ast;?&&rbrack;)&lbrack;A-Za-z\d@$!%&ast;?&&rbrack;{8,}$/.test(password);
 console.log(isValidPassword("P@ssw0rd"));
 // Output: true
 console.log(isValidPassword("password123"));
@@ -8268,8 +8270,8 @@ between two points in a 2D plane. Given the coordinates of two points (x1,
 y1) and (x2, y2), it uses the formula sqrt((x2 - x1)^2 + (y2 - y1)^2) to
 compute the distance between them.
 <pre>
-const distanceBetweenPoints = (x1, y1, x2, y2) => Math.sqrt((x2 - x1) ** 2
-+ (y2 - y1) ** 2);
+const distanceBetweenPoints = (x1, y1, x2, y2) => Math.sqrt((x2 - x1) &ast;&ast; 2
++ (y2 - y1) &ast;&ast; 2);
 console.log(distanceBetweenPoints(0, 0, 3, 4));
 // Output: 5
 </pre>
@@ -8291,7 +8293,7 @@ console.log(isAbundantNumber(28));
 The cubeVolume function calculates the volume of a cube based on its side
 length. The formula for the volume of a cube is side^3, where side is the
 length of one side of the cube.
-const cubeVolume = (side) => side ** 3;
+const cubeVolume = (side) => side &ast;&ast; 3;
 console.log(cubeVolume(5));
 // Output: 125
 </pre>
@@ -8350,7 +8352,7 @@ respective positions.</p>
 <pre>
 const sumOfDigitsRaisedToPower = (num) => {
 const digits = &lbrack;...String(num)&rbrack;.map(Number);
-return digits.reduce((sum, digit, index) => sum + digit ** (index + 1), 0);
+return digits.reduce((sum, digit, index) => sum + digit &ast;&ast; (index + 1), 0);
 };
 console.log(sumOfDigitsRaisedToPower(12345));
 // Output: 115
@@ -8383,9 +8385,9 @@ console.log(randomPassword(8));
 <h2 id="js-184">184. Calculate the Area of a Trapezoid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The trapezoidArea function calculates the area of a trapezoid using the formula: 
-0.5 * (base1 + base2) * height.</p>
+0.5 &ast; (base1 + base2) &ast; height.</p>
 <pre>
-const trapezoidArea = (base1, base2, height) => 0.5 * (base1 + base2) *
+const trapezoidArea = (base1, base2, height) => 0.5 &ast; (base1 + base2) &ast;
 height;
 console.log(trapezoidArea(4, 8, 6));
 // Output: 36
@@ -8396,7 +8398,7 @@ console.log(trapezoidArea(4, 8, 6));
 <p>The isKaprekarNumber function checks if a given number is a Kaprekar number.</p>
 <pre>
 const isKaprekarNumber = (num) => {
-const square = num ** 2;
+const square = num &ast;&ast; 2;
 const squareStr = String(square);
 const numStr = String(num);
 const left = Number(squareStr.slice(0, numStr.length));
@@ -8415,10 +8417,10 @@ console.log(isKaprekarNumber(45));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The coneVolume function calculates the volume of a cone using its base
 radius and height. It applies the formula for the volume of a cone: V = (1/3)
-* π * r² * h, where r is the radius of the base and h is the height of the cone.</p>
+&ast; π &ast; r² &ast; h, where r is the radius of the base and h is the height of the cone.</p>
 
 <pre>
-const coneVolume = (radius, height) => (1 / 3) * Math.PI * radius ** 2 *
+const coneVolume = (radius, height) => (1 / 3) &ast; Math.PI &ast; radius &ast;&ast; 2 &ast;
 console.log(coneVolume(5, 10));
 // Output: 261.79938779914943
 </pre>
@@ -8460,7 +8462,7 @@ console.log(sumOfDigitsRaisedToPowerUpToThousand());
 <p>The isCarolNumber function checks if a given number is a Carol number.</p>
 <pre>
 const isCarolNumber = (num) => {
-const carolPrime = (2 ** num) - 1;
+const carolPrime = (2 &ast;&ast; num) - 1;
 return isPrime(num) && isPerfectSquare(carolPrime);
 };
 console.log(isCarolNumber(7));
@@ -8477,7 +8479,7 @@ console.log(isCarolNumber(6));
 ensures that the input number is a non-negative integer.</p>
 <pre>
 const isCatalanNumber = (num) => num >= 0 && Number.isInteger(num)
-&& num === ((factorial(2 * num)) / (factorial(num + 1) * factorial(num)));
+&& num === ((factorial(2 &ast; num)) / (factorial(num + 1) &ast; factorial(num)));
 console.log(isCatalanNumber(5));
 // Output: true
 console.log(isCatalanNumber(10));
@@ -8489,7 +8491,7 @@ console.log(isCatalanNumber(10));
 <p>The cuboidVolume function calculates the volume of a cuboid given its length, width, 
 and height.</p>
 <pre>
-const cuboidVolume = (length, width, height) => length * width * height;
+const cuboidVolume = (length, width, height) => length &ast; width &ast; height;
 console.log(cuboidVolume(5, 10, 8));
 // Output: 400
 </pre>
@@ -8509,7 +8511,7 @@ console.log(isDudeneyNumber(64));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random color in hexadecimal format (#RRGGBB).</p>
 <pre>
-const randomColorHex = () => `#${Math.floor(Math.random() *
+const randomColorHex = () => `#${Math.floor(Math.random() &ast;
 16777215).toString(16)}`;
 console.log(randomColorHex());
 // Output: "#92b008"
@@ -8519,7 +8521,7 @@ console.log(randomColorHex());
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a circle sector given the radius and the central angle in degrees.</p>
 <pre>
-const circleSectorArea = (radius, angle) => (angle / 360) * Math.PI * radius ** 2;
+const circleSectorArea = (radius, angle) => (angle / 360) &ast; Math.PI &ast; radius &ast;&ast; 2;
 console.log(circleSectorArea(5, 90));
 // Output: 11.780972450961725
 </pre>
@@ -8548,7 +8550,7 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Out
 <p>Calculate the area of an ellipse using its semi-major axis length (a) and semi-minor 
 axis length (b).</p>
 <pre>
-const ellipseArea = (a, b) => Math.PI * a * b;
+const ellipseArea = (a, b) => Math.PI &ast; a &ast; b;
 console.log(ellipseArea(5, 10));
 // Output: 157.07963267948966
 </pre>
@@ -8560,7 +8562,7 @@ console.log(ellipseArea(5, 10));
 const isLeylandNumber = (num) => {
 let found = false;
 for (let x = 2; x <= Math.floor(Math.pow(num, 1 / 3)) && !found; x++) {
-for (let y = x + 1; x * y <= num && !found; y++) {
+for (let y = x + 1; x &ast; y <= num && !found; y++) {
 if (Math.pow(x, y) + Math.pow(y, x) === num) {
 found = true;
 }
@@ -8583,7 +8585,7 @@ console.log(isLeylandNumber(100));
 const randomUUID = () => {
 return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/&lbrack;xy&rbrack;/g,
 function(c) {
-const r = Math.random() * 16 | 0;
+const r = Math.random() &ast; 16 | 0;
 const v = c === "x" ? r : (r & 0x3 | 0x8);
 return v.toString(16);
 });
@@ -8640,7 +8642,7 @@ let h = (max !== min) ? ((max === r ? g - b : (max === g ? b - r : r - g)) /
 let s = (max !== min) ? (l => l > 0.5 ? (max - min) / (2 - max - min) : (max
 - min) / (max + min))(l) : 0;
 let l = (max + min) / 2;
-return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l *
+return { h: Math.round(h &ast; 360), s: Math.round(s &ast; 100), l: Math.round(l &ast;
 100) };
 };
 console.log(rgbToHSL(255, 0, 0)); // Output: { h: 0, s: 100, l: 50 }
@@ -8692,7 +8694,7 @@ console.log(sumOfProperDivisors(12));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the least common multiple (LCM) of an array of numbers.</p>
 <pre>
-const lcmArray = (arr) => arr.reduce((lcm, num) => lcm * num /
+const lcmArray = (arr) => arr.reduce((lcm, num) => lcm &ast; num /
 gcdArray(arr), 1);
 console.log(lcmArray(&lbrack;2, 3, 4&rbrack;));
 // Output: 12
@@ -8702,7 +8704,7 @@ console.log(lcmArray(&lbrack;2, 3, 4&rbrack;));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of the squares of the first n natural numbers.</p>
 <pre>
-const sumOfSquares = (n) => (n * (n + 1) * (2 * n + 1)) / 6;
+const sumOfSquares = (n) => (n &ast; (n + 1) &ast; (2 &ast; n + 1)) / 6;
 console.log(sumOfSquares(5));
 // Output: 55
 </pre>
@@ -8727,7 +8729,7 @@ console.log(isPowerfulNumber(36));
 <pre>
 const productOfDigits = (num) => 
   &lbrack;...String(num)&rbrack;.reduce((product, digit) => 
-  product * Number(digit), 1);
+  product &ast; Number(digit), 1);
 console.log(productOfDigits(12345));
 // Output: 120
 </pre>
@@ -8757,7 +8759,7 @@ console.log(isPracticalNumber(14));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculate the sum of the cubes of the first n natural numbers.
 <pre>
-const sumOfCubes = (n) => Math.pow((n * (n + 1)) / 2, 2);
+const sumOfCubes = (n) => Math.pow((n &ast; (n + 1)) / 2, 2);
 console.log(sumOfCubes(5));
 // Output: 225
 </pre>
@@ -8806,7 +8808,7 @@ const characters =
 23456789';
 let result = '';
 for (let i = 0; i < length; i++) {
-result += characters.charAt(Math.floor(Math.random() *
+result += characters.charAt(Math.floor(Math.random() &ast;
 characters.length));
 }
 return result;
@@ -8819,8 +8821,8 @@ console.log(randomAlphanumericString(8));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular hexagon using its side length.</p>
 <pre>
-const regularHexagonArea = (sideLength) => (3 * Math.sqrt(3) *
-sideLength ** 2) / 2;
+const regularHexagonArea = (sideLength) => (3 &ast; Math.sqrt(3) &ast;
+sideLength &ast;&ast; 2) / 2;
 console.log(regularHexagonArea(5));
 // Output: 64.9519052838329
 </pre>
@@ -8867,7 +8869,7 @@ console.log(isReversibleNumber(10));
 <h2 id="js-219">219. Calculate the Circumference of a Circle</h2>
 <p>Calculate the circumference of a circle using its radius.</p>
 <pre>
-const circleCircumference = (radius) => 2 * Math.PI * radius;
+const circleCircumference = (radius) => 2 &ast; Math.PI &ast; radius;
 console.log(circleCircumference(5));
 // Output: 31.41592653589793
 </pre>
@@ -8916,7 +8918,7 @@ console.log(isUnitaryPerfectNumber(28));
 <p>Calculate the perimeter of a regular polygon using its side length and the
 number of sides.</p>
 <pre>
-const regularPolygonPerimeter = (sideLength, numSides) => sideLength *
+const regularPolygonPerimeter = (sideLength, numSides) => sideLength &ast;
 numSides;
 console.log(regularPolygonPerimeter(5, 6));
 // Output: 30
@@ -8926,8 +8928,8 @@ console.log(regularPolygonPerimeter(5, 6));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of an equilateral triangle using its side length.</p>
 <pre>
-const equilateralTriangleArea = (sideLength) => (Math.sqrt(3) * sideLength
-** 2) / 4;
+const equilateralTriangleArea = (sideLength) => (Math.sqrt(3) &ast; sideLength
+&ast;&ast; 2) / 4;
 console.log(equilateralTriangleArea(5));
 // Output: 10.825317547305486
 </pre>
@@ -8948,14 +8950,14 @@ console.log(isHarshadSmithNumber(10));
 <p>Check if a given number is a perfect power.</p>
 <pre>
 const isPerfectPower = (num) => {
-for (let i = 2; i * i <= num; i++) {
+for (let i = 2; i &ast; i <= num; i++) {
 let power = 2;
-let result = i * i;
+let result = i &ast; i;
 while (result <= num) {
 if (result === num) {
 return true;
 }
-result *= i;
+result &ast;= i;
 power++;
 }
 }
@@ -8995,8 +8997,8 @@ console.log(isDudeneyNumber(27));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Calculate the area of a regular pentagon using its side length.
 <pre>
-const regularPentagonArea = (sideLength) => (1 / 4) * Math.sqrt(5 * (5 + 2
-* Math.sqrt(5))) * sideLength ** 2;
+const regularPentagonArea = (sideLength) => (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2
+&ast; Math.sqrt(5))) &ast; sideLength &ast;&ast; 2;
 console.log(regularPentagonArea(5));
 // Output: 43.01193501472417
 </pre>
@@ -9005,7 +9007,7 @@ console.log(regularPentagonArea(5));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the volume of a pyramid using its base area and height.</p>
 <pre>
-const pyramidVolume = (baseArea, height) => (1 / 3) * baseArea * height;
+const pyramidVolume = (baseArea, height) => (1 / 3) &ast; baseArea &ast; height;
 console.log(pyramidVolume(25, 10));
 // Output: 83.33333333333333
 </pre>
@@ -9017,7 +9019,7 @@ console.log(pyramidVolume(25, 10));
 const isWedderburnEtheringtonNumber = (num) => {
 const primes = primeFactors(num);
 const factorials = primes.map((prime) => factorial(prime - 1));
-return factorials.reduce((product, factorial) => product * factorial, 1) ===
+return factorials.reduce((product, factorial) => product &ast; factorial, 1) ===
 factorial(num);
 };
 console.log(isWedderburnEtheringtonNumber(6));
@@ -9030,7 +9032,7 @@ console.log(isWedderburnEtheringtonNumber(12));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the surface area of a cube using its side length.</p>
 <pre>
-const cubeSurfaceArea = (sideLength) => 6 * sideLength ** 2;
+const cubeSurfaceArea = (sideLength) => 6 &ast; sideLength &ast;&ast; 2;
 console.log(cubeSurfaceArea(5));
 // Output: 150
 </pre>
@@ -9051,8 +9053,8 @@ console.log(isPluperfectNumber(20));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular octagon using its side length.</p>
 <pre>
-const regularOctagonArea = (sideLength) => 2 * (1 + Math.sqrt(2)) *
-sideLength ** 2;
+const regularOctagonArea = (sideLength) => 2 &ast; (1 + Math.sqrt(2)) &ast;
+sideLength &ast;&ast; 2;
 console.log(regularOctagonArea(5));
 // Output: 86.60254037844387
 </pre>
@@ -9070,7 +9072,7 @@ console.log(isRepunitNumber(11)); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the volume of an ellipsoid using its semi-axes lengths.</p>
 <pre>
-const ellipsoidVolume = (a, b, c) => (4 / 3) * Math.PI * a * b * c;
+const ellipsoidVolume = (a, b, c) => (4 / 3) &ast; Math.PI &ast; a &ast; b &ast; c;
 console.log(ellipsoidVolume(5, 3, 2));
 // Output: 125.66370614359172
 </pre>
@@ -9180,7 +9182,7 @@ console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of the squares of numbers in a given array.</p>
 <pre>
-const sumSquares = arr => arr.reduce((sum, num) => sum + num ** 2, 0);
+const sumSquares = arr => arr.reduce((sum, num) => sum + num &ast;&ast; 2, 0);
 console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9203,7 +9205,7 @@ canal, Panama!")); // Output: true
 <pre>
 const shuffleArrayFisherYates = arr => {
 for (let i = arr.length - 1; i > 0; i--) {
-const j = Math.floor(Math.random() * (i + 1));
+const j = Math.floor(Math.random() &ast; (i + 1));
 &lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; = &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
 }
 return arr;
@@ -9319,7 +9321,7 @@ console.log(hammingDistance('karolin', 'kathrin')); // Output: 3
 Pythagorean theorem.</p>
 <pre>
 const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) => 
-  Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+  Math.sqrt((x2 - x1) &ast;&ast; 2 + (y2 - y1) &ast;&ast; 2);
   console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));
   // Output: 5 (Pythagorean triple: 3^2 + 4^2 = 5^2)
 </pre>
@@ -9349,7 +9351,7 @@ console.log(findFirstNonRepeating('hello'));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a kite using the lengths of its diagonals.</p>
 <pre>
-const areaOfKite = (d1, d2) => 0.5 * d1 * d2;
+const areaOfKite = (d1, d2) => 0.5 &ast; d1 &ast; d2;
 console.log("Area of the kite:", areaOfKite(10, 6)); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9357,7 +9359,7 @@ console.log("Area of the kite:", areaOfKite(10, 6)); // Output: 30
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a sector within a circle based on the provided radius and angle.</p>
 <pre>
-const sectorArea = (radius, angle) => (Math.PI * radius ** 2 * angle) / 360;
+const sectorArea = (radius, angle) => (Math.PI &ast; radius &ast;&ast; 2 &ast; angle) / 360;
 console.log(sectorArea(5, 60)); // Output: 5.235987755982989
 </pre>
 
