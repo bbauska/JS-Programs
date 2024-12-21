@@ -2801,83 +2801,75 @@ console.log(`${feetValue} feet is equal to ${metersValue.toFixed(2)} meters`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js101">101. Convert Days to Years, Months, and Days</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To convert a given number of days into years, months, and remaining days in 
-JavaScript, you can use the following function:</p>
+<p>To convert a given number of days into years, months, and remaining days in JavaScript, 
+you can use the following function:</p>
 <pre>
 function convertDaysToYearsMonthsDays(days) {
-
-// Check if the input is a valid positive number
-if (isNaN(days) 11 days <= 0) {
-return "Invalid input. Please provide a valid positive number of days.";
+  // Check if the input is a valid positive number
+  if (isNaN(days) 11 days <= 0) {
+    return "Invalid input. Please provide a valid positive number of days.";
+  }
+  // Calculate years
+  const years = Math.floor(days / 365);
+  // Calculate remaining days after removing years
+  const remainingDaysAfterYears = days % 365;
+  // Calculate months
+  const months = Math.floor(remainingDaysAfterYears / 30);
+  // Calculate remaining days after removing months
+  const remainingDaysAfterMonths = remainingDaysAfterYears % 30;
+  return {
+    years,
+    months,
+    days: remainingDaysAfterMonths
+  };
 }
-
-// Calculate years
-const years = Math.floor(days / 365);
-
-// Calculate remaining days after removing years
-const remainingDaysAfterYears = days % 365;
-
-// Calculate months
-const months = Math.floor(remainingDaysAfterYears / 30);
-
-// Calculate remaining days after removing months
-const remainingDaysAfterMonths = remainingDaysAfterYears % 30;
-return {
-years,
-months,
-days: remainingDaysAfterMonths
-};
-}
-
 // Example usage:
 const totalDays = 1000;
 const result = convertDaysToYearsMonthsDays(totalDays);
-console.log( '$ {totalDays} days is approximately $ {result.years} years, $ {result.months} months, and ${result.days}
-days.');
+console.log(`${totalDays} days is approximately ${result.years} years, ${result.months} months, and ${result.days} days.`);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js102">102. Find the Median of an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the median of an array in JavaScript, you can create a function that sorts the array and then
-determines the median based on its length.
+<p>To find the median of an array in JavaScript, you can create a function that sorts the 
+array and then determines the median based on its length.</p>
 <pre>
 function findMedian(arr) {
-// Check if the input is a valid array
-if (’Array.isArray(arr) 11 arr.length = = = 0) {
-return "Invalid input. Please provide a non-empty array.";
-}
-// Sort the array
-const sortedArray = arr.slice().sort((a, b) = > a - b);
-// Calculate the median
-const middleindex = Math.floor(sortedArray.length I 2);
-if (sortedArray.length % 2 = = = 0) {
-// If the array has an even number of elements, return the average of the middle two
-const median = (sortedArray&lbrack;middleIndex -1&rbrack; + sortedArray&lbrack;middleIndex&rbrack;) I 2;
-return median;
-} else {
-// If the array has an odd number of elements, return the middle element
-return sortedArray&lbrack;middleIndex&rbrack;;
-}
-// Example usage:
-const numbers = &lbrack;5, 2, 8,1, 7, 3&rbrack;;
-const result = findMedian(numbers);
-console.logf'Median:", result);
+  // Check if the input is a valid array
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return "Invalid input. Please provide a non-empty array.";
+  }
+  // Sort the array
+  const sortedArray = arr.slice().sort((a, b) => a - b);
+  // Calculate the median
+  const middleIndex = Math.floor(sortedArray.length / 2);
+  if (sortedArray.length % 2 = = = 0) {
+    // If the array has an even number of elements, return the average of the middle two
+    const median = (sortedArray&lbrack;middleIndex -1&rbrack; + sortedArray&lbrack;middleIndex&rbrack;) / 2;
+    return median;
+  } else {
+    // If the array has an odd number of elements, return the middle element
+    return sortedArray&lbrack;middleIndex&rbrack;;
+  }
+    // Example usage:
+    const numbers = &lbrack;5, 2, 8, 1, 7, 3&rbrack;;
+    const result = findMedian(numbers);
+    console.logf'Median:", result);
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js103">103. Calculate the Distance Between Two Points</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To calculate the distance between two points (xl, yl) and (x2, y2) in a two-dimensional plane:
+<p>To calculate the distance between two points (xl, yl) and (x2, y2) in a 
+two-dimensional plane:</p>
 <pre>
 function calculateDistance(xl, yl, x2, y2) {
-// Check if the inputs are valid numbers
-if (isNaN(xl) || isNaN(yl) || isNaN(x2) || isNaN(y2)) {
-return "Invalid inputs. Please provide valid numerical coordinates.";
-}
-// Calculate the distance using the distance formula
-const distance = Math.sqrt(Math.pow((x2 - xl), 2) + Math.pow((y2 - yl), 2));
-return distance;
+  // Check if the inputs are valid numbers
+  if (isNaN(xl) || isNaN(yl) || isNaN(x2) || isNaN(y2)) {
+    return "Invalid inputs. Please provide valid numerical coordinates.";
+  }
+  // Calculate the distance using the distance formula
+  const distance = Math.sqrt(Math.pow((x2 - xl), 2) + Math.pow((y2 - yl), 2));
+  return distance;
 }
 // Example usage:
 const xl = 1;
@@ -2885,101 +2877,112 @@ const yl = 2;
 const x2 = 4;
 const y2 = 6;
 const result = calculateDistance(xl, yl, x2, y2);
-console.log(' The distance between (${xl}, ${y 1}) and (${x2}, ${y2}) is ${result.toFixed(2)}');
+console.log(`The distance between (${xl}, ${y1}) and (${x2}, ${y2}) is ${result.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js104">104. Check if a Number is a Perfect Square</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To check if a number is a perfect square in JavaScript, you can calculate the square root of the number and
-then check if the square of the integer part of the square root is equal to the original number.
+<p>To check if a number is a perfect square in JavaScript, you can calculate the square 
+root of the number and then check if the square of the integer part of the square root 
+is equal to the original number.</p>
 <pre>
 function isPerfectSquare(number) {
-// Check if the input is a valid positive number
-if (isNaN(number) 11 number < 0) {
-return "Invalid input. Please provide a valid non-negative number.";
-}
-// Calculate the square root
-const squareRoot = Math.sqrt(number);
-// Check if the square of the integer part of the square root is equal to the original number
-return squareRoot = = = Math.floor(squareRoot);
+  // Check if the input is a valid positive number
+  if (isNaN(number) || number < 0) {
+    return "Invalid input. Please provide a valid non-negative number.";
+  }
+  // Calculate the square root
+  const squareRoot = Math.sqrt(number);
+  // Check if the square of the integer part of the square root is equal to the original number
+  return squareRoot === Math.floor(squareRoot);
 }
 // Example usage:
 const testNumber = 25;
 const result = isPerfectSquare(testNumber);
-console.log(' Is $ {testNumber} a perfect square? $ {result}');
+console.log(`Is ${testNumber} a perfect square? ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js105">105. Find the Area of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the area of a rectangle in JavaScript, you can create a function that takes the length and width as
-parameters and applies the formula:
-Area=Length x Width Area=Length x Width
+<p>To find the area of a rectangle in JavaScript, you can create a function that takes 
+the length and width as parameters and applies the formula:</p>
+<p>Area=Length x Width</p>
 <pre>
 function calculateRectangleArea(length, width) {
-// Check if the inputs are valid positive numbers
-if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
-return "Invalid inputs. Please provide valid positive numbers for length and width.";
-// Calculate the area of the rectangle
-const area = length &ast; width;
-return area;
+  // Check if the inputs are valid positive numbers
+  if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
+    return "Invalid inputs. Please provide valid positive numbers for length and width.";
+  }
+    // Calculate the area of the rectangle
+    const area = length &ast; width;
+    return area;
+}
 // Example usage:
 const rectangleLength = 5;
 const rectangle Width = 8;
 const result = calculateRectangleArea(rectangleLength, rectangleWidth);
-console.log(' The area of the rectangle with length $ {rectangleLength} and width $ {rectangleWidth} is $ {result}');
+console.log(`The area of the rectangle with length ${rectangleLength} and width ${rectangleWidth} is ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js106">106. Convert Binary to Decimal</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To convert a binary number to a decimal number in JavaScript, you can create a function that takes a binary
-string as input and calculates the decimal equivalent.
+<p>To convert a binary number to a decimal number in JavaScript, you can create a 
+function that takes a binary string as input and calculates the decimal equivalent.</p>
 <pre>
 function binaryToDecimal(binaryString) {
-// Check if the input is a valid binary string
-if (!/A&lbrack;01&rbrack; + $/.test(binaryString)) {
-return "Invalid input. Please provide a valid binary string.";
-// Convert binary to decimal
-const decimalvalue = parse!nt(binaryString, 2);
-return decimalvalue;
+  // Check if the input is a valid binary string
+  if (!/A&lbrack;01&rbrack; + $/.test(binaryString)) {
+    return "Invalid input. Please provide a valid binary string.";
+  }
+  // Convert binary to decimal
+  const decimalValue = parse!nt(binaryString, 2);
+  return decimalValue;
+}
 // Example usage:
 const binaryNumber = "1101";
 const decimalResult = binaryToDecimal(binaryNumber);
-console.log(' The decimal equivalent of binary $ {binaryNumber} is $ {decimalResult}');
+console.log(`The decimal equivalent of binary ${binaryNumber} is ${decimalResult}`);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js107">107. Count the Number of Words in a Sentence</h2>
-To count the number of words in a sentence in JavaScript, you can create a function that splits the sentence
-into words and then counts the number of resulting elements in the array.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To count the number of words in a sentence in JavaScript, you can create a function 
+that splits the sentence into words and then counts the number of resulting elements in 
+the array.</p>
 <pre>
 function countWords(sentence) {
-// Check if the input is a valid string
-if (typeof sentence !== 'string') {
-return "Invalid input. Please provide a valid sentence.";
-// Use a regular expression to split the sentence into words
-const words = sentence.split(/\s+/);
-// Filter out empty strings
-const nonEmptyWords = words.filter(word = > word.length > 0);
-// Count the number of words
-const wordCount = nonEmptyWords.length;
-return wordCount;
+  // Check if the input is a valid string
+  if (typeof sentence !== 'string') {
+    return "Invalid input. Please provide a valid sentence.";
+  }
+  // Use a regular expression to split the sentence into words
+  const words = sentence.split(/\s+/);
+  // Filter out empty strings
+  const nonEmptyWords = words.filter(word => word.length > 0);
+  // Count the number of words
+  const wordCount = nonEmptyWords.length;
+  return wordCount;
+}
 // Example usage:
 const sentence = "This is a sample sentence.";
 const result = countWords(sentence);
-console.log(' The sentence "${sentence}" has ${result&rbrack; words.');
+console.log(`The sentence "${sentence}" has ${result} words.`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js108">108. Find the Union of Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the union of two arrays in JavaScript, you can create a function that concatenates the arrays and
-removes duplicate elements.
+<p>To find the union of two arrays in JavaScript, you can create a function that 
+concatenates the arrays and removes duplicate elements.</p>
 <pre>
 function findUnion(arrl, arr2) {
-// Check if the inputs are valid arrays
-if (’Array.isArray(arrl) 11 !Array.isArray(arr2)) {
-return "Invalid inputs. Please provide valid arrays.";
-// Concatenate the arrays and remove duplicates
-const unionArray = Array.from(new Set(&lbrack;...arrl, ...arr2&rbrack;));
-return unionArray;
+  // Check if the inputs are valid arrays
+  if (’Array.isArray(arrl) 11 !Array.isArray(arr2)) {
+    return "Invalid inputs. Please provide valid arrays.";
+  }
+  // Concatenate the arrays and remove duplicates
+  const unionArray = Array.from(new Set(&lbrack;...arrl, ...arr2&rbrack;));
+  return unionArray;
+}
 // Example usage:
 const arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
@@ -2989,107 +2992,107 @@ console.log("Union of Arrays:", result);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js109">109. Calculate the Factorial of a Large Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Calculating the factorial of a large number can quickly lead to very large results, and JavaScript has
-limitations in terms of precision. To handle large factorials, you can use libraries that support arbitrary-
-precision arithmetic. One such library is the "Biglnt" type in JavaScript, which is available in modern
-environments.
+<p>Calculating the factorial of a large number can quickly lead to very large results, 
+and JavaScript has limitations in terms of precision. To handle large factorials, you 
+can use libraries that support arbitrary-precision arithmetic. One such library is the 
+"Biglnt" type in JavaScript, which is available in modern environments.</p>
 <pre>
 function calculateFactorial(n) {
-// Check if the input is a valid non-negative integer
-if (INumber.isInteger(n) 11 n < 0) {
-return "Invalid input. Please provide a non-negative integer.";
-}
-// Use Biglnt to handle large factorials
-let result = Biglnt(l);
-for (let i = 2;i<=n;i++){
-result &ast;= Biglnt(i);
-}
-return result.toStringO;
+  // Check if the input is a valid non-negative integer
+  if (!Number.isInteger(n) || n < 0) {
+    return "Invalid input. Please provide a non-negative integer.";
+  }
+  // Use BigInt to handle large factorials
+  let result = BigInt(l);
+  for (let i = 2;i<=n;i++){
+    result &ast;= Biglnt(i);
+  }
+  return result.toStringO;
 }
 // Example usage:
 const number = 50;
 const result = calculateFactorial(number);
-console.log(' The factorial of ${number} is:\n$ {result}');
+console.log(`The factorial of ${number} is:\n$ {result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js110">110. Check if a Number is a Strong Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A strong number (or digital factorial) is a number such that the sum of its individual digits, each
-factorialized, is equal to the number itself. To check if a number is a strong number in JavaScript, you
-can create a function that calculates the factorial of each digit and checks if their sum equals the original
-number.
+<p>A strong number (or digital factorial) is a number such that the sum of its individual 
+digits, each factorialized, is equal to the number itself. To check if a number is a 
+strong number in JavaScript, you can create a function that calculates the factorial of 
+each digit and checks if their sum equals the original number.</p>
 <pre>
 function calculateFactorial(number) {
-let result = 1;
-for (let i = 2; i < = number; i+ +) {
-result &ast;= i;
-}
-return result;
+  let result = 1;
+  for (let i = 2; i < = number; i++) {
+    result &ast;= i;
+  }
+  return result;
 }
 function isStrongNumber(num) {
-// Check if the input is a non-negative integer
-if (!Number.is!nteger(num) 11 num < 0) {
-return false;
-}
-// Convert the number to an array of digits
-const digits = Array.from(String(num), Number);
-// Calculate the factorial of each digit and sum them
-const digitFactorialSum = digits.reduce((sum, digit) = > sum + calculateFactorial(digit), 0);
-// Check if the sum equals the original number
-return digitFactorialSum = = = num;
+  // Check if the input is a non-negative integer
+  if (!Number.is!nteger(num) 11 num < 0) {
+    return false;
+  }
+  // Convert the number to an array of digits
+  const digits = Array.from(String(num), Number);
+  // Calculate the factorial of each digit and sum them
+  const digitFactorialSum = digits.reduce((sum, digit) = > sum + calculateFactorial(digit), 0);
+  // Check if the sum equals the original number
+  return digitFactorialSum === num;
 }
 // Example usage:
 const testNumber = 145;
 const result = isStrongNumber(testNumber);
-console.log(' $ {testNumber} is a strong number: $ {result}');
+console.log(`${testNumber} is a strong number: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js111">111. Check if a Number is a Narcissistic Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A Narcissistic Number (or Armstrong Number) is a number that is the sum of its own digits each raised to
-the power of the number of digits. For example, 15 3 is a narcissistic number because 1A3 + 5A3 + 3A3 equals
-153.
+<p>A Narcissistic Number (or Armstrong Number) is a number that is the sum of its own 
+digits each raised to the power of the number of digits. For example, 153 is a 
+narcissistic number because 1^3 + 5^3 + 3^3 equals 153.</p>
 <pre>
 function isNarcissisticNumber(num) {
-// Check if the input is a non-negative integer
-if (’Number.isInteger(num) 11 num < 0) {
-return false;
-}
-const numStr = num.toStringO;
-const numDigits = numStr.length;
-let sum = 0;
-for (let i = 0; i < numDigits; i+ +) {
-const digit = parse!nt(numStr&lbrack;i&rbrack;, 10);
-sum + = Math.pow(digit, numDigits);
-}
-return sum = = = num;
+  // Check if the input is a non-negative integer
+  if (!Number.isInteger(num) || num < 0) {
+    return false;
+  }
+  const numStr = num.toStringO;
+  const numDigits = numStr.length;
+  let sum = 0;
+  for (let i = 0; i < numDigits; i+ +) {
+    const digit = parse!nt(numStr&lbrack;i&rbrack;, 10);
+    sum + = Math.pow(digit, numDigits);
+  }
+  return sum === num;
 }
 // Example usage:
 const testNumber = 1634;
 const result = isNarcissisticNumber(testNumber);
-console.log(' ${testNumber} is a Narcissistic Number: $ {result}');
+console.log(`${testNumber} is a Narcissistic Number: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js112">112. Count the Number of Consonants in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-You can create a JavaScript function to count the number of consonants in a given string.
+<p>You can create a JavaScript function to count the number of consonants in a given string.</p>
 <pre>
 function countConsonants(str) {
-// Check if the input is a valid string
-if (typeof str !== 'string') {
-return "Invalid input. Please provide a valid string.";
-}
-// Define a regular expression pattern for consonants
-const consonantPattern = /&lbrack;bcdfghjklmnpqrstvwxyz&rbrack;/gi;
-// Use match() to find all consonants in the string
-const consonants = str.match(consonantPattern);
-// Return the count of consonants
-return consonants ? consonants.length: 0;
+  // Check if the input is a valid string
+  if (typeof str !== 'string') {
+    return "Invalid input. Please provide a valid string.";
+  }
+  // Define a regular expression pattern for consonants
+  const consonantPattern = /&lbrack;bcdfghjklmnpqrstvwxyz&rbrack;/gi;
+  // Use match() to find all consonants in the string
+  const consonants = str.match(consonantPattern);
+  // Return the count of consonants
+  return consonants ? consonants.length: 0;
 }
 // Example usage:
 const teststring = "Hello World";
 const result = countConsonants(testString);
-console.log(' The number of consonants in "${testString}" is: ${result}');
+console.log(`The number of consonants in "${testString}" is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js113">113. Check if a Number is a Triangular Number</h2>
@@ -3100,24 +3103,24 @@ Mathematically, a triangular number <span class="consolas">T_ n</span> is given 
 formula: <span class="consolas">T_n = n&ast;(n+l)/2</span>.</p>
 <pre>
 function isTriangularNumber(num) {
-// Check if the input is a non-negative integer
-if (’Number.isInteger(num) 11 num < 0) {
-return false;
-}
-// Iterate through natural numbers until the sum exceeds or equals the input number
-let sum = 0;
-let n = 0;
-while (sum < num) {
-n++;
-sum + = n;
-}
-// Check if the input number is equal to a triangular number
-return sum = = = num;
+  // Check if the input is a non-negative integer
+  if (!Number.isInteger(num) || num < 0) {
+    return false;
+  }
+  // Iterate through natural numbers until the sum exceeds or equals the input number
+  let sum = 0;
+  let n = 0;
+  while (sum < num) {
+    n++;
+    sum += n;
+  }
+  // Check if the input number is equal to a triangular number
+  return sum === num;
 }
 // Example usage:
 const testNumber = 10;
 const result = isTriangularNumber(testNumber);
-console.log(' $ {testNumber} is a triangular number: $ {result}');
+console.log(`${testNumber} is a triangular number: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js114">114. Find the Area of a Trapezoid</h2>
@@ -3128,53 +3131,58 @@ console.log(' $ {testNumber} is a triangular number: $ {result}');
 <span class="consolas">Area = (a + b) &ast; h / 2</span>.</p>
 <pre>
 function trapezoidArea(basel, base2, height) {
-// Check if the inputs are valid numbers
-if (isNaN(basel) 11 isNaN(base2) || isNaN(height) 11 basel <= 0 11 base2 <= 0 11 height <= 0) {
-return "Invalid input. Please provide valid numbers.";
-// Calculate the area of the trapezoid
-const area = 0.5 &ast; height &ast; (basel + base2);
-return area;
+  // Check if the inputs are valid numbers
+  if (isNaN(basel) 11 isNaN(base2) || isNaN(height) 11 basel <= 0 11 base2 <= 0 11 height <= 0) {
+    return "Invalid input. Please provide valid numbers.";
+  }
+  // Calculate the area of the trapezoid
+  const area = 0.5 &ast; height &ast; (basel + base2);
+  return area;
+}
 // Example usage:
 const basel Length = 5;
 const base2Length = 9;
 const trapezoidHeight = 4;
 const result = trapezoidArea(baselLength, base2Length, trapezoidHeight);
-console.log(' The area of the trapezoid is: $ {result}');
+console.log(`The area of the trapezoid is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js115">115. Calculate the Greatest Common Divisor (GCD) of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The Greatest Common Divisor (GCD), also known as the Greatest Common Factor (GCF) or Highest Common
-Factor (HCF), is the largest positive integer that divides both numbers without leaving a remainder. There
-are different algorithms to calculate the GCD of two numbers, and one commonly used algorithm is the
-Euclidean Algorithm.
+<p>The Greatest Common Divisor (GCD), also known as the Greatest Common Factor (GCF) or 
+Highest Common Factor (HCF), is the largest positive integer that divides both numbers 
+without leaving a remainder. There are different algorithms to calculate the GCD of two 
+numbers, and one commonly used algorithm is the Euclidean Algorithm.</p>
 <pre>
 function calculateGCD(a, b) {
-// Check if the inputs are valid numbers
-if (’Number.isInteger(a) 11 ’Number.isInteger(b) 11 a < = 0 11 b < = 0) {
-return "Invalid input. Please provide valid positive integers.";
-// Apply the Euclidean Algorithm to find the GCD
-while (b !== 0) {
-const temp = b;
-b = a % b;
-a = temp;
+  // Check if the inputs are valid numbers
+  if (!Number.isInteger(a) || !Number.isInteger(b) || a < = 0 || b < = 0) {
+    return "Invalid input. Please provide valid positive integers.";
+  }
+  // Apply the Euclidean Algorithm to find the GCD
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
 }
-return a;
 // Example usage:
 const numberl = 48;
 const number2 = 18;
 const gcdResult = calculateGCD(numberl, number 2);
-console.log(' The GCD of ${numberl} and ${number2} is: ${gcdResult}');
+console.log(`The GCD of ${numberl} and ${number2} is: ${gcdResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js116">116. Check if a Number is a Fibonacci Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A Fibonacci number is a number in the Fibonacci sequence, which is a series of numbers where each number
-is the sum of the two preceding ones. The sequence starts with 0 and 1.
+<p>A Fibonacci number is a number in the Fibonacci sequence, which is a series of 
+numbers where each number is the sum of the two preceding ones. The sequence starts 
+with 0 and 1.</p>
 <pre>
 function isFibonacciNumber(num) {
-// Check if the input is a non-negative integer
-if (’Number.isInteger(num) 11 num < 0) {
+  // Check if the input is a non-negative integer
+  if (’Number.isInteger(num) 11 num < 0) {
 return false;
 // Check if the number is a perfect square
 const isPerfectSquare = (n) = > {
