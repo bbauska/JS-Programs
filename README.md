@@ -2754,10 +2754,10 @@ console.logC'Random Quote:", randomQuote);
 <p>To find the intersection of two arrays in JavaScript, you can create a function 
 that iterates through both arrays and identifies the common elements.</p>
 <pre>
-function findlntersection(arrl, arr2) {
+function findIntersection(arrl, arr2) {
 
   // Check if the inputs are valid arrays
-  if (’Array.isArray(arrl) || !Array.isArray(arr2)) {
+  if (!Array.isArray(arrl) || !Array.isArray(arr2)) {
     return "Invalid inputs. Please provide valid arrays.";
   }
 
@@ -2772,7 +2772,7 @@ function findlntersection(arrl, arr2) {
 // Example usage:
 const arrayl = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
-const result = findlntersection(arrayl, array2);
+const result = findIntersection(arrayl, array2);
 console.log("Intersection of Arrays:", result);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2784,25 +2784,25 @@ console.log("Intersection of Arrays:", result);
 <p>Here's a simple function that performs the conversion:</p>
 <pre>
 function feetToMeters(feet) {
-// Check if the input is a valid number
-if (isNaN(feet)) {
-return "Invalid input. Please provide a valid number of feet.";
-}
-// Perform the conversion
-const meters = feet &ast; 0.3048;
-return meters;
+  // Check if the input is a valid number
+  if (isNaN(feet)) {
+    return "Invalid input. Please provide a valid number of feet.";
+  }
+  // Perform the conversion
+  const meters = feet &ast; 0.3048;
+  return meters;
 }
 
 // Example usage:
-const feetValue =10;
+const feetValue = 10;
 const meters Value = feetToMeters(feetValue);
 console.log(`${feetValue} feet is equal to ${metersValue.toFixed(2)} meters`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js101">101. Convert Days to Years, Months, and Days</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To convert a given number of days into years, months, and remaining days in JavaScript, you can use the
-following function:
+<p>To convert a given number of days into years, months, and remaining days in 
+JavaScript, you can use the following function:</p>
 <pre>
 function convertDaysToYearsMonthsDays(days) {
 
