@@ -1423,14 +1423,14 @@ let inputstring = prompt("Enter a string:");
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Prompt user for a target character and a replacement character
-  let targetChar = promptf'Enter the target character:");
+  let targetChar = prompt("Enter the target character:");
   let replacementchar = prompt("Enter the replacement character:");
   // Check if targetChar is a single character and input is not empty
-  if (targetChar.length = = = 1) {
+  if (targetChar.length === 1) {
     // Replace all occurrences of targetChar with replacementchar
     let modifiedString = inputString.split(targetChar).join(replacementChar);
     // Display the modified string
-    console.log(`Modified String: $ {modifiedString}`);
+    console.log(`Modified String: ${modifiedString}`);
   } else {
     console.log("Please enter a valid target character (single character).");
   }
@@ -1441,7 +1441,8 @@ if (inputString.length > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js36">36. Reverse a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a string and then reverses and displays the characters of the string.
+<p>This program prompts the user to enter a string and then reverses and displays the 
+characters of the string.</p>
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
@@ -1457,7 +1458,7 @@ if (inputString.length > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js37">37. Check the Number of Occurrences of a Character in the String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks the number of occurrences of a character in a given string:
+<p>This program checks the number of occurrences of a character in a given string:</p>
 <pre>
 // Prompt user for a string and a character
 let inputstring = prompt("Enter a string:");
@@ -1479,17 +1480,19 @@ if (inputString.length > 0 && targetChar.length = = = 1) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js38">38. Convert the First Letter of a String into Uppercase</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program converts the first letter of a string to uppercase:
+<p>This program converts the first letter of a string to uppercase:</p>
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
+
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Convert the first letter to uppercase
   let resultstring = inputString.charAt(0).toUpperCase() + inputString.slice(l);
+  
   // Display the result
-  console.log(' Original String: $ {inputstring}');
-  console.log(' String with First Letter Uppercase: $ {resultstring}');
+  console.log(`Original String: ${inputstring}`);
+  console.log(`String with First Letter Uppercase: ${resultstring}`);
 } else {
   console.log("Please enter a valid string.");
 }
@@ -1497,7 +1500,7 @@ if (inputString.length > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js39">39. Count the Number of Vowels in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program counts the number of vowels in a given string:
+<p>This program counts the number of vowels in a given string:</p>
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
@@ -1516,7 +1519,7 @@ if (inputString.length > 0) {
   }
   // Call the function and display the result
   let numberOfVowels = countVowels(inputString);
-  console.log(' Number of vowels in '${inputString}': ${numberOfVowels}');
+  console.log(`Number of vowels in '${inputString}': ${numberOfVowels}`);
 } else {
   console.log("Please enter a valid string.");
 </pre>
@@ -1533,13 +1536,16 @@ if (inputString.length > 0) {
   // Prompt user for start and end characters
   let startChar = prompt("Enter the starting characters:");
   let endChar = promptf'Enter the ending characters:");
+
   // Check if the string starts and ends with the specified characters
   if (inputString.startsWith(startChar) && inputString.endsWith(endChar)) {
-    console.log(' The string '$ {inputstring}' starts with '${startChar}' and ends with '${endChar}'.');
+    console.log(`The string '${inputstring}' starts with '${startChar}' and ends with '${endChar}'.`);
   } else {
-    console.log(' The string '$ {inputstring}' does not start with '${startChar}' or does not end with '${endChar}‘.');
+    console.log(`The string '${inputstring}' does not start with '${startChar}' or does not end with '${endChar}'.`);
+  }
 } else {
   console.log("Please enter a valid string.");
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js41">41. Replace All Occurrences of a String</h2>
@@ -1550,26 +1556,30 @@ the global ( <span class="consolas">g</span> ) flag.</p>
 <pre>
 // Example string
 let originalstring = "Hello world, world!";
+
 // String to replace
 let searchstring = "world";
+
 // Replacement string
 let replacementstring = "universe";
+
 // Replace all occurrences using replace() with a global regex
 let modifiedString = originalString.replace(new RegExp(searchString, 'g'), replacementstring);
 // Display the result
-console.log(' Original String: ${originalString}' );
-console.log(' Modified String: ${modifiedString}');
+console.log(`Original String: ${originalString}`);
+console.log(`Modified String: ${modifiedString}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js42">42. Create Multiline Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program creates multiline strings using template literals (introduced in ECMAScript 6).
+<p>This program creates multiline strings using template literals (introduced in ECMAScript 6).</p>
 <pre>
 // Multiline string using template literals
-let multilineString =
+let multilineString = `
 This is a multiline string.
 It spans multiple lines.
 You can include line breaks and indentation easily.
+`;
 console.log(multilineString);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1579,10 +1589,12 @@ console.log(multilineString);
 <pre>
 // Example number
 let amount = 1234567.89;
+
 // Format as currency string
 let formattedAmount = amount.toLocaleString('en-US', {style: ’currency', currency: ‘USD1});
+
 // Display the formatted currency string
-console.log(' Formatted Amount: $ {formattedAmount}');
+console.log(`Formatted Amount: ${formattedAmount}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js44">44. Generate Random String</h2>
@@ -1591,18 +1603,19 @@ console.log(' Formatted Amount: $ {formattedAmount}');
 generates a string with random characters.</p>
 <pre>
 function generateRandomString(length) {
-const characters = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789l;
-let randomstring =
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+let randomstring = '';
 for (let i = 0; i < length; i++) {
-  const randomindex = Math.floor(Math.random() &ast; characters.length);
-  randomstring += characters.charAt(randomlndex);
+  const randomIndex = Math.floor(Math.random() &ast; characters.length);
+  randomstring += characters.charAt(randomIndex);
 }
   return randomstring;
 }
 // Generate a random string of length 8
 let randomstring = generateRandomString(8);
+
 // Display the random string
-console.log(' Random String: $ {randomstring}');
+console.log(`Random String: ${randomstring}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js45">45. Check if a String Starts with Another String</h2>
@@ -1613,10 +1626,11 @@ console.log(' Random String: $ {randomstring}');
 // Example strings
 let mainString = "Hello, World!";
 let searchstring = "Hello";
+
 // Check if mainString starts with searchstring
 let startsWith = mainString.startsWith(searchString);
 // Display the result
-console.log(' Does the string start with '${searchString}'? ${startsWith}');
+console.log(`Does the string start with '${searchString}'? ${startsWith}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js46">46. Trim a String</h2>
@@ -1625,12 +1639,14 @@ console.log(' Does the string start with '${searchString}'? ${startsWith}');
 <span class="consolas">trim()</span> method.</p>
 <pre>
 // Example string with leading and trailing whitespaces
-let stringWithSpaces = " Hello, World!
+let stringWithSpaces = " Hello, World! ";
+
 // Trim the string
 let trimmedString = stringWithSpaces.trim();
+
 // Display the result
-console.log(' Original String: '$ {stringWithSpaces}'');
-console.log(' Trimmed String: '${trimmedString}'');
+console.log(`Original String: '${stringWithSpaces}'`);
+console.log(`Trimmed String: '${trimmedString}'`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js47">47. Check Whether a String Contains a Substring</h2>
@@ -1647,7 +1663,7 @@ let substringToCheck = "World";
 let containsSubstring = mainString.includes(substringToCheck);
 
 // Display the result
-console.log(' Does the string contain '${substringToCheck}'? ${containsSubstring}');
+console.log(`Does the string contain '${substringToCheck}'? ${containsSubstring}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js48">48. Compare Two Strings</h2>
@@ -1659,12 +1675,12 @@ operators ( <span class="consolas">=== , !== , &lt; , &gt; , &lt;= , &gt;=</span
 let string 1 = "Hello";
 let string2 = "hello";
 // Case-sensitive comparison
-let caseSensitiveComparison = stringl = = = string2;
+let caseSensitiveComparison = stringl === string2;
 // Case-insensitive comparison
-let caselnsensitiveComparison = string l.toLowerCaseQ = = = string2.toLowerCase();
+let caselnsensitiveComparison = string l.toLowerCase() === string2.toLowerCase();
 // Display the results
-console.log(' Case-sensitive comparison: $ {caseSensitiveComparison}');
-console.log(' Case-insensitive comparison: $ {caselnsensitiveComparison}');
+console.log(`Case-sensitive comparison: ${caseSensitiveComparison}`);
+console.log(`Case-insensitive comparison: ${caselnsensitiveComparison}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js49">49. Encode a String to Base64</h2>
@@ -1676,8 +1692,8 @@ let originalstring = "Hello, !";
 // Encode the string to Base64 (for non-ASCII characters)
 let base64EncodedString = btoa(encodeURIComponent(originalString));
 // Display the result
-console.log(' Original String: $ {originalstring}' );
-console.log(' Base64 Encoded String: ${base64EncodedString}');
+console.log(`Original String: ${originalstring}` );
+console.log(`Base64 Encoded String: ${base64EncodedString}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js50">50. Replace all Instances of a Character in a String</h2>
@@ -1694,8 +1710,8 @@ let replacementchar = "x";
 // Replace all instances of charToReplace with replacementchar
 let modifiedString = originalString.replace(new RegExp(charToReplace, 'g'), replacementchar);
 // Display the result
-console.log(' Original String: ${originalString}' );
-console.log(' Modified String: ${modifiedString}');
+console.log(`Original String: ${originalString}`);
+console.log(`Modified String: ${modifiedString}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js51">51. Replace All Line Breaks with</h2>
@@ -1750,14 +1766,14 @@ formatting the date, such as specifying the date style and time zone.</p>
 let currentDate = new Date();
 // Format the date using toLocaleDateStringO
 let formattedDate = currentDate.toLocaleDateString('en-US', {
-year: 'numeric',
-month: 'long',
-day: 'numeric',
-weekday: long',
-timeZone: 'UTC
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  weekday: long',
+  timeZone: 'UTC
 });
 // Display the result
-console.log(' Formatted Date: $ {formattedDate}');
+console.log(`Formatted Date: ${formattedDate}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js54">54. Display Current Date</h2>
