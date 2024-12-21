@@ -1906,13 +1906,16 @@ console.log("Random Item:", randomitem);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js61">61. Perform Intersection Between Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To find the intersection (common elements) between two arrays in JavaScript, you can use various methods.
+<p>To find the intersection (common elements) between two arrays in JavaScript, you can 
+use various methods.</p>
 <pre>
 // Example arrays
 let arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
 let array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
+
 // Find the intersection using filter
 let intersection = arrayl.filter(value => array2.includes(value));
+
 // Display the result
 console.log("Intersection:", intersection);
 </pre>
@@ -8922,16 +8925,17 @@ console.log(circleCircumference(5));
 <p>Find the shortest word in a given string.</p>
 <pre>
 const shortestWord = (str) => str.split(' ').reduce((shortest, word) =>
-(word.length < shortest.length ? word : shortest), '');
-console.log(shortestWord("This is a test sentence"));
-// Output: "a"
+(word.length < shortest.length ? word : shortest), ");
+console.log(shortestWord("This is a test sentence"));  // Output: "a"
 </pre>
 
 <h2 id="js-221">221. Find the Longest Word Length in a String</h2>
 <p>Find the length of the longest word in a given string.</p>
 <pre>
-const longestWordLength = (str) => Math.max(...str.split(' ').map(word =>
-word.length));
+const longestWordLength = (str) => Math.max(...str.split(' ').map(word => 
+  word.length));
+
+// Example usage
 console.log(longestWordLength("This is a test sentence")); // Output: 8
 </pre>
 
@@ -8962,29 +8966,31 @@ number of sides.</p>
 <pre>
 const regularPolygonPerimeter = (sideLength, numSides) => sideLength &ast;
 numSides;
-console.log(regularPolygonPerimeter(5, 6));
-// Output: 30
+
+// Example usage
+console.log(regularPolygonPerimeter(5, 6)); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-225">225. Calculate the Area of an Equilateral Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of an equilateral triangle using its side length.</p>
 <pre>
-const equilateralTriangleArea = (sideLength) => (Math.sqrt(3) &ast; sideLength
-&ast;&ast; 2) / 4;
-console.log(equilateralTriangleArea(5));
-// Output: 10.825317547305486
-</pre>
+const equilateralTriangleArea = (sideLength) => (Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 4;
 
+// Example usage
+console.log(equilateralTriangleArea(5)); // Output: 10.825317547305486
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-226">226. Check if a Number is a Harshad Smith Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is both a Harshad number and a Smith number.</p>
 <pre>
 const isHarshadSmithNumber = (num) => isHarshadNumber(num) &&
 isSmithNumber(num);
-console.log(isHarshadSmithNumber(22));
-// Output: true
-console.log(isHarshadSmithNumber(10));
-// Output: false
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+console.log(isHarshadSmithNumber(22)); // Output: true
+console.log(isHarshadSmithNumber(10)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-227">227. Check if a Number is a Perfect Power</h2>
@@ -9005,10 +9011,10 @@ power++;
 }
 return false;
 };
-console.log(isPerfectPower(64));
-// Output: true
-console.log(isPerfectPower(25));
-// Output: false
+
+// Example usage
+console.log(isPerfectPower(64)); // Output: true
+console.log(isPerfectPower(25)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-228">228. Calculate the Sum of Digits Raised to Their Own Power</h2>
@@ -9027,12 +9033,11 @@ console.log(sumOfDigitsToPower(4150, 5));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Dudeney number.</p>
 <pre>
-const isDudeneyNumber = (num) => Math.cbrt(num) ===
-sumOfDigits(num);
-console.log(isDudeneyNumber(512));
-// Output: true
-console.log(isDudeneyNumber(27));
-// Output: false
+const isDudeneyNumber = (num) => Math.cbrt(num) === sumOfDigits(num);
+
+// Example usage
+console.log(isDudeneyNumber(512)); // Output: true
+console.log(isDudeneyNumber(27));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-230">230. Calculate the Area of a Regular Pentagon</h2>
@@ -9041,8 +9046,9 @@ Calculate the area of a regular pentagon using its side length.
 <pre>
 const regularPentagonArea = (sideLength) => (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2
 &ast; Math.sqrt(5))) &ast; sideLength &ast;&ast; 2;
-console.log(regularPentagonArea(5));
-// Output: 43.01193501472417
+
+// Example usage
+console.log(regularPentagonArea(5)); // Output: 43.01193501472417
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-231">231. Calculate the Volume of a Pyramid</h2>
@@ -9050,8 +9056,9 @@ console.log(regularPentagonArea(5));
 <p>Calculate the volume of a pyramid using its base area and height.</p>
 <pre>
 const pyramidVolume = (baseArea, height) => (1 / 3) &ast; baseArea &ast; height;
-console.log(pyramidVolume(25, 10));
-// Output: 83.33333333333333
+
+// Example usage
+console.log(pyramidVolume(25, 10)); // Output: 83.33333333333333
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-232">232. Check if a Number is a Wedderburn-Etherington Number</h2>
@@ -9059,15 +9066,14 @@ console.log(pyramidVolume(25, 10));
 <p>Check if a given number is a Wedderburn-Etherington number.</p>
 <pre>
 const isWedderburnEtheringtonNumber = (num) => {
-const primes = primeFactors(num);
-const factorials = primes.map((prime) => factorial(prime - 1));
-return factorials.reduce((product, factorial) => product &ast; factorial, 1) ===
-factorial(num);
+  const primes = primeFactors(num);
+  const factorials = primes.map((prime) => factorial(prime - 1));
+  return factorials.reduce((product, factorial) => product &ast; factorial, 1) === factorial(num);
 };
-console.log(isWedderburnEtheringtonNumber(6));
-// Output: true
-console.log(isWedderburnEtheringtonNumber(12));
-// Output: false
+
+// Example usage
+console.log(isWedderburnEtheringtonNumber(6));  // Output: true
+console.log(isWedderburnEtheringtonNumber(12)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-233">233. Calculate the Surface Area of a Cube</h2>
@@ -9075,8 +9081,9 @@ console.log(isWedderburnEtheringtonNumber(12));
 <p>Calculate the surface area of a cube using its side length.</p>
 <pre>
 const cubeSurfaceArea = (sideLength) => 6 &ast; sideLength &ast;&ast; 2;
-console.log(cubeSurfaceArea(5));
-// Output: 150
+
+// Example usage
+console.log(cubeSurfaceArea(5)); // Output: 150
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-234">234. Check if a Number is a Pluperfect Number</h2>
@@ -9085,20 +9092,20 @@ console.log(cubeSurfaceArea(5));
 <pre>
 const isPluperfectNumber = (num) => num ===
 sumOfDivisors(sumOfDivisors(num)) - num;
-console.log(isPluperfectNumber(28));
-// Output: true
-console.log(isPluperfectNumber(20));
-// Output: false
+
+// Example usage
+console.log(isPluperfectNumber(28)); // Output: true
+console.log(isPluperfectNumber(20)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-235">235. Calculate the Area of a Regular Octagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular octagon using its side length.</p>
 <pre>
-const regularOctagonArea = (sideLength) => 2 &ast; (1 + Math.sqrt(2)) &ast;
-sideLength &ast;&ast; 2;
-console.log(regularOctagonArea(5));
-// Output: 86.60254037844387
+const regularOctagonArea = (sideLength) => 2 &ast; (1 + Math.sqrt(2)) &ast; sideLength &ast;&ast; 2;
+
+// Example usage
+console.log(regularOctagonArea(5)); // Output: 86.60254037844387
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-236">236. Check if a Number is a Repunit Number</h2>
@@ -9106,6 +9113,8 @@ console.log(regularOctagonArea(5));
 <p>Check if a given number is a repunit number.</p>
 <pre>
 const isRepunitNumber = num => /^1+$/.test(num.toString());
+
+// Example usage
 console.log(isRepunitNumber(111)); // Output: true
 console.log(isRepunitNumber(11)); // Output: false
 </pre>
@@ -9115,8 +9124,9 @@ console.log(isRepunitNumber(11)); // Output: false
 <p>Calculate the volume of an ellipsoid using its semi-axes lengths.</p>
 <pre>
 const ellipsoidVolume = (a, b, c) => (4 / 3) &ast; Math.PI &ast; a &ast; b &ast; c;
-console.log(ellipsoidVolume(5, 3, 2));
-// Output: 125.66370614359172
+
+// Example usage
+console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-238">238. Check if a String is a Valid URL (Alternative Approach)</h2>
@@ -9124,10 +9134,10 @@ console.log(ellipsoidVolume(5, 3, 2));
 <p>Check if a given string is a valid URL using an alternative approach.</p>
 <pre>
 const isValidURLAlt = (url) => /^(ftp|http|https):\/\/&lbrack;^ "&rbrack;+$/.test(url);
-console.log(isValidURLAlt("https://www.example.com"));
-// Output: true
-console.log(isValidURLAlt("invalid url"));
-// Output: false
+
+// Example usage
+console.log(isValidURLAlt("https://www.example.com")); // Output: true
+console.log(isValidURLAlt("invalid url"));             // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-239">239. Check if a String is a Valid Tax Identification Number (TIN)</h2>
@@ -9135,10 +9145,10 @@ console.log(isValidURLAlt("invalid url"));
 <p>Check if a given string is a valid Tax Identification Number (TIN).</p>
 <pre>
 const isValidTIN = (tin) => /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
-console.log(isValidTIN("AB123456CD"));
-// Output: true
-console.log(isValidTIN("invalid tin"));
-// Output: false
+
+// Example usage
+console.log(isValidTIN("AB123456CD"));   // Output: true
+console.log(isValidTIN("invalid tin"));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-240">240. Check if a String is a Valid ISBN (International Standard Book Number)</h2>
@@ -9147,10 +9157,10 @@ console.log(isValidTIN("invalid tin"));
 <pre>
 const isValidISBN = (isbn) => /^(?:\d{9}&lbrack;\dX&rbrack;|(?:\d{3}-){2}\d{1}
 &lbrack;\dX&rbrack;)$/.test(isbn);
-console.log(isValidISBN("123456789"));
-// Output: true
-console.log(isValidISBN("invalid isbn"));
-// Output: false
+
+// Example usage
+console.log(isValidISBN("123456789"));    // Output: true
+console.log(isValidISBN("invalid isbn")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-241">241. Check if a String is a Valid IP Address</h2>
@@ -9159,18 +9169,20 @@ console.log(isValidISBN("invalid isbn"));
 <pre>
 const isValidIPAddress = (ip) => /^((25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})\.){3}
 (25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})$/.test(ip);
-console.log(isValidIPAddress("192.168.1.1"));
-// Output: true
-console.log(isValidIPAddress("invalid ip"));
-// Output: false
+
+// Example usage
+console.log(isValidIPAddress("192.168.1.1")); // Output: true
+console.log(isValidIPAddress("invalid ip")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-242">242. Reverse a String (Using Recursion)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Reverse a string using a recursive approach.</p>
 <pre>
-const reverseStringRecursive = str => str === '' ? '' :
+const reverseStringRecursive = str => str === " ? " :
 reverseStringRecursive(str.substr(1)) + str.charAt(0);
+
+// Example usage
 console.log(reverseStringRecursive('hello')); // Output: 'olleh'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9178,10 +9190,12 @@ console.log(reverseStringRecursive('hello')); // Output: 'olleh'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Count the occurrences of each element in a given array and return the counts in an object.</p>
 <pre>
-const countOccurrences = arr => arr.reduce((acc, curr) => (acc&lbrack;curr&rbrack; =
-(acc&lbrack;curr&rbrack; || 0) + 1, acc), {});
-console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;)); // Output: { '1': 3, '2': 2,
-'3': 1, '4': 1 }
+const countOccurrences = arr => arr.reduce((acc, curr) => 
+  (acc&lbrack;curr&rbrack; = (acc&lbrack;curr&rbrack; || 0) + 1, acc), {});
+
+// Example usage
+console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;)); 
+// Output: { '1': 3, '2': 2, '3': 1, '4': 1 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-244">244. Check if Two Arrays are Equal (Shallow Comparison)</h2>
@@ -9190,6 +9204,8 @@ console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;)); // Output: {
 <pre>
 const arraysAreEqual = (arr1, arr2) => arr1.length === arr2.length &&
 arr1.every((val, index) => val === arr2&lbrack;index&rbrack;);
+
+// Example usage
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 3&rbrack;)); // Output: true
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;)); // Output: false
 </pre>
@@ -9199,6 +9215,8 @@ console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;)); /
 <p>Find the minimum value in a given array of numbers.</p>
 <pre>
 const findMinValue = arr => Math.min(...arr);
+
+// Example usage
 console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;)); // Output: 1
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9207,16 +9225,18 @@ console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;)); // Output: 1
 <p>Flatten an array of nested arrays using the concat method.</p>
 <pre>
 const flattenArray = arr => &lbrack;&rbrack;.concat(...arr);
-console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 
-  4&rbrack;, &lbrack;5, 6&rbrack;&rbrack;)); // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
+
+// Example usage
+console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lbrack;5, 6&rbrack;&rbrack;)); // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-247">247. Find the Average of Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the average of numbers in a given array.</p>
 <pre>
-const findAverage = arr => arr.reduce((sum, num) => sum + num, 0) /
-arr.length;
+const findAverage = arr => arr.reduce((sum, num) => sum + num, 0) / arr.length;
+
+// Example usage
 console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9225,6 +9245,8 @@ console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 <p>Calculate the sum of the squares of numbers in a given array.</p>
 <pre>
 const sumSquares = arr => arr.reduce((sum, num) => sum + num &ast;&ast; 2, 0);
+
+// Example usage
 console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9234,11 +9256,12 @@ console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 considering case-insensitivity.</p>
 <pre>
 const isPalindromeIgnoringNonAlphaNumeric = str => {
-const cleanedStr = str.replace(/&lbrack;^a-zA-Z0-9&rbrack;/g, '').toLowerCase();
-return cleanedStr === cleanedStr.split('').reverse().join('');
+  const cleanedStr = str.replace(/&lbrack;^a-zA-Z0-9&rbrack;/g, ").toLowerCase();
+  return cleanedStr === cleanedStr.split(").reverse().join(");
 };
-console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a
-canal, Panama!")); // Output: true
+
+// Example usage
+console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a canal, Panama!")); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-250">250. Shuffle an Array (Using Fisher-Yates Algorithm)</h2>
@@ -9246,12 +9269,15 @@ canal, Panama!")); // Output: true
 <p>Shuffle the elements of an array using the Fisher-Yates shuffle algorithm.</p>
 <pre>
 const shuffleArrayFisherYates = arr => {
-for (let i = arr.length - 1; i > 0; i--) {
-const j = Math.floor(Math.random() &ast; (i + 1));
-&lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; = &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
-}
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() &ast; (i + 1));
+    &lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; 
+	= &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
+  }
 return arr;
 };
+
+// Example usage
 console.log(shuffleArrayFisherYates(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: &lbrack;3, 1, 4, 2,
 5&rbrack; (randomly shuffled)
 </pre>
@@ -9267,6 +9293,8 @@ const data = &lbrack;
   { name: 'Alice', age: 25 }, 
   { name: 'Bob', age: 20 }, 
   { name: 'Carol', age: 30 }&rbrack;;
+
+// Example usage
 console.log(sortByProperty(data, 'age'));
 // Output: &lbrack;
 // { name: 'Bob', age: 20 }, 
@@ -9280,6 +9308,8 @@ console.log(sortByProperty(data, 'age'));
 <pre>
 const originalSentence = "Hello world, how are you?";
 const reversedSentence = reverseWords(originalSentence);
+
+// Example usage
 console.log(reversedSentence); // Output: "you? are how world, Hello"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9290,9 +9320,13 @@ console.log(reversedSentence); // Output: "you? are how world, Hello"
 const findMedian = arr => {
 const sortedArr = arr.sort((a, b) => a - b);
 const middle = Math.floor(sortedArr.length / 2);
-return sortedArr.length % 2 === 0 ? (sortedArr&lbrack;middle - 1&rbrack; +
-sortedArr&lbrack;middle&rbrack;) / 2 : sortedArr&lbrack;middle&rbrack;;
+return sortedArr.length % 2 === 0 ? 
+  (sortedArr&lbrack;middle - 1&rbrack; 
+  + sortedArr&lbrack;middle&rbrack;) / 2 
+  : sortedArr&lbrack;middle&rbrack;;
 };
+
+// Example usage
 console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;)); // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9301,6 +9335,8 @@ console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;)); // Output: 3
 <p>Count the number of vowels in a given string.</p>
 <pre>
 const countVowels = str => (str.match(/&lbrack;aeiou&rbrack;/gi) || &lbrack;&rbrack;).length;
+
+// Example usage
 console.log(countVowels('Hello, how are you?')); // Output: 7
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9313,6 +9349,8 @@ const isTribonacciNumberAlt = num => &lbrack;0, 0,
 arr&lbrack;i - 3&rbrack; + 
 arr&lbrack;i - 2&rbrack; +
 arr&lbrack;i - 1&rbrack;).includes(num);
+
+// Example usage
 console.log(isTribonacciNumberAlt(21)); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9324,6 +9362,8 @@ const fibonacciSequence = n =>
   &lbrack;...Array(n)&rbrack;.reduce((fibSeq, _, i) =>
   fibSeq.concat(i > 1 ? fibSeq&lbrack;i - 1&rbrack; + 
   fibSeq&lbrack;i - 2&rbrack; : i), &lbrack;0, 1&rbrack;);
+
+// Example usage
 console.log(fibonacciSequence(10));
 // Output: &lbrack;0, 1, 1, 2, 3, 5, 8, 13, 21, 34&rbrack;
 </pre>
@@ -9333,6 +9373,8 @@ console.log(fibonacciSequence(10));
 <p>Get the ASCII value of a given character.</p>
 <pre>
 const getAsciiValue = char => char.charCodeAt(0);
+
+// Example usage
 console.log(getAsciiValue('A')); // Output: 65
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9342,6 +9384,8 @@ console.log(getAsciiValue('A')); // Output: 65
 (case-insensitive).</p>
 <pre>
 const isIsogram = str => new Set(str.toLowerCase()).size === str.length;
+
+// Example usage
 console.log(isIsogram('hello')); // Output: false
 console.log(isIsogram('world')); // Output: true
 </pre>
@@ -9354,6 +9398,8 @@ the count of differing characters at corresponding positions.</p>
 const hammingDistance = (str1, str2) => 
 &lbrack;...str1&rbrack;.reduce((distance, char, i) => 
   distance + (char !== str2&lbrack;i&rbrack;), 0);
+
+// Example usage
 console.log(hammingDistance('karolin', 'kathrin')); // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9364,8 +9410,10 @@ Pythagorean theorem.</p>
 <pre>
 const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) => 
   Math.sqrt((x2 - x1) &ast;&ast; 2 + (y2 - y1) &ast;&ast; 2);
-  console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));
-  // Output: 5 (Pythagorean triple: 3^2 + 4^2 = 5^2)
+
+// Example usage
+console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));
+// Output: 5 (Pythagorean triple: 3^2 + 4^2 = 5^2)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-261">261. Check if a String is a Positive Number (No Sign or Decimal Allowed)</h2>
@@ -9373,6 +9421,8 @@ const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) =>
 <p>Check if a given string represents a positive integer without any sign or decimal point.</p>
 <pre>
 const isPositiveNumber = str => /^&lbrack;0-9&rbrack;+$/.test(str);
+
+// Example usage
 console.log(isPositiveNumber('123'));
 // Output: true
 console.log(isPositiveNumber('-123'));
@@ -9385,6 +9435,8 @@ console.log(isPositiveNumber('-123'));
 <pre>
 const findFirstNonRepeating = str => &lbrack;...str&rbrack;.find(char => 
   str.indexOf(char) === str.lastIndexOf(char));
+
+// Example usage
 console.log(findFirstNonRepeating('hello'));
 // Output: 'h'
 </pre>
@@ -9394,14 +9446,19 @@ console.log(findFirstNonRepeating('hello'));
 <p>Calculate the area of a kite using the lengths of its diagonals.</p>
 <pre>
 const areaOfKite = (d1, d2) => 0.5 &ast; d1 &ast; d2;
+
+// Example usage
 console.log("Area of the kite:", areaOfKite(10, 6)); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-264">264. Calculate the Area of a Sector</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a sector within a circle based on the provided radius and angle.</p>
+<p>Example: radius=5, angle=60.</p>
 <pre>
 const sectorArea = (radius, angle) => (Math.PI &ast; radius &ast;&ast; 2 &ast; angle) / 360;
+
+// Example usage
 console.log(sectorArea(5, 60)); // Output: 5.235987755982989
 </pre>
 
