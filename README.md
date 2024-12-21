@@ -691,8 +691,8 @@ if (!isNaN(minRange) && !isNaN(maxRange) && minRange &lt; maxRange) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js10">10. Check if a number is Positive, Negative, or Zero</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a number and checks whether it is positive, negative, or zero. It then
-displays the result.
+<p>This program prompts the user to enter a number and checks whether it is positive, 
+negative, or zero. It then displays the result.</p>
 <pre>
 // Prompt user for a number
 let number = parseFloat(prompt("Enter a number:"));
@@ -1172,7 +1172,6 @@ if (’isNaN(number) && Number.isInteger(number) && number > 0) {
 <p>This program calculates the sum of natural numbers up to a given positive integer using recursion. It
 prompts the user to enter a positive integer n and then calculates and displays the sum using a recursive
 function.</p>
-
 <pre>
 // Define a recursive function to calculate the sum of natural numbers
 function sumOfNaturalNumbers(n) {
@@ -1320,8 +1319,8 @@ if (lisNaN(number) && Number.islnteger(number) && number >= 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js31">31. Convert Decimal to Binary</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program converts a decimal number to its binary equivalent. It prompts the user to enter a decimal
-number and then calculates and displays its binary representation.
+<p>This program converts a decimal number to its binary equivalent. It prompts the user 
+to enter a decimal number and then calculates and displays its binary representation.</p>
 <pre>
 // Function to convert decimal to binary
 function decimalToBinary(decimalNumber) {
@@ -1350,7 +1349,8 @@ if (!isNaN(decimalNumber) && Number jsInteger(decimalNumber) && decimalNumber >=
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js32">32. Find ASCII Value of Character</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program prompts the user to enter a character and then calculates and displays its ASCII val
+<p>This program prompts the user to enter a character and then calculates and displays 
+its ASCII value.</p>
 <pre>
 // Prompt user for a character
 let character = prompt("Enter a character:");
@@ -1366,8 +1366,8 @@ if (character.length = = = 1) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js33">33. Check Whether a String is Palindrome or Not</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks whether a given string is a palindrome or not. A palindrome is a string that reads the
-same forward as backward.
+<p>This program checks whether a given string is a palindrome or not. A palindrome is a 
+string that reads the same forward as backward.</p>
 <pre>
 // Function to check if a string is a palindrome
 function isPalindrome(str) {
@@ -1716,8 +1716,9 @@ console.log(`Modified String: ${modifiedString}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js51">51. Replace All Line Breaks with</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program replace all line breaks (newline characters) in a string with a specific string or character, you
-can use the <span class="consolas">replace()</span> method with a regular expression.
+<p>This program replace all line breaks (newline characters) in a string with a specific 
+string or character, you can use the <span class="consolas">replace()</span> method with 
+a regular expression.</p>
 <pre>
 // Example string with line breaks
 let stringWithLineBreaks = "Hello,\nWorld!\nThis is a new line.";
@@ -2543,8 +2544,8 @@ console.log("Minimum Element:", minNumber);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js90">90. Convert Minutes to Hours and Minutes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-To convert a total number of minutes to hours and remaining minutes in JavaScript, you can use simple
-mathematical operations.
+<p>To convert a total number of minutes to hours and remaining minutes in JavaScript, you 
+can use simple mathematical operations.</p>
 <pre>
 function convertMinutesToHoursAndMinutes(totalMinutes) {
 // Check if the input is a valid positive number
@@ -3809,8 +3810,8 @@ console.log(' The area of the ellipse is: ${ellipseArea.toFixed(2)}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js133">133. Check if a Number is a Palindrome in Binary</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks whether a given number is a palindrome in binary representation. A palindrome in
-binary reads the same backward as forward.
+<p>This program checks whether a given number is a palindrome in binary representation. 
+A palindrome in binary reads the same backward as forward.</p>
 <pre>
 // Function to check if a number is a palindrome in binary
 function isBinaryPalindrome(number) {
@@ -3881,9 +3882,9 @@ console.log(' ${numberToCheck} is not a Catalan number.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js136">136. Find the Luhn Algorithm Check Digit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, is a simple checksum formula
-used to validate various identification numbers, such as credit card numbers. The algorithm is used to detect
-accidental errors in these numbers.
+<p>The Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, is a simple 
+checksum formula used to validate various identification numbers, such as credit card 
+numbers. The algorithm is used to detect accidental errors in these numbers.</p>
 <pre>
 function calculateLuhnCheckDigit(input) {
 // Convert the input string to an array of digits
@@ -3912,8 +3913,8 @@ console.log(' Full Number with Check Digit: $ {fullNumber}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js137">137. Basic Maze Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic maze generator involves using an algorithm to generate a random maze layout. One
-common algorithm for maze generation is the recursive backtracking algorithm.
+<p>Creating a basic maze generator involves using an algorithm to generate a random maze 
+layout. One common algorithm for maze generation is the recursive backtracking algorithm.</p>
 <pre>
 class MazeGenerator {
 constructor(rows, cols) {
@@ -3979,17 +3980,18 @@ console.log('${yearToCheck}isnotaMagicYear. ');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js139">139. Basic Crossword Puzzle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic crossword puzzle involves defining a grid and placing words into it, ensuring that they
-intersect correctly. Below is a simple JavaScript program that generates a crossword puzzle with a few words.
-The generated puzzle is displayed in the console:
+<p>Creating a basic crossword puzzle involves defining a grid and placing words into it, 
+ensuring that they intersect correctly. Below is a simple JavaScript program that 
+generates a crossword puzzle with a few words. The generated puzzle is displayed in the 
+console:</p>
 <pre>
 class CrosswordPuzzle {
-constructor(rows, cols) {
-this.rows = rows;
-this.cols = cols;
-this.grid = Array.from({ length: rows },()=> Array(cols).fill(''));
-this.words = &lbrack;&rbrack;;
-}
+  constructor(rows, cols) {
+    this.rows = rows;
+    this.cols = cols;
+    this.grid = Array.from({ length: rows },()=> Array(cols).fill(''));
+    this.words = &lbrack;&rbrack;;
+  }
 addWord(word, row, col, direction) {
 if (direction = = = 'across') {
 for (let i = 0; i < word.length; i++) {
@@ -4040,8 +4042,8 @@ console.log(' The area of the regular polygon is: ${polygonArea.toFixed(2)}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js141">141. Check if a Number is an Abundant Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-An abundant number (or excessive number) is a positive integer that is smaller than the sum of its proper
-divisors, excluding itself. The sum of proper divisors is greater than the number itself.
+<p>An abundant number (or excessive number) is a positive integer that is smaller than the sum of its proper
+divisors, excluding itself. The sum of proper divisors is greater than the number itself.</p>
 <pre>
 function getProperDivisorsSum(number) {
 let sum = 0;
@@ -4065,37 +4067,38 @@ console.logC ${numberToCheck} is not an Abundant Number. ');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js142">142. Basic Word Guessing Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic word guessing game in a console environment involves generating a random word, allowing
-the player to make guesses, and providing feedback on correct and incorrect guesses.
+<p>Creating a basic word guessing game in a console environment involves generating a 
+random word, allowing the player to make guesses, and providing feedback on correct and 
+incorrect guesses.</p>
 <pre>
 class WordGuessingGame {
-constructorwordList) {
-this.wordList = wordList;
-this.selectedWord = this.getRandomWord();
-this.guesses = &lbrack;&rbrack;;
-this.maxAttempts = 6;
-}
-getRandomWord() {
-const randomindex = Math.floor(Math.random() &ast; this.wordList.length);
-return this.wordList&lbrack;randomIndex&rbrack;.toUpperCase();
-}
-displayWordO {
-return this.selectedWord
-.split(")
-.map(letter => (this.guesses.includes(letter) ? letter:
-•joinf');
-}
-makeGuess(letter) {
-letter = letter.toUpperCase();
-if (!this.guesses.includes(letter)) {
-this.guesses.push(letter);
-if (Ithis.selectedWord.includes(letter)) {
-this.maxAttempts—;
-if (this.maxAttempts = = = 0) {
-console.log(' Sorry, you're out of attempts. The word was: ${this.selectedWord}');
-process.exit();
-}
-console.log(' Attempts left: $ {this.maxAttempts}');
+  constructorwordList) {
+    this.wordList = wordList;
+    this.selectedWord = this.getRandomWord();
+    this.guesses = &lbrack;&rbrack;;
+    this.maxAttempts = 6;
+  }
+  getRandomWord() {
+    const randomindex = Math.floor(Math.random() &ast; this.wordList.length);
+    return this.wordList&lbrack;randomIndex&rbrack;.toUpperCase();
+  }
+  displayWordO {
+    return this.selectedWord
+    .split(")
+    .map(letter => (this.guesses.includes(letter) ? letter:
+    •joinf');
+  }
+  makeGuess(letter) {
+    letter = letter.toUpperCase();
+    if (!this.guesses.includes(letter)) {
+      this.guesses.push(letter);
+      if (Ithis.selectedWord.includes(letter)) {
+        this.maxAttempts—;
+        if (this.maxAttempts = = = 0) {
+          console.log(' Sorry, you're out of attempts. The word was: ${this.selectedWord}');
+          process.exit();
+        }
+      console.log(' Attempts left: $ {this.maxAttempts}');
 console.log(' Current word: ${this.displayWord()}');
 if (!this.displayWord().includes('_')) {
 console.log('Congratulations! You guessed the word!');
@@ -4329,8 +4332,9 @@ simonSaysGame.playO;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js147">147. Calculate the Area of a Hexagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the area of a regular hexagon given the side length ( s ). The formula for the area of
-a regular hexagon is Area = (3 &ast; V3 &ast; s&ast;2) / 2 , where s is the side length.
+<p>This program calculates the area of a regular hexagon given the side length ( s ). The 
+formula for the area of a regular hexagon is Area = (3 &ast; V3 &ast; s&ast;2) / 2 , where 
+s is the side length.</p>
 <pre>
 function calculateHexagonArea(sideLength) {
 const area = (3 &ast; Math.sqrt(3) / 2) &ast; Math.pow(sideLength, 2);
@@ -4364,8 +4368,8 @@ console.log(' $ {pronicNumber} is not a Pronic Number.');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js149">149. Basic Minesweeper Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic Minesweeper game involves generating a grid with mines and numbers, allowing the player
-to uncover cells, and providing feedback on the presence of mines.
+<p>Creating a basic Minesweeper game involves generating a grid with mines and numbers, allowing the player
+to uncover cells, and providing feedback on the presence of mines.</p>
 <pre>
 class MinesweeperGame {
 constructor(rows, cols, numMines) {
@@ -4374,6 +4378,7 @@ this.cols = cols;
 this.numMines = numMines;
 this.board = this.createBoardQ;
 this.gameOver = false;
+}
 createBoard() {
 const board = Array.from({ length: this.rows },()=> Array(this.cols).fill(0));
 // Place mines randomly
@@ -4384,11 +4389,13 @@ row = Math.floor(Math.random() &ast; this.rows);
 col = Math.floor(Math.random() &ast; this.cols);
 } while (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X');
 board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
+}
 // Calculate numbers around mines
 for (let i = 0; i < this.rows; i++) {
 for (letj = 0; j < this.cols; j ++) {
 if (board&lbrack;i&rbrack;&lbrack;j&rbrack; ==='X') {
 continue;
+}
 for (let row = i- l;row <= i + l;row++) {
 for (let col = j - l;col<= j + l;col++){
 if (row > = 0 && row < this.rows && col > = 0 && col < this.cols && board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X') {
@@ -4404,9 +4411,12 @@ displayBoard() {
 console.log('Minesweeper Board:');
 for (const row of this.board) {
 console Jog(row.map(cell => (cell = = = 'X' ? 'X':' ')).join(''));
+}
+}
 uncoverCell(row, col) {
 if (this.gameO ver 11 row < 0 || row >= this.rows || col < 0 || col >= this.cols) {
 return;
+}
 const cell = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
 if (cell = = ='X') {
 console.log('Game over! You hit a mine.');
@@ -4417,7 +4427,7 @@ this.uncoverNeighbors(row, col);
 } else {
 this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = cell.toStringO;
 }
-this.checkWinO;
+this.checkWin();
 }
 uncoverNeighbors(row, col) {
 for (let i = row - l;i <= row + l;i++) {
@@ -4427,16 +4437,22 @@ this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = '
 this.uncoverNeighbors(i, j);
 } else if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; !== 'X') {
 this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = this.board&lbrack;i&rbrack;&lbrack;j&rbrack;.toString();
+}
+}
+}
+}
 checkWinO {
 let uncoveredCount = 0;
 for (const row of this.board) {
 uncoveredCount += row.filter(cell => cell !== 'X').length;
+}
 if (uncoveredCount = = = this.rows &ast; this.cols - this.numMines) {
 console.log('Congratulations! You win!');
 this.gameOver = true;
+    }
+  }
 }
-}
-}
+
 // Example usage
 const minesweeperGame = new MinesweeperGame(5, 5, 3);
 minesweeperGame.displayBoard();
@@ -4450,74 +4466,83 @@ minesweeperGame.uncoverCell(4,4);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js150">150. Find the Area of a Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the area of a regular pentagon given the side length ( s ). The formula for the area of
-a regular pentagon is Area = (1/4) &ast; V(5 &ast; (5 + 2 &ast; V5)) &ast; s&ast; 2 , where s is the side length.
+<p>This program calculates the area of a regular pentagon given the side length ( s ). 
+The formula for the area of a regular pentagon is Area = (1/4) &ast; <square root symbol>(5 &ast; 
+(5 + 2 &ast; <square root symbol>5)) &ast; s^2 , where s is the side length.</p>
 <pre>
 function calculatePentagonArea(sideLength) {
-const area = (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2 &ast; Math.sqrt(5))) &ast; Math.pow(sideLength, 2);
-return area;
+  const area = (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2 &ast; Math.sqrt(5))) &ast; Math.pow(sideLength, 2);
+  return area;
+}
+
 // Example usage
 const sideLength = 4; // Replace with the length of a side of your pentagon
 const pentagonArea = calculatePentagonArea(sideLength);
-console.log(' The area of the pentagon is: ${pentagonArea.toFixed(2)}');
+console.log(`The area of the pentagon is: ${pentagonArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js151">151. Check if a Number is a Cube Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program checks if a given non-negative integer is a cube number. A cube number is a number that can
-be expressed as the cube of an integer. The nth cube number is given by the formula: nA 3 .
+<p>This program checks if a given non-negative integer is a cube number. A cube number is 
+a number that can be expressed as the cube of an integer. The nth cube number is given by 
+the formula: n^3.</p>
 <pre>
 function isCubeNumber(number) {
-const cubeRoot = Math.round(Math.pow(number, 1/3));
-return Math.pow(cubeRoot, 3) = = = number;
+  const cubeRoot = Math.round(Math.pow(number, 1/3));
+  return Math.pow(cubeRoot, 3) === number;
+}
+
 // Example usage
 const numberToCheck = 27; // Replace with the number you want to check
 if (isCubeNumber(numberToCheck)) {
-console.log('$ {numberToCheck} is a Cube Number! ');
+  console.log(`${numberToCheck} is a Cube Number!`);
 } else {
-console.log( '$ {numberToCheck} is not a Cube Number. ');
+  console.log(`${numberToCheck} is not a Cube Number.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js152">152. Basic Typing Speed Test</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Creating a basic typing speed test involves generating a random string, measuring the time it takes for the
-user to type the string, and calculating the typing speed.
+<p>Creating a basic typing speed test involves generating a random string, measuring the 
+time it takes for the user to type the string, and calculating the typing speed.</p>
 <pre>
 class TypingSpeedTest {
-constructor) {
-this.words = &lbrack;
-'programming', 'javascript', 'developer', 'challenge', keyboard',
-'speed', 'test', 'accuracy', 'practice', 'learning'
-&rbrack;;
-this.text = this.generateRandomText();
-this.startTime = 0;
-this.endTime = 0;
-this.userlnput =
+  constructor) {
+    this.words = &lbrack;
+      'programming', 'javascript', 'developer', 'challenge', keyboard',
+      'speed', 'test', 'accuracy', 'practice', 'learning'
+    &rbrack;;
+    this.text = this.generateRandomText();
+    this.startTime = 0;
+    this.endTime = 0;
+    this.userlnput = '';
+  }
+  generateRandomText() {
+    const randomindex = Math.floor(Math.random() &ast; this.words.length);
+    return this.words&lbrack;randomlndex&rbrack;;
+  }
+  startTest() {
+    this.text = this.generateRandomText();
+    this.startTime = Date.nowQ;
+    console.log(`Type the following text:\n"${this.text}"`);
+  }
+  endTest() {
+    this.endTime = Date.now();
+    const elapsedTime = (this.endTime - this.startTime) / 1000; // Convert to seconds
+    const wordsPerMinute = (this.text.splitf ').length / elapsedTime) &ast; 60;
+    console.log(`You typed at a speed of ${wordsPerMinute.toFixed(2)} words per minute.`);
+  }
+  getUserlnput(input) {
+    this.userlnput = input.trim();
+    if (this.userlnput = = = this.text) {
+      console.log('Congratulations! You typed the correct text.');
+      this.endTest();
+    } else {
+      console.log('Incorrect. Try again.');
+    }
+  }
 }
-generateRandomText() {
-const randomindex = Math.floor(Math.random() &ast; this.words.length);
-return this.words&lbrack;randomlndex&rbrack;;
-}
-startTest() {
-this.text = this.generateRandomText();
-this.startTime = Date.nowQ;
-console.log(' Type the following text:\n"${this.text}"');
-endTest() {
-this.endTime = Date.now();
-const elapsedTime = (this.endTime - this.startTime) / 1000; // Convert to seconds
-const wordsPerMinute = (this.text.splitf ').length / elapsedTime) &ast; 60;
-console.log(' You typed at a speed of ${wordsPerMinute.toFixed(2)} words per minute.');
-}
-getUserlnput(input) {
-this.userlnput = input.trim();
-if (this.userlnput = = = this.text) {
-console.logfCongratulations! You typed the correct text.1);
-this.endTest();
-} else {
-console.logflncorrect. Try again.1);
-}
-}
-}
+
 // Example usage
 const typingTest = new TypingSpeedTest();
 typingTest.startTest();
@@ -4528,31 +4553,36 @@ typingTest.getUserlnput(userlnput);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js153">153. Find the Area of a Cube</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the surface area of a cube given the length of its side ( s ). The formula for the
-surface area of a cube is Surface Area = 6 &ast; s&ast; 2 , where s is the length of a side.
+<p>This program calculates the surface area of a cube given the length of its side ( s ). 
+The formula for the surface area of a cube is Surface Area = 6 &ast; s&ast; 2 , where s 
+is the length of a side.</p>
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
-const surface Area = 6 &ast; Math.pow(sideLength, 2);
-return surfaceArea;
+  const surface Area = 6 &ast; Math.pow(sideLength, 2);
+  return surfaceArea;
+}
+
 // Example usage
 const sideLength = 4; // Replace with the length of a side of your cube
 const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
-console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
+console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js154">154. Find the Area of a Cone</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the surface area of a cone given the radius of its base ( r ) and the slant height (1).
-The formula for the surface area of a cone is Surface Area = 7t &ast; r &ast; (r +1), where n is the mathematical constant
-Pi.
+<p>This program calculates the surface area of a cone given the radius of its base ( r ) 
+and the slant height (l). The formula for the surface area of a cone is Surface Area = 
+pi &ast; r &ast; (r +1), where pi is the mathematical constant Pi.</p>
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
-const surface Area = 6 &ast; Math.pow(sideLength, 2);
-return surfaceArea;
+  const surface Area = 6 &ast; Math.pow(sideLength, 2);
+  return surfaceArea;
+}
+
 // Example usage
 const sideLength = 4; // Replace with the length of a side of your cube
 const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
-console.log(' The surface area of the cube is: $ {cubeSurfaceArea}');
+console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js155">155. Check if a Number is a Happy Number</h2>
@@ -4583,10 +4613,11 @@ if (isHappyNumber(happyNumber)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js156">156. Calculate the Area of a Triangular Prism</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This program calculates the surface area of a triangular prism given the lengths of its base sides ( a , b , and
-c ) and the height of the prism ( h ). The formula for the surface area of a triangular prism is Surface Area =
-(Perimeter of the base &ast; Height) + (2 &ast; Area of the base), where the perimeter of the base is Perimeter = a + b + c
-and the area of the base is calculated using Heron's formula.
+<p>This program calculates the surface area of a triangular prism given the lengths of 
+its base sides ( a , b , and c ) and the height of the prism ( h ). The formula for the 
+surface area of a triangular prism is Surface Area = (Perimeter of the base &ast; Height) 
++ (2 &ast; Area of the base), where the perimeter of the base is Perimeter = a + b + c
+and the area of the base is calculated using Heron's formula.</p>
 <pre>
 function calculateTriangularPrismSurfaceArea(a, b, c, height) {
 const baseArea = 0.25 &ast; Math.sqrt((-a + b + c)&ast;(a-b + c)&ast;(a + b-c)&ast;(a + b + c));
@@ -7812,8 +7843,9 @@ factor++;
 }
 return factor;
 };
-console.log(largestPrimeFactor(48));
-// Output: 3
+
+// Example usage
+console.log(largestPrimeFactor(48)); // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-141">141. Check if a Number is a Pronic Square</h2>
@@ -7822,12 +7854,10 @@ console.log(largestPrimeFactor(48));
 <pre>
 const isPronicSquare = (num) => Number.isInteger(Math.sqrt(num));
 
-console.log(isPronicSquare(6));
-// Output: true
-console.log(isPronicSquare(20));
-// Output: false
-console.log(isPronicSquare(21));
-// Output: true
+// Example usage
+console.log(isPronicSquare(6));  // Output: true
+console.log(isPronicSquare(20)); // Output: false
+console.log(isPronicSquare(21)); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-142">142. Find the Sum of the Digits of a Number</h2>
@@ -7835,9 +7865,10 @@ console.log(isPronicSquare(21));
 <p>The sumOfDigits function calculates the sum of the digits of a given number.</p>
 <pre>
 const sumOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum
-+ Number(digit), 0);
-console.log(sumOfDigits(12345));
-// Output: 15
+  + Number(digit), 0);
+
+// Example usage
+console.log(sumOfDigits(12345));  // Output: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-143">143. Calculate the Median of an Array of Numbers</h2>
@@ -7846,13 +7877,14 @@ console.log(sumOfDigits(12345));
 median is the middle value of a dataset when it is ordered.</p>
 <pre>
 const median = (arr) => {
-const sorted = arr.sort((a, b) => a - b);
-const mid = Math.floor(sorted.length / 2);
-return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
-sorted&lbrack;mid&rbrack;;
+  const sorted = arr.sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
+  sorted&lbrack;mid&rbrack;;
 };
-console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));
-// Output: 5
+
+// Example usage
+console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;)); // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-144">144. Find the Greatest Common Divisor (GCD) of Two Numbers (Recursive)</h2>
@@ -7860,10 +7892,10 @@ console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));
 <p>The gcd function calculates the greatest common divisor (GCD) of two
 given numbers using a recursive approach.</p>
 <pre>
-const gcd = (num1, num2) => (num2 === 0 ? num1 : gcd(num2, num1 %
-num2));
-console.log(gcd(48, 18));
-// Output: 6
+const gcd = (num1, num2) => (num2 === 0 ? num1 : gcd(num2, num1 % num2));
+
+// Example usage
+console.log(gcd(48, 18));  // Output: 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-145">145. Check if a Number is a Happy Number</h2>
@@ -8128,7 +8160,6 @@ console.log(sumOfNaturals(10)); // Output: 55
 <p>The isPerfectNumber function checks whether a given number is a perfect number. A 
 perfect number is a positive integer that is equal to the sum of its proper divisors 
 (excluding itself).</p>
-
 <pre>
 const isPerfectNumber = (num) => {
   let sum = 0;
@@ -8322,7 +8353,6 @@ console.log(isDeficientNumber(28)); // Output: false
 <p>The distanceBetweenPoints function calculates the Euclidean distance between two 
 points in a 2D plane. Given the coordinates of two points (x1, y1) and (x2, y2), it 
 uses the formula sqrt((x2 - x1)^2 + (y2 - y1)^2) to compute the distance between them.</p>
-
 <pre>
 const distanceBetweenPoints = (x1, y1, x2, y2) => 
   Math.sqrt((x2 - x1) &ast;&ast; 2 + (y2 - y1) &ast;&ast; 2);
@@ -8368,9 +8398,9 @@ console.log(isValidCreditCard("1234-5678-9012-3456")); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-179">179. Calculate the Perimeter of a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The trianglePerimeter function calculates the perimeter of a triangle given
-its three side lengths. It simply adds up the lengths of all three sides and
-returns the result as the perimeter of the triangle.
+<p>The trianglePerimeter function calculates the perimeter of a triangle given its three 
+side lengths. It simply adds up the lengths of all three sides and returns the result as 
+the perimeter of the triangle.</p>
 <pre>
 const trianglePerimeter = (side1, side2, side3) => side1 + side2 + side3;
 
@@ -8479,7 +8509,6 @@ console.log(isKaprekarNumber(45));  // Output: false
 <p>The coneVolume function calculates the volume of a cone using its base
 radius and height. It applies the formula for the volume of a cone: V = (1/3)
 &ast; π &ast; r² &ast; h, where r is the radius of the base and h is the height of the cone.</p>
-
 <pre>
 const coneVolume = (radius, height) => (1 / 3) &ast; Math.PI &ast; radius &ast;&ast; 2 &ast;
 
@@ -8504,7 +8533,6 @@ console.log(isValidUSPhoneNumber("1-800-ABC-DEFG"));    // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The sumOfDigitsRaisedToPowerUpToThousand function calculates the sum of numbers where 
 each digit raised to the power of its respective position is equal to the number itself.</p>
-
 <pre>
 const sumOfDigitsRaisedToPowerUpToThousand = () => {
   let sum = 0;
@@ -8539,16 +8567,13 @@ console.log(isCarolNumber(6));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isCatalanNumber function checks if a given number is a Catalan number. It first 
 ensures that the input number is a non-negative integer.</p>
-
 <pre>
 const isCatalanNumber = (num) => num >= 0 && Number.isInteger(num)
   && num === ((factorial(2 &ast; num)) / (factorial(num + 1) &ast; factorial(num)));
 
 // Example usage
-console.log(isCatalanNumber(5));
-// Output: true
-console.log(isCatalanNumber(10));
-// Output: false
+console.log(isCatalanNumber(5));  // Output: true
+console.log(isCatalanNumber(10)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-191">191. Calculate the Volume of a Cuboid</h2>
@@ -8665,8 +8690,7 @@ const randomUUID = () => {
 };
 
 // Example usage
-console.log(randomUUID());
-// Output: "a0f768f5-6bf2-4f6b-a512-c9121ea1b44a"
+console.log(randomUUID());  // Output: "a0f768f5-6bf2-4f6b-a512-c9121ea1b44a"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-200">200. Check if a String is a Valid IPv6 Address</h2>
@@ -8986,8 +9010,9 @@ const longestWordLength = (str) => Math.max(...str.split(' ').map(word =>
 // Example usage
 console.log(longestWordLength("This is a test sentence")); // Output: 8
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-222">222. Find the Sum of Proper Divisors of a Number</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the sum of the proper divisors of a given number.</p>
 <pre>
 const sumOfProperDivisors = (num) => sumOfArray(divisors(num)) - num;
@@ -9092,7 +9117,7 @@ console.log(isDudeneyNumber(27));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-230">230. Calculate the Area of a Regular Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Calculate the area of a regular pentagon using its side length.
+<p>Calculate the area of a regular pentagon using its side length.</p>
 <pre>
 const regularPentagonArea = (sideLength) => (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2
 &ast; Math.sqrt(5))) &ast; sideLength &ast;&ast; 2;
