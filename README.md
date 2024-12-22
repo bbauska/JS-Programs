@@ -19,6 +19,114 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2><a href="#js--0">100+ Examples From Basics to Advanced</a></h2>
+
+<ul>
+  <li id="#ex1">JavaScript Statements</li>
+  <li id="#ex2">JavaScript Syntax</li>
+  <li id="#ex3">JavaScript Comments</li>
+  <li>JavaScript Variables</li>
+  <li>JavaScript let</li>
+  <li>JavaScript const</li>
+  <li>JavaScript Operators</li>
+  <li>JS Arithmetic</li>
+  <li>JS Assignment</li>
+  <li>JS Data Types</li>
+  <li>JS Functions</li>
+  <li>JS Objects</li>
+  <li>JS Events</li>
+  <li>JS Strings</li>
+  <li>JS String Methods</li>
+  <li>JS String Search</li>
+  <li>JS String Templates</li>
+  <li>JS Numbers</li>
+  <li>JS BigInt</li>
+  <li>JS Number Methods</li>
+  <li>JS Number Properties</li>
+  <li>JS Arrays</li>
+  <li>JS Array Methods</li>
+  <li>JS Array Sort</li>
+  <li>JS Array Iteration</li>
+  <li>JS Array Const</li>
+  <li>JS Dates</li>
+  <li>JS Date Formats</li>
+  <li>JS Date Get Methods</li>
+  <li>JS Date Set Methods</li>
+  <li>JS Math</li>
+  <li>JS Random</li>
+  <li>JS Booleans</li>
+  <li>JS Comparisons</li>
+  <li>JS If Else</li>
+  <li>JS Switch</li>
+  <li>JS Loop For</li>
+  <li>JS Loop For In</li>
+  <li>JS Loop For Of</li>
+  <li>JS Loop While</li>
+  <li>JS Break</li>
+  <li>JS Iterables</li>
+  <li>JS Sets</li>
+  <li>JS Maps</li>
+  <li>JS Typeof</li>
+  <li>JS Type Conversion</li>
+  <li>JS Bitwise</li>
+  <li>JS RegExp</li>
+  <li>JS Precedence</li>
+  <li>JS Errors</li>
+  <li>JS Scope</li>
+  <li>JS Hoisting</li>
+  <li>JS Strict Mode</li>
+  <li>JS this Keyword</li>
+  <li>JS Arrow Function</li>
+  <li>JS Classes</li>
+  <li>JS Modules</li>
+  <li>JS JSON</li>
+
+  <li>JS Debugging</li>
+  <li>JS Style Guide</li>
+  <li>JS Best Practices</li>
+  <li>JS Mistakes</li>
+  <li>JS Performance</li>
+  <li>JS Reserved Words</li>
+<!-- JavaScript Objects -->  
+  <li>JS Objects</li>
+  <li>Object Properties</li>
+  <li>Object Methods</li>
+  <li>Object Display</li>
+  <li>Object Accessors</li>
+  <li>Object Constructors</li>
+  <li>Object Prototypes</li>
+  <li>Object Iterables</li>
+  <li>Object Sets</li>
+  <li>Object Maps</li>
+  <li>Object Reference</li>
+<!-- JavaScript Functions -->
+  <li>JS Functions</li>
+  <li>Function Parameters</li>
+  <li>Function Invocation</li>
+  <li>Function Call</li>
+  <li>Function Apply</li>
+  <li>Function Bind</li>
+  <li>Function Closures</li>
+<!-- JavaScript Classes -->
+  <li>JS Classes</li>
+  <li>Class Inheritance</li>
+  <li>JS Async</li>
+  <li>JS PromisesClass</li>
+  <li>JS Async / Await</li>
+  <li>JS HTML DOM</li>
+  <li>JS Browser BOM</li>
+  <li>JS Web APIs</li>
+  <li>JS AJAX</li>
+  <li>JS JSON</li>
+  <li>JavaScript vs jQuery: A Comprehensive Comparison</li>
+</ul>
+
+
+
+  
+  
+
+
 <h2><a href="#js0">First 218 Simple JavaScript Sample Scripts</a></h2>
 
 <ul>
@@ -509,6 +617,28 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js-263">js-263. Calculate the Area of a Kite</a></li>
   <li><a href="#js-264">js-264. Calculate the Area of a Sector</a></li>
 </ul>
+<pre>
+    1 . Variable Declaration :
+javascript code
+let x; // Declaring a variable 'x'
+
+2 . Conditional Statement:
+javascript code
+if(x = = = 5) {
+// Executed if x is equal to 5
+console . log ('x is 5');
+} else {
+// Executed if x is not equal to 5
+console . log ('x is not 5');
+}
+
+3 . Loops:
+javascript code
+for (let i = 0;i<5;i++) {
+// Executed 5 times
+console . log (i) ;
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js0">218 JS Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6032,7 +6162,7 @@ function countCommonElements(arrl, arr2) {
   console.log("Common Elements:", commonElements);
   console.log("Number of Common Elements:", numberOfCommonElements);
 }
-// Example: Count common elements between two arrays
+// Example usage: Count common elements between two arrays
 countCommonElements(&lbrack;l,2,3,4,5&rbrack;, &lbrack;3,4,5,6,7&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6193,12 +6323,14 @@ reverseOrderOfBits(234);
 console.</p>
 <pre>
 function generateAsciiTriangle(height) {
-  for (let i = 1; i < = height; i++) {
+  for (let i = 1; i <= height; i++) {
     const spaces = ' '.repeat(height - i);
     const stars = '&ast;'.repeat(i &ast; 2 -1);
     console.log(spaces + stars);
   }
 }
+
+// Example usage:
 const triangleHeight = 5;
 generateAsciiTriangle(triangleHeight);
 </pre>
@@ -6214,6 +6346,8 @@ takes a value in Celsius as input and uses the formula (Celsius &ast; 9/5) + 32 
 the conversion.exadecimal representation.</p>
 <pre>
 const celsiusToFahrenheit = (celsius) => (celsius &ast; 9/5) + 32;
+
+// Example usage:
 celsiusToFahrenheit(25); // Result: 77
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6221,9 +6355,9 @@ celsiusToFahrenheit(25); // Result: 77
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Retrieve the value of a cookie by accessing with document.cookie.</p>
 <pre>
-const cookie = name => `; ${document.cookie}`.split(`;
-${name}=`).pop().split(';').shift();
-cookie('_ga');
+const cookie = name => `; ${document.cookie}.split(`;
+  ${name}={'').pop().split(';').shift();
+  cookie('_ga');
 // Result: "GA1.2.1929736587.1601974046"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8507,10 +8641,11 @@ console.log(isKaprekarNumber(45));  // Output: false
 <h2 id="js-186">186. Calculate the Volume of a Cone</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The coneVolume function calculates the volume of a cone using its base
-radius and height. It applies the formula for the volume of a cone: V = (1/3)
-&ast; π &ast; r² &ast; h, where r is the radius of the base and h is the height of the cone.</p>
+radius and height. It applies the formula for the volume of a cone: <br>
+V = (1/3) &ast; π &ast; r² &ast; h, <br>
+where r is the radius of the base and h is the height of the cone.</p>
 <pre>
-const coneVolume = (radius, height) => (1 / 3) &ast; Math.PI &ast; radius &ast;&ast; 2 &ast;
+const coneVolume = (radius, height) => (1 / 3) &ast; Math.PI &ast; radius &ast;&ast; 2;
 
 // Example usage
 console.log(coneVolume(5, 10)); // Output: 261.79938779914943
