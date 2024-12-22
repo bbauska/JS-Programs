@@ -660,7 +660,7 @@ let num1 = parseFloat(prompt("Enter the first number:"));
 letnum2 = parseFloat(prompt("Enter the second number:"));
 if (!isNaN(numl) && !isNaN(num2)) {
   let sum = numl + num2;
-  console.log('The sum of ${numl} and ${num2} is: ${sum}');
+  console.log(`The sum of ${numl} and ${num2} is: ${sum}`);
 } else {
   console.log("Please enter valid numbers.");
 }
@@ -671,10 +671,10 @@ if (!isNaN(numl) && !isNaN(num2)) {
 <p>This program prompts the user to enter a number and calculates its square root. It then displays the result,
 ensuring that the entered number is non-negative.</p>
 <pre>
-let inputNumber = parseFloat(prompt("Enter a non-negative number:"));
+let inputNumber = parseFloat(prompt("Enter a non-negative number: "));
 if (!isNaN(inputNumber) && inputNumber >= 0) {
   let squareRoot = Math.sqrt(inputNumber);
-  console.log('The square root of ${inputNumber} is: ${squareRoot}');
+  console.log(`The square root of ${inputNumber} is: ${squareRoot}`);
 } else {
   console.log("Please enter a valid non-negative number.");
 }
@@ -687,12 +687,12 @@ calculates its area using the formula:
 <span class="consolas">Area=12xBasexHeightArea=21xBasexHeight</span>. It then 
 displays the calculated area.</p>
 <pre>
-let base = parseFloat(prompt("Enter the base of the triangle:"));
-let height = parseFloat(prompt("Enter the height of the triangle:"));
+let base = parseFloat(prompt("Enter the base of the triangle: "));
+let height = parseFloat(prompt("Enter the height of the triangle: "));
 if (!isNaN(base) && !isNaN(height) && base > 0 && height > 0) {
   let area = 0.5 &ast; base &ast; height;
   console.log(
-  'The area of the triangle with base ${base} and height ${height} is: ${area}'
+  `The area of the triangle with base ${base} and height ${height} is: ${area}`
   );
 } else {
   console.log("Please enter valid positive numbers for base and height.");
@@ -707,14 +707,14 @@ displays the variables before and after the swap.</p>
 let variable1 = prompt("Enter the first variable:");
 let variable2 = prompt("Enter the second variable:");
 console.log(
-  'Before swapping: Variablel = ${variablel}, Variable2 = ${variable2}'
+  `Before swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
 );
 // Swapping the variables
 let temp = variablel;
 variablel = variable2;
 variable2 = temp;
 console.log(
-  'After swapping: Variablel = ${variablel}, Variable2 = ${variable2}'
+  `After swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
 );
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -737,11 +737,11 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
     let rootl = (-b + Math.sqrt(discriminant)) / (2 &ast; a);
     let root2 = (-b - Math.sqrt(discriminant)) / (2 &ast; a);
     console.log(
-      'The roots of the quadratic equation are: ${rootl} and ${root2}'
+      `The roots of the quadratic equation are: ${rootl} and ${root2}`
     );
   } else if (discriminant === 0) {
     let root = -b / (2 &ast; a);
-    console.log(' The quadratic equation has a repeated root: ${root}');
+    console.log(`The quadratic equation has a repeated root: ${root}`);
   } else {
     console.log("The quadratic equation has complex roots.");
   }
