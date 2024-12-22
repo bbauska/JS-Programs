@@ -1370,7 +1370,7 @@ function createDeck() {
   for (let suit of suits) {
     for (let rank of ranks) {
       deck.push(`${rank} of ${suit}`);
-	}
+    }
   }
   return deck;
 }
@@ -2298,7 +2298,7 @@ class Stack {
   size() {
     return this.items.length;
   }
-	
+    
   // Print the stack elements
   print() {
     console.log(this.items);
@@ -2335,7 +2335,7 @@ class Queue {
   dequeue() {
     if (this.isEmptyO) {
       return "Underflow";
-	}
+    }
     return this.items.shift();
   }
   // Peek at the front element without removing it
@@ -3985,29 +3985,33 @@ often involving recursive structures. The nth Catalan number is given by the for
 <pre>
 // Function to calculate binomial coefficient (n choose k)
 function binomialCoefficient(n, k) {
-if(k>n-k){
-k = n - k;
+  if(k > n - k){
+    k = n - k;
+  }
+  let result = 1;
+  for (let i = 0; i < k; i++) {
+    result &ast;= (n - i);
+    result /= (i + 1);
+  }
+  return result;
 }
-let result = 1;
-for (let i = 0; i < k; i++) {
-result &ast;= (n - i);
-result /= (i + 1);
-}
-return result;
 // Function to check if a number is a Catalan number
 function isCatalanNumber(num) {
-for (let i = 0; i < = num; i++) {
-if (binomialCoefficient(2 &ast; i, i) = = = num / (i + 1)) {
-return true;
-return false;
+  for (let i = 0; i < = num; i++) {
+    if (binomialCoefficient(2 &ast; i, i) === num / (i + 1)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Example usage
-const numberToCheck = M-JI Replace with the number you want to check
+const numberToCheck = 42; // Replace with the number you want to check
 if (isCatalanNumber(numberToCheck)) {
-console.log(' ${numberToCheck} is a Catalan number!
-');
+  console.log(`${numberToCheck} is a Catalan number!`);
 } else {
-console.log(' ${numberToCheck} is not a Catalan number.
-');
+  console.log(`${numberToCheck} is not a Catalan number.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js136">136. Find the Luhn Algorithm Check Digit</h2>
@@ -4017,28 +4021,32 @@ checksum formula used to validate various identification numbers, such as credit
 numbers. The algorithm is used to detect accidental errors in these numbers.</p>
 <pre>
 function calculateLuhnCheckDigit(input) {
-// Convert the input string to an array of digits
-const digits = input.toString().split(").map(Number);
-// Double every second digit from the right
-for (let i = digits.length - 2; i > = 0; i -= 2) {
-let doubledDigit = digits&lbrack;i&rbrack; &ast; 2;
-// If doubling results in a number greater than 9, subtract 9
-if (doubledDigit > 9) {
-doubledDigit-= 9;
-digitsfi&rbrack; = doubledDigit;
+  // Convert the input string to an array of digits
+  const digits = input.toString().split('').map(Number);
+  
+  // Double every second digit from the right
+  for (let i = digits.length - 2; i > = 0; i -= 2) {
+    let doubledDigit = digits&lbrack;i&rbrack; &ast; 2;
+    // If doubling results in a number greater than 9, subtract 9
+    if (doubledDigit > 9) {
+      doubledDigit-= 9;
+    }
+      digitslbrack;i&rbrack; = doubledDigit;
+  }
+  // Calculate the sum of all digits
+  const sum = digits.reduce((acc, digit) => acc + digit, 0);
+  // Find the smallest number (x) such that (sum + x) is a multiple of 10
+  const checkDigit = (10 - (sum % 10)) % 10;
+  return checkDigit;
 }
-// Calculate the sum of all digits
-const sum = digits.reduce((acc, digit) = > acc + digit, 0);
-// Find the smallest number (x) such that (sum + x) is a multiple of 10
-const checkDigit = (10 - (sum % 10)) % 10;
-return checkDigit;
 // Example usage
-const partialNumber = 123456789;// Replace with the partial number for which you want to calculate the check digit
+const partialNumber = 123456789; // Replace with the partial number for which you want to calculate the check digit
 const checkDigit = calculateLuhnCheckDigit(partialNumber);
-const fullNumber = ' $ {partialNumber} $ {checkDigit}';
-console.log(' Partial Number: ${partialNumber}');
-console.log(' Check Digit: ${checkDigit}');
-console.log(' Full Number with Check Digit: $ {fullNumber}');
+const fullNumber = `${partialNumber} ${checkDigit}`;
+
+console.log(`Partial Number: ${partialNumber}`);
+console.log(`Check Digit: ${checkDigit}`);
+console.log(`Full Number with Check Digit: ${fullNumber}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js137">137. Basic Maze Generator</h2>
@@ -4047,40 +4055,48 @@ console.log(' Full Number with Check Digit: $ {fullNumber}');
 layout. One common algorithm for maze generation is the recursive backtracking algorithm.</p>
 <pre>
 class MazeGenerator {
-constructor(rows, cols) {
-this.rows = rows;
-this.cols = cols;
-this.grid = Array.from({ length: rows },()=> Array(cols).fill(0));
+  constructor(rows, cols) {
+    this.rows = rows;
+    this.cols = cols;
+    this.grid = Array.from({ length: rows },()=> Array(cols).fill(0));
+  }
+  generateMaze() {
+    this.visitCell(0,0);
+  }
+  visitCell(row, col) {
+    this.grid&lbrack;row&rbrack;&lbrack;col&rbrack; = 1; // Mark the current cell as visited
+
+    // Define the possible directions (up, down, left, right)
+    const directions = &lbrack;
+      &lbrack;0, -2&rbrack;,
+      &lbrack;0, 2&rbrack;,
+      &lbrack;-2, 0&rbrack;,
+      &lbrack;2, 0&rbrack;
+    &rbrack;;
+
+    // Shuffle the directions randomly
+    directions.sort(() => Math.random() - 0.5);
+    for (const &lbrack;dr, de&rbrack; of directions) {
+      const newRow = row + dr;
+      const newCol = col + de;
+      // Check if the new cell is within bounds and unvisited
+      if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid&lbrack;newRow&rbrack;&lbrack;newCol&rbrack; = = =
+    0){
+      // Mark the cell between the current and new cell as visited
+      this.grid&lbrack;row + dr / 2&rbrack;&lbrack;col + de / 2&rbrack; = 1;
+      // Recursively visit the new cell
+      this.visitCell(newRow, newCol);
+      }
+    }
 }
-generateMaze() {
-this.visitCell(0,0);
+
+  printMaze() {
+    for (const row of this.grid) {
+      console.log(row.map(cell => (cell === 1 ? '': '#')).join(''));
+    }
+  }
 }
-visitCell(row, col) {
-this.grid&lbrack;row&rbrack;&lbrack;col&rbrack; = 1; // Mark the current cell as visited
-// Define the possible directions (up, down, left, right)
-const directions = &lbrack;
-&lbrack;0,-2&rbrack;,
-&lbrack;0, 2&rbrack;,
-&lbrack;-2, 0&rbrack;,
-&lbrack;2,0&rbrack;
-// Shuffle the directions randomly
-directions.sort(() => Math.random() - 0.5);
-for (const &lbrack;dr, de&rbrack; of directions) {
-const newRow = row + dr;
-const newCol = col + de;
-// Check if the new cell is within bounds and unvisited
-if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid&lbrack;newRow&rbrack;&lbrack;newCol&rbrack; = = =
-0){
-// Mark the cell between the current and new cell as visited
-this.grid&lbrack;row + dr / 2&rbrack;&lbrack;col + de / 2&rbrack; = 1;
-// Recursively visit the new cell
-this.visitCell(newRow, newCol);
-}
-}
-}
-printMaze() {
-for (const row of this.grid) {
-console.log(row.map(cell => (cell = = = 1 ? ": '#')).join("));
+
 // Example usage
 const mazeRows =11;
 const mazeCols = 21;
@@ -4097,15 +4113,17 @@ the month (7) and the day (8) is 56, which matches the last two digits of the ye
 <pre>
 function isMagicYear(year) {
 const yearStr = year.toStringO;
-const month = parse!nt(yearStr.substring(O, 2), 10);
-const day = parse!nt(yearStr.substring(2,4), 10);
-return month &ast; day = = = parse!nt(yearStr.substring(4), 10);
+const month = parse!nt(yearStr.substring(0, 2), 10);
+const day = parse!nt(yearStr.substring(2, 4), 10);
+return month &ast; day === parse!nt(yearStr.substring(4), 10);
+
 // Example usage
 const yearToCheck = 1978; // Replace with the year you want to check
 if (isMagicYear(yearToCheck)) {
-console.log(' ${yearToCheck} is a Magic Year! ');
+  console.log(`${yearToCheck} is a Magic Year!`);
 } else {
-console.log('${yearToCheck}isnotaMagicYear. ');
+  console.log(`${yearToCheck}is not a MagicYear.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js139">139. Basic Crossword Puzzle</h2>
@@ -4122,30 +4140,32 @@ class CrosswordPuzzle {
     this.grid = Array.from({ length: rows },()=> Array(cols).fill(''));
     this.words = &lbrack;&rbrack;;
   }
-addWord(word, row, col, direction) {
-if (direction = = = 'across') {
-for (let i = 0; i < word.length; i++) {
-this.grid&lbrack;row&rbrack;&lbrack;col + i&rbrack; = word&lbrack;i&rbrack;;
+  addWord(word, row, col, direction) {
+    if (direction === 'across') {
+      for (let i = 0; i < word.length; i++) {
+        this.grid&lbrack;row&rbrack;&lbrack;col + i&rbrack; = word&lbrack;i&rbrack;;
+      }
+    } else if (direction === 'down') {
+      for (let i = 0; i < word.length; i++) {
+        this.grid&lbrack;row + i&rbrack;&lbrack;col&rbrack; = word&lbrack;i&rbrack;;
+      }
+    }
+      this.words.push({ word, row, col, direction});
+  }
+
+  printPuzzleO {
+    for (const row of this.grid) {
+      console.log(row.join(''));
+    }
+  }
 }
-} else if (direction = = = 'down') {
-for (let i = 0; i < word.length; i++) {
-this.grid&lbrack;row + i&rbrack;&lbrack;col&rbrack; = word&lbrack;i&rbrack;;
-}
-}
-this.words.push({ word, row, col, direction});
-}
-printPuzzleO {
-for (const row of this.grid) {
-console.log(row.join(''));
-}
-}
-}
+
 // Example usage
 const crossword = new CrosswordPuzzle(5, 5);
-crossword.addWordfapple', 1,1,'across');
+crossword.addWord('apple', 1, 1, 'across');
 crossword.addWord('banana', 3, 0, 'down');
 crossword.addWord('grape', 0, 3, 'across');
-crossword.printPuzzleQ;
+crossword.printPuzzle();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js140">140. Find the Area of a Regular Polygon</h2>
@@ -4159,15 +4179,17 @@ sides, <span class="consolas">s</span> is the side length, and
 <span class="consolas">tan</span> is the tangent function.</p>
 <pre>
 function calculateRegularPolygonArea(n, s) {
-const numerator = 1 / 4 &ast; n &ast; Math.pow(s, 2);
-const denominator = Math.tan(Math.PI I n);
-const area = numerator / denominator;
-return area;
+  const numerator = 1 / 4 &ast; n &ast; Math.pow(s, 2);
+  const denominator = Math.tan(Math.PI / n);
+  const area = numerator / denominator;
+  return area;
+}
+
 // Example usage
 const numberOfSides = 6; // Replace with the number of sides of your polygon
 const sideLength = 5; // Replace with the length of each side of your polygon
 const polygonArea = calculateRegularPolygonArea(numberOfSides, sideLength);
-console.log(' The area of the regular polygon is: ${polygonArea.toFixed(2)}');
+console.log(`The area of the regular polygon is: ${polygonArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js141">141. Check if a Number is an Abundant Number</h2>
@@ -4176,23 +4198,26 @@ console.log(' The area of the regular polygon is: ${polygonArea.toFixed(2)}');
 divisors, excluding itself. The sum of proper divisors is greater than the number itself.</p>
 <pre>
 function getProperDivisorsSum(number) {
-let sum = 0;
-for (let i = 1; i < = Math.floor(number I 2); i++) {
-if (number % i === 0) {
-sum + = i;
+  let sum = 0;
+  for (let i = 1; i < = Math.floor(number I 2); i++) {
+    if (number % i === 0) {
+      sum + = i;
+    }
+  }
+  return sum;
 }
-return sum;
 function isAbundantNumber(number) {
-const divisorsSum = getProperDivisorsSum(number);
-return divisorsSum > number;
+  const divisorsSum = getProperDivisorsSum(number);
+  return divisorsSum > number;
 }
+
 // Example usage
-const numberToCheck = 12;// Replace with the number you want to check
+const numberToCheck = 12; // Replace with the number you want to check
 if (isAbundantNumber(numberToCheck)) {
-console.logC ${numberToCheck} is an Abundant Number!
-');
+  console.log(`${numberToCheck} is an Abundant Number!`);
 } else {
-console.logC ${numberToCheck} is not an Abundant Number. ');
+  console.log(`${numberToCheck} is not an Abundant Number.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js142">142. Basic Word Guessing Game</h2>
@@ -4212,33 +4237,40 @@ class WordGuessingGame {
     const randomindex = Math.floor(Math.random() &ast; this.wordList.length);
     return this.wordList&lbrack;randomIndex&rbrack;.toUpperCase();
   }
-  displayWordO {
+  displayWord() {
     return this.selectedWord
     .split(")
-    .map(letter => (this.guesses.includes(letter) ? letter:
-    •joinf');
+    .map(letter => (this.guesses.includes(letter) ? letter: '_'))
+    .join('');
   }
   makeGuess(letter) {
     letter = letter.toUpperCase();
     if (!this.guesses.includes(letter)) {
       this.guesses.push(letter);
       if (Ithis.selectedWord.includes(letter)) {
-        this.maxAttempts—;
-        if (this.maxAttempts = = = 0) {
+        this.maxAttempts--;
+        if (this.maxAttempts === 0) {
           console.log(' Sorry, you're out of attempts. The word was: ${this.selectedWord}');
           process.exit();
         }
-      console.log(' Attempts left: $ {this.maxAttempts}');
-console.log(' Current word: ${this.displayWord()}');
-if (!this.displayWord().includes('_')) {
-console.log('Congratulations! You guessed the word!');
-process.exitQ;
+      }
+    }
+    console.log(' Attempts left: $ {this.maxAttempts}');
+    console.log(' Current word: ${this.displayWord()}');
+    if (!this.displayWord().includes('_')) {
+      console.log('Congratulations! You guessed the word!');
+      process.exit();
+    }
+  }
+}
+
 // Example usage
 const wordList = &lbrack;'javascript', 'python', 'java', 'ruby', 'typescript'&rbrack;;
 const game = new WordGuessingGame(wordList);
 console.log('Welcome to the Word Guessing Game!');
-console.log(' Attempts left: ${game.maxAttempts}');
-console.log(' Current word: ${game.displayWord()}');
+console.log(`Attempts left: ${game.maxAttempts}`);
+console.log(`Current word: ${game.displayWord()}`);
+
 // Simulate the game loop (you can replace this with actual user input in a real environment)
 game.makeGuess('a');
 game.makeGuess('e');
@@ -4259,21 +4291,26 @@ which counts the positive integers up to a given integer
 <span class="consolas">n</span>.</p>
 <pre>
 function eulerTotientFunction(n) {
-if(n<=0){
-return "Input must be a positive integer.";
+  if(n <= 0) {
+    return "Input must be a positive integer.";
+  }
+  let result = n; // Initialize result as n
+  // Iterate through all prime factors of n
+  for (letp = 2; p &ast; p <= n; p++) {
+    if (n % p === 0) {
+      while (n % p === 0) {
+        n/=p;
+      }
+      result -= result / p; // Apply the formula for prime factors
+    }
+  }
+  // If n is a prime number greater than 1
+  if (n > 1) {
+    result -= result / n;
+  }
+  return Math.floor(result); // Return the result as an integer
 }
-let result = n; // Initialize result as n
-// Iterate through all prime factors of n
-for (letp = 2;p &ast;p < = n;p++) {
-if (n % p = = = 0) {
-while (n % p = = = 0) {
-n/=p;
-result -= result / p; // Apply the formula for prime factors
-}
-// If n is a prime number greater than 1
-if (n > 1) {
-result -= result / n;
-return Math.floor(result); // Return the result as an integer
+
 // Example usage
 const n = 12; // Replace with the positive integer for which you want to calculate Euler's Totient Function
 const result = eulerTotientFunction(n);
@@ -4286,70 +4323,84 @@ console.log(' Euler's Totient Function for ${n} is: $ {result}');
 allowing the player to flip two cards at a time, and checking for matches.</p>
 <pre>
 class MemoryMatchingGame {
-constructor(cards) {
-this.cards = cards.concat(cards); // Duplicate the cards to create pairs
-this.shuffleCardsO;
-this.board = this.createBoardQ;
-this.flippedCards = &lbrack;&rbrack;;
-this.attempts = 0;
-this.matches = 0;
-shuffleCardsO {
-for (let i = this.cards.length -1; i > 0; i—) {
-constj = Math.floor(Math.random() &ast; (i + 1));
-&lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; = 
-&lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
+  constructor(cards) {
+    this.cards = cards.concat(cards); // Duplicate the cards to create pairs
+    this.shuffleCards();
+    this.board = this.createBoard();
+    this.flippedCards = &lbrack;&rbrack;;
+    this.attempts = 0;
+    this.matches = 0;
+  }
+  shuffleCards() {
+    for (let i = this.cards.length -1; i > 0; i--) {
+      constj = Math.floor(Math.random() &ast; (i + 1));
+      &lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; 
+	  = &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
+    }
+  }
+  createBoard() {
+    const board = &lbrack;&rbrack;;
+    for (let i = 0; i < 4; i++) {
+      const row = &lbrack;&rbrack;;
+      for (let j = 0; j <4;j++){
+        row.push(this.cards&lbrack;i &ast; 4 + j&rbrack;);
+      }
+      board.push(row);
+    }
+    return board;
+  }
+  displayBoard() {
+    for (const row of this.board) {
+      console.log(row.map(card => (card.faceUp ? card.value : 'X')).join(''));
+    }
+  }
+  flipCard(row, col) {
+    const card = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
+    if (’card.faceUp && this.flippedCards.length < 2) {
+      card.faceUp = true;
+      this.flippedCards.push(card);
+      if (this.flippedCards.length === 2) {
+        this.attempts++;
+        if (this.flippedCards&lbrack;O&rbrack;.value === this.flippedCards&lbrack;l&rbrack;.value) {
+          this.matches++;
+          console.log('Match found!');
+        } else {
+          console.log('No match. Try again.');
+          this.flippedCards.forEach(card => (card.faceUp = false));
+		  }
+        this.flippedCards = &lbrack;&rbrack;;
+      }
+      this.displayBoard();
+      if (this.matches = = = this.cards.length / 2) {
+        console.log(`Congratulations! You completed the game in ${this.attempts} attempts.`);
+        process.exit();
+      }
+    }
+  }
 }
-createBoard() {
-const board = &lbrack;&rbrack;;
-for (let i = 0; i < 4; i++) {
-const row = &lbrack;&rbrack;;
-for (let j = 0; j <4;j++){
-row.push(this.cards&lbrack;i &ast; 4 + j&rbrack;);
-board.push(row);
-return board;
-displayBoard() {
-for (const row of this.board) {
-console.log(row.map(card => (card.faceUp ? card.value : 'X')).join(''));
-}
-flipCard(row, col) {
-const card = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
-if (’card.faceUp && this.flippedCards.length < 2) {
-card.faceUp = true;
-this.flippedCards.push(card);
-if (this.flippedCards.length = = = 2) {
-this.attempts++;
-if (this.flippedCards&lbrack;O&rbrack;.value = = = this.flippedCards&lbrack;l&rbrack;.value) {
-this.matches++;
-console.log('Match found!');
-} else {
-console.logfNo match. Try again.');
-this.flippedCards.forEach(card => (card.faceUp = false));
-this.flippedCards = &lbrack;&rbrack;;
-}
-this.displayBoard();
-if (this.matches = = = this.cards.length / 2) {
-console.log(' Congratulations! You completed the game in ${this.attempts} attempts.');
-process.exitO;
+
 // Example usage
 const cards = &lbrack;
-{value: 'A', faceUp: false},
-{value: 'B', faceUp: false},
-{value: '0, faceUp: false},
-{value: 'D', faceUp: false},
-{value: 'A', faceUp: false},
-{value: 'B', faceUp: false},
-{value: 'C, faceUp: false},
-{value: 'D', faceUp: false}
+  {value: 'A', faceUp: false},
+  {value: 'B', faceUp: false},
+  {value: 'C', faceUp: false},
+  {value: 'D', faceUp: false},
+  {value: 'A', faceUp: false},
+  {value: 'B', faceUp: false},
+  {value: 'C, faceUp: false},
+  {value: 'D', faceUp: false}
 &rbrack;;
+
+// Example usage
 const game = new MemoryMatchingGame(cards);
-console.logC Welcome to the Memory Matching Game!');
+console.log('Welcome to the Memory Matching Game!');
 game.displayBoard();
 // Simulate the game loop (you can replace this with actual user input in a real environment)
-game.flipCard(O, 0);
-game.flipCard(l, 1);
+game.flipCard(0, 0);
+game.flipCard(1, 1);
 game.flipCard(2, 2);
 game.flipCard(3, 3);
-game.flipCard(0,1);
+game.flipCard(0, 1);
 game.flipCard(l, 0);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4363,42 +4414,46 @@ can be factored into 21 and 60, and the digits of 1260 can be rearranged to form
 digits of 21 and 60.</p>
 <pre>
 function isVampireNumber(number) {
-const strNumber = number.toStringO;
-const length = strNumber.length;
-if (length % 2 !== 0) {
-// Vampire numbers must have an even number of digits
-return false;
-}
-const pairs = getDigitPairs(strNumber);
-for (const &lbrack;pairl, pair2&rbrack; of pairs) {
-if (pairl = = = 0 || pair2 = = = 0) {
-// Exclude cases where one of the pairs has a leading zero
-continue;
-if (number = = = pairl &ast; pair2) {
-return true;
-}
-return false;
+  const strNumber = number.toString();
+  const length = strNumber.length;
+  if (length % 2 !== 0) {
+    // Vampire numbers must have an even number of digits
+    return false;
+  }
+  const pairs = getDigitPairs(strNumber);
+  for (const &lbrack;pairl, pair2&rbrack; of pairs) {
+    if (pairl === 0 || pair2 === 0) {
+      // Exclude cases where one of the pairs has a leading zero
+      continue;
+	}
+    if (number === pairl &ast; pair2) {
+      return true;
+    }
+  }
+  return false;
 }
 function getDigitPairs(strNumber) {
-const pairs = &lbrack;&rbrack;;
-const length = strNumber.length;
-for (let i = 0; i < length; i++) {
-for (let j = 0;j < length; j++) {
-if (i !==j){
-const pairl = parse!nt(strNumber&lbrack;i&rbrack; + strNumber&lbrack;j&rbrack;, 10);
-const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index != = j).join("), 10);
-pairs.push(&lbrack;pairl, pair 2&rbrack;);
+  const pairs = &lbrack;&rbrack;;
+  const length = strNumber.length;
+  for (let i = 0; i < length; i++) {
+    for (let j = 0;j < length; j++) {
+      if (i !== j){
+        const pairl = parse!nt(strNumber&lbrack;i&rbrack; + strNumber&lbrack;j&rbrack;, 10);
+        const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index != = j).join("), 10);
+        pairs.push(&lbrack;pairl, pair 2&rbrack;);
+      }
+    }
+  }
+  return pairs;
 }
-}
-}
-return pairs;
+
 // Example usage
-const vampireNumber = 1260;// Replace with the number you want to check
+const vampireNumber = 1260; // Replace with the number you want to check
 if (isVampireNumber(vampireNumber)) {
-console.log(' ${vampireNumber} is a Vampire Number! ');
+  console.log(`${vampireNumber} is a Vampire Number!`);
 } else {
-console.logC ${vampireNumber} is not a Vampire Number.
-');
+  console.log(`${vampireNumber} is not a Vampire Number.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js146">146. Basic Simon Says Game</h2>
@@ -4407,55 +4462,61 @@ console.logC ${vampireNumber} is not a Vampire Number.
 colors, then challenging the player to repeat the sequence.</p>
 <pre>
 class SimonSaysGame {
-constructor(colors) {
-this.colors = colors;
-this.sequence = &lbrack;&rbrack;;
-this.playerSequence = &lbrack;&rbrack;;
-this.round = 1;
-this.generateSequenceQ;
-generateSequenceO {
-for (let i = 0; i < this.round; i++) {
-const randomindex = Math.floor(Math.random() &ast;this.colors.length);
-this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
+  constructor(colors) {
+    this.colors = colors;
+    this.sequence = &lbrack;&rbrack;;
+    this.playerSequence = &lbrack;&rbrack;;
+    this.round = 1;
+    this.generateSequence();
+  }
+  generateSequence() {
+    for (let i = 0; i < this.round; i++) {
+      const randomindex = Math.floor(Math.random() &ast;this.colors.length);
+      this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
+    }
+  }
+  displaySequence() {
+    console.log(' Round ${this.round} - Simon says:');
+    for (const color of this.sequence) {
+      console.log(color);
+      // Simulate a delay between colors (you can replace this with actual delays in a real environment)
+      this.sleep(lOOO);
+      console.clear();
+    }
+  }
+  getPlayerInput() {
+    console.log('Your turn! Enter the sequence (e.g., "red blue green"):');
+    // Simulate user input (you can replace this with actual user input in a real environment)
+    const userinput = promptfEnter the sequence:').toLowerCase();
+    this.playerSequence = userlnput.split('');
+  }
+  checkSequence() {
+    for (let i = 0; i < this.round; i++) {
+      if (this.playerSequence&lbrack;i&rbrack; !== this.sequencefi&rbrack;) {
+        console.log('Wrong sequence! Game over.1);
+        process.exit();
+      }
+    }
+    console.log('Correct sequence! Next round.');
+    this.round++;
+  }
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  async play() {
+    while (true) {
+      this.displaySequence();
+      this.getPlayerlnput();
+      this.checkSequence();
+    }
+  }
 }
-displaySequenceO {
-console.log(' Round ${this.round} - Simon says:');
-for (const color of this.sequence) {
-console.log(color);
-// Simulate a delay between colors (you can replace this with actual delays in a real environment)
-this.sleep(lOOO);
-console.clearO;
-getPlayerlnputO {
-console.log('Your turn! Enter the sequence (e.g., "red blue green"):');
-// Simulate user input (you can replace this with actual user input in a real environment)
-const userinput = promptfEnter the sequence:').toLowerCase();
-this.playerSequence = userlnput.split('');
-}
-checkSequenceO {
-for (let i = 0; i < this.round; i++) {
-if (this.playerSequence&lbrack;i&rbrack; !== this.sequencefi&rbrack;) {
-console.log('Wrong sequence! Game over.1);
-process.exitO;
-}
-}
-console.log('Correct sequence! Next round.');
-this.round++;
-}
-sleep(ms) {
-return new Promise(resolve => setTimeout(resolve, ms));
-}
-async play() {
-while (true) {
-this.displaySequenceO;
-this.getPlayerlnputO;
-this.checkSequenceO;
-}
-}
-}
+
 // Example usage
 const colors = &lbrack;'red’, 'blue', 'green', 'yellow'&rbrack;;
 const simonSaysGame = new SimonSaysGame(colors);
 console.log('Welcome to Simon Says! Repeat the sequence correctly to advance.');
+
 // Start the game loop
 simonSaysGame.playO;
 </pre>
@@ -4463,16 +4524,18 @@ simonSaysGame.playO;
 <h2 id="js147">147. Calculate the Area of a Hexagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a regular hexagon given the side length ( s ). The 
-formula for the area of a regular hexagon is Area = (3 &ast; V3 &ast; s&ast;2) / 2 , where 
+formula for the area of a regular hexagon is Area = (3 &ast; <squareroot>3 &ast; s^2) / 2, where 
 s is the side length.</p>
 <pre>
 function calculateHexagonArea(sideLength) {
-const area = (3 &ast; Math.sqrt(3) / 2) &ast; Math.pow(sideLength, 2);
-return area;
+  const area = (3 &ast; Math.sqrt(3) / 2) &ast; Math.pow(sideLength, 2);
+  return area;
+}
+  
 // Example usage
 const sideLength = 5; // Replace with the length of a side of your hexagon
 const hexagonArea = calculateHexagonArea(sideLength);
-console.log(' The area of the hexagon is: ${hexagonArea.toFixed(2)}');
+console.log(`The area of the hexagon is: ${hexagonArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js148">148. Check if a Number is a Pronic Number</h2>
@@ -4482,17 +4545,20 @@ rectangular number or oblong number. A pronic number is a product of two consecu
 integers. The nth pronic number is given by the formula: n &ast; (n + 1).</p>
 <pre>
 function isPronicNumber(number) {
-  for (let i = O;i&ast;(i + 1) <= number; i++) {
-    if (i&ast; (i + 1)=== number) {
+  for (let i = O; i&ast;(i + 1) <= number; i++) {
+    if (i &ast; (i + 1) === number) {
       return true;
     }
-return false;
+  }
+  return false;
+}
+
 // Example usage
 const pronicNumber = 6; // Replace with the number you want to check
 if (isPronicNumber(pronicNumber)) {
-console.log(' $ {pronicNumber} is a Pronic Number!');
+  console.log(`${pronicNumber} is a Pronic Number!`);
 } else {
-console.log(' $ {pronicNumber} is not a Pronic Number.');
+  console.log(`${pronicNumber} is not a Pronic Number.`);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4502,83 +4568,85 @@ console.log(' $ {pronicNumber} is not a Pronic Number.');
 to uncover cells, and providing feedback on the presence of mines.</p>
 <pre>
 class MinesweeperGame {
-constructor(rows, cols, numMines) {
-this.rows = rows;
-this.cols = cols;
-this.numMines = numMines;
-this.board = this.createBoardQ;
-this.gameOver = false;
-}
-createBoard() {
-const board = Array.from({ length: this.rows },()=> Array(this.cols).fill(0));
-// Place mines randomly
-for (let i = 0; i < this.numMines; i++) {
-let row, col;
-do {
-row = Math.floor(Math.random() &ast; this.rows);
-col = Math.floor(Math.random() &ast; this.cols);
-} while (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X');
-board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
-}
-// Calculate numbers around mines
-for (let i = 0; i < this.rows; i++) {
-for (letj = 0; j < this.cols; j ++) {
-if (board&lbrack;i&rbrack;&lbrack;j&rbrack; ==='X') {
-continue;
-}
-for (let row = i- l;row <= i + l;row++) {
-for (let col = j - l;col<= j + l;col++){
-if (row > = 0 && row < this.rows && col > = 0 && col < this.cols && board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X') {
-board&lbrack;i&rbrack;&lbrack;j&rbrack;++;
-}
-}
-}
-}
-}
-return board;
-}
-displayBoard() {
-console.log('Minesweeper Board:');
-for (const row of this.board) {
-console Jog(row.map(cell => (cell = = = 'X' ? 'X':' ')).join(''));
-}
-}
-uncoverCell(row, col) {
-if (this.gameO ver 11 row < 0 || row >= this.rows || col < 0 || col >= this.cols) {
-return;
-}
-const cell = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
-if (cell = = ='X') {
-console.log('Game over! You hit a mine.');
-this.gameOver = true;
-} else if (cell = = = 0) {
-this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = '';
-this.uncoverNeighbors(row, col);
-} else {
-this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = cell.toStringO;
-}
-this.checkWin();
-}
-uncoverNeighbors(row, col) {
-for (let i = row - l;i <= row + l;i++) {
-for (let j = col - l;j <= col + l;j++) {
-if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = = = 0) {
-this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = '
-this.uncoverNeighbors(i, j);
-} else if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; !== 'X') {
-this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = this.board&lbrack;i&rbrack;&lbrack;j&rbrack;.toString();
-}
-}
-}
-}
-checkWinO {
-let uncoveredCount = 0;
-for (const row of this.board) {
-uncoveredCount += row.filter(cell => cell !== 'X').length;
-}
-if (uncoveredCount = = = this.rows &ast; this.cols - this.numMines) {
-console.log('Congratulations! You win!');
-this.gameOver = true;
+  constructor(rows, cols, numMines) {
+    this.rows = rows;
+    this.cols = cols;
+    this.numMines = numMines;
+    this.board = this.createBoardQ;
+    this.gameOver = false;
+  }
+  createBoard() {
+    const board = Array.from({ length: this.rows },()=> Array(this.cols).fill(0));
+    // Place mines randomly
+    for (let i = 0; i < this.numMines; i++) {
+      let row, col;
+      do {
+        row = Math.floor(Math.random() &ast; this.rows);
+        col = Math.floor(Math.random() &ast; this.cols);
+      } while (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X');
+        board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
+    }
+    // Calculate numbers around mines
+    for (let i = 0; i < this.rows; i++) {
+      for (letj = 0; j < this.cols; j ++) {
+        if (board&lbrack;i&rbrack;&lbrack;j&rbrack; ==='X') {
+          continue;
+        }
+        for (let row = i- l;row <= i + l;row++) {
+          for (let col = j - l;col<= j + l;col++) {
+            if (row > = 0 && row < this.rows && col > = 0 
+		      && col < this.cols 
+              && board&lbrack;row&rbrack;&lbrack;col&rbrack; === 'X') {
+			    board&lbrack;i&rbrack;&lbrack;j&rbrack;++;
+            }
+          }
+        }
+      }
+    }
+    return board;
+  }  // end createBoard()
+  displayBoard() {
+    console.log('Minesweeper Board:');
+    for (const row of this.board) {
+      console Jog(row.map(cell => (cell === 'X' ? 'X':' ')).join(''));
+    }
+  }
+  uncoverCell(row, col) {
+    if (this.gameO ver || row < 0 || row >= this.rows || col < 0 || col >= this.cols) {
+      return;
+    }
+  const cell = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
+  if (cell === 'X') {
+    console.log('Game over! You hit a mine.');
+    this.gameOver = true;
+  } else if (cell = = = 0) {
+    this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = '';
+    this.uncoverNeighbors(row, col);
+  } else {
+    this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = cell.toString();
+  }
+    this.checkWin();
+  }
+  uncoverNeighbors(row, col) {
+    for (let i = row - l;i <= row + l;i++) {
+      for (let j = col - l;j <= col + l;j++) {
+        if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; === 0) {
+          this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = '';
+          this.uncoverNeighbors(i, j);
+        } else if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; !== 'X') {
+          this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = this.board&lbrack;i&rbrack;&lbrack;j&rbrack;.toString();
+        }
+      }
+    }
+  }
+  checkWin() {
+    let uncoveredCount = 0;
+    for (const row of this.board) {
+      uncoveredCount += row.filter(cell => cell !== 'X').length;
+    }
+    if (uncoveredCount = = = this.rows &ast; this.cols - this.numMines) {
+      console.log('Congratulations! You win!');
+      this.gameOver = true;
     }
   }
 }
@@ -4586,12 +4654,13 @@ this.gameOver = true;
 // Example usage
 const minesweeperGame = new MinesweeperGame(5, 5, 3);
 minesweeperGame.displayBoard();
+
 // Simulate the game loop (you can replace this with actual user input in a real environment)
 minesweeperGame.uncoverCell(0, 0);
 minesweeperGame.uncoverCell(2, 2);
-minesweeperGame.uncoverCell( 1,1);
+minesweeperGame.uncoverCell(1, 1);
 minesweeperGame.uncoverCell(3, 3);
-minesweeperGame.uncoverCell(4,4);
+minesweeperGame.uncoverCell(4, 4);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js150">150. Find the Area of a Pentagon</h2>
@@ -5874,7 +5943,7 @@ function shoppingListProgram() {
   console.log("You can add items, remove items, and view your current shopping list.");
   while (true) {
     const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, or 'view' 
-	  to see your shopping list. Type 'exit' to end the program:").toLowerCase();
+      to see your shopping list. Type 'exit' to end the program:").toLowerCase();
     if (action = = = "exit") {
       console.log("Exiting the Shopping List Program. Goodbye!");
       break;
@@ -8881,7 +8950,7 @@ const rgbToHSL = (r, g, b) => {
   let l = (max + min) / 2;
   return { h: Math.round(h &ast; 360), 
     s: Math.round(s &ast; 100), 
-	l: Math.round(l &ast; 100) };
+    l: Math.round(l &ast; 100) };
 };
 
 // Example usage
@@ -9482,7 +9551,7 @@ const shuffleArrayFisherYates = arr => {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() &ast; (i + 1));
     &lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; 
-	= &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
+    = &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
   }
 return arr;
 };
