@@ -620,6 +620,9 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex1">1. JS Statements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JS statements are individual commands or instructions that the browser executes. They 
+form the logic of a program and can be simple or complex.</p>
+
 <ol start="1">
   <li>Variable Declaration:
     <pre>    let x; // Declaring a variable 'x'</pre>
@@ -647,18 +650,89 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex2">2. JS Syntax</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JS syntax refers to the rules that define the structure of valid JavaScript code. It 
+includes rules for writing statements, variables, and functions in a way that the 
+interpreter or browser can understand.</p>
+
+<ol start="1">
+  <li>Function Definition:
+    <pre>
+    function greet(name) {
+      return 'Hello, ' + name + '!';
+    }
+    </pre>
+  </li>
+  <li>Object Literal:
+    <pre>
+    const person = {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 30
+    };
+    </pre>
+  </li>
+  <li>Array Declaration:
+    <pre>const numbers = &lbrack;1,2,3,4,5&rbrack;;</pre>
+    </li>
+</ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex3">3. JS Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>They are ignored by the interpreter and are only meant for human readers.</p>
+
+<ol start="1">
+  <li>Single Line Comment:
+    <pre>// This is a single line Comment</pre>
+  </li>
+  <li>Multi-line Comment:
+    <pre>
+    /*
+	This is a 
+	multi-line comment
+	*/
+    </pre>
+  </li>
+  <li>Comment Out Code:
+    <pre>
+	// This code won't be Executed
+	// const x = 10;
+    </pre>
+  </li>
+</ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex4">4. JS Variables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Variable in JS are used to store data values. They can hold various types of data such
+as numbers, strings, objects, arrays, methods, and more.</p>
+<ol type="1">
+  <li>Declaring and Assigning a Variable:
+    <pre>let age = 25; // Declaring 'age' and assigning a value of 25</pre>
+  </li>
+  <li>String Variable:
+    <pre>let Name = 'Alice'; // A variable holding a string value</pre>
+  </li>
+  <li>Object Variable:
+    <pre>let person = {name: 'Bob', age: 30}; // A variable holding a object</pre>
+  </li>
+</ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex5">5. JS let</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The let keyword is used to declare variables in JS. It allows the declared variable to be 
+reassigned a new value if needed.</p>
+<pre>
+let x = 5;
+x = 10; // Reassigning 'x' to a new Value
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex6">6. JS const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The const keyword is used to declare constants in JS. Once assigned, the value of a const
+cannot be changed.</p>
+<pre>
+const PI = 3.14159;  // Declaring a constant PI
+// PI = 3; // This will throw an error as reassignment is not Allowed
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex7">7. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4614,7 +4688,7 @@ class MemoryMatchingGame {
     for (let i = this.cards.length -1; i > 0; i--) {
       constj = Math.floor(Math.random() &ast; (i + 1));
       &lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; 
-	  = &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
+      = &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
     }
   }
   createBoard() {
@@ -4646,7 +4720,7 @@ class MemoryMatchingGame {
         } else {
           console.log('No match. Try again.');
           this.flippedCards.forEach(card => (card.faceUp = false));
-		  }
+          }
         this.flippedCards = &lbrack;&rbrack;;
       }
       this.displayBoard();
@@ -4704,7 +4778,7 @@ function isVampireNumber(number) {
     if (pairl === 0 || pair2 === 0) {
       // Exclude cases where one of the pairs has a leading zero
       continue;
-	}
+    }
     if (number === pairl &ast; pair2) {
       return true;
     }
@@ -4874,9 +4948,9 @@ class MinesweeperGame {
         for (let row = i- l;row <= i + l;row++) {
           for (let col = j - l;col<= j + l;col++) {
             if (row > = 0 && row < this.rows && col > = 0 
-		      && col < this.cols 
+              && col < this.cols 
               && board&lbrack;row&rbrack;&lbrack;col&rbrack; === 'X') {
-			    board&lbrack;i&rbrack;&lbrack;j&rbrack;++;
+                board&lbrack;i&rbrack;&lbrack;j&rbrack;++;
             }
           }
         }
