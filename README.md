@@ -20,6 +20,7 @@ own ideas into a reality without even having to think about it.</p>
 <h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a href="#ex0">92 JavaScript Examples From Basics to Advanced</a></h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <ul>
   <li href="#ex1">JS Statements</li>
@@ -615,28 +616,40 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js-263">js-263. Calculate the Area of a Kite</a></li>
   <li><a href="#js-264">js-264. Calculate the Area of a Sector</a></li>
 </ul>
-<pre>
-    1 . Variable Declaration :
-javascript code
-let x; // Declaring a variable 'x'
+<h2 id="ex0">92 JavaScript Examples from Basics to Advanced</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ex1">1. JS Statements</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ol start="1"
+  <li>Variable Declaration:
+  <pre>
+  let x; // Declaring a variable 'x'
+  </pre>
+  </li>
+  <li>Conditional Statement:
+  <pre>
+  if(x === 5) {
+    // Executed if x is equal to 5
+    console.log ('x is 5');
+  } else {
+    // Executed if x is not equal to 5
+    console.log ('x is not 5');
+  }
+  </pre>
+  </li>
+  <li>Loops:
+  <pre>
+  for (let i = 0;i<5;i++) {
+    // Executed 5 times
+    console.log(i);
+  }
+  </pre>
+  </li>
+</ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ex2">2. JS Syntax</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-2 . Conditional Statement:
-javascript code
-if(x = = = 5) {
-// Executed if x is equal to 5
-console . log ('x is 5');
-} else {
-// Executed if x is not equal to 5
-console . log ('x is not 5');
-}
-
-3 . Loops:
-javascript code
-for (let i = 0;i<5;i++) {
-// Executed 5 times
-console . log (i) ;
-}
-</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js0">218 JS Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9866,4 +9879,3 @@ creating and programming with passion!</p>
 <p>Thank you for allowing me to be part of your journey.</p>
 <p>With gratitude,</p>
 <p>Hernando Abella</p>
-
