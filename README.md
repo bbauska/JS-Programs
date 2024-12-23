@@ -620,30 +620,30 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex1">1. JS Statements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<ol start="1"
+<ol start="1">
   <li>Variable Declaration:
-  <pre>
-  let x; // Declaring a variable 'x'
-  </pre>
+    <pre>
+    let x; // Declaring a variable 'x'
+    </pre>
   </li>
   <li>Conditional Statement:
-  <pre>
-  if(x === 5) {
-    // Executed if x is equal to 5
-    console.log ('x is 5');
-  } else {
-    // Executed if x is not equal to 5
-    console.log ('x is not 5');
-  }
-  </pre>
+    <pre>
+    if(x === 5) {
+      // Executed if x is equal to 5
+      console.log ('x is 5');
+    } else {
+      // Executed if x is not equal to 5
+      console.log ('x is not 5');
+    }
+    </pre>
   </li>
   <li>Loops:
-  <pre>
-  for (let i = 0;i<5;i++) {
-    // Executed 5 times
-    console.log(i);
-  }
-  </pre>
+    <pre>
+    for (let i = 0;i<5;i++) {
+      // Executed 5 times
+      console.log(i);
+    }
+    </pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
