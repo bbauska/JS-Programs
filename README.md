@@ -720,6 +720,36 @@ PI = 3; // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex7">7. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JS operators are symbols used to perform operations on operands, such as arithmetic 
+operations, assignment, comparison, logical operations, and more.
+<ol type="1">
+  <li>Arithmetic Operators:
+    <pre>let a = 10;
+let b = 5;
+let sum = a + b; // Addition
+let difference = a - b; // Subtraction
+let product = a &ast; b; // Multiplication
+let quotient = a / b; // Division
+    </pre>
+  </li>
+  <li>Comparison Operators:
+    <pre>let x = 5;
+let y = 10;
+console.log(x === y); // Equality check
+console.log(x !== y); // Inequality check
+console.log(x > y); // Greater Than
+console.log(x < y); // Less Than
+    </pre>
+  </li>
+  <li>Logical Operators:
+    <pre>let p = true;
+let q = false;
+console.log(p && q); // Logical AND
+console.log(p || q); // Logical OR
+console.log(!p); / Logical NOT
+    </pre>
+  </li>
+</ol>  
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex8">8. JS Arithmetic</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
