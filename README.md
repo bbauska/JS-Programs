@@ -8026,8 +8026,9 @@ Finally, the shuffled characters are rejoined to form a new string.</p>
 <pre>
 const shuffleString = (str) => str.split('').sort(() => 0.5 -
 Math.random()).join('');
-console.log(shuffleString("hello"));
-// Output: Randomly shuffled string, e.g., "olelh"
+  
+// Example usage
+console.log(shuffleString("hello")); // Output: Randomly shuffled string, e.g., "olelh"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-116">116. Find the Nth Fibonacci Number (recursive)</h2>
@@ -8037,8 +8038,9 @@ recursive approach. It determines the Fibonacci number by summing the
 previous two Fibonacci numbers until it reaches the base cases of 0 and 1.</p>
 <pre>
 const fibonacci = (n) => (n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2));
-console.log(fibonacci(7));
-// Output: 13
+  
+// Example usage
+console.log(fibonacci(7)); // Output: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-117">117. Count the Words in a String</h2>
@@ -8049,8 +8051,9 @@ matches one or more whitespace characters, and then counting the resulting
 array's length.</p>
 <pre>
 const countWords = (str) => str.split(/\s+/).length;
-console.log(countWords("Hello, how are you doing?"));
-// Output: 5
+  
+// Example usage
+console.log(countWords("Hello, how are you doing?")); // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-118">118. Check if a Number is a Triangular Number</h2>
@@ -8066,12 +8069,11 @@ const isTriangularNumber = (num) => {
   }
   return sum === num;
 };
-console.log(isTriangularNumber(10));
-// Output: true
-console.log(isTriangularNumber(15));
-// Output: true
-console.log(isTriangularNumber(7));
-// Output: false
+  
+// Example usage
+console.log(isTriangularNumber(10)); // Output: true
+console.log(isTriangularNumber(15)); // Output: true
+console.log(isTriangularNumber(7)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-119">119. Calculate the Perimeter of a Rectangle</h2>
@@ -8080,8 +8082,9 @@ console.log(isTriangularNumber(7));
 summing twice the width and twice the height of the rectangle.</p>
 <pre>
 const rectanglePerimeter = (width, height) => 2 &ast; (width + height);
-console.log(rectanglePerimeter(5, 10));
-// Output: 30
+  
+// Example usage
+console.log(rectanglePerimeter(5, 10)); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-120">120. Find the Longest Common Prefix in an Array of Strings</h2>
@@ -8091,17 +8094,18 @@ among an array of strings. It starts by assuming the first string in the array
 as the initial common prefix.</p>
 <pre>
 const longestCommonPrefix = (strs) => {
-if (strs.length === 0) return '';
-let prefix = strs&lbrack;0&rbrack;;
-for (let i = 1; i < strs.length; i++) {
-while (!strs&lbrack;i&rbrack;.startsWith(prefix)) {
-prefix = prefix.slice(0, prefix.length - 1);
-}
-}
-return prefix;
+  if (strs.length === 0) return '';
+  let prefix = strs&lbrack;0&rbrack;;
+  for (let i = 1; i < strs.length; i++) {
+    while (!strs&lbrack;i&rbrack;.startsWith(prefix)) {
+      prefix = prefix.slice(0, prefix.length - 1);
+    }
+  }
+  return prefix;
 };
-console.log(longestCommonPrefix(&lbrack;'apple', 'apricot', 'appetizer'&rbrack;));
-// Output: "app"
+  
+// Example usage
+console.log(longestCommonPrefix(&lbrack;'apple', 'apricot', 'appetizer'&rbrack;)); // Output: "app"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-121">121. Get the ASCII Value of a Character</h2>
@@ -8111,8 +8115,9 @@ It employs the charCodeAt method, which returns the ASCII code of the
 character at the specified index (0 in this case).</p>
 <pre>
 const getASCIIValue = (char) => char.charCodeAt(0);
-console.log(getASCIIValue('A'));
-// Output: 65
+  
+// Example usage
+console.log(getASCIIValue('A')); // Output: 65
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-122">122. Find the First Non-Repeated Character in a String</h2>
@@ -8123,14 +8128,15 @@ string, building a character count object, and then using the find method to
 locate the first character with a count of 1.</p>
 <pre>
 const firstNonRepeatedChar = (str) => {
-const charCount = {};
-for (const char of str) {
-charCount&lbrack;char&rbrack; = (charCount&lbrack;char&rbrack; || 0) + 1;
-}
-return str.split('').find((char) => charCount&lbrack;char&rbrack; === 1);
+  const charCount = {};
+  for (const char of str) {
+    charCount&lbrack;char&rbrack; = (charCount&lbrack;char&rbrack; || 0) + 1;
+  }
+  return str.split('').find((char) => charCount&lbrack;char&rbrack; === 1);
 };
-console.log(firstNonRepeatedChar('abacabad'));
-// Output: "c"
+  
+// Example usage
+console.log(firstNonRepeatedChar('abacabad')); // Output: "c"
 </pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8141,14 +8147,15 @@ specified property's value. It employs the sort method with a custom
 comparison function that compares the property values of two objects.</p>
 <pre>
 const sortByProperty = (arr, prop) => arr.sort((a, b) => a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
+  
+// Example usage
 const people = &lbrack;
-{ name: 'Alice', age: 25 },
-{ name: 'Bob', age: 20 },
-{ name: 'Charlie', age: 30 }
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 20 },
+  { name: 'Charlie', age: 30 }
 &rbrack;;
 console.log(sortByProperty(people, 'age'));
-// Output: &lbrack;{ name: 'Bob', age: 20 }, { name: 'Alice', age: 25 }, { name:
-'Charlie', age: 30 }&rbrack;
+// Output: &lbrack;{ name: 'Bob', age: 20 }, { name: 'Alice', age: 25 }, { name: 'Charlie', age: 30 }&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-124">124. Calculate the Exponential of a Number</h2>
@@ -8157,8 +8164,9 @@ console.log(sortByProperty(people, 'age'));
 specified exponent using the exponentiation operator (&ast;&ast;).</p>
 <pre>
 const exponential = (base, exponent) => base &ast;&ast; exponent;
-console.log(exponential(2, 3));
-// Output: 8
+  
+// Example usage
+console.log(exponential(2, 3)); // Output: 8
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-125">125. Check if a String is an Anagram of Another String</h2>
