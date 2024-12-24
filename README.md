@@ -729,8 +729,7 @@ let b = 5;
 let sum = a + b; // Addition
 let difference = a - b; // Subtraction
 let product = a &ast; b; // Multiplication
-let quotient = a / b; // Division
-    </pre>
+let quotient = a / b; // Division</pre>
   </li>
   <li>Comparison Operators:
     <pre>let x = 5;
@@ -738,16 +737,14 @@ let y = 10;
 console.log(x === y); // Equality check
 console.log(x !== y); // Inequality check
 console.log(x > y); // Greater Than
-console.log(x < y); // Less Than
-    </pre>
+console.log(x < y); // Less Than</pre>
   </li>
   <li>Logical Operators:
     <pre>let p = true;
 let q = false;
 console.log(p && q); // Logical AND
 console.log(p || q); // Logical OR
-console.log(!p); / Logical NOT
-    </pre>
+console.log(!p); / Logical NOT</pre>
   </li>
 </ol>  
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
