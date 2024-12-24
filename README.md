@@ -625,26 +625,22 @@ form the logic of a program and can be simple or complex.</p>
 
 <ol start="1">
   <li>Variable Declaration:
-    <pre>    let x; // Declaring a variable 'x'</pre>
+    <pre>let x; // Declaring a variable 'x'</pre>
   </li>
   <li>Conditional Statement:
-    <pre>
-    if(x === 5) {
+    <pre>if(x === 5) {
       // Executed if x is equal to 5
       console.log ('x is 5');
     } else {
       // Executed if x is not equal to 5
       console.log ('x is not 5');
-    }
-    </pre>
+    }</pre>
   </li>
   <li>Loops:
-    <pre>
-    for (let i = 0;i<5;i++) {
+    <pre>for (let i = 0;i<5;i++) {
       // Executed 5 times
       console.log(i);
-    }
-    </pre>
+    }</pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -656,20 +652,16 @@ interpreter or browser can understand.</p>
 
 <ol start="1">
   <li>Function Definition:
-    <pre>
-    function greet(name) {
+    <pre>function greet(name) {
       return 'Hello, ' + name + '!';
-    }
-    </pre>
+    }</pre>
   </li>
   <li>Object Literal:
-    <pre>
-    const person = {
+    <pre>const person = {
       firstName: 'John',
       lastName: 'Doe',
       age: 30
-    };
-    </pre>
+    };</pre>
   </li>
   <li>Array Declaration:
     <pre>const numbers = &lbrack;1,2,3,4,5&rbrack;;</pre>
@@ -685,18 +677,14 @@ interpreter or browser can understand.</p>
     <pre>// This is a single line Comment</pre>
   </li>
   <li>Multi-line Comment:
-    <pre>
-    /*
+    <pre>/*
 	This is a 
 	multi-line comment
-	*/
-    </pre>
+	*/</pre>
   </li>
   <li>Comment Out Code:
-    <pre>
-	// This code won't be Executed
-	// const x = 10;
-    </pre>
+    <pre>// This code won't be Executed
+	// const x = 10;</pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -720,19 +708,15 @@ as numbers, strings, objects, arrays, methods, and more.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The let keyword is used to declare variables in JS. It allows the declared variable to be 
 reassigned a new value if needed.</p>
-<pre>
-let x = 5;
-x = 10; // Reassigning 'x' to a new Value
-</pre>
+<pre>let x = 5;
+x = 10; // Reassigning 'x' to a new Value</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex6">6. JS const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The const keyword is used to declare constants in JS. Once assigned, the value of a const
 cannot be changed.</p>
-<pre>
-const PI = 3.14159;  // Declaring a constant PI
-// PI = 3; // This will throw an error as reassignment is not Allowed
-</pre>
+<pre>const PI = 3.14159;  // Declaring a constant PI
+// PI = 3; // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex7">7. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
