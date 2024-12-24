@@ -838,7 +838,7 @@ let result = multiply(5,3); // result = 15</pre>
 clicking a button or typing in a form field.</p>
 <h3>Examples of JS Events:</h4>
 <h4>Click Event:</h4>
-<pre>Document.getElementById('myButton').addEventListener('click', function() {
+<pre>document.getElementById('myButton').addEventListener('click', function() {
   console.log('Button clicked!');
 });</pre>
 <h4>Input Event:</h4>
@@ -865,7 +865,7 @@ let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 let upperCaseText = text.toUpperCase(); // upperCaseText = 'HELLO'</pre>
 <h4>substring() Method:</h4>
 <pre>let sentence = 'This is a sentence';
-let subSentence = sentence.substring(5, 10); // subSentence = 'is a'</pre>
+let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex16">16. JS String Search</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
