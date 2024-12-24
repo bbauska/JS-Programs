@@ -1052,8 +1052,7 @@ variablel = variable2;
 variable2 = temp;
 console.log(
   `After swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
-);
-</pre>
+);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js6">6. Solve Quadratic Equation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1084,8 +1083,7 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
   }
 } else {
   console.log("Please enter valid numbers for coefficients.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js7">7. Convert Kilometers to Miles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1163,6 +1161,7 @@ let number = parseFloat(prompt("Enter a number:"));
 
 // Check if input is a valid number
 if (!isNaN(number)) {
+
   // Check if the number is positive, negative, or zero
   if (number > 0) {
     console.log(`${number} is a positive number.`);
@@ -1185,6 +1184,7 @@ let number = parseInt(prompt("Enter a number:"));
 
 // Check if input is a valid integer
 if (!isNaN(number) && Number.isInteger(number)) {
+
   // Check if the number is odd or even
   if (number % 2 === 0) {
     console.log(`${number} is an even number.`);
@@ -1207,6 +1207,7 @@ let num3 = parseFloat(prompt("Enter the third number:"));
 
 // Check if inputs are valid numbers
 if (!isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
+
   // Find the largest among the three numbers
   let largestNumber = Math.max(numl, num2, num3);
   console.log (
@@ -1283,7 +1284,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 } else {
   console.log(
     "Please enter valid integers, ensuring that the starting number is less than the 
-      ending number and greater than 1."
+    ending number and greater than 1."
   );
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1298,6 +1299,7 @@ let number = parseInt(prompt("Enter a non-negative integer:"));
 
 // Check if input is a valid non-negative integer
 if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
+
   // Calculate the factorial
   let factorial = 1;
   for (let i = 1; i < = number; i++) {
@@ -1318,6 +1320,7 @@ let number = parseInt(prompt("Enter a number for the multiplication table:"));
 
 // Check if input is a valid integer
 if (!isNaN(number) && Number.isInteger(number)) {
+
   // Specify the range for the multiplication table
   const range = 10;
   console.log(`Multiplication table for ${number} (up to ${range}):`);
@@ -1401,6 +1404,7 @@ let startNumber = parseInt(
   prompt("Enter the starting number of the interval:")
 );
 let endNumber = parseInt(prompt("Enter the ending number of the interval:"));
+
 // Check if inputs are valid positive integers and the startNumber is less than the endNumber
 if(
   !isNaN(startNumber) &&
@@ -1432,7 +1436,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 } else {
   console.log(
   "Please enter valid positive integers, ensuring that the starting number is less than 
-    the ending number and both are greater than 0."
+  the ending number and both are greater than 0."
   );
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1449,6 +1453,7 @@ let num2 = parseFloat(prompt("Enter the second number:"));
 
 // Check if inputs are valid numbers
 if (lisNaN(numl) && !isNaN(num2)) {
+
   // Prompt user for the operation
   let operation = prompt(
     "Choose an operation (+ for addition, 
@@ -1456,6 +1461,7 @@ if (lisNaN(numl) && !isNaN(num2)) {
       &ast; for multiplication, 
       / for division):"
   );
+  
   // Perform the selected operation
   let result;
   switch (operation) {
@@ -1477,7 +1483,7 @@ if (lisNaN(numl) && !isNaN(num2)) {
       }
     break;
     default:
-    console.logf'Invalid operation.");
+    console.log("Invalid operation.");
     break;
   }
   // Display the result
@@ -1607,7 +1613,7 @@ let number = parseInt(prompt("Enter a positive integer:"));
 
 // Check if input is a valid positive integer
 if (’isNaN(number) && Number.isInteger(number) && number > 0) {
-  console.log(' Factors of $ {number}:');
+  console.log(`Factors of $ {number}:`);
 
   // Find and display the factors
   for (let i = 1; i < = number; i++) {
@@ -1835,7 +1841,7 @@ let inputstring = prompt("Enter a string:");
 if (inputString.length > 0) {
   // Check and display if the string is a palindrome
   if (isPalindrome(inputString)) {
-    console.log(`"$ {input String}" is a palindrome.`);
+    console.log(`"${input String}" is a palindrome.`);
   } else {
     console.log(`"${inputString}" is not a palindrome.`);
   }
