@@ -716,7 +716,7 @@ x = 10; // Reassigning 'x' to a new Value</pre>
 <p>The const keyword is used to declare constants in JS. Once assigned, the value of a const
 cannot be changed.</p>
 <pre>const PI = 3.14159;  // Declaring a constant PI
-// PI = 3; // This will throw an error as reassignment is not Allowed</pre>
+PI = 3; // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex7">7. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10134,7 +10134,7 @@ body {
     #5d26c1,
     #a17fe0,
     #59c173
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); /&ast; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ &ast;/
 }
 
 canvas#confetti {
@@ -10188,12 +10188,12 @@ canvas#confetti {
   width: calc(100% - 1px);
   height: calc(100% - 1px);
 }
-
+ 
 .button-53:hover:after {
   bottom: 2px;
   left: 2px;
 }
-
+ 
 @media (min-width: 768px) {
   .button-53 {
     padding: 0.75rem 3rem;
@@ -10204,19 +10204,21 @@ canvas#confetti {
 
 <p>JS:</p>
 <pre>
-/* JavaScript - confetti */
+/&ast; JavaScript - confetti &ast;/
 const button = document.querySelector('#button');
 const canvas = document.querySelector('#confetti');
-
+ 
 const jsConfetti = new JSConfetti();
-
+ 
 button.addEventListener('click', () => {
   jsConfetti.addConfetti({
     emojis: ['🥩'],
   }).then(() => jsConfetti.addConfetti())
 })
 </pre>
-/* the end */
+
+<h7>/* the end */</h7>
+
 <p>In every line of code, they have woven a story of innovation and creativity.
 This book has been your compass in the vast world of JavaScript.
 Close this chapter knowing that every challenge overcome is an
