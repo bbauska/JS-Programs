@@ -900,7 +900,7 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <h4>Decimal Numbers:</h4>
 <pre>let decimalNumber = 3.14;</pre>
 <h4>Scientific Notation:</h4>
-<pre>let scientificNumber = 3e3; // scientificNumber = 2000</pre>
+<pre>let scientificNumber = 2e3; // scientificNumber = 2000</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex19">19. JS BigInt</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
