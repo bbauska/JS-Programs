@@ -622,7 +622,7 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS statements are individual commands or instructions that the browser executes. They 
 form the logic of a program and can be simple or complex.</p>
-
+<h3>Examples of JavaScript Statements:</h4>
 <ol start="1">
   <li><h4>Variable Declaration:</h4>
     <pre>let x; // Declaring a variable 'x'</pre>
@@ -671,7 +671,7 @@ interpreter or browser can understand.</p>
 <h2 id="ex3">3. JS Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>They are ignored by the interpreter and are only meant for human readers.</p>
-<h3>JavaScript Comments:</h3>
+<h3>Examples of JavaScript Comments:</h3>
 <ol start="1">
   <li><h4>Single Line Comment:</h4>
     <pre>// This is a single line Comment</pre>
@@ -692,6 +692,7 @@ multi-line comment
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Variable in JS are used to store data values. They can hold various types of data such
 as numbers, strings, objects, arrays, methods, and more.</p>
+<h3>Examples of JavaScript Variables:</h3>
 <ol type="1">
   <li><h4>Declaring and Assigning a Variable:</h4>
     <pre>let age = 25; // Declaring 'age' and assigning a value of 25</pre>
@@ -788,16 +789,16 @@ console.log(!p); / Logical NOT</pre>
 <h3>Examples of JS Data Types</h3>
 <h4>Primitive Data Types:</h4>
 <ul>
-  <li>Number: let num = 10;</li>
+  <li><h4>Number:</h4> let num = 10;</li>
   <li>String: let text = 'Hello';</li>
-  <li>Boolean: let isTrue = true;</li>
-  <li>Undefined: let value;</li>
-  <li>Null: let emptyValue = null;
+  <li><h4>Boolean:</h4> let isTrue = true;</li>
+  <li><h4>Undefined:</h4> let value;</li>
+  <li><h4>Null:</h4> let emptyValue = null;
 </ul>
 <h4>Complex Data Types:</h4>
 <ul>
-  <li>Object: let person = {name: 'Alice'; age: 25};</li>
-  <li>Array: let numbers = &lbrack; 1,2,3,4,5 &rbrack;;</li>
+  <li><h4>Object:</h4> let person = {name: 'Alice'; age: 25};</li>
+  <li><h4>Array:</h4> let numbers = &lbrack; 1,2,3,4,5 &rbrack;;</li>
 </ul>  
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex11">11. JS Functions</h2>
@@ -833,9 +834,27 @@ let result = multiply(5,3); // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex13">13. JS Events</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript events are actions that occur when a user interacts with a web page, like 
+clicking a button or typing in a form field.</p>
+<h3>Examples of JS Events:</h4>
+<h4>Click Event:</h4>
+<pre>Document.getElementById('myButton').addEventListener('click', function() {
+  console.log('Button clicked!');
+});
+<h4>Input Event:</h4>
+<pre>document.getElementById('myInput').addEventListener('input', function() {
+  console.log('Input changed!');
+});</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex14">14. JS Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Examples of JS Strings:</h3>
+<h4>Declaring a String Variable:</h4>
+<pre>let message = 'Hello, World!';</pre>
+<h4>Concatenating Strings:</h4>
+<pre>let greeting = 'Hello, ';
+let name = 'Alice';
+let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex15">15. JS String Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
