@@ -624,10 +624,10 @@ own ideas into a reality without even having to think about it.</p>
 form the logic of a program and can be simple or complex.</p>
 
 <ol start="1">
-  <li>Variable Declaration:
+  <li><h4>Variable Declaration:</h4>
     <pre>let x; // Declaring a variable 'x'</pre>
   </li>
-  <li>Conditional Statement:
+  <li><h4>Conditional Statement:</h4>
     <pre>if(x === 5) {
   // Executed if x is equal to 5
   console.log ('x is 5');
@@ -636,7 +636,7 @@ form the logic of a program and can be simple or complex.</p>
   console.log ('x is not 5');
 }</pre>
   </li>
-  <li>Loops:
+  <li><h4>Loops:</h4>
     <pre>for (let i = 0;i<5;i++) {
   // Executed 5 times
   console.log(i);
@@ -649,21 +649,21 @@ form the logic of a program and can be simple or complex.</p>
 <p>JS syntax refers to the rules that define the structure of valid JavaScript code. It 
 includes rules for writing statements, variables, and functions in a way that the 
 interpreter or browser can understand.</p>
-
+<h3>Examples of JavaScript Syntax:</h3>
 <ol start="1">
-  <li>Function Definition:
+  <li><h4>Function Definition:</h4>
     <pre>function greet(name) {
   return 'Hello, ' + name + '!';
 }</pre>
   </li>
-  <li>Object Literal:
+  <li><h4>Object Literal:</h4>
     <pre>const person = {
   firstName: 'John',
   lastName: 'Doe',
   age: 30
 };</pre>
   </li>
-  <li>Array Declaration:
+  <li><h4>Array Declaration:</h4>
     <pre>const numbers = &lbrack;1,2,3,4,5&rbrack;;</pre>
     </li>
 </ol>
@@ -671,18 +671,18 @@ interpreter or browser can understand.</p>
 <h2 id="ex3">3. JS Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>They are ignored by the interpreter and are only meant for human readers.</p>
-
+<h3>JavaScript Comments:</h3>
 <ol start="1">
-  <li>Single Line Comment:
+  <li><h4>Single Line Comment:</h4>
     <pre>// This is a single line Comment</pre>
   </li>
-  <li>Multi-line Comment:
+  <li><h4>Multi-line Comment:</h4>
     <pre>/*
 This is a 
 multi-line comment
 */</pre>
   </li>
-  <li>Comment Out Code:
+  <li><h4>Comment Out Code:</h4>
     <pre>// This code won't be Executed
 // const x = 10;</pre>
   </li>
@@ -693,13 +693,13 @@ multi-line comment
 <p>Variable in JS are used to store data values. They can hold various types of data such
 as numbers, strings, objects, arrays, methods, and more.</p>
 <ol type="1">
-  <li>Declaring and Assigning a Variable:
+  <li><h4>Declaring and Assigning a Variable:</h4>
     <pre>let age = 25; // Declaring 'age' and assigning a value of 25</pre>
   </li>
-  <li>String Variable:
+  <li><h4>String Variable:</h4>
     <pre>let Name = 'Alice'; // A variable holding a string value</pre>
   </li>
-  <li>Object Variable:
+  <li><h4>Object Variable:</h4>
     <pre>let person = {name: 'Bob', age: 30}; // A variable holding a object</pre>
   </li>
 </ol>
@@ -708,6 +708,7 @@ as numbers, strings, objects, arrays, methods, and more.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The let keyword is used to declare variables in JS. It allows the declared variable to be 
 reassigned a new value if needed.</p>
+<h3>Example of let in JavaScript:</h3>
 <pre>let x = 5;
 x = 10; // Reassigning 'x' to a new Value</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -715,6 +716,7 @@ x = 10; // Reassigning 'x' to a new Value</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The const keyword is used to declare constants in JS. Once assigned, the value of a const
 cannot be changed.</p>
+<h3>Example of const in JavaScript:</h3>
 <pre>const PI = 3.14159;  // Declaring a constant PI
 PI = 3; // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -722,8 +724,9 @@ PI = 3; // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS operators are symbols used to perform operations on operands, such as arithmetic 
 operations, assignment, comparison, logical operations, and more.
+<h3>Examples of JS Operators:</h3>
 <ol type="1">
-  <li>Arithmetic Operators:
+  <li><h4>Arithmetic Operators:</h4>
     <pre>let a = 10;
 let b = 5;
 let sum = a + b; // Addition
@@ -731,7 +734,7 @@ let difference = a - b; // Subtraction
 let product = a &ast; b; // Multiplication
 let quotient = a / b; // Division</pre>
   </li>
-  <li>Comparison Operators:
+  <li><h4>Comparison Operators:</h4>
     <pre>let x = 5;
 let y = 10;
 console.log(x === y); // Equality check
@@ -739,7 +742,7 @@ console.log(x !== y); // Inequality check
 console.log(x > y); // Greater Than
 console.log(x < y); // Less Than</pre>
   </li>
-  <li>Logical Operators:
+  <li><h4>Logical Operators:</h4>
     <pre>let p = true;
 let q = false;
 console.log(p && q); // Logical AND
@@ -753,19 +756,19 @@ console.log(!p); / Logical NOT</pre>
 <p>JS provides arithmetic operators to perform mathematical operations on numbers.</p>
 <h3>Examples of JS Arithmetic:</h3>
 <ul>
-  <li>Addition:
+  <li><h4>Addition:</h4>
     <pre>let sum = 5 + 3; // sum = 8</pre>
   </li>
-  <li>Subtraction:
+  <li><h4>Subtraction:</h4>
     <pre>let difference = 10 - 4; // difference = 6</pre>
   </li>
-  <li>Multiplication:
+  <li><h4>Multiplication:</h4>
     <pre>let product = 6 &ast; 7; // product = 42</pre>
   </li>
-  <li>Division:
+  <li><h4>Division:</h4>
     <pre>let quotient = 20 / 5; // quotient = 4</pre>
   </li>
-  <li>Modulus (Remainder):
+  <li><h4>Modulus (Remainder):</h4>
     <pre>let remainder = 15 % 4 // remainer = 3</pre>
   </li>
 </ul>
@@ -782,8 +785,8 @@ console.log(!p); / Logical NOT</pre>
 <h2 id="ex10">10. JS Data Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS has several data types that define the kinds of values it can work with.</p>
-<h3>Examples of JS Data Types:</h3>
-<p><b>Primitive Data Types:</b></p>
+<h3>Examples of JS Data Types</h3>
+<h4>Primitive Data Types:</h4>
 <ul>
   <li>Number: let num = 10;</li>
   <li>String: let text = 'Hello';</li>
@@ -791,7 +794,7 @@ console.log(!p); / Logical NOT</pre>
   <li>Undefined: let value;</li>
   <li>Null: let emptyValue = null;
 </ul>
-<p><b>Complex Data Types:</b></p>
+<h4>Complex Data Types:</h4>
 <ul>
   <li>Object: let person = {name: 'Alice'; age: 25};</li>
   <li>Array: let numbers = &lbrack; 1,2,3,4,5 &rbrack;;</li>
