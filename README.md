@@ -629,16 +629,16 @@ form the logic of a program and can be simple or complex.</p>
   </li>
   <li>Conditional Statement:
     <pre>if(x === 5) {
-// Executed if x is equal to 5
+  // Executed if x is equal to 5
   console.log ('x is 5');
 } else {
-// Executed if x is not equal to 5
+  // Executed if x is not equal to 5
   console.log ('x is not 5');
 }</pre>
   </li>
   <li>Loops:
     <pre>for (let i = 0;i<5;i++) {
-// Executed 5 times
+  // Executed 5 times
   console.log(i);
 }</pre>
   </li>
@@ -750,18 +750,83 @@ console.log(!p); / Logical NOT</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex8">8. JS Arithmetic</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JS provides arithmetic operators to perform mathematical operations on numbers.</p>
+<h3>Examples of JS Arithmetic:</h3>
+<ul>
+  <li>Addition:
+    <pre>let sum = 5 + 3; // sum = 8</pre>
+  </li>
+  <li>Subtraction:
+    <pre>let difference = 10 - 4; // difference = 6</pre>
+  </li>
+  <li>Multiplication:
+    <pre>let product = 6 &ast; 7; // product = 42</pre>
+  </li>
+  <li>Division:
+    <pre>let quotient = 20 / 5; // quotient = 4</pre>
+  </li>
+  <li>Modulus (Remainder):
+    <pre>let remainder = 15 % 4 // remainer = 3</pre>
+  </li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex9">9. JS Assignment</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>In JS, the assignment operator (=) is used to assign values to variables.</p>
+<h3>Examples of JS Assignment:</h3>
+<h4>Assigning a Value to a Variable:</h4>
+<pre>let x = 10; // Assigning the value 10 to variable 'x'</pre>
+<h4>Assigning the Result of an Expression:</h4>
+<pre>let y = x + 5; // Assigning the result of an expression to 'y'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex10">10. JS Data Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JS has several data types that define the kinds of values it can work with.</p>
+<h3>Examples of JS Data Types:</h3>
+<p><b>Primitive Data Types:</b></p>
+<ul>
+  <li>Number: let num = 10;</li>
+  <li>String: let text = 'Hello';</li>
+  <li>Boolean: let isTrue = true;</li>
+  <li>Undefined: let value;</li>
+  <li>Null: let emptyValue = null;
+</ul>
+<p><b>Complex Data Types:</b></p>
+<ul>
+  <li>Object: let person = {name: 'Alice'; age: 25};</li>
+  <li>Array: let numbers = &lbrack; 1,2,3,4,5 &rbrack;;</li>
+</ul>  
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex11">11. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Functions in JS are reusable blocks of code that perform a specific task when called.</p>
+<h3>Examples of JS Functions:</h3>
+<h4>Function Declaration:</h4>
+<pre>function greet(name) {
+  return 'Hello, ' + name + '!';
+}</pre>
+<h4>Function Call:</h4>
+<pre>let message = greet('John'); // message = 'Hello, John!'</pre>
+<h4>Arrow Function:</h4>
+<pre>const multiply = (a,b) => a &ast; b;
+let result = multiply(5,3); // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex12">12. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Objects in JS are containers for named values called properties and methods.</p>
+<h3>Examples of JS Objects:</h3>
+<h4>Object Declaration:</h4>
+<pre>let person = {
+  name: 'Alice',
+  age: 30,
+  greet: function() {
+    return 'Hello, my name is ' + this.name + '!';
+  }
+};
+<h4>Accessing Object Properties:</h4>
+<pre>console.log(person.name); // Output: Alice</pre>
+<h4>Calling Object Method:</h4>
+<pre>console.log(person.greet()); // Output: Hello, my name is Alice!</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex13">13. JS Events</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
