@@ -869,12 +869,38 @@ let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex16">16. JS String Search</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript provides methods to search for substrings within a string.</p>
+<h3>Examples of JS String Search:</h3>
+<h4>indexOf() Method:</h4>
+<pre>let text = 'Hello, World!';
+let position = text.indexOf('World'); // position = 7</pre>
+<h4>includes() Method:</h4>
+<pre>let sentence = 'This is a sentence';
+let containsWord = sentence.includes('sentence'); // containsWord = true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex17">17. JS String Templates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Template literals allow embedding expressions and variables into strings.</p>
+<h3>Examples of JS String Templates:</h3>
+<h4>Basic Template Literal:</h4>
+<pre>let name = 'Alice';
+let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
+<h4>Multi-line Template Literal:</h4>
+<pre>let multiLineMessage = `
+  This is a
+  multi-line
+  message.`;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex18">18. JS Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript handles numeric data using the number data type.</p>
+<h3>Examples of JS Numbers:</h3>
+<h4>Whole Numbers:</h4>
+<pre>let integerNumber = 42;</pre>
+<h4>Decimal Numbers:</h4>
+<pre>let decimalNumber = 3.14;</pre>
+<h4>Scientific Notation:</h4>
+<pre>let scientificNumber = 3e3; // scientificNumber = 2000</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex19">19. JS BigInt</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
