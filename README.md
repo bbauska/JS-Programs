@@ -840,7 +840,7 @@ clicking a button or typing in a form field.</p>
 <h4>Click Event:</h4>
 <pre>Document.getElementById('myButton').addEventListener('click', function() {
   console.log('Button clicked!');
-});
+});</pre>
 <h4>Input Event:</h4>
 <pre>document.getElementById('myInput').addEventListener('input', function() {
   console.log('Input changed!');
