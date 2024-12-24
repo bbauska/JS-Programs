@@ -7068,8 +7068,9 @@ sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;);
 <p>Find the maximum value in a given array of numbers.</p>
 <pre>
 const findMax = (arr) => Math.max(...arr);
-findMax(&lbrack;10, 5, 8, 20, 3&rbrack;);
-// Result: 20
+
+// Example usage
+findMax(&lbrack;10, 5, 8, 20, 3&rbrack;); // Result: 20
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-35">35. Get the Current Date in DD/MM/YYYY Format</h2>
@@ -7077,13 +7078,15 @@ findMax(&lbrack;10, 5, 8, 20, 3&rbrack;);
 <p>Get the current date in the "DD/MM/YYYY" format.</p>
 <pre>
 const getCurrentDate = () => {
-const date = new Date();
-const day = String(date.getDate()).padStart(2, '0');
-const month = String(date.getMonth() + 1).padStart(2, '0');
-const year = date.getFullYear();
-return `${day}/${month}/${year}`;
+  const date = new Date();
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
 };
-getCurrentDate(); // Result: "02/08/2023"
+
+// Example usage
+getCurrentDate(); // Result: "23/12/2024"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-36">36. Calculate the Power of a Number</h2>
@@ -7091,6 +7094,8 @@ getCurrentDate(); // Result: "02/08/2023"
 <p>Calculate the result of raising a given base to a specified exponent.</p>
 <pre>
 const power = (base, exponent) => Math.pow(base, exponent);
+
+// Example usage
 power(2, 5); // Result: 32
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7099,6 +7104,8 @@ power(2, 5); // Result: 32
 <p>Convert a given string to a numeric value (float or integer).</p>
 <pre>
 const stringToNumber = (str) => parseFloat(str);
+
+// Example usage
 stringToNumber("3.14"); // Result: 3.14
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7107,14 +7114,15 @@ stringToNumber("3.14"); // Result: 3.14
 <p>Generate the first N Fibonacci numbers.</p>
 <pre>
 const fibonacci = (n) => {
-const result = &lbrack;0, 1&rbrack;;
-for (let i = 2; i < n; i++) {
-result.push(result&lbrack;i - 1&rbrack; + result&lbrack;i - 2&rbrack;);
-}
-return result;
+  const result = &lbrack;0, 1&rbrack;;
+  for (let i = 2; i < n; i++) {
+    result.push(result&lbrack;i - 1&rbrack; + result&lbrack;i - 2&rbrack;);
+  }
+  return result;
 };
-fibonacci(8);
-// Result: &lbrack;0, 1, 1, 2, 3, 5, 8, 13&rbrack;
+
+// Example usage
+fibonacci(8); // Result: &lbrack;0, 1, 1, 2, 3, 5, 8, 13&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-39">39. Count the Number of Words in a String</h2>
@@ -7122,6 +7130,8 @@ fibonacci(8);
 <p>Count the number of words in a given string.</p>
 <pre>
 const countWords = (str) => str.trim().split(/\s+/).length;
+
+// Example usage
 console.log(countWords("Hello world, how are you?")); // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7130,8 +7140,9 @@ console.log(countWords("Hello world, how are you?")); // Output: 5
 <p>Reverse the elements of a given array.</p>
 <pre>
 const reverseArray = (arr) => arr.slice().reverse();
-console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));
-// Output: &lbrack;5, 4, 3, 2, 1&rbrack;
+
+// Example usage
+console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: &lbrack;5, 4, 3, 2, 1&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-41">41. Get the Current Year</h2>
@@ -7139,8 +7150,9 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));
 <p>Get the current year.</p>
 <pre>
 const currentYear = () => new Date().getFullYear();
-console.log(currentYear());
-// Output: 2023 (depending on the current year)
+
+// Example usage
+console.log(currentYear()); // Output: 2023 (depending on the current year)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-42">42. Generate a Random Number between 1 and 10</h2>
@@ -7148,8 +7160,9 @@ console.log(currentYear());
 <p>Generate a random integer between 1 and 10 (inclusive).</p>
 <pre>
 const random1To10 = () => Math.floor(Math.random() &ast; 10) + 1;
-console.log(random1To10());
-// Output: Random number between 1 and 10 (inclusive)
+
+// Example usage
+console.log(random1To10()); // Output: Random number between 1 and 10 (inclusive)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-43">43. Check if a String is Empty</h2>
@@ -7157,10 +7170,10 @@ console.log(random1To10());
 <p>Check if a given string is empty (contains no characters).</p>
 <pre>
 const isEmptyString = (str) => str.trim().length === 0;
-console.log(isEmptyString(""));
-// Output: true
-console.log(isEmptyString("Hello, world!"));
-// Output: false
+
+// Example usage
+console.log(isEmptyString("")); // Output: true
+console.log(isEmptyString("Hello, world!")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-44">44. Check if an Object has a Specific Property</h2>
@@ -7168,11 +7181,11 @@ console.log(isEmptyString("Hello, world!"));
 <p>Check if an object contains a specific property.</p>
 <pre>
 const hasProperty = (obj, prop) => prop in obj;
+
+// Example usage
 const person = { name: "John", age: 30 };
-console.log(hasProperty(person, "name"));
-// Output: true
-console.log(hasProperty(person, "gender"));
-// Output: false
+console.log(hasProperty(person, "name")); // Output: true
+console.log(hasProperty(person, "gender")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-45">45. Calculate the Average of Numbers in an Array</h2>
@@ -7180,6 +7193,8 @@ console.log(hasProperty(person, "gender"));
 <p>Calculate the average of numbers in a given array.</p>
 <pre>
 const average = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
+
+// Example usage
 console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7188,10 +7203,10 @@ console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 <p>Check if a given number is a multiple of 5.</p>
 <pre>
 const isMultipleOf5 = (num) => num % 5 === 0;
-console.log(isMultipleOf5(10));
-// Output: true
-console.log(isMultipleOf5(7));
-// Output: false
+
+// Example usage
+console.log(isMultipleOf5(10)); // Output: true
+console.log(isMultipleOf5(7));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-47">47. Convert Minutes to Seconds</h2>
@@ -7199,6 +7214,8 @@ console.log(isMultipleOf5(7));
 <p>Convert minutes to seconds.</p>
 <pre>
 const minsToSecs = (mins) => mins &ast; 60;
+
+// Example usage
 console.log(minsToSecs(5)); // Output: 300
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7207,13 +7224,15 @@ console.log(minsToSecs(5)); // Output: 300
 <p>Find the maximum value of a specific property in an array of objects.</p>
 <pre>
 const findMaxValue = (arr, key) => Math.max(...arr.map(item =>
-item&lbrack;key&rbrack;));
+  item&lbrack;key&rbrack;));
 const students = &lbrack;
-{ name: "Alice", score: 80 },
-{ name: "Bob", score: 95 },
-{ name: "Charlie", score: 70 }
-&rbrack;;
-console.log(findMaxValue(
+  { name: "Alice", score: 80 },
+  { name: "Bob", score: 95 },
+  { name: "Charlie", score: 70 }
+  &rbrack;;
+
+// Example usage
+console.log(findMaxValue( 
 // Output: 95
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7222,10 +7241,10 @@ console.log(findMaxValue(
 <p>Check if a given string starts with a specific character.</p>
 <pre>
 const startsWithChar = (str, char) => str.startsWith(char);
-console.log(startsWithChar("Hello, world!", "H"));
-// Output: true
-console.log(startsWithChar("Hello, world!", "h"));
-// Output: false
+
+// Example usage
+console.log(startsWithChar("Hello, world!", "H")); // Output: true
+console.log(startsWithChar("Hello, world!", "h")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-50">50. Convert a String to Title Case</h2>
@@ -7233,9 +7252,10 @@ console.log(startsWithChar("Hello, world!", "h"));
 <p>Convert a given string to title case (capitalize the first letter of each word).</p>
 <pre>
 const toTitleCase = (str) => str.replace(/\b\w/g, match =>
-match.toUpperCase());
-console.log(toTitleCase("hello world"));
-// Output: "Hello World"
+  match.toUpperCase());
+
+// Example usage
+console.log(toTitleCase("hello world")); // Output: "Hello World"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-51">51. Check if an Array contains a specific value</h2>
@@ -7243,10 +7263,10 @@ console.log(toTitleCase("hello world"));
 <p>Check if a given array contains a specific value.</p>
 <pre>
 const containsValue = (arr, value) => arr.includes(value);
-console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));
-// Output: true
-console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6));
-// Output: false
+
+// Example usage
+console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: true
+console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-52">52. Convert an Array to a Comma-separated String</h2>
@@ -7254,8 +7274,9 @@ console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6));
 <p>Convert a given array to a comma-separated string.</p>
 <pre>
 const arrayToCSV = (arr) => arr.join(', ');
-console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;));
-// Output: "1, 2, 3, 4, 5"
+
+// Example usage
+console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: "1, 2, 3, 4, 5"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-53">53. Check if a Year is a Leap Year</h2>
@@ -7264,10 +7285,10 @@ console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;));
 <pre>
 const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) ||
 (year % 400 === 0);
-console.log(isLeapYear(2024));
-// Output: true
-console.log(isLeapYear(2023));
-// Output: false
+
+// Example usage
+console.log(isLeapYear(2024)); // Output: true
+console.log(isLeapYear(2023)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-54">54. Find the Index of an Element in an Array</h2>
@@ -7275,9 +7296,10 @@ console.log(isLeapYear(2023));
 <p>Find the index of a specific element in a given array.</p>
 <pre>
 const findIndex = (arr, element) => arr.indexOf(element);
+
+// Example usage
 const fruits = &lbrack;"apple", "banana", "orange", "grape"&rbrack;;
-console.log(findIndex(fruits, "orange"));
-// Output: 2
+console.log(findIndex(fruits, "orange")); // Output: 2
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-55">55. Convert Minutes to Hours and Minutes</h2>
@@ -7285,12 +7307,13 @@ console.log(findIndex(fruits, "orange"));
 <p>Convert a given number of minutes to hours and remaining minutes.</p>
 <pre>
 const minsToHoursAndMins = (mins) => {
-const hours = Math.floor(mins / 60);
-const remainingMins = mins % 60;
-return `${hours} hours and ${remainingMins} minutes`;
+  const hours = Math.floor(mins / 60);
+  const remainingMins = mins % 60;
+  return `${hours} hours and ${remainingMins} minutes`;
 };
-console.log(minsToHoursAndMins(150));
-// Output: "2 hours and 30 minutes"
+
+// Example usage
+console.log(minsToHoursAndMins(150)); // Output: "2 hours and 30 minutes"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-56">56. Check if an Array is Sorted in Ascending Order</h2>
@@ -7298,10 +7321,10 @@ console.log(minsToHoursAndMins(150));
 <p>Check if a given array is sorted in ascending order.</p>
 <pre>
 const isSortedAscending = (arr) => arr.every((el, i) => i === 0 || el >= arr&lbrack;i - 1&rbrack;);
-console.log(isSortedAscending(&lbrack;1, 2, 3, 5, 8&rbrack;));
-// Output: true
-console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;));
-// Output: false
+
+// Example usage
+console.log(isSortedAscending(&lbrack;1, 2, 3, 5, 8&rbrack;)); // Output: true
+console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-57">57. Remove a Specific Element from an Array</h2>
@@ -7309,8 +7332,9 @@ console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;));
 <p>Remove a specific element from a given array.</p>
 <pre>
 const removeElement = (arr, element) => arr.filter(el => el !== element);
-console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));
-// Output: &lbrack;1, 2, 4, 5&rbrack;
+
+// Example usage
+console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: &lbrack;1, 2, 4, 5&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-58">58. Truncate a String to a Given Length</h2>
@@ -7319,8 +7343,9 @@ console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));
 <pre>
 const truncateString = (str, maxLength) => str.length > maxLength ?
 str.slice(0, maxLength) + '...' : str;
-console.log(truncateString("Hello, world!", 5));
-// Output: "Hello..."
+
+// Example usage
+console.log(truncateString("Hello, world!", 5)); // Output: "Hello..."
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-59">59. Calculate the Exponentiation of a Number</h2>
@@ -7348,10 +7373,10 @@ console.log(dateDifferenceInDays(startDate, endDate)); // Output: 9
 <p>Check if a given string is a valid email address.</p>
 <pre>
 const isValidEmail = (email) => /^&lbrack;^\s@&rbrack;+@&lbrack;^\s@&rbrack;+\.&lbrack;^\s@&rbrack;+$/.test(email);
-console.log(isValidEmail("user@example.com"));
-// Output: true
-console.log(isValidEmail("invalid-email"));
-// Output: false
+
+// Example usage
+console.log(isValidEmail("user@example.com")); // Output: true
+console.log(isValidEmail("invalid-email"));    // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-62">62. Convert Seconds to Minutes and Seconds</h2>
@@ -7363,6 +7388,8 @@ const mins = Math.floor(seconds / 60);
 const remainingSecs = seconds % 60;
 return `${mins} minutes and ${remainingSecs} seconds`;
 };
+
+// Example usage
 console.log(secsToMinsAndSecs(120));
 // Output: "2 minutes and 0 seconds"
 </pre>
@@ -8266,9 +8293,11 @@ console.log(isPronicNumber(7));
 is a sentence that contains every letter of the alphabet at least once.</p>
 <pre>
 const isPangram = (str) => {
-const letters = new Set(str.toLowerCase().match(/&lbrack;a-z&rbrack;/g));
-return letters.size === 26;
+  const letters = new Set(str.toLowerCase().match(/&lbrack;a-z&rbrack;/g));
+  return letters.size === 26;
 };
+
+// Check example
 console.log(isPangram("The quick brown fox jumps over the lazy dog"));
 // Output: true
 console.log(isPangram("Hello, World!"));
@@ -10182,9 +10211,9 @@ const canvas = document.querySelector('#confetti');
 const jsConfetti = new JSConfetti();
 
 button.addEventListener('click', () => {
-    jsConfetti.addConfetti({
-        emojis: ['🥩'],
-    }).then(() => jsConfetti.addConfetti())
+  jsConfetti.addConfetti({
+    emojis: ['🥩'],
+  }).then(() => jsConfetti.addConfetti())
 })
 </pre>
 /* the end */
