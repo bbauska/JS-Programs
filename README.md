@@ -822,7 +822,7 @@ let result = multiply(5,3); // result = 15</pre>
   greet: function() {
     return 'Hello, my name is ' + this.name + '!';
   }
-};
+};</pre>
 <h4>Accessing Object Properties:</h4>
 <pre>console.log(person.name); // Output: Alice</pre>
 <h4>Calling Object Method:</h4>
