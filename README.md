@@ -653,15 +653,15 @@ interpreter or browser can understand.</p>
 <ol start="1">
   <li>Function Definition:
     <pre>function greet(name) {
-      return 'Hello, ' + name + '!';
-    }</pre>
+return 'Hello, ' + name + '!';
+}</pre>
   </li>
   <li>Object Literal:
     <pre>const person = {
-      firstName: 'John',
-      lastName: 'Doe',
-      age: 30
-    };</pre>
+firstName: 'John',
+lastName: 'Doe',
+age: 30
+};</pre>
   </li>
   <li>Array Declaration:
     <pre>const numbers = &lbrack;1,2,3,4,5&rbrack;;</pre>
@@ -678,13 +678,13 @@ interpreter or browser can understand.</p>
   </li>
   <li>Multi-line Comment:
     <pre>/*
-	This is a 
-	multi-line comment
+This is a 
+multi-line comment
 	*/</pre>
   </li>
   <li>Comment Out Code:
     <pre>// This code won't be Executed
-	// const x = 10;</pre>
+// const x = 10;</pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
