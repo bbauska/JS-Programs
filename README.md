@@ -629,18 +629,18 @@ form the logic of a program and can be simple or complex.</p>
   </li>
   <li>Conditional Statement:
     <pre>if(x === 5) {
-      // Executed if x is equal to 5
-      console.log ('x is 5');
-    } else {
-      // Executed if x is not equal to 5
-      console.log ('x is not 5');
-    }</pre>
+// Executed if x is equal to 5
+  console.log ('x is 5');
+} else {
+// Executed if x is not equal to 5
+  console.log ('x is not 5');
+}</pre>
   </li>
   <li>Loops:
     <pre>for (let i = 0;i<5;i++) {
-      // Executed 5 times
-      console.log(i);
-    }</pre>
+// Executed 5 times
+  console.log(i);
+}</pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -653,14 +653,14 @@ interpreter or browser can understand.</p>
 <ol start="1">
   <li>Function Definition:
     <pre>function greet(name) {
-return 'Hello, ' + name + '!';
+  return 'Hello, ' + name + '!';
 }</pre>
   </li>
   <li>Object Literal:
     <pre>const person = {
-firstName: 'John',
-lastName: 'Doe',
-age: 30
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30
 };</pre>
   </li>
   <li>Array Declaration:
@@ -680,7 +680,7 @@ age: 30
     <pre>/*
 This is a 
 multi-line comment
-	*/</pre>
+*/</pre>
   </li>
   <li>Comment Out Code:
     <pre>// This code won't be Executed
@@ -1107,8 +1107,7 @@ if (!isNaN(kilometers)) {
   console.log(`${kilometers} kilometers is approximately ${miles} miles.`);
 } else {
   console.log("Please enter a valid number for the distance in kilometers.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js8">8. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1129,8 +1128,7 @@ if (!isNaN(celsius)) {
   );
 } else {
   console.log("Please enter a valid number for the temperature in Celsius.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js9">9. Generate a Random Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1153,8 +1151,7 @@ if (!isNaN(minRange) && !isNaN(maxRange) && minRange &lt; maxRange) {
   console.log(
   "Please enter valid numbers, ensuring that the minimum value is less than the maximum value."
   );
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js10">10. Check if a number is Positive, Negative, or Zero</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1176,8 +1173,7 @@ if (!isNaN(number)) {
   }
 } else {
   console.log("Please enter a valid number.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js11">11. Check if a Number is Odd or Even</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1197,8 +1193,7 @@ if (!isNaN(number) && Number.isInteger(number)) {
   }
 } else {
   console.log("Please enter a valid integer.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js12">12. Find the Largest Among Three Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1219,8 +1214,7 @@ if (!isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
   );
 } else {
   console.log("Please enter valid numbers for all three inputs.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js13">13. Check Prime Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1249,8 +1243,7 @@ if (!isNaN(number) && Number.isInteger(number) && number &gt; 1) {
   }
 } else {
   console.log("Please enter a valid integer greater than 1.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js14">14. Print All Prime Numbers in an Interval</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1292,8 +1285,7 @@ for (let i = startNumber; i <= endNumber; i++) {
     "Please enter valid integers, ensuring that the starting number is less than the 
       ending number and greater than 1."
   );
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js15">15. Find the Factorial of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1314,8 +1306,7 @@ if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
   console.log(`The factorial of ${number} is: ${factorial}`);
 } else {
   console.log("Please enter a valid non-negative integer.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js16">16. Display the Multiplication Table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1338,8 +1329,7 @@ if (!isNaN(number) && Number.isInteger(number)) {
   }
 } else {
   console.log("Please enter a valid integer.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js17">17. Print the Fibonacci Sequence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1365,8 +1355,7 @@ if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
   console.log(fibArray.join(","));
 } else {
   console.log("Please enter a valid positive integer for the number of terms.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js18">18. Check Armstrong Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1400,8 +1389,7 @@ if (fisNaN(number) && Number.islnteger(number) && number > 0) {
   }
 } else {
   console.log("Please enter a valid positive integer.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js19">19. Find Armstrong Number in an Interval</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1446,8 +1434,7 @@ for (let i = startNumber; i <= endNumber; i++) {
   "Please enter valid positive integers, ensuring that the starting number is less than 
     the ending number and both are greater than 0."
   );
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js20">20. Make a Simple Calculator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1499,8 +1486,7 @@ if (lisNaN(numl) && !isNaN(num2)) {
   }
 } else {
   console.log("Please enter valid numbers.");
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js21">21. Find the Sum of Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
