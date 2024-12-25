@@ -1309,7 +1309,6 @@ let number = parseFloat(prompt("Enter a number:"));
 
 // Check if input is a valid number
 if (!isNaN(number)) {
-
   // Check if the number is positive, negative, or zero
   if (number > 0) {
     console.log(`${number} is a positive number.`);
@@ -1324,8 +1323,8 @@ if (!isNaN(number)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js11">11. Check if a Number is Odd or Even</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program prompts the user to enter a number and checks whether it is odd or 
-even. It then displays the result.</p>
+<p>This program prompts the user to enter a number and checks whether it is odd or even. 
+It then displays the result.</p>
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
@@ -1571,7 +1570,7 @@ for (let i = startNumber; i <= endNumber; i++) {
   let originalNumber = i;
   let numberOfDigits = originalNumber.toString().length;
   let sum = 0;
-  
+
   while (originalNumber > 0) {
     let digit = originalNumber % 10;
     sum += Math.pow(digit, numberOfDigits);
