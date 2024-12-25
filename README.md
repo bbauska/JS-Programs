@@ -3254,22 +3254,25 @@ console.log(`Generated Password: ${randomPassword}`);
 <pre>
 function calculateSimpleInterest(principal, rate, time) {
   // Check if the inputs are valid positive numbers
-  if (isNaN(principal) 11 isNaN(rate) 11 isNaN(time) 11 principal <= 0 11 rate < = 0 || time <= 0) {
+  if (isNaN(principal) || isNaN(rate) || isNaN(time) || principal <= 0 || rate < = 0 || time <= 0) {
     return "Invalid inputs. Please provide valid positive numbers.";
   }
   // Calculate simple interest
-  const simplelnterest = (principal &ast; rate &ast; time) / 100;
-  return simplelnterest;
+  const simpleInterest = (principal &ast; rate &ast; time) / 100;
+  return simpleInterest;
 }
+
 // Example usage:
 const principalAmount = 1000;
 const interestRate = 5; // 5%
 const investmentTime = 2; // 2 years
+
 const interestAmount = calculateSimpleInterest(principalAmount, interestRate, investmentTime);
-console.log(' Principal Amount: $$ {principalAmount}');
-console.log(' Interest Rate: $ {interestRate}%');
-console.log(' Investment Time: $ {investmentTime} years');
-console.log(' Simple Interest: $${interestAmount}');
+
+console.log(`Principal Amount: $${principalAmount}`);
+console.log(`Interest Rate: ${interestRate}%`);
+console.log(`Investment Time: ${investmentTime} years`);
+console.log(`Simple Interest: $${interestAmount}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js95">95. Implement a Basic Stopwatch</h2>
@@ -3287,10 +3290,10 @@ function stopStopwatch() {
   clearlnterval(stopwatchlnterval);
 }
 function resetStopwatch() {
-  stopStopwatchO;
+  stopStopwatch();
   updateDisplay(O);
 }
-function updateDisplayO {
+function updateDisplay() {
   const currentTime = new Date().getTime();
   const elapsedTime = Math.floor((currentTime - startTime) / 1000);
   const minutes = Math.floor(elapsedTime / 60);
@@ -3307,7 +3310,7 @@ function updateDisplayO {
 <pre>
 function isPerfectNumber(number) {
   // Check if the input is a positive integer
-  if (’Number.isInteger(number) 11 number <= 0) {
+  if (!Number.isInteger(number) || number <= 0) {
     return "Invalid input. Please provide a positive integer.";
   }
   // Find divisors and calculate sum
@@ -3318,7 +3321,7 @@ function isPerfectNumber(number) {
     }
   }
   // Check if the sum of divisors equals the original number
-  return sum = = = number;
+  return sum === number;
 }
 // Example usage:
 const testNumber = 28;
@@ -3332,7 +3335,7 @@ console.log(`Is ${testNumber} a perfect number? ${result}`);
 <pre>
 function calculateCylinderVolume(radius, height) {
   // Check if the inputs are valid positive numbers
-  if (isNaN(radius) || isNaN(height) 11 radius < = 0 || height <= 0) {
+  if (isNaN(radius) || isNaN(height) || radius < = 0 || height <= 0) {
     return "Invalid inputs. Please provide valid positive numbers.";
   }
 
@@ -3340,12 +3343,11 @@ function calculateCylinderVolume(radius, height) {
   const volume = Math.PI &ast; Math.pow(radius, 2) &ast; height;
   return volume;
 }
-
 // Example usage:
 const cylinderRadius = 5;
 const cylinderHeight =10;
 const cylindervolume = calculateCylinderVolume(cylinderRadius, cylinderHeight);
-console.log(`Cylinder Volume: $ {cylinderVolume.toFixed(2)} cubic units`);
+console.log(`Cylinder Volume: ${cylinderVolume.toFixed(2)} cubic units`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js98">98. Generate a Random Quote</h2>
@@ -3365,14 +3367,14 @@ function generateRandomQuote() {
   &rbrack;;
 
   // Generate a random index to pick a quote from the array
-  const randomindex = Math.floor(Math.random() &ast; quotes.length);
+  const randomIndex = Math.floor(Math.random() &ast; quotes.length);
 
   // Return the randomly selected quote
-  return quotes&lbrack;randomlndex&rbrack;;
+  return quotes&lbrack;randomIndex&rbrack;;
 }
 // Example usage:
 const randomQuote = generateRandomQuote();
-console.logC'Random Quote:", randomQuote);
+console.log("Random Quote:", randomQuote);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js99">99. Find the Intersection of Two Arrays</h2>
@@ -3394,7 +3396,6 @@ function findIntersection(arrl, arr2) {
   const intersection = arr2.filter(element => set.has(element));
   return intersection;
 }
-
 // Example usage:
 const arrayl = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
