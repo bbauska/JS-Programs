@@ -956,18 +956,51 @@ let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex23">23. JS Array Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript provides various methods to manipulate arrays efficiently.</p>
+<h3>Examples of JS Array Methods:</h3>
+<h4>push() Method:</h4>
+<pre>fuits.push('melon'); // Adds 'melon' to the end of the array</pre>
+<h4>pop() Method:</h4>
+<pre>let removedFruit = fruits.pop(); // Removes and returns the last element ('melon')</pre>
+<h4>splice() Method:</h4>
+<pre>numbers.splice(2,1); // Removes 1 element at index 2 (removes '3')</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex24">24. JS Array Sort </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript offers methods to sort arrays in various ways.</p>
+<h3>Examples of JS Array Sort:</h3>
+<h4>Sorting Numbers:</h4>
+<pre>numbers.sort((a, b) => a - b); // Ascending order
+<h4>Sorting Strings:</h4>
+<pre>fruits.sort(); // Alphabetic Order</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex25">25. JS Array Iterations</h2>
+<h2 id="ex25">25. JS Array Iteration</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Array iteration involves looping through arrays to perform operations on each element.</p>
+<h3>Examples of JS Array Iteration:</h3>
+<h4>forEach() Method:</h4>
+<pre>
+numbers.forEach(number => {
+  console.log(number);
+});
+</pre>
+<h4>map() Method:</h4>
+<pre>let doubledNumbers = numbers.map(number => number &ast; 2);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex26">26. JS Array Iterations</h2>
+<h2 id="ex26">26. JS Array Const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Arrays declared with const can't be reassigned but their elements can be modified.</p>
+<h3>Examples of JS Array Const:</h3>
+<pre>
+const weekdays = &lbrack;'Monday','Tuesday','Wednesday'&rbrack;;
+weekdays&lbrack;1&rbrack; = 'Thursday'; // Modifying an element is allowed
+// weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;; // This will throw an error
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex27">27. JS Dates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex28">28. JS Date Formats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
