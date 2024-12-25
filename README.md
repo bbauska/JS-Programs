@@ -970,7 +970,7 @@ let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 <p>JavaScript offers methods to sort arrays in various ways.</p>
 <h3>Examples of JS Array Sort:</h3>
 <h4>Sorting Numbers:</h4>
-<pre>numbers.sort((a, b) => a - b); // Ascending order
+<pre>numbers.sort((a, b) => a - b); // Ascending order</pre>
 <h4>Sorting Strings:</h4>
 <pre>fruits.sort(); // Alphabetic Order</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
