@@ -904,15 +904,55 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex19">19. JS BigInt</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>BigInt is a numeric data type in JavaScript that can represent integers with arbitrary 
+precision.</p>
+<h3>Examples of JS BigInt</h3>
+<h4>Creating a BigInt</h4>
+<pre>let bigNumber = 12345678912345678901234567890n;</pre>
+<h4>Performing Operations with a BigInt</h4>
+<pre>let bigSum = bigNumber + 1n;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex20">20. JS Number Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript provides methods for performing operations and manipulations with numbers.</p>
+<h3>Examples of JS Number Methods:</h3>
+<h4>toFixed() Method:</h4>
+<pre>
+let number = 3.14159;
+let roundedNumber = number.toFixed(2); // roundedNumber = '3.14'
+</pre>
+<h4>parseInt() Method:</h4>
+<pre>
+let stringNumber = '42';
+let parsedNumber = parseInt(stringNumber); // parsedNumber = 42
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex21">21. JS Number Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript has some built-in properties associated with numbers.</p>
+<h3>Examples of JS Number Properties</h3>
+<h4>Number.MAX_VALUE Property:</h4>
+<pre>console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e + 308</pre>
+<h4>Number.MIN_VALUE Property:</h4>
+<pre>console.log(MIN_VALUE);  // Output: 5e-324</pre>
+<p>This comprehensive guide covers various aspects of JavaScript, including arithmetic operations,
+assignnment, data types, fuctions, objects, events, strings, string methods, string search, string
+templates, numbers, BigInt, number methods, and number properties, providing examples and 
+explanations for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex22">22. JS Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Arrays in JavaScript are used to store multiple values in a single variable.</p>
+<h3>Examples of JS Arrays:</h3>
+<h4>Declaration:</h4>
+<pre>
+let numbers = &lbrack;1,2,3,4,5&rbrack;; // Array of numbers
+let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
+</pre>
+<h4>Accessging Elements:</h4>
+<pre>console.log(fruites&lbrack;0&rbrack;; // Output: 'apple'</pre>
+<h4>Modifying Elements:</h4>
+<pre>fruits&lbrack;1&rbrack; = 'grapes'; // Changing 'banana' to 'grapes'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex23">23. JS Array Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
