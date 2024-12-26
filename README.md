@@ -1060,8 +1060,8 @@ to different formats.</p>
 and functions.</p>
 <h3>Examples of JS Math:</h3>
 <h4>Math.PI Property:</h4>
-<pre>let piValue = Math.PI; // Value of PI & piValue (3.141592653589793)
-<h4>Math.sqrt () Method:</h4>
+<pre>let piValue = Math.PI; // Value of PI & piValue (3.141592653589793)</pre>
+<h4>Math.sqrt() Method:</h4>
 <pre>let squareRoot = Math.sqrt(25); // Square root of 25 (5)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex32">32. JS Random</h2>
@@ -1293,11 +1293,11 @@ Examples of JS Type Conversion:
 String to Number:
 
 let strNumber = '10';
-let num = parselnt ( strNumber);
+let num = parseInt(strNumber);
 Number to String:
 
 let number = 15;
-let str = number. toString ();
+let str = number. toString();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex47">47. JS Bitwise</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
