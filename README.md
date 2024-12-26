@@ -1869,6 +1869,7 @@ class Animal {
     return 'Animal sound';
   }
 }
+</pre>
 <h4>Creating Instances:</h4>
 <pre>
 let dog = new Animal('Buddy', 3);
@@ -1891,6 +1892,7 @@ class Dog extends Animal {
     return 'Woof!';
   }
 }
+</pre>
 <h4>Using Inherited Methods:</h4>
 <pre>
 let puppy = new Dog('Max', 1, 'Labrador');
@@ -2223,6 +2225,7 @@ console.log(document.URL);   // Output: Document URL
 <p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
 <h4>Accessing Node List Elements:</h4>
 <h5>html code</h5>
+<pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
@@ -2361,7 +2364,7 @@ console . log (" Message received from worker , event. data);
 };
 worker. postMessage (" Message from main ");
 Web Fetch API
-The Fetch API provides a way to make HTTP requests .
+The Fetch API provides a way to make HTTP requests.
 Making a GET Request:
 
 fetch (" https :// api. example . com / data ")
