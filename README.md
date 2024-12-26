@@ -715,16 +715,17 @@ x = 10; // Reassigning 'x' to a new Value</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex6">6. JS const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The const keyword is used to declare constants in JS. Once assigned, the value of a const
-cannot be changed.</p>
+<p>The <span class="consolas">const keyword</span> is used to declare constants in JS. 
+Once assigned, the value of a const <span class="consolas">cannot be changed</span>.</p>
 <h3>Example of const in JavaScript:</h3>
 <pre>const PI = 3.14159;  // Declaring a constant PI
 PI = 3; // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex7">7. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JS operators are symbols used to perform operations on operands, such as arithmetic 
-operations, assignment, comparison, logical operations, and more.
+<p>JS <span class="consolas">operators</span> are symbols used to <span class="consolas">perform 
+operations</span> on operands, such as arithmetic operations, assignment, comparison, logical 
+operations, and more.</p>
 <h3>Examples of JS Operators:</h3>
 <ol type="1">
   <li><h4>Arithmetic Operators:</h4>
@@ -754,7 +755,8 @@ console.log(!p); / Logical NOT</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex8">8. JS Arithmetic</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JS provides arithmetic operators to perform mathematical operations on numbers.</p>
+<p>JS provides <span class="consolas">arithmetic operators</span> to perform mathematical 
+operations on numbers.</p>
 <h3>Examples of JS Arithmetic:</h3>
 <ul>
   <li><h4>Addition:</h4>
@@ -776,7 +778,8 @@ console.log(!p); / Logical NOT</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex9">9. JS Assignment</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In JS, the assignment operator (=) is used to assign values to variables.</p>
+<p>In JS, the <span class="consolas">assignment operator (=)</span> is used to assign 
+values to variables.</p>
 <h3>Examples of JS Assignment:</h3>
 <h4>Assigning a Value to a Variable:</h4>
 <pre>let x = 10; // Assigning the value 10 to variable 'x'</pre>
@@ -785,7 +788,8 @@ console.log(!p); / Logical NOT</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex10">10. JS Data Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JS has several data types that define the kinds of values it can work with.</p>
+<p>JS has several <span class="consolas">data types</span> that define the kinds of 
+values it can work with.</p>
 <h3>Examples of JS Data Types</h3>
 <h4>Primitive Data Types:</h4>
 <ul>
@@ -803,7 +807,8 @@ console.log(!p); / Logical NOT</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex11">11. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Functions in JS are reusable blocks of code that perform a specific task when called.</p>
+<p><span class="consolas">Functions</span> in JS are <span class="consolas">reusable 
+blocks of code that perform a specific task when called</span>.</p>
 <h3>Examples of JS Functions:</h3>
 <h4>Function Declaration:</h4>
 <pre>function greet(name) {
@@ -817,7 +822,8 @@ let result = multiply(5,3); // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex12">12. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Objects in JS are containers for named values called properties and methods.</p>
+<p><span class="consolas">Objects</span> in JS are containers for named values called 
+<span class="consolas">properties and methods</span>.</p>
 <h3>Examples of JS Objects:</h3>
 <h4>Object Declaration:</h4>
 <pre>let person = {
@@ -834,8 +840,9 @@ let result = multiply(5,3); // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex13">13. JS Events</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript events are actions that occur when a user interacts with a web page, like 
-clicking a button or typing in a form field.</p>
+<p>JavaScript <span class="consolas">events</span> are actions that occur when a user 
+interacts with a web page, like <span class="consolas">clicking a button or typing in a form 
+field</span>.</p>
 <h3>Examples of JS Events:</h4>
 <h4>Click Event:</h4>
 <pre>document.getElementById('myButton').addEventListener('click', function() {
@@ -848,6 +855,8 @@ clicking a button or typing in a form field.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex14">14. JS Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><span class="consolas">Strings</span> in JavaScript are sequences of characters 
+enclosed in single or double quotes.</p>
 <h3>Examples of JS Strings:</h3>
 <h4>Declaring a String Variable:</h4>
 <pre>let message = 'Hello, World!';</pre>
@@ -858,7 +867,7 @@ let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex15">15. JS String Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript provides various methods to manipulate strings.</p>
+<p>JavaScript provides various <span class="consolas">methods to manipulate strings</span>.</p>
 <h3>Examples of JS String Methods:</h3>
 <h4>toUpperCase() Methods:</h4>
 <pre>let text = 'hello';
@@ -869,7 +878,8 @@ let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex16">16. JS String Search</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript provides methods to search for substrings within a string.</p>
+<p>JavaScript provides <span class="consolas">methods to search for substrings within 
+a string</span>.</p>
 <h3>Examples of JS String Search:</h3>
 <h4>indexOf() Method:</h4>
 <pre>let text = 'Hello, World!';
@@ -880,7 +890,8 @@ let containsWord = sentence.includes('sentence'); // containsWord = true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex17">17. JS String Templates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Template literals allow embedding expressions and variables into strings.</p>
+<p><span class="consolas">Template literals</span> allow embedding expressions and 
+variables into strings.</p>
 <h3>Examples of JS String Templates:</h3>
 <h4>Basic Template Literal:</h4>
 <pre>let name = 'Alice';
@@ -893,7 +904,7 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex18">18. JS Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript handles numeric data using the number data type.</p>
+<p>JavaScript handles numeric data using the <span class="consolas">number data type</span>.</p>
 <h3>Examples of JS Numbers:</h3>
 <h4>Whole Numbers:</h4>
 <pre>let integerNumber = 42;</pre>
@@ -904,17 +915,18 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex19">19. JS BigInt</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>BigInt is a numeric data type in JavaScript that can represent integers with arbitrary 
-precision.</p>
-<h3>Examples of JS BigInt</h3>
-<h4>Creating a BigInt</h4>
+<p><span class="consolas">BigInt</span> is a numeric data type in JavaScript that can 
+represent integers with arbitrary precision.</p>
+<h3>Examples of JS BigInt:</h3>
+<h4>Creating a BigInt:</h4>
 <pre>let bigNumber = 12345678912345678901234567890n;</pre>
-<h4>Performing Operations with a BigInt</h4>
+<h4>Performing Operations with a BigInt:</h4>
 <pre>let bigSum = bigNumber + 1n;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex20">20. JS Number Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript provides methods for performing operations and manipulations with numbers.</p>
+<p>JavaScript provides <span class="consolas">methods for performing operations and 
+manipulations</span> with numbers.</p>
 <h3>Examples of JS Number Methods:</h3>
 <h4>toFixed() Method:</h4>
 <pre>
@@ -929,8 +941,9 @@ let parsedNumber = parseInt(stringNumber); // parsedNumber = 42
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex21">21. JS Number Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript has some built-in properties associated with numbers.</p>
-<h3>Examples of JS Number Properties</h3>
+<p>JavaScript has some <span class="consolas">built-in properties</span> associated with 
+numbers.</p>
+<h3>Examples of JS Number Properties:</h3>
 <h4>Number.MAX_VALUE Property:</h4>
 <pre>console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e + 308</pre>
 <h4>Number.MIN_VALUE Property:</h4>
@@ -942,7 +955,8 @@ explanations for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex22">22. JS Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Arrays in JavaScript are used to store multiple values in a single variable.</p>
+<p><span class="consolas">Arrays</span> in JavaScript are used to store multiple values 
+in a single variable.</p>
 <h3>Examples of JS Arrays:</h3>
 <h4>Declaration:</h4>
 <pre>
@@ -956,7 +970,8 @@ let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex23">23. JS Array Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript provides various methods to manipulate arrays efficiently.</p>
+<p>JavaScript provides various <span class="consolas">methods to manipulate arrays</span> 
+efficiently.</p>
 <h3>Examples of JS Array Methods:</h3>
 <h4>push() Method:</h4>
 <pre>fuits.push('melon'); // Adds 'melon' to the end of the array</pre>
@@ -967,7 +982,7 @@ let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex24">24. JS Array Sort </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript offers methods to sort arrays in various ways.</p>
+<p>JavaScript offers <span class="consolas">methods to sort arrays</span> in various ways.</p>
 <h3>Examples of JS Array Sort:</h3>
 <h4>Sorting Numbers:</h4>
 <pre>numbers.sort((a, b) => a - b); // Ascending order</pre>
@@ -976,7 +991,8 @@ let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex25">25. JS Array Iteration</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Array iteration involves looping through arrays to perform operations on each element.</p>
+<p><span class="consolas">Array iteration</span> involves looping through arrays to 
+perform operations on each element.</p>
 <h3>Examples of JS Array Iteration:</h3>
 <h4>forEach() Method:</h4>
 <pre>
@@ -989,7 +1005,8 @@ numbers.forEach(number => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex26">26. JS Array Const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Arrays declared with const can't be reassigned but their elements can be modified.</p>
+<p><span class="consolas">Arrays declared with const</span> can't be reassigned but their 
+elements can be modified.</p>
 <h3>Examples of JS Array Const:</h3>
 <pre>
 const weekdays = &lbrack;'Monday','Tuesday','Wednesday'&rbrack;;
@@ -999,7 +1016,8 @@ weekdays&lbrack;1&rbrack; = 'Thursday'; // Modifying an element is allowed
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex27">27. JS Dates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript provides a Date object to work with dates and times.</p>
+<p>JavaScript provides a <span class="consolas">Date object</span> to work with dates 
+and times.</p>
 <h3>Examples of JS Dates:</h3>
 <h4>Creating a Date Object:</h4>
 <pre>let specificDate = new Date();  // Current date and time</pre>
@@ -1008,232 +1026,256 @@ weekdays&lbrack;1&rbrack; = 'Thursday'; // Modifying an element is allowed
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex28">28. JS Date Formats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Date formatting in JavaScript involves converting dates to different formats.</p>
+<p><span class="consolas">Date formatting</span> in JavaScript involves converting dates 
+to different formats.</p>
+<h3>Examples of JS Date Formats:</h3>
+<h4>Formatting to String:</h4>
+<pre>let dateString = specificDate.toDateString(); // Convert to a human - readable string</pre>
+<h4>Formatting to Locale String:</h4>
+<pre>let localeString = specificDate.toLocaleString(); // Convert to local date and time string</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex29">29. JS Date Get Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Examples of JS Date Formats :
-Formatting to String:
-
-let dateString = specificDate . toDateString (); // Convert to a human - readable string
-Formatting to Locale String:
-
-let localeString = specificDate . toLocaleString (); // Convert to local date and time string
+<p>JavaScript <span class="consolas">Date object</span> provides various methods to 
+<span class="consolas">retrieve specific date components</span>.</p>
+<h3>Examples of JS Date Get Methods:</h3>
+<h4>getFullYear() Method:</h4>
+<pre>let year = specificDate.getFullYear(); // Get the year (2023)</pre>
+<h4>getMonth() Method:</h4>
+<pre>let month = specificDate.getMonth(); // Get the month (11 for December)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex29">29. JS Date Get Methods</h2>
+<h2 id="ex30">30. JS Date Set Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript Date object provides various methods to retrieve specific date components .
-Examples of JS Date Get Methods :
-getFullYear () Method:
-
-let year = specificDate . getFullYear (); // Get the year (2023 )
-getMonth () Method:
-
-let month = specificDate . getMonth (); // Get the month (11 for December)
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex30">30. JS Set Methods</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript Date object also has methods to set specific date components .
-Examples of JS Date Set Methods :
-setFullYear () Method:
-specificDate . setFullYear ( 2024 ); // Set the year to 2024
-setMonth () Method:
-
-specificDate . setMonth ( 0 ); // Set the month to January ( 0 index)
+<p>JavaScript <span class="consolas">Date object</span> also has methods to 
+<span class="consolas">set specific date components</span>.</p>
+<h3>Examples of JS Date Set Methods:</h3>
+<h4>setFullYear () Method:</h4>
+<pre>specificDate.setFullYear(2024); // Set the year to 2024</pre>
+<h4>setMonth() Method:</h4>
+<pre>specificDate.setMonth(0); // Set the month to January (0 index)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex31">31. JS Math</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript Math object provides mathematical constants and functions .
-Examples of JS Math:
-Math. PI Property:
-
-letpiValue = Math . PI; // Value of PI ( 3.141592653589793 )
-Math. sqrt () Method:
-
-let squareRoot = Math . sqrt ( 25 ); // Square root of 25 ( 5 )
+<p>JavaScript <span class="consolas">Math object</span> provides mathematical constants 
+and functions.</p>
+<h3>Examples of JS Math:</h3>
+<h4>Math.PI Property:</h4>
+<pre>let piValue = Math.PI; // Value of PI & piValue (3.141592653589793)
+<h4>Math.sqrt () Method:</h4>
+<pre>let squareRoot = Math.sqrt(25); // Square root of 25 (5)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex32">32. JS Random</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript Math . random () generates pseudo - random numbers .
-Examples of JS Random :
-Generating Random Number:
-
-let randomNumber = Math . random (); // Random number between 0 and 1
-Generating Random Integer:
-
-let randominteger = Math . floor (Math . random () * 10); // Random integer between 0 and 9
+<p>JavaScript <span class="consolas">Math.random()</span> generates pseudo-random numbers.</p>
+<h3>Examples of JS Random:</h3>
+<h4>Generating Random Number:</h4>
+<pre>let randomNumber = Math.random(); // Random number between 0 and 1</pre>
+<h4>Generating Random Integer:</h4>
+<pre>let randominteger = Math.floor(Math.random () * 10); // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex33">33. JS Booleans</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Booleans in JavaScript represent true or false values .
-Examples of JS Booleans :
-Declaration:
-
-letisTrue = true;
-letisFalse = false;
-Comparison:
-
-let greaterThan = 5 > 3; // true
-letequalTo = 5 = = = 5; // true
+<p><span class="consolas">Booleans</span> in JavaScript represent true or false values.</p>
+<h3>Examples of JS Booleans:</h3>
+<h4>Declaration:</h4>
+<pre>
+let isTrue = true;
+let isFalse = false;
+</pre>
+<h4>Comparison:</h4>
+<pre>
+let greaterThan = 5 &gt; 3; // true
+let equalTo = 5 === 5; // true
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex34">34. JS Comparisons</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript offers various comparison operators to compare values .
-Examples of JS Comparisons :
-==( Equality Operator):
-
-console . log ( 5 == '5'); // true (coerces types )
-===( Strict Equality Operator):
-
-console . log ( 5 = = = '5'); // false ( compares both value and type )
-This comprehensive guide covers various aspects of JavaScript including arrays, array methods, array sort, array
-iteration, array const, dates, date formats, date get methods, date set methods, math, random, booleans, and
-comparisons, providing examples and explanations for each topic .
+<p>JavaScript offers various <span class="consolas">comparison operators</span> to 
+compare values.</p>
+<h3>Examples of JS Comparisons:</h3>
+<h4>== (Equality Operator):</h4>
+<pre>console.log(5 == '5'); // true (coerces types)</pre>
+<h4> === (Strict Equality Operator):</h4>
+<pre>console.log(5 === '5'); // false (compares both value and type)</pre>
+<p>This comprehensive guide covers various aspects of JavaScript including arrays, array 
+methods, array sort, array iteration, array const, dates, date formats, date get methods, 
+date set methods, math, random, booleans, and comparisons, providing examples and 
+explanations for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex35">35. JS If Else</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The if... else statement in JavaScript executes a block of code if a specified condition is true and another block of code
-if the condition is false .
-Examples of JS If Else :
-Basic if... else :
-
-let num =10;
-if (num > 0 ) {
-console . log ('Number is positive');
+<p>The <span class="consolas">if...else</span> statement in JavaScript executes a block 
+of code if a specified condition is true and another block of code if the condition is 
+false.</p>
+<h3>Examples of JS If Else:</h3>
+<h4>Basic if...else:</h4>
+<pre>
+let num = 10;
+if (num > 0) {
+  console.log('Number is positive');
 } else {
-console . log ('Number is not positive');
+  console.log('Number is not positive');
 }
-Nested if... else :
-
-letx = 5;
-if(x>0) {
-console . log ('x is positive') ;
-} else if (x < 0 ) {
-console . log ('x is negative');
+</pre>
+<h4>Nested if...else:</h4>
+<pre>
+let x = 5;
+if (x &gt; 0) {
+  console.log ('x is positive');
+} else if (x &lt; 0 ) {
+  console.log ('x is negative');
 } else {
-console . log ('x is zero');
+  console.log ('x is zero');
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex36">36. JS Switch</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The switch statement in JavaScript executes different actions based on different conditions .
-Examples of JS Switch:
-Basic switch:
-
+<p>The <span class="consolas">switch</span> statement in JavaScript executes different 
+actions based on different conditions.</p>
+<h3>Examples of JS Switch:</h3>
+<h4>Basic switch:</h4>
+<pre>
 let day = 2;
 switch (day) {
-case 1 :
-console . log ('Monday') ;
-break;
-case 2 :
-console . log ('Tuesday') ;
-break;
-default:
-console . log ('Other day') ;
+  case 1:
+    console.log('Monday') ;
+    break;
+  case 2:
+    console.log('Tuesday');
+    break;
+  default:
+    console.log('Other day');
 }
+// Tuesday
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex37">37. JS Loop For</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The for loop in JavaScript repeatedly executes a block of code until a specified condition evaluates to false .
-Examples of JS Loop For :
-Basic for Loop:
-
-for (let i = 0;i<5;i++) {
-console . log (i) ;
+<p>The <span class="consolas">for loop<span> in JavaScript repeatedly executes a block 
+of code until a specified condition evaluates to false.</p>
+<h3>Examples of JS Loop For:</h3>
+<h4>Basic for Loop:</h4>
+<pre>
+for (let i = 0; i < 10; i++) {
+  console.log(i);
 }
-Looping Array Elements:
-
-let arr = [ ’apple', ’banana’, ’orange’ ] ;
-for (let i = 0; i < arr. length; i + +) {
-console . log ( arr [ i ]);
+</pre>
+<h4>Looping Array Elements:</h4>
+<pre>
+let arr = ['apple', 'banana', 'orange'];
+for (let i = 0; i < arr.length; i++) {
+  console.log (arr[i])
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex38">38. JS Loop For In</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The for ... in loop in JavaScript iterates over the enumerable properties of an object.
-Examples of JS Loop For In :
-Iterating Object Properties:
+<p>The <span class="consolas">for...in loop</span> in JavaScript iterates over the 
+enumerable properties of an object.</p>
+<h3>Examples of JS Loop For In:</h3>
+<h4>Iterating Object Properties:</h4>
+<pre>
 let person = {
-name : ’Alice’,
-age: 30,
-gender: ’female’
+  name : 'Alice',
+  age: 30,
+  gender: 'female'
 };
 for (let prop in person) {
-console . log (prop + ': ' + person [ prop ]) ;
+  console.log(prop + ': ' + person[prop]);
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex39">39. JS Loop For Of</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The for ... of loop in JavaScript iterates over iterable objects such as arrays, strings, etc .
-Examples of JS Loop For Of:
-Iterating Over Array Elements :
-let numbers = [ 1, 2, 3,4, 5 ];
-for (let num of numbers ) {
-console . log (num) ;
+<p>The <span class="consolas">for...of loop</span> in JavaScript iterates over iterable 
+objects such as arrays, strings, etc.</p>
+<h3>Examples of JS Loop For Of:</h3>
+<h4>Iterating Over Array Elements:</h4>
+<pre>
+let numbers = [1, 2, 3, 4, 5];
+for (let num of numbers) {
+  console.log(num);
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex40">40. JS Loop While</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The while loop in JavaScript executes a block of code while a specified condition is true .
-Examples of JS Loop While :
-Basic while Loop:
-
+<p>The <span class="consolas">while loop</span> in JavaScript executes a block of code 
+while a specified condition is true.</p>
+<h3>Examples of JS Loop While:</h3>
+<h4>Basic while Loop:</h4>
+<pre>
 let count = 0;
 while (count < 5 ) {
-console . log ( count) ;
-count + + ;
+console.log(count);
+  count++;
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex41">41. JS Break</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The break statement in JavaScript terminates the current loop or switch statement.
-Examples of JS Break :
-Using break in a Loop :
-
-for (leti = 0;i < 10; i ++) {
-if(i = = = 5) {
-break;
-console . log (i) ;
+<p>The <span class="consolas">break statement</span> in JavaScript terminates the current 
+loop or switch statement.</p>
+<h3>Examples of JS Break:</h3>
+<h4>Using break in a Loop:</h4>
+<pre>
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break;
+  }
+  console.log(i);
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex42">42. JS Iterables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Iterables in JavaScript are objects that can be iterated over using loops .
-Examples of JS Iterables :
-Using Iterables with for ... of:
-
-let iterable = [ 10, 20, 30 ];
-for (let value of iterable ) {
-console . log (value );
+<p><span class="consolas">Iterables</span> in JavaScript are objects that can be 
+iterated over using loops.</p>
+<h3>Examples of JS Iterables:</h3>
+<h4>Using Iterables with for...of:</h4>
+<pre>
+let iterable = [10,20,30];
+  for (let value of iterable) {
+    console.log(value);
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex43">43. JS Sets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Sets in JavaScript are collections of unique values .
-Examples of JS Sets :
-Creating a Set:
-
-let mySet = new Set () ;
-mySet. add ( 1);
-mySet. add ( 2 );
-mySet. add ( 3 );
-Iterating Over a Set:
-
+<p><span class="consolas">Sets</span> in JavaScript are collections of unique values.</p>
+<h3>Examples of JS Sets:</h3>
+<h4>Creating a Set:</h4>
+<pre>
+let mySet = new Set();
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+</pre>
+<h4>Iterating Over a Set:</h4>
+<pre>
 for (let item of mySet) {
-console . log (item) ;
+  console.log(item);
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex44">44. JS Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Maps in JavaScript are collections of key - value pairs where keys can be any type .
-Examples of JS Maps :
-Creating a Map:
+<p><span class="consolas">Maps</span> in JavaScript are collections of key - value pairs 
+where keys can be any type.</p>
+<h3>Examples of JS Maps:</h3>
+<h4>Creating a Map:</h4>
+<pre>
 let myMap = new Map ();
-myMap . set ('keyl', 'valuel1);
-myMap . set ('key2', 'value2');
-
-Iterating Over a Map :
-for (let [ key, value ] of myMap ) {
-console . log (key + 1 = ' + value );
+myMap.set('keyl', 'valuel1);
+myMap.set('key2', 'value2');
+</pre>
+<h4>Iterating Over a Map:</h4>
+<pre>
+for (let [key, value] of myMap) {
+  console.log(key + ' = ' + value);
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex45">45. JS Typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
