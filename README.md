@@ -21,7 +21,7 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a href="#ex0">93 JavaScript Examples From Basics to Advanced</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<ul>
+<ol>
   <li><a href="#ex1">JS Statements</a></li>
   <li><a href="#ex2">JS Syntax</a></li>
   <li><a href="#ex3">JS Comments</a></li>
@@ -123,7 +123,7 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#ex91">JS AJAX</a></li>
   <li><a href="#ex92">JS JSON</a></li>
   <li><a href="#ex93">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
-</ul>
+</ol>
 
 <h2><a href="#js0">First 218 Simple JavaScript Sample Scripts</a></h2>
 
