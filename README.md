@@ -2018,7 +2018,7 @@ representing the document as a tree structure.</p>
   &lt;body&gt;
   &lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
   &lt;script&gt;
-  document.getElementByld("demo").innerHTML = "This is a new paragraph.";
+  document.getElementById("demo").innerHTML = "This is a new paragraph.";
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -2048,7 +2048,7 @@ console.log(document.URL);   // Output: Document URL
 &lt;body&gt;
 &lt;p id ="demo"&gt;This is a paragraph.&lt;/p&gt;
 &lt;script&gt;
-  let element = document.getElementByld("demo");
+  let element = document.getElementById("demo");
   element.style.color = "red";
   element.style.fontsize = "20px" ;
 &lt;/script&gt;
@@ -2100,7 +2100,7 @@ console.log(document.URL);   // Output: Document URL
 &lt;body&gt;
 &lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
 &lt;script&gt;
-  let element = document.getElementByld("demo");
+  let element = document.getElementById("demo");
   element.classList.add("new - class");
 &lt;/script&gt;
 &lt;/body&gt;
@@ -2157,7 +2157,7 @@ console.log(document.URL);   // Output: Document URL
 &lt;body&gt;
 &lt;div id ="myDiv"&gt;Mouse over me&lt;/div&gt;
 &lt;script&gt;
-  document.getElementByld("myDiv").addEventListener("mouseover", function() {
+  document.getElementById("myDiv").addEventListener("mouseover", function() {
     alert("Mouse over event triggered");
   });
 &lt;/script&gt;
@@ -2316,42 +2316,45 @@ and cookies, with examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex91">91. JS Web APIs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Web APIs are sets of tools and interfaces provided by web browsers to interact with various functionalities of the
-browser or device.
-Web API Intro
-Web APIs enable web developers to access various browser features and functionalities .
-Accessing the Web API:
-
+<p>Web APIs are sets of tools and interfaces provided by web browsers to interact with 
+various functionalities of the browser or device.</p>
+<h3>Web API Intro</h3>
+<p>Web APIs enable web developers to access various browser features and functionalities.</p>
+<h4>Accessing the Web API:</h4>
+<pre>
 // Example : Using the Geolocation API
-if (" geolocation " in navigator) {
-navigator. geolocation . getCurrentPosition ((position ) = > {
-console . log (" Latitude :", position . coords . latitude ) ;
-console . log (" Longitude :", position . coords . longitude );
-});
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition((position) => {
+    console.log("Latitude:", position.coords.latitude);
+    console.log("Longitude:", position.coords.longitude);
+  });
 }
-Web Forms API
-The Web Forms API provides methods and properties to manipulate HTML form elements .
-Accessing Form Elements:
-
-let form = document. getElementByld (" myForm");
-let inputField = form . elements [" username "];
-console . log (inputField . value );
-Web History API
-The Web History API allows manipulation of the browser's history .
-Changing Browser History:
-
-window . history. pushState ({page : 1}, " Title ", " ?page = 1 ");
-Web Storage API
-The Web Storage API provides methods to store data in the browser .
-Using localstorage:
-
-localstorage . setitem (" key", " value ");
-let data = localstorage . getltem (" key");
-Web Worker API
-The Web Worker API enables running scripts in the background to handle time - consuming tasks without blocking the
-UI.
-Creating a Web Worker :
-
+</pre>
+<h3>Web Forms API</h3>
+<p>The Web Forms API provides methods and properties to manipulate HTML form elements.</p>
+<h4>Accessing Form Elements:</h4>
+<pre>
+let form = document.getElementById("myForm");
+let inputField = form.elements["username"];
+console.log(inputField.value);
+</pre>
+<h3>Web History API</h3>
+<p>The Web History API allows manipulation of the browser's history.</p>
+<h4>Changing Browser History:</h4>
+<pre>
+window.history.pushState({page: 1}, "Title", "?page = 1");
+</pre>
+<h3>Web Storage API</h3>
+<p>The Web Storage API provides methods to store data in the browser.</p>
+<h4>Using localstorage:</h4>
+<pre>
+localstorage.setitem("key", "value");
+let data = localstorage.getItem("key");
+<h3>Web Worker API</h3>
+<p>The Web Worker API enables running scripts in the background to handle time - 
+consuming tasks without blocking the UI.</p>
+<h4>Creating a Web Worker:</h4>
+<pre>
 // worker.js
 self, onmessage = function ( event) {
 console . log (" Message received from the main script, event. data);
@@ -2363,211 +2366,238 @@ worker. onmessage = function ( event) {
 console . log (" Message received from worker , event. data);
 };
 worker. postMessage (" Message from main ");
-Web Fetch API
-The Fetch API provides a way to make HTTP requests.
-Making a GET Request:
-
+</pre>
+<h3>Web Fetch API</h3>
+<p>The Fetch API provides a way to make HTTP requests.</p>
+<h4>Making a GET Request:</h4>
+<pre>
 fetch (" https :// api. example . com / data ")
 . then ((response ) = > response . json ())
 . then (( data) = > console . log ( data))
 . catch (( error) = > console . log (" Error , error));
-Web Geolocation API
-The Geolocation API retrieves geographical information about the user's device .
-Getting User's Location:
-
+<h3>Web Geolocation API</h3>
+<p>The Geolocation API retrieves geographical information about the user's device.</p>
+<h4>Getting User's Location:</h4>
+<pre>
 navigator. geolocation . getCurrentPosition ((position) = > {
 console . log (" Latitude :", position . coords . latitude );
 console . log (" Longitude :", position . coords . longitude );
 });
-This comprehensive guide covers various Web APIs in JavaScript, including an introduction to Web APIs, Web Forms
-API, Web History API, Web Storage API, Web Worker API, Web Fetch API, and Web Geolocation API, with examples and
-explanations for each concept.
+</pre>
+<p>This comprehensive guide covers various Web APIs in JavaScript, including an 
+introduction to Web APIs, Web Forms API, Web History API, Web Storage API, Web Worker 
+API, Web Fetch API, and Web Geolocation API, with examples and explanations for each 
+concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex92">92. JS AJAX</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-AJAX (Asynchronous JavaScript and XML) is a technique used to send and receive data asynchronously between a
-web browser and a server .
-AJAX Intro
-AJAX allows web pages to update content without reloading the entire page .
-Simple AJAX Request:
-javascript code
+<p>AJAX (Asynchronous JavaScript and XML) is a technique used to send and receive data 
+asynchronously between a web browser and a server.</p>
+<h3>AJAX Intro</h3>
+<p>AJAX allows web pages to update content without reloading the entire page.</p>
+<h4>Simple AJAX Request:</h4>
+<pre>
 let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-document. getElementByld (" demo "). innerHTML = this . responseText;
+xhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200 ) {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
 };
-xhttp . open (" GET ", " ajax_info . txt", true );
-xhttp . send ();
-AJAX XMLHttp
-The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data between a web browser and a
-server.
-Using XMLHttpRequest:
-javascript code
-let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-console . log (this . responseText);
+xhttp.open("GET ", " ajax_info.txt", true);
+xhttp.send();
+</pre>
+<h3>AJAX XMLHttp</h3>
+<p>The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data 
+between a web browser and a server.</p>
+<h4>Using XMLHttpRequest:</h4>
+<pre>
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log(this.responseText);
+  }
 };
-xhttp . open (" GET ", " data . txt", true );
-xhttp . send ();
-AJAX Request
-AJAX requests enable communication between the browser and the server .
-Sending POST Request:
-javascript code
-let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-console . log (this . responseText);
+xhttp.open("GET", "data.txt", true);
+xhttp.send();
+</pre>
+<h3>AJAX Request</h3>
+<p>AJAX requests enable communication between the browser and the server.</p>
+<h4>Sending POST Request:</h4>
+<pre>
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log(this.responseText);
+  }
 };
-xhttp . open (" POST ", " process . php ", true ) ;
-xhttp . setRequestHeader (" Content - type ", " application / x - www - form - urlencoded ") ;
-xhttp . send (" name = John&age = 30 ");
-AJAX Response
-Handling AJAX responses involves processing data received from the server .
-Handling JSON Response:
-javascript code
-let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-let data = JSON . parse (this . responseText);
-console . log ( data);
+xhttp.open("POST", "process.php", true);
+xhttp.setRequestHeader("Content - type", "application / x - www - form - urlencoded");
+xhttp.send("name = John&age = 30");
+</pre>
+<h3>AJAX Response</h3>
+<p>Handling AJAX responses involves processing data received from the server.</p>
+<h4>Handling JSON Response:</h4>
+<pre>
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    let data = JSON.parse(this.responseText);
+    console.log(data);
+  }
 };
-xhttp . open (" GET ", " data . json 11, true );
-xhttp . send ();
-AJAX XML File
-AJAX can be used to fetch and handle XML files .
-Fetching XML File:
-javascript code
-let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-let xmlDoc = this . responseXML;
-console . log (xmlDoc );
-xhttp . open (" GET ", " data . xml" , true );
-xhttp . send ();
-AJAX PHP
-AJAX can interact with server - side technologies like PHP to exchange data .
-Handling AJAX in PHP :
-javascript code
-let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-console . log (this . responseText);
+xhttp.open("GET", "data.json ", true);
+xhttp.send();
+</pre>
+<h3>AJAX XML File</h3>
+<p>AJAX can be used to fetch and handle XML files.</p>
+<h4>Fetching XML File:</h4>
+<pre>
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    let xmlDoc = this.responseXML;
+    console.log (xmlDoc);
+  }
 };
-xhttp . open (" GET ", " process . php ", true ) ;
-xhttp . send ();
-php code
+xhttp.open("GET", "data.xml", true);
+xhttp.send();
+</pre>
+<h3>AJAX PHP</h3>
+<p>AJAX can interact with server - side technologies like PHP to exchange data.</p>
+<h4>Handling AJAX in PHP:</h4>
+<pre>
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log(this.responseText);
+  }
+};
+xhttp.open("GET", "process.php", true);
+xhttp.send();
+</pre>
+<h5>php code</h5>
 // process. php
-<?php
-echo" Hello from PHP !";
-?>
-AJAX ASP
-Similarly, AJAX can communicate with server - side technologies like ASP .
-AJAX with ASP:
-javascript code
-let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-console . log (this . responseText);
+<pre>
+&lt;?php
+echo "Hello from PHP!";
+?&gt;
+</pre>
+<h3>AJAX ASP</h3>
+<p>Similarly, AJAX can communicate with server - side technologies like ASP.</p>
+<h4>AJAX with ASP:</h4>
+<pre>
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200 ) {
+    console.log(this.responseText);
+  }
 };
-xhttp . open (" GET ", " process . asp ", true ) ;
-xhttp . send ();
-asp code
-< !— process . asp -- >
-< %
-Response . Write (" Hello from ASP !")
-% >
-AJAX Database
-AJAX can be used to interact with databases on the server .
-Database Interaction with AJAX:
-javascript code
-let xhttp = new XMLHttpRequest ();
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-console . log (this . responseText);
+xhttp.open("GET", "process.asp", true) ;
+xhttp.send();
+</pre>
+<h5>asp code</h5>
+<pre>
+&lt;!— process.asp --&gt;
+&lt;%
+Response.Write("Hello from ASP!")
+%&gt;
+</pre>
+<h3>AJAX Database</h3>
+<p>AJAX can be used to interact with databases on the server.</p>
+<h4>Database Interaction with AJAX:</h4>
+<pre>
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log(this.responseText);
+  }
 };
-xhttp . open (" GET ", " fetch_data . php ", true );
-xhttp . send ();
-php code
+xhttp.open("GET", "fetch_data.php", true);
+xhttp.send();
+</pre>
+<h5>php code</h5>
+<pre>
 // fetch-data. php
-<?php
+&lt;?php
 // Fetch data from database and return as JSON
-?>
-AJAX Applications
-AJAX enables building interactive web applications with real - time data .
-Real - time Chat Application :
-javascript code
-setinterval (()=>{
-// Fetch new messages and update chat interface
-1,5000);
-AJAX Examples
-Here are more examples demonstrating various AJAX functionalities .
-AJAX Example 1:
-javascript code
-// Fetch weather data from an API and display on a webpage
-AJAX Example 2:
-javascript code
-// Fetch user - specific data and update profile information dynamically
-This comprehensive guide covers AJAX (Asynchronous JavaScript and XML) t including an introduction to AJAX,
-using XMLHttp, making AJAX requests and handling responses, fetching XML files, interacting with server - side
-technologies like PHP and ASP, working with databases, building AJAX applications, and providing examples and
-explanations for each concept.
-AJAX Example 3 : Dynamic Content Loading
-HTML:
-html code
-< ! DOCTYPE html>
-<html>
-<head>
-<title>AJAX Dynamic Content< / title>
-< script >
-function loadContent () {
-let xhttp = new XMLHttpRequest () ;
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-document. getElementByld (" dynamicContent"). innerHTML = this . responseText;
-xhttp . open (" GET ", " content. html" , true ) ;
-xhttp . send () ;
-< I script >
-< I head>
-<body>
-<button onclick =" loadContent ()" >Load Content< / button>
-<divid =" dynamicContent" >< / div>
-< I body>
-< I html>
-content. html (Sample Content):
-html code
-<h2> Welcome to Dynamic Content< / h2>
-<p>This content was loaded dynamically using AJAX . < / p>
+?&gt;
+</pre>
+<h3>AJAX Applications</h3>
+<p>AJAX enables building interactive web applications with real - time data.</p>
+<h4>Real - time Chat Application:</h4>
+<pre>
+setinterval(() => {
+  // Fetch new messages and update chat interface
+},5000);
+</pre>
+<h3>AJAX Examples</h3>
+<p>Here are more examples demonstrating various AJAX functionalities.</p>
+<h4>AJAX Example 1:</h4>
+<pre>// Fetch weather data from an API and display on a webpage</pre>
+<h4>AJAX Example 2:</h4>
+<pre>// Fetch user - specific data and update profile information dynamically</pre>
+<p>This comprehensive guide covers AJAX (Asynchronous JavaScript and XML), including an 
+introduction to AJAX, using XMLHttp, making AJAX requests and handling responses, 
+fetching XML files, interacting with server - side technologies like PHP and ASP, working 
+with databases, building AJAX applications, and providing examples and explanations for 
+each concept.</p>
+<h4>AJAX Example 3: Dynamic Content Loading</h4>
+<h5>HTML:</h5>
+<h5>html code</h5>
+<pre>
+<!DOCTYPE html&gt;
+<html&gt;
+<head&gt;
+<title&gt;AJAX Dynamic Content</title&gt;
+<script&gt;
+function loadContent() {
+let xhttp = new XMLHttpRequest() ;
+xhttp.onreadystatechange = function () {
+if (this.readyState == 4 && this.status == 200 ) {
+document.getElementById("dynamicContent").innerHTML = this.responseText;
+xhttp.open("GET", "content.html" ,true) ;
+xhttp.send();
+</script&gt;
+</head&gt;
+<body&gt;
+<button onclick ="loadContent()" &gt;Load Content</button&gt;
+<divid =" dynamicContent" &gt;</div&gt;
+</body&gt;
+</html&gt;
+<h4>content.html (Sample Content):</h4>
+<h5>html code</h5>
+<h2> Welcome to Dynamic Content</h2>
+<p>This content was loaded dynamically using AJAX . </p>
 This example demonstrates a simple button that triggers an AJAX request to load content from an external HTML file
 and displays it on the webpage without refreshing the entire page .
 AJAX Example 4: Form Submission with AJAX
 HTML:
 html code
-< ! DOCTYPE html>
-<html>
-<head>
-<title>AJAX Form Submission< / title>
-< script >
-function submitForm () {
-let formData = new FormData ( document. getElementByld (" myForm ")) ;
+<!DOCTYPE html&gt;
+<html&gt;
+<head&gt;
+<title&gt;AJAX Form Submission</title&gt;
+<script&gt;
+function submitForm() {
+let formData = new FormData(document.getElementById("myForm")) ;
 let xhttp = new XMLHttpRequest () ;
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-document. getElementByld (" response "). innerHTML = this . responseText;
+xhttp.onreadystatechange = function() {
+if (this.readyState = = 4 && this.status == 200) {
+document.getElementById ("response").innerHTML = this.responseText;
 };
-xhttp . open (" POST ", " processForm . php ", true );
-xhttp . send (formData) ;
-< I script >
-< / head>
-<body>
-<form id =" myForm " >
-<input type =" text" name =" username " placeholder =" Username " >
-<input type =" password" name =" password" placeholder =" Password " >
-<button type =" button " onclick =" submitForm ()" >Submit< I button>
-< I form>
-< div id =" response " >< / div>
-</body>
-< I html>
+xhttp.open("POST", "processForm.php", true);
+xhttp.send(formData) ;
+</script&gt;
+</head&gt;
+<body&gt;
+<form id = "myForm"&gt;
+<input type = "text" name = "username" placeholder = "Username"&gt;
+<input type = "password" name = "password" placeholder = "Password"&gt;
+<button type = "button" onclick = "submitForm()"&gt;Submit</button&gt;
+</form&gt;
+<div id ="response"&gt;</div&gt;
+</body&gt;
+</html&gt;
 processForm. php ( Server - side Processing):
 php code
 <?php
@@ -2579,7 +2609,7 @@ echo" Form submitted successfully by $username !" ;
 } else {
 echo" Invalid request!";
 }
-?>
+?&gt;
 This example demonstrates a form submission using AJAX. When the form is submitted, the data is sent
 asynchronously to a server - side PHP script for processing . The response from the server is displayed on the webpage
 without refreshing the entire page .
@@ -2587,12 +2617,12 @@ AJAX Example 5 : Fetching JSON Data
 JavaScript:
 javascript code
 fetch ('data . json')
-. then (response = > response . json ())
-. then (data = > {
+. then (response = &gt; response . json ())
+. then (data = &gt; {
 console . log ( data);
 // Process and use the retrieved JSON data
 })
-. catch ( error = > console . error (’Error :error)) ;
+. catch ( error = &gt; console . error (’Error :error)) ;
 data . json ( Sample JSON Data):
 json code
 {
@@ -2607,35 +2637,35 @@ without page refresh, and fetching and using JSON data asynchronously .
 AJAX Example 6 : Image Gallery with AJAX
 HTML:
 html code
-< ! DOCTYPE html>
-<html>
-<head>
-<title>AJAX Image Gallery< / title>
-< script >
+<!DOCTYPE html&gt;
+<html&gt;
+<head&gt;
+<title&gt;AJAX Image Gallery</title&gt;
+<script>
 function loadimages () {
-let xhttp = new XMLHttpRequest () ;
-xhttp . onreadystatechange = function () {
-if (this . readyState = = 4 && this . status == 200 ) {
-let images = JSON . parse (this . responseText) ;
-let gallery = document. getElementByld (" imageGallery") ;
-images . forEach (img = > {
-let imageNode = document. createElement (" img ");
-imageNode . src = img . url;
-gallery. appendChild (imageNode ) ;
+  let xhttp = new XMLHttpRequest ();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+let images = JSON.parse(this.responseText);
+let gallery = document.getElementById ("imageGallery");
+images.forEach(img => {
+let imageNode = document.createElement("img");
+imageNode.src = img.url;
+gallery.appendChild(imageNode) ;
 });
 };
-xhttp . open (" GET ", " images . json " , true );
-xhttp . send () ;
-< I script >
-< I head>
-<body onload =" loadimages ()" >
-<div id =" imageGallery" >< / div>
-< I body>
-< I html>
-images . json ( Sample Image Data in JSON Format):
+xhttp.open("GET", "images.json" , true);
+xhttp.send();
+</script>
+</head>
+<body onload="loadimages()" >
+<div id ="imageGallery"></div>
+</body>
+</html>
+images.json(Sample Image Data in JSON Format):
 json code
 {
-" url" image 1 .jpg ",
+"url" image 1.jpg ",
 " caption " Image 1 "
 },
 {
@@ -2650,74 +2680,74 @@ gallery.
 AJAX Example 7 : Autocomplete Search
 HTML:
 html code
-< ! DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-< title> Autocomplete Search< / title>
-< script >
+<title>Autocomplete Search</title>
+<script>
 function search () {
-let query = document. getElementByld (" searchinput"). value;
-fetch ( ' search . php?q = $ {query}' )
-. then (response = > response . json ())
-. then ( data = > {
-let results = document. getElementByld (" searchResults ");
-results . innerHTML =
-data . forEach (item = > {
-let listitem = document. createElement (" li");
-listitem . textContent = item . name;
-results . appendChild (listitem) ;
+let query = document. getElementById (" searchinput"). value;
+fetch ('search.php?q = ${query}' )
+.then (response => response.json())
+.then (data => {
+let results = document.getElementById("searchResults");
+results.innerHTML =
+data.forEach (item = > {
+let listitem = document.createElement(" li");
+listitem.textContent = item.name;
+results.appendChild(listitem) ;
 });
 })
-. catch ( error = > console . error ('Error :error));
-< I script >
-< I head>
+.catch(error => console.error('Error :error));
+</script>
+</head>
 <body>
-<inputtype =" text" id =" searchinput" onkeyup =" search ()" placeholder =" Search ..." >
+<inputtype="text" id="searchinput" onkeyup="search()" placeholder="Search ...">
 <ul id =" searchResults " >< / ul>
 < I body>
 < I html>
 search. php (Server - side Script Handling Search):
 php code
 <?php
-$searchTerm = $_GET [ 'q' ]; // Get search query
+$searchTerm = $_GET ['q']; // Get search query
 // Perform database or data search operations based on the query and return results
 $results = [
-["name'- > "Result 1 "],
-["name"= > "Result 2"],
-// Add more search results as needed
-1;
-echo json.encode ( $results ); // Return results as JSON
+  ["name' => "Result1"],
+  ["name" => "Result2"],
+  // Add more search results as needed
+];
+echo json.encode($results); // Return results as JSON
 ?>
 This example demonstrates an autocomplete search feature using AJAX . As the user types in the search input field,
 an AJAX request is made to a server - side PHP script ( search . php ) that processes the search query and returns
-matching results in JSON format, which are then displayed as autocomplete suggestions .
+matching results in JSON format, which are then displayed as autocomplete suggestions.
 These additional examples showcase different functionalities of AJAX, such as creating an image gallery dynamically
-and implementing an autocomplete search feature, using asynchronous data fetching and manipulation on a webpage .
+and implementing an autocomplete search feature, using asynchronous data fetching and manipulation on a webpage.
 AJAX Example 8 : Live Data Update
 HTML:
 html code
 < ! DOCTYPE html>
 <html>
 <head>
-<title>Live Data Update< / title>
-< script >
-function updateData () {
-setinterval (()=>{
-fetch ('live_data . php')
-. then (response = > response . json ())
-. then ( data = > {
-document. getElementByld ('liveData'). innerText = data . value;
+<title>Live Data Update</title>
+<script>
+function updateData() {
+setinterval (() => {
+fetch('live_data.php')
+.then(response = > response.json())
+.then(data = > {
+document.getElementById('liveData').innerText = data.value;
 })
-. catch ( error = > console . error ('Error :error));
-}, 5000 ); // Update every 5 seconds
-window . onload = updateData;
-< I script >
-< I head>
+.catch (error => console.error('Error :error));
+}, 5000); // Update every 5 seconds
+window.onload = updateData;
+</script>
+</head>
 <body>
-<hl>Live Data : <spanid =" liveData " >< / span>< / hl>
-< I body>
-< I html>
-live_data. php ( Server - side Script Providing Live Data):
+<hl>Live Data: <spanid="liveData"></span></hl>
+</body>
+</html>
+live_data.php(Server - side Script Providing Live Data):
 php code
 <?php
 // Simulate live data update
@@ -2728,53 +2758,54 @@ This example demonstrates updating live data on a webpage at regular intervals u
 updateData uses setinterval to fetch updated data from the server - side PHP script (live_data . php ) every 5 seconds
 and displays it on the webpage .
 AJAX Example 9 : Infinite Scroll
-HTML:
-html code
-< ! DOCTYPE html>
+<h5>HTML:</h5>
+<h5>html code</h5>
+<pre>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Infinite Scroll< / title>
-< style >
+<title>Infinite Scroll</title>
+<style>
 #content {
 height: 200px;
 overflow-y: scroll;
-< I style >
-< script >
+</style>
+<script>
 let page = 1;
 function loadMoreContent () {
-let content = document. getElementByld ('content1)
-let scrollHeight = content. scrollHeight;
-let scrollTop = content. scrollTop;
-let offsetHeight = content. offsetHeight;
-if (scrollHeight - scrollTop = = = offsetHeight) {
-fetch ( ' content. php?page = ${page}' )
-. then (response = > response . text ())
-. then ( data = > {
+let content = document. getElementById ('content1)
+let scrollHeight = content.scrollHeight;
+let scrollTop = content.scrollTop;
+let offsetHeight = content.offsetHeight;
+if (scrollHeight - scrollTop === offsetHeight) {
+fetch (' content.php?page = ${page}')
+.then(response => response.text ())
+.then(data => {
 content. innerHTML + = data;
 page ++ ;
 })
-. catch (error = > console . error ('Error :error));
+.catch (error => console.error('Error :error));
 window . onscroll = loadMoreContent;
-< I script >
-< I head>
+</script>
+</head>
 <body>
-<div id =" content" onscroll =" loadMoreContent ()" >
-< !— Initially loaded content — >
-< I div>
-<I body>
-< I html>
-content. php ( Server - side Script Providing Content):
-php code
+<div id ="content" onscroll="loadMoreContent()" >
+&lt;!-- Initially loaded content --&gt;
+</div>
+</body>
+</html>
+content.php(Server - side Script Providing Content):
+<h5>php code</h5>
 <?php
-$page = $_GET [ 'page' ]; // Get page number
+$page = $_GET['page']; // Get page number
 $ limit = 10; // Number of items per page
-$ start = ( $page - 1)* $ limit; // Calculate starting index
+$ start = ($page - 1)* $limit; // Calculate starting index
 // Fetch content based on page number and limit
 // Example : $results = fetchDataFromDatabase ( $ start, $ limit) ;
 // Generate sample content for demonstration
-$results = range ($ start + 1, $ start + $limit);
-foreach ( $results as $result) {
-echo" <p>Item $result< / p> ";
+$results = range ($start + 1, $start + $limit);
+foreach ($results as $result) {
+echo" <p>Item $result</p> ";
 }
 ?>
 This example demonstrates an infinite scroll functionality using AJAX. As the user scrolls down the page, the
@@ -2785,15 +2816,15 @@ These additional examples showcase different functionalities of AJAX, such as li
 infinite scroll behavior on a webpage, demonstrating how AJAX can be used to fetch and display data dynamically
 without page reloads .
 AJAX Example 10 : File Upload with Progress Bar
-HTML:
-html code
-< ! DOCTYPE html>
+<h5>HTML:</h5>
+<h5>html code</h5>
+<!DOCTYPE html>
 <html>
 <head>
 <title>File Upload with Progress< / title>
 < script >
 function uploadFile () {
-let fileinput = document. getElementByld ('fileinput') ;
+let fileinput = document. getElementById ('fileinput') ;
 let file = fileinput. files [ 0 ];
 let formData = new FormData ();
 formData . append ('file', file ) ;
@@ -2802,7 +2833,7 @@ xhr. open ('POST1, 'upload . php', true ) ;
 xhr. upload . onprogress = function ( e ) {
 if (e . lengthComputable ) {
 let percentComplete = (e . loaded / e . total) * 100;
-document. getElementByld (’progressBar'). style . width = percentComplete + ' % ';
+document. getElementById (’progressBar'). style . width = percentComplete + ' % ';
 };
 xhr. onload = function () {
 if (xhr. status = = = 200 ) {
@@ -2845,7 +2876,7 @@ html code
 < title>Displaying Time Dynamically< / title>
 < script >
 function displayTime () {
-let timeDisplay = document. getElementByld ('timeDisplay') ;
+let timeDisplay = document. getElementById ('timeDisplay') ;
 setinterval (()=>{
 fetch ('getTime . php')
 . then (response = > response . text ())
@@ -3000,7 +3031,7 @@ const users = [
 { " name Alice ", "age": 30},
 { " name Bob ", "age": 28}
 ];
-const userList = document. getElementByld (" userList");
+const userList = document. getElementById (" userList");
 users . forEach (user = > {
 let listitem = document. createElement (" li") ;
 listitem . textContent = ' ${user. name} - ${user. age} years old';
@@ -3069,11 +3100,11 @@ fetch ('data . json')
 8 . Displaying JSON Data Dynamically in HTML:
 javascript code
 let jsonData = { " name " Bob ", " age 28 };
-let display Div = document. getElementByld ('jsonDataDisplay');
+let display Div = document. getElementById ('jsonDataDisplay');
 displayDiv. innerHTML = ' <p>Name : ${jsonData . name}< / p><p>Age : ${jsonData . age}< / p>
 9 . Handling JSON Data in Forms :
 javascript code
-let form = document. getElementByld ('myForm');
+let form = document. getElementById ('myForm');
 form . addEventListener ('submit', function ( event) {
 event. preventDefault ();
 let formData = new FormData (form );
@@ -3166,9 +3197,9 @@ let data = [
 { " id": 2, " name ":" Item 2 "},
 { " id ": 3, " name ":" Item 3 "}
 ];
-let mappedData = data . map (item = > ({itemld : item . id, itemName : item . name})) ;
+let mappedData = data . map (item = > ({itemId : item . id, itemName : item . name})) ;
 console . log ( mappedData);
-// Output: [{ "itemld": 1, " itemName ":" Item 1" }, { "itemld": 2, " itemName":" Item 2 " }, { "itemld": 3,
+// Output: [{ "itemId": 1, " itemName ":" Item 1" }, { "itemId": 2, " itemName":" Item 2 " }, { "itemId": 3,
 " itemName ":" Item 3 " } ]
 These examples showcase different aspects of using JSON in JavaScript, including creating, manipulating, parsing, and
 working with JSON data in various scenarios .
@@ -3300,7 +3331,7 @@ const users = [
 { " name Alice ", "age": 30},
 { " name Bob ", "age": 28}
 ];
-const userList = document. getElementByld (" userList");
+const userList = document. getElementById (" userList");
 users . forEach (user = > {
 let listitem = document. createElement (" li") ;
 listitem . textContent = ' ${user. name} - ${user. age} years old';
@@ -3369,11 +3400,11 @@ fetch ('data . json')
 8 . Displaying JSON Data Dynamically in HTML:
 javascript code
 let jsonData = { " name " Bob ", " age 28 };
-let display Div = document. getElementByld ('jsonDataDisplay');
+let display Div = document. getElementById ('jsonDataDisplay');
 displayDiv. innerHTML = ' <p>Name : ${jsonData . name}< / p><p>Age : ${jsonData . age}< / p>
 9 . Handling JSON Data in Forms :
 javascript code
-let form = document. getElementByld ('myForm');
+let form = document. getElementById ('myForm');
 form . addEventListener ('submit', function ( event) {
 event. preventDefault ();
 let formData = new FormData (form );
@@ -3466,27 +3497,27 @@ let data = [
 { " id": 2, " name ":" Item 2 "},
 { " id ": 3, " name ":" Item 3 "}
 ];
-let mappedData = data . map (item = > ({itemld : item . id, itemName : item . name})) ;
+let mappedData = data . map (item = > ({itemId : item . id, itemName : item . name})) ;
 console . log ( mappedData);
-// Output: [{ "itemld": 1, " itemName ":" Item 1" }, { "itemld": 2, " itemName":" Item 2 " }, { "itemld": 3,
+// Output: [{ "itemId": 1, " itemName ":" Item 1" }, { "itemId": 2, " itemName":" Item 2 " }, { "itemId": 3,
 " itemName ":" Item 3 " } ]
 These examples showcase different aspects of using JSON in JavaScript, including creating, manipulating, parsing, and
 working with JSON data in various scenarios .
-document. getElementByld (" mylmage "). setAttribute (" src ", " new_image . jpg ");
+document. getElementById (" mylmage "). setAttribute (" src ", " new_image . jpg ");
 j Query:
 javascript code
 $ (" #mylmage "). attr (" src ", " newjmage . jpg");
 15 . Getting Form Values :
 JavaScript:
 javascript code
-let inputValue = document. getElementByld (" mylnput"). value;
+let inputValue = document. getElementById (" mylnput"). value;
 j Query:
 javascript code
 let inputValue = $ (" #mylnput"). val ();
 16 . Checking Checkbox State :
 JavaScript:
 javascript code
-let isChecked = document. getElementByld (" myCheckbox "). checked;
+let isChecked = document. getElementById (" myCheckbox "). checked;
 j Query:
 javascript code
 let isChecked = $ (" #myCheckbox"). prop (" checked") ;
@@ -3505,7 +3536,7 @@ console . log ( $ (this ). text ());
 18 . Handling Form Submission:
 JavaScript:
 javascript code
-document. getElementByld (" myForm “). addEventListener (" submit" t function ( event) {
+document. getElementById (" myForm “). addEventListener (" submit" t function ( event) {
 event. preventDefault ();
 let formData = new FormData (this ) ;
 // Process form data
@@ -3520,7 +3551,7 @@ let formData = $ (this ). serialize () ;
 19 . Animating Element:
 JavaScript:
 javascript code
-let element = document. getElementByld (" myElement") ;
+let element = document. getElementById (" myElement") ;
 element. style . transition = " transform 2 s 11;
 element. style . transform = " rotate ( 360deg)" ;
 j Query:
@@ -3529,7 +3560,7 @@ $ (" #myElement"). animate ({rotate :" 360deg "}, 2000 );
 20 . Changing Background Color on Click :
 JavaScript:
 javascript code
-let myDiv = document. getElementByld (" myDiv") ;
+let myDiv = document. getElementById (" myDiv") ;
 myDiv. addEventListener (" click", function () {
 this . style . backgroundcolor = " red ";
 });
@@ -3551,7 +3582,7 @@ provides a bitmap area where JavaScript code can be used to create animations, r
 visualizations .
 Example - Drawing a Circle on Canvas:
 javascript code
-const canvas = document. getElementByld ('myCanvas') ;
+const canvas = document. getElementById ('myCanvas') ;
 const ctx = canvas . getContext ('2d');
 ctx . beginPath () ;
 ctx . arc (100,100, 50, 0, 2 * Math . PI);
@@ -3569,7 +3600,7 @@ Chart. js is a popular JavaScript library for creating simple yet flexible chart
 provides easy integration . With Chart. js, developers can create responsive and visually appealing charts .
 Example - Creating a Bar Chart with Chart. js :
 javascript code
-const ctx = document. getElementByld ('myChart'). getContext ('2d1);
+const ctx = document. getElementById ('myChart'). getContext ('2d1);
 const myChart = new Chart ( ctx, {
 type: 'bar',
 data: {
@@ -3613,7 +3644,7 @@ const data = google . visualization . arrayToDataTable ([
 const options = {
 title : 'My Daily Activities1,
 pieHole : 0.4,
-const chart = new google . visualization . PieChart ( document. getElementByld ('donutchart')) ;
+const chart = new google . visualization . PieChart ( document. getElementById ('donutchart')) ;
 chart. draw ( data, options ) ;
 }
 6 . JSD3 . js
@@ -3642,13 +3673,13 @@ You
 Canvas Examples:
 1. Draw Rectangle :
 javascript code
-const canvas = document. getElementByld ('myCanvas');
+const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d1) ;
 ctx . fillstyle = 'blue';
 ctx . fillRect (10,10,100, 50 );
 2. Draw Circle :
 javascript code
-const canvas = document. getElementByld ('myCanvas');
+const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d');
 ctx . beginPath ();
 ctx . arc ( 100,100, 50, 0, Math .PI * 2 );
@@ -3666,7 +3697,7 @@ Plotly. newPlot ('myDiv', data);
 Chart. js Examples :
 5. Bar Chart:
 javascript code
-const ctx = document. getElementByld ('myChart'). getContext ('2d');
+const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
 type: 'bar',
 data: {
@@ -3685,7 +3716,7 @@ borderwidth: 1
 });
 6. Line Chart:
 javascript code
-const ctx = document. getElementByld ('myChart'). getContext ('2d');
+const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
 type: 'line1,
 data: {
@@ -3715,7 +3746,7 @@ const options = {
 title : 'My Daily Activities',
 pieHole : 0.4,
 };
-const chart = new google . visualization . PieChart ( document. getElementByld ('donutchart')) ;
+const chart = new google . visualization . PieChart ( document. getElementById ('donutchart')) ;
 chart. draw ( data, options );
 8. Area Chart:
 javascript code
@@ -3734,7 +3765,7 @@ title: 'Company Performance',
 curveType: 'function',
 legend : {position : 'bottom'}
 };
-const chart = new google . visualization . AreaChart ( document. getElementByld ('curve_chart'));
+const chart = new google . visualization . AreaChart ( document. getElementById ('curve_chart'));
 chart. draw ( data, options );
 D3 . js Examples :
 9. Create SVG Circle :
@@ -3764,13 +3795,13 @@ svg . append ('rect*)
 Canvas Examples:
 1. Draw a Rectangle :
 javascript code
-const canvas = document. getElementByld ('myCanvas');
+const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d') ;
 ctx . fillstyle = 'blue';
 ctx . fillRect (10,10,100, 50 );
 2. Draw a Circle :
 javascript code
-const canvas = document. getElementByld ('myCanvas');
+const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d');
 ctx . beginPath ();
 ctx . arc ( 100,100, 50, 0, Math .PI * 2 );
@@ -3788,7 +3819,7 @@ Plotly . newPlot ('myDiv', data) ;
 Chart. js Examples :
 5. Create a Bar Chart:
 javascript code
-const ctx = document. getElementByld ('myChart'). getContext ('2d');
+const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
 type: 'bar',
 data: {
@@ -3807,7 +3838,7 @@ borderwidth: 1
 });
 6. Create a Line Chart:
 javascript code
-const ctx = document. getElementByld ('myChart'). getContext ('2d');
+const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
 type: 'line1,
 data: {
@@ -3838,7 +3869,7 @@ const options = {
 title : 'My Daily Activities',
 pieHole : 0.4,
 };
-const chart = new google . visualization . PieChart ( document. getElementByld ('donutchart')) ;
+const chart = new google . visualization . PieChart ( document. getElementById ('donutchart')) ;
 chart. draw ( data, options );
 8. Create an Area Chart:
 javascript code
@@ -3857,7 +3888,7 @@ title: 'Company Performance',
 curveType: 'function',
 legend : {position : 'bottom'}
 };
-const chart = new google . visualization . AreaChart ( document. getElementByld ('curve_chart'));
+const chart = new google . visualization . AreaChart ( document. getElementById ('curve_chart'));
 chart. draw ( data, options );
 D3 . js Examples :
 9. Create an SVG Circle :
@@ -4003,7 +4034,7 @@ document. body. appendchild (newElement);
 18.
 Add Event Listener to Button Click :
 javascript code
-let button = document. getElementByld ('myButton') ;
+let button = document. getElementById ('myButton') ;
 button . addEventListener ('click', () = > {
 console . log ('Button clicked !');
 Regular Expressions:
@@ -4961,11 +4992,11 @@ javascript code
 const paragraph = document, createElement ('p');
 paragraph . textcontent = 'This is a new paragraph';
 // Append the paragraph to an existing element with id 'container'
-const container = document, getElementByld (‘container’);
+const container = document, getElementById (‘container’);
 container. appendchild (paragraph );
 2. Adding Event Listeners :
 javascript code
-const button = document. getElementByld ('myButton');
+const button = document. getElementById ('myButton');
 button . addEventListener ('click', () = > {
 console . log ('Button clicked');
 });
@@ -4979,13 +5010,13 @@ box . style . backgroundcolor = 'lightblue';
 });
 4. Removing Elements from the DOM ;
 javascript code
-const elementToRemove = document. getElementByld (’elementToRemove');
+const elementToRemove = document. getElementById (’elementToRemove');
 if (elementToRemove ) {
 elementToRemove . remove ();
 Advanced Event Handling:
 5. Delegating Events using Event Bubbling:
 javascript code
-const list = document. getElementByld ('myList1);
+const list = document. getElementById ('myList1);
 list. addEventListener ('click', (event) = > {
 if ( event. target. tagName = = = 'Ll') {
 console . log ( ' Clicked on list item : $ {event. target. textContent}' );
@@ -5002,11 +5033,11 @@ console . log ( ' Custom event triggered with data : $ {event. detail}' );
 DOM Content Manipulation:
 7. Changing Inner HTML of Elements :
 javascript code
-const element = document. getElementByld ('myElement1);
+const element = document. getElementById ('myElement1);
 element. innerHTML = '<strong>New HTML content< / strong>‘;
 8. Working with Forms and Input Elements :
 javascript code
-const form = document. getElementByld (’myForm’) ;
+const form = document. getElementById (’myForm’) ;
 form . addEventListener (’submit’, ( event) = > {
 event. preventDefault ();
 const formData = new FormData ( event. target);
@@ -5017,23 +5048,22 @@ These JavaScript snippets demonstrate advanced techniques for interacting with t
 elements, event handling, manipulation, traversal, form interactions, and custom event creation .
 Input Event Handling:
 1. Input Event for Live Character Count:
-javascript code
-const inputField = document. getElementByld ('textlnput');
-const charCount = document. getElementByld ('charCount1) ;
-inputField . addEventListener ('input', () = > {
-charCount. textContent = " Character count: $ {inputField . value . length}';
+const inputField = document.getElementById('textlnput');
+const charCount = document.getElementById('charCount1) ;
+inputField.addEventListener ('input', () = > {
+charCount.textContent = "Character count: ${inputField.value.length}';
 });
-2. Detecting Changes in Input Fields :
-javascript code
-const inputField = document. getElementByld ('textinput');
+2. Detecting Changes in Input Fields:
+
+const inputField = document. getElementById ('textinput');
 inputField . addEventListener ('change', ( event) = > {
 console . log ( ' Input value changed to : $ {event. target. value}' );
 });
 Form Validation and Submission:
 3. Real - time Password Strength Checker :
-javascript code
-const passwordField = document. getElementByld ('password');
-const strengthindicator = document. getElementByld ('passwordStrength');
+
+const passwordField = document. getElementById ('password');
+const strengthindicator = document. getElementById ('passwordStrength');
 passwordField . addEventListener ('input', () = > {
 const password = passwordField . value;
 let strength =
@@ -5042,33 +5072,32 @@ let strength =
 strengthindicator. textContent = ' Password Strength : $ {strength}';
 });
 4. Form Submission with Validation:
-javascript code
-const form = document. getElementByld ('myForm');
-const emailField = document. getElementByld ('email');
+const form = document. getElementById ('myForm');
+const emailField = document. getElementById ('email');
 form . addEventListener ('submit', ( event) = > {
 event, preventDefault ();
 // Validate the email input before submission
-if (• validateEmail ( emailField . value )) {
-console . error ('Invalid email address');
+if (• validateEmail(emailField.value)) {
+console.error('Invalid email address');
 return;
 // Form is valid, proceed with submission
-form . submit ();
+form.submit();
 });
-function validateEmail ( email) {
+function validateEmail(email) {
 // Regular expression or other validation logic for email validation
 return / \S + @\S + \ . \S +/. test (email);
 Advanced Input Handling:
 5. Using Range Input for Dynamic UI Updates :
-javascript code
-const rangeinput = document. getElementByld ('rangeSlider');
-const valueDisplay = document. getElementByld ('rangeValue');
+
+const rangeinput = document. getElementById ('rangeSlider');
+const valueDisplay = document. getElementById ('rangeValue');
 rangeinput. addEventListener ('input', () = > {
 valueDisplay. textcontent = 'Value: $ {rangeinput. value}';
 // Update UI based on range input value changes
 });
 6. Input Masking for Phone Number Input:
-javascript code
-const phoneinput = document. getElementByld ('phoneNumber');
+
+const phoneinput = document. getElementById ('phoneNumber');
 phoneinput. addEventListener ('input', () = > {
 let value = phoneinput. value . replace (/ \D / g,");
 value = value . slice ( 0,10 ); // Limit to 10 digits for a phone number
@@ -5078,43 +5107,43 @@ These JavaScript snippets demonstrate input event handling, form validation, rea
 changes, and advanced input manipulation like input masking and range input handling in HTML forms .
 DOM Object Creation and Manipulation :
 1. Creating and Appending a New Image Element:
-javascript code
+
 const image = document. createElement ('img');
-image . src = 'path / to / image . jpg';
-image . alt = 'Image Description';
-const container = document. getElementByld ( 'imageContainer') ;
+image.src = 'path / to / image . jpg';
+image.alt = 'Image Description';
+const container = document. getElementById ( 'imageContainer') ;
 container. appendChild (image );
 2. Adding a New Option to Select Element:
-javascript code
-const select = document. getElementByld ('mySelect');
+
+const select = document. getElementById ('mySelect');
 const option = document. createElement ('option');
-option . value = 'value 1';
-option . text = 'Option Text';
-select. appendChild (option);
+option.value = 'value 1';
+option.text = 'Option Text';
+select.appendChild (option);
 Advanced Object Manipulation:
-3. Setting Custom Attributes to HTML Elements :
-javascript code
-const element = document. getElementByld ('myElement');
-element. setAttribute ('data - custom', 'customValue') ;
+3. Setting Custom Attributes to HTML Elements:
+
+const element = document.getElementById('myElement');
+element.setAttribute ('data - custom', 'customValue') ;
 4. Removing Specific Attribute from an Element:
-javascript code
-const element = document. getElementByld ('myElement');
+
+const element = document. getElementById('myElement');
 element. removeAttribute ('data - custom');
 Styling HTML Objects:
 5. Modifying CSS Properties of an Element:
-javascript code
-const element = document. getElementByld ('myElement');
+
+const element = document. getElementById ('myElement');
 element. style . backgroundcolor = 'blue';
 element. style . color = 'white';
 6. Adding and Removing CSS Classes :
-javascript code
-const element = document. getElementByld ('myElement');
+
+const element = document. getElementById ('myElement');
 element. classList. add ('newClass');
 element. classList. remove ('oldClass');
 Event Handling and Interaction:
-7. Creating and Handling Mouse Hover Effects :
-javascript code
-const element = document. getElementByld ('myElement');
+7. Creating and Handling Mouse Hover Effects:
+
+const element = document. getElementById ('myElement');
 element. addEventListener ('mouseenter', () = > {
 element. style . backgroundcolor = 'red';
 });
@@ -5122,31 +5151,31 @@ element. addEventListener ('mouseleave', () = > {
 element. style . backgroundcolor = 'blue';
 });
 8. Triggering Click Event Programmatically:
-javascript code
-const button = document. getElementByld ('myButton');
+
+const button = document. getElementById ('myButton');
 button . click (); // Triggering click event on the button element
 Advanced Content Manipulation:
-9. Setting HTML Content Using InnerHTML :
-javascript code
-const element = document. getElementByld ('myElement');
+9. Setting HTML Content Using InnerHTML:
+
+const element = document. getElementById ('myElement');
 element. innerHTML = '<strong>New HTML Content< / strong>’;
 10.
 Appending Text Node to an Element:
-javascript code
-const element = document. getElementByld ('myElement');
+
+const element = document. getElementById ('myElement');
 const textNode = document. createTextNode ('Text Content1);
 element. appendchild (textNode);
 These JavaScript snippets demonstrate advanced techniques for creating, manipulating, and interacting with HTML
 objects, including DOM creation, object manipulation, styling, event handling, and content manipulation .
 Event Handling:
 1. Keyboard Event Handling - Key Press :
-javascript code
+
 document. addEventListener ('keypress1, ( event) = > {
 console . log ( ' Key pressed : $ {event. key}' );
 });
 2. Handling Focus Events - Input Focus and Blur:
-javascript code
-const inputField = document. getElementByld ('mylnput') ;
+
+const inputField = document. getElementById ('mylnput') ;
 inputField . addEventListener (’focus1, () = > {
 console . log ('Input field focused1);
 });
@@ -5155,40 +5184,40 @@ console . log ('Input field blurred') ;
 });
 Event Delegation and Bubbling:
 3. Event Delegation with Click Events :
-javascript code
-const list = document. getElementByld ('myList');
+
+const list = document. getElementById ('myList');
 list, addEventListener ('click', (event) = > {
 if ( event. target. tagName = = = 'Ll') {
 console . log ( ' Clicked on list item : $ {event. target. textContent]' );
 });
 4. Event Bubbling - Click Event on Parent Element:
-javascript code
-const parent = document. getElementByld ('parentElement') ;
+
+const parent = document. getElementById ('parentElement') ;
 parent. addEventListener ('click', (event) = > {
 console . log ( ' Clicked on parent element “ ) ;
 });
 Window and Document Events :
 5. Window Load Event:
-javascript code
+
 window . addEventListener ('load', () = > {
 console . log ('Page fully loaded1);
 });
 6. Document Ready Event ( DOMContentLoaded):
-javascript code
+
 document. addEventListener ('DOMContentLoaded', () = > {
 console . log ('DOM fully loaded and parsed');
 });
 Form Events:
-7. Form Submission and Preventing Default Behavior :
-javascript code
-const form = document. getElementByld ('myForm') ;
+7. Form Submission and Preventing Default Behavior:
+
+const form = document. getElementById ('myForm') ;
 form . addEventListener ('submit', ( event) = > {
 event. preventDefault ();
 console . log ('Form submitted') ;
 // Perform form data handling or validation
 8. Input Event for Real - time Validation:
-javascript code
-const emailField = document. getElementByld ('email');
+
+const emailField = document. getElementById ('email');
 emailField . addEventListener ('input', () = > {
 if (! emailField . validity. valid) {
 emailField . setCustomValidity ('Enter a valid email address');
@@ -5200,53 +5229,53 @@ events, event delegation, bubbling, window and document events, and form - relat
 validation.
 Browser Object Model (BOM) Manipulation :
 1. Opening a New Browser Window:
-javascript code
-const openWindowButton = document. getElementByld ('openWindowButton');
+
+const openWindowButton = document. getElementById ('openWindowButton');
 openWindowButton . addEventListener ('click', () = > {
 window . open ('https :// example . com', '.blank', 'width = 5 00,height = 500');
 });
 2. Closing a Browser Window:
-javascript code
-const closeWindowButton = document. getElementByld ('closeWindowButton');
+
+const closeWindowButton = document. getElementById ('closeWindowButton');
 closeWindowButton . addEventListener ( click', () = > {
 window . close ();
 });
 Navigator Object Exploration:
 3. Accessing Browser Information :
-javascript code
-console . log ( ' Browser name : $ {navigator. appName}' );
-console . log ( s Browser version : $ {navigator. appVersion}' );
-console . log ( ' User Agent: $ {navigator. user Agent}' );
-console . log ( " Language : $ {navigator. language}' );
+
+console . log (' Browser name: ${navigator.appName}' );
+console . log (s Browser version: ${navigator.appVersion}' );
+console . log (' User Agent: ${navigator.user Agent}' );
+console . log (" Language: ${navigator.language}' );
 4. Checking Geolocation Availability :
-javascript code
+
 if ('geolocation' in navigator) {
-console . log ('Geolocation is supported');
+console.log('Geolocation is supported');
 } else {
-console . log ('Geolocation is not supported');
+console.log('Geolocation is not supported');
 }
 Location Object Manipulation:
-5. Redirecting to Another Page :
-javascript code
-function redirectToPage () {
-window . location . href = ’https :// example . com';
-6. Accessing Current URL Information :
-javascript code
-console . log ( ' Current URL : $ {window . location . href}' );
-console . log ( ' Hostname : $ {window . location . hostname}' );
-console . log ( ' Protocol: $ {window . location . protocol}' );
-console . log ( ' Pathname : $ {window . location . pathname}' );
+5. Redirecting to Another Page:
+
+function redirectToPage() {
+window.location.href = 'https://example.com';
+6. Accessing Current URL Information:
+
+console.log(`Current URL: ${window.location.href}`);
+console.log(`Hostname: ${window.location.hostname}`);
+console.log(`Protocol: ${window.location.protocol}`);
+console.log(`Pathname: ${window. location.pathname}`);
 Screen Object Attributes:
-7. Retrieving Screen Dimensions :
-javascript code
-console . log ( ' Screen width : $ {window . screen . width}' );
-console . log ( ' Screen height: $ {window . screen . height}' ) ;
+7. Retrieving Screen Dimensions:
+
+console.log( ' Screen width : $ {window . screen . width}' );
+console.log( ' Screen height: $ {window . screen . height}' ) ;
 8. Opening in Full Screen Mode :
-javascript code
-const fullScreenButton = document. getElementByld ( ’fullScreenButton’);
+
+const fullScreenButton = document. getElementById ( ’fullScreenButton’);
 fullScreenButton . addEventListener (’click’, () = > {
-if ( document. fullscreenEnabled) {
-document. documentElement. requestFullscreen ();
+if (document.fullscreenEnabled) {
+document.documentElement.requestFullscreen();
 These JavaScript snippets showcase browser manipulation using the Browser Object Model (BOM), exploring
 navigator and location objects, screen attributes, opening / closing windows, accessing browser information,
 geolocation availability, URL manipulation, and full - screen mode functionality .
@@ -5255,28 +5284,28 @@ JavaScript is an interpreted programming language that runs in web browsers . As
 to be installed, you don't install JavaScript itself; instead, you work with JavaScript within environments that support
 its execution, such as web browsers and server - side platforms like Node . js .
 Setting Up Visual Studio Code for JavaScript Development:
-1 . Download and Install Visual Studio Code :
+1. Download and Install Visual Studio Code:
 Visit the Visual Studio Code website and download the installer for your operating system. Run the installer and
 follow the installation instructions .
-2 . Install Node . js ( Optional but Recommended for Development):
+2. Install Node.js ( ptional but Recommended for Development):
 Node.js is a JavaScript runtime environment that allows executing JavaScript outside a web browser. You can
 download Node . js from the official website, install it, and it will include the Node Package Manager ( npm) with it.
 This is useful for running JavaScript programs locally and managing dependencies .
-3 . Install Visual Studio Code Extensions :
+3. Install Visual Studio Code Extensions:
 .
 JavaScript (ES6 ) Code Snippets : Provides handy code snippets for JavaScript development. Search for
 it in the Extensions tab in VS Code and install it.
 .
 Prettier - Code formatter : For auto - formatting your code according to predefined rules . It's optional
 but highly recommended.
-4 . Create a JavaScript Project:
-. Open Visual Studio Code .
+4. Create a JavaScript Project:
+. Open Visual Studio Code.
 .
 Create a new folder for your project or open an existing one .
 .
 Inside the folder, create a new JavaScript file with the . js extension . Right - click in the Explorer panel >
 New File > script. js .
-5 . Writing and Running JavaScript Code :
+5. Writing and Running JavaScript Code:
 .
 Write your JavaScript code in the script. js file .
 .
@@ -5287,7 +5316,7 @@ node script. js
 .
 To execute JavaScript code in a browser, create an HTML file (index . html) and link your JavaScript file
 in it using the < script> tag . Open the HTML file in your preferred web browser .
-6 . Debugging JavaScript:
+6. Debugging JavaScript:
 • Visual Studio Code has a powerful built - in debugger . You can set breakpoints in your code, inspect
 variables, and step through your code execution line by line .
 . To use the debugger, add breakpoints by clicking in the margin next to your code line numbers . Then,
@@ -5373,7 +5402,8 @@ variablel = variable2;
 variable2 = temp;
 console.log(
   `After swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
-);</pre>
+);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js6">6. Solve Quadratic Equation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9492,13 +9522,13 @@ function isPrime(number) {
     return false;
   }
   for (let i = 2; i < = Math.sqrt(number); i++) {
-    if (number % i = = = 0) {
+    if (number % i === 0) {
       return false;
     }
     return true;
   function isPerfectSquare(number) {
 const sqrt = Math.sqrt(number);
-return sqrt = = = Math.floor(sqrt);
+return sqrt === Math.floor(sqrt);
 function isFibonacciPrime(number) {
 return isPrime(number) && isPerfectSquare(5 &ast; Math.pow(number, 2) + 4) || isPerfectSquare(5 &ast; Math.pow(number, 2)
 -4);
@@ -9520,7 +9550,7 @@ function isSquarefulNumber(number) {
 const factors = getFactors(number);
 const uniqueFactors = &lbrack;...new Set(factors)&rbrack;;
 for (const factor of uniqueFactors) {
-const count = factors.filter((num) => num = = = factor).length;
+const count = factors.filter((num) => num === factor).length;
 if (count % 2 !== 0) {
 return false;
 }
@@ -9529,7 +9559,7 @@ return true;
 function getFactors(number) {
 const factors = &lbrack;&rbrack;;
 for (let i = 1; i < = Math.sqrt(number); i++) {
-if (number % i = = = 0) {
+if (number % i === 0) {
 factors.push(i);
 if (i !== Math.sqrt(number)) {
 factors.push(number / i);
@@ -9612,7 +9642,7 @@ const digitSum = (n) => n.toString().split(").reduce((acc, digit) => acc + parse
 const primeFactorization = (n) = > {
 const factors = &lbrack;&rbrack;;
 for (let i = 2;i<=n;i++){
-while (n % i = = = 0) {
+while (n % i === 0) {
 factors.push(i);
 n/= i;
 }
@@ -9622,7 +9652,7 @@ return factors;
 const factors = primeFactorization(number);
 const sumOfDigits = factors.reduce((acc, factor) = > acc + digitSum(factor), 0);
 // Check if the sum of digits of prime factors equals the original number
-return sumOfDigits = = = digitSum(number);
+return sumOfDigits === digitSum(number);
 // Example: Check if 22 is a Smith-Morra Gambit Number
 console Jog(isSmithMorraGambitNumber(22)); // Output: true
 </pre>
@@ -9634,7 +9664,7 @@ console Jog(isSmithMorraGambitNumber(22)); // Output: true
 function getProperDivisorsSum(number) {
 let sum = 1; // Start with 1 as every number is divisible by 1
 for (let i = 2; i < = Math.sqrt(number); i++) {
-if (number % i = = = 0) {
+if (number % i === 0) {
 sum + = i;
 if (i !== number / i) {
 sum + = number / i;
@@ -9976,7 +10006,7 @@ function runQuiz() {
     }
     const userAnswerlndex = prompt("Enter the number of your answer:");
     const user Answer = question.options&lbrack;user Answerindex -1&rbrack;;
-    if (userAnswer = = = question.correctAnswer) {
+    if (userAnswer === question.correctAnswer) {
       console.log("Correct!\n");
       score++;
     } else {
@@ -10010,7 +10040,7 @@ function textRPGAdventure() {
       console.log("You exit the adventure. Goodbye!");
       break;
     }
-    currentchoice = choices.findlndex(choice => choice.next = = = userChoice.toLowerCase());
+    currentchoice = choices.findlndex(choice => choice.next === userChoice.toLowerCase());
     if (currentchoice === -1) {
       console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
     }
@@ -10175,7 +10205,7 @@ function hangmanGame() {
     } else {
       console.log("Incorrect guess. Try again.");
       remainingAttempts--;
-      if (remainingAttempts = = = 0) {
+      if (remainingAttempts === 0) {
         console.log(`Out of attempts. The word was: ${selectedWord}`);
       }
     }
@@ -10337,7 +10367,7 @@ function coinTossingGame() {
     }
     const coinResult = coinSides&lbrack;Math.floor(Math.random() &ast; 2)&rbrack;;
     console.log(`Coin toss result: ${coinResult}`);
-    if (playerGuess = = = coinResult.toLowerCaseO) {
+    if (playerGuess === coinResult.toLowerCaseO) {
       console.log("Correct guess! Well done!");
       correctGuesses++;
     } else {
@@ -10392,7 +10422,7 @@ function mathQuizGame() {
     const num2 = Math.floor(Math.random() &ast; 10) + 1;
     const correctAnswer = numl + num2;
     const userAnswer = parselnt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
-    if (’isNaN(userAnswer) && userAnswer = = = correctAnswer) {
+    if (’isNaN(userAnswer) && userAnswer === correctAnswer) {
       console.log("Correct! Well done!");
       score++;
     } else {
@@ -10495,8 +10525,8 @@ function countryCapitalQuizGame() {
   console.log("Match the country with its capital:");
   for (const {country, capital} of countryCapitalPairs) {
     console.log(' \nCountry: ${country}');
-    const userCapital = prompt(' Enter the capital of ${country}:' ).trim();
-    if (userCapital.toLowerCaseQ = = = capital.toLowerCaseO) {
+    const userCapital = prompt(`Enter the capital of ${country}:` ).trim();
+    if (userCapital.toLowerCaseQ === capital.toLowerCaseO) {
       console.log("Correct! Well done!");
       score++;
     } else {
@@ -10594,7 +10624,7 @@ function shoppingListProgram() {
   while (true) {
     const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, or 'view' 
       to see your shopping list. Type 'exit' to end the program:").toLowerCase();
-    if (action = = = "exit") {
+    if (action === "exit") {
       console.log("Exiting the Shopping List Program. Goodbye!");
       break;
     }
@@ -10602,29 +10632,29 @@ function shoppingListProgram() {
       case "add":
         const newltem = prompt("Enter the item you want to add:");
         shoppingList.push(newItem);
-        console.log(' ${newltem} added to your shopping list.');
+        console.log(`${newltem} added to your shopping list.`);
         break;
       case "remove":
         if (shoppingList.length = = = 0) {
-          console.logC'Your shopping list is empty. Nothing to remove.");
+          console.log("Your shopping list is empty. Nothing to remove.");
         } else {
           const itemToRemove = prompt("Enter the item you want to remove:");
           const indexTo Remove = shoppingList.indexOf(itemToRemove);
           if (indexToRemove !== -1) {
             shoppingList.splice(indexTo Remove, 1);
-            console.log('${itemToRemove} removed from your shopping list.');
+            console.log(`${itemToRemove} removed from your shopping list.`);
           } else {
-            console.log('${itemToRemove} not found in your shopping list.');
+            console.log(`${itemToRemove} not found in your shopping list.`);
           }
         }
         break;
       case "view":
-        if (shoppingList.length = = = 0) {
-          console.logC'Your shopping list is empty.");
+        if (shoppingList.length === 0) {
+          console.log("Your shopping list is empty.");
         } else {
-          console.logC'Your Shopping List:");
+          console.log("Your Shopping List:");
           for (const item of shoppingList) {
-            console.log(' - ${item}');
+            console.log(` - ${item}`);
           }
         }
         break;
@@ -10854,14 +10884,14 @@ function simplifyAbsolutePath(path) {
   const parts = path.split('/');
   const simplifiedParts = &lbrack;&rbrack;;
   for (const part of parts) {
-    if (part = = ='..'){
+    if (part === '..'){
       simplifiedParts.pop(); // Move up one level for '..'
    } else if (part!== " && part !=='.'){
       simplifiedParts.push(part);
    }
   }
   const simplifiedPath = '/' + simplifiedParts.join('/');
-  console.log(`Original Absolute Path:${path}`);
+  console.log(`Original Absolute Path: ${path}`);
   console.log(`Simplified Absolute Path: ${simplifiedPath}`);
 }
 // Example: Simplify an absolute path
