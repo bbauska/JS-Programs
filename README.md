@@ -1266,8 +1266,8 @@ where keys can be any type.</p>
 <h3>Examples of JS Maps:</h3>
 <h4>Creating a Map:</h4>
 <pre>
-let myMap = new Map ();
-myMap.set('keyl', 'valuel1);
+let myMap = new Map();
+myMap.set('keyl', 'value1');
 myMap.set('key2', 'value2');
 </pre>
 <h4>Iterating Over a Map:</h4>
@@ -1279,36 +1279,78 @@ for (let [key, value] of myMap) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex45">45. JS Typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The typeof operator in JavaScript returns the data type of its operand .
-Examples of JS Typeof:
-Using typeof:
-console . log (typeof 5 ); // Output: 'number'
-console . log (typeof'Hello'); // Output: 'string'
-console . log (typeof true ); // Output: 'boolean'
+<p>The <span class="consolas">typeof operator</span> in JavaScript returns the data type 
+of its operand.</p>
+<h3>Examples of JS Typeof:</h3>
+<h4>Using typeof:</h4>
+<pre>
+console.log(typeof 5); // Output: 'number'
+console.log(typeof 'Hello'); // Output: 'string'
+console.log(typeof true); // Output: 'boolean'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex46">46. JS Type Conversion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Type conversion in JavaScript involves converting values from one data type to another .
-Examples of JS Type Conversion:
-String to Number:
-
+<p><span class="consolas">Type conversion</span> in JavaScript involves converting values 
+from one data type to another.</p>
+<h3>Examples of JS Type Conversion:</h3>
+<h4>String to Number:</h4>
+<pre>
 let strNumber = '10';
 let num = parseInt(strNumber);
-Number to String:
-
+</pre>
+<h4>Number to String:</h4>
+<pre>
 let number = 15;
-let str = number. toString();
+let str = number.toString(); // Output: '15'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex47">47. JS Bitwise</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Bitwise operators in JavaScript perform operations on the binary representations of numeric values .
-Examples of JS Bitwise :
-Bitwise AND Operator:
-
+<p>The <span class="consolas">bitwise AND (&)</span> operator returns a number or BigInt 
+whose binary representation has a 1 in each bit position for which the corresponding bits 
+of both operands are 1.</p>
+<p>The <span class="consolas">bitwise NOT (~)</span> operator returns a number or BigInt 
+whose binary representation has a 1 in each bit position for which the corresponding bit 
+of the operand is 0, and a 0 otherwise.</p>
+<p>The <span class="consolas">bitwise OR (|)</span> operator returns a number or BigInt 
+whose binary representation has a 1 in each bit position for which the corresponding bits 
+of either or both operands are 1.</p>
+<p>The <span class="consolas">bitwise XOR (^)</span> operator returns a number or BigInt 
+whose binary representation has a 1 in each bit position for which the corresponding bits 
+of either but not both operands are 1.</p>
+<h3>Examples of JS Bitwise:</h3>
+<h4>Bitwise AND Operator (&):</h4>
+<pre>
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+console.log(a & b); // 00000000000000000000000000000001
 let result = 5 & 3; // Output: 1
-Bitwise OR Operator:
-
+</pre>
+<h4>Bitwise NOT Operator (~):</h4>
+<pre>
+const a = 5; // 00000000000000000000000000000101
+const b = -3; // 11111111111111111111111111111101
+console.log(~a); // 11111111111111111111111111111010
+// Expected output: -6
+console.log(~b); // 00000000000000000000000000000010
+// Expected output: 2
+</pre>
+<h4>Bitwise OR Operator (|):</h4>
+<pre>
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+console.log(a | b); // 00000000000000000000000000000111
 let result = 5 | 3; // Output: 7
+</pre>
+<h4>Bitwise XOR Operator (^):</h4>
+<pre>
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a ^ b); // 00000000000000000000000000000110
+let result = 5 ^ 3; // Output: 6
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex48">48. JS RegExp</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
