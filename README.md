@@ -1354,165 +1354,175 @@ let result = 5 ^ 3; // Output: 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex48">48. JS RegExp</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Regular expressions in JavaScript are used for pattern matching within strings .
-Examples of JS RegExp :
-Creating a Regular Expression :
-
-let pattern = / hello / i; // Case - insensitive 'hello'
-Testing a String with RegExp :
-
+<p>Regular expressions in JavaScript are used for pattern matching within strings.</p>
+<h3>Examples of JS RegExp:</h3>
+<h4>Creating a Regular Expression:</h4>
+<pre>let pattern = / hello / i; // Case - insensitive 'hello'</pre>
+<h4>Testing a String with RegExp:</h4>
+<pre>
 let str = 'Hello, World ! ';
-console . log (pattern . test ( str)); // Output: true
+console.log(pattern.test(str)); // Output: true
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex49">49. JS Precedence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Operator precedence in JavaScript determines the order of operations in an expression .
-Examples of JS Precedence :
-Arithmetic Precedence:
-
-let result = 5 + 3*2;// Output: 11 (Multiplication has higher precedence )
+<p>Operator precedence in JavaScript determines the order of operations in an expression.</p>
+<h3>Examples of JS Precedence:</h3>
+<h4>Arithmetic Precedence:</h4>
+<pre>let result = 5 + 3 &ast; 2; // Output: 11 (Multiplication has higher precedence )</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex50">50. JS Errors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Errors in JavaScript can be generated when an incorrect code is encountered during execution .
-Examples of JS Errors :
-Syntax Error:
-
-letx = 10
-This will throw a syntax error due to the missing semicolon .
-Reference Error:
-
-console . log (undefinedVariable );
-This will throw a reference error as undefinedVariable is not defined .
+<p>Errors in JavaScript can be generated when an incorrect code is encountered during execution.</p>
+<h3>Examples of JS Errors:</h3>
+<h4>Syntax Error:</h4>
+<pre>let x = 10</pre>
+<p>This will throw a syntax error due to the missing semicolon.</p>
+<h4>Reference Error:</h4>
+<pre>console.log(undefinedVariable);</pre>
+<p>This will throw a reference error as undefinedVariable is not defined.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex51">51. JS Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Scope in JavaScript defines the visibility and accessibility of variables .
-Examples of JS Scope :
-Global Scope:
-
-let globalVar = 'I am global1;
-function test () {
-console . log (globalVar); // Accessible inside function
+<p>Scope in JavaScript defines the visibility and accessibility of variables.</p>
+<h3>Examples of JS Scope:</h3>
+<h4>Global Scope:</h4>
+<pre>
+let globalVar = 'I am global';
+function test() {
+  console.log (globalVar); // Accessible inside function
 }
-console . log ( globalVar ); // Accessible outside function
+console.log(globalVar); // Accessible outside function
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex52">52. JS Hoisting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Hoisting in JavaScript allows variables and functions to be used before they are declared .
-Examples of JS Hoisting :
-Variable Hoisting:
-
-console . log ( myVar); // Outputs : undefined
-varmyVar =10;
+<p>Hoisting in JavaScript allows variables and functions to be used before they are declared.</p>
+<h3>Examples of JS Hoisting:</h3>
+<h4>Variable Hoisting:</h4>
+<pre>
+console.log(myVar); // Outputs : undefined
+varmyVar = 10;
 Function Hoisting:
-
-sayHello (); // Outputs : 'Hello'
-function sayHello () {
-console . log ('Hello');
+sayHello(); // Outputs : 'Hello'
+function sayHello() {
+  console.log('Hello');
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex53">53. JS Strict Mode</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Strict mode in JavaScript enforces stricter rules and better error handling .
-Examples of JS Strict Mode :
-Enabling Strict Mode:
-
-'use strict’;
-Using Strict Mode Inside a Function :
-
-function myFunction () {
-'use strict1;
-// Strict mode only applies inside this function
+<p>Strict mode in JavaScript enforces stricter rules and better error handling.</p>
+<h3>Examples of JS Strict Mode:</h3>
+<h4>Enabling Strict Mode:</h4>
+<pre>'use strict’;</pre>
+<h4>Using Strict Mode Inside a Function:</h4>
+<pre>
+function myFunction() {
+  'use strict';
+  // Strict mode only applies inside this function
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex54">54. JS this Keyword</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The this keyword in JavaScript refers to the object it belongs to .
-Examples of JS this Keyword:
-Using this in an Object:
-
+<p>The this keyword in JavaScript refers to the object it belongs to.</p>
+<h3>Examples of JS this Keyword:</h3>
+<h4>Using this in an Object:</h4>
+<pre>
 let person = {
-name : 'Alice',
-greet: function () {
-console . log ('Hello, my name is ’ + this . name );
-}
+  name: 'Alice',
+  greet: function () {
+    console.log('Hello, my name is ' + this.name);
+  }
 };
-person . greet (); // Outputs : 'Hello, my name is Alice'
+person.greet(); // Outputs : 'Hello, my name is Alice'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex55">55. JS Arrow Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Arrow functions in JavaScript provide a concise syntax for writing functions .
-Examples of JS Arrow Function :
-Basic Arrow Function:
-
-let multiply = (a, b)=>a * b;
-Arrow Function with Multiple Lines :
-
+<p>Arrow functions in JavaScript provide a concise syntax for writing functions.</p>
+<h3>Examples of JS Arrow Function:</h3>
+<h4>Basic Arrow Function:</h4>
+<pre>let multiply = (a, b) => a &ast; b;</pre>
+<h4>Arrow Function with Multiple Lines:</h4>
+<pre>
 let greet = (name ) = > {
-return 'Hello,1 + name + '!
+  return 'Hello, ' + name + '!'
 };
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex56">56. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Classes in JavaScript provide a way to create objects using a blueprint.
-Examples of JS Classes :
-Class Declaration:
-
+<p>Classes in JavaScript provide a way to create objects using a blueprint.</p>
+<h3>Examples of JS Classes:</h3>
+<h4>Class Declaration:</h4>
+<pre>
 class Person {
-constructor ( name ) {
-this . name = name;
-greet () {
-console . log ('Hello, my name is ' + this . name );
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log('Hello, my name is ' + this.name);
+  }
 }
-let alice = new Person ('Alice') ;
-alice . greet (); // Outputs : 'Hello, my name is Alice'
+let alice = new Person('Alice');
+alice.greet(); // Outputs : 'Hello, my name is Alice'
+</pre>
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex57">57. JS Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Modules in JavaScript allow splitting code into separate files or modules for better organization .
-Examples of JS Modules :
-Exporting a Module:
-
-// Module. js
-export function greet ( name) {
-console . log ('Hello,' + name + '!');
+<p>Modules in JavaScript allow splitting code into separate files or modules for better 
+organization.</p>
+<h3>Examples of JS Modules:</h3>
+<h4>Exporting a Module:</h4>
+<pre>
+// Module.js
+export function greet(name) {
+  console.log('Hello,' + name + '!');
 }
-Importing a Module:
-
-// Main. js
-import {greet} from'./ Module . js';
-greet ( Alice'); // Outputs : 'Hello, Alice !'
+</pre>
+<h4>Importing a Module:</h4>
+<pre>
+// Main.js
+import {greet} from './Module.js';
+greet('Alice'); // Outputs : 'Hello, Alice !'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex58">58. JS JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JSON (JavaScript Object Notation ) is a lightweight data interchange format.
-Examples of JS JSON:
-Parsing JSON:
-
-letjsonStr = '{" name Alice ", "age": 30}';
-let obj = JSON . parse (jsonStr);
-console . log ( obj. name ); // Output: 'Alice'
-Stringify Object to JSON:
-
-letobj = {name: Alice',age: 30};
-let jsonString = JSON . stringify ( obj);
+<p>JSON (JavaScript Object Notation ) is a lightweight data interchange format.</p>
+<h3>Examples of JS JSON:</h3>
+<h4>Parsing JSON:</h4>
+<pre>
+let jsonStr = '{"name":" Alice", "age": 30}';
+let obj = JSON.parse (jsonStr);
+console.log(obj.name); // Output: 'Alice'
+</pre>
+<h4>Stringify Object to JSON:</h4>
+<pre>
+let obj = {name: 'Alice',age: 30};
+let jsonString = JSON.stringify(obj);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex59">59. JS Debugging</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Debugging in JavaScript involves identifying and fixing errors or issues in the code .
-Examples of JS Debugging :
-Using console . log () for Debugging:
-
-letx = 5;
-console . log (x);
-Using Browser Developer Tools :
-Inspect elements, view console logs, set breakpoints, etc .
+<p>Debugging in JavaScript involves identifying and fixing errors or issues in the code.</p>
+<h3>Examples of JS Debugging:</h3>
+<h4>Using console.log() for Debugging:</h4>
+<pre>
+let x = 5;
+console.log(x);
+</pre>
+<h4>Using Browser Developer Tools:</h4>
+<p>Inspect elements, view console logs, set breakpoints, etc.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex60">60. JS Style Guide</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A JavaScript style guide defines a set of rules and conventions for writing clean and maintainable code .
-Examples of JS Style Guide :
+<p>A JavaScript style guide defines a set of rules and conventions for writing clean 
+and maintainable code.</p>
+<h3>Examples of JS Style Guide:</h3>
 Naming Conventions:
 Use camelCase for variable and function names .
 Indentation:
@@ -1521,74 +1531,77 @@ Use consistent spaces or tabs for indentation .
 <h2 id="ex61">61. JS Best Practices</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Best practices in JavaScript ensure code quality, readability, and maintainability .
-Examples of JS Best Practices :
-Use Meaningful Variable Names :
-
-let d = new Date (); // Instead, use let currentDate = new Date () ;
-Avoid Global Variables:
-Encapsulate code to avoid polluting the global scope .
+<h3>Examples of JS Best Practices:</h3>
+<h4>Use Meaningful Variable Names:</h4>
+<pre>let d = new Date(); // Instead, use let currentDate = new Date();</pre>
+<h4>Avoid Global Variables:</h4>
+<p>Encapsulate code to avoid polluting the global scope.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex62">62. JS Mistakes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Common mistakes in JavaScript and how to avoid them .
-Examples of JS Mistakes :
-Missing Semicolon:
-
-letx = 5
-Remember to add a semicolon at the end of the statement.
-Uninitialized Variables:
-
+<h3>Examples of JS Mistakes:</h3>
+<h4>Missing Semicolon:</h4>
+<pre>let x = 5</pre>
+<p>Remember to add a semicolon at the end of the statement.</p>
+<h4>Uninitialized Variables:</h4>
+<pre>
 let y;
-console . log ( y); // Outputs : undefined
+console.log(y); // Outputs : undefined
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex63">63. JS Performance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Improving performance in JavaScript involves optimizing code for speed and efficiency .
-Examples of JS Performance :
-Reduce DOM Manipulations:
-Combine multiple DOM updates into one to reduce reflows .
-Use Efficient Algorithms:
-Choose algorithms that have better time complexity for operations.
+<p>Improving performance in JavaScript involves optimizing code for speed and efficiency.</p>
+<h3>Examples of JS Performance:</h3>
+<h4>Reduce DOM Manipulations:</h4>
+<p>Combine multiple DOM updates into one to reduce reflows.</p>
+<h4>Use Efficient Algorithms:</h4>
+<p>Choose algorithms that have better time complexity for operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex64">64. JS Reserved Words</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Reserved words in JavaScript have special meanings and cannot be used as identifiers (variable or function names ).
-Examples of JS Reserved Words :
-let, const, function, class t etc .
-This comprehensive guide covers a wide range of JavaScript topics including conditional statements, loops, data
+<p>Reserved words in JavaScript have special meanings and cannot be used as identifiers 
+(variable or function names).</p>
+<h3>Examples of JS Reserved Words:</h3>
+<h4>let, const, function, class, etc.</h4>
+<p>This comprehensive guide covers a wide range of JavaScript topics including conditional statements, loops, data
 structures, type handling, advanced features, error handling, best practices, common mistakes, and performance
-optimization
+optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex65">65. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Objects in JavaScript are collections of key - value pairs . They store data as properties (variables ) and functionality
-as methods (functions ).
-Object Definitions:
-Creating an Object Literally:
-
+<p>Objects in JavaScript are collections of key - value pairs. They store data as properties 
+(variables) and functionality as methods (functions).</p>
+<h3>Object Definitions:</h3>
+<h4>Creating an Object Literally:</h4>
+<pre>
 let person = {
-name : 'Alice',
-age: 30,
-greet: function () {
-return 'Hello, my name is ' + this . name;
+  name: 'Alice',
+  age: 30,
+  greet: function () {
+    return 'Hello, my name is ' + this.name;
+  }
 };
-Using the Object Constructor :
-
-let car = new Object ();
+</pre>
+<h4>Using the Object Constructor:</h4>
+<pre>
+let car = new Object();
 car. brand = 'Toyota';
 car. model = 'Camry';
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex66">66. JS Object Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Properties in JavaScript objects are variables that hold values .
-Object Properties Examples:
-Accessing Object Properties:
-
-console . log (person . name ); // Accessing property 'name'
-Adding or Modifying Properties :
-
-car. color = 'blue'; // Adding property 'color'
-car. model = 'Corolla'; // Modifying property 'model'
+<p>Properties in JavaScript objects are variables that hold values.</p>
+<h3>Object Properties Examples:</h3>
+<h4>Accessing Object Properties:</h4>
+<pre>console.log(person.name ); // Accessing property 'name'</pre>
+<h4>Adding or Modifying Properties:</h4>
+<pre>
+car.color = 'blue'; // Adding property 'color'
+car.model = 'Corolla'; // Modifying property 'model'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex67">67. JS Object Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
