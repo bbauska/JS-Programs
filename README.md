@@ -1805,447 +1805,511 @@ let message = greet.call(person);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex80">80. JS Function Apply</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The apply () method in JavaScript allows a function to be called with a specified this value and arguments provided as
-an array.
-Function Apply Examples:
-Using apply ():
-
-function greet () {
-return ’Hello,1 + this . name + '!
+<p>The apply() method in JavaScript allows a function to be called with a specified this 
+value and arguments provided as an array.</p>
+<h3>Function Apply Examples:</h3>
+<h4>Using apply():</h4>
+<pre>
+function greet() {
+  return 'Hello,' + this.name + '!';
 }
-let person = {name : 'Bob1 };
+let person = {name: 'Bob'};
 let args = [];
-let message = greet. apply (person, args );
+let message = greet.apply(person, args);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex81">81. JS Function Bind</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The bind () method in JavaScript creates a new function that, when called, has its this keyword set to a specified value .
-Function Bind Examples:
-Using bind ():
-
-function greet () {
-return ’Hello,1 + this . name + '!
+<p>The bind() method in JavaScript creates a new function that, when called, has its this 
+keyword set to a specified value.</p>
+<h3>Function Bind Examples:</h3>
+<h4>Using bind():</h4>
+<pre>
+function greet() {
+  return 'Hello,' + this.name + '!';
 }
-let person = {name : 'Charlie1 };
-let newGreet = greet. bind (person);
-let message = newGreet ();
+let person = {name: 'Charlie'};
+let newGreet = greet.bind(person);
+let message = newGreet();
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex82">82. JS Function Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Closures in JavaScript are functions that retain access to variables in the scope where they were defined .
-Function Closures Examples:
-Closure Example:
-
-function outerFunction () {
-let outerVariable = ‘I am from the outer function';
-function innerFunction () {
-console . log ( outerVariable );
-return innerFunction;
+<p>Closures in JavaScript are functions that retain access to variables in the scope 
+where they were defined.</p>
+<h3>Function Closures Examples:</h3>
+<h4>Closure Example:</h4>
+<pre>
+function outerFunction() {
+  let outerVariable = 'I am from the outer function';
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+  return innerFunction;
 }
-let closure = outerFunction ();
-closure (); // Output: 'I am from the outer function'
-This comprehensive guide covers various aspects of JavaScript functions, including definitions, parameters,
-invocation, call, apply, bind, and closures, with examples and explanations for each concept.
+let closure = outerFunction();
+closure(); // Output: 'I am from the outer function'
+</pre>
+<p>This comprehensive guide covers various aspects of JavaScript functions, including 
+definitions, parameters, invocation, call, apply, bind, and closures, with examples 
+and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex83">83. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Classes in JavaScript provide a way to create objects using a blueprint.
-Class Intro:
-Class Declaration:
-
+<p>Classes in JavaScript provide a way to create objects using a blueprint.</p>
+<h3>Class Intro:</h3>
+<h4>Class Declaration:</h4>
+<pre>
 class Animal {
-constructor (name, age ) {
-this . name = name;
-this . age = age;
-sound () {
-return 'Animal sound';
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  sound() {
+    return 'Animal sound';
+  }
 }
-Creating Instances:
-
-let dog = new Animal ('Buddy', 3 );
-console . log ( dog . sound ()); // Output: 'Animal sound'
+<h4>Creating Instances:</h4>
+<pre>
+let dog = new Animal('Buddy', 3);
+console.log(dog.sound()); // Output: 'Animal sound'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex84">84. JS Class Inheritance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Inheritance in JavaScript classes allows a subclass to inherit properties and methods from a superclass .
-Class Inheritance Example:
-Extending a Class:
-
+<p>Inheritance in JavaScript classes allows a subclass to inherit properties and methods 
+from a superclass.</p>
+<h3>Class Inheritance Example:</h3>
+<h4>Extending a Class:</h4>
+<pre>
 class Dog extends Animal {
-constructor ( name, age, breed) {
-super (name, age );
-this . breed = breed;
-sound () {
-return 'Woof!';
-Using Inherited Methods:
-
-let puppy = new Dog ('Max', 1, 'Labrador');
-console . log (puppy. sound ()); // Output: 'Woof !'
+  constructor(name, age, breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+  sound() {
+    return 'Woof!';
+  }
+}
+<h4>Using Inherited Methods:</h4>
+<pre>
+let puppy = new Dog('Max', 1, 'Labrador');
+console.log (puppy.sound()); // Output: 'Woof!'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex85">85. Class Static</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Static methods in JavaScript classes are called on the class itself rather than on instances of the class .
-Class Static Example:
-Adding a Static Method:
-
+<p>Static methods in JavaScript classes are called on the class itself rather than on 
+instances of the class.</p>
+<h3>Class Static Example:</h3>
+<h4>Adding a Static Method:</h4>
+<pre>
 class Calculator {
-static add ( a, b ) {
-return a + b;
+  static add(a, b) {
+    return a + b;
+  }
 }
-let result = Calculator . add (5,3);
-console . log (result); // Output: 8
+let result = Calculator.add(5,3);
+console.log(result); // Output: 8
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex86">86. JS Async</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Asynchronous programming in JavaScript involves handling operations that don't execute immediately .
-JS Callbacks
-Callbacks in JavaScript are functions passed as arguments to another function to be executed later .
-Callbacks Example:
-
-function fetchData ( callback) {
-setTimeout (()=>{
-let data = 'Some data';
-callback ( data);
-1,2000);
+<p>Asynchronous programming in JavaScript involves handling operations that don't execute 
+immediately.</p>
+<h3>JS Callbacks</h3>
+<p>Callbacks in JavaScript are functions passed as arguments to another function to be 
+executed later.</p>
+<h4>Callbacks Example:</h4>
+<pre>
+function fetchData(callback) {
+  setTimeout(() => {
+    let data = 'Some data';
+    callback(data);
+  },2000);
 }
-function processData (data ) {
-console . log ('Data received : ' + data);
+function processData(data) {
+  console.log ('Data received : ' + data);
 }
-fetchData (processData); // Output after 2 seconds : 'Data received : Some data'
-JS Asynchronous
-Asynchronous operations in JavaScript allow non - blocking execution of code .
-Asynchronous Example:
-
-console . log ('Start');
-setTimeout (()=>{
-console . log ('Inside setTimeout');
+fetchData(processData); // Output after 2 seconds : 'Data received : Some data'
+</pre>
+<h3>JS Asynchronous</h3>
+<p>Asynchronous operations in JavaScript allow non - blocking execution of code.</p>
+<h4>Asynchronous Example:</h4>
+<pre>
+console.log('Start');
+setTimeout(() => {
+  console.log('Inside setTimeout');
 }, 2000);
-console . log ('End1);
-// Output: 'Start', 'End', 'Inside setTimeout' (After 2 seconds 
+console.log('End');
+// Output: 'Start', 'End', 'Inside setTimeout' (After 2 seconds)
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex87">87. JS Promises</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Promises in JavaScript represent a value that might not be available yet but will resolve or reject in the future .
-Promises Example:
-Creating a Promise:
-
-let myPromise = new Promise ((resolve, reject) = > {
-setTimeout (()=>{
-resolve ('Promise resolved');
-1,2000);
+<p>Promises in JavaScript represent a value that might not be available yet but will 
+resolve or reject in the future.</p>
+<h3>Promises Example:</h3>
+<h4>Creating a Promise:</h4>
+<pre>
+let myPromise = new Promise((resolve, reject) => {
+  setTimeout (() => {
+    resolve('Promise resolved');
+  }, 2000);
 });
-myPromise . then ((result) = > {
-console . log (result); // Output after 2 seconds : 'Promise resolved'
+myPromise.then((result) = > {
+  console.log(result); // Output after 2 seconds : 'Promise resolved'
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex88">88. JS Async / Await</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Async / await in JavaScript provides a more synchronous way to write asynchronous code using promises .
-Async I Await Example :
-Using Async / Await:
-
-async function fetchData () {
-return new Promise ((resolve ) = > {
-setTimeout (()=>{
-resolve ('Data fetched');
-}, 2000) ;
-});
+<p>Async / await in JavaScript provides a more synchronous way to write asynchronous code 
+using promises.</p>
+<h3>Async I Await Example:</h3>
+<h4>Using Async / Await:</h4>
+<pre>
+async function fetchData() {
+  return new Promise((resolve) = > {
+    setTimeout(() => {
+      resolve('Data fetched');
+    }, 2000);
+  });
 }
-async function processData () {
-let data = await fetchData () ;
-console . log ( data); // Output after 2 seconds : 'Data fetched'
+async function processData() {
+  let data = await fetchData();
+  console.log(data); // Output after 2 seconds : 'Data fetched'
 }
-processData ();
-This comprehensive guide covers JavaScript classes, including an introduction to classes, inheritance, and static
-methods, as well as asynchronous programming concepts such as callbacks, asynchronous operations, promises, and
-async I await, with examples and explanations for each concept.
+processData();
+</pre>
+<p>This comprehensive guide covers JavaScript classes, including an introduction to 
+classes, inheritance, and static methods, as well as asynchronous programming concepts 
+such as callbacks, asynchronous operations, promises, and async I await, with examples 
+and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex89">89. JS HTML DOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript interacts with HTML documents through the Document Object Model ( DOM), representing the document
-as a tree structure .
-DOM Intro:
-Accessing an Element by ID :
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<hl id =" heading " > Welcome to the DOM< / hl >
-< script >
-let element = document. getElementByld (" heading ") ;
-console . log ( element. innerHTML); // Output: 'Welcome to the DOM'
-< / script >
-</body>
-< / html>
-DOM Methods
-DOM methods provide various ways to manipulate HTML elements .
-Changing Element Content:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-< p id =" demo " >This is a paragraph . < / p>
-< script >
-document. getElementByld (" demo "). innerHTML = " This is a new paragraph ;
-< I script >
-< I body>
-< I html>
-DOM Document
-The document object represents the entire HTML document.
-Accessing Document Properties:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-< script >
-console . log ( document. title ); // Output: Document title
-console . log ( document. URL); // Output: Document URL
-< / script >
-</body>
-< / html>
-DOM Elements
-Elements in the DOM represent HTML tags .
-Changing Element Styles:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<p id =" demo " >This is a paragraph . < / p>
-< script>
-let element = document. getElementByld (" demo ");
-element. style . color = " red";
-element. style . fontsize = " 20px" ;
-< / script >
-</body>
-< / html>
-DOM HTML
-The DOM HTML includes properties that deal with the HTML content.
-Changing HTML Attributes:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<img id =" mylmage " src =" image . jpg 11 >
-< script>
-let image = document. getElementByld (" mylmage ");
-image . src = " new_image . jpg ";
-< / script >
-< I body>
-< I html>
-DOM Forms
-The DOM allows manipulation of HTML forms .
-Accessing Form Elements:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<form id =" my Form " >
-<input type =" text" id =" username " name =" username "
-<input type =" submit" value =" Submit" >
-< / form>
-< script >
-let form = document. getElementByld (" myForm");
-let username = form . elements [" username "]. value;
-< / script >
-< /body>
-< I html>
-DOM CSS
-The DOM CSS allows manipulation of CSS styles .
-Changing CSS Classes:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-< p id =" demo " >This is a paragraph . < / p>
-< script >
-let element = document. getElementByld (" demo ");
-element. classList. add ("new - class ");
-< / script >
-</body>
-< / html>
-DOM Animations
-The DOM supports creating simple animations .
-Animating an Element:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<div id =" box" style =" width : 100px;height: 100px;background - color : red;position : relative;" >< / div>
-<script>
-let elem = document. getElementByld (" box ");
-letpos = 0;
-let id = setinterval (frame, 10 );
-function frame () {
-if (pos == 350) {
-clearinterval (id);
-} else {
-pos ++ ;
-elem . style . top = pos + 'px';
-elem . style . left = pos + 'px';
-< / script >
-< I body>
-< I html>
-DOM Events
-Events in the DOM represent interactions by users or by the browser .
-Click Event Handling:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-< button id =" my Button " > Click me< I button >
-< script >
-document. getElementByld (" myButton "). addEventListener (" click", function () {
-alert (" Button clicked");
-1);
-< / script >
-</body>
-< / html>
-DOM Event Listener
-The addEventListener method is used to attach an event to an element.
-Mouseover Event Handling:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<divid = " myDiv 11 >Mouse over me< I div>
-< script >
-document. getElementByld (" myDiv"). addEventListener (" mouseover " t function () {
-alert (" Mouse over event triggered");
-});
-< / script >
-< /body>
-< / html>
-DOM Navigation
-The DOM allows navigation between elements .
-Traversing Child Elements:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<ulid - 'myList"
-<li>Item 1< / li>
-<li>Item2< / li>
-<li>Item 3< / li>
-< / ul>
-< script>
-let list = document. getElementByld (" myList");
-let items = list. getElementsByTagName (" li") ;
-console . log (items . length); // Output: 3
-< / script >
-</body>
-< / html>
-DOM Nodes
-Nodes are the fundamental building blocks in the DOM .
-Creating a New Node :
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<divid =" myDiv" >< / div>
-< script >
-let node = document. createElement (" p ");
-let textNode = document. createTextNode (" New paragraph ");
-node . appendChild (textNode ) ;
-document. getElementByld (" myDiv"). appendChild ( node );
-< / script >
-< /body>
-< / html>
-DOM Collections
-Collections in the DOM are arrays of HTML elements .
-Accessing Collection Elements:
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<p>Click the button to get the collection length . < / p>
-<button onclick =" getLength ()" >Get Collection Length< I button>
-< script >
-function getLength () {
-let elements = document. links;
-alert (" Number of links :" + elements . length);
-< / script >
-< I body>
-< I html>
-DOM Node Lists
-Node lists in the DOM are similar to collections and contain nodes or elements .
-Accessing Node List Elements :
-html code
-< ! DOCTYPE html>
-<html>
-<body>
-<p id =" demo " >This is a paragraph . < / p>
-< script>
-let nodeList = document. querySelectorAll (" #demo ") ;
-console . log (nodeList [ 0 ]. innerHTML ); // Output: 'This is a paragraph .'
-< / script >
-</body>
-< / html>
-This comprehensive guide covers JavaScript's HTML DOM, including an introduction to the DOM, methods, document,
-elements, HTML, forms, CSS, animations, events, event listeners, navigation, nodes, collections, and node lists, with
-examples and explanations for each topic .
+<p>JavaScript interacts with HTML documents through the Document Object Model (DOM), 
+representing the document as a tree structure.</p>
+<h3>DOM Intro:</h3>
+<h4>Accessing an Element by ID:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+  &lt;hl id = "heading"&gt; Welcome to the DOM&lt;/hl&gt;
+&lt;script&gt;
+  let element = document.getElementById("heading");
+  console.log(element.innerHTML); // Output: 'Welcome to the DOM'
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Methods</h3>
+<p>DOM methods provide various ways to manipulate HTML elements.</p>
+<h4>Changing Element Content:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+  &lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
+  &lt;script&gt;
+  document.getElementByld("demo").innerHTML = "This is a new paragraph.";
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Document</h3>
+<p>The document object represents the entire HTML document.</p>
+<h4>Accessing Document Properties:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;script&gt;
+console.log(document.title); // Output: Document title
+console.log(document.URL);   // Output: Document URL
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Elements</h3>
+<p>Elements in the DOM represent HTML tags.</p>
+<h4>Changing Element Styles:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;p id ="demo"&gt;This is a paragraph.&lt;/p&gt;
+&lt;script&gt;
+  let element = document.getElementByld("demo");
+  element.style.color = "red";
+  element.style.fontsize = "20px" ;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM HTML</h3>
+<p>The DOM HTML includes properties that deal with the HTML content.</p>
+<h4>Changing HTML Attributes:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;img id ="myImage" src ="image.jpg"&gt;
+&lt;script&gt;
+  let image = document.getElementById("myImage");
+  image.src = "new_image.jpg";
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Forms</h3>
+<p>The DOM allows manipulation of HTML forms.</p>
+<h4>Accessing Form Elements:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;form id ="my Form"&gt;
+  &lt;input type="text" id ="username" name ="username"&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+&lt;script&gt;
+  let form = document.getElementById("myForm");
+  let username = form.elements["username"].value;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM CSS</h3>
+<p>The DOM CSS allows manipulation of CSS styles.</p>
+<h4>Changing CSS Classes:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
+&lt;script&gt;
+  let element = document.getElementByld("demo");
+  element.classList.add("new - class");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Animations</h3>
+<p>The DOM supports creating simple animations.</p>
+<h4>Animating an Element:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;div id="box" style ="width: 100px; height: 100px; background-color: red; position: relative;"&gt;&lt;/div&gt;
+&lt;script&gt;
+  let elem = document.getElementById("box");
+  letpos = 0;
+  let id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearinterval (id);
+    } else {
+      pos ++;
+      elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px';
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Events</h3>
+<p>Events in the DOM represent interactions by users or by the browser.</p>
+<h4>Click Event Handling:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;button id ="my Button"&gt;Click me&lt;/button&gt;
+&lt;script&gt;
+  document.getElementById("myButton").addEventListener("click", function() {
+    alert(" Button clicked");
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Event Listener</h3>
+<p>The addEventListener method is used to attach an event to an element.</p>
+<h4>Mouseover Event Handling:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;div id ="myDiv"&gt;Mouse over me&lt;/div&gt;
+&lt;script&gt;
+  document.getElementByld("myDiv").addEventListener("mouseover", function() {
+    alert("Mouse over event triggered");
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Navigation</h3>
+<p>The DOM allows navigation between elements.</p>
+<h4>Traversing Child Elements:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;ul id ="myList"&gt;
+  &lt;li&gt;Item1&lt;/li&gt;
+  &lt;li&gt;Item2&lt;/li&gt;
+  &lt;li&gt;Item3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script&gt;
+  let list = document.getElementById("myList");
+  let items = list.getElementsByTagName("li") ;
+  console.log(items.length); // Output: 3
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Nodes</h3>
+<p>Nodes are the fundamental building blocks in the DOM.</p>
+<h4>Creating a New Node:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;divid="myDiv"&gt;&lt;/div&gt;
+&lt;script&gt;
+  let node = document.createElement("p");
+  let textNode = document.createTextNode("New paragraph");
+  node.appendChild(textNode);
+  document.getElementById("myDiv").appendChild(node);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Collections</h3>
+<p>Collections in the DOM are arrays of HTML elements.</p>
+<h4>Accessing Collection Elements:</h4>
+<h5>html code</h5>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;p&gt;Click the button to get the collection length .&lt;/p&gt;
+&lt;button onclick="getLength()"&gt;Get Collection Length&lt;/button&gt;
+&lt;script&gt;
+  function getLength() {
+  let elements = document.links;
+  alert("Number of links :" + elements.length);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3>DOM Node Lists</h3>
+<p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
+<h4>Accessing Node List Elements:</h4>
+<h5>html code</h5>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
+&lt;script&gt;
+  let nodeList = document.querySelectorAll("#demo");
+  console.log(nodeList[0].innerHTML); // Output: 'This is a paragraph.'
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>This comprehensive guide covers JavaScript's HTML DOM, including an introduction to 
+the DOM, methods, document, elements, HTML, forms, CSS, animations, events, event 
+listeners, navigation, nodes, collections, and node lists, with examples and explanations 
+for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex90">90. JS Browser BOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The Browser Object Model (BOM ) in JavaScript represents the browser window and its components .
-JS Window
-The window object is the global object in a browser's JavaScript environment.
-Accessing Window Properties:
-
-console . log (window . innerHeight); // Output: Inner height of the window
-console . log (window . innerWidth); // Output: Inner width of the window
-JS Screen
-The screen object represents the screen of a device .
-Accessing Screen Properties:
-
-console . log ( screen . width ); // Output: Screen width in pixels
-console . log ( screen . height); // Output: Screen height in pixels
-JS Location
-The location object contains information about the current URL .
-Accessing Location Information:
-
-console . log (location . href ); // Output: Full URL of the current page
-console . log (location . hostname ); // Output: Hostname of the current URL
-JS History
-The history object contains the browsing history of the window .
-Accessing History Methods:
-
-history. back (); // Go back to the previous page
-history. forward (); // Go forward to the next page
-JS Navigator
-The navigator object contains information about the browser .
-Accessing Navigator Properties:
-
-console . log (navigator. userAgent); // Output: User - Agent header of the browser
-console . log (navigator. platform); // Output: Platform of the browser
-JS Popup Alert
-Popup alerts in JavaScript display messages to users .
-Displaying an Alert:
-
-alert (" This is an alert message ") ;
-JS Timing
-JavaScript's timing functions allow scheduling of code execution .
-Using setTimeout ():
-
-setTimeout (()=>{
-console . log (" Delayed message ");
-}, 2000 ); // Execute after 2 seconds
-Using setinterval ():
-
-setinterval (()=>{
-console . log (" Repeated message ");
-}, 3000 ); // Execute every 3 seconds
-JS Cookies
-Cookies in JavaScript store small pieces of information on the client's machine .
-Setting a Cookie:
-
-document. cookie = " username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path =/" ;
-Accessing a Cookie:
-
-let username = document. cookie . split ()[ 0 ]. split (' = ')[ 1 ];
-console . log (username ); // Output: 'John Doe'
-This comprehensive guide covers JavaScript's Browser Object Model ( BOM), including the window object, screen,
-location, history, navigator, popup alerts, timing functions, and cookies, with examples and explanations for each
-concept.
+<p>The Browser Object Model (BOM) in JavaScript represents the browser window and its 
+components.</p>
+<h3>JS Window</h3>
+<p>The window object is the global object in a browser's JavaScript environment.</p>
+<h4>Accessing Window Properties:</h4>
+<pre>
+console.log(window.innerHeight); // Output: Inner height of the window
+console.log(window.innerWidth); // Output: Inner width of the window
+</pre>
+<h3>JS Screen</h3>
+<p>The screen object represents the screen of a device.</p>
+<h4>Accessing Screen Properties:</h4>
+<pre>
+console.log(screen.width ); // Output: Screen width in pixels
+console.log(screen.height); // Output: Screen height in pixels
+</pre>
+<h3>JS Location</h3>
+<p>The location object contains information about the current URL.</p>
+<h4>Accessing Location Information:</h4>
+<pre>
+console.log(location.href); // Output: Full URL of the current page
+console.log(location.hostname); // Output: Hostname of the current URL
+</pre>
+<h3>JS History</h3>
+<p>The history object contains the browsing history of the window.</p>
+<h4>Accessing History Methods:</h4>
+<pre>
+history.back(); // Go back to the previous page
+history.forward(); // Go forward to the next page
+</pre>
+<h3>JS Navigator</h3>
+<p>The navigator object contains information about the browser.</p>
+<h4>Accessing Navigator Properties:</h4>
+<pre>
+console.log(navigator.userAgent); // Output: User - Agent header of the browser
+console.log(navigator.platform); // Output: Platform of the browser
+</pre>
+<h3>JS Popup Alert</h3>
+<p>Popup alerts in JavaScript display messages to users.</p>
+<h4>Displaying an Alert:</h4>
+<pre>alert("This is an alert message");</pre>
+<h3>JS Timing</h3>
+<p>JavaScript's timing functions allow scheduling of code execution.</p>
+<h4>Using setTimeout():</h4>
+<pre>
+setTimeout(() =&gt; {
+  console.log("Delayed message");
+}, 2000); // Execute after 2 seconds
+</pre>
+<h4>Using setinterval():</h4>
+<pre>
+setinterval(() => {
+  console.log("Repeated message");
+}, 3000); // Execute every 3 seconds
+</pre>
+<h3>JS Cookies</h3>
+<p>Cookies in JavaScript store small pieces of information on the client's machine.</p>
+<h4>Setting a Cookie:</h4>
+<pre>
+document.cookie="username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path=/";
+</pre>
+<h4>Accessing a Cookie:</h4>
+<pre>
+let username = document.cookie.split(';')[0].split('=')[1];
+console.log(username); // Output: 'John Doe'
+</pre>
+<p>This comprehensive guide covers JavaScript's Browser Object Model (BOM), including 
+the window object, screen, location, history, navigator, popup alerts, timing functions, 
+and cookies, with examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex91">91. JS Web APIs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
