@@ -1605,190 +1605,203 @@ car.model = 'Corolla'; // Modifying property 'model'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex67">67. JS Object Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Methods in JavaScript objects are functions that define behavior .
-Object Methods Examples:
-Accessing Object Methods:
-
-console . log (person . greet ()); // Accessing method 'greet'
-Adding Methods to an Object:
-
-car. start = function () {
-return 'Car started';
+<p>Methods in JavaScript objects are functions that define behavior.</p>
+<h3>Object Methods Examples:</h3>
+<h4>Accessing Object Methods:</h4>
+<pre>console.log(person.greet()); // Accessing method 'greet'</pre>
+<h4>Adding Methods to an Object:</h4>
+<pre>
+car. start = function() {
+  return 'Car started';
 };
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex68">68. JS Object Display</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Displaying objects in JavaScript can be done using various methods .
-Object Display Examples:
-Using console . log ():
-
-console . log (person); // Output the entire object
-Stringify with JSON:
-
-let carString = JSON . stringify ( car);
-console . log ( carString); // Output the string representation of the object
+<p>Displaying objects in JavaScript can be done using various methods.</p>
+<h3>Object Display Examples:</h3>
+<h4>Using console.log():</h4>
+<pre>console.log(person); // Output the entire object</pre>
+<h4>Stringify with JSON:</h4>
+<pre>
+let carString = JSON.stringify(car);
+console.log(carString); // Output the string representation of the object
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex69">69. JS Object Accessors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Accessors in JavaScript objects provide a way to get and set the values of object properties .
-Object Accessors Examples:
-Using Getters and Setters :
-
+<p>Accessors in JavaScript objects provide a way to get and set the values of object properties.</p>
+<h3>Object Accessors Examples:</h3>
+<h4>Using Getters and Setters:</h4>
+<pre>
 let user = {
-firstName: 'John',
-lastName: 'Doe',
-get fullName () {
-return this . firstName + " + this . lastName;
-},
-set fullName ( name ) {
-let parts = name . split ( " ) ;
-this . firstName = parts [ 0 ];
-this . lastName = parts [ 1 ];
-}
+  firstName: 'John',
+  lastName: 'Doe',
+  get fullName() {
+    return this.firstName + ' ' + this.lastName;
+  },
+  set fullName(name) {
+    let parts = name.split(' ');
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  }
 };
-console . log (user. fullName ); // Output: 'John Doe'
-user. fullName = 'Alice Smith'; // Setting fullName using setter
-console . log (user. firstName ); // Output: 'Alice'
+console.log(user.fullName ); // Output: 'John Doe'
+user.fullName = 'Alice Smith'; // Setting fullName using setter
+console.log(user.firstName); // Output: 'Alice'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex70">70. JS Object Constructors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Constructors in JavaScript are functions used for creating objects and setting initial values .
-Object Constructors Examples:
-Using Constructor Functions:
-
-function Person ( name, age ) {
-this . name = name;
-this . age = age;
-this . greet = function () {
-return 'Hello, my name is ' + this . name;
-};
+<p>Constructors in JavaScript are functions used for creating objects and setting initial values.</p>
+<h3>Object Constructors Examples:</h3>
+<h4>Using Constructor Functions:</h4>
+<pre>
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function() {
+    return 'Hello, my name is ' + this.name;
+  };
 }
-let newPerson = new Person ('Bob', 25 ) ;
-console . log ( newPerson . greet ()); // Output: ’Hello, my name is Bob'
+let newPerson = new Person('Bob', 25);
+console.log(newPerson.greet()); // Output: ’Hello, my name is Bob'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex71">71. JS Object Prototypes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Prototypes in JavaScript are a mechanism to share properties and methods between objects .
-Object Prototypes Examples:
-Adding Methods to the Prototype :
-
-Person . prototype . info = function () {
-return 'Name : ' + this . name + ', Age : 1 + this . age;
+<p>Prototypes in JavaScript are a mechanism to share properties and methods between objects.</p>
+<h3>Object Prototypes Examples:</h3>
+<h4>Adding Methods to the Prototype:</h4>
+<pre>
+Person.prototype.info = function() {
+  return 'Name: ' + this.name + ', Age: ' + this.age;
 };
-console . log (newPerson . info ()); // Output: 'Name : Bob, Age : 25'
+console.log (newPerson.info()); // Output: 'Name : Bob, Age : 25'
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex72">72. JS Object Iterables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Iterables in JavaScript are objects that can be iterated using loops .
-Object Iterables Examples:
-Using for ... in Loop :
-
-for (let key in person ) {
-console . log (key + ': 1 + person [ key ]) ;
+<p>Iterables in JavaScript are objects that can be iterated using loops.</p>
+<h3>Object Iterables Examples:</h3>
+<h4>Using for ... in Loop:</h4>
+<pre>
+for (let key in person) {
+  console.log(key + ': ' + person[key]);
 }
-Using Object. keys ():
-
-let keys = Object. keys ( person); // Get an array of object keys
+</pre>
+<h4>Using Object.keys():</h4>
+<pre>let keys = Object.keys(person); // Get an array of object keys</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex73">73. JS Object Sets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Sets in JavaScript are collections of unique values .
-Object Sets Examples:
-Creating a Set:
-
-let mySet = new Set () ;
-mySet. add ( 1);
-mySet. add ( 2 );
-mySet. add ( 3 );
-Checking Set Membership:
-
-console . log ( mySet. has ( 2 )); // Output: true
+<p>Sets in JavaScript are collections of unique values.</p>
+<h3>Object Sets Examples:</h3>
+<h4>Creating a Set:</h4>
+<pre>
+let mySet = new Set();
+mySet.add(1);
+mySet.add(2);
+mySet.add(3);
+</pre>
+<h4>Checking Set Membership:</h4>
+<pre>console.log(mySet.has(2)); // Output: true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex74">74. JS Object Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Maps in JavaScript are collections of key - value pairs where keys can be any type .
-Object Maps Examples:
-Creating a Map:
-
-let myMap = new Map ();
-myMap . set ('keyl', 'valuel1);
-myMap . set ('key2', 'value2');
-Getting Values from a Map :
-
-console . log ( myMap . get ('keyl')); // Output: 'valuel'
+<p>Maps in JavaScript are collections of key - value pairs where keys can be any type.</p>
+<h3>Object Maps Examples:</h3>
+<h4>Creating a Map:</h4>
+<pre>
+let myMap = new Map();
+myMap.set('keyl', 'valuel');
+myMap.set('key2', 'value2');
+</pre>
+<h4>Getting Values from a Map:</h4>
+<pre>console.log(myMap.get('keyl')); // Output: 'valuel'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex75">75. JS Object Reference</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-In JavaScript, objects are stored and passed by reference .
-Object Reference Examples:
-Referencing an Object:
-
-let object 1 = {name: John'};
-letobject2 = objectl; // object2 points to the same object as object 1
-Changing Object through Reference :
-
-object2 . name = 'Alice';
-console . log ( objectl . name ); // Output: Alice'
-This comprehensive guide covers various aspects of JavaScript objects, including definitions, properties, methods,
-display, accessors, constructors, prototypes, iterables, sets, maps, and object references, with examples and
-explanations for each concept.
+<p>In JavaScript, objects are stored and passed by reference.</p>
+<h3>Object Reference Examples:</h3>
+<h4>Referencing an Object:</h4>
+<pre>
+let object1 = {name: 'John'};
+let object2 = objectl; // object2 points to the same object as object 1
+</pre>
+<h4>Changing Object through Reference:</h4>
+<pre>
+object2.name = 'Alice';
+console.log(objectl.name); // Output: Alice'
+</pre>
+<p>This comprehensive guide covers various aspects of JavaScript objects, including 
+definitions, properties, methods, display, accessors, constructors, prototypes, 
+iterables, sets, maps, and object references, with examples and explanations for each 
+concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex76">76. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Functions in JavaScript are reusable blocks of code that perform a specific task when called .
-Function Definitions:
-Function Declaration:
-
-function greet () {
-return ‘Hello !
+<p>Functions in JavaScript are reusable blocks of code that perform a specific task when called.</p>
+<h3>Function Definitions:</h3>
+<h4>Function Declaration:</h4>
+<pre>
+function greet() {
+  return 'Hello!';
 }
-Function Expression:
-
-let greet = function () {
-return ‘Hello !
+</pre>
+<h4>Function Expression:</h4>
+<pre>
+let greet = function() {
+  return 'Hello!';
 };
-Arrow Function:
-
-let greet = ()=>{
-return 'Hello !
+</pre>
+<h4>Arrow Function:</h4>
+<pre>
+let greet = () => {
+  return 'Hello!';
 };
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex77">77. JS Function Parameters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Function parameters are placeholders for values that a function will receive when it's called .
-Function Parameters Examples:
-Single Parameter:
-
-function greet (name ) {
-return ’Hello,1 + name + '!
+<p>Function parameters are placeholders for values that a function will receive when it's called.</p>
+<h3>Function Parameters Examples:</h3>
+<h4>Single Parameter:</h4>
+<pre>
+function greet(name) {
+  return 'Hello,' + name + '!';
 }
-Multiple Parameters:
-
-function sum ( a, b ) {
-return a + b;
+</pre>
+<h4>Multiple Parameters:</h4>
+<pre>
+function sum(a, b) {
+  return a + b;
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex78">78. JS Function Invocation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Function invocation means calling a function to execute its code .
-Function Invocation Examples:
-Calling a Function:
-
-greet (); // Function call
-let result = sum (5,3); // Function call with arguments
+<p>Function invocation means calling a function to execute its code.</p>
+<h3>Function Invocation Examples:</h3>
+<h4>Calling a Function:</h4>
+<pre>
+greet(); // Function call
+let result = sum(5,3); // Function call with arguments
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex79">79. JS Function Call</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The call () method in JavaScript allows a function to be called with a specified this value and arguments provided
-individually.
-Function Call Examples:
-Using call ():
-
-function greet () {
-return ’Hello,1 + this . name + '!
+<p>The call() method in JavaScript allows a function to be called with a specified this 
+value and arguments provided individually.</p>
+<h3>Function Call Examples:</h3>
+<h4>Using call():</h4>
+<pre>
+function greet() {
+  return 'Hello,' + this.name + '!';
 }
-let person = {name : 'Alice'};
-let message = greet. call (person);
+let person = {name: 'Alice'};
+let message = greet.call(person);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex80">80. JS Function Apply</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
