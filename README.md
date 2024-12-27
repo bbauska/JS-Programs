@@ -6240,18 +6240,18 @@ console . log ( ' Custom event triggered with data : $ {event. detail}' );
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document. getElementById ('myElement1);
-element. innerHTML = '<strong>New HTML content< / strong>‘;
+element.innerHTML = '&lt;strong&gt;New HTML content&lt;/strong&gt;';
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Working with Forms and Input Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const form = document. getElementById (’myForm’) ;
-form . addEventListener (’submit’, ( event) = > {
-event. preventDefault ();
-const formData = new FormData ( event. target);
-const value = formData . get (’inputFieldName’);
-console, log ( ' Form submitted with value : ${value}' );
+const form = document.getElementById('myForm');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const value = formData.get('inputFieldName');
+  console.log(`Form submitted with value: ${value}`);
 });
 </pre>
 <p>These JavaScript snippets demonstrate advanced techniques for interacting with the 
@@ -6265,8 +6265,8 @@ interactions, and custom event creation.</p>
 <pre>
 const inputField = document.getElementById('textlnput');
 const charCount = document.getElementById('charCount1) ;
-inputField.addEventListener ('input', () = > {
-charCount.textContent = "Character count: ${inputField.value.length}';
+inputField.addEventListener ('input', () => {
+charCount.textContent = `Character count: ${inputField.value.length}`;
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6281,17 +6281,17 @@ console . log ( ' Input value changed to : $ {event. target. value}' );
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Form Validation and Submission:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>3. Real - time Password Strength Checker:</h4>
+<h4>3. Real-time Password Strength Checker:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const passwordField = document. getElementById ('password');
-const strengthindicator = document. getElementById ('passwordStrength');
-passwordField . addEventListener ('input', () = > {
-const password = passwordField . value;
-let strength =
-// Perform password strength checks
-// Update the 'strength' variable based on password complexity
-strengthindicator. textContent = ' Password Strength : $ {strength}';
+const strengthIndicator = document. getElementById ('passwordStrength');
+passwordField . addEventListener ('input', () => {
+  const password = passwordField.value;
+  let strength =
+  // Perform password strength checks
+  // Update the 'strength' variable based on password complexity
+  strengthIndicator.textContent = `Password Strength: ${strength}`;
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
