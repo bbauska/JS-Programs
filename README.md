@@ -1,6 +1,6 @@
 <!-- readme.md - 93 examples & 482 (218+264) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1>93 JS Examples &amp; 482 (218 + 264) JS Programs for Beginners</h1>
+<h1>575 JS Examples: 93, 218 &amp; 264 JS Programs for Beginners</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -114,20 +114,21 @@ own ideas into a reality without even having to think about it.</p>
 <!-- JavaScript classes -->
   <li><a href="#ex83">JS Classes</a></li>
   <li><a href="#ex84">Class Inheritance</a></li>
-  <li><a href="#ex85">JS Async</a></li>
-  <li><a href="#ex86">JS PromisesClass</a></li>
-  <li><a href="#ex87">JS Async / Await</a></li>
-  <li><a href="#ex88">JS HTML DOM</a></li>
-  <li><a href="#ex89">JS Browser BOM</a></li>
-  <li><a href="#ex90">JS Web APIs</a></li>
-  <li><a href="#ex91">JS AJAX</a></li>
-  <li><a href="#ex92">JS JSON</a></li>
-  <li><a href="#ex93">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
+  <li><a href="#ex85">Class Static</a></li>
+  <li><a href="#ex86">JS Async</a></li>
+  <li><a href="#ex87">JS PromisesClass</a></li>
+  <li><a href="#ex88">JS Async / Await</a></li>
+  <li><a href="#ex89">JS HTML DOM</a></li>
+  <li><a href="#ex90">JS Browser BOM</a></li>
+  <li><a href="#ex91">JS Web APIs</a></li>
+  <li><a href="#ex92">JS AJAX</a></li>
+  <li><a href="#ex93">JS JSON</a></li>
+  <li><a href="#ex94">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
 </ol>
 
-<h2><a href="#js0">First 218 Simple JavaScript Sample Scripts</a></h2>
+<h2><a href="#js0">218 Simple JavaScript Example Scripts</a></h2>
 
-<ul>
+<ul type="square">
   <li><a href="#js1">1. Print Hello World</a></li>
   <li><a href="#js2">2. Add Two Numbers</a></li>
   <li><a href="#js3">3. Find the Square Root</a></li>
@@ -348,8 +349,8 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js218">218. Pyramid</a></li>
 </ul>
 
-<h2><a href="#js-0">Next 264 JavaScript Sample Scripts</a></h2>
-<ul>
+<h2><a href="#js-0">264 JavaScript Example Scripts</a></h2>
+<ul type="disc">
   <li><a href="#js-1">js-1. Convert Celsius to Fahrenheit</a></li>
   <li><a href="#js-2">js-2. Get Value of a browser Cookie</a></li>
   <li><a href="#js-3">js-3. Convert RGB to Hex</a></li>
@@ -1822,7 +1823,9 @@ let message = greet.apply(person, args);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The bind() method in JavaScript creates a new function that, when called, has its this 
 keyword set to a specified value.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Bind Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using bind():</h4>
 <pre>
 function greet() {
@@ -1837,7 +1840,9 @@ let message = newGreet();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Closures in JavaScript are functions that retain access to variables in the scope 
 where they were defined.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Closures Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Closure Example:</h4>
 <pre>
 function outerFunction() {
@@ -1857,7 +1862,9 @@ and explanations for each concept.</p>
 <h2 id="ex83">83. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Classes in JavaScript provide a way to create objects using a blueprint.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Class Intro:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Class Declaration:</h4>
 <pre>
 class Animal {
@@ -1880,7 +1887,9 @@ console.log(dog.sound()); // Output: 'Animal sound'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Inheritance in JavaScript classes allows a subclass to inherit properties and methods 
 from a superclass.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Class Inheritance Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Extending a Class:</h4>
 <pre>
 class Dog extends Animal {
@@ -1903,7 +1912,9 @@ console.log (puppy.sound()); // Output: 'Woof!'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Static methods in JavaScript classes are called on the class itself rather than on 
 instances of the class.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Class Static Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding a Static Method:</h4>
 <pre>
 class Calculator {
@@ -1919,7 +1930,9 @@ console.log(result); // Output: 8
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Asynchronous programming in JavaScript involves handling operations that don't execute 
 immediately.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Callbacks</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Callbacks in JavaScript are functions passed as arguments to another function to be 
 executed later.</p>
 <h4>Callbacks Example:</h4>
@@ -1935,7 +1948,9 @@ function processData(data) {
 }
 fetchData(processData); // Output after 2 seconds : 'Data received : Some data'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Asynchronous</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Asynchronous operations in JavaScript allow non - blocking execution of code.</p>
 <h4>Asynchronous Example:</h4>
 <pre>
@@ -1951,7 +1966,9 @@ console.log('End');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Promises in JavaScript represent a value that might not be available yet but will 
 resolve or reject in the future.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Promises Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Promise:</h4>
 <pre>
 let myPromise = new Promise((resolve, reject) => {
@@ -1968,7 +1985,9 @@ myPromise.then((result) = > {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Async / await in JavaScript provides a more synchronous way to write asynchronous code 
 using promises.</p>
-<h3>Async I Await Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Async / Await Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Async / Await:</h4>
 <pre>
 async function fetchData() {
@@ -1993,7 +2012,9 @@ and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript interacts with HTML documents through the Document Object Model (DOM), 
 representing the document as a tree structure.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Intro:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing an Element by ID:</h4>
 <h5>html code</h5>
 <pre>
@@ -2008,7 +2029,9 @@ representing the document as a tree structure.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Methods</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>DOM methods provide various ways to manipulate HTML elements.</p>
 <h4>Changing Element Content:</h4>
 <h5>html code</h5>
@@ -2023,7 +2046,9 @@ representing the document as a tree structure.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Document</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The document object represents the entire HTML document.</p>
 <h4>Accessing Document Properties:</h4>
 <h5>html code</h5>
@@ -2038,7 +2063,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Elements</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Elements in the DOM represent HTML tags.</p>
 <h4>Changing Element Styles:</h4>
 <h5>html code</h5>
@@ -2071,7 +2098,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Forms</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows manipulation of HTML forms.</p>
 <h4>Accessing Form Elements:</h4>
 <h5>html code</h5>
@@ -2090,7 +2119,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM CSS</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM CSS allows manipulation of CSS styles.</p>
 <h4>Changing CSS Classes:</h4>
 <h5>html code</h5>
@@ -2106,7 +2137,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Animations</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM supports creating simple animations.</p>
 <h4>Animating an Element:</h4>
 <h5>html code</h5>
@@ -2130,7 +2163,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Events</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Events in the DOM represent interactions by users or by the browser.</p>
 <h4>Click Event Handling:</h4>
 <h5>html code</h5>
@@ -2147,7 +2182,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Event Listener</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The addEventListener method is used to attach an event to an element.</p>
 <h4>Mouseover Event Handling:</h4>
 <h5>html code</h5>
@@ -2164,7 +2201,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Navigation</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows navigation between elements.</p>
 <h4>Traversing Child Elements:</h4>
 <h5>html code</h5>
@@ -2203,7 +2242,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Collections</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Collections in the DOM are arrays of HTML elements.</p>
 <h4>Accessing Collection Elements:</h4>
 <h5>html code</h5>
@@ -2221,7 +2262,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Node Lists</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
 <h4>Accessing Node List Elements:</h4>
 <h5>html code</h5>
@@ -2246,7 +2289,9 @@ for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Browser Object Model (BOM) in JavaScript represents the browser window and its 
 components.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Window</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The window object is the global object in a browser's JavaScript environment.</p>
 <h4>Accessing Window Properties:</h4>
 <pre>
@@ -2260,7 +2305,9 @@ console.log(window.innerWidth); // Output: Inner width of the window
 console.log(screen.width ); // Output: Screen width in pixels
 console.log(screen.height); // Output: Screen height in pixels
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Location</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The location object contains information about the current URL.</p>
 <h4>Accessing Location Information:</h4>
 <pre>
@@ -2274,20 +2321,30 @@ console.log(location.hostname); // Output: Hostname of the current URL
 history.back(); // Go back to the previous page
 history.forward(); // Go forward to the next page
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Navigator</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The navigator object contains information about the browser.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Navigator Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(navigator.userAgent); // Output: User - Agent header of the browser
 console.log(navigator.platform); // Output: Platform of the browser
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Popup Alert</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Popup alerts in JavaScript display messages to users.</p>
 <h4>Displaying an Alert:</h4>
 <pre>alert("This is an alert message");</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Timing</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript's timing functions allow scheduling of code execution.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using setTimeout():</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 setTimeout(() =&gt; {
   console.log("Delayed message");
@@ -2299,9 +2356,13 @@ setinterval(() => {
   console.log("Repeated message");
 }, 3000); // Execute every 3 seconds
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Cookies</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Cookies in JavaScript store small pieces of information on the client's machine.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Setting a Cookie:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document.cookie="username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path=/";
 </pre>
@@ -2318,9 +2379,13 @@ and cookies, with examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Web APIs are sets of tools and interfaces provided by web browsers to interact with 
 various functionalities of the browser or device.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web API Intro</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Web APIs enable web developers to access various browser features and functionalities.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing the Web API:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Example : Using the Geolocation API
 if ("geolocation" in navigator) {
@@ -2332,7 +2397,9 @@ if ("geolocation" in navigator) {
 </pre>
 <h3>Web Forms API</h3>
 <p>The Web Forms API provides methods and properties to manipulate HTML form elements.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document.getElementById("myForm");
 let inputField = form.elements["username"];
@@ -2340,7 +2407,9 @@ console.log(inputField.value);
 </pre>
 <h3>Web History API</h3>
 <p>The Web History API allows manipulation of the browser's history.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Browser History:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 window.history.pushState({page: 1}, "Title", "?page = 1");
 </pre>
@@ -2350,10 +2419,14 @@ window.history.pushState({page: 1}, "Title", "?page = 1");
 <pre>
 localstorage.setitem("key", "value");
 let data = localstorage.getItem("key");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Worker API</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Worker API enables running scripts in the background to handle time - 
 consuming tasks without blocking the UI.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Web Worker:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // worker.js
 self, onmessage = function(event) {
@@ -2367,7 +2440,9 @@ worker.onmessage = function(event) {
 };
 worker.postMessage("Message from main");
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Fetch API</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Fetch API provides a way to make HTTP requests.</p>
 <h4>Making a GET Request:</h4>
 <pre>
@@ -2378,7 +2453,9 @@ fetch ("https://api.example.com/data")
 </pre>
 <h3>Web Geolocation API</h3>
 <p>The Geolocation API retrieves geographical information about the user's device.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Getting User's Location:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 navigator.geolocation.getCurrentPosition ((position) => {
   console.log ("Latitude:", position.coords.latitude);
@@ -2394,7 +2471,9 @@ concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX (Asynchronous JavaScript and XML) is a technique used to send and receive data 
 asynchronously between a web browser and a server.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Intro</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX allows web pages to update content without reloading the entire page.</p>
 <h4>Simple AJAX Request:</h4>
 <pre>
@@ -2407,10 +2486,14 @@ xhttp.onreadystatechange = function () {
 xhttp.open("GET ", " ajax_info.txt", true);
 xhttp.send();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX XMLHttp</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data 
 between a web browser and a server.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using XMLHttpRequest:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2449,9 +2532,13 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "data.json ", true);
 xhttp.send();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX XML File</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can be used to fetch and handle XML files.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Fetching XML File:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2463,9 +2550,13 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "data.xml", true);
 xhttp.send();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX PHP</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can interact with server - side technologies like PHP to exchange data.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Handling AJAX in PHP:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2483,9 +2574,13 @@ xhttp.send();
 echo "Hello from PHP!";
 ?&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX ASP</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Similarly, AJAX can communicate with server - side technologies like ASP.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX with ASP:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2531,18 +2626,26 @@ setinterval(() => {
   // Fetch new messages and update chat interface
 },5000);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Examples</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Here are more examples demonstrating various AJAX functionalities.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 1:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>// Fetch weather data from an API and display on a webpage</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 2:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>// Fetch user - specific data and update profile information dynamically</pre>
 <p>This comprehensive guide covers AJAX (Asynchronous JavaScript and XML), including an 
 introduction to AJAX, using XMLHttp, making AJAX requests and handling responses, 
 fetching XML files, interacting with server - side technologies like PHP and ASP, working 
 with databases, building AJAX applications, and providing examples and explanations for 
 each concept.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 3: Dynamic Content Loading</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2552,27 +2655,37 @@ each concept.</p>
 &lt;title&gt;AJAX Dynamic Content&lt;/title&gt;
 &lt;script&gt;
 function loadContent() {
-let xhttp = new XMLHttpRequest() ;
-xhttp.onreadystatechange = function () {
-if (this.readyState == 4 && this.status == 200 ) {
-document.getElementById("dynamicContent").innerHTML = this.responseText;
-xhttp.open("GET", "content.html" ,true) ;
-xhttp.send();
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if(this.readyState == 4 && this.status == 200 ) {
+      document.getElementById("dynamicContent").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "content.html" ,true) ;
+  xhttp.send();
+}
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;button onclick ="loadContent()" &gt;Load Content&lt;/button&gt;
-&lt;divid =" dynamicContent" &gt;&lt;/div&gt;
+  &lt;button onclick ="loadContent()" &gt;Load Content&lt;/button&gt;
+  &lt;divid = "dynamicContent" &gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.html (Sample Content):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>html code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2> Welcome to Dynamic Content</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This content was loaded dynamically using AJAX . </p>
 This example demonstrates a simple button that triggers an AJAX request to load content from an external HTML file
 and displays it on the webpage without refreshing the entire page .
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 4: Form Submission with AJAX</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2582,14 +2695,16 @@ and displays it on the webpage without refreshing the entire page .
 &lt;title&gt;AJAX Form Submission&lt;/title&gt;
 &lt;script&gt;
 function submitForm() {
-let formData = new FormData(document.getElementById("myForm")) ;
-let xhttp = new XMLHttpRequest () ;
-xhttp.onreadystatechange = function() {
-if (this.readyState = = 4 && this.status == 200) {
-document.getElementById ("response").innerHTML = this.responseText;
-};
-xhttp.open("POST", "processForm.php", true);
-xhttp.send(formData) ;
+  let formData = new FormData(document.getElementById("myForm"));
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("response").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "processForm.php", true);
+  xhttp.send(formData);
+}
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -2601,46 +2716,54 @@ xhttp.send(formData) ;
 &lt;div id ="response"&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-processForm. php ( Server - side Processing):
-php code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>processForm.php (Server-side Processing):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>php code</h5>
+<pre>
 &lt;?php
-if ( $_SERVER [" REQUEST-METHOD "] == " POST ") {
-$username = $_POST [" username "] ;
-^password = $_POST [" password"];
-// Perform validation or database operations
-echo" Form submitted successfully by $username !" ;
+if ($_SERVER["REQUEST-METHOD"] == "POST") {
+  $username = $_POST ["username"];
+  $password = $_POST ["password"];
+  // Perform validation or database operations
+  echo "Form submitted successfully by $username!";
 } else {
-echo" Invalid request!";
+  echo "Invalid request!";
 }
 ?&gt;
 </pre>
 <p>This example demonstrates a form submission using AJAX. When the form is submitted, the data is sent
 asynchronously to a server - side PHP script for processing . The response from the server is displayed on the webpage
 without refreshing the entire page.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 5 : Fetching JSON Data</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch('data.json')
-.then(response =&gt; response.json())
+  .then(response =&gt; response.json())
   .then(data =&gt; {
     console.log(data);
     // Process and use the retrieved JSON data
   })
-  .catch(error =&gt; console.error(’Error:error)) ;
-  data.json(Sample JSON Data):
+  .catch(error =&gt; console.error('Error:', error));
 </pre>
+<h4>data.json(Sample JSON Data):</h4>
 <h5>json code</h5>
 <pre>
 {
-" name " John Doe ",
-" age 30,
-" city" New York"
+  "name": "John Doe",
+  "age": 30,
+  "city": "New York"
 }
 </pre>
 <p>This example utilizes the Fetch API to make an AJAX request to fetch JSON data from a file . Upon successful retrieval,
 the JSON data is processed and used within the JavaScript code.</p>
 <p>These additional examples showcase various use cases of AJAX, such as loading dynamic content, form submission
 without page refresh, and fetching and using JSON data asynchronously.</p>
-<h4>AJAX Example 6 : Image Gallery with AJAX</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>AJAX Example 6: Image Gallery with AJAX</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2650,44 +2773,51 @@ without page refresh, and fetching and using JSON data asynchronously.</p>
 &lt;title&gt;AJAX Image Gallery&lt;/title&gt;
 &lt;script&gt;
 function loadimages () {
-  let xhttp = new XMLHttpRequest ();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-let images = JSON.parse(this.responseText);
-let gallery = document.getElementById ("imageGallery");
-images.forEach(img =&gt; {
-let imageNode = document.createElement("img");
-imageNode.src = img.url;
-gallery.appendChild(imageNode) ;
-});
-};
-xhttp.open("GET", "images.json" , true);
-xhttp.send();
+  let xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      let images = JSON.parse(this.responseText);
+      let gallery = document.getElementById("imageGallery");
+      images.forEach(img =&gt; {
+        let imageNode = document.createElement("img");
+        imageNode.src = img.url;
+        gallery.appendChild(imageNode);
+      });
+    }
+  };
+  xhttp.open("GET", "images.json", true);
+  xhttp.send();
+}
 &lt;/script&gt;
 &lt;/head&gt;
-&lt;body onload="loadimages()" &gt;
-&lt;div id ="imageGallery"&gt;&lt;/div&gt;
+&lt;body onload="loadimages()"&gt;
+  &lt;div id ="imageGallery"&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-images.json(Sample Image Data in JSON Format):
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>images.json(Sample Image Data in JSON Format):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
-{
-"url" image 1.jpg ",
-" caption " Image 1 "
-},
-{
-" url" image2 . jpg ",
-" caption " Image 2 "
-},
-// Add more image objects as needed
+[
+  {
+    "url": "image1.jpg ",
+    "caption": "Image1"
+  },
+  {
+    "url": "image2.jpg",
+    "caption": "Image2"
+  },
+  // Add more image objects as needed
 ]
 </pre>
 <p>This example demonstrates loading images dynamically into an image gallery on a webpage using AJAX . The images
 and their respective URLs are stored in a JSON file, which is fetched asynchronously, and the images are displayed in the
 gallery.</p>
-<h4>AJAX Example 7 : Autocomplete Search</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>AJAX Example 7: Autocomplete Search</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2697,19 +2827,20 @@ gallery.</p>
 &lt;title&gt;Autocomplete Search&lt;/title&gt;
 &lt;script&gt;
 function search() {
-  let query = document.getElementById ("searchinput").value;
-  fetch ('search.php?q = ${query}')
+  let query = document.getElementById("searchinput").value;
+  fetch (`search.php?q = ${query}`)
   .then(response =&gt; response.json())
   .then(data =&gt; {
     let results = document.getElementById("searchResults");
-    results.innerHTML =
-    data.forEach (item = &gt; {
+    results.innerHTML = '';
+    data.forEach (item =&gt; {
       let listitem = document.createElement("li");
       listitem.textContent = item.name;
       results.appendChild(listitem);
     });
   })
-  .catch(error =&gt; console.error('Error :error));
+  .catch(error =&gt; console.error('Error:', error));
+}
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -2722,11 +2853,11 @@ function search() {
 <h5>php code</h5>
 <pre>
 &lt;?php
-$searchTerm = $_GET ['q']; // Get search query
+$searchTerm = $_GET['q']; // Get search query
 // Perform database or data search operations based on the query and return results
 $results = [
-  ["name' => "Result1"],
-  ["name" => "Result2"],
+  ["name" =&gt; "Result1"],
+  ["name" =&gt; "Result2"],
   // Add more search results as needed
 ];
 echo json.encode($results); // Return results as JSON
@@ -2737,25 +2868,28 @@ an AJAX request is made to a server - side PHP script ( search . php ) that proc
 matching results in JSON format, which are then displayed as autocomplete suggestions.</p>
 <p>These additional examples showcase different functionalities of AJAX, such as creating an image gallery dynamically
 and implementing an autocomplete search feature, using asynchronous data fetching and manipulation on a webpage.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 8 : Live Data Update</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
-&lt; ! DOCTYPE html&gt;
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-&lt;title&gt;Live Data Update&lt;/title&gt;
-&lt;script&gt;
-function updateData() {
-setinterval (() =&gt; {
-fetch('live_data.php')
-.then(response = &gt; response.json())
-.then(data = &gt; {
-document.getElementById('liveData').innerText = data.value;
-})
-.catch (error =&gt; console.error('Error :error));
-}, 5000); // Update every 5 seconds
-window.onload = updateData;
-&lt;/script&gt;
+  &lt;title&gt;Live Data Update&lt;/title&gt;
+  &lt;script&gt;
+    function updateData() {
+      setinterval(() =&gt; {
+      fetch('live_data.php')
+        .then(response =&gt; response.json())
+        .then(data =&gt; {
+          document.getElementById('liveData').innerText = data.value;
+        })
+        .catch (error =&gt; console.error('Error :error));
+      }, 5000); // Update every 5 seconds
+	}
+    window.onload = updateData;
+  &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;hl&gt;Live Data: &lt;spanid="liveData"&gt;&lt;/span&gt;&lt;/hl&gt;
@@ -2774,7 +2908,9 @@ echo json_encode($data); // Return live data as JSON
 <p>This example demonstrates updating live data on a webpage at regular intervals using AJAX . The JavaScript function
 updateData uses setinterval to fetch updated data from the server - side PHP script (live_data . php ) every 5 seconds
 and displays it on the webpage.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 9 : Infinite Scroll</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2783,32 +2919,35 @@ and displays it on the webpage.</p>
 &lt;head&gt;
 &lt;title&gt;Infinite Scroll&lt;/title&gt;
 &lt;style&gt;
-#content {
-height: 200px;
-overflow-y: scroll;
+  #content {
+    height: 200px;
+    overflow-y: scroll;
+  }
 &lt;/style&gt;
 &lt;script&gt;
 let page = 1;
 function loadMoreContent () {
-let content = document. getElementById ('content1)
-let scrollHeight = content.scrollHeight;
-let scrollTop = content.scrollTop;
-let offsetHeight = content.offsetHeight;
-if (scrollHeight - scrollTop === offsetHeight) {
-fetch (' content.php?page = ${page}')
-.then(response =&gt; response.text ())
-.then(data =&gt; {
-content. innerHTML + = data;
-page ++ ;
-})
-.catch (error =&gt; console.error('Error :error));
-window . onscroll = loadMoreContent;
+  let content = document.getElementById('content')
+  let scrollHeight = content.scrollHeight;
+  let scrollTop = content.scrollTop;
+  let offsetHeight = content.offsetHeight;
+  if (scrollHeight - scrollTop === offsetHeight) {
+    fetch (`content.php?page = ${page}`)
+      .then(response =&gt; response.text())
+      .then(data =&gt; {
+        content.innerHTML += data;
+        page++;
+      })
+      .catch (error =&gt; console.error('Error :error));
+  }
+}
+window.onscroll = loadMoreContent;
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id ="content" onscroll="loadMoreContent()" &gt;
-&lt;!-- Initially loaded content --&gt;
-&lt;/div&gt;
+  &lt;div id ="content" onscroll="loadMoreContent()" &gt;
+    &lt;!-- Initially loaded content --&gt;
+  &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -2817,8 +2956,8 @@ window . onscroll = loadMoreContent;
 <pre>
 &lt;?php
 $page = $_GET['page']; // Get page number
-$ limit = 10; // Number of items per page
-$ start = ($page - 1)* $limit; // Calculate starting index
+$limit = 10; // Number of items per page
+$start = ($page - 1) * $limit; // Calculate starting index
 // Fetch content based on page number and limit
 // Example :$results = fetchDataFromDatabase($start, $limit);
 // Generate sample content for demonstration
@@ -2835,7 +2974,9 @@ existing content on the webpage.</p>
 <p>These additional examples showcase different functionalities of AJAX, such as live data updates and implementing
 infinite scroll behavior on a webpage, demonstrating how AJAX can be used to fetch and display data dynamically
 without page reloads.</p>
-<h4>AJAX Example 10 : File Upload with Progress Bar</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>AJAX Example 10: File Upload with Progress Bar</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2845,28 +2986,30 @@ without page reloads.</p>
 &lt;title&gt;File Upload with Progress&lt;/title&gt;
 &lt;script&gt;
 function uploadFile () {
-let fileinput = document. getElementById ('fileinput') ;
-let file = fileinput.files[0];
-let formData = new FormData();
-formData.append ('file', file) ;
-let xhr = new XMLHttpRequest() ;
-xhr.open('POST1, 'upload.php', true);
-xhr.upload.onprogress = function(e) {
-if (e.lengthComputable) {
-let percentComplete = (e.loaded / e.total) * 100;
-document.getElementById(’progressBar').style.width = percentComplete + ' % ';
-};
-xhr.onload = function() {
-if (xhr.status === 200) {
-alert('File uploaded successfully!');
-} else {
-alert('Error uploading file.') ;
-};
-xhr. send (formData) ;
+  let fileinput = document.getElementById('fileinput');
+  let file = fileinput.files[0];
+  let formData = new FormData();
+  formData.append ('file', file);
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST1, 'upload.php', true);
+  xhr.upload.onprogress = function(e) {
+    if (e.lengthComputable) {
+      let percentComplete = (e.loaded / e.total) * 100;
+      document.getElementById('progressBar').style.width = percentComplete + '%';
+	}
+  };
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      alert('File uploaded successfully!');
+    } else {
+      alert('Error uploading file.') ;
+    };
+  xhr.send(formData);
+}
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;input type ="file " id =" fileinput"&gt;
+&lt;input type ="file" id ="fileinput"&gt;
 &lt;button onclick =" uploadFile ()"&gt;Upload&lt;/button&gt;
 &lt;div id ="progressBarContainer"&gt;
 &lt;divid ="progressBar"&gt;&lt;/div&gt;
@@ -2878,51 +3021,55 @@ xhr. send (formData) ;
 <h5>php code</h5>
 <pre>
 &lt;?php
-if ( $_SERVER [ 'REQUEST-METHOD' ] = = = 'POST' && isset ( $_FILES [ 'file' ])) {
-$targetDir = 'uploads / ';
-$targetFile = $targetDir. basename ( $-FILES [ 'file' ][ 'name' ]);
-if ( move_uploaded_file ( $ .FILES [ 'file' ][ 'tmpjname' ], $targetFile )) {
-echo 'File uploaded successfully !';
-} else {
-echo 'Error uploading file .';
+if ($_SERVER['REQUEST-METHOD'] === 'POST' && isset($_FILES['file'])) {
+  $targetDir = 'uploads/';
+  $targetFile = $targetDir.basename($-FILES['file']['name']);
+  if (move_uploaded_file($.FILES['file']['tmp_name'], $targetFile)) {
+    echo 'File uploaded successfully!';
+  } else {
+    echo 'Error uploading file.';
+  }
 }
 ?&gt;
 </pre>
 <p>This example demonstrates a file upload functionality using AJAX with a progress bar . When a user selects a file
 and clicks the " Upload" button, the file is uploaded asynchronously to the server using an XMLHttpRequest. The
 progress bar visually indicates the upload progress.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 11: Displaying Time Dynamically</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-<title>Displaying Time Dynamically</title>
-<script>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Displaying Time Dynamically&lt;/title&gt;
+&lt;script&gt;
 function displayTime() {
-let timeDisplay = document.getElementById('timeDisplay') ;
-setinterval(() => {
-fetch('getTime.php')
-.then(response => response.text())
-.then( data => {
-timeDisplay.innerHTML = data;
-})
-.catch (error = > console.error('Error :error));
-}, 1000 ); // Update every second
-window.onload = displayTime;
-</script>
-</head>
-<body>
-<hl>Current Time : <span id =" timeDisplay"></span></hl>
-</body>
-</html>
+  let timeDisplay = document.getElementById('timeDisplay') ;
+  setinterval(() =&gt; {
+    fetch('getTime.php')
+      .then(response =&gt; response.text())
+      .then(data =&gt; {
+        timeDisplay.innerHTML = data;
+      })
+      .catch (error = &gt; console.error('Error :', error));
+  }, 1000); // Update every second
+  window.onload = displayTime;
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;hl&gt;Current Time: &lt;span id =" timeDisplay"&gt;&lt;/span&gt;&lt;/hl&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
-<p>getTime.php( Server - side Script to Get Current Time):</p>
+<p>getTime.php(Server-side Script to Get Current Time):</p>
 <h5>php code</h5>
 <pre>
-<?php
-echo date ('h : i: s A'); // Return current time
-?>
+&lt;?php
+echo date ('h: i: s A'); // Return current time
+?&gt;
 </pre>
 <p>This example demonstrates dynamically displaying the current time on a webpage using AJAX. The displayTime
 function fetches the current time from the server - side PHP script (getTime.php) at intervals of one second and
@@ -2933,307 +3080,389 @@ client and server without page reloads, enhancing user experience and providing 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex93">93. JS JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write
-and easy for machines to parse and generate . It is commonly used to transmit data between a server and a web
-application.
-JSON Intro
-JSON serves as a language - independent data format derived from JavaScript object literals . It's widely used for data
-exchange between web servers and web clients .
-<h3>Example of JSON Data:</h3>
+<p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is 
+easy for humans to read and write and easy for machines to parse and generate. It is 
+commonly used to transmit data between a server and a web application.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Intro</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JSON serves as a language - independent data format derived from JavaScript object 
+literals. It's widely used for data exchange between web servers and web clients.</p>
+<h4>Example of JSON Data:</h4>
 <h5>json code</h5>
 <pre>
 {
-" name " John Doe ",
-’■ age ":30,
-" email" john@example . com " t
-" isStudentfalse,
-" address{
-" street" 123 Main St",
-" city" Anytown "
-1,
-" hobbies [" reading "," coding "," traveling "]
+  "name": "John Doe",
+  "age": 30,
+  "email": "john@example.com",
+  "isStudent": false,
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown"
+  },
+  "hobbies":["reading","coding","traveling"]
 }
 </pre>
-<h4>JSON Syntax</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Syntax</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON syntax is derived from JavaScript object notation, consisting of key - value pairs enclosed in curly braces {}, and
 values can be strings, numbers, objects, arrays, booleans, or null.</p>
-<h3>Example of JSON Syntax:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of JSON Syntax:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 {
-"keyl valuel",
-" key2123,
-" key3 true,
-" key4null,
-" key5 {
-" nestedKey" nestedValue "
-" key6 [" arrayValuel " >" arrayValue2 "]
+  "keyl": "valuel",
+  "key2": 123,
+  "key3": true,
+  "key4": null,
+  "key5": {
+    "nestedKey": "nestedValue"
+  },
+  "key6":["arrayValuel", "arrayValue2"]
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON vs XML</h4>
-<p>JSON and XML are both used for data interchange, but JSON is generally more lightweight and easier to read and parse
-than XML.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JSON and XML are both used for data interchange, but JSON is generally more 
+lightweight and easier to read and parse than XML.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example Comparison between JSON and XML:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 // JSON
 {
-" name " John",
-" age 25,
-’■ city" New York"
+  "name": "John",
+  "age": 25,
+  "city": "New York"
 }
 </pre>
 <h5>xml code</h5>
 <pre>
-<!-- XML -->
-<user>
-<name>John </name>
-<age>25</age>
-<city>New York</city>
-</user>
+&lt;!-- XML --&gt;
+&lt;user&gt;
+  &lt;name&gt;John&lt;/name&gt;
+  &lt;age&gt;25&lt;/age&gt;
+  &lt;city&gt;New York&lt;/city&gt;
+&lt;/user>&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Data Types</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Different Data Types in JSON:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 {
-" string" Hello, World !",
-" number42,
-" booleantrue,
-" nullValuenull,
-" object" key" value "},
-" array":[ 1,2,3 ]
+  "string": "Hello, World!",
+  "number": 42,
+  "booleantrue",
+  "nullValuenull",
+  "object" key value"},
+  "array":[1,2,3]
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Parse</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Parsing:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonString = '{" nameAlice", "age": 28}';
-let jsonObj = JSON . parse (jsonString);
-console . log (jsonObj. name); // Output: Alice
+let jsonString = '{"name": "Alice", "age": 28}';
+let jsonObj = JSON.parse(jsonString);
+console.log(jsonObj.name); // Output: Alice
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Stringify</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a JSON string.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Stringification:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let obj = {name Bob ", age : 30};
-let jsonString = JSON . stringify ( obj);
-console.log(jsonString); // Output: {" name Bob "," age 30}
+let obj = {name: "Bob ", age: 30};
+let jsonString = JSON.stringify(obj);
+console.log(jsonString); // Output: {"name": "Bob", "age": 30}
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Objects</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON objects contain key - value pairs enclosed in curly braces {}. Keys must be strings, and values can be of any JSON
 data type.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of a JSON Object:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 {
-" name " Sarah",
-" age "-.35,
-" city" London"
+  "name": "Sarah",
+  "age": 35,
+  "city": "London"
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Arrays</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can be of any JSON data type.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of a JSON Array:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>json code</h4>
 <pre>
-[" apple 11," banana"," orange "]
+["apple", "banana", "orange"]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Server</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON is commonly used to transfer data between a server and a web client in web development. Servers often provide
 data in JSON format through APIs.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Data from a Server:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 // Received from a server API endpoint
 {
-’■ id1,
-" title " Sample Post" ,
-" content" This is a sample post content
+  "id": 1,
+  "title": "Sample Post",
+  "content": "This is a sample post content."
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON PHP</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode () and json.decode () functions respectively, to
 convert data to and from JSON format.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of Encoding and Decoding JSON in PHP:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 // Encoding PHP array to JSON
-$data = array (" name "= > " Peter ", " age "= > 28 );
-$jsonData = json.encode ( $data);
+$data = array("name " => " Peter ", " age " => 28 );
+$jsonData = json.encode($data);
+
 // Decoding JSON to PHP array
-$jsonString = ’{" name Alice ", "age": 30}’;
-$decodedData = json.decode ( $jsonString, true );
+$jsonString = '{" name": " Alice ", "age": 30}';
+$decodedData = json.decode($jsonString, true);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON HTML</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of Using JSON Data in HTML:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>html code</h5>
 <pre>
-<ul id ="userList"></ul>
-<script>
+&lt;ul id ="userList"&gt;&lt;/ul&gt;
+&lt;script&gt;
 const users = [
-{"name John ", "age": 25},
-{"name Alice ", "age": 30},
-{"name Bob ", "age": 28}
+  {"name":"John", "age": 25},
+  {"name":"Alice", "age": 30},
+  {"name":"Bob", "age": 28}
 ];
 const userList = document.getElementById("userList");
-users.forEach(user => {
-let listitem = document.createElement("li");
-listitem.textContent = '${user.name} - ${user.age} years old';
-userList.appendChild(listitem);
+users.forEach(user =&gt; {
+  let listitem = document.createElement("li");
+  listitem.textContent = `${user.name} - ${user.age} years old`;
+  userList.appendChild(listItem);
 });
-</script>
+&lt;/script&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON JSONP</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different domain in web development to
 bypass the same - origin policy limitations.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSONP Request:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function handleData ( data) {
-console . log ( data);
+function handleData(data) {
+  console.log(data);
 }
-let script = document. createElement ('script');
-script. src = ’https :// example . com / data?callback = handleData';
-document. head . appendChild ( script) ;
+let script = document.createElement('script');
+script.src = 'https://example.com/data?callback=handleData';
+document.head.appendChild(script);
 </pre>
 <p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including an introduction, syntax,
 comparison with XML, data types, parsing, stringifying, JSON objects and arrays, working with JSON in server - side
 technologies like PHP, HTML, and JSONP, with examples and explanations for each topic . JSON plays a crucial role in
 data interchange in web development due to its simplicity, ease of use, and widespread support.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating a JSON Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {
-" name " John",
-"age": 30,
-" city" New York"
+  "name": "John",
+  "age": 30,
+  "city": "New York"
 };
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Accessing JSON Object Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(person.name); // Output: John
 console.log(person.age); // Output: 30
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Nested JSON Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employee = {
-" name " Alice ",
-" position " Engineer ",
-" contact{
-" email" alice@example . com ",
-" phone 123 -456 - 7890"
+  "name ": "Alice",
+  "position ": "Engineer",
+  "contact": {
+    "email":"alice@example.com",
+    "phone":"123-456-7890"
+  }
 };
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. JSON Array of Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let books = [
-{ " title
-" Book 1 ", " author" Author 1 "},
-{ " title
-" Book 2 ", " author " Author 2 "},
-{ " title
-" Book 3 ", " author" Author 3 "}
+  {"title":"Book1", "author":"Author1"},
+  {"title":"Book2", "author":"Author2"},
+  {"title":"Book3", "author":"Author3"}
 ];
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Converting JSON to String:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonString = JSON . stringify (person );
-console . log (jsonString); // Output: {" name John"," age 30," cityNew York"}
+let jsonString = JSON.stringify(person);
+console.log(jsonString); // Output: {"name":"John", "age": 30, "city":"New York"}
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Parsing JSON String to Object:</h4>
-javascript code
-let jsonObject = JSON . parse (’{" name Alice "," age 25," cityLondon ";
-console . log (jsonObject. name ); // Output: Alice
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+let jsonObject = JSON.parse ('{"name":"Alice", "age": 25, "city":"London "}');
+console.log(jsonObject.name); // Output: Alice
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Fetching JSON Data from URL (using Fetch API):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-fetch ('data . json')
-.then ( response = > response . json ())
-.then (data = > console . log (data))
-.catch ( error = > console . error (’Error :', error)) ;
+fetch('data.json')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Displaying JSON Data Dynamically in HTML:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonData = {"name" Bob", "age 28};
-let display Div = document.getElementById('jsonDataDisplay');
-displayDiv.innerHTML = ' <p>Name: ${jsonData.name} </p><p>Age: ${jsonData.age}</p>
+let jsonData = {"name":"Bob", "age": 28};
+let displayDiv = document.getElementById('jsonDataDisplay');
+displayDiv.innerHTML = ` <p>Name: ${jsonData.name} </p><p>Age: ${jsonData.age}</p>`;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Handling JSON Data in Forms:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document. getElementById ('myForm');
-form . addEventListener ('submit', function ( event) {
-event. preventDefault ();
-let formData = new FormData (form );
-let jsonObject = {};
-formData . forEach ((value, key) = > {
-jsonObject [ key ] = value;
-1);
-console . log (jsonObject);
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  let formData = new FormData(form);
+  let jsonObject = {};
+  formData.forEach((value, key) => {
+    jsonObject[key] = value;
+  });
+  console.log(jsonObject);
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Stringifying and Parsing a More Complex Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let complexObj = {
-" name ":" Sam ",
-"age": 35,
-" addresses[
-{ " type " home ", " address ": "123 Main St"},
-{ " type " work", " address ": "456 Business Ave "}
-]
+  "name":"Sam",
+  "age": 35,
+  "addresses[
+    {"type ": "home", "address": "123 Main St"},
+    {"type ": "work", "address": "456 Business Ave"}
+  ]
 };
 let complexstring = JSON.stringify(complexObj);
 let parsedObj = JSON.parse(complexstring);
 console.log(parsedObj.addresses[0].address); // Output: 123 Main St
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. Filtering JSON Array Data:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employees = [
-{ " name " John ", " department":" HR"},
-{ " name " Alice ", " department" IT "},
-{ " name " Bob ", " department":" HR"}
-1;
-let hrEmployees = employees . filter ( employee = > employee . department = = = " HR"
-console . log (hrEmployees ); // Output: [ { " name " John ", " department": " HR" }, { " name " Bob ",
-"department"HR"}]
+  {"name": "John", "department":" HR"},
+  {"name": "Alice", "department":" IT "},
+  {"name": "Bob", "department":" HR"}
+];
+let hrEmployees = employees.filter(employee => employee.department === "HR");
+  console.log(hrEmployees); // Output: [{"name": "John", "department": "HR"}, {"name": "Bob",
+"department": "HR"}]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let product = { " name Chair ", "price": 50};
-product. price =60;
-console . log (product); // Output: { " name " Chair", " price 60 }
+let product = {"name":"Chair", "price": 50};
+product.price = 60;
+console.log(product); // Output: { " name " Chair", " price 60 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Removing a Property from JSON Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let data = { 11 name " Kate ", " age 25 };
-delete data. age;
-console . log ( data); // Output: { " name ":" Kate " }
+let data = {"name":"Kate", "age": 25};
+delete data.age;
+console.log(data); // Output: {"name":"Kate"}
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Using JSON with Local Storage:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let userData = { " username " user 123 ", " email" user@example . com " };
-localstorage . setitem ('userData1, JSON . stringify (userData));
-let storedData = JSON . parse (localstorage . getltem ('userData1));
-console . log ( storedData . email); // Output: user@example . com
+let userData = {"username":"user123", "email":"user@example.com"};
+localstorage.setitem('userData', JSON.stringify(userData));
+let storedData = JSON.parse(localstorage.getltem('userData'));
+console.log(storedData.email); // Output: user@example.com
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Handling JSON Date Strings:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonData = { " date ": " 2023 - 12 - 31T08 : 00 : 00Z " };
-let date = new Date (jsonData . date);
-console . log ( date . toDateString ()); // Output: Fri Dec 31 2023
+let jsonData = {"date": "2023 - 12 - 31T08 : 00 : 00Z"};
+let date = new Date(jsonData.date);
+console.log(date.toDateString()); // Output: Fri Dec 31 2023
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Using JSON in Asynchronous Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function fetchData () {
-try {
-let response = await fetch ('data . json') ;
-let data = await response . json ();
-console . log ( data);
-} catch ( error) {
-console . error ('Error :error) ;
+async function fetchData() {
+  try {
+    let response = await fetch('data.json');
+    let data = await response.json();
+    console.log(data);
+  } catch(error) {
+    console.error('Error: error') ;
+  }
+  fetchData ();
 }
-fetchData ();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. JSON Serialization with Custom Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {
 " name " Joe ",
@@ -3244,20 +3473,26 @@ return * { " name " ${this . name}", " birthday" ${this . birthday. toISOString 
 let jsonString = obj. tojson ();
 console . log (jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Handling JSON Data from an API (Using Axios ):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 axios . get ('https :// api. example . com / data')
 . then ( response = > console . log (response . data))
 . catch ( error = > console . error ('Error :', error)) ;
 </per>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Merging JSON Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobjl = { " name Tom ", "age": 30};
 let obj2 = { " city" Paris ", " country" France "};
 letmergedObj = { ... objl, ... obj2};
 console . log ( mergedObj); // Output: { " name " Tom", " age 30, " city" Paris ", " country" France " }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Mapping JSON Data to Another Structure:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = [
 { "id": 1, " name Item 1 "},
@@ -3277,10 +3512,14 @@ working with JSON data in various scenarios.</p>
 <p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write
 and easy for machines to parse and generate . It is commonly used to transmit data between a server and a web
 application.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Intro</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON serves as a language - independent data format derived from JavaScript object literals . It's widely used for data
 exchange between web servers and web clients.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Data:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 {
@@ -3295,7 +3534,9 @@ exchange between web servers and web clients.</p>
 " hobbies [" reading "," coding "," traveling "]
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Syntax</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON syntax is derived from JavaScript object notation, consisting of key - value pairs enclosed in curly braces {}, and
 values can be strings, numbers, objects, arrays, booleans, or null.</p>
 <h3>Example of JSON Syntax:</h3>
@@ -3311,10 +3552,14 @@ values can be strings, numbers, objects, arrays, booleans, or null.</p>
 " key6 [" arrayValuel " >" arrayValue2 "]
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON vs XML</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more lightweight and easier to read and parse
 than XML.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example Comparison between JSON and XML:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 // JSON
@@ -3331,9 +3576,13 @@ than XML.</p>
   <age>25< / age>
   <city>New York< / city>
 </user>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Data Types</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of Different Data Types in JSON:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 {
@@ -3345,17 +3594,25 @@ than XML.</p>
 " array":[ 1,2,3 ]
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Parse</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Parsing:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonString = '{"nameAlice", "age": 28}';
 let jsonObj = JSON.parse(jsonString);
 console.log (jsonObj.name); // Output: Alice
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Stringify</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify () is a method in JavaScript used to convert a JavaScript object into a JSON string.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Stringification:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {name Bob ", age : 30};
 let jsonString = JSON . stringify ( obj);
@@ -3364,7 +3621,9 @@ console . log (jsonString); // Output: {" name Bob "," age 30}
 <h4>JSON Objects</h4>
 <p>JSON objects contain key - value pairs enclosed in curly braces {}. Keys must be strings, and values can be of any JSON
 data type.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of a JSON Object:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 {
@@ -3373,17 +3632,23 @@ data type.</p>
 " city" London"
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Arrays</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can be of any JSON data type.</p>
 <h3>Example of a JSON Array:</h3>
 <h5>json code</h5>
 <pre>
 [" apple 11," banana"," orange "]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Server</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON is commonly used to transfer data between a server and a web client in web development. Servers often provide
 data in JSON format through APIs.</p>
-<h3>Example of JSON Data from a Server:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of JSON Data from a Server:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 // Received from a server API endpoint
@@ -3393,21 +3658,26 @@ data in JSON format through APIs.</p>
 " content" This is a sample post content
 }
 </pre>
-JSON PHP
-In PHP, JSON data can be encoded and decoded using json_encode () and json.decode () functions respectively, to
-convert data to and from JSON format.
-Example of Encoding and Decoding JSON in PHP :
-php code
+<h5>JSON PHP</h5>
+<p>In PHP, JSON data can be encoded and decoded using json_encode () and json.decode () functions respectively, to
+convert data to and from JSON format.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of Encoding and Decoding JSON in PHP:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>php code</h5>
+<pre>
 // Encoding PHP array to JSON
 $data = array (" name "= > " Peter ", " age "= > 28 );
 $jsonData = json.encode ( $data);
 // Decoding JSON to PHP array
 $jsonString = ’{" name Alice ", "age": 30}’;
 $decodedData = json.decode ( $jsonString, true );
-JSON HTML
-JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.
-Example of Using JSON Data in HTML:
-html code
+</pre>
+<h4>JSON HTML</h4>
+<p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
+<h3>Example of Using JSON Data in HTML:</h3>
+<h5>html code</h5>
+<pre>
 <ul id =" userList" >< / ul>
 <script>
 const users = [
@@ -3421,35 +3691,45 @@ let listitem = document. createElement (" li") ;
 listitem . textContent = ' ${user. name} - ${user. age} years old';
 userList. appendChild (listitem);
 });
-< / script>
-JSON JSONP
-JSONP (JSON with Padding) is a technique for requesting JSON data from a different domain in web development to
-bypass the same - origin policy limitations .
-Example of JSONP Request:
-javascript code
+</script>
+</pre>
+<h4>JSON JSONP</h4>
+<p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different domain in web development to
+bypass the same - origin policy limitations.</p>
+<h3>Example of JSONP Request:</h3>
+<pre>
 function handleData ( data) {
 console . log ( data);
 }
 let script = document. createElement ('script');
 script. src = ’https :// example . com / data?callback = handleData';
 document. head . appendChild ( script) ;
-This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including an introduction, syntax,
+</pre>
+<p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including an introduction, syntax,
 comparison with XML, data types, parsing, stringifying, JSON objects and arrays, working with JSON in server - side
 technologies like PHP, HTML, and JSONP, with examples and explanations for each topic . JSON plays a crucial role in
-data interchange in web development due to its simplicity, ease of use, and widespread support.
-1 . Creating a JSON Object:
-javascript code
+data interchange in web development due to its simplicity, ease of use, and widespread support.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Creating a JSON Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let person = {
 " name " John",
 "age": 30,
 " city" New York"
 };
-2 . Accessing JSON Object Properties :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+2. Accessing JSON Object Properties :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 console . log (person . name ); // Output: John
 console . log (person . age ); // Output: 30
-3 . Nested JSON Objects :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+3. Nested JSON Objects :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let employee = {
 " name " Alice ",
 " position " Engineer ",
@@ -3457,8 +3737,11 @@ let employee = {
 " email" alice@example . com ",
 " phone 123 -456 - 7890"
 };
-4 . JSON Array of Objects :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+4. JSON Array of Objects:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let books = [
 { " title
 " Book 1 ", " author" Author 1 "},
@@ -3467,27 +3750,42 @@ let books = [
 { " title
 " Book 3 ", " author" Author 3 "}
 ];
-5 . Converting JSON to String:
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+5. Converting JSON to String:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let jsonString = JSON . stringify (person );
 console . log (jsonString); // Output: {" name John"," age 30," cityNew York"}
-6 . Parsing JSON String to Object:
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+6. Parsing JSON String to Object:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let jsonObject = JSON . parse (’{" name Alice "," age 25," cityLondon ";
 console . log (jsonObject. name ); // Output: Alice
-7 . Fetching JSON Data from URL (using Fetch API):
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+7. Fetching JSON Data from URL (using Fetch API):
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 fetch ('data . json')
 . then ( response = > response . json ())
 . then (data = > console . log (data))
 . catch ( error = > console . error (’Error :', error)) ;
-8 . Displaying JSON Data Dynamically in HTML:
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+8. Displaying JSON Data Dynamically in HTML:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let jsonData = { " name " Bob ", " age 28 };
 let display Div = document. getElementById ('jsonDataDisplay');
 displayDiv. innerHTML = ' <p>Name : ${jsonData . name}< / p><p>Age : ${jsonData . age}< / p>
-9 . Handling JSON Data in Forms :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+9. Handling JSON Data in Forms :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let form = document. getElementById ('myForm');
 form . addEventListener ('submit', function ( event) {
 event. preventDefault ();
@@ -3498,8 +3796,11 @@ jsonObject [ key ] = value;
 1);
 console . log (jsonObject);
 });
-10 . Stringifying and Parsing a More Complex Object:
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+10. Stringifying and Parsing a More Complex Object:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let complexObj = {
 " name ":" Sam ",
 "age": 35,
@@ -3511,8 +3812,11 @@ let complexObj = {
 let complexstring = JSON . stringify ( complexObj);
 let parsedObj = JSON . parse ( complexstring);
 console . log (parsedObj. addresses [ 0 ]. address ); // Output: 123 Main St
-11 . Filtering JSON Array Data:
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+11. Filtering JSON Array Data:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let employees = [
 { " name " John ", " department":" HR"},
 { " name " Alice ", " department" IT "},
@@ -3521,29 +3825,44 @@ let employees = [
 let hrEmployees = employees . filter ( employee = > employee . department = = = " HR"
 console . log (hrEmployees ); // Output: [ { " name " John ", " department": " HR" }, { " name " Bob ",
 " department" HR" } ]
-12 . Updating JSON Object Properties :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+12. Updating JSON Object Properties:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let product = { " name Chair ", "price": 50};
 product. price =60;
 console . log (product); // Output: { " name " Chair", " price 60 }
-13 . Removing a Property from JSON Object:
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+13. Removing a Property from JSON Object:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let data = { 11 name " Kate ", " age 25 };
 delete data. age;
 console . log ( data); // Output: { " name ":" Kate " }
-14 . Using JSON with Local Storage :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+14. Using JSON with Local Storage:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let userData = { " username " user 123 ", " email" user@example . com " };
 localstorage . setitem ('userData1, JSON . stringify (userData));
 let storedData = JSON . parse (localstorage . getltem ('userData1));
 console . log ( storedData . email); // Output: user@example . com
-15 . Handling JSON Date Strings :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+15. Handling JSON Date Strings:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 let jsonData = { " date ": " 2023 - 12 - 31T08 : 00 : 00Z " };
 let date = new Date (jsonData . date);
 console . log ( date . toDateString ()); // Output: Fri Dec 31 2023
-16 . Using JSON in Asynchronous Functions :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+16. Using JSON in Asynchronous Functions:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 async function fetchData () {
 try {
 let response = await fetch ('data . json') ;
@@ -3553,8 +3872,11 @@ console . log ( data);
 console . error ('Error :error) ;
 }
 fetchData ();
-17 . JSON Serialization with Custom Functions :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+17. JSON Serialization with Custom Functions:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 letobj = {
 " name " Joe ",
 "birthday": new Date ('1990 - 01 - 15T00 : 00 : 00Z'),
@@ -3563,20 +3885,28 @@ return * { " name " ${this . name}", " birthday" ${this . birthday. toISOString 
 };
 let jsonString = obj. tojson ();
 console . log (jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 18. Handling JSON Data from an API (Using Axios):
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-axios . get ('https :// api. example . com / data')
-. then ( response = > console . log (response . data))
-. catch ( error = > console . error ('Error :', error)) ;
+axios.get('https://api.example.com/data')
+  .then(response => console.log(response.data))
+  .catch(error => console.error ('Error:', error));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Merging JSON Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-letobjl = { " name Tom ", "age": 30};
-let obj2 = { " city" Paris ", " country" France "};
-letmergedObj = { ... objl, ... obj2};
-console . log ( mergedObj); // Output: { " name " Tom", " age 30, " city" Paris ", " country" France " }
+let objl = {"name":"Tom", "age": 30};
+let obj2 = {"city":"Paris", "country":"France"};
+let mergedObj = { ... objl, ...obj2};
+console.log(mergedObj); // Output: {name: 'Tom', age: 30, city: 'Paris', country: 'France'}
 </pre>
+<!-- image019.jpg 500px width, 167px height -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Mapping JSON Data to Another Structure:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = [
 { "id": 1, " name Item 1 "},
@@ -3587,31 +3917,41 @@ let mappedData = data . map (item = > ({itemId : item . id, itemName : item . na
 console . log ( mappedData);
 // Output: [{ "itemId": 1, " itemName ":" Item 1" }, { "itemId": 2, " itemName":" Item 2 " }, { "itemId": 3,
 " itemName ":" Item 3 " } ]
-These examples showcase different aspects of using JSON in JavaScript, including creating, manipulating, parsing, and
-working with JSON data in various scenarios .
-document. getElementById (" mylmage "). setAttribute (" src ", " new_image . jpg ");
 </pre>
-<h3>j Query:</h3>
+<p>These examples showcase different aspects of using JSON in JavaScript, including 
+creating, manipulating, parsing, and working with JSON data in various scenarios.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="ex94">JavaScript vs jQuery: A Comprehensive Comparison</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+document. getElementById (" mylmage "). setAttribute (" src ", " new_image . jpg ");
+<h4>jQuery:</h4>
 <pre>
 $ (" #mylmage "). attr (" src ", " newjmage . jpg");
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let inputValue = document. getElementById (" mylnput"). value;
 </pre>
-<h3>j Query:</h3>
+<h4>jQuery:</h4>
 <pre>
 let inputValue = $("#mylnput").val();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Checking Checkbox State:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let isChecked = document. getElementById (" myCheckbox "). checked;
 </pre>
-<h3>jQuery:</h3>
+<h4>jQuery:</h4>
 <pre>
 let isChecked = $ (" #myCheckbox"). prop (" checked") ;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Iterating Over NodeList:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let elements = document. querySelectorAll (". myClass ") ;
 elements . forEach (function ( element) {
@@ -3624,7 +3964,9 @@ $ (". myClass "). each ( function () {
 console . log ( $ (this ). text ());
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Handling Form Submission:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document. getElementById (" myForm “). addEventListener (" submit" t function ( event) {
 event. preventDefault ();
@@ -3640,7 +3982,9 @@ $("#myForm").submit(function(event) {
 // Process form data
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Animating Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let element = document. getElementById (" myElement") ;
 element. style . transition = " transform 2 s 11;
@@ -3650,31 +3994,40 @@ element. style . transform = " rotate ( 360deg)" ;
 <pre>
 $ (" #myElement"). animate ({rotate :" 360deg "}, 2000 );
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Changing Background Color on Click:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let myDiv = document. getElementById (" myDiv") ;
-myDiv. addEventListener (" click", function () {
-this . style . backgroundcolor = " red ";
+let myDiv = document.getElementById("myDiv");
+myDiv.addEventListener("click", function() {
+  this.style.backgroundcolor = "red";
 });
 </pre>
 <h4>jQuery:</h4>
 <pre>
-$(" #myDiv"). click ( function () {
-$(this ). css (" background - color ", " red") ;
+$("#myDiv").click (function() {
+  $(this).css("background-color ", "red");
 });
 </pre>
 <p>These examples demonstrate how JavaScript and jQuery can achieve similar tasks, showcasing the differences in
 syntax and complexity between the two when performing common web development operations.</p>
-<h3>JavaScript Graphics Libraries : Explained</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>JavaScript Graphics Libraries : Explained</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. JavaScript Graphics</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript is a versatile language that allows developers to create interactive graphics and visualizations on the web.
 Several libraries and tools empower developers to generate captivating graphics for data representation, animations,
 games, and more.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. JS Canvas</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The HTML <canvas> element is a powerful tool in JavaScript for drawing graphics on a web page dynamically. It
 provides a bitmap area where JavaScript code can be used to create animations, render shapes, images, and complex
 visualizations.</p>
-<h3>Example - Drawing a Circle on Canvas:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example - Drawing a Circle on Canvas:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document. getElementById ('myCanvas') ;
 const ctx = canvas . getContext ('2d');
@@ -3682,20 +4035,28 @@ ctx.beginPath();
 ctx.arc(100,100, 50, 0, 2 * Math . PI);
 ctx.stroke();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. JS Plotly</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Plotly is a JavaScript graphing library that allows developers to create interactive and publication - quality graphs . It
 supports various chart types, including line plots, bar charts, pie charts, scatter plots, and more . Plotly provides easy -
 to - use APIs for customization and interactivity.</p>
-<h3>Example - Creating a Line Chart with Plotly:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example - Creating a Line Chart with Plotly:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [ {x: [ 1, 2, 3,4 ],y : [ 10,15, 13,18 ], type : 'scatter'} ];
 Plotly . newPlot ('myDiv', data);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. JS Chart.js</h4>
-<p>Chart. js is a popular JavaScript library for creating simple yet flexible charts . It supports various chart types and
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Chart.js is a popular JavaScript library for creating simple yet flexible charts . It supports various chart types and
 provides easy integration . With Chart. js, developers can create responsive and visually appealing charts.</p>
 
-<h3>Example - Creating a Bar Chart with Chart.js:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example - Creating a Bar Chart with Chart.js:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d1);
 const myChart = new Chart ( ctx, {
@@ -3723,10 +4084,14 @@ borderColor: [
 ],
 border Width: 1
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. JS Google Chart</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Google Charts is a feature - rich JavaScript charting library that offers a wide range of visualization options . It allows
 the creation of interactive charts, maps, and graphs using declarative JavaScript syntax .
-<h3>Example - Creating a Pie Chart with Google Charts:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example - Creating a Pie Chart with Google Charts:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load ('current', {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -3746,11 +4111,15 @@ const options = {
   chart.draw (data, options) ;
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. JSD3.js</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>D3.js (Data - Driven Documents) is a powerful JavaScript library used for creating data visualizations in SVG, HTML,
 and CSS . It provides comprehensive functionalities to manipulate documents based on data, enabling the creation of
 interactive and dynamic visualizations.</p>
-<h3>Example - Creating a Basic SVG Circle with D3.js:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example - Creating a Basic SVG Circle with D3.js:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3 . select ('body')
 . append ('svg')
@@ -3762,21 +4131,28 @@ svg . append ('circle')
 . attr ('r', 40 )
 . attr ('fill', 'blue1) ;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Conclusion</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript graphics libraries and tools like Canvas, Plotly, Chart. js, Google Charts, and D3 . js offer diverse capabilities
 for creating stunning visualizations and interactive graphics on the web. Each library has its strengths, from
 simplicity and ease of use to extensive customization and advanced features, catering to various needs in data
 representation, UII UX enhancements, and more in web development. Understanding and leveraging these libraries
 empower developers to craft visually compelling and data - driven web applications.</p>
-<h3>Canvas Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Canvas Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Draw Rectangle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d1) ;
 ctx.fillstyle = 'blue';
 ctx.fillRect (10,10,100,50);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Draw Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d');
@@ -3785,19 +4161,27 @@ ctx . arc ( 100,100, 50, 0, Math .PI * 2 );
 ctx . fillstyle = 'red';
 ctx . fill ();
 </pre>
-<h3>Plotly Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Plotly Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Create Line Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [ {x : [ 1, 2, 3,4 ] ,y : [ 10,15,13,18 ], type : 'scatter'} ];
 Plotly.newPlot('myDiv', data) ;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create Bar Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [ {x: [ 'A', 'B', 'C ], y : [ 10, 20,15 ], type : 'bar'} ];
 Plotly. newPlot ('myDiv', data);
 </pre>
-<h3>Chart.js Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Chart.js Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Bar Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
@@ -3817,7 +4201,9 @@ borderwidth: 1
 }
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Line Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
@@ -3832,8 +4218,11 @@ borderwidth: 1
 }]
 });
 </pre>
-<h3>Google Charts Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Google Charts Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Pie Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load ('current', {packages : [ 'corechart' ] });
 google.charts.setOnLoadCallback(drawChart);
@@ -3853,7 +4242,9 @@ pieHole : 0.4,
 const chart = new google . visualization . PieChart ( document. getElementById ('donutchart')) ;
 chart. draw ( data, options );
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Area Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google . charts . load ('current', {packages : [ 'corechart' ] });
 google . charts . setOnLoadCallback ( drawChart);
@@ -3873,8 +4264,11 @@ legend : {position : 'bottom'}
 const chart = new google . visualization . AreaChart ( document. getElementById ('curve_chart'));
 chart. draw ( data, options );
 </pre>
-<h3>D3.js Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>D3.js Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Create SVG Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3 . select ('body')
 . append ('svg1)
@@ -3899,15 +4293,20 @@ svg.append('rect*)
 .attr('height; 50 )
 .attr('fill; 'green*);
 </pre>
-<h3>Canvas Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Canvas Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Draw a Rectangle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 ctx.fillstyle = 'blue';
 ctx.fillRect(10,10,100,50);
 </pre>
-2. Draw a Circle :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Draw a Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
@@ -3916,19 +4315,27 @@ ctx.arc(100,100,50,0,Math.PI * 2);
 ctx.fillstyle = 'red';
 ctx.fill();
 </pre>
-<h3>Plotly Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Plotly Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Create a Line Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [ {x : [ 1, 2, 3,4 ], y : [ 10,15,13,18 ], type : 'scatter'} ];
 Plotly.newPlot('myDiv', data);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a Bar Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [ {x : [ 'A', 'B', 'C ], y : [ 10, 20,15], type : 'bar'} ];
 Plotly . newPlot ('myDiv', data) ;
 </pre>
-<h3>Chart.js Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Chart.js Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Create a Bar Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
@@ -3948,7 +4355,9 @@ borderwidth: 1
 }
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Create a Line Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart ( ctx, {
@@ -3964,8 +4373,11 @@ borderwidth: 1
 }
 });
 </pre>
-<h3>Google Charts Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Google Charts Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Create a Pie Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google . charts . load ('current', {packages : [ 'corechart' ] });
 google . charts . setOnLoadCallback ( drawChart);
@@ -3985,7 +4397,9 @@ pieHole : 0.4,
 const chart = new google . visualization . PieChart ( document. getElementById ('donutchart')) ;
 chart. draw ( data, options );
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Create an Area Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google . charts . load ('current', {packages : [ 'corechart' ] });
 google . charts . setOnLoadCallback ( drawChart);
@@ -4005,8 +4419,11 @@ legend : {position : 'bottom'}
 const chart = new google . visualization . AreaChart ( document. getElementById ('curve_chart'));
 chart. draw ( data, options );
 </pre>
-<h3>D3.js Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>D3.js Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Create an SVG Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3 . select ('body')
 . append ('svg1)
@@ -4018,8 +4435,9 @@ svg . append ('circle')
 . attr ('r', 40 )
 . attr ('fill', 'blue');
 </pre>
-<h4>10.</h4>
-<h4>Create an SVG Rectangle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>10. Create an SVG Rectangle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3 . select ('body')
 . append ('svg')
@@ -4036,32 +4454,45 @@ svg . append ('rect')
 different JavaScript libraries such as Canvas, Plotly, Chart.js, Google Charts, and D3.js. 
 They serve as a starting point for building more complex and customized graphical 
 representations in web applications.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Basic Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Convert Celsius to Fahrenheit:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function celsiusToFahrenheit ( Celsius ) {
 return ( Celsius *9/5) + 32;
 let tempInFahrenheit = celsiusToFahrenheit ( 25 ); // Output: 77
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Calculate Area of a Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateCircleArea (radius ) {
 return Math . PI * radius * radius;
 let area = calculateCircleArea ( 5 ); // Output: -78.54
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 String Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Reverse a String:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function reversestring ( str) {
 return str. split ("). reverse (). join (");
 let reversed = reversestring ('hello'); // Output: 'olleh'
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Check for Palindrome:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function isPalindrome ( str) {
 return str = = = str. split ("). reverse (). join (");
 let checkPalindrome = isPalindrome ('madam'); // Output: true
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Find Maximum Number in Array:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let numbers = [ 5, 8, 3,12, 6 ];
 letmaxNumber = Math . max (... numbers ); // Output: 12
@@ -4073,45 +4504,63 @@ let products = [
 {name : 'Tablet', price : 300}
 ];
 products . sort (( a, b ) = >a . price - b . price ) ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Functions:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Higher - Order Function - Map:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [ 1, 2, 3 ];
 let doubled = numbers . map (num = > num * 2); // Output: [ 2,4, 6 ]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (function () {
-console.log(’IIFE executed .');
-DO;
-Object Manipulation:
+  console.log(’IIFE executed.');
+};
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Object Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Object Destructuring:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {name: 'Alice', age: 30};
 let {name, age} = person;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Merge Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobjl = {a: l,b: 2};
 letobj2 = {c: 3,d: 4};
 letmergedObj = { ... objl, ... obj2};
 </pre>
-<h3>Loops and Iterations:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Loops and Iterations:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. For ... Of Loop for Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let colors = [ 'red', 'green', 'blue' ];
 for (let color of colors ) {
 console.log(color);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. While Loop to Generate Random Numbers:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let randomNums = [] ;
 while (randomNums . length < 5 ) {
 randomNums . push (Math . floor ( Math . random () * 10 ) + 1) ;
 </pre>
-Error Handling:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Try... Catch for Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 try {
 // Code that may throw an error
@@ -4119,7 +4568,9 @@ JSON.parse('invalidJSON');
 } catch (error) {
 console.error(’Error occurred : error.message
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Custom Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function throwError () {
 throw new Error ('Custom error message’);
@@ -4128,8 +4579,11 @@ throwError ();
 } catch(error) {
 console.error(error.message);
 </pre>
-<h3>Asynchronous JavaScript:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Asynchronous JavaScript:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Promise Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
   return new Promise ((resolve, reject) = > {
@@ -4139,7 +4593,9 @@ function fetchData() {
     }, 2000);
     fetchData (). then (data = > console.log(data));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Async / Await Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData () {
 let data = await fetch ('https :// api. example . com / data');
@@ -4147,34 +4603,47 @@ letjsonData = await data, j son ();
 return jsonData;
 fetchData (). then ( data = > console . log (data));
 </pre>
-<h3>DOM Manipulation:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>DOM Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Create Element and Append to DOM:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let newElement = document. createElement ('div');
 newElement. textContent = 'New Element';
 document. body. appendchild (newElement);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Add Event Listener to Button Click:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let button = document. getElementById ('myButton') ;
 button . addEventListener ('click', () = > {
 console . log ('Button clicked !');
 </pre>
-<h3>Regular Expressions:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Regular Expressions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Regular Expression Test:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let pattern =/\d+/;
 let isMatch = pattern . test ('Hello 123'); // Output: true
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Replacing String with Regex:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let str = 'Hello 123';
 let replaced = str. replace (/\d+/,'456'); // Output: 'Hello 456'
 </pre>
 <p>These examples cover a range of JavaScript functionalities, including basic operations, string I array manipulations,
 functions, objects, loops, error handling, asynchronous operations, DOM manipulations, and regular expressions.</p>
-<h3>Advanced Functions:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Closure Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function outerFunction ( outerValue ) {
 return function (inner Value ) {
@@ -4182,7 +4651,9 @@ return outerValue + innerValue;
 };
 let addFive = outerFunction ( 5 ) ;
 let result = addFive ( 3 ); // Output: 8
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Currying Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function multiply ( a ) {
 return function (b ) {
@@ -4190,38 +4661,54 @@ return a * b;
 };
 let multiplyByTwo = multiply ( 2 );
 let product = multiplyByTwo ( 5 ); // Output: 10
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Reduce to Sum Array:</h4>
 javascript code
 let numbers = [ 1, 2, 3,4,5 ];
 let sum = numbers . reduce (( acc, curr) = > acc + curr, 0 ); // Output: 15
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Filter and Map Together:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let numbers = [ 1, 2, 3,4, 5 ] ;
 let filteredAndDoubled = numbers. filter (num => num % 2 = = = 0). map (num => num * 2); //
 Output: [ 4, 8 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object Destructuring with Default Values:</h4>
 javascript code
 let person = {name : 'Alice'};
 let {name, age = 30} = person;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Computed Property Names:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let key = 'dynamicKey';
 letobj = { [key]: 'value'}; // {dynamicKey: 'value'}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Loops and Iterations :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. For... In Loop for Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 letobj = {a: l,b: 2,c: 3};
 for (let key in obj) {
 console . log (key, obj [ key ]);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using For... Of with Iterables:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let iterable = [ ’a', 'b', 'c' ];
 for (let value of iterable ) {
 console . log (value );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Promises and Async / Await:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Promise Chaining:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function asyncFunction () {
 return new Promise ((resolve, reject) = > {
@@ -4235,7 +4722,9 @@ console . log (result) ;
 return 'Second part done1;
 })
 . then (result = > console . log (result)) ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Async / Await with Error Handling</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function fetchData () {
 return new Promise ((resolve, reject) = > {
@@ -4251,8 +4740,11 @@ console . log ( data);
 console . error ( error) ;
 }
 getData ();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced DOM Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. Creating and Appending Multiple Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let fragment = document. createDocumentFragment ();
 for (let i = 0; i < 5; i ++) {
@@ -4260,23 +4752,32 @@ let newElement = document. createElement ('div');
 newElement. textcontent = ' Element $ {i}';
 fragment. appendchild (newElement);
 document. body. appendchild (fragment);
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Event Delegation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 document. addEventListener ('click', function (event) {
 if ( event. target. matches ('button')) {
 console . log ('Button clicked');
 });}
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Template Literals:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let name = 'Alice';
 let message = ' Hello, $ {name}! *;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Spread Operator:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let arr = [ 1, 2, 3 ];
 let newArr = [... arr, 4,5]; // [ 1, 2, 3, 4, 5 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Error Handling and Regular Expressions :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Throwing Custom Errors:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function validateNumber (num ) {
 if(typeofnum !== 'number') {
@@ -4286,34 +4787,48 @@ try {
 validateNumber ('abc');
 } catch ( error) {
 console . error ( error. message );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Regular Expression to Validate Email:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let emailPattern = / A [ A\s@ ]+ @ [ A\s@ ]+ \ .[ A\s@ ]+ $ / ;
 let isValidEmail = emailPattern . test ('test@example . com'); // Output: true
 These examples delve deeper into JavaScript's functionalities, including advanced functions, array and object
 manipulation, iteration methods, async operations, DOM manipulation, and newer ES6 + features .
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Functions and Functionality:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Higher - Order Function - Filter:</h4>
 javascript code
 let numbers = [ 1, 2, 3,4, 5 ] ;
 let evenNumbers = numbers . filter (num = > num % 2 = = = 0 ); // Output: [ 2,4 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Invoked Arrow Function Expression (IIAFE ):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 (()=>{
 console . log ('IIAFE executed .');
 })();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 3. Using FlatMap:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 letarr =[[1,2], [3,4], [5,6]];
 let flatArray = arr. flatMap (innerArr = > innerArr. map (item = > item * 2 )); // Output: [ 2,4, 6,8,10,12 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let nestedArrays =[[1,2], [3,4], [5,6]];
 let flattenedArray = nestedArrays . reduce (( acc, curr) = > acc . concat ( curr), []); // Output: [ 1, 2, 3, 4, 5,
 6]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object Sealing and Freezing:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let obj = {name : 'Alice'};
 Object. seal ( obj);
@@ -4321,7 +4836,9 @@ obj. age = 30; // This change is not allowed in a sealed object
 let frozenObj = {name : 'Bob'};
 Object. freeze (frozenObj);
 frozenObj. age = 25; // This change won't affect a frozen object
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Optional Chaining:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let user = {
 name: 'Alice',
@@ -4331,8 +4848,11 @@ city: 'NewYork'
 }
 };
 let city = user? . address? . city; // Output: 'New York'
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Loops and Iterations :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. For ... Await Loop for Asynchronous Operations:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function asyncOperation (value ) {
 return new Promise (resolve = > {
@@ -4347,11 +4867,15 @@ for await (let value of values ) {
 await asyncOperation (value );
 }
 executeAsyncOperations ();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using Array. from with Mapping:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let newArray = Array . from ({length : 5 }, (index) = > index * 2 ); // Output: [ 0, 2, 4, 6, 8 ]
 Advanced Error Handling:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Using Finally Block:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function tryCatchFinally () {
 try {
@@ -4363,7 +4887,9 @@ console . error ( error. message );
 console . log ('Finally block');
 }
 tryCatchFinally ();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Custom Error Class:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 class CustomError extends Error {
 constructor (message ) {
@@ -4372,8 +4898,11 @@ this . name = this . constructor. name;
 throw new CustomError ('Custom error message1);
 These additional code snippets expand on various JavaScript concepts such as higher - order functions, array methods,
 object manipulation, advanced loops, error handling, and new features like optional chaining and async / await.
-<h3>Advanced Object Manipulation:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Object Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Object. define Property for Property Definition</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {};
 Object. defineProperty ( obj, 'fullName', {
@@ -4382,7 +4911,9 @@ writable: false,
 configurable: true
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Object. set PrototypeOf for Setting Prototype:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let animal = {
 makeSound () {
@@ -4393,8 +4924,11 @@ let dog = {};
 Object. setPrototypeOf ( dog, animal);
 dog . makeSound (); // Output: 'Animal sound'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Set to Get Unique Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers =[1,2, 2, 3, 4, 4, 5 ];
 let uniqueNumbers = [... new Set (numbers )]; // Output: [ 1, 2, 3,4, 5 ]
@@ -4407,8 +4941,11 @@ let users = [
 {id: 3, name : 'Charlie'}
 ];
 let user = users . find (user = > user. id = = = 2 ); // Output: {id : 2, name : 'Bob'}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Functionality:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Generator Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function* generatorFunction () {
 yield 1;
@@ -4418,7 +4955,9 @@ yield 3;
 let generator = generatorFunction ();
 console . log ( generator. next (). value ); // Output: 1
 console . log ( generator. next (). value ); // Output: 2
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Async Generator Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function * asyncGenerator () {
 yield 'First';
@@ -4429,19 +4968,27 @@ for await (let item of asyncGenerator ()) {
 console . log (item ); // Output: 'First' after 0ms, 'Second' after 1000ms
 }
 })();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Error Handling:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Handling Rejected Promises with catch:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 Promise . reject ('Error message')
 . catch ( error = > console . error ('Caught error :error));
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Handling Multiple Promises with Promise.all:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let promise 1 = Promise . resolve ('First');
 let promise2 = Promise . resolve ('Second');
 Promise . all ([ promise 1, promise2 ])
 . then (values = > console . log (values )); 11 Output: [ 'First', 'Second' ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Destructuring Nested Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let user = {
 id: 1,
@@ -4451,16 +4998,23 @@ age: 30
 }
 };
 let {details : {name, age }} = user;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Biglnt Data Type:</h4>
-javascript code
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const bigNumber = Biglnt ( Number . MAX_SAFE_INTEGER)
 + Biglnt ( 1 );
 // Biglnt:
 9007199254740992n + In
-These code snippets expand on JavaScript functionalities like object manipulation, array methods, generator
-functions, async operations, error handling with promises, and ES6 + features like destructuring and Biglnt datatype .
+</pre>
+<p>These code snippets expand on JavaScript functionalities like object manipulation, 
+array methods, generator functions, async operations, error handling with promises, 
+and ES6 + features like destructuring and Biglnt datatype.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Functions and Operations:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Memoization using Closure:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function memoize (fn) {
 const cache = {};
@@ -4478,42 +5032,59 @@ return 1;
 }
 return n * factorial (n - 1);
 const memoizedFactorial = memoize (factorial) ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Composition:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const add = x = > x + 5;
 const multiply = x = > x * 2;
 const compose = (... fns ) = > x = > fns . reduceRight (( acc, fn ) = > fn ( acc ), x);
 const addAndMultiply = compose (multiply, add) ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Flat to Flatten Nested Arrays:</h4>
 <pre>
 let nestedArr = [ 1, [2, [ 3,4 ], 5 ], 6 ];
 let flattenedArr = nestedArr. flat (Infinity); // Output: [ 1, 2, 3, 4, 5, 6 ]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Some and Every Methods:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let numbers = [ 2,4, 6, 7, 8 ];
 let allEven = numbers . every (num = > num % 2 === 0 ); // Output: false
 let hasOdd = numbers . some (num = > num % 2 !== 0 ); // Output: true
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. fromEntries Method:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let entries = [[ 'name1, Alice' ], [ 'age', 30 ]];
 letobj = Object. fromEntries ( entries ); // Output: {name: 'Alice', age: 30}
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. getOwnPropertyDescriptors:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {name : ’Alice'};
 const descriptors = Object. getOwnPropertyDescriptors (obj) ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Promises and Async / Await:
-<h4>7. Promise . race for Fastest Response:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Promise.race for Fastest Response:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function fetchData (url, timeout) {
-return Promise . race ([
-fetch(url),
-new Promise((reject) = > setTimeout(() => reject ( new Error ('Timeout')), timeout))
-D;
+function fetchData(url, timeout) {
+  return Promise.race ([
+    fetch(url),
+    new Promise((reject) = > setTimeout(() => reject ( new Error ('Timeout')), timeout))
+  ]);
+}
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async / Await with Promise.allSettled:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function fetchData () {
 const promises = [
@@ -4522,8 +5093,11 @@ fetch ('https \lI api. example . com / endpoint2')
 ];
 const results = await Promise . allSettled (promises );
 console . log (results );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining with Nullish Coalescing:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const data = {
 user: {
@@ -4533,7 +5107,9 @@ age: null
 };
 const userName = data? . user? . name ?? 'Unknown'; // Output: Alice'
 const userAge = data? . user? . age ?? 25; // Output: 25
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Array Buffer and Typed Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const buffer = new ArrayBuffer (16);
 const intArray = new Int3 2Array (buffer);
@@ -4541,8 +5117,11 @@ intArray [ 0 ] = 42;
 These additional JavaScript code snippets demonstrate advanced function techniques, array methods, object
 manipulation, promises and async I await functionality, ES6 + features like optional chaining and array buffer with
 typed arrays.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Functions and Operations:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Bind Method:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {
 x: 42,
@@ -4553,31 +5132,45 @@ return this. x;
 const unboundGetX = obj. getX;
 const boundGetX = unboundGetX . bind ( obj);
 console . log (boundGetX 0); // Output: 42
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Resolved Promises:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const immediatePromise = Promise . resolve ('Immediate resolution');
 immediatePromise . then (result = > console . log (result)); // Output: 'Immediate resolution'
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array. findindex:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const array = [5,12,8,130,44];
 const index = array.findindex(element => element >10);// Output: 1 (index of first element >10)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.fill:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const array = [ 1, 2, 3,4, 5 ];
 array. fill ( 0, 2, 4 ); // Fills array from index 2 to index 4 with value 0
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.entries:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {foo : 'bar', baz : 42 };
 const entries = Object. entries ( obj); // Output: [[ 'foo', 'bar' ], [ 'baz', 42 ]]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. preventExtensions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {prop : 'value'};
 Object. preventExtensions (obj);
 obj. newProp = 10; // Cannot add new properties to obj
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Promises and Async / Await:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.allSettled for All Promise States:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const promises = [
 Promise . resolve ('Resolved'),
@@ -4586,18 +5179,25 @@ new Promise (resolve = > setTimeout (() = > resolve ('Resolved after timeout'), 
 ];
 Promise . allSettled (promises )
 . then (results = > console . log (results ));
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Rejected Promise:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function throwError () {
 throw new Error ('Error thrown from async function');
 throwError (). catch ( error = > console . error ( error. message )); // Output: 'Error thrown from async
 function'
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Numeric Separators for Readability:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const billion = 1 000 000 000;
 const binary = Obi010.0001;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Promise.finally Method:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 Promise . resolve ('Success')
 . finally (() = > console . log ('Finally block executed'))
@@ -4621,7 +5221,9 @@ return a + b;
 const memoizedSum = memoize ( sum);
 console . log (memoizedSum ( 2, 3 )); // Output: Calculating sum ... 5
 console . log (memoizedSum (2, 3 )); // Output: 5 ( Retrieved from cache )
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Throttling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const throttle = (func, limit) = > {
 let inThrottle;
@@ -4638,8 +5240,11 @@ setTimeout (() = > inThrottle = false, limit);
 function throttledFunc () {
 console . log ('Throttled function executed');
 const throttled = throttle (throttledFunc, 3000 );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array. from with Mapping and Filtering:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const numbers =[1,2, 3,4, 5, 6 ] ;
 const new Array = Array . from ( numbers, x = > x * 2 ). filter (x=>x>5); // Output: [ 6, 8,10, 12 ]
@@ -4660,8 +5265,11 @@ javascript code
 const obj = {name : 'Alice'};
 Object. seal ( obj);
 console . log ( Object. isSealed ( obj)); // Output: true
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Promises and Async / Await:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.any for the First Fulfilled Promise:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const promises = [
 Promise . reject ('Rejected 1’),
@@ -4675,26 +5283,36 @@ javascript code
 async function processitems (items ) {
 for await (let item of items ) {
 console, log ( ' Processing item : ${item}' );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 9. Dynamic Import for Modules :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function loadModule () {
 const module = await import ('./ module . js*);
 module . doSomething ();
 }
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Nullish Coalescing Operator:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const x = null;
 const y = x ??'default value1; // Output: 'default value'
 These JavaScript code snippets introduce advanced function operations, array manipulations, object methods,
 promises and async / await functionalities, and ES6 + features like dynamic import and nullish coalescing operator .
-Advanced Functions and Operations :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Advanced Functions and Operations:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Partial Application of Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const multiply = (a, b) = > a * b;
 const partialMultiplyByTwo = multiply. bind (null, 2 );
 console . log (partialMultiplyByTwo ( 5 )); // Output: 10
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Debouncing Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const debounce = (func, delay) = > {
 let timeout;
@@ -4706,26 +5324,38 @@ timeout = setTimeout (() = > func . apply ( context, args ), delay);
 function handleinput () {
 console . log ('Input event handled');
 const debouncedlnputHandler = debounce (handleinput, 300 );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array. flat to Flatten Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const nestedArray = [ 1, [2, [ 3 ]], 4, [ 5 ]];
 const flatArray = nestedArray. flat (Infinity); // Output: [ 1, 2, 3,4, 5 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array. slice to Clone Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const originalArray = [ 1, 2, 3,4 ];
 const clonedArray = originalArray. slice (); // Clones the originalArray
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object. keys with Mapping:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 constobj = {a: l,b: 2,c: 3};
 const mappedObj = Object. fromEntries ( Object. keys ( obj). map ( key = > [ key, obj [ key ] * 2 ]));
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. is for Strict Equality Comparison:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 console . log ( Object. is ( 5, 5 )); // Output: true
 console . log ( Object. is ( 5, '5')); // Output: false
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Promises and Async / Await:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise . allSettled with Optional Chaining:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const promises = [
 Promise . resolve ({name : 'Alice', age : 30}),
@@ -4733,7 +5363,9 @@ Promise . reject (new Error ('Something went wrong’)),
 Promise . resolve (null)
 ];
 const results = await Promise.allSettled (promises ) ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Generator Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function * asyncGenerator () {
 yield 'First';
@@ -4744,13 +5376,18 @@ for await (let item of asyncGenerator ()) {
 console . log (item); // Output: 'First' after 0ms, 'Second' after 1000ms
 }
 })();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining for Nested Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const user = {address : {city: 'New York'}};
 const city = user. address? . city; // Output: 'New York'
 constzipCode = user. address? . zipCode ?? 'Not available'; // Output: 'Not available'
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Biglnt for Large Integer Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const bigNumber = Biglnt ( Number . MAX_SAFE_INTEGER)
 + Biglnt ( 1 );
@@ -4758,13 +5395,17 @@ const bigNumber = Biglnt ( Number . MAX_SAFE_INTEGER)
 9007199254740992n + In
 These JavaScript code snippets explore advanced function operations, array manipulations, object methods, promises
 and async / await functionalities, and ES6 + features like optional chaining and Biglnt.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Functions and Operations :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Currying Function:</h4>
 javascript code
 const multiply = ( a) = > (b ) = > a * b;
 const multiplyByTwo = multiply ( 2 );
 console . log (multiplyByTwo ( 5 )); // Output: 10
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Memoization Using Closures:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const memoize = (func) = > {
 const cache = {};
@@ -4780,79 +5421,112 @@ return a + b;
 const memoizedSum = memoize ( sum);
 console . log (memoizedSum ( 2, 3 )); // Output: Calculating sum ... 5
 console . log (memoizedSum (2, 3 )); // Output: 5 ( Retrieved from cache )
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array. reduce with Initial Value:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const array = [ 1, 2, 3,4, 5 ];
 const sum = array. reduce (( acc, curr) = > acc + curr, 0 ); // Output: 15
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array. findindex with Custom Predicate:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const numbers = [ 10, 20, 30,40, 50 ];
 const index = numbers . findindex (num = > num > 25 ); // Output: 2 (Index of first element > 25 )
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. entries with Object. fromEntries:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {name : 'Alice', age : 30};
 const entries = Object. entries (obj); // Output: [[ 'name', 'Alice' ], [ 'age', 30 ]]
 const reconstructedObj = Object. fromEntries (entries );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. freeze for Immutable Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {prop : 'value'};
 Object. freeze ( obj) ;
 obj. prop = 'newValue'; // Assignment not allowed in a frozen object
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Promises and Async / Await:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 7. Promise . resolve and Promise . reject:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const resolvedPromise = Promise . resolve ('Resolved');
 const rejectedPromise = Promise . reject ('Rejected');
 resolvedPromise . then (result = > console . log (result)); // Output: 'Resolved'
 rejectedPromise . catch ( error = > console . error ( error)); // Output: 'Rejected'
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 8. Async Function Returning Resolved Promise :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function returnResolved () {
 return 'Resolved from async function';
 returnResolved (). then (result = > console . log (result)); // Output: 'Resolved from async function1
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 9. Array Destructuring:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const [ first, second, ... rest ] = [ 1, 2, 3,4, 5 ];
 console . log (first, second, rest); // Output: 12 [ 3,4, 5 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Rest Parameters in Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const sum = (... args ) = > args . reduce (( acc, curr) = > acc + curr, 0 );
 console . log ( sum (1, 2, 3,4, 5 )); // Output: 15
 These JavaScript code snippets demonstrate advanced function operations, array manipulations, object methods,
 promises and async / await functionalities,
-Advanced Functions and Operations :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Advanced Functions and Operations:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Composition with Multiple Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const add = (x, y) = > x + y;
 const multiply = (x, y) = > x * y;
 const compose = (... funcs ) = > funcs . reduce ((f, g) = > (... args ) = > f ( g (... args )));
 const addAndMultiply = compose (multiply, add) ;
 console . log ( addAndMultiply ( 3, 4 )); // Output :21(3+4*3)
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Using Function . toString () to Get Function Source Code:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function greet () {
 console . log ('Hello !');
 const functionsource = greet. toString ();
 console . log (functionsource ); // Output:" function greet () {console . log ('Hello 1 ’);}"
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Array. flatMap for Flattening and Mapping:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const arr = [ 1, 2, 3 ];
 const mappedAndFlattened = arr. flatMap (x = > [ x * 2, x * 3 ]);
 console . log (mappedAndFlattened); // Output: [ 2, 3, 4, 6, 6, 9 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array. some with Custom Predicate:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const numbers = [ 5,10,15, 20 ];
 const isEvenPresent = numbers . some (num = > num % 2 = = = 0 ); // Output: true
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object. keys to Get Object's Own Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {a: l,b: 2,c: 3);
 const keys = Object. keys (obj); // Output: [ 'a', 'b', 'c' ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. setPrototypeOf for Dynamic Prototype Setting:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const protoObj = {
 greet () {
@@ -4861,15 +5535,20 @@ console . log ('Greetings !');
 const newObj = {};
 Object. setPrototypeOf (newObj, protoObj);
 newObj. greet (); // Output: 'Greetings !'
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Promises and Async I Await:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise . race to Get Fastest Resolved Promise:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const promise 1 = new Promise ((resolve ) = > setTimeout (resolve, 1000, 'First1));
 const promise2 = new Promise ((resolve ) = > setTimeout (resolve, 500, 'Second')) ;
 Promise . race ([ promisel, promise2 ]). then ((value) = > {
 console . log (value); // Output: 'Second' ( Resolved earlier)
 });
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Using try... catch for Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function fetchData () {
 try {
@@ -4879,13 +5558,17 @@ console . log ( data) ;
 } catch ( error) {
 console . error ('Error fetching data :', error) ;
 }
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 ES6 + Features:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Template Literals for Dynamic Strings:</h4>
 javascript code
 const name = 'Alice';
 const age = 30;
 console . log ( ' My name is ${name} and I'm ${age} years old . ' );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Array Spread Operator for Concatenation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const arrl = [ 1, 2, 3 ];
 const arr2 = [ 4, 5, 6 ];
@@ -4893,12 +5576,16 @@ const combined = [... arrl, ... arr2 ]; // Output: [ 1, 2, 3,4, 5, 6 ]
 These JavaScript code snippets explore advanced function operations, array manipulations, object methods, promises
 and async / await functionalities, and ES6 + features like template literals and array spread operator .
 Advanced Functions and Operations :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Returning Functions - Higher - Order Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const add = (x)=> (y) = > x + y;
 const addTwo = add ( 2 );
 console . log ( addTwo ( 3 )); // Output: 5
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function That Delays Execution:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const delayExecution = (time ) = > {
 return new Promise ((resolve ) = > {
@@ -4906,104 +5593,156 @@ setTimeout (resolve, time );
 });
 };
 delayExecution ( 2000 ). then (() = > console . log (‘Delayed execution')); // Output after 2 seconds
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Array. every with Custom Predicate:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const numbers = [ 10, 20, 30 ];
 const allGreaterThanFive = numbers . every ( num = > num > 5 ); // Output: true
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array. reverse to Reverse an Array:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const array = [ 1, 2, 3,4, 5 ];
 const reversedArray = array. slice (). reverse (); // Output: [ 5, 4, 3, 2, 1 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Object Manipulation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object. fromEntries to Convert Array to Object:</h4>
-javascript code
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const entries = [[ ’a', 1 ], [ 'b', 2 ], [ 'c', 3 ]];
 const obj = Object. fromEntries ( entries); // Output: {a: 1, b : 2, c: 3}
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. assign for Merging Objects:</h4>
-javascript code
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 constobjl = {a: l,b: 2};
 constobj2 = {b: 3,c: 4};
 const mergedObj = Object. assign ({}, objl, obj2 ); // Output: {a: l,b: 3,c: 4}
-Advanced Promises and Async / Await:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Promises and Async / Await:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise . resolve with Then Method:</h4>
-javascript code
-Promise . resolve ('Resolved value'). then (value = > console . log (value )); // Output: 'Resolved value'
-<h4>8. Async Function with Promise . all for Parallel Execution:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function fetchData () {
-const [ datal, data2 ] = await Promise . all ([
-fetch ('https \lI api. example . com / datal'). then (res = > res . json ()),
-fetch ('https :// api. example . com / data2'). then (res = > res . json ())
-D;
-console . log ( datal, data2 );
-ES6 + Features:
+Promise.resolve('Resolved value'). then (value = > console . log (value )); // Output: 'Resolved value'
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Async Function with Promise . all for Parallel Execution:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+async function fetchData() {
+  const [datal, data2] = await Promise.all ([
+    fetch('https://api.example.com/datal') .then(res => res.json()),
+    fetch('https://api.example.com/data2') .then(res => res.json())
+  ]);
+  console.log(datal, data2);
+}
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>ES6 + Features:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Computed Property Names in Objects:</h4>
-javascript code
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const key = 'dynamicKey';
 const obj = {
 [key]: 'Value based on dynamic key'
 };
-console . log ( obj, dynamicKey); // Output: 'Value based on dynamic key'
+console.log(obj, dynamicKey); // Output: 'Value based on dynamic key'
 </pre>
-10.
-Array. find for Finding Elements in an Array:
-javascript code
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>10. Array. find for Finding Elements in an Array:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const users = [
 {id: l,name: 'Alice'},
 {id : 2, name : 'Bob'},
 {id: 3, name: 'Charlie'}
 ];
 const user = users . find (user = >user.id= = = 2); // Output: {id: 2, name: 'Bob'}
-These JavaScript code snippets explore advanced function operations, array manipulations, object methods, promises
-and async / await functionalities, and ES6 + features like computed property names and array. find method .
-Advanced Functions and Operations :
-1. Function Returning Another Function - Closure Example :
-javascript code
-function outerFunction (x) {
-function innerFunction ( y) {
-return x + y;
+</pre>
+<p>These JavaScript code snippets explore advanced function operations, array manipulations, object methods, promises
+and async / await functionalities, and ES6 + features like computed property names and array. find method.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Functions and Operations:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Function Returning Another Function - Closure Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function outerFunction(x) {
+  function innerFunction(y) {
+    return x + y;
+  }
+  return innerFunction;
 }
-return innerFunction;
-const addFive = outerFunction ( 5 );
-console . log ( addFive ( 3 )); // Output: 8
-2. Recursive Function for Factorial Calculation:
-javascript code
+const addFive = outerFunction(5);
+console.log(addFive(3)); // Output: 8
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Recursive Function for Factorial Calculation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 function factorial (n) {
 if(n === 0||n === 1) {
 return 1;
 return n * factorial (n - 1);
 console . log (factorial ( 5 )); // Output: 120
-Advanced Array Manipulation:
-3. Using Array. slice () for Subarray Creation :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Array Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Using Array. slice () for Subarray Creation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const arr = [ 1, 2, 3,4, 5 ];
 const sub Array = arr. slice ( 2,4 ); // Output: [ 3,4 ]
-4. Using Array. includes () for Checking Array Elements :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Using Array. includes () for Checking Array Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const fruits = [ 'apple', 'banana', 'orange' ];
 const hasBanana = fruits . includes ('banana'); // Output: true
-Advanced Object Manipulation:
-5. Object. keys () to Get Object Keys :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Object Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Object. keys () to Get Object Keys:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 constobj = {a: l,b: 2,c: 3};
 const keys = Object. keys ( obj); // Output: [ 'a', 'b', 'c' ]
-6. Object. defineProperty () for Object Property Definition :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Object. defineProperty () for Object Property Definition:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const obj = {};
 Object. defineProperty ( obj, 'prop', {
 value: 'some value1,
 writable: false
 });
-Advanced Promises and Async / Await:
-7. Promise . all () for Multiple Promises Handling:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Promises and Async / Await:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Promise.all() for Multiple Promises Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const promise 1 = Promise . resolve ('Resolved 1');
 const promise2 = Promise . resolve ('Resolved 2');
 Promise . all ([ promise 1, promise2 ]). then (values = > {
 console . log (values ); // Output: [ 'Resolved 1', 'Resolved 2' ]
 });
-8. Async / Await with Promise . catch () for Error Handling:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Async / Await with Promise . catch () for Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function fetchUserData () {
 try {
@@ -5012,27 +5751,36 @@ const data = await response . json ();
 console . log ( data);
 } catch ( error) {
 console . error ('Error fetching user data :error);
-ES6 + Features:
-9. Object Destructuring for Variable Assignment:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>ES6 + Features:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>9. Object Destructuring for Variable Assignment:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const user = {name: 'Alice', age: 30};
 const {name, age} = user;
 console . log (name, age ); // Output: 'Alice' 30
-10.
-Arrow Functions for Concise Function Definitions :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>10. Arrow Functions for Concise Function Definitions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const sum = (a, b ) = > a + b;
 console . log ( sum (2,3)); // Output: 5
 These JavaScript code snippets delve into advanced function operations, array manipulations, object methods,
 promises and async / await functionalities, and ES6 + features like object destructuring and arrow functions .
-Advanced Functions and Operations :
-1. IIFE (Immediately Invoked Function Expression):
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Functions and Operations:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. IIFE (Immediately Invoked Function Expression):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 (function () {
 const localVar = 'Local variable';
 console . log (localVar);
 })();
-2. Function that Returns Multiple Values :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Function that Returns Multiple Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 function calculateValues (x, y) {
 return [x + y, x * y, x / y ];
@@ -5040,11 +5788,15 @@ return [x + y, x * y, x / y ];
 const [ sum, product, division ] = calculateValues ( 10, 5 );
 console . log ( sum, product, division); // Output: 15 502
 Advanced Array Manipulation:
-3. Using Array. map () for Transformation :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Using Array. map () for Transformation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const numbers = [ 1, 2, 3,4, 5 ];
 const doubledNumbers = numbers . map ( num = > num * 2 ); // Output: [ 2, 4, 6, 8,10 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 4. Array. find () to Get First Matching Element:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const users = [
 {id : 1, name : 'Alice'},
@@ -5054,23 +5806,32 @@ const users = [
 const user = users . find (user = > user. id = = = 2 );
 console . log (user); // Output: {id: 2, name: 'Bob'}
 Advanced Object Manipulation:
-5. Object. freeze () to Prevent Object Modification:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Object. freeze () to Prevent Object Modification:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const obj = {prop : 'value'};
 Object. freeze ( obj);
 obj. prop = 'new value'; // This change won't take effect due to object freezing
-6. Using Object. values () to Get Object Values :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Using Object. values () to Get Object Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 constobj = {a: l,b: 2,c: 3};
 const values = Object. values ( obj); // Output: [ 1, 2, 3 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Promises and Async / Await:
-7. Promise chaining with . then () and . catch ():
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Promise chaining with . then () and . catch ():</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function fetchData () {
 return fetch ('https :// api. example . com / data')
 . then (response = > response . json ())
 . catch ( error = > console . error ('Error fetching data :error)) ;
-8. Async Function with Error Handling :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Async Function with Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 async function fetchData () {
 try {
@@ -5081,48 +5842,66 @@ console . log ( data);
 console . error ('Error fetching data:error);
 }
 ES6 + Features:
-9. Optional Chaining for Object Properties :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>9. Optional Chaining for Object Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const user = {profile : {email: 'user@example . com'}};
 const userEmail = user? . profile? . email; // Output: 'user@example.com'
-10.
-Promise . finally () for Cleanup Tasks :
+<h4>10. Promise . finally () for Cleanup Tasks:</h4>
 javascript code
 fetch ('https :// api. example . com I data1)
 . then (response = > response . json ())
 . finally (() = > console . log ('Data fetching completed')); // Runs irrespective of resolution / rejection
 These JavaScript code snippets explore advanced function operations, array manipulations, object methods, promises
 and async / await functionalities, and ES6 + features like optional chaining and promise finally .
-Advanced DOM Manipulation:
-1. Creating and Appending DOM Elements :
-javascript code
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced DOM Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Creating and Appending DOM Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 // Create a new paragraph element
 const paragraph = document, createElement ('p');
 paragraph . textcontent = 'This is a new paragraph';
 // Append the paragraph to an existing element with id 'container'
 const container = document, getElementById (‘container’);
 container. appendchild (paragraph );
-2. Adding Event Listeners :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Adding Event Listeners:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const button = document. getElementById ('myButton');
 button . addEventListener ('click', () = > {
 console . log ('Button clicked');
 });
-DOM Traversal and Manipulation :
-3. Querying Elements and Modifying Styles :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>DOM Traversal and Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Querying Elements and Modifying Styles:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 // Select all elements with class 'box' and change their background color
 const boxes = document. querySelectorAll ('. box');
 boxes . forEach (box = > {
 box . style . backgroundcolor = 'lightblue';
 });
-4. Removing Elements from the DOM ;
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Removing Elements from the DOM:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const elementToRemove = document. getElementById (’elementToRemove');
 if (elementToRemove ) {
 elementToRemove . remove ();
-Advanced Event Handling:
-5. Delegating Events using Event Bubbling:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Event Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Delegating Events using Event Bubbling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const list = document. getElementById ('myList1);
 list. addEventListener ('click', (event) = > {
@@ -5130,21 +5909,30 @@ if ( event. target. tagName = = = 'Ll') {
 console . log ( ' Clicked on list item : $ {event. target. textContent}' );
 }
 });
-6. Creating and Dispatching Custom Events :
-javascript code
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Creating and Dispatching Custom Events:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const customEvent = new CustomEvent ('customEventName1, {detail: 'Some data'}) ;
 document. dispatchEvent ( customEvent);
 // Listening for the custom event
 document. addEventListener ('customEventName', (event) = > {
 console . log ( ' Custom event triggered with data : $ {event. detail}' );
 });
-DOM Content Manipulation:
-7. Changing Inner HTML of Elements :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>DOM Content Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Changing Inner HTML of Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const element = document. getElementById ('myElement1);
 element. innerHTML = '<strong>New HTML content< / strong>‘;
-8. Working with Forms and Input Elements :
-javascript code
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Working with Forms and Input Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const form = document. getElementById (’myForm’) ;
 form . addEventListener (’submit’, ( event) = > {
 event. preventDefault ();
@@ -5152,24 +5940,37 @@ const formData = new FormData ( event. target);
 const value = formData . get (’inputFieldName’);
 console, log ( ' Form submitted with value : ${value}' );
 });
-These JavaScript snippets demonstrate advanced techniques for interacting with the HTML DOM, including creating
-elements, event handling, manipulation, traversal, form interactions, and custom event creation .
-Input Event Handling:
-1. Input Event for Live Character Count:
+</pre>
+<p>These JavaScript snippets demonstrate advanced techniques for interacting with the 
+HTML DOM, including creating elements, event handling, manipulation, traversal, form 
+interactions, and custom event creation.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Input Event Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Input Event for Live Character Count:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const inputField = document.getElementById('textlnput');
 const charCount = document.getElementById('charCount1) ;
 inputField.addEventListener ('input', () = > {
 charCount.textContent = "Character count: ${inputField.value.length}';
 });
-2. Detecting Changes in Input Fields:
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Detecting Changes in Input Fields:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const inputField = document. getElementById ('textinput');
 inputField . addEventListener ('change', ( event) = > {
 console . log ( ' Input value changed to : $ {event. target. value}' );
 });
-Form Validation and Submission:
-3. Real - time Password Strength Checker :
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Form Validation and Submission:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Real - time Password Strength Checker:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const passwordField = document. getElementById ('password');
 const strengthindicator = document. getElementById ('passwordStrength');
 passwordField . addEventListener ('input', () = > {
@@ -5179,7 +5980,11 @@ let strength =
 // Update the 'strength' variable based on password complexity
 strengthindicator. textContent = ' Password Strength : $ {strength}';
 });
-4. Form Submission with Validation:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Form Submission with Validation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const form = document. getElementById ('myForm');
 const emailField = document. getElementById ('email');
 form . addEventListener ('submit', ( event) = > {
@@ -5194,34 +5999,47 @@ form.submit();
 function validateEmail(email) {
 // Regular expression or other validation logic for email validation
 return / \S + @\S + \ . \S +/. test (email);
-Advanced Input Handling:
-5. Using Range Input for Dynamic UI Updates :
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Input Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Using Range Input for Dynamic UI Updates:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const rangeinput = document. getElementById ('rangeSlider');
 const valueDisplay = document. getElementById ('rangeValue');
 rangeinput. addEventListener ('input', () = > {
 valueDisplay. textcontent = 'Value: $ {rangeinput. value}';
 // Update UI based on range input value changes
 });
-6. Input Masking for Phone Number Input:
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Input Masking for Phone Number Input:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const phoneinput = document. getElementById ('phoneNumber');
 phoneinput. addEventListener ('input', () = > {
 let value = phoneinput. value . replace (/ \D / g,");
 value = value . slice ( 0,10 ); // Limit to 10 digits for a phone number
 phoneinput. value = value;
 });
-These JavaScript snippets demonstrate input event handling, form validation, real - time UI updates based on input
-changes, and advanced input manipulation like input masking and range input handling in HTML forms .
-DOM Object Creation and Manipulation :
-1. Creating and Appending a New Image Element:
+</pre>
+<p>These JavaScript snippets demonstrate input event handling, form validation, real - time UI updates based on input
+changes, and advanced input manipulation like input masking and range input handling in HTML forms.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>DOM Object Creation and Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Creating and Appending a New Image Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const image = document. createElement ('img');
 image.src = 'path / to / image . jpg';
 image.alt = 'Image Description';
 const container = document. getElementById ( 'imageContainer') ;
 container. appendChild (image );
-2. Adding a New Option to Select Element:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Adding a New Option to Select Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const select = document. getElementById ('mySelect');
 const option = document. createElement ('option');
@@ -5229,27 +6047,39 @@ option.value = 'value 1';
 option.text = 'Option Text';
 select.appendChild (option);
 Advanced Object Manipulation:
-3. Setting Custom Attributes to HTML Elements:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Setting Custom Attributes to HTML Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const element = document.getElementById('myElement');
 element.setAttribute ('data - custom', 'customValue') ;
-4. Removing Specific Attribute from an Element:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Removing Specific Attribute from an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const element = document. getElementById('myElement');
 element. removeAttribute ('data - custom');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Styling HTML Objects:
-5. Modifying CSS Properties of an Element:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Modifying CSS Properties of an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const element = document. getElementById ('myElement');
 element. style . backgroundcolor = 'blue';
 element. style . color = 'white';
-6. Adding and Removing CSS Classes :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Adding and Removing CSS Classes:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const element = document. getElementById ('myElement');
 element. classList. add ('newClass');
 element. classList. remove ('oldClass');
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Event Handling and Interaction:
-7. Creating and Handling Mouse Hover Effects:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Creating and Handling Mouse Hover Effects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const element = document. getElementById ('myElement');
 element. addEventListener ('mouseenter', () = > {
@@ -5258,30 +6088,41 @@ element. style . backgroundcolor = 'red';
 element. addEventListener ('mouseleave', () = > {
 element. style . backgroundcolor = 'blue';
 });
-8. Triggering Click Event Programmatically:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Triggering Click Event Programmatically:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-const button = document. getElementById ('myButton');
-button . click (); // Triggering click event on the button element
+const button = document.getElementById ('myButton');
+button.click(); // Triggering click event on the button element
 Advanced Content Manipulation:
-9. Setting HTML Content Using InnerHTML:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>9. Setting HTML Content Using InnerHTML:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const element = document. getElementById ('myElement');
 element. innerHTML = '<strong>New HTML Content< / strong>’;
-10.
-Appending Text Node to an Element:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>10. Appending Text Node to an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const element = document. getElementById ('myElement');
 const textNode = document. createTextNode ('Text Content1);
 element. appendchild (textNode);
 These JavaScript snippets demonstrate advanced techniques for creating, manipulating, and interacting with HTML
 objects, including DOM creation, object manipulation, styling, event handling, and content manipulation .
-Event Handling:
-1. Keyboard Event Handling - Key Press :
-
-document. addEventListener ('keypress1, ( event) = > {
-console . log ( ' Key pressed : $ {event. key}' );
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Event Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Keyboard Event Handling - Key Press:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+document. addEventListener (`keypress`, (event) => {
+  console.log(`Key pressed : ${event.key}`);
 });
-2. Handling Focus Events - Input Focus and Blur:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Handling Focus Events - Input Focus and Blur:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const inputField = document. getElementById ('mylnput') ;
 inputField . addEventListener (’focus1, () = > {
@@ -5290,40 +6131,55 @@ console . log ('Input field focused1);
 inputField . addEventListener ('blur', () = > {
 console . log ('Input field blurred') ;
 });
-Event Delegation and Bubbling:
-3. Event Delegation with Click Events :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Event Delegation and Bubbling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Event Delegation with Click Events:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const list = document. getElementById ('myList');
 list, addEventListener ('click', (event) = > {
 if ( event. target. tagName = = = 'Ll') {
 console . log ( ' Clicked on list item : $ {event. target. textContent]' );
 });
-4. Event Bubbling - Click Event on Parent Element:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Event Bubbling - Click Event on Parent Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const parent = document. getElementById ('parentElement') ;
 parent. addEventListener ('click', (event) = > {
 console . log ( ' Clicked on parent element “ ) ;
 });
-Window and Document Events :
-5. Window Load Event:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Window and Document Events:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Window Load Event:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 window . addEventListener ('load', () = > {
 console . log ('Page fully loaded1);
 });
-6. Document Ready Event ( DOMContentLoaded):
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Document Ready Event ( DOMContentLoaded):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 document. addEventListener ('DOMContentLoaded', () = > {
 console . log ('DOM fully loaded and parsed');
 });
-Form Events:
-7. Form Submission and Preventing Default Behavior:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Form Events:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Form Submission and Preventing Default Behavior:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const form = document. getElementById ('myForm') ;
 form . addEventListener ('submit', ( event) = > {
 event. preventDefault ();
 console . log ('Form submitted') ;
 // Perform form data handling or validation
-8. Input Event for Real - time Validation:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Input Event for Real - time Validation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const emailField = document. getElementById ('email');
 emailField . addEventListener ('input', () = > {
@@ -5335,107 +6191,148 @@ emailField . setCustomValidity (");
 These JavaScript snippets showcase various event handling techniques, including keyboard events, focus and blur
 events, event delegation, bubbling, window and document events, and form - related events for submission and input
 validation.
-Browser Object Model (BOM) Manipulation :
-1. Opening a New Browser Window:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Browser Object Model (BOM) Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Opening a New Browser Window:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const openWindowButton = document. getElementById ('openWindowButton');
 openWindowButton . addEventListener ('click', () = > {
 window . open ('https :// example . com', '.blank', 'width = 5 00,height = 500');
 });
-2. Closing a Browser Window:
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Closing a Browser Window:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const closeWindowButton = document. getElementById ('closeWindowButton');
 closeWindowButton . addEventListener ( click', () = > {
 window . close ();
 });
-Navigator Object Exploration:
-3. Accessing Browser Information :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Navigator Object Exploration:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Accessing Browser Information:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 console . log (' Browser name: ${navigator.appName}' );
 console . log (s Browser version: ${navigator.appVersion}' );
 console . log (' User Agent: ${navigator.user Agent}' );
 console . log (" Language: ${navigator.language}' );
-4. Checking Geolocation Availability :
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Checking Geolocation Availability:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 if ('geolocation' in navigator) {
 console.log('Geolocation is supported');
 } else {
 console.log('Geolocation is not supported');
 }
-Location Object Manipulation:
-5. Redirecting to Another Page:
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Location Object Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Redirecting to Another Page:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 function redirectToPage() {
 window.location.href = 'https://example.com';
-6. Accessing Current URL Information:
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Accessing Current URL Information:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 console.log(`Current URL: ${window.location.href}`);
 console.log(`Hostname: ${window.location.hostname}`);
 console.log(`Protocol: ${window.location.protocol}`);
 console.log(`Pathname: ${window. location.pathname}`);
-Screen Object Attributes:
-7. Retrieving Screen Dimensions:
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Screen Object Attributes:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Retrieving Screen Dimensions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 console.log( ' Screen width : $ {window . screen . width}' );
 console.log( ' Screen height: $ {window . screen . height}' ) ;
-8. Opening in Full Screen Mode :
-
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Opening in Full Screen Mode:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
 const fullScreenButton = document. getElementById ( ’fullScreenButton’);
 fullScreenButton . addEventListener (’click’, () = > {
 if (document.fullscreenEnabled) {
 document.documentElement.requestFullscreen();
-These JavaScript snippets showcase browser manipulation using the Browser Object Model (BOM), exploring
-navigator and location objects, screen attributes, opening / closing windows, accessing browser information,
-geolocation availability, URL manipulation, and full - screen mode functionality .
-Installing JavaScript:
-JavaScript is an interpreted programming language that runs in web browsers . As it's not a separate entity that needs
-to be installed, you don't install JavaScript itself; instead, you work with JavaScript within environments that support
-its execution, such as web browsers and server - side platforms like Node . js .
-Setting Up Visual Studio Code for JavaScript Development:
-1. Download and Install Visual Studio Code:
-Visit the Visual Studio Code website and download the installer for your operating system. Run the installer and
-follow the installation instructions .
-2. Install Node.js ( ptional but Recommended for Development):
-Node.js is a JavaScript runtime environment that allows executing JavaScript outside a web browser. You can
-download Node . js from the official website, install it, and it will include the Node Package Manager ( npm) with it.
-This is useful for running JavaScript programs locally and managing dependencies .
-3. Install Visual Studio Code Extensions:
-.
-JavaScript (ES6 ) Code Snippets : Provides handy code snippets for JavaScript development. Search for
-it in the Extensions tab in VS Code and install it.
-.
-Prettier - Code formatter : For auto - formatting your code according to predefined rules . It's optional
-but highly recommended.
-4. Create a JavaScript Project:
-. Open Visual Studio Code.
-.
-Create a new folder for your project or open an existing one .
-.
-Inside the folder, create a new JavaScript file with the . js extension . Right - click in the Explorer panel >
-New File > script. js .
-5. Writing and Running JavaScript Code:
-.
-Write your JavaScript code in the script. js file .
-.
-To run JavaScript code, open the integrated terminal in Visual Studio Code ( Terminal > New Terminal),
-navigate to your project directory, and run the JavaScript file using Node . js . For example :
-bash code
-node script. js
-.
-To execute JavaScript code in a browser, create an HTML file (index . html) and link your JavaScript file
-in it using the < script> tag . Open the HTML file in your preferred web browser .
-6. Debugging JavaScript:
-• Visual Studio Code has a powerful built - in debugger . You can set breakpoints in your code, inspect
-variables, and step through your code execution line by line .
-. To use the debugger, add breakpoints by clicking in the margin next to your code line numbers . Then,
-run your JavaScript code in debug mode (click the Debug icon in the left sidebar).
-Conclusion:
-That's a basic setup to start coding in JavaScript with Visual Studio Code . Remember, JavaScript development often
-involves web development, where you'll need to write JavaScript code within HTML I CSS files . For web - based
-development, you'd generally use VS Code to manage the entire project structure .
-Additionally, for more advanced development or working on larger projects, using a module bundler 
-like Webpack or a
-task runner like Gulp might be beneficial to enhance your development environment further .
+</pre>
+<p>These JavaScript snippets showcase browser manipulation using the Browser Object Model 
+(BOM), exploring navigator and location objects, screen attributes, opening / closing 
+windows, accessing browser information, geolocation availability, URL manipulation, and 
+full-screen mode functionality.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Installing JavaScript:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript is an interpreted programming language that runs in web browsers. As it's 
+not a separate entity that needs to be installed, you don't install JavaScript itself; 
+instead, you work with JavaScript within environments that support its execution, such 
+as web browsers and server-side platforms like Node.js.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Setting Up Visual Studio Code for JavaScript Development:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Download and Install Visual Studio Code:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p?Visit the Visual Studio Code website and download the installer for your operating 
+system. Run the installer and follow the installation instructions.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Install Node.js ( ptional but Recommended for Development):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Node.js is a JavaScript runtime environment that allows executing JavaScript outside 
+a web browser. You can download Node.js from the official website, install it, and it 
+will include the Node Package Manager (npm) with it. This is useful for running 
+JavaScript programs locally and managing dependencies.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Install Visual Studio Code Extensions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript (ES6) Code Snippets: Provides handy code snippets for JavaScript 
+development. Search for it in the Extensions tab in VS Code and install it.</p>
+<p>Prettier - Code formatter: For auto - formatting your code according to 
+predefined rules. It's optional but highly recommended.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Create a JavaScript Project:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Open Visual Studio Code.</p>
+<p>Create a new folder for your project or open an existing one.</p>
+<p>Inside the folder, create a new JavaScript file with the .js extension .Right-click 
+in the Explorer panel New File > script.js.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Writing and Running JavaScript Code:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Write your JavaScript code in the script.js file.</p>
+<p>To run JavaScript code, open the integrated terminal in Visual Studio Code (Terminal 
+&gt; New Terminal), navigate to your project directory, and run the JavaScript file using 
+Node.js.</p>
+<h4>For example:</h4>
+<h5>bash code</h5>
+<pre>node script.js</pre>
+<p>To execute JavaScript code in a browser, create an HTML file (index.html) and link 
+your JavaScript file in it using the &lt;script&gt; tag. Open the HTML file in your 
+preferred web browser.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Debugging JavaScript:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Visual Studio Code has a powerful built-in debugger. You can set breakpoints in your 
+code, inspect variables, and step through your code execution line by line.</p>
+<p>To use the debugger, add breakpoints by clicking in the margin next to your code line 
+numbers. Then, run your JavaScript code in debug mode (click the Debug icon in the left 
+sidebar).</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Conclusion:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>That's a basic setup to start coding in JavaScript with Visual Studio Code. Remember, 
+JavaScript development often involves web development, where you'll need to write 
+JavaScript code within HTML I CSS files. For web-based development, you'd generally use 
+VS Code to manage the entire project structure. Additionally, for more advanced 
+development or working on larger projects, using a module bundler like Webpack or a
+task runner like Gulp might be beneficial to enhance your development environment further.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js0">218 JS Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
