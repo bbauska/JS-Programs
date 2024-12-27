@@ -3940,6 +3940,7 @@ content updates, user interactions, and handling client-side functionalities.</p
 function changeColor() {
   document.getElementByld("text").style.color = "blue";
 }
+</pre>
 <p>JavaScript offers native methods and APIs to interact with the Document Object Model 
 (DOM) and manipulate HTML elements, enabling developers to create dynamic web applications.</p>
 <h3>jQuery Overview</h3>
@@ -3949,7 +3950,8 @@ complexities of JavaScript and provides a concise syntax for common tasks.</p>
 <h4>Example of jQuery Functionality:</h4>
 <pre>
 // jQuery code to change text color on button click
-<pre>$("#text").css("color", "blue");</pre>
+$("#text").css("color", "blue");
+</pre>
 <p>jQuery simplifies common JavaScript tasks, such as event handling, animations, AJAX requests, and DOM
 manipulation, offering a more concise syntax compared to native JavaScript.</p>
 <h3>Differences Between JavaScript and jQuery</h3>
@@ -4048,7 +4050,6 @@ element.style.color = "blue";
 </pre>
 <h5>jQuery:</h5>
 <pre>$("#myElement").css("color ", "blue");</pre>
-</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Selecting Multiple Elements by Class:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
