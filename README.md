@@ -6298,20 +6298,24 @@ passwordField . addEventListener ('input', () => {
 <h4>4. Form Submission with Validation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const form = document. getElementById ('myForm');
-const emailField = document. getElementById ('email');
-form . addEventListener ('submit', ( event) = > {
-event, preventDefault ();
-// Validate the email input before submission
-if (• validateEmail(emailField.value)) {
-console.error('Invalid email address');
-return;
-// Form is valid, proceed with submission
-form.submit();
+const form = document.getElementById('myForm');
+const emailField = document.getElementById('email');
+
+form.addEventListener('submit', (event) => {
+  event, preventDefault();
+  // Validate the email input before submission
+  if (!validateEmail(emailField.value)) {
+    console.error('Invalid email address');
+    return;
+  }
+  // Form is valid, proceed with submission
+  form.submit();
 });
+
 function validateEmail(email) {
-// Regular expression or other validation logic for email validation
-return / \S + @\S + \ . \S +/. test (email);
+  // Regular expression or other validation logic for email validation
+  return /\S + @\S + \.\S +/.test(email);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Input Handling:</h4>
@@ -6344,57 +6348,63 @@ changes, and advanced input manipulation like input masking and range input hand
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating and Appending a New Image Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const image = document. createElement ('img');
 image.src = 'path / to / image . jpg';
 image.alt = 'Image Description';
 const container = document. getElementById ( 'imageContainer') ;
 container. appendChild (image );
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Adding a New Option to Select Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const select = document. getElementById ('mySelect');
 const option = document. createElement ('option');
 option.value = 'value 1';
 option.text = 'Option Text';
 select.appendChild (option);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Advanced Object Manipulation:
+<h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Setting Custom Attributes to HTML Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const element = document.getElementById('myElement');
 element.setAttribute ('data - custom', 'customValue') ;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Removing Specific Attribute from an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const element = document. getElementById('myElement');
 element. removeAttribute ('data - custom');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Styling HTML Objects:
+<h4>Styling HTML Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Modifying CSS Properties of an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const element = document. getElementById ('myElement');
 element. style . backgroundcolor = 'blue';
 element. style . color = 'white';
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Adding and Removing CSS Classes:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const element = document. getElementById ('myElement');
 element. classList. add ('newClass');
 element. classList. remove ('oldClass');
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Event Handling and Interaction:
+<h4>Event Handling and Interaction:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Creating and Handling Mouse Hover Effects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const element = document. getElementById ('myElement');
 element. addEventListener ('mouseenter', () = > {
 element. style . backgroundcolor = 'red';
@@ -6402,28 +6412,34 @@ element. style . backgroundcolor = 'red';
 element. addEventListener ('mouseleave', () = > {
 element. style . backgroundcolor = 'blue';
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Triggering Click Event Programmatically:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const button = document.getElementById ('myButton');
 button.click(); // Triggering click event on the button element
-Advanced Content Manipulation:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Content Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Setting HTML Content Using InnerHTML:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const element = document. getElementById ('myElement');
-element. innerHTML = '<strong>New HTML Content< / strong>’;
+element. innerHTML = '<strong>New HTML Content</strong>’;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Appending Text Node to an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-const element = document. getElementById ('myElement');
-const textNode = document. createTextNode ('Text Content1);
+<pre>
+const element = document.getElementById('myElement');
+const textNode = document.createTextNode('Text Content');
 element. appendchild (textNode);
-These JavaScript snippets demonstrate advanced techniques for creating, manipulating, and interacting with HTML
-objects, including DOM creation, object manipulation, styling, event handling, and content manipulation .
+</pre>
+<p>These JavaScript snippets demonstrate advanced techniques for creating, manipulating, and 
+interacting with HTML objects, including DOM creation, object manipulation, styling, event 
+handling, and content manipulation.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
