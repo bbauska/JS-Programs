@@ -3119,6 +3119,7 @@ values can be strings, numbers, objects, arrays, booleans, or null.</p>
 <h4>Example of JSON Syntax:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
+<pre>
 {
   "keyl": "valuel",
   "key2": 123,
@@ -3685,32 +3686,32 @@ $decodedData = json.decode ( $jsonString, true );
 <h3>Example of Using JSON Data in HTML:</h3>
 <h5>html code</h5>
 <pre>
-<ul id =" userList" >< / ul>
-<script>
+&lt;ul id ="userList"&gt;&lt;/ul&gt;
+&lt;script&gt;
 const users = [
-{ " nameJohn", "age": 25},
-{ " name Alice ", "age": 30},
-{ " name Bob ", "age": 28}
+  {"name John", "age": 25},
+  {"name Alice", "age": 30},
+  {"name Bob", "age": 28}
 ];
-const userList = document. getElementById (" userList");
-users . forEach (user = > {
-let listitem = document. createElement (" li") ;
-listitem . textContent = ' ${user. name} - ${user. age} years old';
-userList. appendChild (listitem);
+const userList = document. getElementById ("userList");
+users.forEach(user => {
+  let listitem = document.createElement("li") ;
+  listitem.textContent = '`${user.name} - ${user.age} years old`;
+  userList.appendChild(listitem);
 });
-</script>
+&lt;/script&gt;
 </pre>
 <h4>JSON JSONP</h4>
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different domain in web development to
 bypass the same - origin policy limitations.</p>
 <h3>Example of JSONP Request:</h3>
 <pre>
-function handleData ( data) {
-console . log ( data);
+function handleData(data) {
+  console.log(data);
 }
-let script = document. createElement ('script');
-script. src = ’https :// example . com / data?callback = handleData';
-document. head . appendChild ( script) ;
+let script = document.createElement('script');
+script.src = 'https://example.com/data?callback=handleData';
+document.head.appendChild(script);
 </pre>
 <p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including an introduction, syntax,
 comparison with XML, data types, parsing, stringifying, JSON objects and arrays, working with JSON in server - side
@@ -3730,19 +3731,19 @@ let person = {
 2. Accessing JSON Object Properties :
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-console . log (person . name ); // Output: John
-console . log (person . age ); // Output: 30
+console.log(person.name); // Output: John
+console.log(person.age); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 3. Nested JSON Objects :
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employee = {
-" name " Alice ",
-" position " Engineer ",
-" contact{
-" email" alice@example . com ",
-" phone 123 -456 - 7890"
+  "name " "Alice",
+  "position " "Engineer",
+  "contact{
+  "email " "alice@example.com",
+  "phone 123-456-7890"
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3750,12 +3751,12 @@ let employee = {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let books = [
-{ " title
-" Book 1 ", " author" Author 1 "},
-{ " title
-" Book 2 ", " author " Author 2 "},
-{ " title
-" Book 3 ", " author" Author 3 "}
+  {"title
+  "Book1", "author" Author1"},
+  {"title
+  "Book2", "author " Author2"},
+  {"title
+  "Book3", "author" Author3"}
 ];
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3769,17 +3770,17 @@ console . log (jsonString); // Output: {" name John"," age 30," cityNew York"}
 6. Parsing JSON String to Object:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonObject = JSON . parse (’{" name Alice "," age 25," cityLondon ";
-console . log (jsonObject. name ); // Output: Alice
+let jsonObject = JSON.parse (’{" name Alice "," age 25," cityLondon ";
+console.log (jsonObject.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 7. Fetching JSON Data from URL (using Fetch API):
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-fetch ('data . json')
-. then ( response = > response . json ())
-. then (data = > console . log (data))
-. catch ( error = > console . error (’Error :', error)) ;
+fetch('data.json')
+.then(response => response.json())
+.then(data =>  console.log(data))
+.catch(error => console.error('Error :', error)) ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 8. Displaying JSON Data Dynamically in HTML:
@@ -3794,14 +3795,14 @@ displayDiv. innerHTML = ' <p>Name : ${jsonData . name}< / p><p>Age : ${jsonData 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document. getElementById ('myForm');
-form . addEventListener ('submit', function ( event) {
-event. preventDefault ();
-let formData = new FormData (form );
-let jsonObject = {};
-formData . forEach ((value, key) = > {
-jsonObject [ key ] = value;
-1);
-console . log (jsonObject);
+form.addEventListener ('submit', function(event) {
+  event.preventDefault ();
+  let formData = new FormData (form);
+  let jsonObject = {};
+  formData.forEach((value, key) = > {
+    jsonObject[key] = value;
+  });
+  console.log(jsonObject);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3809,29 +3810,28 @@ console . log (jsonObject);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let complexObj = {
-" name ":" Sam ",
-"age": 35,
-" addresses[
-{ " type " home ", " address ": "123 Main St"},
-{ " type " work", " address ": "456 Business Ave "}
-]
+  " name ":" Sam ",
+  "age": 35,
+  " addresses[
+    { " type " home ", " address ": "123 Main St"},
+    { " type " work", " address ": "456 Business Ave "}
+  ]
 };
-let complexstring = JSON . stringify ( complexObj);
-let parsedObj = JSON . parse ( complexstring);
-console . log (parsedObj. addresses [ 0 ]. address ); // Output: 123 Main St
+let complexstring = JSON.stringify(complexObj);
+let parsedObj = JSON.parse(complexstring);
+console.log(parsedObj. addresses[0]. address); // Output: 123 Main St
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 11. Filtering JSON Array Data:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employees = [
-{ " name " John ", " department":" HR"},
-{ " name " Alice ", " department" IT "},
-{ " name " Bob ", " department":" HR"}
-1;
-let hrEmployees = employees . filter ( employee = > employee . department = = = " HR"
-console . log (hrEmployees ); // Output: [ { " name " John ", " department": " HR" }, { " name " Bob ",
-" department" HR" } ]
+  {"name " John ", " department":" HR"},
+  {"name " Alice ", " department" IT"},
+  {"name " Bob ", " department":" HR"}
+];
+let hrEmployees = employees.filter( employee => employee.department === " HR"
+console.log (hrEmployees); // Output: [{"name" John", "department": "HR" }, {"name" Bob", "department" HR" } ]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 12. Updating JSON Object Properties:
@@ -3853,30 +3853,30 @@ console . log ( data); // Output: { " name ":" Kate " }
 14. Using JSON with Local Storage:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let userData = { " username " user 123 ", " email" user@example . com " };
-localstorage . setitem ('userData1, JSON . stringify (userData));
-let storedData = JSON . parse (localstorage . getltem ('userData1));
-console . log ( storedData . email); // Output: user@example . com
+let userData = {"username " user 123 ", " email" user@example.com " };
+localstorage.setitem('userData', JSON.stringify(userData));
+let storedData = JSON . parse (localstorage.getltem('userData'));
+console.log(storedData.email); // Output: user@example . com
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 15. Handling JSON Date Strings:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = { " date ": " 2023 - 12 - 31T08 : 00 : 00Z " };
-let date = new Date (jsonData . date);
-console . log ( date . toDateString ()); // Output: Fri Dec 31 2023
+let date = new Date(jsonData.date);
+console.log(date.toDateString ()); // Output: Fri Dec 31 2023
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 16. Using JSON in Asynchronous Functions:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData () {
-try {
-let response = await fetch ('data . json') ;
-let data = await response . json ();
-console . log ( data);
-} catch ( error) {
-console . error ('Error :error) ;
+  try {
+    let response = await fetch('data.json') ;
+    let data = await response.json ();
+    console.log(data);
+  } catch(error) {
+  console.error('Error :error') ;
 }
 fetchData ();
 </pre>
@@ -3885,13 +3885,14 @@ fetchData ();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {
-" name " Joe ",
-"birthday": new Date ('1990 - 01 - 15T00 : 00 : 00Z'),
-" tojson function () {
-return * { " name " ${this . name}", " birthday" ${this . birthday. toISOString ()}" }';
-};
-let jsonString = obj. tojson ();
-console . log (jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
+  " name " Joe ",
+  "birthday": new Date ('1990 - 01 - 15T00 : 00 : 00Z'),
+  " tojson function () {
+    return * { " name " ${this . name}", " birthday" ${this . birthday. toISOString ()}" }';
+  };
+  let jsonString = obj.tojson();
+}
+console.log (jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 18. Handling JSON Data from an API (Using Axios):
@@ -3933,13 +3934,13 @@ creating, manipulating, parsing, and working with JSON data in various scenarios
 document. getElementById (" mylmage "). setAttribute (" src ", " new_image . jpg ");
 <h4>jQuery:</h4>
 <pre>
-$ (" #mylmage "). attr (" src ", " newjmage . jpg");
+$("#mylmage").attr(" src", " newjmage.jpg");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let inputValue = document. getElementById (" mylnput"). value;
+let inputValue = document.getElementById("mylnput").value;
 </pre>
 <h4>jQuery:</h4>
 <pre>
@@ -3949,19 +3950,19 @@ let inputValue = $("#mylnput").val();
 <h4>16. Checking Checkbox State:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let isChecked = document. getElementById (" myCheckbox "). checked;
+let isChecked = document.getElementById("myCheckbox").checked;
 </pre>
 <h4>jQuery:</h4>
 <pre>
-let isChecked = $ (" #myCheckbox"). prop (" checked") ;
+let isChecked = $("#myCheckbox").prop("checked");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Iterating Over NodeList:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let elements = document. querySelectorAll (". myClass ") ;
-elements . forEach (function ( element) {
-console . log ( element. textContent);
+let elements = document.querySelectorAll (".myClass");
+elements.forEach(function(element) {
+  console.log(element.textContent);
 });
 </pre>
 <h4>jQuery:</h4>
@@ -3974,10 +3975,10 @@ console . log ( $ (this ). text ());
 <h4>18. Handling Form Submission:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document. getElementById (" myForm “). addEventListener (" submit" t function ( event) {
-event. preventDefault ();
-let formData = new FormData (this ) ;
-// Process form data
+document.getElementById("myForm").addEventListener("submit"  function(event) {
+  event.preventDefault();
+  let formData = new FormData (this );
+  // Process form data
 });
 </pre>
 <h4>jQuery:</h4>
@@ -4491,9 +4492,10 @@ let reversed = reversestring ('hello'); // Output: 'olleh'
 <h4>4. Check for Palindrome:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function isPalindrome ( str) {
-return str = = = str. split ("). reverse (). join (");
-let checkPalindrome = isPalindrome ('madam'); // Output: true
+function isPalindrome(str) {
+  return str === str.split('').reverse().join('');
+  let checkPalindrome = isPalindrome('madam'); // Output: true
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Array Manipulation:
@@ -4680,7 +4682,7 @@ let sum = numbers . reduce (( acc, curr) = > acc + curr, 0 ); // Output: 15
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 let numbers = [ 1, 2, 3,4, 5 ] ;
-let filteredAndDoubled = numbers. filter (num => num % 2 = = = 0). map (num => num * 2); //
+let filteredAndDoubled = numbers. filter (num => num % 2 === 0). map (num => num * 2); //
 Output: [ 4, 8 ]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Object Manipulation:
@@ -4809,7 +4811,7 @@ Advanced Functions and Functionality:
 <h4>1. Higher - Order Function - Filter:</h4>
 javascript code
 let numbers = [ 1, 2, 3,4, 5 ] ;
-let evenNumbers = numbers . filter (num = > num % 2 = = = 0 ); // Output: [ 2,4 ]
+let evenNumbers = numbers . filter (num => num % 2 === 0 ); // Output: [ 2,4 ]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Invoked Arrow Function Expression (IIAFE ):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4948,7 +4950,7 @@ let users = [
 {id: 2, name : 'Bob'},
 {id: 3, name : 'Charlie'}
 ];
-let user = users . find (user = > user. id = = = 2 ); // Output: {id : 2, name : 'Bob'}
+let user = users . find (user => user. id === 2 ); // Output: {id : 2, name : 'Bob'}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Functionality:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5035,7 +5037,7 @@ cache [ key ] = result;
 return result;
 };
 function factorial ( n) {
-if(n = = = 0||n = = = 1) {
+if(n === 0||n === 1) {
 return 1;
 }
 return n * factorial (n - 1);
@@ -5524,7 +5526,7 @@ console . log (mappedAndFlattened); // Output: [ 2, 3, 4, 6, 6, 9 ]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const numbers = [ 5,10,15, 20 ];
-const isEvenPresent = numbers . some (num = > num % 2 = = = 0 ); // Output: true
+const isEvenPresent = numbers . some (num => num % 2 === 0 ); // Output: true
 Advanced Object Manipulation:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object. keys to Get Object's Own Properties:</h4>
@@ -5673,7 +5675,7 @@ const users = [
 {id : 2, name : 'Bob'},
 {id: 3, name: 'Charlie'}
 ];
-const user = users . find (user = >user.id= = = 2); // Output: {id: 2, name: 'Bob'}
+const user = users . find (user => user.id === 2); // Output: {id: 2, name: 'Bob'}
 </pre>
 <p>These JavaScript code snippets explore advanced function operations, array manipulations, object methods, promises
 and async / await functionalities, and ES6 + features like computed property names and array. find method.</p>
@@ -5807,12 +5809,12 @@ const doubledNumbers = numbers . map ( num = > num * 2 ); // Output: [ 2, 4, 6, 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const users = [
-{id : 1, name : 'Alice'},
-{id : 2, name : 'Bob'},
-{id: 3, name: 'Charlie'}
+  {id : 1, name : 'Alice'},
+  {id : 2, name : 'Bob'},
+  {id: 3, name: 'Charlie'}
 ];
-const user = users . find (user = > user. id = = = 2 );
-console . log (user); // Output: {id: 2, name: 'Bob'}
+const user = users.find(user => user.id === 2);
+console.log(user); // Output: {id: 2, name: 'Bob'}
 Advanced Object Manipulation:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. freeze () to Prevent Object Modification:</h4>
@@ -5912,9 +5914,9 @@ elementToRemove . remove ();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 javascript code
 const list = document. getElementById ('myList1);
-list. addEventListener ('click', (event) = > {
-if ( event. target. tagName = = = 'Ll') {
-console . log ( ' Clicked on list item : $ {event. target. textContent}' );
+list. addEventListener ('click', (event) => {
+if ( event. target. tagName === 'li') {
+  console.log('Clicked on list item : ${event.target.textContent}');
 }
 });
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6147,9 +6149,9 @@ console . log ('Input field blurred') ;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 const list = document. getElementById ('myList');
-list, addEventListener ('click', (event) = > {
-if ( event. target. tagName = = = 'Ll') {
-console . log ( ' Clicked on list item : $ {event. target. textContent]' );
+list, addEventListener ('click', (event) => {
+if ( event. target. tagName === 'li') {
+  console.log('Clicked on list item : ${event.target.textContent]');
 });
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Event Bubbling - Click Event on Parent Element:</h4>
@@ -6596,7 +6598,7 @@ if (!isNaN(number) && Number.isInteger(number) && number &gt; 1) {
   
   // Check for factors from 2 to the square root of the number
   for (let i = 2; i &lt;= Math.sqrt(number); i++) {
-    if (number % i = = = 0) {
+    if (number % i === 0) {
       isPrime = false;
       break;
     }
@@ -6900,7 +6902,7 @@ if(
   let lastDigit2 = Math.abs(num2 % 10);
 
   // Check if the last digits are the same
-  if (lastDigitl = = = lastDigit2) {
+  if (lastDigitl === lastDigit2) {
     console.log(
       `The last digit of ${numl} is the same as the last digit of ${num2}.`
     );
@@ -6957,7 +6959,7 @@ if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger
   let largerNumber = Math.max(numl, num2);
   let 1cm = largerNumber;
   while (true) {
-    if (1cm % numl = = = 0 && 1cm % num2 = = = 0) {
+    if (1cm % numl === 0 && 1cm % num2 === 0) {
       console.log(`The LCM of ${numl} and ${num2} is: ${lcm}`);
       break;
     }
@@ -7148,7 +7150,7 @@ to enter a decimal number and then calculates and displays its binary representa
 <pre>
 // Function to convert decimal to binary
 function decimalToBinary(decimalNumber) {
-  if (decimalNumber = = = 0){
+  if (decimalNumber === 0){
     return "0";
   }
   let binaryResult =
@@ -7179,7 +7181,7 @@ its ASCII value.</p>
 // Prompt user for a character
 let character = prompt("Enter a character:");
 // Check if input is a valid single character
-if (character.length = = = 1) {
+if (character.length === 1) {
   // Calculate and display the ASCII value
   let asciiValue = character.charCodeAt(O);
   console.log(`The ASCII value of ^{character}1 is: ${asciiValue}`);
@@ -7288,11 +7290,11 @@ if (inputString.length > 0) {
 let inputstring = prompt("Enter a string:");
 let targetchar = promptf'Enter the character to count:");
 // Check if input is valid
-if (inputString.length > 0 && targetChar.length = = = 1) {
+if (inputString.length > 0 && targetChar.length === 1) {
   // Count occurrences of the target character
   let count = 0;
   for (let i = 0; i < inputString.length; i++) {
-    if (inputString&lbrack;i&rbrack; = = = targetChar) {
+    if (inputString&lbrack;i&rbrack; === targetChar) {
       count++;
     }
   }
@@ -7564,7 +7566,7 @@ year that is evenly divisible by 4, except for years that are divisible by 100. 
 years divisible by 400 are leap years.</p>
 <pre>
 function isLeapYear(year) {
-  if ((year % 4 = = = 0 &&year % 100 !== 0) || (year % 400 = = = 0)) {
+  if ((year % 4 === 0 &&year % 100 !== 0) || (year % 400 === 0)) {
     return true;
   } else {
     return false;
@@ -7874,7 +7876,7 @@ let myFunction = function() {
 console.logf'Hello, world!");
 };
 // Check if the variable is a function
-if (typeof myFunction = = = 'function') {
+if (typeof myFunction === 'function') {
   console.log("The variable is of function type");
 } else {
   console.log("The variable is not of function type");
@@ -8289,7 +8291,7 @@ individual arguments.</p>
 <pre>
 function findMaxElement(arr) {
 // Check if the array is not empty
-if (arr.length = = = 0) {
+if (arr.length === 0) {
 return "Empty array";
 // Use Math.max() with the spread operator to find the maximum element
 const maxElement = Math.max(...arr);
@@ -8352,7 +8354,7 @@ individual arguments.</p>
 <pre>
 function findMinElement(arr) {
   // Check if the array is not empty
-  if (arr.length = = = 0) {
+  if (arr.length === 0) {
     return "Empty array";
   }
   // Use Math.min() with the spread operator to find the minimum element
@@ -8688,7 +8690,7 @@ function findMedian(arr) {
   const sortedArray = arr.slice().sort((a, b) => a - b);
   // Calculate the median
   const middleIndex = Math.floor(sortedArray.length / 2);
-  if (sortedArray.length % 2 = = = 0) {
+  if (sortedArray.length % 2 === 0) {
     // If the array has an even number of elements, return the average of the middle two
     const median = (sortedArray&lbrack;middleIndex -1&rbrack; + sortedArray&lbrack;middleIndex&rbrack;) / 2;
     return median;
@@ -9032,7 +9034,7 @@ return false;
 // Check if the number is a perfect square
 const isPerfectSquare = (n) = > {
 const sqrt = Math.sqrt(n);
-return sqrt = = = Math.floor(sqrt);
+return sqrt === Math.floor(sqrt);
 };
 // A number is a Fibonacci number if and only if one of (5 &ast; numA2 + 4) or (5 &ast; numA2 - 4) is a perfect square
 return isPerfectSquare(5 &ast; num &ast; num + 4) || isPerfectSquare(5 &ast; num &ast; num - 4);
@@ -9262,12 +9264,12 @@ return 'Invalid choice. Please choose rock, paper, or scissors.';
 }
 console.log(' Player chooses $ {playerSelection}');
 console.log(' Computer chooses $ {computerselection}');
-if (playerSelection = = = computerselection) {
+if (playerSelection === computerselection) {
 return ’ItVs a tie!';
 } else if (
-(playerSelection = = = 'rock' && computerselection = = = 'scissors') 11
-(playerSelection = = = 'paper' && computerselection = = = 'rock') 11
-(playerSelection = = = 'scissors' && computerselection = = = 'paper')
+(playerSelection === 'rock' && computerselection === 'scissors') 11
+(playerSelection === 'paper' && computerselection === 'rock') 11
+(playerSelection === 'scissors' && computerselection === 'paper')
 ){
 return 'You win!';
 } else {
@@ -9324,10 +9326,11 @@ const results = getRandomSymbol();
 // Display the results
 console.log(' Result: $ {result 1} - $ {result2} - $ {results}');
 // Check for a win
-if (result 1 = = = result2 && result2 = = = results) {
-console.logC Congratulations! You won! ');
+if (result1 === result2 && result2 === results) {
+  console.log('Congratulations! You won!');
 } else {
-console.logC Try again. Better luck next time! ');
+  console.log('Try again. Better luck next time!');
+)
 // Example usage - simulate a spin
 spin();
 </pre>
@@ -9341,8 +9344,8 @@ factors are obtained.</p>
 <pre>
 function isPrime(num) {
 if (num < 2) return false;
-for (let i = 2; i < = Math.sqrt(num); i++) {
-if (num % i = = = 0) return false;
+for (let i = 2; i <= Math.sqrt(num); i++) {
+if (num % i === 0) return false;
 }
 return true;
 function sumOfDigits(number) {
@@ -9350,15 +9353,15 @@ return number.toString().split(").reduce((sum, digit) => sum + parselnt(digit, 1
 }
 function primeFactors(number) {
 const factors = &lbrack;&rbrack;;
-for (let i = 2; i < = number; i+ +) {
-while (isPrime(i) && number % i = = = 0) {
+for (let i = 2; i < = number; i++) {
+while (isPrime(i) && number % i === 0) {
 factors.push(i);
 number/= i;
 return factors;
 function isSmithNumber(number) {
 const originalSum = sumOfDigits(number);
 const primeFactorSum = primeFactors(number).reduce((sum, factor) => sum + sumOfDigits(factor), 0);
-return originalSum = = = primeFactorSum;
+return originalSum === primeFactorSum;
 }
 // Example: Check if 728 is a Smith number
 console.log(isSmithNumber(728)); // Output: true
@@ -9378,7 +9381,7 @@ for (let row = 0; row < size; row+ +) {
 const currentRow = &lbrack;&rbrack;;
 for (let col = 0; col < size; col++) {
 // Use 'X' for black squares and'' for white squares
-const isBlack = (row + col) % 2 = = = 1;
+const isBlack = (row + col) % 2 === 1;
 const square = isBlack ? 'X':'
 currentRow.push(square);
 }
@@ -9410,7 +9413,7 @@ if (includeUppercase) validChars + = uppercaseChars;
 if (includeLowercase) validChars + = lowercaseChars;
 if (includeNumbers) validChars + = numberChars;
 if (includeSpecialChars) validChars + = specialchars;
-if (validChars.length = = = 0) {
+if (validChars.length === 0) {
 console.error('Error: At least one character type must be selected.');
 return null;
 }
@@ -9443,10 +9446,10 @@ const rows = maze.length;
 const cols = maze&lbrack;O&rbrack;.length;
 const visited = Array.from({ length: rows}, () = > Array(cols).fill(false));
 function isSafe(row, col) {
-return row > = 0 && row < rows &.& col > = 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
+return row > = 0 && row < rows &.& col > = 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
 }
 function dfs(row, col) {
-if (ro w = = = ro ws -1 && col = = = cols -1){
+if (ro w === ro ws -1 && col === cols -1){
 // Reached the exit
 return true;
 if (isSafe(row, col)) {
@@ -9519,7 +9522,7 @@ a solution is found.</p>
 function isSafe(board, row, col, num) {
   // Check if ’num' is not present in the current row and column
   for (leti = 0;i < 9;i++) {
-    if (board&lbrack;row&rbrack;&lbrack;i&rbrack; = = = num 11 board&lbrack;i&rbrack;&lbrack;col&rbrack; = = = num) {
+    if (board&lbrack;row&rbrack;&lbrack;i&rbrack; === num || board&lbrack;i&rbrack;&lbrack;col&rbrack; === num) {
       return false;
     }
     // Check if'num' is not present in the 3x3 subgrid
@@ -9527,7 +9530,7 @@ function isSafe(board, row, col, num) {
     const startCol = Math.floor(col / 3) &ast; 3;
     for (leti = 0;i < 3;i++){
       for (let j = 0; j < 3;j++){
-        if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; = = = num) {
+        if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; === num) {
           return false;
         }
       }
@@ -9538,7 +9541,7 @@ function isSafe(board, row, col, num) {
   function findEmptyCell(board) {
     for (let row = 0; row < 9; row++) {
       for (let col = 0; col < 9; col++) {
-        if (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 0) {
+        if (board&lbrack;row&rbrack;&lbrack;col&rbrack; === 0) {
           return &lbrack;row, col&rbrack;;
         }
       }
@@ -9642,7 +9645,7 @@ A palindrome in binary reads the same backward as forward.</p>
 function isBinaryPalindrome(number) {
 const binaryRepresentation = number.toString(2);
 const reversedBinary = binaryRepresentation.split(").reverse().join(");
-return binaryRepresentation = = = reversedBinary;
+return binaryRepresentation === reversedBinary;
 // Example usage
 const numberToCheck = 9; // Replace with the number you want to check
 if (isBinaryPalindrome(numberToCheck)) {
@@ -9775,7 +9778,7 @@ class MazeGenerator {
       const newRow = row + dr;
       const newCol = col + de;
       // Check if the new cell is within bounds and unvisited
-      if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid&lbrack;newRow&rbrack;&lbrack;newCol&rbrack; = = =
+      if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid&lbrack;newRow&rbrack;&lbrack;newCol&rbrack; ===
     0){
       // Mark the cell between the current and new cell as visited
       this.grid&lbrack;row + dr / 2&rbrack;&lbrack;col + de / 2&rbrack; = 1;
@@ -10066,7 +10069,7 @@ class MemoryMatchingGame {
         this.flippedCards = &lbrack;&rbrack;;
       }
       this.displayBoard();
-      if (this.matches = = = this.cards.length / 2) {
+      if (this.matches === this.cards.length / 2) {
         console.log(`Congratulations! You completed the game in ${this.attempts} attempts.`);
         process.exit();
       }
@@ -10134,7 +10137,7 @@ function getDigitPairs(strNumber) {
     for (let j = 0;j < length; j++) {
       if (i !== j){
         const pairl = parse!nt(strNumber&lbrack;i&rbrack; + strNumber&lbrack;j&rbrack;, 10);
-        const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index != = j).join("), 10);
+        const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index !== j).join("), 10);
         pairs.push(&lbrack;pairl, pair 2&rbrack;);
       }
     }
@@ -10278,7 +10281,7 @@ class MinesweeperGame {
       do {
         row = Math.floor(Math.random() &ast; this.rows);
         col = Math.floor(Math.random() &ast; this.cols);
-      } while (board&lbrack;row&rbrack;&lbrack;col&rbrack; = = = 'X');
+      } while (board&lbrack;row&rbrack;&lbrack;col&rbrack; === 'X');
         board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
     }
     // Calculate numbers around mines
@@ -10314,7 +10317,7 @@ class MinesweeperGame {
   if (cell === 'X') {
     console.log('Game over! You hit a mine.');
     this.gameOver = true;
-  } else if (cell = = = 0) {
+  } else if (cell === 0) {
     this.board&lbrack;row&rbrack;&lbrack;col&rbrack; = '';
     this.uncoverNeighbors(row, col);
   } else {
@@ -10339,7 +10342,7 @@ class MinesweeperGame {
     for (const row of this.board) {
       uncoveredCount += row.filter(cell => cell !== 'X').length;
     }
-    if (uncoveredCount = = = this.rows &ast; this.cols - this.numMines) {
+    if (uncoveredCount === this.rows &ast; this.cols - this.numMines) {
       console.log('Congratulations! You win!');
       this.gameOver = true;
     }
@@ -10428,7 +10431,7 @@ class TypingSpeedTest {
   }
   getUserlnput(input) {
     this.userlnput = input.trim();
-    if (this.userlnput = = = this.text) {
+    if (this.userlnput === this.text) {
       console.log('Congratulations! You typed the correct text.');
       this.endTest();
     } else {
@@ -10491,7 +10494,7 @@ function isHappyNumber(number) {
     seenNumbers.add(number);
     number = sumOfSquaredDigits(number);
   }
-  return number = = = 1;
+  return number === 1;
 function sumOfSquaredDigits(number) {
 return Array.from(String(number), Number)
 .reduce((sum, digit) => sum + Math.pow(digit, 2), 0);
@@ -11650,7 +11653,7 @@ function shoppingListProgram() {
         console.log(`${newltem} added to your shopping list.`);
         break;
       case "remove":
-        if (shoppingList.length = = = 0) {
+        if (shoppingList.length === 0) {
           console.log("Your shopping list is empty. Nothing to remove.");
         } else {
           const itemToRemove = prompt("Enter the item you want to remove:");
