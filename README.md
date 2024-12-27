@@ -6047,16 +6047,17 @@ writable: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.all() for Multiple Promises Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 const promise 1 = Promise . resolve ('Resolved 1');
 const promise2 = Promise . resolve ('Resolved 2');
 Promise . all ([ promise 1, promise2 ]). then (values = > {
 console . log (values ); // Output: [ 'Resolved 1', 'Resolved 2' ]
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async / Await with Promise . catch () for Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 async function fetchUserData () {
 try {
 const response = await fetch ('https :// api. example . com / users');
@@ -6064,21 +6065,24 @@ const data = await response . json ();
 console . log ( data);
 } catch ( error) {
 console . error ('Error fetching user data :error);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Object Destructuring for Variable Assignment:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 const user = {name: 'Alice', age: 30};
 const {name, age} = user;
 console . log (name, age ); // Output: 'Alice' 30
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Arrow Functions for Concise Function Definitions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 const sum = (a, b ) = > a + b;
 console . log ( sum (2,3)); // Output: 5
+</pre>
 These JavaScript code snippets delve into advanced function operations, array manipulations, object methods,
 promises and async / await functionalities, and ES6 + features like object destructuring and arrow functions .
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6086,31 +6090,35 @@ promises and async / await functionalities, and ES6 + features like object destr
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. IIFE (Immediately Invoked Function Expression):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 (function () {
 const localVar = 'Local variable';
 console . log (localVar);
 })();
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function that Returns Multiple Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 function calculateValues (x, y) {
 return [x + y, x * y, x / y ];
 }
 const [ sum, product, division ] = calculateValues ( 10, 5 );
 console . log ( sum, product, division); // Output: 15 502
-Advanced Array Manipulation:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array. map () for Transformation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 const numbers = [ 1, 2, 3,4, 5 ];
 const doubledNumbers = numbers . map ( num = > num * 2 ); // Output: [ 2, 4, 6, 8,10 ]
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 4. Array. find () to Get First Matching Element:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 const users = [
   {id : 1, name : 'Alice'},
   {id : 2, name : 'Bob'},
@@ -6118,56 +6126,70 @@ const users = [
 ];
 const user = users.find(user => user.id === 2);
 console.log(user); // Output: {id: 2, name: 'Bob'}
-Advanced Object Manipulation:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. freeze () to Prevent Object Modification:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-const obj = {prop : 'value'};
-Object. freeze ( obj);
-obj. prop = 'new value'; // This change won't take effect due to object freezing
+<pre>
+const obj = {prop: 'value'};
+Object.freeze(obj);
+obj.prop = 'new value'; // This change won't take effect due to object freezing
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>6. Using Object. values () to Get Object Values:</h4>
+<h4>6. Using Object.values() to Get Object Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-constobj = {a: l,b: 2,c: 3};
-const values = Object. values ( obj); // Output: [ 1, 2, 3 ]
+<pre>
+const obj = {a: 1,b: 2,c: 3};
+const values = Object.values(obj); // Output: [1, 2, 3]
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Advanced Promises and Async / Await:
+<h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>7. Promise chaining with . then () and . catch ():</h4>
+<h4>7. Promise chaining with .then() and .catch():</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-async function fetchData () {
-return fetch ('https :// api. example . com / data')
-. then (response = > response . json ())
-. catch ( error = > console . error ('Error fetching data :error)) ;
+<pre>
+async function fetchData() {
+  return fetch ('https://api.example.com/data')
+    .then (response => response.json())
+    .catch (error => console.error('Error fetching data:', error));
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function with Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-async function fetchData () {
-try {
-const response = await fetch ('https :// api. example . com / data');
-const data = await response . json ();
-console . log ( data);
-} catch ( error) {
-console . error ('Error fetching data:error);
+<pre>
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
 }
-ES6 + Features:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>ES6 (MS POS) + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining for Object Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-const user = {profile : {email: 'user@example . com'}};
-const userEmail = user? . profile? . email; // Output: 'user@example.com'
-<h4>10. Promise . finally () for Cleanup Tasks:</h4>
-javascript code
-fetch ('https :// api. example . com I data1)
-. then (response = > response . json ())
-. finally (() = > console . log ('Data fetching completed')); // Runs irrespective of resolution / rejection
-These JavaScript code snippets explore advanced function operations, array manipulations, object methods, promises
-and async / await functionalities, and ES6 + features like optional chaining and promise finally .
+<pre>
+const user = {profile: {email: 'user@example.com'}};
+const userEmail = user?.profile?.email; // Output: 'user@example.com'
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>10. Promise.finally () for Cleanup Tasks:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+fetch ('https://api.example.com/data')
+  .then(response => response.json())
+  .finally(() => console.log('Data fetching completed')); // Runs irrespective of resolution/rejection
+</pre>
+<p>These JavaScript code snippets explore advanced function operations, array 
+manipulations, object methods, promises and async / await functionalities, and ES6 + 
+features like optional chaining and promise finally.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced DOM Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6175,19 +6197,20 @@ and async / await functionalities, and ES6 + features like optional chaining and
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Create a new paragraph element
-const paragraph = document, createElement ('p');
-paragraph . textcontent = 'This is a new paragraph';
+const paragraph = document.createElement('p');
+paragraph.textContent = 'This is a new paragraph';
+
 // Append the paragraph to an existing element with id 'container'
-const container = document, getElementById (‘container’);
-container. appendchild (paragraph );
+const container = document.getElementById('container');
+container.appendchild(paragraph);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Adding Event Listeners:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const button = document. getElementById ('myButton');
-button . addEventListener ('click', () = > {
-console . log ('Button clicked');
+const button = document.getElementById('myButton');
+button.addEventListener('click', () => {
+  console.log('Button clicked');
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6197,40 +6220,41 @@ console . log ('Button clicked');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Select all elements with class 'box' and change their background color
-const boxes = document. querySelectorAll ('. box');
-boxes . forEach (box = > {
-box . style . backgroundcolor = 'lightblue';
+const boxes = document.querySelectorAll('.box');
+  boxes.forEach(box => {
+    box.style.backgroundColor = 'lightblue';
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Removing Elements from the DOM:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const elementToRemove = document. getElementById (’elementToRemove');
-if (elementToRemove ) {
-elementToRemove . remove ();
+const elementToRemove = document.getElementById('elementToRemove');
+if (elementToRemove) {
+  elementToRemove.remove();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Delegating Events using Event Bubbling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-const list = document. getElementById ('myList1);
-list. addEventListener ('click', (event) => {
-if ( event. target. tagName === 'li') {
-  console.log('Clicked on list item : ${event.target.textContent}');
-}
+<pre>
+const list = document.getElementById('myList');
+list.addEventListener('click', (event) => {
+  if (event.target.tagName === 'li') {
+    console.log(`Clicked on list item: ${event.target.textContent}`);
+  }
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Creating and Dispatching Custom Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const customEvent = new CustomEvent ('customEventName1, {detail: 'Some data'}) ;
-document. dispatchEvent ( customEvent);
+const customEvent = new CustomEvent('customEventName', {detail: 'Some data'});
+document.dispatchEvent(customEvent);
 // Listening for the custom event
-document. addEventListener ('customEventName', (event) = > {
-console . log ( ' Custom event triggered with data : $ {event. detail}' );
+document.addEventListener('customEventName', (event) => {
+console.log (`Custom event triggered with data: ${event.detail}`);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6239,7 +6263,7 @@ console . log ( ' Custom event triggered with data : $ {event. detail}' );
 <h4>7. Changing Inner HTML of Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const element = document. getElementById ('myElement1);
+const element = document.getElementById('myElement');
 element.innerHTML = '&lt;strong&gt;New HTML content&lt;/strong&gt;';
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6263,10 +6287,11 @@ interactions, and custom event creation.</p>
 <h4>1. Input Event for Live Character Count:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const inputField = document.getElementById('textlnput');
-const charCount = document.getElementById('charCount1) ;
+const inputField = document.getElementById('textInput');
+const charCount = document.getElementById('charCount') ;
+
 inputField.addEventListener ('input', () => {
-charCount.textContent = `Character count: ${inputField.value.length}`;
+  charCount.textContent = `Character count: ${inputField.value.length}`;
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6274,8 +6299,9 @@ charCount.textContent = `Character count: ${inputField.value.length}`;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const inputField = document. getElementById ('textinput');
-inputField . addEventListener ('change', ( event) = > {
-console . log ( ' Input value changed to : $ {event. target. value}' );
+
+inputField.addEventListener ('change', (event) => {
+  console.log(`Input value changed to: ${event.target.value}`);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6284,11 +6310,11 @@ console . log ( ' Input value changed to : $ {event. target. value}' );
 <h4>3. Real-time Password Strength Checker:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const passwordField = document. getElementById ('password');
-const strengthIndicator = document. getElementById ('passwordStrength');
-passwordField . addEventListener ('input', () => {
+const passwordField = document.getElementById('password');
+const strengthIndicator = document.getElementById('passwordStrength');
+passwordField.addEventListener ('input', () => {
   const password = passwordField.value;
-  let strength =
+  let strength = '';
   // Perform password strength checks
   // Update the 'strength' variable based on password complexity
   strengthIndicator.textContent = `Password Strength: ${strength}`;
@@ -6347,8 +6373,9 @@ phoneInput.addEventListener('input', () => {
   phoneInput.value = value;
 });
 </pre>
-<p>These JavaScript snippets demonstrate input event handling, form validation, real - time UI updates based on input
-changes, and advanced input manipulation like input masking and range input handling in HTML forms.</p>
+<p>These JavaScript snippets demonstrate input event handling, form validation, real-
+time UI updates based on input changes, and advanced input manipulation like input 
+masking and range input handling in HTML forms.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>DOM Object Creation and Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6445,9 +6472,9 @@ const element = document.getElementById('myElement');
 const textNode = document.createTextNode('Text Content');
 element.appendchild(textNode);
 </pre>
-<p>These JavaScript snippets demonstrate advanced techniques for creating, manipulating, and 
-interacting with HTML objects, including DOM creation, object manipulation, styling, event 
-handling, and content manipulation.</p>
+<p>These JavaScript snippets demonstrate advanced techniques for creating, manipulating, 
+and interacting with HTML objects, including DOM creation, object manipulation, styling, 
+event handling, and content manipulation.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6455,7 +6482,7 @@ handling, and content manipulation.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document.addEventListener('keypress', (event) => {
-  console.log(`Key pressed : ${event.key}`);
+  console.log(`Key pressed: ${event.key}`);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6491,7 +6518,7 @@ list.addEventListener('click', (event) => {
 <pre>
 const parent = document.getElementById('parentElement');
 
-parent.addEventListener ('click', (event) => {
+parent.addEventListener('click', (event) => {
   console.log('Clicked on parent element');
 });
 </pre>
@@ -6560,9 +6587,10 @@ openWindowButton.addEventListener('click', () => {
 <h4>2. Closing a Browser Window:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const closeWindowButton = document. getElementById ('closeWindowButton');
-closeWindowButton . addEventListener ( click', () = > {
-window.close();
+const closeWindowButton = document.getElementById('closeWindowButton');
+
+closeWindowButton.addEventListener('click', () => {
+  window.close();
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6593,7 +6621,7 @@ if ('geolocation' in navigator) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function redirectToPage() {
-  window.location.href = 'https://example.com';
+  window.location.href = 'https://sayhello.bauska.org';
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6603,7 +6631,7 @@ function redirectToPage() {
 console.log(`Current URL: ${window.location.href}`);
 console.log(`Hostname: ${window.location.hostname}`);
 console.log(`Protocol: ${window.location.protocol}`);
-console.log(`Pathname: ${window. location.pathname}`);
+console.log(`Pathname: ${window.location.pathname}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Screen Object Attributes:</h4>
@@ -6642,26 +6670,29 @@ as web browsers and server-side platforms like Node.js.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Download and Install Visual Studio Code:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p?Visit the Visual Studio Code website and download the installer for your operating 
-system. Run the installer and follow the installation instructions.</p>
+<p>Visit the <a href="https://vscode.dev/" target="_blank" rel="noopener noreferrer">
+Visual Studio Code website</a> and download the installer for your operating system. Run 
+the installer and follow the installation instructions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>2. Install Node.js ( ptional but Recommended for Development):</h4>
+<h4>2. Install Node.js (Optional but Recommended for Development):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Node.js is a JavaScript runtime environment that allows executing JavaScript outside 
-a web browser. You can download Node.js from the official website, install it, and it 
-will include the Node Package Manager (npm) with it. This is useful for running 
-JavaScript programs locally and managing dependencies.</p>
+a web browser. You can download Node.js from the 
+<a href="https://nodejs.org/en/download/package-manager/current" target="_blank" 
+rel="noopener noreferrer">official website</a>, install it, and it will include the Node 
+Package Manager (npm) with it. This is useful for running JavaScript programs locally and 
+managing dependencies.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Install Visual Studio Code Extensions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript (ES6) Code Snippets: Provides handy code snippets for JavaScript 
+<p><b>JavaScript (ES6) Code Snippets:</b> Provides handy code snippets for JavaScript 
 development. Search for it in the Extensions tab in VS Code and install it.</p>
-<p>Prettier - Code formatter: For auto - formatting your code according to 
+<p><b>Prettier - Code formatter:</b> For auto-formatting your code according to 
 predefined rules. It's optional but highly recommended.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a JavaScript Project:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Open Visual Studio Code.</p>
+<p><b>Open Visual Studio Code.</b></p>
 <p>Create a new folder for your project or open an existing one.</p>
 <p>Inside the folder, create a new JavaScript file with the .js extension .Right-click 
 in the Explorer panel New File > script.js.</p>
