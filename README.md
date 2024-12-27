@@ -9246,58 +9246,57 @@ const parallelogramHeight = 8;
 const areaResult = parallelogramArea(parallelogramBase, parallelogramHeight);
 console.log(' The area of the parallelogram is: $ {areaResult}');
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js123">123. Basic Rock, Paper, Scissors Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Here's a basic implementation of a Rock, Paper, Scissors game using JavaScript.</p>
 <pre>
 function computerPlayO {
-const options = &lbrack;'rock', ‘paper1, 'scissors'&rbrack;;
-const randomindex = Math.floor(Math.random() &ast; options.length);
-return options&lbrack;randomlndex&rbrack;;
+  const options = &lbrack;'rock', ‘paper1, 'scissors'&rbrack;;
+  const randomindex = Math.floor(Math.random() &ast; options.length);
+  return options&lbrack;randomlndex&rbrack;;
 }
 function playRound(playerSelection, computerselection) {
-playerSelection = playerSelection.toLowerCase();
-if ((&lbrack;'rock', 'paper', ’scissors'&rbrack;.includes(playerSelection)) {
-return 'Invalid choice. Please choose rock, paper, or scissors.';
-}
-console.log(' Player chooses $ {playerSelection}');
-console.log(' Computer chooses $ {computerselection}');
-if (playerSelection === computerselection) {
-return ’ItVs a tie!';
-} else if (
-(playerSelection === 'rock' && computerselection === 'scissors') 11
-(playerSelection === 'paper' && computerselection === 'rock') 11
-(playerSelection === 'scissors' && computerselection === 'paper')
+  playerSelection = playerSelection.toLowerCase();
+  if ((&lbrack;'rock', 'paper', ’scissors'&rbrack;.includes(playerSelection)) {
+    return 'Invalid choice. Please choose rock, paper, or scissors.';
+  }
+  console.log(' Player chooses $ {playerSelection}');
+  console.log(' Computer chooses $ {computerselection}');
+  if (playerSelection === computerselection) {
+    return ’ItVs a tie!';
+  } else if (
+   (playerSelection === 'rock' && computerselection === 'scissors') ||
+   (playerSelection === 'paper' && computerselection === 'rock') ||
+   (playerSelection === 'scissors' && computerselection === 'paper')
 ){
-return 'You win!';
+  return 'You win!';
 } else {
 return 'You lose!';
 }
 }
 function game() {
-let playerScore = 0;
-let computerScore = 0;
-for (let i = 0; i < 5; i++) {
-const playerSelection = prompt('Enter your choice (rock, paper, or scissors):');
-const computerselection = computerPlayO;
-const result = playRound(playerSelection, computerselection);
-console.log(result);
-if (resultancludes('win')) {
-playerScore++;
-} else if (result.includes('lose')) {
-computerScore++;
-}
-}
-console.log(' Final Score: Player ${playerScore} - ${computerScore} Computer');
-if (playerScore > computerScore) {
-console.log('You win the game!');
-} else if (playerScore < computerScore) {
-console.log('You lose the game!');
-} else {
-console.log('The game is a tie!');
-}
+  let playerScore = 0;
+  let computerScore = 0;
+  for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt('Enter your choice (rock, paper, or scissors):');
+    const computerselection = computerPlay();
+    const result = playRound(playerSelection, computerselection);
+    console.log(result);
+    if (resultancludes('win')) {
+      playerScore++;
+    } else if (result.includes('lose')) {
+      computerScore++;
+    }
+  }
+  console.log(`Final Score: Player ${playerScore} - ${computerScore} Computer`);
+  if (playerScore > computerScore) {
+    console.log('You win the game!');
+  } else if (playerScore < computerScore) {
+    console.log('You lose the game!');
+  } else {
+    console.log('The game is a tie!');
+  }
 }
 // Uncomment the line below to start the game
 // game();
@@ -9310,27 +9309,27 @@ selected. If all three symbols are the same, the player wins; otherwise, they ar
 encouraged to try again.</p>
 <pre>
 // Array of symbols for the slot machine
-const symbols = &lbrack;'
-'&rbrack;;
+const symbols = &lbrack;''&rbrack;;
 // Function to get a random symbol from the array
 function getRandomSymbol() {
-const randomindex = Math.floor(Math.random() &ast; symbols.length);
-return symbols&lbrack;randomlndex&rbrack;;
+  const randomindex = Math.floor(Math.random() &ast; symbols.length);
+  return symbols&lbrack;randomlndex&rbrack;;
 }
 // Function to simulate a spin of the slot machine
 function spin() {
-// Get three random symbols
-const result 1 = getRandomSymbol();
-const result2 = getRandomSymbol();
-const results = getRandomSymbol();
-// Display the results
-console.log(' Result: $ {result 1} - $ {result2} - $ {results}');
-// Check for a win
-if (result1 === result2 && result2 === results) {
-  console.log('Congratulations! You won!');
-} else {
-  console.log('Try again. Better luck next time!');
-)
+  // Get three random symbols
+  const result 1 = getRandomSymbol();
+  const result2 = getRandomSymbol();
+  const results = getRandomSymbol();
+  // Display the results
+  console.log(`Result: ${result 1} - ${result2} - ${results}`);
+  // Check for a win
+  if (result1 === result2 && result2 === results) {
+    console.log('Congratulations! You won!');
+  } else {
+    console.log('Try again. Better luck next time!');
+  }
+}
 // Example usage - simulate a spin
 spin();
 </pre>
@@ -9343,25 +9342,32 @@ factors' digits. The sum of the prime factors' digits is computed recursively un
 factors are obtained.</p>
 <pre>
 function isPrime(num) {
-if (num < 2) return false;
-for (let i = 2; i <= Math.sqrt(num); i++) {
-if (num % i === 0) return false;
+  if (num < 2) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
 }
-return true;
+
 function sumOfDigits(number) {
-return number.toString().split(").reduce((sum, digit) => sum + parselnt(digit, 10), 0);
+  return number.toString().split('').reduce((sum, digit) => sum + parselnt(digit, 10), 0);
 }
+
 function primeFactors(number) {
-const factors = &lbrack;&rbrack;;
-for (let i = 2; i < = number; i++) {
-while (isPrime(i) && number % i === 0) {
-factors.push(i);
-number/= i;
-return factors;
+  const factors = &lbrack;&rbrack;;
+  for (let i = 2; i < = number; i++) {
+    while (isPrime(i) && number % i === 0) {
+      factors.push(i);
+      number/= i;
+    }
+  }
+  return factors;
+}
+
 function isSmithNumber(number) {
-const originalSum = sumOfDigits(number);
-const primeFactorSum = primeFactors(number).reduce((sum, factor) => sum + sumOfDigits(factor), 0);
-return originalSum === primeFactorSum;
+  const originalSum = sumOfDigits(number);
+  const primeFactorSum = primeFactors(number).reduce((sum, factor) => sum + sumOfDigits(factor), 0);
+  return originalSum === primeFactorSum;
 }
 // Example: Check if 728 is a Smith number
 console.log(isSmithNumber(728)); // Output: true
@@ -9375,19 +9381,19 @@ representation of a chessboard.</p>
 <pre>
 // Function to generate a basic chessboard
 function generateChessboard() {
-const size = 8; // Size of the chessboard (8x8)
-const chessboard = &lbrack;&rbrack;;
-for (let row = 0; row < size; row+ +) {
-const currentRow = &lbrack;&rbrack;;
-for (let col = 0; col < size; col++) {
-// Use 'X' for black squares and'' for white squares
-const isBlack = (row + col) % 2 === 1;
-const square = isBlack ? 'X':'
-currentRow.push(square);
-}
-chessboard.push(currentRow.join(''));
-}
-return chessboard.join('\n');
+  const size = 8; // Size of the chessboard (8x8)
+  const chessboard = &lbrack;&rbrack;;
+  for (let row = 0; row < size; row+ +) {
+    const currentRow = &lbrack;&rbrack;;
+    for (let col = 0; col < size; col++) {
+      // Use 'X' for black squares and'' for white squares
+      const isBlack = (row + col) % 2 === 1;
+      const square = isBlack ? 'X':'
+      currentRow.push(square);
+    }
+    chessboard.push(currentRow.join(''));
+  }
+  return chessboard.join('\n');
 }
 // Example usage
 const chessboard = generateChessboard();
@@ -9403,24 +9409,25 @@ special characters).</p>
 // Function to generate a random password
 function generateRandomPassword(length, includeUppercase, includeLowercase, includeNumbers,
 includeSpecialChars) {
-const uppercaseChars = ABCDEFGHIJKLMNOPQRSTUV WXYZ';
-const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
-const numberChars = '0123456789';
-const specialchars = ,!@#$%A&&ast;()-=_+&lbrack;&rbrack;{}l;:,.<>?';
-let validChars =
-let password =
-if (includeUppercase) validChars + = uppercaseChars;
-if (includeLowercase) validChars + = lowercaseChars;
-if (includeNumbers) validChars + = numberChars;
-if (includeSpecialChars) validChars + = specialchars;
-if (validChars.length === 0) {
-console.error('Error: At least one character type must be selected.');
-return null;
-}
-for (let i = 0; i < length; i++) {
-const randomindex = Math.floor(Math.random() &ast; validChars.length);
-password + = validChars.charAt(randomlndex);
-return password;
+  const uppercaseChars = ABCDEFGHIJKLMNOPQRSTUV WXYZ';
+  const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+  const numberChars = '0123456789';
+  const specialchars = ,!@#$%A&&ast;()-=_+&lbrack;&rbrack;{}l;:,.<>?';
+  let validChars = '';
+  let password = '';
+  if (includeUppercase) validChars += uppercaseChars;
+  if (includeLowercase) validChars += lowercaseChars;
+  if (includeNumbers) validChars += numberChars;
+  if (includeSpecialChars) validChars += specialchars;
+  if (validChars.length === 0) {
+    console.error('Error: At least one character type must be selected.');
+    return null;
+  }
+  for (let i = 0; i < length; i++) {
+    const randomindex = Math.floor(Math.random() &ast; validChars.length);
+  }
+  password += validChars.charAt(randomlndex);
+  return password;
 }
 // Example usage
 const passwordLength = 12;
@@ -9431,7 +9438,8 @@ const includeSpecialChars = true;
 const randomPassword = generateRandomPassword(passwordLength, includeUppercase, includeLowercase,
 includeNumbers, includeSpecialChars);
 if (randomPassword) {
-console.log(' Random Password: ${randomPassword}');
+  console.log(' Random Password: ${randomPassword}');
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js128">128. Basic Maze Solver</h2>
@@ -9442,49 +9450,55 @@ the starting point to the exit.</p>
 <pre>
 // Function to solve a maze using depth-first search
 function solveMaze(maze) {
-const rows = maze.length;
-const cols = maze&lbrack;O&rbrack;.length;
-const visited = Array.from({ length: rows}, () = > Array(cols).fill(false));
-function isSafe(row, col) {
-return row > = 0 && row < rows &.& col > = 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
+  const rows = maze.length;
+  const cols = maze&lbrack;O&rbrack;.length;
+  const visited = Array.from({ length: rows}, () = > Array(cols).fill(false));
+
+  function isSafe(row, col) {
+    return row > = 0 && row < rows &.& col > = 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
+  }
+  
+  function dfs(row, col) {
+    if (ro w === ro ws -1 && col === cols -1){
+      // Reached the exit
+      return true;
+    }
+    if (isSafe(row, col)) {
+      visited&lbrack;row&rbrack;&lbrack;col&rbrack; = true;
+      // Move in all possible directions (up, down, left, right)
+      const directions = &lbrack;
+      &lbrack;-1,0&rbrack;, // Up
+      &lbrack;1, 0&rbrack;, // Down
+      &lbrack;0,-1&rbrack;,// Left
+      &lbrack;0,1&rbrack; //Right
+      &rbrack;;
+      for (const &lbrack;dr, de&rbrack; of directions) {
+        const newRow = row + dr;
+        const newCol = col + de;
+        if (dfs(newRow, newCol)) {
+          return true;
+        }
+      }
+      visited&lbrack;row&rbrack;&lbrack;col&rbrack; = false; // Backtrack
+    }
+    return false;
+  }
+  // Start the depth-first search from the top-left corner
+  if (dfs(0,0)) {
+    console.log('Path found!');
+  } else {
+    console.log('No path found.');
+  }
 }
-function dfs(row, col) {
-if (ro w === ro ws -1 && col === cols -1){
-// Reached the exit
-return true;
-if (isSafe(row, col)) {
-visited&lbrack;row&rbrack;&lbrack;col&rbrack; = true;
-// Move in all possible directions (up, down, left, right)
-const directions = &lbrack;
-&lbrack;-1,0&rbrack;, // Up
-&lbrack;1, 0&rbrack;, // Down
-&lbrack;0,-1&rbrack;,// Left
-&lbrack;0,1&rbrack; //Right
-&rbrack;;
-for (const &lbrack;dr, de&rbrack; of directions) {
-const newRow = row + dr;
-const newCol = col + de;
-if (dfs(newRow, newCol)) {
-return true;
-}
-}
-visited&lbrack;row&rbrack;&lbrack;col&rbrack; = false; // Backtrack
-}
-return false;
-}
-// Start the depth-first search from the top-left corner
-if (dfs(0,0)) {
-console.log('Path found! ');
-} else {
-console.log('No path found. ');
 // Example usage
 const maze = &lbrack;
-11,0,1,1,1&rbrack;,
+&lbrack;1,0,1,1,1&rbrack;,
 &lbrack;1,1,1,0,1&rbrack;,
 &lbrack;0,0,1,1,1&rbrack;,
-&lbrack;0,0,1, 0,1&rbrack;,
+&lbrack;0,0,1,0,1&rbrack;,
 &lbrack;0,0,1,1,1&rbrack;
 &rbrack;;
+
 solveMaze(maze);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9495,21 +9509,22 @@ that contains every letter of the alphabet at least once.</p>
 <pre>
 // Function to check if a string is a pangram
 function isPangram(str) {
-const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-const lowercasedStr = str.toLowerCase();
-for (const char of alphabet) {
-if (llowercasedStr.includes(char)) {
-return false;
-}
-}
-return true;
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const lowercasedStr = str.toLowerCase();
+  for (const char of alphabet) {
+    if (llowercasedStr.includes(char)) {
+      return false;
+    }
+  }
+  return true;
 }
 // Example usage
 const inputstring = "The quick brown fox jumps over the lazy dog";
 if (isPangram(inputString)) {
-console.log('The given string is a pangram! ');
+  console.log('The given string is a pangram!');
 } else {
-console.log('The given string is not a pangram. ');
+  console.log('The given string is not a pangram.');
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js130">130. Basic Sudoku Solver</h2>
@@ -9525,57 +9540,58 @@ function isSafe(board, row, col, num) {
     if (board&lbrack;row&rbrack;&lbrack;i&rbrack; === num || board&lbrack;i&rbrack;&lbrack;col&rbrack; === num) {
       return false;
     }
-    // Check if'num' is not present in the 3x3 subgrid
-    const startRow = Math.floor(row / 3) &ast; 3;
-    const startCol = Math.floor(col / 3) &ast; 3;
-    for (leti = 0;i < 3;i++){
-      for (let j = 0; j < 3;j++){
-        if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; === num) {
-          return false;
-        }
-      }
-    }
-    return true;
   }
-  // Function to find an empty cell in the Sudoku grid
-  function findEmptyCell(board) {
-    for (let row = 0; row < 9; row++) {
-      for (let col = 0; col < 9; col++) {
-        if (board&lbrack;row&rbrack;&lbrack;col&rbrack; === 0) {
-          return &lbrack;row, col&rbrack;;
-        }
-      }
-    }
-    return null;
-  }
-  // Function to solve the Sudoku puzzle using backtracking
-  function solveSudoku(board) {
-    const emptyCell = findEmptyCell(board);
-    if (’emptyCell) {
-
-      // No empty cell found, the puzzle is solved
-      return true;
-    }
-    const &lbrack;row, col&rbrack; = emptyCell;
-
-    // Try filling the empty cell with numbers 1 to 9
-    for (let num = l;num <= 9;num++) {
-      if (isSafe(board, row, col, num)) {
-
-        // If placing 'num' in the current cell is safe, try the next step
-        board&lbrack;row&rbrack;&lbrack;col&rbrack; = num;
-
-        // Recursively attempt to solve the rest of the puzzle
-        if (solveSudoku(board)) {
-          return true;
-        }
-
-        // If placing 'num' in the current cell leads to an invalid solution, backtrack
-        board&lbrack;row&rbrack;&lbrack;col&rbrack; = 0;
-
-        // No number from 1 to 9 can be placed in the current cell, backtrack
+  // Check if'num' is not present in the 3x3 subgrid
+  const startRow = Math.floor(row / 3) &ast; 3;
+  const startCol = Math.floor(col / 3) &ast; 3;
+  for (leti = 0;i < 3;i++){
+    for (let j = 0; j < 3;j++){
+      if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; === num) {
         return false;
       }
+    }
+  }
+  return true;
+}
+// Function to find an empty cell in the Sudoku grid
+function findEmptyCell(board) {
+  for (let row = 0; row < 9; row++) {
+    for (let col = 0; col < 9; col++) {
+      if (board&lbrack;row&rbrack;&lbrack;col&rbrack; === 0) {
+        return &lbrack;row, col&rbrack;;
+      }
+    }
+  }
+  return null;
+}
+// Function to solve the Sudoku puzzle using backtracking
+function solveSudoku(board) {
+  const emptyCell = findEmptyCell(board);
+  if (’emptyCell) {
+    // No empty cell found, the puzzle is solved
+      return true;
+  }
+  const &lbrack;row, col&rbrack; = emptyCell;
+
+  // Try filling the empty cell with numbers 1 to 9
+  for (let num = l;num <= 9;num++) {
+    if (isSafe(board, row, col, num)) {
+
+      // If placing 'num' in the current cell is safe, try the next step
+      board&lbrack;row&rbrack;&lbrack;col&rbrack; = num;
+
+      // Recursively attempt to solve the rest of the puzzle
+      if (solveSudoku(board)) {
+        return true;
+      }
+
+      // If placing 'num' in the current cell leads to an invalid solution, backtrack
+      board&lbrack;row&rbrack;&lbrack;col&rbrack; = 0;
+    }
+  }
+  // No number from 1 to 9 can be placed in the current cell, backtrack
+  return false;
+}
 
 // Example usage
 const sudokuBoard = &lbrack;
@@ -9604,9 +9620,9 @@ if (solveSudoku(sudokuBoard)) {
 <pre>
 // Example object
 let person = {
-firstName: "John",
-lastName: "Doe",
-age: 30
+  firstName: "John",
+  lastName: "Doe",
+  age: 30
 };
 // Convert object to a JSON-formatted string
 let jsonString = JSON.stringify(person);
@@ -9649,10 +9665,9 @@ return binaryRepresentation === reversedBinary;
 // Example usage
 const numberToCheck = 9; // Replace with the number you want to check
 if (isBinaryPalindrome(numberToCheck)) {
-console.log(' ${numberToCheck} is a binary palindrome!
-');
+  console.log(`${numberToCheck} is a binary palindrome!`);
 } else {
-console.log(' $ {numberToCheck} is not a binary palindrome. ');
+  console.log(`$ {numberToCheck} is not a binary palindrome.`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js134">134. Find the Area of a Rhombus</h2>
@@ -9663,15 +9678,15 @@ for the area of a rhombus is <span class="consolas">Area = (dl &ast; d2) / 2</sp
 <span class="consolas">d1 and d2</span> are the lengths of the diagonals.</p>
 <pre>
 // Function to calculate the area of a rhombus
-function calculateRhombusArea(diagonall, diagonal) {
-const area = (diagonal 1 &ast; diagonal) / 2;
-return area;
+function calculateRhombusArea(diagonal1, diagonal2) {
+  const area = (diagonal1 &ast; diagona2) / 2;
+  return area;
 }
 // Example usage
-const diagonal 1 Length = 8;
+const diagonal1Length = 8;
 const diagonal2Length = 6;
-const rhombusArea = calculateRhombusArea(diagonallLength, diagonal2Length);
-console.log(' The area of the rhombus is: $ {rhombus Area.toFixed(2)j');
+const rhombusArea = calculateRhombusArea(diagonal1Length, diagonal2Length);
+console.log(`The area of the rhombus is: ${rhombus Area.toFixed(2)`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js135">135. Check if a Number is a Catalan Number</h2>
