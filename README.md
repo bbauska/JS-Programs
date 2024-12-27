@@ -3482,35 +3482,34 @@ let jsonString = obj. tojson ();
 console . log (jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>18. Handling JSON Data from an API (Using Axios ):</h4>
+<h4>18. Handling JSON Data from an API (Using Axios):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-axios . get ('https :// api. example . com / data')
-. then ( response = > console . log (response . data))
-. catch ( error = > console . error ('Error :', error)) ;
+axios.get('https://api.example.com/data')
+  .then(response = > console.log(response.data))
+  .catch(error => console.error('Error:', error)) ;
 </per>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Merging JSON Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-letobjl = { " name Tom ", "age": 30};
-let obj2 = { " city" Paris ", " country" France "};
-letmergedObj = { ... objl, ... obj2};
-console . log ( mergedObj); // Output: { " name " Tom", " age 30, " city" Paris ", " country" France " }
+let objl = {"name":"Tom", "age": 30};
+let obj2 = {"city":"Paris", "country":"France"};
+let mergedObj = { ... objl, ... obj2};
+console.log(mergedObj); // Output: {"name":"Tom", "age" 30, "city":"Paris", "country":"France"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Mapping JSON Data to Another Structure:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = [
-{ "id": 1, " name Item 1 "},
-{ " id": 2, " name ":" Item 2 "},
-{ " id ": 3, " name ":" Item 3 "}
+  {"id": 1, "name":"Item1"},
+  {"id": 2, "name":"Item2"},
+  {"id": 3, "name":"Item3"}
 ];
 let mappedData = data.map(item => ({itemId: item.id, itemName: item.name})) ;
-console . log ( mappedData);
-// Output: [{"itemId": 1, "itemName":" Item 1" }, {"itemId": 2, "itemName":" Item 2 " }, {"itemId": 3,
-" itemName ":" Item 3 " } ]
+console.log(mappedData);
+// Output: [{"itemId": 1, "itemName":" Item1"}, {"itemId": 2, "itemName":"Item2"}, {"itemId": 3, "itemName":"Item3"} ]
 </pre>
 <p>These examples showcase different aspects of using JSON in JavaScript, including creating, manipulating, parsing, and
 working with JSON data in various scenarios.</p>
@@ -3543,11 +3542,11 @@ exchange between web servers and web clients.</p>
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JSON Syntax</h4>
+<h3>JSON Syntax</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON syntax is derived from JavaScript object notation, consisting of key - value pairs enclosed in curly braces {}, and
 values can be strings, numbers, objects, arrays, booleans, or null.</p>
-<h3>Example of JSON Syntax:</h3>
+<h4>Example of JSON Syntax:</h4>
 <h5>json code</h5>
 <pre>
 {
@@ -3565,92 +3564,87 @@ values can be strings, numbers, objects, arrays, booleans, or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more lightweight and easier to read and parse
 than XML.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example Comparison between JSON and XML:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example Comparison between JSON and XML:</h4>
 <h5>json code</h5>
 <pre>
 // JSON
 {
-" name " John",
-" age 25,
-’■ city" New York"
+  "name":"John",
+  "age": 25,
+  "city":"New York"
 }
 </pre>
 <h5>xml code</h5>
-<!-- XML -->
-<user>
-  <name>John </name>
-  <age>25< / age>
-  <city>New York< / city>
-</user>
+<pre>
+&lt;!-- XML --&gt;
+&lt;user&gt;
+  &lt;name&gt;John&lt;/name&gt;
+  &lt;age&gt;25&lt;/age&gt;
+  &lt;city&gt;New York&lt;/city>
+&lt;/user&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JSON Data Types</h4>
+<h3>JSON Data Types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of Different Data Types in JSON:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of Different Data Types in JSON:</h4>
 <h5>json code</h5>
 <pre>
 {
-" string" Hello, World !",
-" number42,
-" booleantrue,
-" nullValuenull,
-" object" key" value "},
-" array":[ 1,2,3 ]
+  "string":"Hello, World !",
+  "number": 42,
+  "boolean": true,
+  "nullValue": null,
+  "object":{"key":"value"},
+  "array":[1,2,3]
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JSON Parse</h4>
+<h3>JSON Parse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of JSON Parsing:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of JSON Parsing:</h4>
 <pre>
-let jsonString = '{"nameAlice", "age": 28}';
+let jsonString = '{"name":"Alice", "age": 28}';
 let jsonObj = JSON.parse(jsonString);
-console.log (jsonObj.name); // Output: Alice
+console.log(jsonObj.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JSON Stringify</h4>
+<h3>JSON Stringify</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON.stringify () is a method in JavaScript used to convert a JavaScript object into a JSON string.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of JSON Stringification:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a 
+JSON string.</p>
+<h4>Example of JSON Stringification:</h4>
 <pre>
 letobj = {name Bob ", age : 30};
 let jsonString = JSON . stringify ( obj);
 console . log (jsonString); // Output: {" name Bob "," age 30}
 </pre>
-<h4>JSON Objects</h4>
-<p>JSON objects contain key - value pairs enclosed in curly braces {}. Keys must be strings, and values can be of any JSON
-data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of a JSON Object:</h3>
+<h3>JSON Objects</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JSON objects contain key - value pairs enclosed in curly braces{}. Keys must be 
+strings, and values can be of any JSON data type.</p>
+<h4>Example of a JSON Object:</h4>
 <h5>json code</h5>
 <pre>
 {
-" name " Sarah",
-" age "-.35,
-" city" London"
+  "name":"Sarah",
+  "age": 35,
+  "city":"London"
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JSON Arrays</h4>
+<h3>JSON Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can be of any JSON data type.</p>
-<h3>Example of a JSON Array:</h3>
+<h4>Example of a JSON Array:</h4>
 <h5>json code</h5>
 <pre>
-[" apple 11," banana"," orange "]
+&lbrack;"apple","banana","orange"&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JSON Server</h4>
+<h3>JSON Server</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON is commonly used to transfer data between a server and a web client in web development. Servers often provide
 data in JSON format through APIs.</p>
@@ -3661,37 +3655,39 @@ data in JSON format through APIs.</p>
 <pre>
 // Received from a server API endpoint
 {
-’■ id1,
-" title " Sample Post" ,
-" content" This is a sample post content
+  "id": 1,
+  "title": "Sample Post",
+  "content": "This is a sample post content."
 }
 </pre>
-<h5>JSON PHP</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON PHP</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode () and json.decode () functions respectively, to
 convert data to and from JSON format.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Encoding and Decoding JSON in PHP:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 // Encoding PHP array to JSON
-$data = array (" name "= > " Peter ", " age "= > 28 );
-$jsonData = json.encode ( $data);
+$data = array("name" => "Peter", "age" => 28 );
+$jsonData = json.encode($data);
 // Decoding JSON to PHP array
-$jsonString = ’{" name Alice ", "age": 30}’;
-$decodedData = json.decode ( $jsonString, true );
+$jsonString = `{"name": "Alice", "age": 30}`;
+$decodedData = json.decode($jsonString, true);
 </pre>
-<h4>JSON HTML</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON HTML</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
-<h3>Example of Using JSON Data in HTML:</h3>
+<h4>Example of Using JSON Data in HTML:</h4>
 <h5>html code</h5>
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
 &lt;script&gt;
 const users = [
-  {"name John", "age": 25},
-  {"name Alice", "age": 30},
-  {"name Bob", "age": 28}
+  {"name":"John", "age": 25},
+  {"name":"Alice", "age": 30},
+  {"name":"Bob", "age": 28}
 ];
 const userList = document. getElementById ("userList");
 users.forEach(user => {
@@ -3701,10 +3697,12 @@ users.forEach(user => {
 });
 &lt;/script&gt;
 </pre>
-<h4>JSON JSONP</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON JSONP</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different domain in web development to
 bypass the same - origin policy limitations.</p>
-<h3>Example of JSONP Request:</h3>
+<h4>Example of JSONP Request:</h4>
 <pre>
 function handleData(data) {
   console.log(data);
@@ -3728,14 +3726,14 @@ let person = {
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-2. Accessing JSON Object Properties :
+<h4>2. Accessing JSON Object Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(person.name); // Output: John
 console.log(person.age); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-3. Nested JSON Objects :
+<h4>3. Nested JSON Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employee = {
@@ -3747,34 +3745,31 @@ let employee = {
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-4. JSON Array of Objects:
+<h4>4. JSON Array of Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let books = [
-  {"title
-  "Book1", "author" Author1"},
-  {"title
-  "Book2", "author " Author2"},
-  {"title
-  "Book3", "author" Author3"}
+  {"title":"Book1", "author" Author1"},
+  {"title":"Book2", "author" Author2"},
+  {"title":"Book3", "author" Author3"}
 ];
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-5. Converting JSON to String:
+<h4>5. Converting JSON to String:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonString = JSON . stringify (person );
-console . log (jsonString); // Output: {" name John"," age 30," cityNew York"}
+let jsonString = JSON.stringify(person);
+console.log(jsonString); // Output: {"name":"John","ag": 30,"city":"New York"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-6. Parsing JSON String to Object:
+<h4>6. Parsing JSON String to Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonObject = JSON.parse (’{" name Alice "," age 25," cityLondon ";
-console.log (jsonObject.name); // Output: Alice
+let jsonObject = JSON.parse('{"name":"Alice","age": 25,"city":"London"}';
+console.log(jsonObject.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-7. Fetching JSON Data from URL (using Fetch API):
+<h4>7. Fetching JSON Data from URL (using Fetch API):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch('data.json')
@@ -3783,7 +3778,7 @@ fetch('data.json')
 .catch(error => console.error('Error :', error)) ;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-8. Displaying JSON Data Dynamically in HTML:
+<h4>8. Displaying JSON Data Dynamically in HTML:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = { " name " Bob ", " age 28 };
@@ -3791,7 +3786,7 @@ let display Div = document. getElementById ('jsonDataDisplay');
 displayDiv. innerHTML = ' <p>Name : ${jsonData . name}< / p><p>Age : ${jsonData . age}< / p>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-9. Handling JSON Data in Forms :
+<h4>9. Handling JSON Data in Forms:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document. getElementById ('myForm');
@@ -3806,7 +3801,7 @@ form.addEventListener ('submit', function(event) {
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-10. Stringifying and Parsing a More Complex Object:
+<h4>10. Stringifying and Parsing a More Complex Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let complexObj = {
@@ -3822,7 +3817,7 @@ let parsedObj = JSON.parse(complexstring);
 console.log(parsedObj. addresses[0]. address); // Output: 123 Main St
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-11. Filtering JSON Array Data:
+<h4>11. Filtering JSON Array Data:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employees = [
@@ -3834,7 +3829,7 @@ let hrEmployees = employees.filter( employee => employee.department === " HR"
 console.log (hrEmployees); // Output: [{"name" John", "department": "HR" }, {"name" Bob", "department" HR" } ]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-12. Updating JSON Object Properties:
+<h4>12. Updating JSON Object Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let product = { " name Chair ", "price": 50};
@@ -3842,7 +3837,7 @@ product. price =60;
 console . log (product); // Output: { " name " Chair", " price 60 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-13. Removing a Property from JSON Object:
+<h4>13. Removing a Property from JSON Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = { 11 name " Kate ", " age 25 };
@@ -3850,7 +3845,7 @@ delete data. age;
 console . log ( data); // Output: { " name ":" Kate " }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-14. Using JSON with Local Storage:
+<h4>14. Using JSON with Local Storage:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let userData = {"username " user 123 ", " email" user@example.com " };
@@ -3859,7 +3854,7 @@ let storedData = JSON . parse (localstorage.getltem('userData'));
 console.log(storedData.email); // Output: user@example . com
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-15. Handling JSON Date Strings:
+<h4>15. Handling JSON Date Strings:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = { " date ": " 2023 - 12 - 31T08 : 00 : 00Z " };
@@ -3867,7 +3862,7 @@ let date = new Date(jsonData.date);
 console.log(date.toDateString ()); // Output: Fri Dec 31 2023
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-16. Using JSON in Asynchronous Functions:
+<h4>16. Using JSON in Asynchronous Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData () {
@@ -3881,7 +3876,7 @@ async function fetchData () {
 fetchData ();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-17. JSON Serialization with Custom Functions:
+<h4>17. JSON Serialization with Custom Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {
@@ -3895,7 +3890,7 @@ letobj = {
 console.log (jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-18. Handling JSON Data from an API (Using Axios):
+<h4>18. Handling JSON Data from an API (Using Axios):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 axios.get('https://api.example.com/data')
@@ -3931,11 +3926,282 @@ creating, manipulating, parsing, and working with JSON data in various scenarios
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex94">JavaScript vs jQuery: A Comprehensive Comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-document. getElementById (" mylmage "). setAttribute (" src ", " new_image . jpg ");
+<p>JavaScript and jQuery are both powerful tools used in web development. JavaScript is a 
+programming language, while jQuery is a library built with JavaScript. Understanding their 
+differences, capabilities, and usage scenarios is crucial for developers.</p>
+<h3>JavaScript Overview</h3>
+<p>JavaScript is a versatile programming language primarily used for enhancing 
+interactivity on web pages. It's a core technology in web development, enabling dynamic 
+content updates, user interactions, and handling client-side functionalities.</p>
+<h4>Example of JavaScript Functionality:</h4>
+<pre>
+// JavaScript code to change text color on button click
+function changeColor() {
+  document.getElementByld("text").style.color = "blue";
+}
+<p>JavaScript offers native methods and APIs to interact with the Document Object Model 
+(DOM) and manipulate HTML elements, enabling developers to create dynamic web applications.</p>
+<h3>jQuery Overview</h3>
+<p>jQuery, on the other hand, is a fast, lightweight JavaScript library designed to 
+simplify the process of client-side scripting and DOM manipulation. It abstracts many 
+complexities of JavaScript and provides a concise syntax for common tasks.</p>
+<h4>Example of jQuery Functionality:</h4>
+<pre>
+// jQuery code to change text color on button click
+<pre>$("#text").css("color", "blue");</pre>
+<p>jQuery simplifies common JavaScript tasks, such as event handling, animations, AJAX requests, and DOM
+manipulation, offering a more concise syntax compared to native JavaScript.</p>
+<h3>Differences Between JavaScript and jQuery</h3>
+<h4>1. Syntax:</h4>
+<ul>
+  <li>JavaScript: Uses native syntax and methods provided by the language.</li>
+  <li>jQuery: Offers a simpler syntax and concise methods for common tasks, making code 
+    shorter and more readable.</li>
+</ul>
+<h4>2. DOM Manipulation:</h4>
+<ul>
+  <li>JavaScript: Provides direct DOM manipulation using methods like getElementByld and 
+    querySelector.</li>
+  <li>jQuery : Simplifies DOM traversal and manipulation with methods like $ (), allowing 
+    easier element selection and modification.</li>
+</ul>
+<h4>3. Browser Compatibility:</h4>
+<ul>
+  <li>JavaScript: Works across all modern browsers, but handling cross - browser 
+    compatibility may require additional code.</li>
+  <li>jQuery: Provides cross - browser compatibility out-of-the-box, reducing the need 
+    for explicit compatibility handling.</li>
+</ul>
+<h4>4. Learning Curve:</h4>
+<ul>
+  <li>JavaScript: Requires understanding core language concepts, which might have a 
+    steeper learning curve for beginners.</li>
+  <li>jQuery: Offers a simpler learning curve due to its concise syntax and abstraction 
+    of complex JavaScript operations.</li>
+</ul>
+<h3>jQuery Selectors</h3>
+<p>jQuery provides powerful selectors that allow developers to efficiently target and 
+manipulate HTML elements.</p>
+<h4>Example of jQuery Selectors:</h4>
+<pre>
+// Selecting elements with class 'example'
+$ (". example "). css (" font - size ", "16px ");
+// Selecting all <p> elements inside <div> with ID 'content'
+$ (" #content p "). addClass (" highlight");
+</pre>
+<p>jQuery selectors, similar to CSS selectors, enable developers to target elements based on IDs, classes, attributes, element
+types, and more.</p>
+<h3>jQuery HTML Manipulation</h3>
+<p>jQuery simplifies HTML content manipulation by providing methods to insert, remove, 
+and modify HTML elements and their content.</p>
+<h4>Example of jQuery HTML Manipulation:</h4>
+<pre>
+// Appending a new <li> element to an unordered list
+$ (" ul"). append (" <li>New Item< I li> ") ;
+// Changing text content inside a <div> element
+$ (" #content"). text (" Updated content");
+</pre>
+<p>With jQuery's methods like append, html, text, and remove , developers can efficiently 
+modify HTML content on the fly.</p>
+<h3>jQuery CSS Manipulation</h3>
+<p>jQuery facilitates CSS manipulation, allowing changes to element styles dynamically.</p>
+<h4>Example of jQuery CSS Manipulation:</h4>
+<pre>
+// Changing the background color of an element
+$ (" #box "). css (" background - color ", " #f2f2f2 ");
+// Toggling a CSS class on an element
+$ (" #toggleBtn "). click (function () {
+$ (" #content"). toggleclass (" active ") ;
+});
+</pre>
+<p>jQuery's css, addClass, removeclass, and toggleClass methods simplify applying, 
+removing, and toggling CSS styles.</p>
+<h3>jQuery DOM Traversal</h3>
+<p>jQuery simplifies DOM traversal, enabling easy navigation between elements and their 
+relationships within the DOM.</p>
+<h4>Example of jQuery DOM Traversal:</h4>
+<pre>
+// Finding the next sibling element
+$ (" #current"). next (). addClass (" highlight") ;
+// Traversing up the DOM to find parent elements
+$ (" a "). closest (" div"). addClass (" parent - div") ;
+</pre>
+<p>Using methods like next, prev, find, closest, and siblings, jQuery provides efficient 
+ways to navigate and manipulate elements within the DOM.</p>
+<h3>Conclusion</h3>
+<p>JavaScript and jQuery each have their strengths and use cases in web development. 
+JavaScript is the foundation language that provides extensive capabilities for building 
+complex applications. jQuery, as a library built on JavaScript, simplifies common tasks, 
+particularly DOM manipulation, offering a more concise syntax. For modern development, 
+JavaScript's native features are often preferred due to advancements in web standards, 
+while jQuery remains relevant for legacy projects or when compatibility with older 
+browsers is a concern. Understanding both JavaScript and jQuery empowers developers 
+to choose the right tool for the job and build robust, interactive web applications.</p>
+<h4>JavaScript and jQuery in various Examples:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>1. Selecting an Element by ID:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+let element = document.getElementByld("myElement");
+element.style.color = "blue";
+</pre>
+<h5>jQuery:</h5>
+<pre>$("#myElement").css("color ", "blue");</pre>
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>2. Selecting Multiple Elements by Class:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+let elements = document. getElementsByClassName (" myClass ") ;
+for (let i = 0; i < elements.length; i ++) {
+  elements[i].style.fontWeight = "bold";
+}
+</pre>
 <h4>jQuery:</h4>
 <pre>
-$("#mylmage").attr(" src", " newjmage.jpg");
-</pre>
+$(".myClass").css("font - weight", "bold");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>3. Adding Event Listeners:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+document. getElementByld (" myButton "). addEventListener (" click", function () {
+alert (" Button clicked !");
+});
+jQuery:
+javascript code
+$ (" #myButton "). on (" click", function () {
+alert (" Button clicked !");
+});
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>4. Handling Document Ready Event:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+document. addEventListener (" DOMContentLoaded", function () {
+// Code to execute when DOM is ready
+});
+jQuery:
+javascript code
+$ ( document). ready (function () {
+// Code to execute when DOM is ready
+});
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>5. Creating a New Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+let newElement = document. createElement (" div");
+newElement. textContent = " New Content";
+document. body. appendChild (newElement);
+jQuery:
+javascript code
+$ (" body "). append (" <div>New Content< I div> ");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>6. Removing an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+let elementToRemove = document. getElementByld (" toBeRemoved ") ;
+elementToRemove . parentNode . removechild ( elementToRemove );
+jQuery:
+javascript code
+$ (" #toBeRemoved"). remove ();
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>7. Manipulating CSS Class:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+document. getElementByld (" myDiv"). classList. add (" active ");
+jQuery:
+javascript code
+$ (" #myDiv"). addClass (" active ");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>8. Changing Text Content:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+document. getElementByld (" mySpan "). textContent = " Updated Text";
+jQuery:
+javascript code
+$ (" #mySpan "). text (" Updated Text");
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>9. Hiding an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+document. getElementByld (" toHide "). style . display = " none ";
+jQuery:
+javascript code
+$ (" #toHide "). hide () ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>10. Fading In an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+let elementToFade = document. getElementByld (" toFade ”);
+elementToFade . style . opacity = 0;
+elementToFade . style . transition = " opacity Is ";
+elementToFade . style . opacity = 1;
+jQuery:
+javascript code
+$ (" #toFade "). fadein ( 1000 ) ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>11. AJAX GET Request:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+let xhr = new XMLHttpRequest ();
+xhr. onreadystatechange = function () {
+if (this . readyState = = = 4 && this . status = = = 200 ) {
+console . log (this . responseText);
+};
+xhr. open (" GET ",
+xhr. send ();
+jQuery:
+javascript code
+$ . get (" data . txt"
+" data .txt",true );
+function (data) {
+console . log ( data);
+});
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>12. AJAX POST Request:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+let xhr = new XMLHttpRequest ();
+xhr. open (" POST ", " saveData ", true );
+xhr. setRequestHeader (" Content - Type ", 11 application / json ") ;
+xhr. send (JSON . stringify ({name :" John ", age : 30})) ;
+jQuery:
+javascript code
+$ . ajax ({
+url:" saveData",
+method:" POST ",
+contentType :" application I json ",
+data : JSON . stringify ({name :" John ", age : 30}),
+success : function (response ) {
+console . log (response ) ;
+});
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>13. Getting Attribute Value:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+let linkHref = document. getElementByld (" myLink "). getAttribute (" href") ;
+jQuery:
+javascript code
+let linkHref = $ (" #myLink"). attr (" href") ;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>14. Setting Attribute Value:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+JavaScript:
+javascript code
+document. getElementByld (" mylmage "). setAttribute (" src ", " new_image . jpg ");
+jQuery:
+javascript code
+$ (" #mylmage "). attr (" src ", " newjmage . jpg");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4019,7 +4285,7 @@ $("#myDiv").click (function() {
 <p>These examples demonstrate how JavaScript and jQuery can achieve similar tasks, showcasing the differences in
 syntax and complexity between the two when performing common web development operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>JavaScript Graphics Libraries : Explained</h4>
+<h3>JavaScript Graphics Libraries: Explained</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. JavaScript Graphics</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4118,7 +4384,7 @@ const options = {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>6. JSD3.js</h4>
+<h4>6. D3.js</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>D3.js (Data - Driven Documents) is a powerful JavaScript library used for creating data visualizations in SVG, HTML,
 and CSS . It provides comprehensive functionalities to manipulate documents based on data, enabling the creation of
