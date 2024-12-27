@@ -615,6 +615,8 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js-262">js-262. Find the First Non-Repeating Character in a String</a></li>
   <li><a href="#js-263">js-263. Calculate the Area of a Kite</a></li>
   <li><a href="#js-264">js-264. Calculate the Area of a Sector</a></li>
+  <li><a href="#js-265">js-265. Display Confetti on Button Click</a></li>
+  <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex0">93 JavaScript Examples from Basics to Advanced</h2>
@@ -4031,7 +4033,9 @@ $ (" a "). closest (" div"). addClass (" parent - div") ;
 </pre>
 <p>Using methods like next, prev, find, closest, and siblings, jQuery provides efficient 
 ways to navigate and manipulate elements within the DOM.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Conclusion</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript and jQuery each have their strengths and use cases in web development. 
 JavaScript is the foundation language that provides extensive capabilities for building 
 complex applications. jQuery, as a library built on JavaScript, simplifies common tasks, 
@@ -4060,45 +4064,45 @@ for (let i = 0; i < elements.length; i ++) {
 }
 </pre>
 <h4>jQuery:</h4>
-<pre>
-$(".myClass").css("font - weight", "bold");
+<pre>$(".myClass").css("font - weight", "bold");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Adding Event Listeners:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript:
-javascript code
-document. getElementByld (" myButton "). addEventListener (" click", function () {
-alert (" Button clicked !");
+<pre>
+document.getElementByld("myButton").addEventListener("click", function() {
+  alert("Button clicked!");
 });
-jQuery:
-javascript code
-$ (" #myButton "). on (" click", function () {
-alert (" Button clicked !");
+</pre>
+<h5>jQuery:</h5>
+<pre>
+$("#myButton").on("click", function() {
+  alert("Button clicked!");
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Handling Document Ready Event:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript:
-javascript code
-document. addEventListener (" DOMContentLoaded", function () {
-// Code to execute when DOM is ready
+<pre>
+document.addEventListener("DOMContentLoaded", function() {
+  // Code to execute when DOM is ready
 });
-jQuery:
-javascript code
-$ ( document). ready (function () {
-// Code to execute when DOM is ready
+</pre>
+<h5>jQuery:</h5>
+<pre>
+$(document).ready(function() {
+  // Code to execute when DOM is ready
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Creating a New Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript:
-javascript code
-let newElement = document. createElement (" div");
-newElement. textContent = " New Content";
-document. body. appendChild (newElement);
-jQuery:
-javascript code
-$ (" body "). append (" <div>New Content< I div> ");
+<pre>
+let newElement = document.createElement("div");
+newElement.textContent = "New Content";
+document.body.appendChild(newElement);
+</pre>
+<h5>jQuery:</h5>
+<pre>$("body").append("&lt;div&gt;New Content&lt;/div&gt;");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Removing an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4653,45 +4657,47 @@ borderwidth: 1
 <h4>7. Create a Pie Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google . charts . load ('current', {packages : [ 'corechart' ] });
-google . charts . setOnLoadCallback ( drawChart);
-function drawChart () {
-const data = google . visualization . arrayToDataTable ([
-[ 'Task', 'Hours per Day' ],
-[ 'Work', 11],
-[ ’Eat', 2 ],
-[ 'Commute', 2 ],
-[ 'Watch TV, 2 ],
-[ 'Sleep', 7 ]
-D;
-const options = {
-title : 'My Daily Activities',
-pieHole : 0.4,
-};
-const chart = new google . visualization . PieChart ( document. getElementById ('donutchart')) ;
-chart. draw ( data, options );
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+  const data = google.visualization.arrayToDataTable([
+    ['Task', 'Hours per Day'],
+    ['Work', 11],
+    [’Eat', 2],
+    ['Commute', 2],
+    ['Watch TV', 2],
+    ['Sleep', 7]
+  ]);
+  const options = {
+    title: 'My Daily Activities',
+    pieHole: 0.4,
+  };
+  const chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+  chart.draw(data, options);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Create an Area Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google . charts . load ('current', {packages : [ 'corechart' ] });
-google . charts . setOnLoadCallback ( drawChart);
-function drawChart () {
-const data = google . visualization . arrayToDataTable ([
-[ ‘Year1, 'Sales', 'Expenses' ],
-['2013', 1000, 400],
-['2014', 1170,460],
-['2015', 660,1120],
-['2016', 1030,540]
+google.charts.load('current', {packages:['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  const data = google.visualization.arrayToDataTable([
+  [‘Year1, 'Sales', 'Expenses'],
+  ['2013', 1000, 400],
+  ['2014', 1170, 460],
+  ['2015', 660, 1120],
+  ['2016', 1030, 540]
 ]);
 const options = {
-title: 'Company Performance',
-curveType: 'function',
-legend : {position : 'bottom'}
+  title: 'Company Performance',
+  curveType: 'function',
+  legend : {position : 'bottom'}
 };
-const chart = new google . visualization . AreaChart ( document. getElementById ('curve_chart'));
-chart. draw ( data, options );
+const chart = new google.visualization.AreaChart(document.getElementById('curve_chart'));
+chart.draw(data, options);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>D3.js Examples:</h4>
@@ -4699,30 +4705,32 @@ chart. draw ( data, options );
 <h4>9. Create an SVG Circle:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const svg = d3 . select ('body')
-. append ('svg1)
-. attr( 'width', 100)
-. attr ('height', 100 );
-svg . append ('circle')
-. attr ('ex', 50 )
-. attr ('ey', 50 )
-. attr ('r', 40 )
-. attr ('fill', 'blue');
+const svg = d3.select('body')
+  .append('svg')
+  .attr('width', 100)
+  .attr('height', 100);
+
+svg.append('circle')
+  .attr('cx', 50)
+  .attr('cy', 50)
+  .attr('r', 40)
+  .attr('fill', 'blue');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Create an SVG Rectangle:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const svg = d3 . select ('body')
-. append ('svg')
-. attr ('width', 100 )
-. attr ('height, 100 ) ;
-svg . append ('rect')
-. attr ('x', 10 )
-. attr ('y', 10 )
-. attr ('width', 80 )
-. attr ('height', 50 )
-. attr ('fill', 'green') ;
+const svg = d3.select('body')
+  .append('svg')
+  .attr('width', 100)
+  .attr('height, 100);
+
+svg.append('rect')
+  .attr('x', 10)
+  .attr('y', 10)
+  .attr('width', 80)
+  .attr('height', 50)
+  .attr('fill', 'green');
 </pre>
 <p>These examples demonstrate how to create basic graphics, charts, and visualizations using 
 different JavaScript libraries such as Canvas, Plotly, Chart.js, Google Charts, and D3.js. 
@@ -4734,27 +4742,30 @@ representations in web applications.</p>
 <h4>1. Convert Celsius to Fahrenheit:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function celsiusToFahrenheit ( Celsius ) {
-return ( Celsius *9/5) + 32;
-let tempInFahrenheit = celsiusToFahrenheit ( 25 ); // Output: 77
+function celsiusToFahrenheit(Celsius) {
+  return(Celsius * 9 / 5) + 32;
+}
+let tempInFahrenheit = celsiusToFahrenheit(25); // Output: 77
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Calculate Area of a Circle:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateCircleArea (radius ) {
-return Math . PI * radius * radius;
-let area = calculateCircleArea ( 5 ); // Output: -78.54
+  return Math.PI * radius * radius;
+}
+let area = calculateCircleArea(5); // Output: ~78.54
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-String Manipulation:
+<h4>String Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Reverse a String:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function reversestring ( str) {
-return str. split ("). reverse (). join (");
-let reversed = reversestring ('hello'); // Output: 'olleh'
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
+let reversed = reverseString('hello'); // Output: 'olleh'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Check for Palindrome:</h4>
@@ -4766,7 +4777,7 @@ function isPalindrome(str) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Array Manipulation:
+<h4>Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Find Maximum Number in Array:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4774,29 +4785,30 @@ javascript code
 let numbers = [ 5, 8, 3,12, 6 ];
 letmaxNumber = Math . max (... numbers ); // Output: 12
 <h4>6. Sort Array of Objects by Property:</h4>
-javascript code
+<pre>
 let products = [
-{name : 'Laptop', price : 800},
-{name : 'Phone', price : 600},
-{name : 'Tablet', price : 300}
+{name: 'Laptop', price: 800},
+{name: 'Phone', price: 600},
+{name: 'Tablet', price: 300}
 ];
-products . sort (( a, b ) = >a . price - b . price ) ;
+products.sort((a, b) => a.price - b.price);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Functions:
+<h4>Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Higher - Order Function - Map:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers = [ 1, 2, 3 ];
-let doubled = numbers . map (num = > num * 2); // Output: [ 2,4, 6 ]
+let numbers = [1, 2, 3];
+let doubled = numbers.map(num => num * 2); // Output: [2, 4, 6]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-(function () {
+(function() {
   console.log(’IIFE executed.');
-};
+})();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Object Manipulation:</h4>
@@ -4821,17 +4833,19 @@ letmergedObj = { ... objl, ... obj2};
 <h4>11. For ... Of Loop for Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let colors = [ 'red', 'green', 'blue' ];
-for (let color of colors ) {
-console.log(color);
+let colors = ['red', 'green', 'blue'];
+for (let color of colors) {
+  console.log(color);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. While Loop to Generate Random Numbers:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let randomNums = [] ;
-while (randomNums . length < 5 ) {
-randomNums . push (Math . floor ( Math . random () * 10 ) + 1) ;
+let randomNums = [];
+while (randomNums.length &lt; 5) {
+  randomNums.push(Math.floor(Math.random() * 10) + 1);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Error Handling:</h4>
@@ -4840,21 +4854,24 @@ randomNums . push (Math . floor ( Math . random () * 10 ) + 1) ;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 try {
-// Code that may throw an error
-JSON.parse('invalidJSON');
-} catch (error) {
-console.error(’Error occurred : error.message
+  // Code that may throw an error
+  JSON.parse('invalidJSON');
+} catch(error) {
+  console.error(’Error occurred:', error.message)
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Custom Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function throwError () {
-throw new Error ('Custom error message’);
+function throwError() {
+  throw new Error('Custom error message’);
+}
 try {
-throwError ();
+  throwError ();
 } catch(error) {
-console.error(error.message);
+  console.error(error.message);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Asynchronous JavaScript:</h4>
@@ -4863,22 +4880,25 @@ console.error(error.message);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
-  return new Promise ((resolve, reject) = > {
+  return new Promise ((resolve, reject) => {
     // Simulate fetching data
-    setTimeout (() => {
+    setTimeout(() => {
       resolve(’Data fetched successfully');
     }, 2000);
-    fetchData (). then (data = > console.log(data));
+  });
+};
+fetchData().then(data => console.log(data));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Async / Await Example:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function fetchData () {
-let data = await fetch ('https :// api. example . com / data');
-letjsonData = await data, j son ();
-return jsonData;
-fetchData (). then ( data = > console . log (data));
+async function fetchData() {
+  let data = await fetch('https://api.example.com/data');
+  let jsonData = await data, json();
+  return jsonData;
+}
+fetchData().then(data => console.log(data));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>DOM Manipulation:</h4>
@@ -4886,17 +4906,18 @@ fetchData (). then ( data = > console . log (data));
 <h4>17. Create Element and Append to DOM:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let newElement = document. createElement ('div');
-newElement. textContent = 'New Element';
-document. body. appendchild (newElement);
+let newElement = document.createElement('div');
+newElement.textContent = 'New Element';
+document.body.appendchild(newElement);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Add Event Listener to Button Click:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let button = document. getElementById ('myButton') ;
-button . addEventListener ('click', () = > {
-console . log ('Button clicked !');
+let button = document.getElementById('myButton');
+button.addEventListener('click', () => {
+  console.log ('Button clicked!');
+});
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Regular Expressions:</h4>
@@ -4905,14 +4926,14 @@ console . log ('Button clicked !');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let pattern =/\d+/;
-let isMatch = pattern . test ('Hello 123'); // Output: true
+let isMatch = pattern.test('Hello 123'); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Replacing String with Regex:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let str = 'Hello 123';
-let replaced = str. replace (/\d+/,'456'); // Output: 'Hello 456'
+let replaced = str.replace (/\d+/,'456'); // Output: 'Hello 456'
 </pre>
 <p>These examples cover a range of JavaScript functionalities, including basic operations, string I array manipulations,
 functions, objects, loops, error handling, asynchronous operations, DOM manipulations, and regular expressions.</p>
@@ -4921,84 +4942,98 @@ functions, objects, loops, error handling, asynchronous operations, DOM manipula
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Closure Example:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-function outerFunction ( outerValue ) {
-return function (inner Value ) {
-return outerValue + innerValue;
-};
-let addFive = outerFunction ( 5 ) ;
-let result = addFive ( 3 ); // Output: 8
+<pre>
+function outerFunction(outerValue) {
+  return function(innerValue) {
+    return outerValue + innerValue;
+  };
+  let addFive = outerFunction(5);
+  let result = addFive(3); // Output: 8
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Currying Example:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-function multiply ( a ) {
-return function (b ) {
-return a * b;
-};
-let multiplyByTwo = multiply ( 2 );
-let product = multiplyByTwo ( 5 ); // Output: 10
+<pre>
+function multiply(a) {
+  return function(b) {
+    return a * b;
+  };
+}
+let multiplyByTwo = multiply(2);
+let product = multiplyByTwo(5); // Output: 10
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Array Manipulation:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Reduce to Sum Array:</h4>
-javascript code
-let numbers = [ 1, 2, 3,4,5 ];
-let sum = numbers . reduce (( acc, curr) = > acc + curr, 0 ); // Output: 15
+<pre>
+let numbers = [1, 2, 3, 4, 5];
+let sum = numbers.reduce((acc, curr) => acc + curr, 0); // Output: 15
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Filter and Map Together:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-let numbers = [ 1, 2, 3,4, 5 ] ;
-let filteredAndDoubled = numbers. filter (num => num % 2 === 0). map (num => num * 2); //
-Output: [ 4, 8 ]
+<pre>
+let numbers = [1, 2, 3, 4, 5];
+let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); //
+Output: [4, 8]
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Object Manipulation:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object Destructuring with Default Values:</h4>
-javascript code
-let person = {name : 'Alice'};
+<pre>
+let person = {name: 'Alice'};
 let {name, age = 30} = person;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Computed Property Names:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 let key = 'dynamicKey';
-letobj = { [key]: 'value'}; // {dynamicKey: 'value'}
+let obj = {[key]: 'value'}; // {dynamicKey: 'value'}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Advanced Loops and Iterations :
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. For... In Loop for Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-letobj = {a: l,b: 2,c: 3};
+<pre>
+let obj = {a: l,b: 2,c: 3};
 for (let key in obj) {
-console . log (key, obj [ key ]);
+  console.log (key, obj [key]);
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using For... Of with Iterables:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-let iterable = [ ’a', 'b', 'c' ];
-for (let value of iterable ) {
-console . log (value );
+<pre>
+let iterable = [’a', 'b', 'c'];
+  for (let value of iterable ) {
+  console.log(value);
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Promises and Async / Await:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Promise Chaining:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
-function asyncFunction () {
-return new Promise ((resolve, reject) = > {
-setTimeout (()=>{
-resolve ('First part done1);
-1,1000);
-});
+<pre>
+function asyncFunction() {
+  return new Promise((resolve, reject) => {
+    setTimeout (() => {
+      resolve ('First part done');
+    },1000);
+  });
+}
 asyncFunction ()
-. then (result = > {
-console . log (result) ;
-return 'Second part done1;
-})
-. then (result = > console . log (result)) ;
+  .then (result => {
+    console.log(result);
+    return 'Second part done';
+  })
+  .then (result => console.log(result));
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Async / Await with Error Handling</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15877,14 +15912,61 @@ button.addEventListener('click', () => {
 })
 </pre>
 
-<h7>/* the end */</h7>
+<!-- goto ch1 --->
+<pre>
+&lt;h2 id="ch1"&gt;Chapter 1: Getting started with JavaScript&lt;/h2&gt;
+&lt;script&gt;
+  &lt;!-- get the button --&gt;
+  var mybutton = document.getElementById("myBtn");
 
+  &lt;!-- when the user scrolls down 10px from the top of the document, show the button --&gt;
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop &gt; 10 || document.documentElement.scrollTop &gt; 10) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  &lt;!-- when the user clicks on the button, scroll to the top of the document. 0,0 or --&gt;
+  &lt;!-- to table of contents (approx ###), if applicable was; 315 --&gt;
+  // when the user clicks on the button, scroll to the table of contents near top of document.
+  function topFunction() {
+    document.getElementById('ch1').scrollIntoView();
+  }
+&lt;/script&gt;
+</pre>
+<h5>CSS</h5>
+<pre>
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 13px;  /* 10 */
+    border: none;
+    outline: none;
+    background-color: #8b0000;  /* dark red */
+    color: #ffcccc;  /* very pale red (pink tone) */
+    cursor: pointer;
+    padding: 5px;  /* 15px */
+    border-radius: 1px;  /* 4px */
+  }
+  #myBtn:hover {
+    background-color: #ffc0cb;  /* very pale red */
+  }
+</pre>
+<!-- end of goto table of contents -->
+
+<footer>
+<h7>/* the end */</h7>
 <p>In every line of code, they have woven a story of innovation and creativity.
-This book has been your compass in the vast world of JavaScript.
-Close this chapter knowing that every challenge overcome is an
-achievement, and every solution is a step toward mastery.
-Your code is the melody that gives life to projects. May they continue
-creating and programming with passion!</p>
+This website is your starting line for racing into a vast new world of JavaScript.
+More like a pentathlon of races. Each being a little easier then the prior.
+Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>Thank you for allowing me to be part of your journey.</p>
 <p>With gratitude,</p>
-<p>Hernando Abella</p>
+<p>Brian Bauska</p>
+</footer>
