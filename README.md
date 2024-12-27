@@ -6443,7 +6443,7 @@ element.innerHTML = '&lt;strong&gt;New HTML Content&lt;/strong&gt;';
 <pre>
 const element = document.getElementById('myElement');
 const textNode = document.createTextNode('Text Content');
-element. appendchild (textNode);
+element.appendchild(textNode);
 </pre>
 <p>These JavaScript snippets demonstrate advanced techniques for creating, manipulating, and 
 interacting with HTML objects, including DOM creation, object manipulation, styling, event 
@@ -6454,78 +6454,93 @@ handling, and content manipulation.</p>
 <h4>1. Keyboard Event Handling - Key Press:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document. addEventListener (`keypress`, (event) => {
+document.addEventListener('keypress', (event) => {
   console.log(`Key pressed : ${event.key}`);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Handling Focus Events - Input Focus and Blur:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const inputField = document.getElementById('mylnput');
 
-const inputField = document. getElementById ('mylnput') ;
-inputField . addEventListener (’focus1, () = > {
-console . log ('Input field focused1);
+inputField.addEventListener('focus', () => {
+  console.log('Input field focused');
 });
-inputField . addEventListener ('blur', () = > {
-console . log ('Input field blurred') ;
+
+inputField.addEventListener('blur', () => {
+  console.log('Input field blurred');
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Event Delegation and Bubbling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Event Delegation with Click Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const list = document.getElementById('myList');
 
-const list = document. getElementById ('myList');
-list, addEventListener ('click', (event) => {
-if ( event. target. tagName === 'li') {
-  console.log('Clicked on list item : ${event.target.textContent]');
+list.addEventListener('click', (event) => {
+  if (event.target.tagName === 'li') {
+    console.log(`Clicked on list item: ${event.target.textContent}`);
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Event Bubbling - Click Event on Parent Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const parent = document.getElementById('parentElement');
 
-const parent = document. getElementById ('parentElement') ;
-parent. addEventListener ('click', (event) = > {
-console . log ( ' Clicked on parent element “ ) ;
+parent.addEventListener ('click', (event) => {
+  console.log('Clicked on parent element');
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Window and Document Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Window Load Event:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-window . addEventListener ('load', () = > {
-console . log ('Page fully loaded1);
+<pre>
+window.addEventListener ('load', () => {
+  console.log('Page fully loaded');
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Document Ready Event ( DOMContentLoaded):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-document. addEventListener ('DOMContentLoaded', () = > {
-console . log ('DOM fully loaded and parsed');
+<pre>
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM fully loaded and parsed');
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Form Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Form Submission and Preventing Default Behavior:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const form = document.getElementById('myForm');
 
-const form = document. getElementById ('myForm') ;
-form . addEventListener ('submit', ( event) = > {
-event. preventDefault ();
-console . log ('Form submitted') ;
-// Perform form data handling or validation
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log('Form submitted');
+  // Perform form data handling or validation
+});
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Input Event for Real - time Validation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const emailField = document.getElementById('email');
 
-const emailField = document. getElementById ('email');
-emailField . addEventListener ('input', () = > {
-if (! emailField . validity. valid) {
-emailField . setCustomValidity ('Enter a valid email address');
-} else {
-emailField . setCustomValidity (");
+emailField.addEventListener('input', () => {
+  if (!emailField.validity.valid) {
+    emailField.setCustomValidity('Enter a valid email address');
+  } else {
+    emailField.setCustomValidity('');
+  }
 });
+</pre>
 These JavaScript snippets showcase various event handling techniques, including keyboard events, focus and blur
 events, event delegation, bubbling, window and document events, and form - related events for submission and input
 validation.
@@ -6534,38 +6549,43 @@ validation.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Opening a New Browser Window:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const openWindowButton = document.getElementById('openWindowButton');
 
-const openWindowButton = document. getElementById ('openWindowButton');
-openWindowButton . addEventListener ('click', () = > {
-window . open ('https :// example . com', '.blank', 'width = 5 00,height = 500');
+openWindowButton.addEventListener('click', () => {
+  window.open('https://example.com', '_blank', 'width = 500,height = 500');
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Closing a Browser Window:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 const closeWindowButton = document. getElementById ('closeWindowButton');
 closeWindowButton . addEventListener ( click', () = > {
-window . close ();
+window.close();
 });
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Navigator Object Exploration:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Accessing Browser Information:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-console . log (' Browser name: ${navigator.appName}' );
-console . log (s Browser version: ${navigator.appVersion}' );
-console . log (' User Agent: ${navigator.user Agent}' );
-console . log (" Language: ${navigator.language}' );
+<pre>
+console.log(`Browser name: ${navigator.appName}`);
+console.log(`Browser version: ${navigator.appVersion}`);
+console.log(`User Agent: ${navigator.userAgent}`);
+console.log(`Language: ${navigator.language}`);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Checking Geolocation Availability:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
 if ('geolocation' in navigator) {
-console.log('Geolocation is supported');
+  console.log('Geolocation is supported');
 } else {
-console.log('Geolocation is not supported');
+  console.log('Geolocation is not supported');
 }
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Location Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6573,7 +6593,8 @@ console.log('Geolocation is not supported');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function redirectToPage() {
-window.location.href = 'https://example.com';
+  window.location.href = 'https://example.com';
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Accessing Current URL Information:</h4>
@@ -6590,17 +6611,20 @@ console.log(`Pathname: ${window. location.pathname}`);
 <h4>7. Retrieving Screen Dimensions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-console.log( ' Screen width : $ {window . screen . width}' );
-console.log( ' Screen height: $ {window . screen . height}' ) ;
+console.log(`Screen width: ${window.screen.width}`);
+console.log(`Screen height: ${window.screen.height}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Opening in Full Screen Mode:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const fullScreenButton = document. getElementById ( ’fullScreenButton’);
-fullScreenButton . addEventListener (’click’, () = > {
-if (document.fullscreenEnabled) {
-document.documentElement.requestFullscreen();
+const fullScreenButton = document.getElementById('fullScreenButton');
+
+fullScreenButton.addEventListener('click', () => {
+  if (document.fullscreenEnabled) {
+    document.documentElement.requestFullscreen();
+  }
+});
 </pre>
 <p>These JavaScript snippets showcase browser manipulation using the Browser Object Model 
 (BOM), exploring navigator and location objects, screen attributes, opening / closing 
