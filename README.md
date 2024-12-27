@@ -3488,7 +3488,7 @@ console . log (jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 -
 axios.get('https://api.example.com/data')
   .then(response = > console.log(response.data))
   .catch(error => console.error('Error:', error)) ;
-</per>
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Merging JSON Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
