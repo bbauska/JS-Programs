@@ -2856,7 +2856,7 @@ function search() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>search.php(Server - side Script Handling Search):</p>
+<p>search.php(Server-side Script Handling Search):</p>
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -2868,7 +2868,7 @@ $results = [
   // Add more search results as needed
 ];
 echo json.encode($results); // Return results as JSON
-?>
+?&gt;
 </pre>
 <p>This example demonstrates an autocomplete search feature using AJAX . As the user types in the search input field,
 an AJAX request is made to a server - side PHP script ( search . php ) that processes the search query and returns
@@ -2880,6 +2880,7 @@ and implementing an autocomplete search feature, using asynchronous data fetchin
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
+<pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
