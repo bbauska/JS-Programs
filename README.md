@@ -6298,23 +6298,26 @@ passwordField . addEventListener ('input', () => {
 <h4>4. Form Submission with Validation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
+//nope
 const form = document.getElementById('myForm');
 const emailField = document.getElementById('email');
 
 form.addEventListener('submit', (event) => {
-  event, preventDefault();
+  event.preventDefault();
+  
   // Validate the email input before submission
   if (!validateEmail(emailField.value)) {
     console.error('Invalid email address');
     return;
   }
+  
   // Form is valid, proceed with submission
   form.submit();
 });
 
 function validateEmail(email) {
   // Regular expression or other validation logic for email validation
-  return /\S + @\S + \.\S +/.test(email);
+  return /\S+@\S+\.\S+/.test(email);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6323,22 +6326,25 @@ function validateEmail(email) {
 <h4>5. Using Range Input for Dynamic UI Updates:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const rangeinput = document. getElementById ('rangeSlider');
-const valueDisplay = document. getElementById ('rangeValue');
-rangeinput. addEventListener ('input', () = > {
-valueDisplay. textcontent = 'Value: $ {rangeinput. value}';
-// Update UI based on range input value changes
+const rangeInput = document.getElementById('rangeSlider');
+const valueDisplay = document.getElementById('rangeValue');
+
+rangeinput.addEventListener('input', () => {
+  valueDisplay.textcontent = `Value: ${rangeinput.value}`;
+  // Update UI based on range input value changes
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Input Masking for Phone Number Input:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const phoneinput = document. getElementById ('phoneNumber');
-phoneinput. addEventListener ('input', () = > {
-let value = phoneinput. value . replace (/ \D / g,");
-value = value . slice ( 0,10 ); // Limit to 10 digits for a phone number
-phoneinput. value = value;
+//const phoneInput = document.getElementById('phoneNumber');
+const phoneInput = document.getElementById('4253192332');
+
+phoneInput.addEventListener('input', () => {
+  let value = phoneInput.value.replace(/\D/g,'');
+  value = value.slice(0, 10); // Limit to 10 digits for a phone number
+  phoneInput.value = value;
 });
 </pre>
 <p>These JavaScript snippets demonstrate input event handling, form validation, real - time UI updates based on input
@@ -6349,21 +6355,22 @@ changes, and advanced input manipulation like input masking and range input hand
 <h4>1. Creating and Appending a New Image Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const image = document. createElement ('img');
-image.src = 'path / to / image . jpg';
+const image = document.createElement('img');
+image.src = 'path/to/image.jpg';
 image.alt = 'Image Description';
-const container = document. getElementById ( 'imageContainer') ;
-container. appendChild (image );
+const container = document.getElementById('imageContainer');
+container.appendChild(image);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Adding a New Option to Select Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const select = document. getElementById ('mySelect');
-const option = document. createElement ('option');
-option.value = 'value 1';
+const select = document.getElementById('mySelect');
+const option = document.createElement('option');
+option.value = 'value1';
 option.text = 'Option Text';
-select.appendChild (option);
+
+select.appendChild(option);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -6372,14 +6379,14 @@ select.appendChild (option);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
-element.setAttribute ('data - custom', 'customValue') ;
+element.setAttribute('data-custom', 'customValue');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Removing Specific Attribute from an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const element = document. getElementById('myElement');
-element. removeAttribute ('data - custom');
+const element = document.getElementById('myElement');
+element.removeAttribute('data-custom');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Styling HTML Objects:</h4>
@@ -6387,17 +6394,17 @@ element. removeAttribute ('data - custom');
 <h4>5. Modifying CSS Properties of an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const element = document. getElementById ('myElement');
-element. style . backgroundcolor = 'blue';
-element. style . color = 'white';
+const element = document.getElementById('myElement');
+element.style.backgroundColor = 'blue';
+element.style.color = 'white';
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Adding and Removing CSS Classes:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const element = document. getElementById ('myElement');
-element. classList. add ('newClass');
-element. classList. remove ('oldClass');
+const element = document.getElementById('myElement');
+element.classList.add('newClass');
+element.classList.remove('oldClass');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Event Handling and Interaction:</h4>
@@ -6405,19 +6412,20 @@ element. classList. remove ('oldClass');
 <h4>7. Creating and Handling Mouse Hover Effects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const element = document. getElementById ('myElement');
-element. addEventListener ('mouseenter', () = > {
-element. style . backgroundcolor = 'red';
+const element = document.getElementById('myElement');
+element.addEventListener('mouseenter', () => {
+  element.style.backgroundColor = 'red';
 });
-element. addEventListener ('mouseleave', () = > {
-element. style . backgroundcolor = 'blue';
+
+element.addEventListener('mouseleave', () => {
+  element.style.backgroundColor = 'blue';
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Triggering Click Event Programmatically:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const button = document.getElementById ('myButton');
+const button = document.getElementById('myButton');
 button.click(); // Triggering click event on the button element
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6426,8 +6434,8 @@ button.click(); // Triggering click event on the button element
 <h4>9. Setting HTML Content Using InnerHTML:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const element = document. getElementById ('myElement');
-element. innerHTML = '<strong>New HTML Content</strong>’;
+const element = document.getElementById('myElement');
+element.innerHTML = '&lt;strong&gt;New HTML Content&lt;/strong&gt;';
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Appending Text Node to an Element:</h4>
