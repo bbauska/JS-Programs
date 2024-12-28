@@ -10913,9 +10913,10 @@ simonSaysGame.playO;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js147">147. Calculate the Area of a Hexagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates the area of a regular hexagon given the side length ( s ). The 
-formula for the area of a regular hexagon is Area = (3 &ast; <squareroot>3 &ast; s^2) / 2, where 
-s is the side length.</p>
+<p>This program calculates the area of a regular hexagon given the side length 
+(<span class="consolas">s</span>). The formula for the area of a regular hexagon is 
+<span class="consolas">Area = (3 &ast; &radic; 3 &ast; s^2) / 2</span>, where 
+<span class="consolas">s</span> is the side length.</p>
 <pre>
 function calculateHexagonArea(sideLength) {
   const area = (3 &ast; Math.sqrt(3) / 2) &ast; Math.pow(sideLength, 2);
@@ -10932,7 +10933,7 @@ console.log(`The area of the hexagon is: ${hexagonArea.toFixed(2)}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a pronic number, also known as a 
 rectangular number or oblong number. A pronic number is a product of two consecutive 
-integers. The nth pronic number is given by the formula: n &ast; (n + 1).</p>
+integers. The nth pronic number is given by the formula: <span class="consolas">n &ast; (n + 1)</span>.</p>
 <pre>
 function isPronicNumber(number) {
   for (let i = O; i&ast;(i + 1) <= number; i++) {
@@ -11055,9 +11056,10 @@ minesweeperGame.uncoverCell(4, 4);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js150">150. Find the Area of a Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates the area of a regular pentagon given the side length ( s ). 
-The formula for the area of a regular pentagon is Area = (1/4) &ast; <square root symbol>(5 &ast; 
-(5 + 2 &ast; <square root symbol>5)) &ast; s^2 , where s is the side length.</p>
+<p>This program calculates the area of a regular pentagon given the side length 
+(<span class="consolas">s</span>). The formula for the area of a regular pentagon is 
+<span class="consolas">Area = (1/4) &ast; &radic;(5 &ast; (5 + 2 &ast; &radic;5)) &ast; s^2<span>, 
+where <span class="consolas">s</span> is the side length.</p>
 <pre>
 function calculatePentagonArea(sideLength) {
   const area = (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2 &ast; Math.sqrt(5))) &ast; Math.pow(sideLength, 2);
@@ -11074,7 +11076,7 @@ console.log(`The area of the pentagon is: ${pentagonArea.toFixed(2)}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a cube number. A cube number is 
 a number that can be expressed as the cube of an integer. The nth cube number is given by 
-the formula: n^3.</p>
+the formula: <span class="consolas">n^3</span>.</p>
 <pre>
 function isCubeNumber(number) {
   const cubeRoot = Math.round(Math.pow(number, 1/3));
@@ -11142,8 +11144,9 @@ typingTest.getUserlnput(userlnput);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js153">153. Find the Area of a Cube</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates the surface area of a cube given the length of its side ( s ). 
-The formula for the surface area of a cube is Surface Area = 6 &ast; s&ast; 2 , where s 
+<p>This program calculates the surface area of a cube given the length of its side (
+<span class="consolas">s</span>). The formula for the surface area of a cube is 
+<span class="consolas">Surface Area = 6 &ast; s&ast; 2</span>, where <span class="consolas">s</span> 
 is the length of a side.</p>
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
@@ -11159,9 +11162,10 @@ console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js154">154. Find the Area of a Cone</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates the surface area of a cone given the radius of its base ( r ) 
-and the slant height (l). The formula for the surface area of a cone is Surface Area = 
-pi &ast; r &ast; (r +1), where pi is the mathematical constant Pi.</p>
+<p>This program calculates the surface area of a cone given the radius of its base 
+(<span class="consolas">r</span>) and the slant height (l). The formula for the surface 
+area of a cone is <span class="consolas">Surface Area = pi &ast; r &ast; (r +1)</span>, where 
+<span class="consolas">pi</span> is the mathematical constant Pi.</p>
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
   const surface Area = 6 &ast; Math.pow(sideLength, 2);
@@ -11203,10 +11207,13 @@ if (isHappyNumber(happyNumber)) {
 <h2 id="js156">156. Calculate the Area of a Triangular Prism</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a triangular prism given the lengths of 
-its base sides ( a , b , and c ) and the height of the prism ( h ). The formula for the 
-surface area of a triangular prism is Surface Area = (Perimeter of the base &ast; Height) 
-+ (2 &ast; Area of the base), where the perimeter of the base is Perimeter = a + b + c
-and the area of the base is calculated using Heron's formula.</p>
+its base sides (<span class="consolas">a , b , and c</span>) and the height of the prism 
+(<span class="consolas">h</span>). The formula for the surface area of a triangular prism 
+is <span class="consolas">Surface Area = (Perimeter of the base &ast; Height) + 
+(2 &ast; Area of the base)</span>, where the perimeter of the base is 
+<span class="consolas">Perimeter = a + b + c</span> and the area of the base is calculated using 
+Heron's formula.</p>
+
 <pre>
 function calculateTriangularPrismSurfaceArea(a, b, c, height) {
 const baseArea = 0.25 &ast; Math.sqrt((-a + b + c)&ast;(a-b + c)&ast;(a + b-c)&ast;(a + b + c));
