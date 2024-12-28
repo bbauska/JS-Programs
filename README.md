@@ -5316,14 +5316,14 @@ console.log('IIAFE executed .');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letarr =[[1,2], [3,4], [5,6]];
-let flatArray = arr. flatMap (innerArr => innerArr. map (item => item * 2 )); // Output: [ 2,4, 6,8,10,12 ]
+let flatArray = arr.flatMap(innerArr => innerArr. map (item => item * 2 )); // Output: [ 2,4, 6,8,10,12 ]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let nestedArrays =[[1,2], [3,4], [5,6]];
-let flattenedArray = nestedArrays . reduce (( acc, curr) => acc . concat ( curr), []); // Output: [ 1, 2, 3, 4, 5,
+let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []); // Output: [1, 2, 3, 4, 5]
 6]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6089,20 +6089,22 @@ console.log(functionsource ); // Output:" function greet () {console.log('Hello 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>3. Array. flatMap for Flattening and Mapping:</h4>
+<h4>3. Array.flatMap for Flattening and Mapping:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const arr = [ 1, 2, 3 ];
-const mappedAndFlattened = arr. flatMap (x => [ x * 2, x * 3 ]);
+const mappedAndFlattened = arr.flatMap(x => [ x * 2, x * 3 ]);
 console.log(mappedAndFlattened); // Output: [ 2, 3, 4, 6, 6, 9 ]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>4. Using Array. some with Custom Predicate:</h4>
+<h4>4. Using Array.some with Custom Predicate:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [ 5,10,15, 20 ];
 const isEvenPresent = numbers . some (num => num % 2 === 0 ); // Output: true
-Advanced Object Manipulation:
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.keys to Get Object's Own Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
