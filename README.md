@@ -3822,9 +3822,9 @@ $decodedData = json.decode($jsonString, true);
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
 &lt;script&gt;
 const users = [
-  {"name":"John", "age": 25},
-  {"name":"Alice", "age": 30},
-  {"name":"Bob", "age": 28}
+  {"name": "John", "age": 25},
+  {"name": "Alice", "age": 30},
+  {"name": "Bob", "age": 28}
 ];
 const userList = document.getElementById ("userList");
 users.forEach(user => {
@@ -3857,9 +3857,9 @@ data interchange in web development due to its simplicity, ease of use, and wide
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {
-" name " John",
-"age": 30,
-" city" New York"
+  "name": "John",
+  "age": 30,
+  "city": "New York"
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3874,11 +3874,12 @@ console.log(person.age); // Output: 30
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employee = {
-  "name " "Alice",
-  "position " "Engineer",
-  "contact{
-  "email " "alice@example.com",
-  "phone 123-456-7890"
+  "name": "Alice",
+  "position": "Engineer",
+  "contact": {
+    "email": "alice@example.com",
+    "phone": "123-456-7890"
+  }
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3886,9 +3887,9 @@ let employee = {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let books = [
-  {"title":"Book1", "author" Author1"},
-  {"title":"Book2", "author" Author2"},
-  {"title":"Book3", "author" Author3"}
+  {"title": "Book1", "author": "Author1"},
+  {"title": "Book2", "author": "Author2"},
+  {"title": "Book3", "author": "Author3"}
 ];
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3902,7 +3903,7 @@ console.log(jsonString); // Output: {"name":"John","ag": 30,"city":"New York"}
 <h4>6. Parsing JSON String to Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonObject = JSON.parse('{"name":"Alice","age": 25,"city":"London"}';
+let jsonObject = JSON.parse('{"name": "Alice","age": 25,"city": "London"}';
 console.log(jsonObject.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3910,26 +3911,27 @@ console.log(jsonObject.name); // Output: Alice
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch('data.json')
-.then(response => response.json())
-.then(data =>  console.log(data))
-.catch(error => console.error('Error :', error));
+  .then(response => response.json())
+  .then(data =>  console.log(data))
+  .catch(error => console.error('Error:', error));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Displaying JSON Data Dynamically in HTML:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonData = { " name " Bob ", " age 28 };
-let display Div = document.getElementById ('jsonDataDisplay');
-displayDiv.innerHTML = ' <p>Name : ${jsonData.name}< / p><p>Age : ${jsonData.age}< / p>
+let jsonData = {"name": "Bob", "age": 28};
+
+let display Div = document.getElementById('jsonDataDisplay');
+displayDiv.innerHTML = '<p>Name: ${jsonData.name}</p><p>Age: ${jsonData.age}</p>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Handling JSON Data in Forms:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let form = document.getElementById ('myForm');
-form.addEventListener ('submit', function(event) {
-  event.preventDefault ();
-  let formData = new FormData (form);
+let form = document.getElementById('myForm');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  let formData = new FormData(form);
   let jsonObject = {};
   formData.forEach((value, key) => {
     jsonObject[key] = value;
@@ -3942,11 +3944,11 @@ form.addEventListener ('submit', function(event) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let complexObj = {
-  " name ":" Sam ",
+  "name": "Sam",
   "age": 35,
-  " addresses[
-    { " type " home ", " address ": "123 Main St"},
-    { " type " work", " address ": "456 Business Ave "}
+  "addresses":[
+    {"type": "home", "address": "123 Main St"},
+    {"type": "work", "address": "456 Business Ave"}
   ]
 };
 let complexstring = JSON.stringify(complexObj);
@@ -3958,28 +3960,28 @@ console.log(parsedObj.addresses[0].address); // Output: 123 Main St
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employees = [
-  {"name " John ", " department":" HR"},
-  {"name " Alice ", " department" IT"},
-  {"name " Bob ", " department":" HR"}
+  {"name": "John", "department": "HR"},
+  {"name": "Alice", "department": "IT"},
+  {"name": "Bob", "department": "HR"}
 ];
-let hrEmployees = employees.filter( employee => employee.department === " HR"
-console.log(hrEmployees); // Output: [{"name" John", "department": "HR" }, {"name" Bob", "department" HR" } ]
+let hrEmployees = employees.filter(employee => employee.department === "HR");
+console.log(hrEmployees); // Output: [{"name": "John", "department": "HR" }, {"name": "Bob", "department": "HR"}]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let product = { " name Chair ", "price": 50};
-product.price =60;
-console.log(product); // Output: { " name " Chair", " price 60 }
+let product = {"name": "Chair", "price": 50};
+product.price = 60;
+console.log(product); // Output:{"name": "Chair", "price": 60}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Removing a Property from JSON Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let data = { 11 name " Kate ", " age 25 };
+let data = {"name": "Kate", "age": 25};
 delete data.age;
-console.log( data); // Output: { " name ":" Kate " }
+console.log(data); // Output: {"name": "Kate"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Using JSON with Local Storage:</h4>
@@ -5178,7 +5180,7 @@ let obj = {[key]: 'value'}; // {dynamicKey: 'value'}
 <h4>7. For... In Loop for Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let obj = {a: l,b: 2,c: 3};
+let obj = {a: 1,b: 2,c: 3};
 for (let key in obj) {
   console.log(key, obj [key]);
 }
@@ -5188,7 +5190,7 @@ for (let key in obj) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let iterable = [’a', 'b', 'c'];
-  for (let value of iterable ) {
+for (let value of iterable ) {
   console.log(value);
 }
 </pre>
@@ -5472,15 +5474,17 @@ console.log( generator. next (). value ); // Output: 2
 <h4>6. Async Generator Function:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function * asyncGenerator () {
-yield 'First';
-await new Promise (resolve => setTimeout (resolve, 1000 ));
-yield ’Second';
-( async () => {
-for await (let item of asyncGenerator ()) {
-console.log(item ); // Output: 'First' after 0ms, 'Second' after 1000ms
-}
-})();
+async function * asyncGenerator() {
+  yield 'First';
+  await new Promise (resolve => setTimeout(resolve, 1000));
+  yield ’Second';
+  (async() => {
+    for await(let item of asyncGenerator()) {
+      console.log(item); // Output: 'First' after 0ms, 'Second' after 1000ms
+    }
+  }
+  })();
+
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Error Handling:</h4>
@@ -5488,8 +5492,8 @@ console.log(item ); // Output: 'First' after 0ms, 'Second' after 1000ms
 <h4>7. Handling Rejected Promises with catch:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-Promise . reject ('Error message')
-. catch ( error => console. error ('Caught error :error));
+Promise.reject('Error message')
+.catch(error => console.error('Caught error:', error));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Handling Multiple Promises with Promise.all:</h4>
@@ -5664,23 +5668,24 @@ console.log(boundGetX 0); // Output: 42
 <h4>2. Immediately Resolved Promises:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const immediatePromise = Promise . resolve ('Immediate resolution');
-immediatePromise . then (result => console.log(result)); // Output: 'Immediate resolution'
+const immediatePromise = Promise.resolve('Immediate resolution');
+immediatePromise.then(result => console.log(result)); // Output: 'Immediate resolution'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.findindex:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 const array = [5,12,8,130,44];
-const index = array.findindex(element => element >10);// Output: 1 (index of first element >10)
+const index = array.findindex(element => element > 10); // Output: 1 (index of first element >10)
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.fill:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [ 1, 2, 3,4, 5 ];
-array. fill ( 0, 2, 4 ); // Fills array from index 2 to index 4 with value 0
+const array = [1, 2, 3, 4, 5];
+array.fill (0, 2, 4); // Fills array from index 2 to index 4 with value 0
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -5688,16 +5693,16 @@ array. fill ( 0, 2, 4 ); // Fills array from index 2 to index 4 with value 0
 <h4>5. Using Object.entries:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const obj = {foo : 'bar', baz : 42 };
-const entries = Object. entries ( obj); // Output: [[ 'foo', 'bar' ], [ 'baz', 42 ]]
+const obj = {foo: 'bar', baz: 42};
+const entries = Object.entries(obj); // Output: [[ 'foo', 'bar' ], [ 'baz', 42 ]]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. preventExtensions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const obj = {prop : 'value'};
-Object. preventExtensions (obj);
-obj. newProp = 10; // Cannot add new properties to obj
+const obj = {prop: 'value'};
+Object.preventExtensions(obj);
+obj.newProp = 10; // Cannot add new properties to obj
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Promises and Async / Await:</h4>
@@ -5706,21 +5711,21 @@ obj. newProp = 10; // Cannot add new properties to obj
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
-Promise . resolve ('Resolved'),
-Promise . reject ('Rejected'),
-new Promise (resolve => setTimeout (() => resolve ('Resolved after timeout'), 1000 ))
+  Promise.resolve('Resolved'),
+  Promise.reject('Rejected'),
+  new Promise (resolve => setTimeout(() => resolve('Resolved after timeout'), 1000))
 ];
 Promise.allSettled(promises)
-.then(results => console.log(results ));
+  .then(results => console.log(results ));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Rejected Promise:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function throwError () {
-throw new Error ('Error thrown from async function');
-throwError (). catch ( error => console. error ( error. message )); // Output: 'Error thrown from async
-function'
+  throw new Error('Error thrown from async function');
+  throwError().catch(error => console.error(error.message)); // Output: 'Error thrown from async function'
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -5748,40 +5753,41 @@ features like numeric separators and Promise.finally method.</p>
 <h4>1. Function Caching using Memoization:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const memoize = (fn ) => {
-const cache = {};
-return (... args ) => {
-const stringifiedArgs = JSON . stringify ( args );
-return cache [ stringifiedArgs ] || ( cache [ stringifiedArgs ] = fn (... args ));
+const memoize = (fn) => {
+  const cache = {};
+  return (... args) => {
+    const stringifiedArgs = JSON.stringify(args);
+    return cache[stringifiedArgs] || (cache[stringifiedArgs] = fn (... args ));
+  };
 };
+const sum = (a, b) => {
+  console.log('Calculating sum ...');
+  return a + b;
 };
-const sum = ( a, b ) => {
-console.log('Calculating sum ...');
-return a + b;
-};
-const memoizedSum = memoize ( sum);
-console.log(memoizedSum ( 2, 3 )); // Output: Calculating sum ... 5
-console.log(memoizedSum (2, 3 )); // Output: 5 ( Retrieved from cache )
+const memoizedSum = memoize(sum);
+console.log(memoizedSum(2, 3 )); // Output: Calculating sum ... 5
+console.log(memoizedSum(2, 3 )); // Output: 5 ( Retrieved from cache )
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Throttling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const throttle = (func, limit) => {
-let inThrottle;
-return function () {
-const args = arguments;
-const context = this;
-if (! inThrottle) {
-func . apply ( context, args );
-inThrottle = true;
-setTimeout (() => inThrottle = false, limit);
-}
-};
+  let inThrottle;
+  return function () {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
 };
 function throttledFunc () {
-console.log('Throttled function executed');
-const throttled = throttle (throttledFunc, 3000 );
+  console.log('Throttled function executed');
+  const throttled = throttle (throttledFunc, 3000 );
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
@@ -5789,15 +5795,15 @@ const throttled = throttle (throttledFunc, 3000 );
 <h4>3. Using Array. from with Mapping and Filtering:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers =[1,2, 3,4, 5, 6 ];
-const new Array = Array . from ( numbers, x => x * 2 ). filter (x=>x>5); // Output: [ 6, 8,10, 12 ]
+const numbers =[1, 2, 3, 4, 5, 6];
+const new Array = Array.from(numbers, x => x * 2 ).filter (x=>x>5); // Output: [6, 8, 10, 12]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array. reduceRight:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [ 1, 2, 3,4 ];
-const sum = array. reduceRight (( acc, curr) => acc + curr, 0 ); // Output: 10
+const array = [1, 2, 3, 4];
+const sum = array.reduceRight((acc, curr) => acc + curr, 0); // Output: 10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -5805,19 +5811,19 @@ const sum = array. reduceRight (( acc, curr) => acc + curr, 0 ); // Output: 10
 <h4>5. Object. fromEntries with Map:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const entries = new Map ([
-[ 'name', 'Alice' ],
-['age', 30]
+const entries = new Map([
+  ['name', 'Alice'],
+  ['age', 30]
 ]);
-const obj = Object. fromEntries ( entries); // Output: {name: 'Alice', age : 30}
+const obj = Object.fromEntries(entries); // Output: {name: 'Alice', age : 30}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. seal and Object. isSealed:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {name : 'Alice'};
-Object. seal ( obj);
-console.log( Object. isSealed ( obj)); // Output: true
+Object.seal(obj);
+console.log(Object.isSealed(obj)); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Promises and Async / Await:</h4>
@@ -5826,20 +5832,20 @@ console.log( Object. isSealed ( obj)); // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
-Promise . reject ('Rejected 1’),
-Promise . resolve ('Resolved 2'),
-Promise . resolve ('Resolved 3')
+  Promise.reject('Rejected 1'),
+  Promise.resolve('Resolved 2'),
+  Promise.resolve('Resolved 3')
 ];
-Promise . any (promises )
-. then (result => console.log(result)); // Output: 'Resolved 2'
+Promise.any(promises)
+  .then(result => console.log(result)); // Output: 'Resolved 2'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Using for ... await... of:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function processitems (items ) {
-for await (let item of items ) {
-console, log( ' Processing item : ${item}' );
+async function processitems(items) {
+for await (let item of items) {
+  console.log(`Processing item: ${item}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -5847,9 +5853,9 @@ console, log( ' Processing item : ${item}' );
 <h4>9. Dynamic Import for Modules:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function loadModule () {
-const module = await import ('./ module . js*);
-module . doSomething ();
+async function loadModule() {
+  const module = await import('./module.js*);
+  module.doSomething ();
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5869,7 +5875,7 @@ features like dynamic import and nullish coalescing operator.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const multiply = (a, b) => a * b;
-const partialMultiplyByTwo = multiply. bind (null, 2 );
+const partialMultiplyByTwo = multiply.bind (null, 2 );
 console.log(partialMultiplyByTwo ( 5 )); // Output: 10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5884,8 +5890,8 @@ const args = arguments;
 clearTimeout (timeout);
 timeout = setTimeout (() => func . apply ( context, args ), delay);
 function handleinput () {
-console.log('Input event handled');
-const debouncedlnputHandler = debounce (handleinput, 300 );
+  console.log('Input event handled');
+  const debouncedlnputHandler = debounce (handleinput, 300 );
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
@@ -5893,15 +5899,15 @@ const debouncedlnputHandler = debounce (handleinput, 300 );
 <h4>3. Using Array. flat to Flatten Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const nestedArray = [ 1, [2, [ 3 ]], 4, [ 5 ]];
-const flatArray = nestedArray. flat (Infinity); // Output: [ 1, 2, 3,4, 5 ]
+const nestedArray = [1, [2, [3]], 4, [5]];
+const flatArray = nestedArray.flat(Infinity); // Output: [ 1, 2, 3,4, 5 ]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array. slice to Clone Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const originalArray = [ 1, 2, 3,4 ];
-const clonedArray = originalArray. slice (); // Clones the originalArray
+const originalArray = [1, 2, 3, 4];
+const clonedArray = originalArray.slice(); // Clones the originalArray
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -5916,8 +5922,8 @@ const mappedObj = Object. fromEntries ( Object. keys ( obj). map ( key => [ key,
 <h4>6. Object. is for Strict Equality Comparison:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-console.log( Object. is ( 5, 5 )); // Output: true
-console.log( Object. is ( 5, '5')); // Output: false
+console.log(Object.is(5, 5)); // Output: true
+console.log(Object.is(5, '5')); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Promises and Async / Await:</h4>
@@ -5926,11 +5932,11 @@ console.log( Object. is ( 5, '5')); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
-Promise . resolve ({name : 'Alice', age : 30}),
-Promise . reject (new Error ('Something went wrong’)),
-Promise . resolve (null)
+  Promise.resolve({name: 'Alice', age : 30}),
+  Promise.reject(new Error('Something went wrong')),
+  Promise.resolve(null)
 ];
-const results = await Promise.allSettled (promises );
+const results = await Promise.allSettled(promises);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Generator Function:</h4>
@@ -5952,16 +5958,16 @@ console.log(item); // Output: 'First' after 0ms, 'Second' after 1000ms
 <h4>9. Optional Chaining for Nested Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const user = {address : {city: 'New York'}};
-const city = user. address? . city; // Output: 'New York'
-constzipCode = user. address? . zipCode ?? 'Not available'; // Output: 'Not available'
+const user = {address: {city: 'New York'}};
+const city = user.address?.city; // Output: 'New York'
+constzipCode = user.address?.zipCode ?? 'Not available'; // Output: 'Not available'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. BigInt for Large Integer Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const bigNumber = BigInt ( Number . MAX_SAFE_INTEGER)
-+ BigInt ( 1 );
+const bigNumber = BigInt(Number.MAX_SAFE_INTEGER)
++ BigInt (1);
 // BigInt:
 9007199254740992n + In
 </pre>
@@ -6001,24 +6007,26 @@ console.log(memoizedSum(2, 3)); // Output: 5 (Retrieved from cache)
 <h4>3. Using Array. reduce with Initial Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [ 1, 2, 3,4, 5 ];
-const sum = array. reduce (( acc, curr) => acc + curr, 0 ); // Output: 15
+const array = [1, 2, 3, 4, 5];
+const sum = array.reduce((acc, curr) => acc + curr, 0); // Output: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array. findindex with Custom Predicate:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers = [ 10, 20, 30,40, 50 ];
-const index = numbers . findindex (num => num > 25 ); // Output: 2 (Index of first element > 25 )
-Advanced Object Manipulation:
+const numbers = [10, 20, 30,40, 50];
+const index = numbers.findindex(num => num > 25 ); // Output: 2 (Index of first element > 25 )
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Advanced Object Manipulation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. entries with Object. fromEntries:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const obj = {name : 'Alice', age : 30};
-const entries = Object. entries (obj); // Output: [[ 'name', 'Alice' ], [ 'age', 30 ]]
-const reconstructedObj = Object. fromEntries (entries );
+const obj = {name: 'Alice', age: 30};
+const entries = Object.entries(obj); // Output: [[ 'name', 'Alice' ], [ 'age', 30 ]]
+const reconstructedObj = Object.fromEntries(entries );
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. freeze for Immutable Objects:</h4>
@@ -6034,18 +6042,18 @@ obj.prop = 'newValue'; // Assignment not allowed in a frozen object
 <h4>7. Promise . resolve and Promise . reject:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const resolvedPromise = Promise . resolve ('Resolved');
-const rejectedPromise = Promise . reject ('Rejected');
-resolvedPromise . then (result => console.log(result)); // Output: 'Resolved'
-rejectedPromise . catch ( error => console. error ( error)); // Output: 'Rejected'
+const resolvedPromise = Promise.resolve('Resolved');
+const rejectedPromise = Promise.reject('Rejected');
+resolvedPromise.then(result => console.log(result)); // Output: 'Resolved'
+rejectedPromise.catch(error => console.error(error)); // Output: 'Rejected'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Resolved Promise:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function returnResolved () {
-return 'Resolved from async function';
-returnResolved (). then (result => console.log(result)); // Output: 'Resolved from async function1
+async function returnResolved() {
+  return 'Resolved from async function';
+  returnResolved().then(result => console.log(result)); // Output: 'Resolved from async function'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -6060,10 +6068,10 @@ console.log(first, second, rest); // Output: 12 [ 3,4, 5 ]
 <h4>10. Rest Parameters in Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const sum = (... args ) => args . reduce (( acc, curr) => acc + curr, 0 );
-console.log( sum (1, 2, 3,4, 5 )); // Output: 15
-These JavaScript code snippets demonstrate advanced function operations, array manipulations, object methods,
-promises and async / await functionalities,
+const sum = (... args) => args.reduce((acc, curr) => acc + curr, 0);
+console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+<p>These JavaScript code snippets demonstrate advanced function operations, array 
+manipulations, object methods, promises and async / await functionalities.</p>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Functions and Operations:</h4>
@@ -6073,18 +6081,19 @@ promises and async / await functionalities,
 <pre>
 const add = (x, y) => x + y;
 const multiply = (x, y) => x * y;
-const compose = (... funcs ) => funcs . reduce ((f, g) => (... args ) => f ( g (... args )));
-const addAndMultiply = compose (multiply, add);
-console.log( addAndMultiply ( 3, 4 )); // Output :21(3+4*3)
+const compose = (... funcs) => funcs.reduce((f, g) => (... args) => f(g(... args)));
+const addAndMultiply = compose(multiply, add);
+console.log(addAndMultiply(3, 4)); // Output :21(3+4*3)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Using Function . toString () to Get Function Source Code:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function greet () {
-console.log('Hello !');
-const functionsource = greet. toString ();
-console.log(functionsource ); // Output:" function greet () {console.log('Hello 1 ’);}"
+function greet() {
+  console.log('Hello!');
+  const functionsource = greet.toString();
+}
+console.log(functionsource); // Output:" function greet() {console.log('Hello!');}"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
@@ -6092,16 +6101,16 @@ console.log(functionsource ); // Output:" function greet () {console.log('Hello 
 <h4>3. Array.flatMap for Flattening and Mapping:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const arr = [ 1, 2, 3 ];
-const mappedAndFlattened = arr.flatMap(x => [ x * 2, x * 3 ]);
-console.log(mappedAndFlattened); // Output: [ 2, 3, 4, 6, 6, 9 ]
+const arr = [1, 2, 3];
+const mappedAndFlattened = arr.flatMap(x => [x * 2, x * 3]);
+console.log(mappedAndFlattened); // Output: [2, 3, 4, 6, 6, 9]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.some with Custom Predicate:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers = [ 5,10,15, 20 ];
-const isEvenPresent = numbers . some (num => num % 2 === 0 ); // Output: true
+const numbers = [5, 10, 15, 20];
+const isEvenPresent = numbers.some(num => num % 2 === 0); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -6109,8 +6118,8 @@ const isEvenPresent = numbers . some (num => num % 2 === 0 ); // Output: true
 <h4>5. Using Object.keys to Get Object's Own Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const obj = {a: l,b: 2,c: 3);
-const keys = Object.keys(obj); // Output: [ 'a', 'b', 'c' ]
+const obj = {a: 1,b: 2,c: 3);
+const keys = Object.keys(obj); // Output: ['a', 'b', 'c']
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.setPrototypeOf for Dynamic Prototype Setting:</h4>
@@ -6142,12 +6151,12 @@ Promise.race([promise1, promise2]). then ((value) => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
-try {
-const response = await fetch('https://api.example.com/data');
-const data = await response . json ();
-console.log( data);
-} catch ( error) {
-console.error('Error fetching data :', error);
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    console.log(data);
+  } catch(error) {
+  console.error('Error fetching data :', error);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
