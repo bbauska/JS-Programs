@@ -956,7 +956,9 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="consolas">BigInt</span> is a numeric data type in JavaScript that can 
 represent integers with arbitrary precision.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS BigInt:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a BigInt:</h4>
 <pre>let bigNumber = 12345678912345678901234567890n;</pre>
 <h4>Performing Operations with a BigInt:</h4>
@@ -1412,7 +1414,9 @@ of either or both operands are 1.</p>
 <p>The <span class="consolas">bitwise XOR (^)</span> operator returns a number or BigInt 
 whose binary representation has a 1 in each bit position for which the corresponding bits 
 of either but not both operands are 1.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Bitwise:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Bitwise AND Operator (&):</h4>
 <pre>
 const a = 5; // 00000000000000000000000000000101
@@ -1791,7 +1795,9 @@ console.log(user.firstName); // Output: 'Alice'
 <h2 id="ex70">70. JS Object Constructors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Constructors in JavaScript are functions used for creating objects and setting initial values.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Constructors Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Constructor Functions:</h4>
 <pre>
 function Person(name, age) {
@@ -1808,7 +1814,9 @@ console.log(newPerson.greet()); // Output: ’Hello, my name is Bob'
 <h2 id="ex71">71. JS Object Prototypes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Prototypes in JavaScript are a mechanism to share properties and methods between objects.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Prototypes Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding Methods to the Prototype:</h4>
 <pre>
 Person.prototype.info = function() {
@@ -1820,7 +1828,9 @@ console.log(newPerson.info()); // Output: 'Name : Bob, Age : 25'
 <h2 id="ex72">72. JS Object Iterables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Iterables in JavaScript are objects that can be iterated using loops.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Iterables Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using for ... in Loop:</h4>
 <pre>
 for (let key in person) {
@@ -1833,7 +1843,9 @@ for (let key in person) {
 <h2 id="ex73">73. JS Object Sets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Sets in JavaScript are collections of unique values.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Sets Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Set:</h4>
 <pre>
 let mySet = new Set();
@@ -1847,7 +1859,9 @@ mySet.add(3);
 <h2 id="ex74">74. JS Object Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Maps in JavaScript are collections of key - value pairs where keys can be any type.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Maps Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Map:</h4>
 <pre>
 let myMap = new Map();
@@ -1860,7 +1874,9 @@ myMap.set('key2', 'value2');
 <h2 id="ex75">75. JS Object Reference</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In JavaScript, objects are stored and passed by reference.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Reference Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Referencing an Object:</h4>
 <pre>
 let object1 = {name: 'John'};
@@ -1879,7 +1895,9 @@ concept.</p>
 <h2 id="ex76">76. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Functions in JavaScript are reusable blocks of code that perform a specific task when called.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Definitions:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Declaration:</h4>
 <pre>
 function greet() {
@@ -1902,7 +1920,9 @@ let greet = () => {
 <h2 id="ex77">77. JS Function Parameters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Function parameters are placeholders for values that a function will receive when it's called.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Parameters Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Single Parameter:</h4>
 <pre>
 function greet(name) {
@@ -1919,7 +1939,9 @@ function sum(a, b) {
 <h2 id="ex78">78. JS Function Invocation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Function invocation means calling a function to execute its code.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Invocation Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Calling a Function:</h4>
 <pre>
 greet(); // Function call
@@ -1930,7 +1952,9 @@ let result = sum(5,3); // Function call with arguments
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The call() method in JavaScript allows a function to be called with a specified this 
 value and arguments provided individually.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Call Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using call():</h4>
 <pre>
 function greet() {
@@ -1944,7 +1968,9 @@ let message = greet.call(person);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The apply() method in JavaScript allows a function to be called with a specified this 
 value and arguments provided as an array.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Apply Examples:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using apply():</h4>
 <pre>
 function greet() {
@@ -1959,9 +1985,9 @@ let message = greet.apply(person, args);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The bind() method in JavaScript creates a new function that, when called, has its this 
 keyword set to a specified value.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Bind Examples:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using bind():</h4>
 <pre>
 function greet() {
@@ -1976,9 +2002,9 @@ let message = newGreet();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Closures in JavaScript are functions that retain access to variables in the scope 
 where they were defined.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Closures Examples:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Closure Example:</h4>
 <pre>
 function outerFunction() {
@@ -2218,7 +2244,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM HTML</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM HTML includes properties that deal with the HTML content.</p>
 <h4>Changing HTML Attributes:</h4>
 <h5>html code</h5>
@@ -2273,9 +2301,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Animations</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM supports creating simple animations.</p>
 <h4>Animating an Element:</h4>
 <h5>html code</h5>
@@ -2299,9 +2327,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Events</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Events in the DOM represent interactions by users or by the browser.</p>
 <h4>Click Event Handling:</h4>
 <h5>html code</h5>
@@ -2318,9 +2346,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Event Listener</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The addEventListener method is used to attach an event to an element.</p>
 <h4>Mouseover Event Handling:</h4>
 <h5>html code</h5>
@@ -2337,9 +2365,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Navigation</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows navigation between elements.</p>
 <h4>Traversing Child Elements:</h4>
 <h5>html code</h5>
@@ -2360,7 +2388,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Nodes</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Nodes are the fundamental building blocks in the DOM.</p>
 <h4>Creating a New Node:</h4>
 <h5>html code</h5>
@@ -2378,9 +2408,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Collections</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Collections in the DOM are arrays of HTML elements.</p>
 <h4>Accessing Collection Elements:</h4>
 <h5>html code</h5>
@@ -2398,9 +2428,9 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Node Lists</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
 <h4>Accessing Node List Elements:</h4>
 <h5>html code</h5>
@@ -2425,62 +2455,62 @@ for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Browser Object Model (BOM) in JavaScript represents the browser window and its 
 components.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Window</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The window object is the global object in a browser's JavaScript environment.</p>
 <h4>Accessing Window Properties:</h4>
 <pre>
 console.log(window.innerHeight); // Output: Inner height of the window
 console.log(window.innerWidth); // Output: Inner width of the window
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Screen</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The screen object represents the screen of a device.</p>
 <h4>Accessing Screen Properties:</h4>
 <pre>
 console.log(screen.width ); // Output: Screen width in pixels
 console.log(screen.height); // Output: Screen height in pixels
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Location</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The location object contains information about the current URL.</p>
 <h4>Accessing Location Information:</h4>
 <pre>
 console.log(location.href); // Output: Full URL of the current page
 console.log(location.hostname); // Output: Hostname of the current URL
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS History</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The history object contains the browsing history of the window.</p>
 <h4>Accessing History Methods:</h4>
 <pre>
 history.back(); // Go back to the previous page
 history.forward(); // Go forward to the next page
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Navigator</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The navigator object contains information about the browser.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Navigator Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(navigator.userAgent); // Output: User - Agent header of the browser
 console.log(navigator.platform); // Output: Platform of the browser
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Popup Alert</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Popup alerts in JavaScript display messages to users.</p>
 <h4>Displaying an Alert:</h4>
 <pre>alert("This is an alert message");</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Timing</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript's timing functions allow scheduling of code execution.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using setTimeout():</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 setTimeout(() =&gt; {
   console.log("Delayed message");
@@ -2492,13 +2522,11 @@ setinterval(() => {
   console.log("Repeated message");
 }, 3000); // Execute every 3 seconds
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Cookies</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Cookies in JavaScript store small pieces of information on the client's machine.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Setting a Cookie:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document.cookie="username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path=/";
 </pre>
@@ -2515,13 +2543,11 @@ and cookies, with examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Web APIs are sets of tools and interfaces provided by web browsers to interact with 
 various functionalities of the browser or device.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web API Intro</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Web APIs enable web developers to access various browser features and functionalities.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing the Web API:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Example : Using the Geolocation API
 if ("geolocation" in navigator) {
@@ -2531,25 +2557,27 @@ if ("geolocation" in navigator) {
   });
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Forms API</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Forms API provides methods and properties to manipulate HTML form elements.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document.getElementById("myForm");
 let inputField = form.elements["username"];
 console.log(inputField.value);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web History API</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web History API allows manipulation of the browser's history.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Browser History:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 window.history.pushState({page: 1}, "Title", "?page = 1");
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Storage API</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Storage API provides methods to store data in the browser.</p>
 <h4>Using localstorage:</h4>
 <pre>
@@ -2561,9 +2589,7 @@ let data = localstorage.getItem("key");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Worker API enables running scripts in the background to handle time - 
 consuming tasks without blocking the UI.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Web Worker:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // worker.js
 self, onmessage = function(event) {
@@ -2588,11 +2614,11 @@ fetch("https://api.example.com/data")
   .then((data) => console.log(data))
   .catch((error) => console.log("Error, error));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Geolocation API</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Geolocation API retrieves geographical information about the user's device.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Getting User's Location:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 navigator.geolocation.getCurrentPosition ((position) => {
   console.log("Latitude:", position.coords.latitude);
@@ -2628,9 +2654,7 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data 
 between a web browser and a server.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using XMLHttpRequest:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2645,7 +2669,6 @@ xhttp.send();
 <h3>AJAX Request</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX requests enable communication between the browser and the server.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sending POST Request:</h4>
 <pre>
 let xhttp = new XMLHttpRequest();
@@ -2662,9 +2685,7 @@ xhttp.send("name = John&age = 30");
 <h3>AJAX Response</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Handling AJAX responses involves processing data received from the server.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Handling JSON Response:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2680,9 +2701,7 @@ xhttp.send();
 <h3>AJAX XML File</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can be used to fetch and handle XML files.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Fetching XML File:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2698,9 +2717,7 @@ xhttp.send();
 <h3>AJAX PHP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can interact with server - side technologies like PHP to exchange data.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Handling AJAX in PHP:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2722,9 +2739,7 @@ echo "Hello from PHP!";
 <h3>AJAX ASP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Similarly, AJAX can communicate with server - side technologies like ASP.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX with ASP:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -2742,7 +2757,9 @@ xhttp.send();
 Response.Write("Hello from ASP!")
 %&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Database</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can be used to interact with databases on the server.</p>
 <h4>Database Interaction with AJAX:</h4>
 <pre>
@@ -2762,9 +2779,11 @@ xhttp.send();
 // Fetch data from database and return as JSON
 ?&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Applications</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX enables building interactive web applications with real - time data.</p>
-<h4>Real - time Chat Application:</h4>
+<h4>Real-time Chat Application:</h4>
 <pre>
 setinterval(() => {
   // Fetch new messages and update chat interface
@@ -2774,22 +2793,16 @@ setinterval(() => {
 <h3>AJAX Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Here are more examples demonstrating various AJAX functionalities.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 1:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>// Fetch weather data from an API and display on a webpage</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 2:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>// Fetch user - specific data and update profile information dynamically</pre>
 <p>This comprehensive guide covers AJAX (Asynchronous JavaScript and XML), including an 
 introduction to AJAX, using XMLHttp, making AJAX requests and handling responses, 
 fetching XML files, interacting with server - side technologies like PHP and ASP, working 
 with databases, building AJAX applications, and providing examples and explanations for 
 each concept.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 3: Dynamic Content Loading</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2816,9 +2829,7 @@ function loadContent() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.html (Sample Content):</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>html code</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Welcome to Dynamic Content</h3>
@@ -2826,9 +2837,7 @@ function loadContent() {
 <p>This content was loaded dynamically using AJAX. </p>
 This example demonstrates a simple button that triggers an AJAX request to load content from an external HTML file
 and displays it on the webpage without refreshing the entire page.
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 4: Form Submission with AJAX</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2860,9 +2869,7 @@ function submitForm() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>processForm.php (Server-side Processing):</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -2879,9 +2886,7 @@ if ($_SERVER["REQUEST-METHOD"] == "POST") {
 <p>This example demonstrates a form submission using AJAX. When the form is submitted, the data is sent
 asynchronously to a server - side PHP script for processing. The response from the server is displayed on the webpage
 without refreshing the entire page.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>AJAX Example 5 : Fetching JSON Data</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>AJAX Example 5: Fetching JSON Data</h4>
 <pre>
 fetch('data.json')
   .then(response =&gt; response.json())
@@ -2904,9 +2909,7 @@ fetch('data.json')
 the JSON data is processed and used within the JavaScript code.</p>
 <p>These additional examples showcase various use cases of AJAX, such as loading dynamic content, form submission
 without page refresh, and fetching and using JSON data asynchronously.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 6: Image Gallery with AJAX</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -2938,9 +2941,7 @@ function loadimages () {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>images.json(Sample Image Data in JSON Format):</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 [
@@ -2958,9 +2959,7 @@ function loadimages () {
 <p>This example demonstrates loading images dynamically into an image gallery on a webpage using AJAX. The images
 and their respective URLs are stored in a JSON file, which is fetched asynchronously, and the images are displayed in the
 gallery.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 7: Autocomplete Search</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -3011,9 +3010,7 @@ an AJAX request is made to a server - side PHP script ( search. php ) that proce
 matching results in JSON format, which are then displayed as autocomplete suggestions.</p>
 <p>These additional examples showcase different functionalities of AJAX, such as creating an image gallery dynamically
 and implementing an autocomplete search feature, using asynchronous data fetching and manipulation on a webpage.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 8: Live Data Update</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -3052,9 +3049,7 @@ echo json_encode($data); // Return live data as JSON
 <p>This example demonstrates updating live data on a webpage at regular intervals using AJAX. The JavaScript function
 updateData uses setinterval to fetch updated data from the server - side PHP script (live_data. php ) every 5 seconds
 and displays it on the webpage.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>AJAX Example 9 : Infinite Scroll</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>AJAX Example 9: Infinite Scroll</h4>
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -3095,7 +3090,7 @@ window.onscroll = loadMoreContent;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<h4>content.php(Server - side Script Providing Content):</h4>
+<h4>content.php(Server-side Script Providing Content):</h4>
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -3118,9 +3113,7 @@ existing content on the webpage.</p>
 <p>These additional examples showcase different functionalities of AJAX, such as live data updates and implementing
 infinite scroll behavior on a webpage, demonstrating how AJAX can be used to fetch and display data dynamically
 without page reloads.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 10: File Upload with Progress Bar</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -3252,9 +3245,7 @@ literals. It's widely used for data exchange between web servers and web clients
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON syntax is derived from JavaScript object notation, consisting of key - value pairs enclosed in curly braces {}, and
 values can be strings, numbers, objects, arrays, booleans, or null.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Syntax:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 {
@@ -3268,9 +3259,7 @@ values can be strings, numbers, objects, arrays, booleans, or null.</p>
   "key6":["arrayValuel", "arrayValue2"]
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON vs XML</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more 
 lightweight and easier to read and parse than XML.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3294,13 +3283,9 @@ lightweight and easier to read and parse than XML.</p>
   &lt;city&gt;New York&lt;/city&gt;
 &lt;/user>&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Data Types</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Different Data Types in JSON:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 {
@@ -3312,9 +3297,7 @@ lightweight and easier to read and parse than XML.</p>
   "array":[1,2,3]
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Parse</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Parsing:</h3>
@@ -3324,9 +3307,7 @@ let jsonString = '{"name": "Alice", "age": 28}';
 let jsonObj = JSON.parse(jsonString);
 console.log(jsonObj.name); // Output: Alice
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Stringify</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a JSON string.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Stringification:</h3>
@@ -3336,9 +3317,7 @@ let obj = {name: "Bob ", age: 30};
 let jsonString = JSON.stringify(obj);
 console.log(jsonString); // Output: {"name": "Bob", "age": 30}
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Objects</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON objects contain key - value pairs enclosed in curly braces {}. Keys must be strings, and values can be of any JSON
 data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3352,9 +3331,7 @@ data type.</p>
   "city": "London"
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Arrays</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of a JSON Array:</h3>
@@ -3363,9 +3340,7 @@ data type.</p>
 <pre>
 ["apple", "banana", "orange"]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON Server</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON is commonly used to transfer data between a server and a web client in web development. Servers often provide
 data in JSON format through APIs.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3380,9 +3355,7 @@ data in JSON format through APIs.</p>
   "content": "This is a sample post content."
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON PHP</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode () and json.decode () functions respectively, to
 convert data to and from JSON format.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3398,9 +3371,7 @@ $jsonData = json.encode($data);
 $jsonString = '{" name": " Alice ", "age": 30}';
 $decodedData = json.decode($jsonString, true);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JSON HTML</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of Using JSON Data in HTML:</h3>
@@ -3464,11 +3435,11 @@ console.log(person.age); // Output: 30
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employee = {
-  "name ": "Alice",
-  "position ": "Engineer",
+  "name": "Alice",
+  "position": "Engineer",
   "contact": {
-    "email":"alice@example.com",
-    "phone":"123-456-7890"
+    "email": "alice@example.com",
+    "phone": "123-456-7890"
   }
 };
 </pre>
@@ -3477,9 +3448,9 @@ let employee = {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let books = [
-  {"title":"Book1", "author":"Author1"},
-  {"title":"Book2", "author":"Author2"},
-  {"title":"Book3", "author":"Author3"}
+  {"title": "Book1", "author": "Author1"},
+  {"title": "Book2", "author": "Author2"},
+  {"title": "Book3", "author": "Author3"}
 ];
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3487,13 +3458,13 @@ let books = [
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonString = JSON.stringify(person);
-console.log(jsonString); // Output: {"name":"John", "age": 30, "city":"New York"}
+console.log(jsonString); // Output: {"name": "John", "age": 30, "city": "New York"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Parsing JSON String to Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonObject = JSON.parse ('{"name":"Alice", "age": 25, "city":"London "}');
+let jsonObject = JSON.parse('{"name": "Alice", "age": 25, "city": "London"}');
 console.log(jsonObject.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3579,7 +3550,7 @@ console.log(data); // Output: {"name":"Kate"}
 <pre>
 let userData = {"username":"user123", "email":"user@example.com"};
 localstorage.setitem('userData', JSON.stringify(userData));
-let storedData = JSON.parse(localstorage.getltem('userData'));
+let storedData = JSON.parse(localstorage.getItem('userData'));
 console.log(storedData.email); // Output: user@example.com
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3987,9 +3958,9 @@ console.log(data); // Output: {"name": "Kate"}
 <h4>14. Using JSON with Local Storage:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let userData = {"username " user 123 ", " email" user@example.com " };
+let userData = {"username": "user123", "email": "user@example.com"};
 localstorage.setitem('userData', JSON.stringify(userData));
-let storedData = JSON.parse (localstorage.getltem('userData'));
+let storedData = JSON.parse(localstorage.getItem('userData'));
 console.log(storedData.email); // Output: user@example.com
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4068,7 +4039,9 @@ creating, manipulating, parsing, and working with JSON data in various scenarios
 <p>JavaScript and jQuery are both powerful tools used in web development. JavaScript is a 
 programming language, while jQuery is a library built with JavaScript. Understanding their 
 differences, capabilities, and usage scenarios is crucial for developers.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JavaScript Overview</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript is a versatile programming language primarily used for enhancing 
 interactivity on web pages. It's a core technology in web development, enabling dynamic 
 content updates, user interactions, and handling client-side functionalities.</p>
@@ -8763,6 +8736,7 @@ function checkNumberType(number) {
     console.log(number + " is a float.");
   }
 }
+
 // Example usage:
 checkNumberType(5); // Outputs: 5 is an integer.
 checkNumberType(3.14); // Outputs: 3.14 is afloat.
@@ -8788,6 +8762,7 @@ function add(x, y) {
 function multiply(x, y) {
   return x &ast; y;
 }
+
 // Example usage
 let resultl = operateOnNumbers(3, 5, add);
 console.log("Result of addition:", resultl); // Outputs: 8
@@ -8820,6 +8795,7 @@ function getlmageDimensions(imageSrc) {
     console.error("Error loading the image.");
   };
 }
+
 // Example usage
 var imageUrl = "path/to/your/image.jpg";
 getlmageDimensions(imageUrl);
@@ -8834,6 +8810,7 @@ function removeWhitespaces(inputText) {
   // Use a regular expression to replace all whitespaces with an empty string
   return inputText.replace(/\s/g,"");
 }
+
 // Example usage
 let textWithWhitespaces = "This is a text with spaces";
 let textWithoutWhitespaces = removeWhitespaces(textWithWhitespaces);
@@ -8847,10 +8824,12 @@ console.log("Text without Whitespaces:", textWithoutWhitespaces);
 <span class="consolas">console.log()</span> method.</p>
 <pre>
 // Write a message to the console
-console.logf'Hello, world!");
+console.log("Hello, world!");
+
 // You can also log variables or expressions
 let number = 42;
 console.log("The answer is:", number);
+
 // Multiple values can be logged in a single statement
 let firstName = "John";
 let lastName = "Doe";
@@ -8865,6 +8844,7 @@ the <span class="consolas">getTime()</span> method.</p>
 <pre>
 // Create a Date object
 const currentDate = new Date();
+
 // Get the numeric representation of the date (milliseconds since the Unix Epoch)
 const numericDate = currentDate.getTime();
 console.log("Current Date:", currentDate);
@@ -8878,16 +8858,18 @@ and then divide the sum by 2.</p>
 <pre>
 function findAverage(numl, num2) {
   // Calculate the sum of the two numbers
-  let sum = numl + num 2;
+  let sum = numl + num2;
+
   // Calculate the average by dividing the sum by 2
-  let average = sum I 2;
+  let average = sum / 2;
   return average;
 }
+
 // Example usage:
-let number 1 = 10;
+let number1 = 10;
 let number2 = 20;
 let result = findAverage(numberl, number2);
-console.log(' The average of $ {number 1} and $ {number 2} is: $ {result}');
+console.log(`The average of ${number1} and ${number2} is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js82">82. Calculate the Area of a Circle</h2>
@@ -8896,17 +8878,18 @@ console.log(' The average of $ {number 1} and $ {number 2} is: $ {result}');
 <pre>
 function calculateCircleArea(radius) {
   // Check if the radius is a valid number
-  if (isNaN(radius) 11 radius <= 0) {
+  if (isNaN(radius) || radius <= 0) {
     return "Invalid radius. Please provide a positive number.";
   }
   // Calculate the area
   const area = Math.PI &ast; Math.pow(radius, 2);
   return area;
 }
+
 // Example usage:
 const radius = 5;
 const area = calculateCircleArea(radius);
-console.log(' The area of a circle with radius $ {radius} is: ${area}');
+console.log(`The area of a circle with radius ${radius} is: ${area}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js83">83. Random Color Generator</h2>
@@ -8919,12 +8902,14 @@ function generateRandomColor() {
   const red = Math.floor(Math.random() &ast; 256);
   const green = Math.floor(Math.random() &ast; 256);
   const blue = Math.floor(Math.random() &ast; 256);
+
   // Create the RGB color string
-  const color = ' rgb(${red}, $ {green}, ${blue})';
+  const color = ' rgb(${red}, ${green}, ${blue})';
   return color;
 }
+
 // Example usage:
-const randomColor = generateRandomColorQ;
+const randomColor = generateRandomColor();
 console.log("Random Color:", randomColor);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8937,11 +8922,12 @@ it means the string is empty.</p>
 function isEmptyString(str) {
   return str.length === 0;
 }
+
 // Example usage:
 const emptystring = "";
 const nonEmptyString = "Hello, world!";
 console.log("Is emptystring empty?", isEmptyString(emptyString)); // Outputs: true
-console.logf'Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outputs: false
+console.log("Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outputs: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js85">85. Capitalize the First Letter of a String</h2>
@@ -8958,6 +8944,7 @@ function capitalizeFirstLetter(str) {
   // Capitalize the first letter and concatenate the rest of the string
   return str.charAt(0).toUpperCase() + str.slice(l);
 }
+
 // Example usage:
 const originalString = "hello, world!";
 const capitalizedString = capitalizeFirstLetter(originalString);
@@ -8973,17 +8960,21 @@ the spread operator (<span class="consolas">...</span>) to pass the array elemen
 individual arguments.</p>
 <pre>
 function findMaxElement(arr) {
-// Check if the array is not empty
-if (arr.length === 0) {
-return "Empty array";
-// Use Math.max() with the spread operator to find the maximum element
-const maxElement = Math.max(...arr);
-return maxElement;
+  // Check if the array is not empty
+  if (arr.length === 0) {
+    return "Empty array";
+  }
+
+  // Use Math.max() with the spread operator to find the maximum element
+  const maxElement = Math.max(...arr);
+  return maxElement;
+}
+
 // Example usage:
-const numbers = &lbrack;5, 2, 9,1, 7&rbrack;;
+const numbers = &lbrack;5, 2, 9, 1, 7&rbrack;;
 const maxNumber = findMaxElement(numbers);
 console.log("Array:", numbers);
-console.logC'Maximum Element:", maxNumber);
+console.log("Maximum Element:", maxNumber);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js87">87. Reverse an Array</h2>
@@ -8996,8 +8987,9 @@ function reverseArray(arr) {
   // Use the reverse() method to reverse the array in place
   return arr.reverse();
 }
+
 // Example usage:
-const originalArray = &lbrack;1, 2, 3,4, 5&rbrack;;
+const originalArray = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const reversedArray = reverseArray(originalArray);
 console.log("Original Array:", originalArray);
 console.log("Reversed Array:", reversedArray);
@@ -9015,17 +9007,16 @@ function calculatePowerWithMathPow(base, exponent) {
 }
 // Using the exponentiation operator (&ast;&ast;)
 function calculatePowerWithExponentiationOperator(base, exponent) {
-  return base &ast;&ast; exponent;
+  return base&ast;&ast;exponent;
 }
+
 // Example usage:
 const baseNumber = 2;
 const exponentNumber = 3;
 const resultWithMathPow = calculatePowerWithMathPow(baseNumber, exponentNumber);
-const resultWithExponentiationOperator = calculatePowerWithExponentiationOperator(baseNumber,
-exponentNumber);
-console.log(' $ {baseNumber} to the power of $ {exponentNumber} using Math.pow(): $ {resultWithMathPow}');
-console.log('${baseNumber} to the power of $ {exponentNumber} using the exponentiation operator (&ast;&ast;): $
-{resultWithExponentiationOperator}');
+const resultWithExponentiationOperator = calculatePowerWithExponentiationOperator(baseNumber, exponentNumber);
+console.log(`${baseNumber} to the power of ${exponentNumber} using Math.pow(): ${resultWithMathPow}`);
+console.log(`${baseNumber} to the power of ${exponentNumber} using the exponentiation operator (&ast;&ast;): ${resultWithExponentiationOperator}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js89">89. Find the Minimum Element in an Array</h2>
@@ -9044,6 +9035,7 @@ function findMinElement(arr) {
   const minElement = Math.min(...arr);
   return minElement;
 }
+
 // Example usage:
 const numbers = &lbrack;5, 2, 9,1, 7&rbrack;;
 const minNumber = findMinElement(numbers);
@@ -12348,9 +12340,9 @@ function shoppingListProgram() {
     }
     switch (action) {
       case "add":
-        const newltem = prompt("Enter the item you want to add:");
+        const newItem = prompt("Enter the item you want to add:");
         shoppingList.push(newItem);
-        console.log(`${newltem} added to your shopping list.`);
+        console.log(`${newItem} added to your shopping list.`);
         break;
       case "remove":
         if (shoppingList.length === 0) {
@@ -15479,9 +15471,10 @@ console.log(isPowerfulNumber(36)); // Output: false
 <pre>
 const productOfDigits = (num) => 
   &lbrack;...String(num)&rbrack;.reduce((product, digit) => 
-  product &ast; Number(digit), 1);
-console.log(productOfDigits(12345));
-// Output: 120
+    product &ast; Number(digit), 1);
+
+// Example usage
+console.log(productOfDigits(12345)); // Output: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-210">210. Check if a Number is a Practical Number</h2>
@@ -15520,8 +15513,8 @@ console.log(sumOfCubes(5)); // Output: 225
 <pre>
 const isStrangeNumber = (num) => {
   const factors = primeFactors(num);
-  return factors.every((factor) => sumOfDigits(factor) ===
-  sumOfDigits(num));
+  return factors.every((factor) => 
+    sumOfDigits(factor) === sumOfDigits(num));
 };
 
 // Example usage
@@ -15536,8 +15529,8 @@ console.log(isStrangeNumber(20)); // Output: false
 <pre>
 const isTauNumber = (num) => {
   const factors = primeFactors(num);
-  return factors.some((factor) => sumOfDigits(factor) ===
-  sumOfDigits(num));
+  return factors.some((factor) => 
+    sumOfDigits(factor) === sumOfDigits(num));
 };
 
 // Example usage
@@ -15569,10 +15562,11 @@ console.log(randomAlphanumericString(8)); // Output: "Yw83XmLb"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular hexagon using its side length.</p>
 <pre>
-const regularHexagonArea = (sideLength) => (3 &ast; Math.sqrt(3) &ast;
-sideLength &ast;&ast; 2) / 2;
-console.log(regularHexagonArea(5));
-// Output: 64.9519052838329
+const regularHexagonArea = (sideLength) => 
+  (3 &ast; Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 2;
+
+// Example usage
+console.log(regularHexagonArea(5)); // Output: 64.9519052838329
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-216">216. Calculate the Sum of Divisors of a Number</h2>
@@ -15591,8 +15585,8 @@ console.log(sumOfDivisors(12)); // Output: 28
 <p>Check if a given number is a Zeisel number.</p>
 <pre>
 const isZeiselNumber = (num) => {
-const factors = primeFactors(num);
-return factors.every((factor) => isPrime(factor + 1));
+  const factors = primeFactors(num);
+  return factors.every((factor) => isPrime(factor + 1));
 };
 
 // Example usage
@@ -15610,12 +15604,9 @@ const isReversibleNumber = (num) => {
 };
 
 // Example usage
-console.log(isReversibleNumber(36));
-// Output: true
-console.log(isReversibleNumber(45));
-// Output: true
-console.log(isReversibleNumber(10));
-// Output: false
+console.log(isReversibleNumber(36)); // Output: true
+console.log(isReversibleNumber(45)); // Output: true
+console.log(isReversibleNumber(10)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-219">219. Calculate the Circumference of a Circle</h2>
@@ -15633,7 +15624,7 @@ console.log(circleCircumference(5)); // Output: 31.41592653589793
 <p>Find the shortest word in a given string.</p>
 <pre>
 const shortestWord = (str) => str.split(' ').reduce((shortest, word) =>
-(word.length < shortest.length ? word : shortest), ");
+(word.length < shortest.length ? word : shortest), '');
 
 // Example usage
 console.log(shortestWord("This is a test sentence"));  // Output: "a"
@@ -15643,8 +15634,8 @@ console.log(shortestWord("This is a test sentence"));  // Output: "a"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the length of the longest word in a given string.</p>
 <pre>
-const longestWordLength = (str) => Math.max(...str.split(' ').map(word => 
-  word.length));
+const longestWordLength = (str) => 
+  Math.max(...str.split(' ').map(word => word.length));
 
 // Example usage
 console.log(longestWordLength("This is a test sentence")); // Output: 8
@@ -15655,18 +15646,18 @@ console.log(longestWordLength("This is a test sentence")); // Output: 8
 <p>Find the sum of the proper divisors of a given number.</p>
 <pre>
 const sumOfProperDivisors = (num) => sumOfArray(divisors(num)) - num;
-console.log(sumOfProperDivisors(28));
-// Output: 28
-console.log(sumOfProperDivisors(12));
-// Output: 16
+
+// Example usage
+console.log(sumOfProperDivisors(28)); // Output: 28
+console.log(sumOfProperDivisors(12)); // Output: 16
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-223">223. Check if a Number is a Unitary Perfect Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a unitary perfect number.</p>
 <pre>
-const isUnitaryPerfectNumber = (num) => num ===
-sumOfUnitaryDivisors(num);
+const isUnitaryPerfectNumber = (num) => 
+  num === sumOfUnitaryDivisors(num);
 
 // Example usage
 console.log(isUnitaryPerfectNumber(18));  // Output: true
@@ -15678,8 +15669,8 @@ console.log(isUnitaryPerfectNumber(28));  // Output: false
 <p>Calculate the perimeter of a regular polygon using its side length and the
 number of sides.</p>
 <pre>
-const regularPolygonPerimeter = (sideLength, numSides) => sideLength &ast;
-numSides;
+const regularPolygonPerimeter = (sideLength, numSides) => 
+  sideLength &ast; numSides;
 
 // Example usage
 console.log(regularPolygonPerimeter(5, 6)); // Output: 30
@@ -15689,7 +15680,8 @@ console.log(regularPolygonPerimeter(5, 6)); // Output: 30
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of an equilateral triangle using its side length.</p>
 <pre>
-const equilateralTriangleArea = (sideLength) => (Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 4;
+const equilateralTriangleArea = (sideLength) => 
+  (Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 4;
 
 // Example usage
 console.log(equilateralTriangleArea(5)); // Output: 10.825317547305486
@@ -15702,7 +15694,6 @@ console.log(equilateralTriangleArea(5)); // Output: 10.825317547305486
 const isHarshadSmithNumber = (num) => isHarshadNumber(num) &&
 isSmithNumber(num);
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 console.log(isHarshadSmithNumber(22)); // Output: true
 console.log(isHarshadSmithNumber(10)); // Output: false
 </pre>
@@ -15712,18 +15703,18 @@ console.log(isHarshadSmithNumber(10)); // Output: false
 <p>Check if a given number is a perfect power.</p>
 <pre>
 const isPerfectPower = (num) => {
-for (let i = 2; i &ast; i <= num; i++) {
-let power = 2;
-let result = i &ast; i;
-while (result <= num) {
-if (result === num) {
-return true;
-}
-result &ast;= i;
-power++;
-}
-}
-return false;
+  for (let i = 2; i &ast; i <= num; i++) {
+    let power = 2;
+    let result = i * i;
+    while (result <= num) {
+      if (result === num) {
+        return true;
+      }
+      result &ast;= i;
+      power++;
+    }
+  }
+  return false;
 };
 
 // Example usage
@@ -15736,11 +15727,11 @@ console.log(isPerfectPower(25)); // Output: false
 <p>Calculate the sum of digits raised to their own power for a given number and power.</p>
 <pre>
 const sumOfDigitsToPower = (num, power) =>
-sumOfDigitsRaisedToPower(num, power);
-console.log(sumOfDigitsToPower(123, 3));
-// Output: 36
-console.log(sumOfDigitsToPower(4150, 5));
-// Output: 4150
+  sumOfDigitsRaisedToPower(num, power);
+
+// Example usage
+console.log(sumOfDigitsToPower(123, 3)); // Output: 36
+console.log(sumOfDigitsToPower(4150, 5)); // Output: 4150
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-229">229. Check if a Number is a Dudeney Number</h2>
@@ -15782,7 +15773,8 @@ console.log(pyramidVolume(25, 10)); // Output: 83.33333333333333
 const isWedderburnEtheringtonNumber = (num) => {
   const primes = primeFactors(num);
   const factorials = primes.map((prime) => factorial(prime - 1));
-  return factorials.reduce((product, factorial) => product &ast; factorial, 1) === factorial(num);
+  return factorials.reduce((product, factorial) => 
+    product &ast; factorial, 1) === factorial(num);
 };
 
 // Example usage
@@ -15818,7 +15810,7 @@ console.log(isPluperfectNumber(20)); // Output: false
 <pre>
 const regularOctagonArea = (sideLength) => 2 &ast; (1 + Math.sqrt(2)) &ast; sideLength &ast;&ast; 2;
 
-// Example usage
+// Example usage - **different for some reason**
 console.log(regularOctagonArea(5)); // Output: 86.60254037844387
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
