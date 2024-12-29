@@ -12970,6 +12970,7 @@ capitalize("follow for more")
 <h2 id="js-8">8. Find the number of days between two days</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the days between 2 given days using the following snippet.</p>
+
 <pre>
 const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() -
 date2.getTime()) / 86400000)
@@ -12981,68 +12982,71 @@ dayDif(new Date("2020-10-21"), new Date("2021-10-22"))
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can easily clear all cookies stored in a web page by accessing the
 cookie using document.cookie and clearing it.</p>
+
 <pre>
 const clearCookies = document.cookie.split(';').forEach(cookie =>
-document.cookie = cookie.replace(/^ +/, '').replace(/=.&ast;/, `=;expires=${new
-Date(0).toUTCString()};path=/`));
+  document.cookie = cookie.replace(/^ +/, '').replace(/=.&ast;/, `=;expires=${new
+  Date(0).toUTCString()};path=/`));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-10">10. Generate Random Hex</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can generate random hex colors with Math.random and padEnd properties.</p>
+
 <pre>
 const randomHex = () => `#${Math.floor(Math.random() &ast;
 0xffffff).toString(16).padEnd(6, "0")}`;
-console.log(randomHex());
-// Result: #92b008
+console.log(randomHex()); // Result: #92b008
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-11">11. Get Query Params from URL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can easily retrieve query params from a url either by passing window.location or the 
 raw URL goole.com?search=easy&page=3</p>
+
 <pre>
 const getParameters = (URL) => {
-URL = JSON.parse('{"' + decodeURI(URL.split("?")&lbrack;1&rbrack;).replace(/"/g,
-'\\"').replace(/&/g, '","').replace(/=/g, '":"') +'"}');
-return JSON.stringify(URL);
+  URL = JSON.parse('{"' + decodeURI(URL.split("?")&lbrack;1&rbrack;).replace(/"/g,
+  '\\"').replace(/&/g, '","').replace(/=/g, '":"') +'"}');
+  return JSON.stringify(URL);
 };
-getParameters(window.location)
-// Result: { search : "easy", page : 3 }
+
+getParameters(window.location) // Result: { search : "easy", page : 3 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-12">12. Log Time from Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We can log time, in the format hour::minutes::seconds from a given date.</p>
+
 <pre>
 const timeFromDate = date => date.toTimeString().slice(0, 8);
-console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0)));
-// Result: "17:30:00"
+console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0))); // Result: "17:30:00"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-13">13. Check if a number is even or odd</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A simple JavaScript function named "isEven" determines if a number is even or odd. It 
 takes a "num" as input and returns true if even, false if odd.</p>
+
 <pre>
 const isEven = num => num % 2 === 0;
-console.log(isEven(2));
-// Result: True
+console.log(isEven(2)); // Result: True
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-14">14. Find Average of Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the average between multiple numbers using reduce method.</p>
+
 <pre>
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
-average(1, 2, 3, 4);
-// Result: 2.5
+average(1, 2, 3, 4); // Result: 2.5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-15">15. Scroll to Top</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can use window.scrollTo(0, 0) method to automatic scroll to top. Set both x and 
 y as 0.</p>
+
 <pre>
 const goToTop = () => window.scrollTo(0, 0);
 goToTop();
@@ -13051,24 +13055,25 @@ goToTop();
 <h2 id="js-16">16. Reverse a string</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can easily reverse a string using split, reverse and join methods.</p>
+
 <pre>
 const reverse = str => str.split('').reverse().join('');
-reverse('hello world');
-// Result: 'dlrow olleh'
+reverse('hello world'); // Result: 'dlrow olleh'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-17">17. Check if array is empty</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can check if an array if empty with this snippet.</p>
+
 <pre>
 const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
-isNotEmpty(&lbrack;1, 2, 3&rbrack;);
-// Result: true
+isNotEmpty(&lbrack;1, 2, 3&rbrack;); // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-18">18. Get Selected Text</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the text the user has select using inbuilt getSelection property.</p>
+
 <pre>
 const getSelectedText = () => window.getSelection().toString();
 getSelectedText();
@@ -13077,15 +13082,16 @@ getSelectedText();
 <h2 id="js-19">19. Shuffle an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Shuffling an array is super easy with sort and random methods.</p>
+
 <pre>
 const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
-console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;));
-// Result: &lbrack; 1, 4, 3, 2 &rbrack;
+console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;)); // Result: &lbrack; 1, 4, 3, 2 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-20">20. Detect Dark Mode</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a user's device is in dark mode with the following code.</p>
+
 <pre>
 const isDarkMode = window.matchMedia &&
 window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -13095,76 +13101,77 @@ console.log(isDarkMode) // Result: True or False
 <h2 id="js-21">21. Remove Duplicated from Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can easily remove duplicates with Set in JavaScript. Its a life saver.</p>
+
 <pre>
 const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
-console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));
-// Result: &lbrack; 1, 2, 3, 4, 5, 6 &rbrack;
+console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Result: &lbrack; 1, 2, 3, 4, 5, 6 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-22">22. Get the Length of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>getLength efficiently calculates the length of a given string using .length property.</p>
+
 <pre>
 const getLength = (str) => str.length;
-getLength("Hello, world!");
-// Result: 13
+getLength("Hello, world!"); // Result: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-23">23. Calculate the Area of a Circle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a circle given its radius.</p>
+
 <pre>
 const calculateCircleArea = (radius) => Math.PI &ast; Math.pow(radius, 2);
-calculateCircleArea(5);
-// Result: 78.53981633974483
+calculateCircleArea(5); // Result: 78.53981633974483
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-24">24. Check if a Number is Prime</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Determine if a given number is a prime number.</p>
+
 <pre>
 const isPrime = (num) => {
-if (num <= 1) return false;
-for (let i = 2; i <= Math.sqrt(num); i++) {
-if (num % i === 0) return false;
-}
-return true;
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
 };
-isPrime(13);
-// Result: true
+
+isPrime(13); // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-25">25. Count Occurrences of a Character in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Count the occurrences of a specific character in a given string.</p>
+
 <pre>
 const countOccurrences = (str, char) => str.split(char).length - 1;
-countOccurrences("banana", "a");
-// Result: 3
+countOccurrences("banana", "a"); // Result: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-26">26. Remove Leading and Trailing Whitespaces</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Remove leading and trailing whitespaces from a given string.</p>
+
 <pre>
 const removeWhitespaces = (str) => str.trim();
-removeWhitespaces(" Hello, world! ");
-// Result: "Hello, world!"
+removeWhitespaces(" Hello, world! "); // Result: "Hello, world!"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-27">27. Generate a Random Number within a Range</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random integer within a specified range.</p>
+
 <pre>
-const randomInRange = (min, max) => Math.floor(Math.random() &ast; (max -
-min + 1)) + min;
-randomInRange(1, 10);
-// Result: Random number between 1 and 10 (inclusive)
+const randomInRange = (min, max) => Math.floor(Math.random() &ast; (max - min + 1)) + min;
+randomInRange(1, 10); // Result: Random number between 1 and 10 (inclusive)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-28">28. Convert Seconds to HH:MM:SS Format</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given number of seconds into the "hours:minutes:seconds" format.</p>
+
 <pre>
 const secondsToHHMMSS = (seconds) => {
 const pad = (num) => String(num).padStart(2, '0');
@@ -13179,54 +13186,56 @@ secondsToHHMMSS(3660); // Result: "01:01:00"
 <h2 id="js-29">29. Get the Last Element of an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Retrieve the last element of a given array.</p>
+
 <pre>
 const getLastElement = (arr) => arr&lbrack;arr.length - 1&rbrack;;
-getLastElement(&lbrack;1, 2, 3, 4&rbrack;);
-// Result: 4
+getLastElement(&lbrack;1, 2, 3, 4&rbrack;); // Result: 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-30">30. Sort an Array of Numbers in Ascending Order</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Sort a given array of numbers in ascending order.</p>
+
 <pre>
 const sortAscending = (arr) => arr.slice().sort((a, b) => a - b);
-sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;);
-// Result: &lbrack;1, 1, 2, 3, 3, 4, 5, 5, 6, 9&rbrack;
+sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;); // Result: &lbrack;1, 1, 2, 3, 3, 4, 5, 5, 6, 9&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-31">31. Check if a String is Palindrome</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Determine if a given string is a palindrome.</p>
+
 <pre>
 const isPalindrome = (str) => str === str.split('').reverse().join('');
-isPalindrome("level");
-// Result: true
+isPalindrome("level"); // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-32">32. Calculate Factorial of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the factorial of a given number.</p>
+
 <pre>
 const factorial = (num) => {
-if (num === 0 || num === 1) return 1;
-return num &ast; factorial(num - 1);
+  if (num === 0 || num === 1) return 1;
+  return num &ast; factorial(num - 1);
 };
-factorial(5);
-// Result: 120
+
+factorial(5); // Result: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-33">33. Sum all Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of all numbers in a given array.</p>
+
 <pre>
 const sumArray = (arr) => arr.reduce((acc, val) => acc + val, 0);
-sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;);
-// Result: 15
+sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;); // Result: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-34">34. Find the Maximum Value in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the maximum value in a given array of numbers.</p>
+
 <pre>
 const findMax = (arr) => Math.max(...arr);
 
@@ -13237,6 +13246,7 @@ findMax(&lbrack;10, 5, 8, 20, 3&rbrack;); // Result: 20
 <h2 id="js-35">35. Get the Current Date in DD/MM/YYYY Format</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the current date in the "DD/MM/YYYY" format.</p>
+
 <pre>
 const getCurrentDate = () => {
   const date = new Date();
@@ -13253,6 +13263,7 @@ getCurrentDate(); // Result: "23/12/2024"
 <h2 id="js-36">36. Calculate the Power of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the result of raising a given base to a specified exponent.</p>
+
 <pre>
 const power = (base, exponent) => Math.pow(base, exponent);
 
@@ -13263,6 +13274,7 @@ power(2, 5); // Result: 32
 <h2 id="js-37">37. Convert String to Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given string to a numeric value (float or integer).</p>
+
 <pre>
 const stringToNumber = (str) => parseFloat(str);
 
@@ -13273,6 +13285,7 @@ stringToNumber("3.14"); // Result: 3.14
 <h2 id="js-38">38. Find the First N Fibonacci Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate the first N Fibonacci numbers.</p>
+
 <pre>
 const fibonacci = (n) => {
   const result = &lbrack;0, 1&rbrack;;
@@ -13289,6 +13302,7 @@ fibonacci(8); // Result: &lbrack;0, 1, 1, 2, 3, 5, 8, 13&rbrack;
 <h2 id="js-39">39. Count the Number of Words in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Count the number of words in a given string.</p>
+
 <pre>
 const countWords = (str) => str.trim().split(/\s+/).length;
 
@@ -13299,6 +13313,7 @@ console.log(countWords("Hello world, how are you?")); // Output: 5
 <h2 id="js-40">40. Reverse an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Reverse the elements of a given array.</p>
+
 <pre>
 const reverseArray = (arr) => arr.slice().reverse();
 
@@ -13309,6 +13324,7 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: &lbrack;5, 
 <h2 id="js-41">41. Get the Current Year</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the current year.</p>
+
 <pre>
 const currentYear = () => new Date().getFullYear();
 
@@ -13319,6 +13335,7 @@ console.log(currentYear()); // Output: 2023 (depending on the current year)
 <h2 id="js-42">42. Generate a Random Number between 1 and 10</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random integer between 1 and 10 (inclusive).</p>
+
 <pre>
 const random1To10 = () => Math.floor(Math.random() &ast; 10) + 1;
 
@@ -13329,6 +13346,7 @@ console.log(random1To10()); // Output: Random number between 1 and 10 (inclusive
 <h2 id="js-43">43. Check if a String is Empty</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is empty (contains no characters).</p>
+
 <pre>
 const isEmptyString = (str) => str.trim().length === 0;
 
@@ -13340,6 +13358,7 @@ console.log(isEmptyString("Hello, world!")); // Output: false
 <h2 id="js-44">44. Check if an Object has a Specific Property</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if an object contains a specific property.</p>
+
 <pre>
 const hasProperty = (obj, prop) => prop in obj;
 
@@ -13352,6 +13371,7 @@ console.log(hasProperty(person, "gender")); // Output: false
 <h2 id="js-45">45. Calculate the Average of Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the average of numbers in a given array.</p>
+
 <pre>
 const average = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
 
@@ -13362,6 +13382,7 @@ console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 <h2 id="js-46">46. Check if a Number is a Multiple of 5</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a multiple of 5.</p>
+
 <pre>
 const isMultipleOf5 = (num) => num % 5 === 0;
 
@@ -13373,6 +13394,7 @@ console.log(isMultipleOf5(7));  // Output: false
 <h2 id="js-47">47. Convert Minutes to Seconds</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert minutes to seconds.</p>
+
 <pre>
 const minsToSecs = (mins) => mins &ast; 60;
 
@@ -13383,6 +13405,7 @@ console.log(minsToSecs(5)); // Output: 300
 <h2 id="js-48">48. Find the Maximum Value in an Array of Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the maximum value of a specific property in an array of objects.</p>
+
 <pre>
 const findMaxValue = (arr, key) => Math.max(...arr.map(item =>
   item&lbrack;key&rbrack;));
@@ -13400,6 +13423,7 @@ console.log(findMaxValue(
 <h2 id="js-49">49. Check if a String starts with a specific character</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string starts with a specific character.</p>
+
 <pre>
 const startsWithChar = (str, char) => str.startsWith(char);
 
@@ -13411,6 +13435,7 @@ console.log(startsWithChar("Hello, world!", "h")); // Output: false
 <h2 id="js-50">50. Convert a String to Title Case</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given string to title case (capitalize the first letter of each word).</p>
+
 <pre>
 const toTitleCase = (str) => str.replace(/\b\w/g, match =>
   match.toUpperCase());
@@ -13422,6 +13447,7 @@ console.log(toTitleCase("hello world")); // Output: "Hello World"
 <h2 id="js-51">51. Check if an Array contains a specific value</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given array contains a specific value.</p>
+
 <pre>
 const containsValue = (arr, value) => arr.includes(value);
 
@@ -13433,6 +13459,7 @@ console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6)); // Output: false
 <h2 id="js-52">52. Convert an Array to a Comma-separated String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given array to a comma-separated string.</p>
+
 <pre>
 const arrayToCSV = (arr) => arr.join(', ');
 
@@ -13443,6 +13470,7 @@ console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: "1, 2, 3, 4, 
 <h2 id="js-53">53. Check if a Year is a Leap Year</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given year is a leap year.</p>
+
 <pre>
 const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) ||
 (year % 400 === 0);
@@ -13455,6 +13483,7 @@ console.log(isLeapYear(2023)); // Output: false
 <h2 id="js-54">54. Find the Index of an Element in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the index of a specific element in a given array.</p>
+
 <pre>
 const findIndex = (arr, element) => arr.indexOf(element);
 
@@ -13466,6 +13495,7 @@ console.log(findIndex(fruits, "orange")); // Output: 2
 <h2 id="js-55">55. Convert Minutes to Hours and Minutes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given number of minutes to hours and remaining minutes.</p>
+
 <pre>
 const minsToHoursAndMins = (mins) => {
   const hours = Math.floor(mins / 60);
@@ -13480,6 +13510,7 @@ console.log(minsToHoursAndMins(150)); // Output: "2 hours and 30 minutes"
 <h2 id="js-56">56. Check if an Array is Sorted in Ascending Order</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given array is sorted in ascending order.</p>
+
 <pre>
 const isSortedAscending = (arr) => arr.every((el, i) => i === 0 || el >= arr&lbrack;i - 1&rbrack;);
 
@@ -13491,6 +13522,7 @@ console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;)); // Output: false
 <h2 id="js-57">57. Remove a Specific Element from an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Remove a specific element from a given array.</p>
+
 <pre>
 const removeElement = (arr, element) => arr.filter(el => el !== element);
 
@@ -13501,6 +13533,7 @@ console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: &lbrack
 <h2 id="js-58">58. Truncate a String to a Given Length</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Truncate a given string to a specified maximum length.</p>
+
 <pre>
 const truncateString = (str, maxLength) => str.length > maxLength ?
 str.slice(0, maxLength) + '...' : str;
@@ -13512,6 +13545,7 @@ console.log(truncateString("Hello, world!", 5)); // Output: "Hello..."
 <h2 id="js-59">59. Calculate the Exponentiation of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the exponentiation of a given base raised to a specified exponent.</p>
+
 <pre>
 const exponentiate = (base, exponent) => Math.pow(base, exponent);
 console.log(exponentiate(2, 3));
@@ -13521,6 +13555,7 @@ console.log(exponentiate(2, 3));
 <h2 id="js-60">60. Find the Difference between Two Dates in Days</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the difference between two dates in days.</p>
+
 <pre>
 const dateDifferenceInDays = (date1, date2) => Math.abs(Math.floor((date2
 - date1) / (1000 &ast; 60 &ast; 60 &ast; 24)));
@@ -13532,6 +13567,7 @@ console.log(dateDifferenceInDays(startDate, endDate)); // Output: 9
 <h2 id="js-61">61. Check if a String is a Valid Email Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a valid email address.</p>
+
 <pre>
 const isValidEmail = (email) => /^&lbrack;^\s@&rbrack;+@&lbrack;^\s@&rbrack;+\.&lbrack;^\s@&rbrack;+$/.test(email);
 
@@ -13543,6 +13579,7 @@ console.log(isValidEmail("invalid-email"));    // Output: false
 <h2 id="js-62">62. Convert Seconds to Minutes and Seconds</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given number of seconds to minutes and remaining seconds.</p>
+
 <pre>
 const secsToMinsAndSecs = (seconds) => {
 const mins = Math.floor(seconds / 60);
@@ -13558,6 +13595,7 @@ console.log(secsToMinsAndSecs(120));
 <h2 id="js-63">63. Check if an Object is a Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given object is a function.</p>
+
 <pre>
 const isFunction = (obj) => typeof obj === 'function';
 console.log(isFunction(() => {}));
@@ -13569,6 +13607,7 @@ console.log(isFunction({}));
 <h2 id="js-64">64. Convert Binary Number to Decimal</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given binary number to its decimal representation.</p>
+
 <pre>
 const binaryToDecimal = (binary) => parseInt(binary, 2);
 console.log(binaryToDecimal("1101")); // Output: 13
@@ -13577,6 +13616,7 @@ console.log(binaryToDecimal("1101")); // Output: 13
 <h2 id="js-65">65. Check if an Array contains only Unique Values</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given array contains only unique values.</p>
+
 <pre>
 const hasUniqueValues = (arr) => new Set(arr).size === arr.length;
 console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 5&rbrack;));
@@ -13588,30 +13628,32 @@ console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 4&rbrack;));
 <h2 id="js-66">66. Get the Day of the Week from a Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the day of the week from a given date.</p>
+
 <pre>
 const getDayOfWeek = (date) => {
 const daysOfWeek = &lbrack;"Sunday", "Monday", "Tuesday", "Wednesday",
 "Thursday", "Friday", "Saturday"&rbrack;;
 return daysOfWeek&lbrack;date.getDay()&rbrack;;
 };
-console.log(getDayOfWeek(new Date("2023-08-02")));
-// Output: "Wednesday"
+
+console.log(getDayOfWeek(new Date("2023-08-02"))); // Output: "Wednesday"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-67">67. Check if a Number is a Power of Two</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a power of two.</p>
+
 <pre>
 const isPowerOfTwo = (num) => (num & (num - 1)) === 0;
-console.log(isPowerOfTwo(16));
-// Output: true
-console.log(isPowerOfTwo(5));
-// Output: false
+
+console.log(isPowerOfTwo(16)); // Output: true
+console.log(isPowerOfTwo(5)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-68">68. Convert Object to Query Parameters String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given object to a string of query parameters.</p>
+
 <pre>
 const objectToQueryParams = (obj) => Object.entries(obj).map((&lbrack;key,
 value&rbrack;) =>
@@ -13624,57 +13666,59 @@ console.log(objectToQueryParams({ search: "hello", page: 1 }));
 <h2 id="js-69">69. Check if an Array contains an Even Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given array contains at least one even number.</p>
+
 <pre>
 const hasEvenNumber = (arr) => arr.some(num => num % 2 === 0);
-console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 8&rbrack;));
-// Output: true
-console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 9&rbrack;));
-// Output: false
+
+console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 8&rbrack;)); // Output: true
+console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 9&rbrack;)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-70">70. Get the Month Name from a Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the name of the month from a given date.</p>
+
 <pre>
 const getMonthName = (date) => {
-const months = &lbrack;"January", "February", "March", "April", "May", "June",
-"July", "August", "September", "October", "November", "December"&rbrack;;
-return months&lbrack;date.getMonth()&rbrack;;
+  const months = &lbrack;"January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"&rbrack;;
+  return months&lbrack;date.getMonth()&rbrack;;
 };
-console.log(getMonthName(new Date("2023-08-02")));
-// Output: "August"
+
+console.log(getMonthName(new Date("2023-08-02"))); // Output: "August"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-71">71. Check if a String is a Palindrome (case-insensitive)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a palindrome, considering it case-insensitive.</p>
+
 <pre>
 const isPalindromeCaseInsensitive = (str) => str.toLowerCase() ===
 str.toLowerCase().split('').reverse().join('');
-console.log(isPalindromeCaseInsensitive("LeVel"));
-// Output: true
-console.log(isPalindromeCaseInsensitive("Hello"));
-// Output: false
+
+console.log(isPalindromeCaseInsensitive("LeVel")); // Output: true
+console.log(isPalindromeCaseInsensitive("Hello")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-72">72. Convert Feet to Meters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given length in feet to meters.</p>
+
 <pre>
 const feetToMeters = (feet) => feet &ast; 0.3048;
-console.log(feetToMeters(10));
-// Output: 3.048
+
+console.log(feetToMeters(10)); // Output: 3.048
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-73">73. Check if a Number is a Perfect Square</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a perfect square.</p>
+
 <pre>
 const isPerfectSquare = (num) => Math.sqrt(num) % 1 === 0;
-console.log(isPerfectSquare(16));
-// Output: true
-console.log(isPerfectSquare(10));
-// Output: false
+
+console.log(isPerfectSquare(16)); // Output: true
+console.log(isPerfectSquare(10)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-74">74. Check if a String contains only Numbers</h2>
@@ -13690,309 +13734,329 @@ console.log(containsOnlyNumbers("12a34"));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-75">75. Get the Current Month (0-based index)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Get the current month as a 0-based index (0 for January, 1 for February,</p>
-etc.).
+<p>Get the current month as a 0-based index (0 for January, 1 for February, etc.).</p>
+
 <pre>
 const currentMonth = () => new Date().getMonth();
-console.log(currentMonth());
-// Output: Current month (0-based index)
+
+console.log(currentMonth()); // Output: Current month (0-based index)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-76">76. Calculate the Mean of an Array of Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the mean (average) of a given array of numbers.</p>
+
 <pre>
 const mean = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
-console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;));
-// Output: 3
+
+console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-77">77. Check if a Number is a Prime Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a prime number.</p>
+
 <pre>
 const isPrime = (num) => {
-if (num <= 1) return false;
-for (let i = 2; i <= Math.sqrt(num); i++) {
-if (num % i === 0) return false;
-}
-return true;
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
 };
-console.log(isPrime(13));
-// Output: true
-console.log(isPrime(4));
-// Output: false
+
+console.log(isPrime(13)); // Output: true
+console.log(isPrime(4)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-78">78. Get the Last N Elements of an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the last N elements from a given array.</p>
+
 <pre>
 const lastNElements = (arr, n) => arr.slice(-n);
-console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));
-// Output: &lbrack;3, 4, 5&rbrack;
+
+console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: &lbrack;3, 4, 5&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-79">79. Convert Degrees to Radians</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given angle from degrees to radians.</p>
+
 <pre>
 const degToRad = (degrees) => degrees &ast; (Math.PI / 180);
-console.log(degToRad(90));
-// Output: 1.5707963267948966
+
+console.log(degToRad(90)); // Output: 1.5707963267948966
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-80">80. Check if a String is a Valid URL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a valid URL.</p>
+
 <pre>
 const isValidURL = (url) => {
-try {
-new URL(url);
-return true;
-} catch (error) {
-return false;
-}
+  try {
+    new URL(url);
+    return true;
+  } catch (error) {
+    return false;
+  }
 };
-console.log(isValidURL("https://www.example.com"));
-// Output: true
-console.log(isValidURL("invalid-url"));
-// Output: false
+
+console.log(isValidURL("https://www.example.com")); // Output: true
+console.log(isValidURL("invalid-url")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-81">81. Find the Intersection of Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the common elements (intersection) between two arrays.</p>
+
 <pre>
 const intersection = (arr1, arr2) => arr1.filter(val => arr2.includes(val));
-console.log(intersection(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));
-// Output: &lbrack;2, 3&rbrack;
+
+console.log(intersection(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;)); // Output: &lbrack;2, 3&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-82">82. Convert Days to Years, Months, and Days</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given number of days to years, months, and remaining days.</p>
+
 <pre>
 const daysToYearsMonthsDays = (days) => {
-const years = Math.floor(days / 365);
-const remainingDays = days % 365;
-const months = Math.floor(remainingDays / 30);
-const remainingDaysInMonth = remainingDays % 30;
-return `${years} years, ${months} months, and
-${remainingDaysInMonth} days`;
+  const years = Math.floor(days / 365);
+  const remainingDays = days % 365;
+  const months = Math.floor(remainingDays / 30);
+  const remainingDaysInMonth = remainingDays % 30;
+  return `${years} years, ${months} months, and
+  ${remainingDaysInMonth} days`;
 };
-console.log(daysToYearsMonthsDays(1000));
-// Output: "2 years, 8 months, and 20 days
+
+console.log(daysToYearsMonthsDays(1000)); // Output: "2 years, 8 months, and 20 days
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-83">83. Check if an Object is Empty (no own properties)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given object has no own properties (i.e., it is empty).</p>
+
 <pre>
 const isEmptyObject = (obj) => Object.keys(obj).length === 0;
-console.log(isEmptyObject({}));
-// Output: true
-console.log(isEmptyObject({ name: "John", age: 30 }));
-// Output: false
+
+console.log(isEmptyObject({})); // Output: true
+console.log(isEmptyObject({ name: "John", age: 30 })); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-84">84. Calculate the Factorial of a Number (recursive)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the factorial of a given number using a recursive function.</p>
+
 <pre>
 const factorial = (num) => {
 if (num === 0 || num === 1) return 1;
-return num &ast; factorial(num - 1);
+  return num &ast; factorial(num - 1);
 };
-console.log(factorial(5));
-// Output: 120
+
+console.log(factorial(5)); // Output: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-85">85. Remove Whitespace from a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Remove all whitespace characters from a given string.</p>
+
 <pre>
 const removeWhitespace = (str) => str.replace(/\s/g, '');
-console.log(removeWhitespace(" Hello, world! "));
-// Output: "Hello,world!"
+
+console.log(removeWhitespace(" Hello, world! ")); // Output: "Hello,world!"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-86">86. Find the Difference between Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the elements that are present in the first array but not in the second array.</p>
+
 <pre>
 const difference = (arr1, arr2) => arr1.filter(val => !arr2.includes(val));
-console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));
-// Output: &lbrack;1&rbrack;
+
+console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;)); // Output: &lbrack;1&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-87">87. Check if a Number is a Fibonacci Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Fibonacci number.</p>
+
 <pre>
 const isFibonacci = (num) => isPerfectSquare(5 &ast; num &ast; num + 4) ||
-isPerfectSquare(5 &ast; num &ast; num - 4);
-console.log(isFibonacci(5));
-// Output: true
-console.log(isFibonacci(6));
-// Output: false
+  isPerfectSquare(5 &ast; num &ast; num - 4);
+
+console.log(isFibonacci(5)); // Output: true
+console.log(isFibonacci(6)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-88">88. Convert Hours to Minutes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert a given number of hours to minutes.</p>
+
 <pre>
 const hoursToMinutes = (hours) => hours &ast; 60;
-console.log(hoursToMinutes(2));
-// Output: 120
+
+console.log(hoursToMinutes(2)); // Output: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-89">89. Get the First N Elements of an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the first N elements from the beginning of an array.</p>
+
 <pre>
 const firstNElements = (arr, n) => arr.slice(0, n);
-console.log(firstNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));
-// Output: &lbrack;1, 2, 3&rbrack;
+
+console.log(firstNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: &lbrack;1, 2, 3&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-90">90. Check if a Number is Odd</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the first N elements from the beginning of an array.</p>
+
 <pre>
 const isOdd = (num) => num % 2 !== 0;
-console.log(isOdd(5));
-// Output: true
-console.log(isOdd(4));
-// Output: false
+
+console.log(isOdd(5)); // Output: true
+console.log(isOdd(4)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-91">91. Calculate the Standard Deviation of an Array of Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the standard deviation of an array of numbers.</p>
+
 <pre>
 const standardDeviation = (arr) => {
-const avg = mean(arr);
-const squaredDiffs = arr.map(num => Math.pow(num - avg, 2));
-const variance = mean(squaredDiffs);
-return Math.sqrt(variance);
+  const avg = mean(arr);
+  const squaredDiffs = arr.map(num => Math.pow(num - avg, 2));
+  const variance = mean(squaredDiffs);
+  return Math.sqrt(variance);
 };
-console.log(standardDeviation(&lbrack;1, 2, 3, 4, 5&rbrack;));
-// Output: 1.4142135623730951
+
+console.log(standardDeviation(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 1.4142135623730951
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-92">92. Check if a String ends with a specific Substring</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a string ends with a specific substring.</p>
+
 <pre>
 const endsWithSubstring = (str, subStr) => str.endsWith(subStr);
-console.log(endsWithSubstring("Hello, world!", "world!"));
-// Output: true
-console.log(endsWithSubstring("Hello, world!", "Hello"));
-// Output: false
+
+console.log(endsWithSubstring("Hello, world!", "world!")); // Output: true
+console.log(endsWithSubstring("Hello, world!", "Hello")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-93">93. Calculate the Sum of Squares of an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of squares of an array of numbers.</p>
+
 <pre>
 const sumOfSquares = (arr) => arr.reduce((acc, val) => acc + val &ast;&ast; 2, 0);
-console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));
-// Output: 55
+
+console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-94">94. Check if a String is a Palindrome (case-sensitive)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a string is a palindrome, considering case sensitivity.</p>
+
 <pre>
 const isPalindromeCaseSensitive = (str) => str ===
-str.split('').reverse().join('');
-console.log(isPalindromeCaseSensitive("level"));
-// Output: true
-console.log(isPalindromeCaseSensitive("Hello"));
-// Output: false
+  str.split('').reverse().join('');
+
+console.log(isPalindromeCaseSensitive("level")); // Output: true
+console.log(isPalindromeCaseSensitive("Hello")); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-95">95. Generate an Array of Random Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate an array of random numbers.</p>
+
 <pre>
 const randomArray = (length) => Array.from({ length }, () =>
-Math.floor(Math.random() &ast; 100));
-console.log(randomArray(5));
-// Output: Array with 5 random numbers, e.g., &lbrack;23, 45, 67, 11, 88&rbrack;
+  Math.floor(Math.random() &ast; 100));
+
+console.log(randomArray(5)); // Output: Array with 5 random numbers, e.g., &lbrack;23, 45, 67, 11, 88&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-96">96. Calculate the Greatest Common Divisor (GCD) of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the Greatest Common Divisor (GCD) of two numbers.</p>
+
 <pre>
 const gcd = (num1, num2) => {
-while (num2 !== 0) {
-let temp = num2;
-num2 = num1 % num2;
-num1 = temp;
-}
-return num1;
+  while (num2 !== 0) {
+    let temp = num2;
+    num2 = num1 % num2;
+    num1 = temp;
+  }
+  return num1;
 };
+
 console.log(gcd(48, 18)); // Output: 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-97">97. Convert Seconds to Hours, Minutes, and Seconds</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Convert seconds to hours, minutes, and seconds.</p>
+
 <pre>
 const secsToHoursMinsSecs = (seconds) => {
-const hours = Math.floor(seconds / 3600);
-const remainingSeconds = seconds % 3600;
-const minutes = Math.floor(remainingSeconds / 60);
-const remainingSecs = remainingSeconds % 60;
-return `${hours} hours, ${minutes} minutes, and ${remainingSecs}
-seconds`;
+  const hours = Math.floor(seconds / 3600);
+  const remainingSeconds = seconds % 3600;
+  const minutes = Math.floor(remainingSeconds / 60);
+  const remainingSecs = remainingSeconds % 60;
+  return `${hours} hours, ${minutes} minutes, and ${remainingSecs} seconds`;
 };
-console.log(secsToHoursMinsSecs(7320));
-// Output: "2 hours, 2 minutes, and 0 seconds"
+
+console.log(secsToHoursMinsSecs(7320)); // Output: "2 hours, 2 minutes, and 0 seconds"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-98">98. Calculate the LCM of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the Least Common Multiple (LCM) of two numbers.</p>
+
 <pre>
 const lcm = (num1, num2) => (num1 &ast; num2) / gcd(num1, num2);
+
 console.log(lcm(6, 8)); // Output: 24
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-98">99. Find the Longest Word in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the longest word in a string.</p>
+
 <pre>
 const findLongestWord = (str) => str.split(' ').reduce((longest, word) =>
-word.length > longest.length ? word : longest, '');
-console.log(findLongestWord("Hello, how are you doing?"));
-// Output: "doing?"
+  word.length > longest.length ? word : longest, '');
+
+console.log(findLongestWord("Hello, how are you doing?")); // Output: "doing?"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-100">100. Count the Occurrences of a Character in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Count the occurrences of a character in a string.</p>
+
 <pre>
 const countOccurrences = (str, char) => str.split(char).length - 1;
-console.log(countOccurrences("hello world", "l"));
-// Output: 3
+
+console.log(countOccurrences("hello world", "l")); // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-101">101. Find the Median of an Array of Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the median of an array of numbers.</p>
+
 <pre>
 const median = (arr) => {
-const sorted = arr.sort((a, b) => a - b);
-const mid = Math.floor(sorted.length / 2);
-return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
-sorted&lbrack;mid&rbrack;;
+  const sorted = arr.sort((a, b) => a - b);
+  const mid = Math.floor(sorted.length / 2);
+  return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
+  sorted&lbrack;mid&rbrack;;
 };
-console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));
-// Output: 5
+
+console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;)); // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-102">102. Remove Duplicates from a String</h2>
@@ -14001,8 +14065,8 @@ console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));
 <pre>
 const removeDuplicatesFromString = (str) => &lbrack;...new
 Set(str.split(''))&rbrack;.join('');
-console.log(removeDuplicatesFromString("hello"));
-// Output: "helo"
+
+console.log(removeDuplicatesFromString("hello")); // Output: "helo"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-103">103. Find the Mode of an Array of Numbers</h2>
@@ -14010,16 +14074,17 @@ console.log(removeDuplicatesFromString("hello"));
 <p>Calculate the mode, the most frequently occurring number(s), from an array
 of numbers. It identifies the number(s) with the highest frequency and
 returns them in an array.</p>
+
 <pre>
 const mode = (arr) => {
-const frequency = {};
-arr.forEach(num => frequency&lbrack;num&rbrack; = (frequency&lbrack;num&rbrack; || 0) + 1);
-const maxFrequency = Math.max(...Object.values(frequency));
-return Object.keys(frequency).filter(num => frequency&lbrack;num&rbrack; ===
-maxFrequency).map(Number);
+  const frequency = {};
+  arr.forEach(num => frequency&lbrack;num&rbrack; = (frequency&lbrack;num&rbrack; || 0) + 1);
+  const maxFrequency = Math.max(...Object.values(frequency));
+  return Object.keys(frequency).filter(num => frequency&lbrack;num&rbrack; ===
+    maxFrequency).map(Number);
 };
-console.log(mode(&lbrack;1, 2, 2, 3, 3, 3, 4, 4, 4, 4&rbrack;));
-// Output: &lbrack;4&rbrack;
+
+console.log(mode(&lbrack;1, 2, 2, 3, 3, 3, 4, 4, 4, 4&rbrack;)); // Output: &lbrack;4&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-104">104. Check if a Number is a Harshad Number (Niven Number)</h2>
@@ -14028,13 +14093,14 @@ console.log(mode(&lbrack;1, 2, 2, 3, 3, 3, 4, 4, 4, 4&rbrack;));
 by the sum of its digits. The isHarshadNumber function determines whether
 a given number meets this criterion. It calculates the sum of the digits of the
 number, and then checks if the number itself is divisible by this sum.</p>
+
 <pre>
-const isHarshadNumber = (num) => num % &lbrack;...String(num)&rbrack;.reduce((sum,
-digit) => sum + Number(digit), 0) === 0;
-console.log(isHarshadNumber(18));
-// Output: true
-console.log(isHarshadNumber(21));
-// Output: false
+const isHarshadNumber = (num) => 
+  num % &lbrack;...String(num)&rbrack;.reduce((sum, digit) => 
+  sum + Number(digit), 0) === 0;
+
+console.log(isHarshadNumber(18)); // Output: true
+console.log(isHarshadNumber(21)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-105">105. Convert Binary Number to Decimal (without parseInt)</h2>
@@ -14044,12 +14110,12 @@ decimal representation, all without utilizing the parseInt function. The
 process involves splitting the binary number's digits, reversing them, and
 using a reduce operation to calculate the decimal value by considering each
 digit's position and value.</p>
+
 <pre>
 const binaryToDecimalWithoutParseInt = (binary) =>
-binary.split('').reverse().reduce((dec, bit, index) => dec + bit &ast; (2 &ast;&ast; index),
-0);
-console.log(binaryToDecimalWithoutParseInt("1101"));
-// Output: 13
+binary.split('').reverse().reduce((dec, bit, index) => dec + bit &ast; (2 &ast;&ast; index), 0);
+
+console.log(binaryToDecimalWithoutParseInt("1101")); // Output: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-106">106. Check if an Array is Sorted in Descending Order</h2>
@@ -14057,14 +14123,14 @@ console.log(binaryToDecimalWithoutParseInt("1101"));
 <p>This function determines if an array is sorted in descending order. It iterates
 through the array and verifies that each element is either greater than or
 equal to the preceding element, ensuring a descending order.</p>
+
 <pre>
 const isSortedDescending = (arr) => arr.every((el, i) => 
   i === 0 || el <= arr&lbrack;
   i - 1&rbrack;);
-  console.log(isSortedDescending(&lbrack;5, 4, 3, 2, 1&rbrack;));
-// Output: true
-console.log(isSortedDescending(&lbrack;1, 5, 3, 8, 2&rbrack;));
-// Output: false
+
+console.log(isSortedDescending(&lbrack;5, 4, 3, 2, 1&rbrack;)); // Output: true
+console.log(isSortedDescending(&lbrack;1, 5, 3, 8, 2&rbrack;)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-107">107. Find the Average of Even Numbers in an Array</h2>
@@ -14073,13 +14139,14 @@ console.log(isSortedDescending(&lbrack;1, 5, 3, 8, 2&rbrack;));
 first filters out the even numbers from the array, then calculates the sum of
 these even numbers, and finally divides the sum by the count of even
 numbers to obtain the average.</p>
+
 <pre>
 const averageOfEvenNumbers = (arr) => {
   const evenNumbers = arr.filter(num => num % 2 === 0);
   return evenNumbers.reduce((sum, num) => sum + num, 0) / evenNumbers.length;
 };
-console.log(averageOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;));
-// Output: 6
+
+console.log(averageOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;)); // Output: 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-108">108. Capitalize the First Letter of Each Word in a String</h2>
@@ -14088,11 +14155,13 @@ console.log(averageOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;))
 within it. It employs a regular expression to locate the first character of each
 word (defined as a word boundary followed by a letter), and then replaces it
 with its uppercase version.</p>
+
 <pre>
-const capitalizeWords = (str) => str.replace(/\b\w/g, char =>
-char.toUpperCase());
-console.log(capitalizeWords("hello world"));
-// Output: "Hello World"
+const capitalizeWords = (str) => 
+  str.replace(/\b\w/g, char =>
+  char.toUpperCase());
+
+console.log(capitalizeWords("hello world")); // Output: "Hello World"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-109">109. Check if an Array is a Subset of Another Array</h2>
@@ -14100,12 +14169,12 @@ console.log(capitalizeWords("hello world"));
 <p>The isSubset function determines if one array is a subset of another array. It
 achieves this by verifying that every element in the first array (arr1) is
 present in the second array (arr2).</p>
+
 <pre>
 const isSubset = (arr1, arr2) => arr1.every(item => arr2.includes(item));
-console.log(isSubset(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4, 5, 6&rbrack;));
-// Output: false
-console.log(isSubset(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 1, 5, 6&rbrack;));
-// Output: true
+
+console.log(isSubset(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4, 5, 6&rbrack;)); // Output: false
+console.log(isSubset(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 1, 5, 6&rbrack;)); // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-110">110. Find the Minimum and Maximum Numbers in an Array</h2>
@@ -14115,13 +14184,14 @@ within an array. It achieves this by employing the Math.min and Math.max
 functions alongside the spread operator to extract the elements' values from
 the input array. The function returns an object containing both the minimum
 and maximum values.</p>
+
 <pre>
 const minMax = (arr) => ({
   min: Math.min(...arr),
   max: Math.max(...arr)
 });
-console.log(minMax(&lbrack;10, 5, 25, 3, 15&rbrack;));
-// Output: { min: 3, max: 25 }
+
+console.log(minMax(&lbrack;10, 5, 25, 3, 15&rbrack;)); // Output: { min: 3, max: 25 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-111">111. Check if a Number is a Narcissistic Number</h2>
@@ -14130,28 +14200,28 @@ console.log(minMax(&lbrack;10, 5, 25, 3, 15&rbrack;));
 narcissistic number.</p>
 <pre>
 const isNarcissisticNumber = (num) => {
-const digits = &lbrack;...String(num)&rbrack;.map(Number);
-const numDigits = digits.length;
-const sumOfPowers = digits.reduce((sum, digit) => sum +
-Math.pow(digit, numDigits), 0);
-return sumOfPowers === num;
+  const digits = &lbrack;...String(num)&rbrack;.map(Number);
+  const numDigits = digits.length;
+  const sumOfPowers = digits.reduce((sum, digit) => 
+    sum + Math.pow(digit, numDigits), 0);
+  return sumOfPowers === num;
 };
-console.log(isNarcissisticNumber(153));
-// Output: true
-console.log(isNarcissisticNumber(370));
-// Output: true
-console.log(isNarcissisticNumber(123));
-// Output: false
+
+console.log(isNarcissisticNumber(153)); // Output: true
+console.log(isNarcissisticNumber(370)); // Output: true
+console.log(isNarcissisticNumber(123)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-112">112. Remove Null and Undefined Values from an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The removeNullAndUndefined function eliminates null and undefined
-values from an array by utilizing the filter method. It returns a new array
-containing only the non-null and non-undefined elements.</p>
+<p>The removeNullAndUndefined function eliminates null and undefined values from an array 
+by utilizing the filter method. It returns a new array containing only the non-null and 
+non-undefined elements.</p>
+
 <pre>
-const removeNullAndUndefined = (arr) => arr.filter(item => item !== null
-&& item !== undefined);
+const removeNullAndUndefined = (arr) => arr.filter(item => 
+  item !== null && item !== undefined);
+
 console.log(removeNullAndUndefined(&lbrack;1, null, 2, 3, undefined, 4, null&rbrack;));
 // Output: &lbrack;1, 2, 3, 4&rbrack;
 </pre>
@@ -14162,8 +14232,8 @@ console.log(removeNullAndUndefined(&lbrack;1, null, 2, 3, undefined, 4, null&rbr
 where the order of words has been reversed.</p>
 <pre>
 const reverseWords = (str) => str.split(' ').reverse().join(' ');
-console.log(reverseWords("Hello, world!"));
-// Output: "world! Hello,"
+
+console.log(reverseWords("Hello, world!")); // Output: "world! Hello,"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-114">114. Calculate the Sum of Cubes of an Array</h2>
@@ -14172,10 +14242,11 @@ console.log(reverseWords("Hello, world!"));
 an array. It employs the reduce method to iterate through the array,
 accumulating the sum of cubes by raising each value to the power of 3 and
 adding it to the accumulator.</p>
+
 <pre>
 const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val &ast;&ast; 3, 0);
-console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;));
-// Output: 225
+
+console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 225
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-115">115. Shuffle the Characters of a String</h2>
@@ -14184,9 +14255,10 @@ console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;));
 random order. It does so by first splitting the string into an array of
 characters, then using the sort method with a random comparison function.
 Finally, the shuffled characters are rejoined to form a new string.</p>
+
 <pre>
-const shuffleString = (str) => str.split('').sort(() => 0.5 -
-Math.random()).join('');
+const shuffleString = (str) => str.split('').sort(() => 
+  0.5 - Math.random()).join('');
   
 // Example usage
 console.log(shuffleString("hello")); // Output: Randomly shuffled string, e.g., "olelh"
@@ -14197,6 +14269,7 @@ console.log(shuffleString("hello")); // Output: Randomly shuffled string, e.g., 
 <p>The fibonacci function calculates the Nth Fibonacci number using a
 recursive approach. It determines the Fibonacci number by summing the
 previous two Fibonacci numbers until it reaches the base cases of 0 and 1.</p>
+
 <pre>
 const fibonacci = (n) => (n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2));
   
@@ -14210,6 +14283,7 @@ console.log(fibonacci(7)); // Output: 13
 It accomplishes this by splitting the string using a regular expression that
 matches one or more whitespace characters, and then counting the resulting
 array's length.</p>
+
 <pre>
 const countWords = (str) => str.split(/\s+/).length;
   
@@ -14220,6 +14294,7 @@ console.log(countWords("Hello, how are you doing?")); // Output: 5
 <h2 id="js-118">118. Check if a Number is a Triangular Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isTriangularNumber function determines whether a given number is a triangular number.</p>
+
 <pre>
 const isTriangularNumber = (num) => {
   let n = 0;
@@ -14241,6 +14316,7 @@ console.log(isTriangularNumber(7)); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The rectanglePerimeter function calculates the perimeter of a rectangle by
 summing twice the width and twice the height of the rectangle.</p>
+
 <pre>
 const rectanglePerimeter = (width, height) => 2 &ast; (width + height);
   
@@ -14253,6 +14329,7 @@ console.log(rectanglePerimeter(5, 10)); // Output: 30
 <p>The longestCommonPrefix function finds the longest common prefix
 among an array of strings. It starts by assuming the first string in the array
 as the initial common prefix.</p>
+
 <pre>
 const longestCommonPrefix = (strs) => {
   if (strs.length === 0) return '';
@@ -14274,6 +14351,7 @@ console.log(longestCommonPrefix(&lbrack;'apple', 'apricot', 'appetizer'&rbrack;)
 <p>The getASCIIValue function retrieves the ASCII value of a given character.
 It employs the charCodeAt method, which returns the ASCII code of the
 character at the specified index (0 in this case).</p>
+
 <pre>
 const getASCIIValue = (char) => char.charCodeAt(0);
   
@@ -14287,6 +14365,7 @@ console.log(getASCIIValue('A')); // Output: 65
 character within a given string. It accomplishes this by iterating through the
 string, building a character count object, and then using the find method to
 locate the first character with a count of 1.</p>
+
 <pre>
 const firstNonRepeatedChar = (str) => {
   const charCount = {};
@@ -14306,6 +14385,7 @@ console.log(firstNonRepeatedChar('abacabad')); // Output: "c"
 <p>The sortByProperty function arranges an array of objects based on a
 specified property's value. It employs the sort method with a custom
 comparison function that compares the property values of two objects.</p>
+
 <pre>
 const sortByProperty = (arr, prop) => arr.sort((a, b) => a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
   
@@ -14323,6 +14403,7 @@ console.log(sortByProperty(people, 'age'));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The exponential function calculates the result of raising a given base to a
 specified exponent using the exponentiation operator (&ast;&ast;).</p>
+
 <pre>
 const exponential = (base, exponent) => base &ast;&ast; exponent;
   
@@ -14335,6 +14416,7 @@ console.log(exponential(2, 3)); // Output: 8
 <p>The isAnagram function determines whether two given strings are anagrams of each 
 other. An anagram is a word or phrase formed by rearranging the letters of another, 
 using all the original letters exactly once.</p>
+
 <pre>
 const isAnagram = (str1, str2) => str1.split('').sort().join('') ===
 str2.split('').sort().join('');
@@ -14346,9 +14428,9 @@ console.log(isAnagram('hello', 'world'));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-126">126. Find the Factors of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The factors function calculates and returns an array of all the factors of a
-given number. Factors are the positive integers that evenly divide the input
-number.</p>
+<p>The factors function calculates and returns an array of all the factors of a given 
+number. Factors are the positive integers that evenly divide the input number.</p>
+
 <pre>
 const factors = (num) => {
 const result = &lbrack;&rbrack;;
@@ -14365,36 +14447,36 @@ console.log(factors(12));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-127">127. Check if a Number is a Neon Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isNeonNumber function determines whether a given number is a neon
-number. A neon number is a number where the sum of the digits of its
-square is equal to the number itself.</p>
+<p>The isNeonNumber function determines whether a given number is a neon number. A neon 
+number is a number where the sum of the digits of its square is equal to the number itself.</p>
+
 <pre>
 const isNeonNumber = (num) => {
-const squared = num &ast;&ast; 2;
-const digitSum = &lbrack;...String(squared)&rbrack;.map(Number).reduce((sum, digit) =>
-sum + digit, 0);
-return squared === digitSum;
+  const squared = num &ast;&ast; 2;
+  const digitSum = &lbrack;...String(squared)&rbrack;.map(Number).reduce((sum, digit) =>
+    sum + digit, 0);
+  return squared === digitSum;
 };
-console.log(isNeonNumber(9));
-// Output: true
-console.log(isNeonNumber(12));
-// Output: false
+
+console.log(isNeonNumber(9)); // Output: true
+console.log(isNeonNumber(12)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-128">128. Find the Power Set of a Set</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The powerSet function generates the power set of a given set, which
-includes all possible subsets of the set, including the empty set and the set
-itself.</p>
+<p>The powerSet function generates the power set of a given set, which includes all 
+possible subsets of the set, including the empty set and the set itself.</p>
+
 <pre>
 const powerSet = (set) => {
-const result = &lbrack;&lbrack;&rbrack;&rbrack;;
-for (const item of set) {
-const subsets = result.map((subset) => &lbrack;...subset, item&rbrack;);
-result.push(...subsets);
-}
-return result;
+  const result = &lbrack;&lbrack;&rbrack;&rbrack;;
+  for (const item of set) {
+    const subsets = result.map((subset) => &lbrack;...subset, item&rbrack;);
+    result.push(...subsets);
+  }
+  return result;
 };
+
 console.log(powerSet(&lbrack;1, 2, 3&rbrack;));
 // Output: &lbrack; &lbrack;&rbrack;, &lbrack;1&rbrack;, &lbrack;2&rbrack;, &lbrack;3&rbrack;, &lbrack;1, 2&rbrack;, &lbrack;1, 3&rbrack;, &lbrack;2, 3&rbrack;, &lbrack;1, 2, 3&rbrack; &rbrack;
 </pre>
@@ -14404,17 +14486,15 @@ console.log(powerSet(&lbrack;1, 2, 3&rbrack;));
 <p>The isDisariumNumber function determines whether a given number is a disarium number.</p>
 <pre>
 const isDisariumNumber = (num) => {
-const digits = &lbrack;...String(num)&rbrack;.map(Number);
-const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit &ast;&ast;
-(index + 1), 0);
-return sumOfPowers === num;
+  const digits = &lbrack;...String(num)&rbrack;.map(Number);
+  const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit &ast;&ast;
+  (index + 1), 0);
+  return sumOfPowers === num;
 };
-console.log(isDisariumNumber(89));
-// Output: true
-console.log(isDisariumNumber(135));
-// Output: true
-console.log(isDisariumNumber(23));
-// Output: false
+
+console.log(isDisariumNumber(89)); // Output: true
+console.log(isDisariumNumber(135)); // Output: true
+console.log(isDisariumNumber(23)); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-130">130. Remove Vowels from a String</h2>
