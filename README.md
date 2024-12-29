@@ -765,6 +765,14 @@ for (let y = 0; y < size; y++) {
   board += "\n";
 }
 console.log(board);
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
+ # # # #
+# # # # 
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el4">04. Functions</h2>
@@ -887,9 +895,9 @@ var list = {
   value: 1,
   rest: {
     value: 2,
-    rest: {
-      value: 3,
-      rest: null
+	rest: {
+	  value: 3,
+	  rest: null
     }
   }
 };
@@ -988,7 +996,6 @@ console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 <pre>
 function deepEqual(a, b) {
   if (a === b) return true;
-  
   if (a == null || typeof a != "object" ||
       b == null || typeof b != "object") return false;
 
@@ -999,7 +1006,6 @@ function deepEqual(a, b) {
   for (let key of keysA) {
     if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
   }
-
   return true;
 }
 
@@ -1014,7 +1020,8 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 <pre>
 let arrays = [[1, 2, 3], [4, 5], [6]];
 
-console.log(arrays.reduce((flat, current) => flat.concat(current), [])); // → [1, 2, 3, 4, 5, 6]
+console.log(arrays.reduce((flat, current) => flat.concat(current), [])); 
+// → [1, 2, 3, 4, 5, 6]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el13">13. Your own loop</h2>
@@ -1041,7 +1048,6 @@ function every(array, predicate) {
   }
   return true;
 }
-
 function every2(array, predicate) {
   return !array.some(element => !predicate(element));
 }
@@ -1059,9 +1065,7 @@ function dominantDirection(text) {
     let script = characterScript(char.codePointAt(0));
     return script ? script.direction : "none";
   }).filter(({name}) => name != "none");
-
   if (counted.length == 0) return "ltr";
-
   return counted.reduce((a, b) => a.count > b.count ? a : b).name;
 }
 
@@ -1077,15 +1081,12 @@ class Vec {
     this.x = x;
     this.y = y;
   }
-
   plus(other) {
     return new Vec(this.x + other.x, this.y + other.y);
   }
-
   minus(other) {
     return new Vec(this.x - other.x, this.y - other.y);
   }
-
   get length() {
     return Math.sqrt(this.x * this.x + this.y * this.y);
   }
@@ -1103,21 +1104,17 @@ class Group {
   constructor() {
     this.members = [];
   }
-
   add(value) {
     if (!this.has(value)) {
       this.members.push(value);
     }
   }
-
   delete(value) {
     this.members = this.members.filter(v => v !== value);
   }
-
   has(value) {
     return this.members.includes(value);
   }
-
   static from(collection) {
     let group = new Group;
     for (let value of collection) {
@@ -1142,21 +1139,17 @@ class Group {
   constructor() {
     this.members = [];
   }
-
   add(value) {
     if (!this.has(value)) {
       this.members.push(value);
     }
   }
-
   delete(value) {
     this.members = this.members.filter(v => v !== value);
   }
-
   has(value) {
     return this.members.includes(value);
   }
-
   static from(collection) {
     let group = new Group;
     for (let value of collection) {
@@ -1164,18 +1157,15 @@ class Group {
     }
     return group;
   }
-
-  [Symbol.iterator]() {
+  &lbrack;Symbol.iterator&rbrack;() {
     return new GroupIterator(this);
   }
 }
-
 class GroupIterator {
   constructor(group) {
     this.group = group;
     this.position = 0;
   }
-
   next() {
     if (this.position >= this.group.members.length) {
       return {done: true};
@@ -1187,7 +1177,6 @@ class GroupIterator {
     }
   }
 }
-
 for (let value of Group.from(["a", "b", "c"])) {
   console.log(value);
 }
@@ -1215,7 +1204,6 @@ function countSteps(state, robot, memory) {
     memory = action.memory;
   }
 }
-
 function compareRobots(robot1, memory1, robot2, memory2) {
   let total1 = 0, total2 = 0;
   for (let i = 0; i < 100; i++) {
@@ -1226,7 +1214,6 @@ function compareRobots(robot1, memory1, robot2, memory2) {
   console.log(`Robot 1 needed ${total1 / 100} steps per task`)
   console.log(`Robot 2 needed ${total2 / 100}`)
 }
-
 compareRobots(routeRobot, [], goalOrientedRobot, []);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1236,7 +1223,7 @@ compareRobots(routeRobot, [], goalOrientedRobot, []);
 function lazyRobot({place, parcels}, route) {
   if (route.length == 0) {
     // Describe a route for every parcel
-    let routes = parcels.map(parcel => {
+    let routes = parcels.map(parcel =&gt; {
       if (parcel.place != place) {
         return {route: findRoute(roadGraph, place, parcel.place),
                 pickUp: true};
@@ -1245,20 +1232,17 @@ function lazyRobot({place, parcels}, route) {
                 pickUp: false};
       }
     });
-
     // This determines the precedence a route gets when choosing.
     // Route length counts negatively, routes that pick up a package
     // get a small bonus.
     function score({route, pickUp}) {
       return (pickUp ? 0.5 : 0) - route.length;
     }
-    route = routes.reduce((a, b) => score(a) > score(b) ? a : b).route;
+    route = routes.reduce((a, b) =&gt; score(a) &gt; score(b) ? a : b).route;
   }
-
-  return {direction: route[0], memory: route.slice(1)};
+  return {direction: route&lbrack;0&rbrack;, memory: route.slice(1)};
 }
-
-runRobotAnimation(VillageState.random(), lazyRobot, []);
+runRobotAnimation(VillageState.random(), lazyRobot, &lbrack;&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el22">22. Persistent group</h2>
@@ -1268,24 +1252,19 @@ class PGroup {
   constructor(members) {
     this.members = members;
   }
-
   add(value) {
     if (this.has(value)) return this;
     return new PGroup(this.members.concat([value]));
   }
-
   delete(value) {
     if (!this.has(value)) return this;
     return new PGroup(this.members.filter(m => m !== value));
   }
-
   has(value) {
     return this.members.includes(value);
   }
 }
-
 PGroup.empty = new PGroup([]);
-
 let a = PGroup.empty.add("a");
 let ab = a.add("b");
 let b = ab.delete("a");
@@ -1299,7 +1278,6 @@ console.log(b.has("a")); // → false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class MultiplicatorUnitFailure extends Error {}
-
 function primitiveMultiply(a, b) {
   if (Math.random() < 0.2) {
     return a * b;
@@ -1307,7 +1285,6 @@ function primitiveMultiply(a, b) {
     throw new MultiplicatorUnitFailure("Klunk");
   }
 }
-
 function reliableMultiply(a, b) {
   for (;;) {
     try {
@@ -1335,13 +1312,11 @@ const box = {
     return this._content;
   }
 };
-
 function withBoxUnlocked(body) {
   let locked = box.locked;
   if (!locked) {
     return body();
   }
-
   box.unlock();
   try {
     return body();
@@ -1349,11 +1324,9 @@ function withBoxUnlocked(body) {
     box.lock();
   }
 }
-
 withBoxUnlocked(function() {
   box.content.push("gold piece");
 });
-
 try {
   withBoxUnlocked(function() {
     throw new Error("Pirates on the horizon! Abort!");
@@ -1398,7 +1371,6 @@ verify(/\b[^\We]+\b/i,
        ["red platypus", "wobbling nest"],
        ["earth bed", "learning ape", "BEET"]);
 
-
 function verify(regexp, yes, no) {
   // Ignore unfinished exercises
   if (regexp.source == "...") return;
@@ -1425,7 +1397,6 @@ console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 <pre>
 // Fill in this regular expression.
 let number = /^[+\-]?(\d+(\.\d*)?|\.\d+)([eE][+\-]?\d+)?$/;
-
 // Tests:
 for (let str of ["1", "-1", "+15", "1.55", ".5", "5.",
                  "1.3e2", "1E-4", "1e+12"]) {
@@ -1445,8 +1416,7 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const {buildGraph} = require("./graph");
-
-const roads = [
+const roads = &lbrack;
   "Alice's House-Bob's House",   "Alice's House-Cabin",
   "Alice's House-Post Office",   "Bob's House-Town Hall",
   "Daria's House-Ernie's House", "Daria's House-Town Hall",
@@ -1454,7 +1424,7 @@ const roads = [
   "Grete's House-Shop",          "Marketplace-Farm",
   "Marketplace-Post Office",     "Marketplace-Shop",
   "Marketplace-Town Hall",       "Shop-Town Hall"
-];
+&rbrack;;
 
 exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 </pre>
@@ -1470,7 +1440,6 @@ async function locateScalpel(nest) {
     current = next;
   }
 }
-
 function locateScalpel2(nest) {
   function loop(current) {
     return anyStorage(nest, current, "scalpel").then(next => {
@@ -1502,7 +1471,6 @@ function Promise_all(promises) {
     if (promises.length == 0) resolve(results);
   });
 }
-
 // Test code.
 Promise_all([]).then(array => {
   console.log("This should be []:", array);
@@ -1528,11 +1496,8 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 topScope.array = (...values) => values;
-
 topScope.length = array => array.length;
-
 topScope.element = (array, i) => array[i];
-
 run(`
 do(define(sum, fun(array,
      do(define(i, 0),
@@ -1576,7 +1541,6 @@ specialForms.set = (args, env) => {
   }
   let varName = args[0].name;
   let value = evaluate(args[1], env);
-
   for (let scope = env; scope; scope = Object.getPrototypeOf(scope)) {
     if (Object.prototype.hasOwnProperty.call(scope, varName)) {
       scope[varName] = value;
@@ -1585,7 +1549,6 @@ specialForms.set = (args, env) => {
   }
   throw new ReferenceError(`Setting undefined variable ${varName}`);
 };
-
 run(`
 do(define(x, 4),
    define(setx, fun(val, set(x, val))),
@@ -1600,13 +1563,9 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-
 &lt;meta charset="utf8"&gt;
-
 &lt;h1&gt;Mountains&lt;/h1&gt;
-
 &lt;div id="mountains"&gt;&lt;/div&gt;
-
 &lt;script&gt;
   const MOUNTAINS = [
     {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
@@ -1617,10 +1576,8 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     {name: "Popocatepetl", height: 5465, place: "Mexico"},
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
   ];
-
   function buildTable(data) {
     let table = document.createElement("table");
-  
     let fields = Object.keys(data[0]);
     let headRow = document.createElement("tr");
     fields.forEach(function(field) {
@@ -1642,7 +1599,6 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
       });
       table.appendChild(row);
     });
-
     return table;
   }
 
@@ -1664,7 +1620,6 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
   function byTagName(node, tagName) {
     let found = [];
     tagName = tagName.toUpperCase();
-
     function explore(node) {
       for (let i = 0; i &lt; node.childNodes.length; i++) {
         let child = node.childNodes[i];
@@ -1674,18 +1629,14 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
         }
       }
     }
-
     explore(node);
     return found;
   }
 
-  console.log(byTagName(document.body, "h1").length);
-  // → 1
-  console.log(byTagName(document.body, "span").length);
-  // → 3
+  console.log(byTagName(document.body, "h1").length);   // → 1
+  console.log(byTagName(document.body, "span").length); // → 3
   let para = document.querySelector("p");
-  console.log(byTagName(para, "span").length);
-  // → 2
+  console.log(byTagName(para, "span").length); // → 2
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4199,7 +4150,7 @@ and implementing an autocomplete search feature, using asynchronous data fetchin
         })
         .catch (error =&gt; console.error('Error :error));
       }, 5000); // Update every 5 seconds
-	}
+    }
     window.onload = updateData;
   &lt;/script&gt;
 &lt;/head&gt;
@@ -4304,7 +4255,7 @@ function uploadFile () {
     if (e.lengthComputable) {
       let percentComplete = (e.loaded / e.total) * 100;
       document.getElementById('progressBar').style.width = percentComplete + '%';
-	}
+    }
   };
   xhr.onload = function() {
     if (xhr.status === 200) {
@@ -13063,7 +13014,7 @@ function runQuiz() {
     for (let i = 0; i < question.options.length; i++) {
       console.log(`${i + 1}.${question.options&lbrack;i&rbrack;}`);
     }
-	
+    
     const userAnswerlndex = prompt("Enter the number of your answer:");
     const user Answer = question.options&lbrack;userAnswerindex -1&rbrack;;
 
@@ -13105,7 +13056,7 @@ function textRPGAdventure() {
       console.log("You exit the adventure. Goodbye!");
       break;
     }
-	
+    
     currentchoice = choices.findlndex(choice => choice.next === userChoice.toLowerCase());
     if (currentchoice === -1) {
       console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
@@ -13160,7 +13111,7 @@ function generateBarChart(data) {
   for (let value of data) {
     const barLength = Math.round((value / maxValue) &ast; 20);
     const bar = '■'.repeat(barLength).padEnd(20,'');
-	
+    
     console.log(`${value} | ${bar}`);
   }
 }
@@ -13265,28 +13216,28 @@ function hangmanGame() {
     console.log(`Word: ${guessedWord}`);
     console.log(`Guessed Letters: ${guessedLetters.join(",")}`);
     console.log(`Attempts Remaining: ${remainingAttempts}`);
-	
+    
     const userGuess = prompt("Enter a letter:").toLowerCase();
     
-	if (!userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length !== 1) {
+    if (!userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length !== 1) {
       console.log("Invalid input. Please enter a single letter.");
       continue;
     }
     
-	if (guessedLetters.includes(userGuess)) {
+    if (guessedLetters.includes(userGuess)) {
       console.log("You already guessed that letter. Try again.");
       continue;
     }
-	
+    
     guessedLetters.push(userGuess);
     
-	if (selectedWord.includes(userGuess)) {
+    if (selectedWord.includes(userGuess)) {
       for (let i = 0; i &lt; selectedWord.length; i++) {
         if (selectedWord&lbrack;i&rbrack; === userGuess) {
           guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i + 1);
         }
       }
-	  
+      
       if (!guessedWord.includes("_")) {
         console.log(' Congratulations! You guessed the word: ${selectedWord}');
         break;
@@ -13294,7 +13245,7 @@ function hangmanGame() {
     } else {
       console.log("Incorrect guess. Try again.");
       remainingAttempts--;
-	  
+      
       if (remainingAttempts === 0) {
         console.log(`Out of attempts. The word was: ${selectedWord}`);
       }
@@ -13327,7 +13278,7 @@ function countdownTimer() {
   const intervalId = setlnterval(() =&gt; {
     console.clear();
     console.log(`Time Remaining: ${secondsRemaining} seconds`);
-	
+    
     if (secondsRemaining === 0) {
       console.log("Countdown completed!");
       clearlnterval(intervalId);
@@ -13396,7 +13347,7 @@ function guessTheNumberGame() {
       attempts—;
       continue;
     }
-	
+    
     if (userGuess === secretNumber) {
       console.log(`Congratulations! You guessed the number in ${attempts} attempts.`);
       return;
@@ -13435,16 +13386,16 @@ function whackAMoleGame() {
     const holes = Array.from({ length: totalHoles },()=&gt; emptyHoleSymbol);
     const randomMolelndex = Math.floor(Math.random() &ast; totalHoles);
     holes&lbrack;randomMoleIndex&rbrack; = moleSymbol;
-	
+    
     console.log(`\nHoles: ${holes.join("")}`);
-	
+    
     const userWhacklndex = parseInt(prompt("Enter the index to whack the mole:"), 10);
-	
+    
     if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
       console.log(`Invalid input. Please enter a number between 0 and ${totalHoles -1}.`);
       continue;
     }
-	
+    
     if (holes&lbrack;userWhack!ndex&rbrack; === moleSymbol) {
       console.log("Whack! You got the mole!");
       score++;
