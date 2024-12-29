@@ -11433,16 +11433,16 @@ towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 <h2 id="js165">165. Calculate the Area of a Frustum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a frustum of a cone given the radii of its 
-top and bottom bases ( <span class="consolas">r1</span> and 
-<span class="consolas">r2</span> ) and the slant height (
-<span class="consolas">l</span>). The formula for the surface area of a frustum of a cone 
+top and bottom bases (<span class="consolas">r1</span> and 
+<span class="consolas">r2</span>) and the slant height 
+(<span class="consolas">l</span>). The formula for the surface area of a frustum of a cone 
 is <span class="consolas">Surface Area = &pi; &ast; (rl + r2) &ast; l + &pi; &ast; rl^2 
-+ &pie; &ast; r2^2</span>, where <span class="consolas">&pi;</span> is the mathematical 
++ &pi; &ast; r2^2</span>, where <span class="consolas">&pi;</span> is the mathematical 
 constant Pi.</p>
 <pre>
-function surfaceAreaOfFrustum(rl, r2,1) {
-  const surfaceArea = Math.PI &ast; (rl + r2) &ast; 1 + Math.PI &ast; rl &ast;&ast; 2 + Math.PI &ast; r2 &ast;&ast; 2;
-  console.log(' Surface Area of the frustum is: $ {surfaceArea}');
+function surfaceAreaOfFrustum(rl, r2, l) {
+  const surfaceArea = Math.PI &ast; (rl + r2) &ast; l + Math.PI &ast; rl &ast;&ast; 2 + Math.PI &ast; r2 &ast;&ast; 2;
+  console.log(`Surface Area of the frustum is: ${surfaceArea}`);
 // Example: Calculate the surface area of a frustum with top radius 4, bottom radius 8, and slant height 6
 surfaceAreaOfFrustum(4, 8, 6);
 </pre>
@@ -11457,11 +11457,12 @@ function isMotzkinNumber(number) {
   if (number < 0) {
     return false;
   }
+  
   // Use dynamic programming to calculate Motzkin numbers
-  const motzkinNumbers = &lbrack;1,1&rbrack;;
-  for (let n = 2; n < = number; n+ +) {
-    const nextMotzkin = ((2 &ast;n + 1)<i>motzkinNumbers&lbrack;n-l&rbrack; 
-      + (3&ast;n-3)</i>motzkinNumbers&lbrack;n- 2&rbrack;) / (n + 2);
+  const motzkinNumbers = &lbrack;1, 1&rbrack;;
+  for (let n = 2; n <= number; n++) {
+    const nextMotzkin = ((2 &ast;n + 1) &ast; <i>motzkinNumbers&lbrack;n-l&rbrack; 
+      + (3 &ast; n - 3) &ast; </i>motzkinNumbers&lbrack;n - 2&rbrack;) / (n + 2);
     motzkinNumbers.push(nextMotzkin);
   }
 }
@@ -11469,17 +11470,18 @@ return motzkinNumbers.includes(number);
 // Example usage
 const motzkinNumber = 5; // Replace with the number you want to check
 if (isMotzkinNumber(motzkinNumber)) {
-  console.log(' ${motzkinNumber} is a Motzkin Number!');
+  console.log(`${motzkinNumber} is a Motzkin Number!`);
 } else {
-  console.log(' ${motzkinNumber} is not a Motzkin Number.');
+  console.log(`${motzkinNumber} is not a Motzkin Number.`);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js167">167. Check if a Number is a Padovan Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program checks if a given positive integer is a Padovan number. A Padovan number is a number in the
-Padovan sequence, which is similar to the Fibonacci sequence but uses a recurrence relation of P(n) = P(n-2)
-+ P(n-3) with initial values P(0) = P(l) = P(2) = 1.</p>
+<p>This program checks if a given positive integer is a Padovan number. A Padovan number 
+is a number in the Padovan sequence, which is similar to the Fibonacci sequence but uses 
+a recurrence relation of P(n) = P(n-2) + P(n-3) with initial values P(0) = P(l) = P(2) = 1.</p>
+
 <pre>
 function isPadovanNumber(number) {
   if (number < 0) {
@@ -11487,20 +11489,20 @@ function isPadovanNumber(number) {
   }
   const padovanNumbers = &lbrack;1,1,1&rbrack;;
   while (padovanNumbers&lbrack;padovanNumbers.length - 1&rbrack; <= number) {
-    const nextPadovan = padovanNumbers&lbrack;padovanNumbers.length 
-      - 2&rbrack; 
+    const nextPadovan = padovanNumbers&lbrack;padovanNumbers.length - 2&rbrack; 
       + padovanNumbers&lbrack;padovanNumbers.length 
       - 3&rbrack;;
     padovanNumbers.push(nextPadovan);
   }
   return padovanNumbers.includes(number);
 }
+
 // Example usage
 const padovanNumber = 9; // Replace with the number you want to check
 if (isPadovanNumber(padovanNumber)) {
-  console.log(' ${padovanNumber} is a Padovan Number!');
+  console.log(`${padovanNumber} is a Padovan Number!`);
 } else {
-  console.log(' ${padovanNumber} is not a Padovan Number.');
+  console.log(`${padovanNumber} is not a Padovan Number.`);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11509,6 +11511,7 @@ if (isPadovanNumber(padovanNumber)) {
 <p>The Koch snowflake is a mathematical curve and one of the earliest fractal curves to have been described.
 It can be constructed by starting with an equilateral triangle and repeatedly adding smaller equilateral
 triangles to each side of the existing triangles.</p>
+
 <pre>
 function calculateKochSnowflakeArea(sideLength, iterations) {
 const sqrt3 = Math.sqrt(3);
@@ -11519,38 +11522,41 @@ return area;
 const sideLength = 100; // Replace with the side length of the original equilateral triangle
 const iterations = 4; // Replace with the number of iterations
 const kochSnowflakeArea = calculateKochSnowflakeArea(sideLength, iterations);
-console.log(' The area of the Koch snowflake is: ${kochSnowflakeArea.toFixed(2)}');
+console.log(`The area of the Koch snowflake is: ${kochSnowflakeArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js169">169. Basic Chatbot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program is a simple and interactive script that allows users to engage in a text-based conversation with
 a virtual assistant.</p>
+
 <pre>
 function chatbot(message) {
-// Simple rule-based responses
-if (message.toLowerCaseO.includesChello1)) {
-return ‘Hello! How can I help you?';
-} else if (message.toLowerCase().includes('how are you')) {
-return 'I am just a computer program, but thanks for asking!';
-} else if (message.toLowerCase().includes('bye‘)) {
-return ‘Goodbye!1;
-} else {
-return 'I didnVt understand that. Can you please rephrase?';
+  // Simple rule-based responses
+  if (message.toLowerCaseO.includesChello1)) {
+    return ‘Hello! How can I help you?';
+  } else if (message.toLowerCase().includes('how are you')) {
+    return 'I am just a computer program, but thanks for asking!';
+  } else if (message.toLowerCase().includes('bye')) {
+    return 'Goodbye!';
+  } else {
+    return 'I didn\'t understand that. Can you please rephrase?';
+  }
 }
-}
+
 function startChat() {
-const userinput = prompt('You:');
-if (userinput !== null) {
-const response = chatbot(userlnput);
-console.log('Chatbot:‘, response);
-startChatO; // Continue the conversation
-} else {
-console.log('Goodbye!');
+  const userinput = prompt('You:');
+  if (userinput !== null) {
+    const response = chatbot(userlnput);
+    console.log('Chatbot:‘, response);
+    startChatO; // Continue the conversation
+  } else {
+    console.log('Goodbye!');
+  }
 }
-}
+
 console.log('Chatbot: Hello! How can I help you today?');
-startChatQ;
+startChat();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js170">170. RGB to HEX Converter</h2>
@@ -11567,9 +11573,10 @@ function convertToHex(red, green, blue) {
   const hexBlue = toHex(blue);
   return `#${hexRed}${hexGreen}${hexBlue}`;
 }
+
 // Example usage
 const redValue = prompt('Enter the Red value (0-255):');
-const greenValue = promptfEnter the Green value (0-255):');
+const greenValue = prompt('Enter the Green value (0-255):');
 const blueValue = prompt('Enter the Blue value (0-255):');
 const hexResult = convertToHex(redValue, greenValue, blueValue);
 console.log(`HEX: ${hexResult}`);
@@ -11580,18 +11587,22 @@ console.log(`HEX: ${hexResult}`);
 <p>This program allows you to increment, decrement and reset a counter.</p>
 <pre>
 let count = 0;
+
 function incrementCounter() {
   count++;
   console.log(`Counter: ${count}`);
 }
+
 function decrementCounter() {
   count--;
   console.log(`Counter: ${count}`);
 }
+
 function resetCounter() {
   count = 0;
   console.log("Counter reset to 0");
 }
+
 // Example usage
 incrementCounter();
 incrementCounter();
@@ -11602,9 +11613,10 @@ resetCounter();
 <h2 id="js172">172. Stop The Bomb</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program to allow you stop an active bomb.</p>
+
 <pre>
 let bombTimer;
-let countdowninterval;
+let countdownInterval;
 let timeLeft = 10; // Initial time in seconds
 
 function startBomb() {
@@ -11612,28 +11624,29 @@ function startBomb() {
   displayTimeLeft();
   bombTimer = setTimeout(() =&gt; {
     console.log("BOOM! The bomb exploded. Game over!");
-    clearlnterval(countdownlnterval);
+    clearInterval(countdownInterval);
   }, timeLeft &ast; 1000);
 }
 
 function defuseBomb() {
   clearTimeout(bombTimer);
   console.log("Whew! You successfully defused the bomb!");
-  clearlnterval(countdownlnterval);
+  clearlnterval(countdownInterval);
 }
 
 function displayTimeLeft() {
-  countdowninterval = setlnterval(() =&gt; {
+  countdownInterval = setInterval(() =&gt; {
     console.clear();
     console.log(`Time remaining: ${timeLeft} seconds`);
     timeLeft--;
     if (timeLeft &lt; 0) {
       clearTimeout(bombTimer);
       console.log("BOOM! The bomb exploded. Game over!");
-      clearlnterval(countdownlnterval);
+      clearInterval(countdownInterval);
     }
   }, 1000);
 }
+
 // Example usage
 startBomb();
 // Uncomment the line below to simulate successfully defusing the bomb
@@ -11645,10 +11658,11 @@ startBomb();
 <p>Generating IP addresses programmatically can be done using a programming language like JavaScript.
 Below is a simple example of an IP address generator in JavaScript. Note that this example generates random
 IP addresses for educational purposes and should not be used for any malicious activities.</p>
+
 <pre>
 function generateRandomIp() {
   const octet = () =&gt; Math.floor(Math.random() &ast; 256);
-  return '${octet()}.${octet()}.${octet()}.${octet()}';
+  return `${octet()}.${octet()}.${octet()}.${octet()}`;
 }
 function generateMultipleRandomIps(count) {
   const ipAddresses = &lbrack;&rbrack;;
@@ -11657,6 +11671,7 @@ function generateMultipleRandomIps(count) {
   }
   return ipAddresses;
 }
+
 // Example: Generate and print 5 random IP addresses
 const numberOfIps = 5;
 const randomIps = generateMultipleRandomIps(numberOfIps);
@@ -11666,6 +11681,7 @@ console.log('Random IP Addresses:’, randomIps);
 <h2 id="js174">174. Digital clock</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Deploy a digital clock with this awesome program.</p>
+
 <pre>
 function updateClock() {
 const now = new Date();
@@ -11677,25 +11693,29 @@ const formattedTime = `${hours}:${minutes}:${seconds}`;
 console.clear(); // Clears the console to update the time
 console.log("Current Time:" + formattedTime);
 }
+
 // Update the clock every second
-set!nterval(updateClock, 1000);
+setInterval(updateClock, 1000);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js175">175. Random Number Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random number between 1 and 10 and displays it in the console.</p>
+
 <pre>
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() &ast; (max - min + 1)) + min;
 }
-  const randomNumber = generateRandomNumber(l, 10);
-  console.log("Random Number:", randomNumber);
+
+const randomNumber = generateRandomNumber(l, 10);
+console.log("Random Number:", randomNumber);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js176">176. Simple JavaScript Quiz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program presents a simple JavaScript quiz with multiple-choice questions. It asks 
 the user for answers and provides feedback in the console.</p>
+
 <pre>
 function runQuiz() {
   const questions = &lbrack;
@@ -11718,11 +11738,13 @@ function runQuiz() {
   let score = 0;
   for (const question of questions) {
     console.log(question.question);
-    for (let i = 0; i < question.options.length; i+ +) {
+    for (let i = 0; i < question.options.length; i++) {
       console.log(`${i + 1}.${question.options&lbrack;i&rbrack;}`);
     }
+	
     const userAnswerlndex = prompt("Enter the number of your answer:");
-    const user Answer = question.options&lbrack;user Answerindex -1&rbrack;;
+    const user Answer = question.options&lbrack;userAnswerindex -1&rbrack;;
+
     if (userAnswer === question.correctAnswer) {
       console.log("Correct!\n");
       score++;
@@ -11740,16 +11762,20 @@ runQuiz();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes the user on a simple text-based RPG adventure where they make 
 choices to navigate through a story.</p>
+
 <pre>
 function textRPGAdventure() {
   console.log("Welcome to the Text-based RPG Adventure!");
   console.log("You find yourself in a dark cave. What do you want to do?");
+  
   const choices = &lbrack;
     {option: "Explore the cave", outcome: "You discover a hidden treasure!", next: "treasure"},
     {option: "Go deeper into the cave", outcome: "Uh-oh! A dragon appears! You narrowly escape.", next: "dragon"},
     {option: "Exit the cave", outcome: "You emerge into the sunlight. Adventure awaits!", next: "end"}
   &rbrack;;
+  
   let currentchoice = 0;
+  
   while (currentchoice &lt; choices.length) {
     const userChoice = prompt(choices&lbrack;currentChoice&rbrack;.option);
     console.log(choices&lbrack;currentChoice&rbrack;.outcome);
@@ -11757,6 +11783,7 @@ function textRPGAdventure() {
       console.log("You exit the adventure. Goodbye!");
       break;
     }
+	
     currentchoice = choices.findlndex(choice => choice.next === userChoice.toLowerCase());
     if (currentchoice === -1) {
       console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
@@ -11770,11 +11797,13 @@ textRPGAdventure();
 <h2 id="js178">178. Dice Rolling Simulator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates rolling a six-sided die, providing a random result between 1 and 6.</p>
+
 <pre>
 function rollDice() {
   const result = Math.floor(Math.random() &ast; 6) + 1;
   console.log(`You rolled a ${result}`);
 }
+
 // Simulate rolling the dice
 rollDice();
 </pre>
@@ -11783,33 +11812,37 @@ rollDice();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes a number of seconds as input and converts it into hours, minutes, 
 and seconds, displaying the result in the console.</p>
+
 <pre>
 function convertSecondsToTime(seconds) {
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const remainingSeconds = seconds % 60;
+  
   console.log(`Time: ${hours} hours, ${minutes} minutes, ${remainingSeconds} seconds`);
 }
+
 // Example: Convert 3665 seconds to time
 const inputSeconds = 3665;
-convertSecondsToTime(inputSeconds);
-
-Time: 1 hours, 1 minutes, 5 seconds
+convertSecondsToTime(inputSeconds);  / Time: 1 hours, 1 minutes, 5 seconds
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js180">180. Bar Chart Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes an array of numerical values and creates a simple horizontal bar 
 chart in the console.</p>
+
 <pre>
 function generateBarChart(data) {
   const maxValue = Math.max(...data);
   for (let value of data) {
     const barLength = Math.round((value / maxValue) &ast; 20);
     const bar = '■'.repeat(barLength).padEnd(20,'');
+	
     console.log(`${value} | ${bar}`);
   }
 }
+
 // Example: Generate a bar chart for data
 const chartData = &lbrack;5,8,12,4,6&rbrack;;
 generateBarChart(chartData);
@@ -11826,6 +11859,7 @@ function generateRightAngledTriangle(height) {
     console.log(stars);
   }
 }
+
 // Example: Generate a right-angled triangle with a height of 5
 const triangleHeight = 5;
 generateRightAngledTriangle(triangleHeight);
@@ -11835,6 +11869,7 @@ generateRightAngledTriangle(triangleHeight);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows the user to input mathematical expressions (e.g., "2 + 3 &ast; 4") 
 and evaluates and displays the result in the console.</p>
+
 <pre>
 function textBasedCalculator(expression) {
   try {
@@ -11844,6 +11879,7 @@ function textBasedCalculator(expression) {
     console.error('Error:', error.message);
   }
 }
+
 // Example: Evaluate a mathematical expression
 const userInput = prompt('Enter a mathematical expression:');
 textBasedCalculator(userInput);
@@ -11852,6 +11888,7 @@ textBasedCalculator(userInput);
 <h2 id="js183">183. Number Pyramid Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a number pyramid pattern and displays it in the console.</p>
+
 <pre>
 function generateNumberPyramid(height) {
   for (let i = 1; i &lt;= height; i++) {
@@ -11860,6 +11897,7 @@ function generateNumberPyramid(height) {
     console.log(spaces + numbers);
   }
 }
+
 // Example: Generate a number pyramid with a height of 4
 const pyramidHeight = 4;
 generateNumberPyramid(pyramidHeight);
@@ -11868,15 +11906,18 @@ generateNumberPyramid(pyramidHeight);
 <h2 id="js184">184. Diamond Pattern Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a diamond pattern using characters and displays it in the console.</p>
+
 <pre>
 function generateDiamondPattern(height) {
   const midpoint = Math.ceil(height / 2);
+  
   for (let i = l;i &lt;= height; i++) {
     const spaces = Math.abs(midpoint - i);
     const stars = '&ast;'.repeat(height - 2 &ast; spaces);
     console.log(''.repeat(spaces) + stars);
   }
 }
+
 // Example: Generate a diamond pattern with a height of 5
 const diamondHeight = 5;
 generateDiamondPattern(diamondHeight);
@@ -11886,6 +11927,7 @@ generateDiamondPattern(diamondHeight);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Hangman game. The player tries to guess a word by 
 suggesting letters, and the program displays the progress and remaining attempts.</p>
+
 <pre>
 function hangmanGame() {
   const words = &lbrack;"javascript", "hangman", "programming", "developer", "challenge"&rbrack;;
@@ -11893,28 +11935,36 @@ function hangmanGame() {
   let guessedWord = "_".repeat(selectedWord.length);
   let remainingAttempts = 6;
   const guessedLetters = &lbrack;&rbrack;;
+  
   console.log("Welcome to the Hangman Game!");
   console.log("Try to guess the word.");
+  
   while (remainingAttempts > 0) {
     console.log(`Word: ${guessedWord}`);
     console.log(`Guessed Letters: ${guessedLetters.join(",")}`);
     console.log(`Attempts Remaining: ${remainingAttempts}`);
+	
     const userGuess = prompt("Enter a letter:").toLowerCase();
-    if (!userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length !== 1) {
+    
+	if (!userGuess || !userGuess.match(/&lbrack;a-z&rbrack;/) || userGuess.length !== 1) {
       console.log("Invalid input. Please enter a single letter.");
       continue;
     }
-    if (guessedLetters.includes(userGuess)) {
+    
+	if (guessedLetters.includes(userGuess)) {
       console.log("You already guessed that letter. Try again.");
       continue;
     }
+	
     guessedLetters.push(userGuess);
-    if (selectedWord.includes(userGuess)) {
+    
+	if (selectedWord.includes(userGuess)) {
       for (let i = 0; i &lt; selectedWord.length; i++) {
         if (selectedWord&lbrack;i&rbrack; === userGuess) {
           guessedWord = guessedWord.substring(0, i) + userGuess + guessedWord.substring(i + 1);
         }
       }
+	  
       if (!guessedWord.includes("_")) {
         console.log(' Congratulations! You guessed the word: ${selectedWord}');
         break;
@@ -11922,6 +11972,7 @@ function hangmanGame() {
     } else {
       console.log("Incorrect guess. Try again.");
       remainingAttempts--;
+	  
       if (remainingAttempts === 0) {
         console.log(`Out of attempts. The word was: ${selectedWord}`);
       }
@@ -11936,19 +11987,25 @@ hangmanGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows the user to set a countdown time in seconds. The timer counts 
 down, and the program displays the remaining time.</p>
+
 <pre>
 function countdownTimer() {
   const userTime = promptf'Enter the countdown time in seconds:");
   const countdownTime = parseInt(userTime, 10);
+  
   if (isNaN(countdownTime) || countdownTime &lt;= 0) {
     console.log("Invalid input. Please enter a positive number.");
     return;
   }
-  console.log(' Countdown started for ${countdownTime} seconds.');
+  
+  console.log(`Countdown started for ${countdownTime} seconds.`);
+  
   let secondsRemaining = countdownTime;
+  
   const intervalId = setlnterval(() =&gt; {
     console.clear();
     console.log(`Time Remaining: ${secondsRemaining} seconds`);
+	
     if (secondsRemaining === 0) {
       console.log("Countdown completed!");
       clearlnterval(intervalId);
@@ -11957,6 +12014,7 @@ function countdownTimer() {
     }
   }, 1000);
 }
+
 // Start the countdown timer
 countdownTimer();
 </pre>
@@ -11965,25 +12023,30 @@ countdownTimer();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user for various types of words (e.g., nouns, verbs) and 
 constructs a humorous story using those inputs.</p>
+
 <pre>
 function madLibsGame() {
   console.log("Welcome to the Mad Libs Game!");
   console.log("Let's create a funny story.");
+
   const noun = prompt("Enter a noun:");
   const verb = prompt("Enter a verb:");
   const adjective = prompt("Enter an adjective:");
   const adverb = prompt("Enter an adverb:");
   const animal = prompt("Enter an animal:");
   const sound = prompt("Enter a sound:");
+  
   console.clear();
-
   console.log("Here’s your Mad Libs story:");
+  
   console.log(`Once upon a time, there was a ${adjective} ${noun} that loved to ${verb} ${adverb}.`);
   console.log(`One day, it met a ${animal} that made a ${sound} noise.`);
   console.log("Everyone in the neighborhood heard the noise and started to join the fun!");
   console.log("And they all lived happily ever after.");
+  
   console.log("The end.");
 }
+
 // Start the Mad Libs game
 madLibsGame();
 </pre>
@@ -11993,20 +12056,25 @@ madLibsGame();
 <p>This program generates a random number, and the player has to guess it within a 
 certain number of attempts. The game provides feedback on whether the guess is too 
 high, too low, or correct.</p>
+
 <pre>
 function guessTheNumberGame() {
   const maxNumber = 100;
   const maxAttempts =10;
   const secretNumber = Math.floor(Math.random() &ast; maxNumber) + 1;
+  
   console.log("Welcome to the Guess the Number Game!");
   console.log(`I've picked a number between 1 and ${maxNumber}. Try to guess it!`);
+  
   for (let attempts = 1; attempts &lt;= maxAttempts; attempts++) {
     const userGuess = parseInt(prompt("Enter your guess:"), 10);
+  
     if (isNaN(userGuess) || userGuess &lt; 1 || userGuess &gt; maxNumber) {
-      console.log(' Invalid guess. Please enter a number between 1 and ${maxNumber}.');
+      console.log(`Invalid guess. Please enter a number between 1 and ${maxNumber}.`);
       attempts—;
       continue;
     }
+	
     if (userGuess === secretNumber) {
       console.log(`Congratulations! You guessed the number in ${attempts} attempts.`);
       return;
@@ -12018,6 +12086,7 @@ function guessTheNumberGame() {
   }
   console.log(`Sorry, you've run out of attempts. The number was ${secretNumber}.`);
 }
+
 // Start the Guess the Number Game
 guessTheNumberGame();
 </pre>
@@ -12026,26 +12095,34 @@ guessTheNumberGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Whack-a-Mole game. The player must "whack" the 
 mole as it randomly appears in different holes.</p>
+
 <pre>
 function whackAMoleGame() {
   const totalHoles = 5;
   const molesToWhack = 3;
   const moleSymbol = "M";
-  const emptyHoleSymbol =
+  const emptyHoleSymbol = "_";
+  
   let score = 0;
   let remainingAttempts = 10;
+  
   console.log("Welcome to the Whack-a-Mole Game!");
   console.log(`Try to whack ${molesToWhack} moles within ${remainingAttempts} attempts.`);
+  
   while (remainingAttempts > 0 && molesToWhack &gt; 0) {
     const holes = Array.from({ length: totalHoles },()=&gt; emptyHoleSymbol);
     const randomMolelndex = Math.floor(Math.random() &ast; totalHoles);
     holes&lbrack;randomMoleIndex&rbrack; = moleSymbol;
+	
     console.log(`\nHoles: ${holes.join("")}`);
+	
     const userWhacklndex = parseInt(prompt("Enter the index to whack the mole:"), 10);
+	
     if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
       console.log(`Invalid input. Please enter a number between 0 and ${totalHoles -1}.`);
       continue;
     }
+	
     if (holes&lbrack;userWhack!ndex&rbrack; === moleSymbol) {
       console.log("Whack! You got the mole!");
       score++;
@@ -12056,12 +12133,14 @@ function whackAMoleGame() {
     remainingAttempts--;
     console.log(`Score: ${score} | Attempts remaining: ${remainingAttempts}`);
   }
+  
   if (molesToWhack === 0) {
     console.log("Congratulations! You whacked all the moles!");
   } else {
     console.log("Game over. You ran out of attempts.");
   }
 }
+
 // Start the Whack-a-Mole Game
 whackAMoleGame();
 </pre>
@@ -12070,27 +12149,36 @@ whackAMoleGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a coin tossing game. The player guesses whether the next coin 
 toss will result in heads or tails.</p>
+
 <pre>
 function coinTossingGame() {
   const coinSides = &lbrack;"Heads", "Tails"&rbrack;;
   let correctGuesses = 0;
   lettotalGuesses = 0;
+  
   console.log("Welcome to the Coin Tossing Game!");
+  
   while (true) {
     const playerGuess = prompt("Heads or Tails?").toLowerCase();
-    if (’&lbrack;"heads", "tails"&rbrack;.includes(playerGuess)) {
+  
+   if (’&lbrack;"heads", "tails"&rbrack;.includes(playerGuess)) {
       console.log("Invalid input. Please enter 'Heads' or 'Tails'.");
       continue;
     }
+
     const coinResult = coinSides&lbrack;Math.floor(Math.random() &ast; 2)&rbrack;;
+
     console.log(`Coin toss result: ${coinResult}`);
+
     if (playerGuess === coinResult.toLowerCaseO) {
       console.log("Correct guess! Well done!");
       correctGuesses++;
     } else {
       console.log("Wrong guess. Better luck next time!");
     }
+
     totalGuesses++;
+
     const play Again = confirm("Do you want to toss the coin again?");
     if (!playAgain) {
       console.log(`Game over. You made ${correctGuesses} correct guesses out of ${totalGuesses} total guesses.`);
@@ -12098,6 +12186,7 @@ function coinTossingGame() {
     }
   }
 }
+
 // Start the Coin Tossing Game
 coinTossingGame();
 </pre>
@@ -12105,14 +12194,18 @@ coinTossingGame();
 <h2 id="js191">191. Fibonacci Number Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates and displays Fibonacci numbers up to a specified limit.</p>
+
 <pre>
 function fibonacciNumberGenerator() {
 const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
+
 if (isNaN(limit) 11 limit < 1) {
   console.log("Invalid input. Please enter a positive number.");
   return;
 }
+
 let fibonacciNumbers = &lbrack;0, 1&rbrack;;
+
 for (let i = 2; i < = limit; i+ +) {
 fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibonacciNumbers&lbrack;i - 2&rbrack;;
 }
