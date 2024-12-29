@@ -818,6 +818,8 @@ console.log(countChar("kakkerlak", "k")); // → 4
 <h2 id="el7">07. Data Structures: Objects and Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
+// Run code here in the context of Chapter 4 Eloquent JavaScript
+// journalEvents of journal.js
 for (let event of journalEvents(JOURNAL)) {
   let correlation = phi(tableFor(event, JOURNAL));
   if (correlation > 0.1 || correlation < -0.1) {
@@ -825,12 +827,9 @@ for (let event of journalEvents(JOURNAL)) {
   }
 }
 // → brushed teeth: -0.3805211953
-
 // → work:          -0.1371988681
-
 // → reading:        0.1106828054
-​
-weekend: 0.13719886811400708
+​weekend: 0.13719886811400708
 brushed teeth: -0.3805211953235953
 candy: 0.12964074471043288
 work: -0.13719886811400708
@@ -838,7 +837,66 @@ spaghetti: 0.242535625036333
 reading: 0.11068280537595927
 peanuts: 0.59026798116852
 </pre>
+<pre>
+var journal = [];
+
+function addEntry(events, squirrel) {
+  journal.push({events, squirrel});
+}
+
+function phi(table) {
+  return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
+              (table[0] + table[2]));
+}
+
+function tableFor(event, journal) {
+  let table = [0, 0, 0, 0];
+  for (let i = 0; i < journal.length; i++) {
+    let entry = journal[i], index = 0;
+    if (entry.events.includes(event)) index += 1;
+    if (entry.squirrel) index += 2;
+    table[index] += 1;
+  }
+  return table;
+}
+
+function journalEvents(journal) {
+  let events = [];
+  for (let entry of journal) {
+    for (let event of entry.events) {
+      if (!events.includes(event)) {
+        events.push(event);
+      }
+    }
+  }
+  return events;
+}
+
+function max(...numbers) {
+  let result = -Infinity;
+  for (let number of numbers) {
+    if (number > result) result = number;
+  }
+  return result;
+}
+
+var list = {
+  value: 1,
+  rest: {
+    value: 2,
+    rest: {
+      value: 3,
+      rest: null
+    }
+  }
+};
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el8">The sum of a range</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function range(start, end, step = start < end ? 1 : -1) {
   let array = [];
@@ -864,74 +922,873 @@ console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
 console.log(sum(range(1, 10))); // → 55
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el8">08. </h2>
+<h2 id="el9">09. Reversing an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function reverseArray(array) {
+  let output = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    output.push(array[i]);
+  }
+  return output;
+}
+
+function reverseArrayInPlace(array) {
+  for (let i = 0; i < Math.floor(array.length / 2); i++) {
+    let old = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = old;
+  }
+  return array;
+}
+
+console.log(reverseArray(["A", "B", "C"])); // → ["C", "B", "A"];
+let arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue); // → [5, 4, 3, 2, 1]
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el9">09. </h2>
+<h2 id="el10">10. A list</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function arrayToList(array) {
+  let list = null;
+  for (let i = array.length - 1; i >= 0; i--) {
+    list = {value: array[i], rest: list};
+  }
+  return list;
+}
+
+function listToArray(list) {
+  let array = [];
+  for (let node = list; node; node = node.rest) {
+    array.push(node.value);
+  }
+  return array;
+}
+
+function prepend(value, list) {
+  return {value, rest: list};
+}
+
+function nth(list, n) {
+  if (!list) return undefined;
+  else if (n == 0) return list.value;
+  else return nth(list.rest, n - 1);
+}
+
+console.log(arrayToList([10, 20])); // → {value: 10, rest: {value: 20, rest: null}}
+console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
+console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20, rest: null}}
+console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el10">10. </h2>
+<h2 id="el11">11. Deep comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function deepEqual(a, b) {
+  if (a === b) return true;
+  
+  if (a == null || typeof a != "object" ||
+      b == null || typeof b != "object") return false;
+
+  let keysA = Object.keys(a), keysB = Object.keys(b);
+
+  if (keysA.length != keysB.length) return false;
+
+  for (let key of keysA) {
+    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+  }
+
+  return true;
+}
+
+let obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj)); // → true
+console.log(deepEqual(obj, {here: 1, object: 2})); // → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el11">11. </h2>
+<h2 id="el12">12. Flattening</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+let arrays = [[1, 2, 3], [4, 5], [6]];
+
+console.log(arrays.reduce((flat, current) => flat.concat(current), [])); // → [1, 2, 3, 4, 5, 6]
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el12">12. </h2>
+<h2 id="el13">13. Your own loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function loop(start, test, update, body) {
+  for (let value = start; test(value); value = update(value)) {
+    body(value);
+  }
+}
+
+loop(3, n => n > 0, n => n - 1, console.log);
+// → 3
+// → 2
+// → 1
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el13">13. </h2>
+<h2 id="el14">14. Everything</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function every(array, predicate) {
+  for (let element of array) {
+    if (!predicate(element)) return false;
+  }
+  return true;
+}
+
+function every2(array, predicate) {
+  return !array.some(element => !predicate(element));
+}
+
+console.log(every([1, 3, 5], n => n < 10)); // → true
+console.log(every([2, 4, 16], n => n < 10)); // → false
+console.log(every([], n => n < 10)); // → true
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el14">14. </h2>
+<h2 id="el15">15. Dominant writing direction</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function dominantDirection(text) {
+  let counted = countBy(text, char => {
+    let script = characterScript(char.codePointAt(0));
+    return script ? script.direction : "none";
+  }).filter(({name}) => name != "none");
+
+  if (counted.length == 0) return "ltr";
+
+  return counted.reduce((a, b) => a.count > b.count ? a : b).name;
+}
+
+console.log(dominantDirection("Hello!")); // → ltr
+console.log(dominantDirection("Hey, مساء الخير")); // → rtl
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el15">15. </h2>
+<h2 id="el16">16. A vector type</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+class Vec {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  plus(other) {
+    return new Vec(this.x + other.x, this.y + other.y);
+  }
+
+  minus(other) {
+    return new Vec(this.x - other.x, this.y - other.y);
+  }
+
+  get length() {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  }
+}
+
+console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
+console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
+console.log(new Vec(3, 4).length); // → 5
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el16">16. </h2>
+<h2 id="el17">17. Groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+class Group {
+  constructor() {
+    this.members = [];
+  }
+
+  add(value) {
+    if (!this.has(value)) {
+      this.members.push(value);
+    }
+  }
+
+  delete(value) {
+    this.members = this.members.filter(v => v !== value);
+  }
+
+  has(value) {
+    return this.members.includes(value);
+  }
+
+  static from(collection) {
+    let group = new Group;
+    for (let value of collection) {
+      group.add(value);
+    }
+    return group;
+  }
+}
+
+let group = Group.from([10, 20]);
+console.log(group.has(10)); // → true
+console.log(group.has(30)); // → false
+group.add(10);
+group.delete(10);
+console.log(group.has(10));
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el17">17. </h2>
+<h2 id="el18">18. Iterable groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+class Group {
+  constructor() {
+    this.members = [];
+  }
+
+  add(value) {
+    if (!this.has(value)) {
+      this.members.push(value);
+    }
+  }
+
+  delete(value) {
+    this.members = this.members.filter(v => v !== value);
+  }
+
+  has(value) {
+    return this.members.includes(value);
+  }
+
+  static from(collection) {
+    let group = new Group;
+    for (let value of collection) {
+      group.add(value);
+    }
+    return group;
+  }
+
+  [Symbol.iterator]() {
+    return new GroupIterator(this);
+  }
+}
+
+class GroupIterator {
+  constructor(group) {
+    this.group = group;
+    this.position = 0;
+  }
+
+  next() {
+    if (this.position >= this.group.members.length) {
+      return {done: true};
+    } else {
+      let result = {value: this.group.members[this.position],
+                    done: false};
+      this.position++;
+      return result;
+    }
+  }
+}
+
+for (let value of Group.from(["a", "b", "c"])) {
+  console.log(value);
+}
+// → a
+// → b
+// → c
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el18">18. </h2>
+<h2 id="el19">19. Borrowing a method</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+let map = {one: true, two: true, hasOwnProperty: true};
+
+console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el19">19. </h2>
+<h2 id="el20">20. Measuring a robot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function countSteps(state, robot, memory) {
+  for (let steps = 0;; steps++) {
+    if (state.parcels.length == 0) return steps;
+    let action = robot(state, memory);
+    state = state.move(action.direction);
+    memory = action.memory;
+  }
+}
+
+function compareRobots(robot1, memory1, robot2, memory2) {
+  let total1 = 0, total2 = 0;
+  for (let i = 0; i < 100; i++) {
+    let state = VillageState.random();
+    total1 += countSteps(state, robot1, memory1);
+    total2 += countSteps(state, robot2, memory2);
+  }
+  console.log(`Robot 1 needed ${total1 / 100} steps per task`)
+  console.log(`Robot 2 needed ${total2 / 100}`)
+}
+
+compareRobots(routeRobot, [], goalOrientedRobot, []);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el20">20. </h2>
+<h2 id="el21">21. Robot efficiency</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function lazyRobot({place, parcels}, route) {
+  if (route.length == 0) {
+    // Describe a route for every parcel
+    let routes = parcels.map(parcel => {
+      if (parcel.place != place) {
+        return {route: findRoute(roadGraph, place, parcel.place),
+                pickUp: true};
+      } else {
+        return {route: findRoute(roadGraph, place, parcel.address),
+                pickUp: false};
+      }
+    });
+
+    // This determines the precedence a route gets when choosing.
+    // Route length counts negatively, routes that pick up a package
+    // get a small bonus.
+    function score({route, pickUp}) {
+      return (pickUp ? 0.5 : 0) - route.length;
+    }
+    route = routes.reduce((a, b) => score(a) > score(b) ? a : b).route;
+  }
+
+  return {direction: route[0], memory: route.slice(1)};
+}
+
+runRobotAnimation(VillageState.random(), lazyRobot, []);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el21">21. </h2>
+<h2 id="el22">22. Persistent group</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+class PGroup {
+  constructor(members) {
+    this.members = members;
+  }
+
+  add(value) {
+    if (this.has(value)) return this;
+    return new PGroup(this.members.concat([value]));
+  }
+
+  delete(value) {
+    if (!this.has(value)) return this;
+    return new PGroup(this.members.filter(m => m !== value));
+  }
+
+  has(value) {
+    return this.members.includes(value);
+  }
+}
+
+PGroup.empty = new PGroup([]);
+
+let a = PGroup.empty.add("a");
+let ab = a.add("b");
+let b = ab.delete("a");
+
+console.log(b.has("b")); // → true
+console.log(a.has("b")); // → false
+console.log(b.has("a")); // → false
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el22">22. </h2>
+<h2 id="el23">23. Retry</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+class MultiplicatorUnitFailure extends Error {}
+
+function primitiveMultiply(a, b) {
+  if (Math.random() < 0.2) {
+    return a * b;
+  } else {
+    throw new MultiplicatorUnitFailure("Klunk");
+  }
+}
+
+function reliableMultiply(a, b) {
+  for (;;) {
+    try {
+      return primitiveMultiply(a, b);
+    } catch (e) {
+      if (!(e instanceof MultiplicatorUnitFailure))
+        throw e;
+    }
+  }
+}
+
+console.log(reliableMultiply(8, 8)); // → 64
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el23">23. </h2>
+<h2 id="el24">24. The locked box</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const box = {
+  locked: true,
+  unlock() { this.locked = false; },
+  lock() { this.locked = true;  },
+  _content: [],
+  get content() {
+    if (this.locked) throw new Error("Locked!");
+    return this._content;
+  }
+};
+
+function withBoxUnlocked(body) {
+  let locked = box.locked;
+  if (!locked) {
+    return body();
+  }
+
+  box.unlock();
+  try {
+    return body();
+  } finally {
+    box.lock();
+  }
+}
+
+withBoxUnlocked(function() {
+  box.content.push("gold piece");
+});
+
+try {
+  withBoxUnlocked(function() {
+    throw new Error("Pirates on the horizon! Abort!");
+  });
+} catch (e) {
+  console.log("Error raised:", e);
+}
+
+console.log(box.locked); // → true
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el24">24. </h2>
+<h2 id="el25">25. Regexp golf</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+// Fill in the regular expressions
+
+verify(/ca[rt]/,
+       ["my car", "bad cats"],
+       ["camper", "high art"]);
+
+verify(/pr?op/,
+       ["pop culture", "mad props"],
+       ["plop", "prrrop"]);
+
+verify(/ferr(et|y|ari)/,
+       ["ferret", "ferry", "ferrari"],
+       ["ferrum", "transfer A"]);
+
+verify(/ious\b/,
+       ["how delicious", "spacious room"],
+       ["ruinous", "consciousness"]);
+
+verify(/\s[.,:;]/,
+       ["bad punctuation ."],
+       ["escape the dot"]);
+
+verify(/\w{7}/,
+       ["Siebentausenddreihundertzweiundzwanzig"],
+       ["no", "three small words"]);
+
+verify(/\b[^\We]+\b/i,
+       ["red platypus", "wobbling nest"],
+       ["earth bed", "learning ape", "BEET"]);
+
+
+function verify(regexp, yes, no) {
+  // Ignore unfinished exercises
+  if (regexp.source == "...") return;
+  for (let str of yes) if (!regexp.test(str)) {
+    console.log(`Failure to match '${str}'`);
+  }
+  for (let str of no) if (regexp.test(str)) {
+    console.log(`Unexpected match for '${str}'`);
+  }
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el25">25. </h2>
+<h2 id="el26">26. Quoting style</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+let text = "'I'm the cook,' he said, 'it's my job.'";
+
+console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
+// → "I'm the cook," he said, "it's my job."
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el26">26. </h2>
+<h2 id="el27">27. Numbers again</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+// Fill in this regular expression.
+let number = /^[+\-]?(\d+(\.\d*)?|\.\d+)([eE][+\-]?\d+)?$/;
+
+// Tests:
+for (let str of ["1", "-1", "+15", "1.55", ".5", "5.",
+                 "1.3e2", "1E-4", "1e+12"]) {
+  if (!number.test(str)) {
+    console.log(`Failed to match '${str}'`);
+  }
+}
+for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
+                 ".5.", "1f5", "."]) {
+  if (number.test(str)) {
+    console.log(`Incorrectly accepted '${str}'`);
+  }
+}
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el27">27. </h2>
+<h2 id="el28">28. Roads module</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const {buildGraph} = require("./graph");
+
+const roads = [
+  "Alice's House-Bob's House",   "Alice's House-Cabin",
+  "Alice's House-Post Office",   "Bob's House-Town Hall",
+  "Daria's House-Ernie's House", "Daria's House-Town Hall",
+  "Ernie's House-Grete's House", "Grete's House-Farm",
+  "Grete's House-Shop",          "Marketplace-Farm",
+  "Marketplace-Post Office",     "Marketplace-Shop",
+  "Marketplace-Town Hall",       "Shop-Town Hall"
+];
+
+exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el28">28. </h2>
+<h2 id="el29">29. Tracking the scalpel</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+async function locateScalpel(nest) {
+  let current = nest.name;
+  for (;;) {
+    let next = await anyStorage(nest, current, "scalpel");
+    if (next == current) return current;
+    current = next;
+  }
+}
+
+function locateScalpel2(nest) {
+  function loop(current) {
+    return anyStorage(nest, current, "scalpel").then(next => {
+      if (next == current) return current;
+      else return loop(next);
+    });
+  }
+  return loop(nest.name);
+}
+
+locateScalpel(bigOak).then(console.log); // → Butcher's Shop
+locateScalpel2(bigOak).then(console.log); // → Butcher's Shop
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el29">29. </h2>
+<h2 id="el30">30. Building Promise.all</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function Promise_all(promises) {
+  return new Promise((resolve, reject) => {
+    let results = [];
+    let pending = promises.length;
+    for (let i = 0; i < promises.length; i++) {
+      promises[i].then(result => {
+        results[i] = result;
+        pending--;
+        if (pending == 0) resolve(results);
+      }).catch(reject);
+    }
+    if (promises.length == 0) resolve(results);
+  });
+}
+
+// Test code.
+Promise_all([]).then(array => {
+  console.log("This should be []:", array);
+});
+function soon(val) {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(val), Math.random() * 500);
+  });
+}
+Promise_all([soon(1), soon(2), soon(3)]).then(array => {
+  console.log("This should be [1, 2, 3]:", array);
+});
+Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
+  console.log("We should not get here");
+}).catch(error => {
+  if (error != "X") {
+    console.log("Unexpected failure:", error);
+  }
+});
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el30">30. </h2>
+<h2 id="el31">31. Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+topScope.array = (...values) => values;
+
+topScope.length = array => array.length;
+
+topScope.element = (array, i) => array[i];
+
+run(`
+do(define(sum, fun(array,
+     do(define(i, 0),
+        define(sum, 0),
+        while(<(i, length(array)),
+          do(define(sum, +(sum, element(array, i))),
+             define(i, +(i, 1)))),
+        sum))),
+   print(sum(array(1, 2, 3))))
+`);
+// → 6
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el32">32. Comments</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function skipSpace(string) {
+  let skippable = string.match(/^(\s|#.*)*/);
+  return string.slice(skippable[0].length);
+}
+
+console.log(parse("# hello\nx"));
+// → {type: "word", name: "x"}
+
+console.log(parse("a # one\n   # two\n()"));
+// → {type: "apply",
+//    operator: {type: "word", name: "a"},
+//    args: []}
+
+//
+{type: "word", name: "x"}
+{type: "apply", operator: {type: "word", name: "a"}, …}
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el33">33. Fixing scope</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+specialForms.set = (args, env) => {
+  if (args.length != 2 || args[0].type != "word") {
+    throw new SyntaxError("Bad use of set");
+  }
+  let varName = args[0].name;
+  let value = evaluate(args[1], env);
+
+  for (let scope = env; scope; scope = Object.getPrototypeOf(scope)) {
+    if (Object.prototype.hasOwnProperty.call(scope, varName)) {
+      scope[varName] = value;
+      return value;
+    }
+  }
+  throw new ReferenceError(`Setting undefined variable ${varName}`);
+};
+
+run(`
+do(define(x, 4),
+   define(setx, fun(val, set(x, val))),
+   setx(50),
+   print(x))
+`);
+// → 50
+run(`set(quux, true)`); // → Some kind of ReferenceError
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el34">34. Build a table</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+
+&lt;meta charset="utf8"&gt;
+
+&lt;h1&gt;Mountains&lt;/h1&gt;
+
+&lt;div id="mountains"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+  const MOUNTAINS = [
+    {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
+    {name: "Everest", height: 8848, place: "Nepal"},
+    {name: "Mount Fuji", height: 3776, place: "Japan"},
+    {name: "Vaalserberg", height: 323, place: "Netherlands"},
+    {name: "Denali", height: 6168, place: "United States"},
+    {name: "Popocatepetl", height: 5465, place: "Mexico"},
+    {name: "Mont Blanc", height: 4808, place: "Italy/France"}
+  ];
+
+  function buildTable(data) {
+    let table = document.createElement("table");
+  
+    let fields = Object.keys(data[0]);
+    let headRow = document.createElement("tr");
+    fields.forEach(function(field) {
+      let headCell = document.createElement("th");
+      headCell.appendChild(document.createTextNode(field));
+      headRow.appendChild(headCell);
+    });
+    table.appendChild(headRow);
+
+    data.forEach(function(object) {
+      let row = document.createElement("tr");
+      fields.forEach(function(field) {
+        let cell = document.createElement("td");
+        cell.appendChild(document.createTextNode(object[field]));
+        if (typeof object[field] == "number") {
+          cell.style.textAlign = "right";
+        }
+        row.appendChild(cell);
+      });
+      table.appendChild(row);
+    });
+
+    return table;
+  }
+
+  document.querySelector("#mountains")
+    .appendChild(buildTable(MOUNTAINS));
+&lt;/script&gt;
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el35">35. Elements by tag name</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+
+&lt;h1&gt;Heading with a &lt;span&gt;span&lt;/span&gt; element.&lt;/h1&gt;
+&lt;p&gt;A paragraph with &lt;span&gt;one&lt;/span&gt;, &lt;span&gt;two&lt;/span&gt;
+  spans.&lt;/p&gt;
+
+&lt;script&gt;
+  function byTagName(node, tagName) {
+    let found = [];
+    tagName = tagName.toUpperCase();
+
+    function explore(node) {
+      for (let i = 0; i &lt; node.childNodes.length; i++) {
+        let child = node.childNodes[i];
+        if (child.nodeType == document.ELEMENT_NODE) {
+          if (child.nodeName == tagName) found.push(child);
+          explore(child);
+        }
+      }
+    }
+
+    explore(node);
+    return found;
+  }
+
+  console.log(byTagName(document.body, "h1").length);
+  // → 1
+  console.log(byTagName(document.body, "span").length);
+  // → 3
+  let para = document.querySelector("p");
+  console.log(byTagName(para, "span").length);
+  // → 2
+&lt;/script&gt;
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el36">36. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el37">37. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el38">38. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el39">39. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el40">40. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el41">41. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el42">42. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el43">43. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el44">44. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el45">45. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el46">46. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el47">47. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el48">48. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el49">49. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el50">50. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el51">51. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el52">52. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el53">53. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el54">54. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el55">55. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el56">56. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el57">57. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el58">58. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el59">59. </h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex0">93 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
