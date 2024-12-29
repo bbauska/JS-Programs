@@ -4258,31 +4258,31 @@ $ (" #myDiv").addClass (" active ");
 <h4>8. Changing Text Content:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document.getElementByld (" mySpan ").textContent = " Updated Text";
+document.getElementById("mySpan").textContent = "Updated Text";
 </pre>
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #mySpan ").text (" Updated Text");
+$("#mySpan").text("Updated Text");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Hiding an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document.getElementByld (" toHide ").style.display = " none ";
+document.getElementById("toHide").style.display = "none";
 </pre>
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #toHide ").hide ();
+$("#toHide").hide();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Fading In an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let elementToFade = document.getElementByld (" toFade ”);
+let elementToFade = document.getElementById("toFade");
 elementToFade.style.opacity = 0;
-elementToFade.style.transition = " opacity Is ";
+elementToFade.style.transition = "opacity Is";
 elementToFade.style.opacity = 1;
 </pre>
 
@@ -4299,6 +4299,7 @@ xhr.onreadystatechange = function () {
   if (this.readyState === 4 && this.status === 200) {
     console.log(this.responseText);
   };
+}
 xhr.open("GET",
 xhr.send();
 </pre>
@@ -4316,10 +4317,10 @@ function(data) {
 <h4>12. AJAX POST Request:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let xhr = new XMLHttpRequest ();
-xhr. open (" POST ", " saveData ", true );
-xhr. setRequestHeader (" Content - Type ", 11 application / json ");
-xhr. send (JSON . stringify ({name :" John ", age : 30}));
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "saveData", true);
+xhr.setRequestHeader("Content - Type", || application / json");
+xhr.send(JSON.stringify({name:"John", age: 30}));
 </pre>
 
 <h5>jQuery:</h5>
@@ -4337,23 +4338,23 @@ console.log(response );
 <h4>13. Getting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let linkHref = document. getElementByld (" myLink "). getAttribute (" href");
+let linkHref = document. getElementById (" myLink "). getAttribute (" href");
 </pre>
 
 <h5>jQuery:</h5>
 <pre>
-let linkHref = $ (" #myLink"). attr (" href");
+let linkHref = $("#myLink").attr("href");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Setting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document. getElementByld (" mylmage "). setAttribute (" src ", " new_image . jpg ");
+document.getElementById("myImage").setAttribute("src", "new_image.jpg");
 </pre>
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #mylmage "). attr (" src ", " newjmage . jpg");
+$ ("#myImage").attr("src", "newjmage.jpg");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
@@ -4389,8 +4390,8 @@ elements.forEach(function(element) {
 
 <h5>jQuery:</h5>
 <pre>
-$ (". myClass "). each ( function () {
-console.log( $ (this ). text ());
+$ (".myClass").each(function() {
+  console.log($(this).text());
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4399,11 +4400,10 @@ console.log( $ (this ). text ());
 <pre>
 document.getElementById("myForm").addEventListener("submit"  function(event) {
   event.preventDefault();
-  let formData = new FormData (this );
+  let formData = new FormData(this);
   // Process form data
 });
 </pre>
-
 <h5>jQuery:</h5>
 <pre>
 $("#myForm").submit(function(event) {
@@ -4461,10 +4461,10 @@ visualizations.</p>
 <h4>Example - Drawing a Circle on Canvas:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const canvas = document. getElementById ('myCanvas');
-const ctx = canvas . getContext ('2d');
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
 ctx.beginPath();
-ctx.arc(100,100, 50, 0, 2 * Math . PI);
+ctx.arc(100, 100, 50, 0, 2 * Math.PI);
 ctx.stroke();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4477,8 +4477,8 @@ to - use APIs for customization and interactivity.</p>
 <h4>Example - Creating a Line Chart with Plotly:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [ {x: [ 1, 2, 3,4 ],y : [ 10,15, 13,18 ], type : 'scatter'} ];
-Plotly . newPlot ('myDiv', data);
+const data = [{x: [1, 2, 3, 4], y:[10, 15, 13, 18], type: 'scatter'}];
+Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. JS Chart.js</h4>
@@ -4489,29 +4489,29 @@ provides easy integration . With Chart. js, developers can create responsive and
 <h4>Example - Creating a Bar Chart with Chart.js:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const ctx = document. getElementById ('myChart'). getContext ('2d1);
-const myChart = new Chart ( ctx, {
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
 type: 'bar',
 data: {
-labels : [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' ],
-datasets : [ {
-label: '# of Votes',
-data: [12,19,3,5,2, 3],
-backgroundcolor: [
-'rgba( 255, 99, 132,0.2 )',
-'rgba(54,162, 235,0.2 )',
-'rgba( 255, 206, 86,0.2)',
-'rgba(75,192, 192,0.2)',
-'rgba( 153,102, 255,0.2 )',
-'rgba (255,159,64,0.2)'
-],
+labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+datasets: [{
+  label: '# of Votes',
+  data: [12, 19, 3, 5, 2, 3],
+  backgroundcolor: [
+    'rgba(255, 99, 132, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(255, 206, 86, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)'
+  ],
 borderColor: [
-'rgba (255, 99, 132, 1 )',
-'rgba (54,162,235,1 )',
-'rgba (255, 206, 86, 1 )',
-'rgba (75,192, 192, 1 )',
-'rgba ( 153,102,255,1 )',
-'rgba (255,159,64,1 )'
+'rgba(255, 99, 132, 1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)',
+'rgba(255, 159, 64, 1)'
 ],
 border Width: 1
 </pre>
@@ -4527,19 +4527,19 @@ the creation of interactive charts, maps, and graphs using declarative JavaScrip
 google.charts.load ('current', {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart () {
-  const data = google.visualization.arrayToDataTable ([
-  [ 'Task', 'Hours per Day' ],
-  [ 'Work1,11],
-  [ 'Eat', 2 ],
-  [ 'Commute', 2 ],
-  [ 'Watch TV', 2 ],
-  [ 'Sleep', 7 ]
+  const data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Work1, 11],
+  ['Eat', 2],
+  ['Commute', 2],
+  ['Watch TV', 2],
+  ['Sleep', 7]
 ]);
 const options = {
-  title : 'My Daily Activities1,
-  pieHole : 0.4,
+  title: 'My Daily Activities',
+  pieHole: 0.4,
   const chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-  chart.draw (data, options);
+  chart.draw(data, options);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4552,15 +4552,15 @@ interactive and dynamic visualizations.</p>
 <h4>Example - Creating a Basic SVG Circle with D3.js:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const svg = d3 . select ('body')
-. append ('svg')
-. attr ('width', 100 )
-. attr ('height1,100 );
-svg . append ('circle')
-. attr ('ex', 50 )
-. attr ('ey', 50 )
-. attr ('r', 40 )
-. attr ('fill', 'blue1);
+const svg = d3.select('body')
+.append('svg')
+.attr('width', 100)
+.attr('height', 100);
+svg.append('circle')
+.attr ('ex', 50)
+.attr ('ey', 50)
+.attr ('r', 40)
+.attr ('fill', 'blue1);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Conclusion</h4>
@@ -4577,9 +4577,9 @@ empower developers to craft visually compelling and data - driven web applicatio
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
-const ctx = canvas.getContext('2d1);
+const ctx = canvas.getContext('2d');
 ctx.fillstyle = 'blue';
-ctx.fillRect (10,10,100,50);
+ctx.fillRect(10,10,100,50);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Draw Circle:</h4>
@@ -4587,10 +4587,10 @@ ctx.fillRect (10,10,100,50);
 <pre>
 const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d');
-ctx . beginPath ();
-ctx . arc ( 100,100, 50, 0, Math .PI * 2 );
-ctx . fillstyle = 'red';
-ctx . fill ();
+ctx.beginPath();
+ctx.arc(100, 100, 50, 0, Math.PI * 2);
+ctx.fillstyle = 'red';
+ctx.fill();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Plotly Examples:</h4>
@@ -4598,15 +4598,15 @@ ctx . fill ();
 <h4>3. Create Line Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [ {x : [ 1, 2, 3,4 ] ,y : [ 10,15,13,18 ], type : 'scatter'} ];
+const data = [{x: [1, 2, 3, 4], y: [10, 15, 13, 18], type: 'scatter'}];
 Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create Bar Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [ {x: [ 'A', 'B', 'C ], y : [ 10, 20,15 ], type : 'bar'} ];
-Plotly. newPlot ('myDiv', data);
+const data = [{x: ['A', 'B', 'C'], y: [10, 20, 15], type: 'bar'}];
+Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Chart.js Examples:</h4>
@@ -4615,20 +4615,20 @@ Plotly. newPlot ('myDiv', data);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
-const myChart = new Chart ( ctx, {
-type: 'bar',
-data: {
-labels : [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' ],
-datasets: [ {
-label: '# of Votes',
-data:[ 12,19,3, 5,2,3 ],
-backgroundcolor: [
-'rgba( 255, 99,132,0.2 )',
-'rgba( 54, 162,235,0.2 )',
-//... more colors
-],
-borderwidth: 1
-}]
+const myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [ {
+      label: '# of Votes',
+      data:[12,19,3,5,2,3],
+      backgroundcolor: [
+       'rgba(255,99,132,0.2)',
+       'rgba(54,162,235,0.2)',
+        //... more colors
+      ],
+    borderwidth: 1
+  }]
 }
 });
 </pre>
@@ -4637,16 +4637,16 @@ borderwidth: 1
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
-const myChart = new Chart ( ctx, {
-type: 'line1,
-data: {
-labels : [ January', 'February', 'March', 'April', 'May', 'June', 'July' ],
-datasets: [ {
-label: 'My First Dataset',
-data : [ 65, 59, 80, 81, 56, 55,40 ],
-bordercolor: 'rgb ( 75,192,192 )',
-borderwidth: 1
-}]
+const myChart = new Chart (ctx, {
+  type: 'line',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [ {
+    label: 'My First Dataset',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    bordercolor: 'rgb (75,192,192)',
+    borderwidth: 1
+  }]
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4655,23 +4655,24 @@ borderwidth: 1
 <h4>7. Pie Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google.charts.load ('current', {packages : [ 'corechart' ] });
+google.charts.load ('current', {packages: ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 function drawChart () {
-const data = google . visualization . arrayToDataTable ([
-[ 'Task', ‘Hours per Day' ],
-[ 'Work', 11],
-[ ’Eat’, 2 ],
-[ 'Commute1, 2 ],
-[ 'Watch TV, 2 ],
-[ 'Sleep', 7 ]
-]);
-const options = {
-title : 'My Daily Activities',
-pieHole : 0.4,
-};
-const chart = new google . visualization . PieChart ( document. getElementById ('donutchart'));
-chart. draw ( data, options );
+  const data = google.visualization.arrayToDataTable ([
+    ['Task', ‘Hours per Day'],
+    ['Work', 11],
+    [’Eat’, 2 ],
+    ['Commute', 2 ],
+    ['Watch TV', 2 ],
+    ['Sleep', 7 ]
+  ]);
+  const options = {
+    title: 'My Daily Activities',
+    pieHole: 0.4,
+  };
+}
+const chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+chart.draw(data, options);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Area Chart:</h4>
@@ -4688,12 +4689,12 @@ const data = google . visualization . arrayToDataTable ([
 ['2016', 1030,540]
 ]);
 const options = {
-title: 'Company Performance',
-curveType: 'function',
-legend : {position : 'bottom'}
+  title: 'Company Performance',
+  curveType: 'function',
+  legend: {position: 'bottom'}
 };
-const chart = new google . visualization . AreaChart ( document. getElementById ('curve_chart'));
-chart. draw ( data, options );
+const chart = new google.visualization.AreaChart(document.getElementById('curve_chart'));
+chart.draw(data, options);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>D3.js Examples:</h4>
@@ -4701,15 +4702,15 @@ chart. draw ( data, options );
 <h4>9. Create SVG Circle:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const svg = d3 . select ('body')
-. append ('svg1)
-. attr ('width', 100 )
-. attr ('height', 100 );
-svg . append ('circle')
-. attr ('ex', 50 )
-. attr ('ey', 50 )
-. attr ('r', 40 )
-. attr ('fill; 'blue');
+const svg = d3.select('body')
+.append ('svg')
+.attr ('width', 100)
+.attr ('height', 100);
+svg.append('circle')
+.attr ('ex', 50)
+.attr ('ey', 50)
+.attr ('r', 40)
+.attr ('fill; 'blue');
 </pre>
 <h4>10. Create SVG Rectangle:</h4>
 <pre>
@@ -4752,15 +4753,15 @@ ctx.fill();
 <h4>3. Create a Line Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [ {x : [ 1, 2, 3,4 ], y : [ 10,15,13,18 ], type : 'scatter'} ];
+const data = [{x: [1, 2, 3, 4], y: [10, 15, 13, 18], type: 'scatter'}];
 Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a Bar Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [ {x : [ 'A', 'B', 'C ], y : [ 10, 20,15], type : 'bar'} ];
-Plotly . newPlot ('myDiv', data);
+const data = [{x: ['A', 'B', 'C'], y: [10, 20, 15], type: 'bar'}];
+Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Chart.js Examples:</h4>
@@ -4769,20 +4770,20 @@ Plotly . newPlot ('myDiv', data);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
-const myChart = new Chart ( ctx, {
-type: 'bar',
-data: {
-labels : [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' ],
-datasets: [ {
-label: '# of Votes',
-data:[ 12,19,3,5,2,3 ],
-backgroundcolor: [
-'rgba( 255, 99, 132,0.2)',
-'rgba(54, 162, 235, 0.2 )',
-//... more colors
-],
-borderwidth: 1
-}]
+const myChart = new Chart (ctx, {
+  type: 'bar',
+  data: {
+    labels : [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' ],
+    datasets: [ {
+    label: '# of Votes',
+    data:[ 12,19,3,5,2,3 ],
+    backgroundcolor: [
+      'rgba( 255, 99, 132,0.2)',
+      'rgba(54, 162, 235, 0.2 )',
+      //... more colors
+    ],
+    borderwidth: 1
+  }]
 }
 });
 </pre>
@@ -4791,16 +4792,16 @@ borderwidth: 1
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
-const myChart = new Chart ( ctx, {
-type: 'line1,
-data: {
-labels : [ 'January', 'February1, 'March', 'April', 'May', 'June', 'July' ],
-datasets: [ {
-label: 'My First Dataset',
-data : [ 65, 59, 80, 81, 56, 55,40 ],
-borderColor: 'rgb ( 75, 192,192 )',
-borderwidth: 1
-}]
+const myChart = new Chart(ctx, {
+  type: 'line1,
+  data: {
+    labels: ['January', 'February1, 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+    label: 'My First Dataset',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    borderColor: 'rgb (75, 192, 192)',
+    borderwidth: 
+  }]
 }
 });
 </pre>
@@ -4885,6 +4886,7 @@ svg.append('rect')
   .attr('height', 50)
   .attr('fill', 'green');
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These examples demonstrate how to create basic graphics, charts, and visualizations using 
 different JavaScript libraries such as Canvas, Plotly, Chart.js, Google Charts, and D3.js. 
 They serve as a starting point for building more complex and customized graphical 
@@ -4934,15 +4936,18 @@ function isPalindrome(str) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Find Maximum Number in Array:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-javascript code
+<pre>
 let numbers = [ 5, 8, 3,12, 6 ];
 letmaxNumber = Math . max (... numbers ); // Output: 12
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Sort Array of Objects by Property:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let products = [
-{name: 'Laptop', price: 800},
-{name: 'Phone', price: 600},
-{name: 'Tablet', price: 300}
+  {name: 'Laptop', price: 800},
+  {name: 'Phone', price: 600},
+  {name: 'Tablet', price: 300}
 ];
 products.sort((a, b) => a.price - b.price);
 </pre>
@@ -4960,7 +4965,7 @@ let doubled = numbers.map(num => num * 2); // Output: [2, 4, 6]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (function() {
-  console.log(’IIFE executed.');
+  console.log('IIFE executed.');
 })();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5129,8 +5134,8 @@ let sum = numbers.reduce((acc, curr) => acc + curr, 0); // Output: 15
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3, 4, 5];
-let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); //
-Output: [4, 8]
+let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); 
+// Output: [4, 8]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -5191,19 +5196,20 @@ asyncFunction ()
 <h4>10. Async / Await with Error Handling</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function fetchData () {
-return new Promise ((resolve, reject) => {
-setTimeout (() =>{
-reject ('Failed to fetch data');
-}, 2000);
-});
-async function getData () {
-try {
-let data = await fetchData ();
-console.log( data);
-} catch ( error) {
-console. error ( error);
-}
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout (() => {
+      reject ('Failed to fetch data');
+    }, 2000);
+  });
+  async function getData() {
+    try {
+      let data = await fetchData();
+      console.log(data);
+    } catch(error) {
+    console.error(error);
+    }
+
 getData ();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5212,21 +5218,23 @@ getData ();
 <h4>11. Creating and Appending Multiple Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let fragment = document. createDocumentFragment ();
+let fragment = document.createDocumentFragment();
 for (let i = 0; i < 5; i ++) {
-let newElement = document. createElement ('div');
-newElement. textcontent = ' Element $ {i}';
-fragment. appendchild (newElement);
-document. body. appendchild (fragment);
+  let newElement = document.createElement('div');
+  newElement.textcontent = 'Element ${i}';
+  fragment.appendchild(newElement);
+  document.body.appendchild(fragment);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Event Delegation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document. addEventListener ('click', function (event) {
-if ( event. target. matches ('button')) {
-console.log('Button clicked');
-});}
+document.addEventListener('click', function(event) {
+  if (event. target.matches ('button')) {
+    console.log('Button clicked');
+  });
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -5235,14 +5243,14 @@ console.log('Button clicked');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let name = 'Alice';
-let message = ' Hello, $ {name}! *;
+let message = 'Hello, ${name}! *;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Spread Operator:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let arr = [ 1, 2, 3 ];
-let newArr = [... arr, 4,5]; // [ 1, 2, 3, 4, 5 ]
+let arr = [1, 2, 3];
+let newArr = [... arr, 4,5]; // [1, 2, 3, 4, 5]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Error Handling and Regular Expressions:</h4>
@@ -5250,38 +5258,40 @@ let newArr = [... arr, 4,5]; // [ 1, 2, 3, 4, 5 ]
 <h4>15. Throwing Custom Errors:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function validateNumber (num ) {
-if(typeofnum !== 'number') {
-throw new Error ('Invalid number');
-}
-try {
-validateNumber ('abc');
-} catch ( error) {
-console.error ( error. message );
+function validateNumber(num) {
+  if(typeofnum !== 'number') {
+    throw new Error('Invalid number');
+  }
+  try {
+  validateNumber('abc');
+  } catch(error) {
+  console.error(error. message);
+  }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Regular Expression to Validate Email:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let emailPattern = / A [ A\s@ ]+ @ [ A\s@ ]+ \ .[ A\s@ ]+ $ /;
-let isValidEmail = emailPattern . test ('test@example . com'); // Output: true
+let isValidEmail = emailPattern.test('test@example.com'); // Output: true
 </pre>
 <p>These examples delve deeper into JavaScript's functionalities, including advanced 
 functions, array and object manipulation, iteration methods, async operations, DOM 
 manipulation, and newer ES6 + features.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Functions and Functionality:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Higher - Order Function - Filter:</h4>
-javascript code
-let numbers = [ 1, 2, 3,4, 5 ];
-let evenNumbers = numbers . filter (num => num % 2 === 0 ); // Output: [ 2,4 ]
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+let numbers = [1, 2, 3, 4, 5];
+let evenNumbers = numbers.filter(num => num % 2 === 0 ); // Output: [ 2,4 ]
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Invoked Arrow Function Expression (IIAFE ):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (()=>{
-console.log('IIAFE executed .');
+  console.log('IIAFE executed .');
 })();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5291,15 +5301,14 @@ console.log('IIAFE executed .');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letarr =[[1,2], [3,4], [5,6]];
-let flatArray = arr.flatMap(innerArr => innerArr. map (item => item * 2 )); // Output: [ 2,4, 6,8,10,12 ]
+let flatArray = arr.flatMap(innerArr => innerArr. map (item => item * 2 )); // Output: [2,4,6,8,10,12]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let nestedArrays =[[1,2], [3,4], [5,6]];
-let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []); // Output: [1, 2, 3, 4, 5]
-6]
+let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []); // Output: [1, 2, 3, 4, 5, 6]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -5310,7 +5319,7 @@ let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []); /
 let obj = {name: 'Alice'};
 Object.seal(obj);
 obj.age = 30; // This change is not allowed in a sealed object
-let frozenObj = {name : 'Bob'};
+let frozenObj = {name: 'Bob'};
 Object.freeze(frozenObj);
 frozenObj.age = 25; // This change won't affect a frozen object
 </pre>
@@ -5319,13 +5328,13 @@ frozenObj.age = 25; // This change won't affect a frozen object
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let user = {
-name: 'Alice',
-address: {
-street: '123 Main St',
-city: 'NewYork'
-}
+  name: 'Alice',
+  address: {
+    street: '123 Main St',
+    city: 'NewYork'
+  }
 };
-let city = user? . address? . city; // Output: 'New York'
+let city = user?.address?.city; // Output: 'New York'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Loops and Iterations:</h4>
@@ -5333,25 +5342,25 @@ let city = user? . address? . city; // Output: 'New York'
 <h4>7. For ... Await Loop for Asynchronous Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function asyncOperation (value ) {
-return new Promise (resolve => {
-setTimeout (()=>{
-console.log(value );
-resolve ();
-1,1000);
+async function asyncOperation(value) {
+  return new Promise(resolve => {
+  setTimeout(() => {
+    console.log(value );
+    resolve();
+  1,1000);
 });
-async function executeAsyncOperations () {
-let values = [ 1, 2, 3 ];
-for await (let value of values ) {
-await asyncOperation (value );
+async function executeAsyncOperations() {
+  let values = [1, 2, 3];
+  for await (let value of values) {
+  await asyncOperation(value);
 }
-executeAsyncOperations ();
+executeAsyncOperations();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using Array. from with Mapping:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let newArray = Array . from ({length : 5 }, (index) => index * 2 ); // Output: [ 0, 2, 4, 6, 8 ]
+let newArray = Array.from ({length: 5}, (index) => index * 2 ); // Output: [ 0, 2, 4, 6, 8 ]
 </pre>
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5359,13 +5368,14 @@ let newArray = Array . from ({length : 5 }, (index) => index * 2 ); // Output: [
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function tryCatchFinally () {
-try {
-console.log('Try block');
-throw new Error ('Error occurred');
-} catch ( error) {
-console. error ( error. message );
-} finally {
-console.log('Finally block');
+  try {
+    console.log('Try block');
+    throw new Error ('Error occurred');
+  } catch ( error) {
+    console. error ( error. message );
+  } finally {
+    console.log('Finally block');
+  }
 }
 tryCatchFinally ();
 </pre>
@@ -5389,10 +5399,10 @@ new features like optional chaining and async / await.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {};
-Object. defineProperty ( obj, 'fullName', {
-value: 'Alice Smith',
-writable: false,
-configurable: true
+Object.defineProperty(obj, 'fullName', {
+  value: 'Alice Smith',
+  writable: false,
+  configurable: true
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5400,13 +5410,13 @@ configurable: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let animal = {
-makeSound () {
-console.log('Animal sound');
-}
+  makeSound () {
+    console.log('Animal sound');
+  }
 };
 let dog = {};
-Object. setPrototypeOf ( dog, animal);
-dog . makeSound (); // Output: 'Animal sound'
+Object.setPrototypeOf(dog, animal);
+dog.makeSound(); // Output: 'Animal sound'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
@@ -5414,19 +5424,19 @@ dog . makeSound (); // Output: 'Animal sound'
 <h4>3. Using Set to Get Unique Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers =[1,2, 2, 3, 4, 4, 5 ];
-let uniqueNumbers = [... new Set (numbers )]; // Output: [ 1, 2, 3,4, 5 ]
+let numbers =[1, 2, 2, 3, 4, 4, 5];
+let uniqueNumbers = [... new Set(numbers)]; // Output: [ 1, 2, 3, 4, 5 ]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array. find to Get First Matching Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let users = [
-{id: l,name: 'Alice'},
-{id: 2, name : 'Bob'},
-{id: 3, name : 'Charlie'}
+  {id: l, name: 'Alice'},
+  {id: 2, name: 'Bob'},
+  {id: 3, name: 'Charlie'}
 ];
-let user = users . find (user => user. id === 2 ); // Output: {id : 2, name : 'Bob'}
+let user = users.find(user => user.id === 2); // Output: {id: 2, name: 'Bob'}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Functionality:</h4>
@@ -5434,14 +5444,14 @@ let user = users . find (user => user. id === 2 ); // Output: {id : 2, name : 'B
 <h4>5. Generator Function:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function* generatorFunction () {
-yield 1;
-yield 2;
-yield 3;
+function * generatorFunction() {
+  yield 1;
+  yield 2;
+  yield 3;
 }
-let generator = generatorFunction ();
-console.log( generator. next (). value ); // Output: 1
-console.log( generator. next (). value ); // Output: 2
+let generator = generatorFunction();
+console.log(generator.next().value); // Output: 1
+console.log(generator.next().value); // Output: 2
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Async Generator Function:</h4>
@@ -7015,6 +7025,7 @@ console.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program focuses on taking two numbers as input and then displaying their sum. It prompts the user to
 enter two numbers, adds them together, and prints the result.</p>
+
 <pre>
 let num1 = parseFloat(prompt("Enter the first number:"));
 letnum2 = parseFloat(prompt("Enter the second number:"));
@@ -7030,6 +7041,7 @@ if (!isNaN(numl) && !isNaN(num2)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and calculates its square root. It then displays the result,
 ensuring that the entered number is non-negative.</p>
+
 <pre>
 let inputNumber = parseFloat(prompt("Enter a non-negative number: "));
 if (!isNaN(inputNumber) && inputNumber >= 0) {
@@ -7046,6 +7058,7 @@ if (!isNaN(inputNumber) && inputNumber >= 0) {
 calculates its area using the formula: 
 <span class="consolas">Area=12xBasexHeightArea=21xBasexHeight</span>. It then 
 displays the calculated area.</p>
+
 <pre>
 let base = parseFloat(prompt("Enter the base of the triangle: "));
 let height = parseFloat(prompt("Enter the height of the triangle: "));
@@ -7063,6 +7076,7 @@ if (!isNaN(base) && !isNaN(height) && base > 0 && height > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two variables and swaps their values. It then 
 displays the variables before and after the swap.</p>
+
 <pre>
 let variable1 = prompt("Enter the first variable:");
 let variable2 = prompt("Enter the second variable:");
@@ -7082,6 +7096,7 @@ console.log(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, 
 and c are coefficients. It uses the quadratic formula to find the roots of the equation.</p>
+
 <pre>
 // Prompt user for coefficients
 let a = parseFloat(prompt("Enter the coefficient a:"));
@@ -7114,6 +7129,7 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
 <p>This program prompts the user to enter a distance in kilometers and converts it to 
 miles using the conversion factor: 1 kilometer is approximately equal to 0.621371 miles. 
 It then displays the converted distance.</p>
+
 <pre>
 // Prompt user for distance in kilometers
 let kilometers = parseFloat(prompt("Enter the distance in kilometers:"));
@@ -7136,6 +7152,7 @@ if (!isNaN(kilometers)) {
 <p>This program converts a temperature from Celsius to Fahrenheit using the formula: 
 <span class="consolas">F = (C &ast; 9/5) + 32</span>, where F is the temperature in 
 Fahrenheit and C is the temperature in Celsius.</p>
+
 <pre>
 // Prompt user for temperature in Celsius
 let celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
@@ -7157,6 +7174,7 @@ if (!isNaN(celsius)) {
 <p>This program generates a random number between a user-defined range. It prompts the 
 user to enter the minimum and maximum values of the range, and then it displays the 
 generated random number within that range.</p>
+
 <pre>
 // Prompt user for the range
 let minRange = parseFloat(prompt("Enter the minimum value of the range:"));
@@ -7179,6 +7197,7 @@ if (!isNaN(minRange) && !isNaN(maxRange) && minRange &lt; maxRange) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and checks whether it is positive, 
 negative, or zero. It then displays the result.</p>
+
 <pre>
 // Prompt user for a number
 let number = parseFloat(prompt("Enter a number:"));
@@ -7201,6 +7220,7 @@ if (!isNaN(number)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and checks whether it is odd or even. 
 It then displays the result.</p>
+
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
@@ -7222,6 +7242,7 @@ if (!isNaN(number) && Number.isInteger(number)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter three numbers and determines and displays the 
 largest among them.</p>
+
 <pre>
 // Prompt user for three numbers
 let num1 = parseFloat(prompt("Enter the first number:"));
@@ -7244,6 +7265,7 @@ if (!isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and checks whether it is a prime 
 number or not. It then displays the result.</p>
+
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
@@ -7273,6 +7295,7 @@ if (!isNaN(number) && Number.isInteger(number) && number &gt; 1) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a starting and ending number for an interval 
 and then prints all the prime numbers within that interval.</p>
+
 <pre>
 // Prompt user for the interval
 let startNumber = parseInt(
@@ -7316,6 +7339,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 <p>This program calculates the factorial of a given number. The factorial of a non-
 negative integer <span class="consolas">n</span> , denoted as <span class="consolas">n!</span>, 
 is the product of all positive integers less than or equal to <span class="consolas">n</span>.</p>
+
 <pre>
 // Prompt user for a non-negative integer
 let number = parseInt(prompt("Enter a non-negative integer:"));
@@ -7337,6 +7361,7 @@ if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and displays its multiplication table up to a specified range
 (e.g., up to 10).</p>
+
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number for the multiplication table:"));
@@ -7363,6 +7388,7 @@ if (!isNaN(number) && Number.isInteger(number)) {
 Fibonacci sequence up to that number of terms. The Fibonacci sequence is a series of 
 numbers where each number is the sum of the two preceding ones, usually starting with 
 0 and 1.</p>
+
 <pre>
 // Prompt user for the number of terms in the Fibonacci sequence
 let numTerms = parseInt(
@@ -7390,6 +7416,7 @@ number or not. An Armstrong number (also known as a narcissistic number or plupe
 digital invariant) is a number that is the sum of its own digits each raised to the power 
 of the number of digits in the number. For example, 153 is an Armstrong number because 
 <span class="consolas">13 + 53 + 33 = 1531<sub>3</sub> + 5<sub>3</sub> + 3<sub>3</sub>=153</span>.</p>
+
 <pre>
 // Prompt user for a number
 let number = parseInt(prompt("Enter a number:"));
@@ -7421,6 +7448,7 @@ if (fisNaN(number) && Number.islnteger(number) && number > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a range (start and end) and then prints all 
 Armstrong numbers within that interval.</p>
+
 <pre>
 // Prompt user for the interval
 let startNumber = parseInt(
@@ -7469,6 +7497,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 operations. It prompts the user to enter two numbers and choose an operation (addition, 
 subtraction, multiplication, or division). It then performs the selected operation and 
 displays the result.</p>
+
 <pre>
 // Prompt user for two numbers
 let numl = parseFloat(prompt("Enter the first number:"));
@@ -7523,6 +7552,7 @@ if (lisNaN(numl) && !isNaN(num2)) {
 <span class="consolas">n</span>. 
 The sum is calculated using the formula: 
 <span class="consolas">sum = n&ast;(n + l) / 2</span>.</p>
+
 <pre>
 // Prompt user for a positive integer
 let n = parseInt(prompt("Enter a positive integer:"));
@@ -7541,13 +7571,14 @@ if (!isNaN(n) && Number.isInteger(n) && n > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two numbers and checks if they have the same 
 last digit.</p>
+
 <pre>
 // Prompt user for two numbers
 let num 1 = parse!nt(prompt("Enter the first number:"));
 let num2 = parse!nt(prompt("Enter the second number:"));
 
 // Check if inputs are valid integers
-if(
+if (
   !isNaN(numl) &&
   !isNaN(num2) &&
   Number.islnteger(numl) &&
@@ -7576,6 +7607,7 @@ if(
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two positive integers and calculates their 
 Highest Common Factor (HCF) or Greatest Common Divisor (GCD).</p>
+
 <pre>
 // Prompt user for two positive integers
 let numl = parse!nt(prompt("Enter the first positive integer:"));
@@ -7603,6 +7635,7 @@ if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two positive integers and calculates their Least 
 Common Multiple (LCM).</p>
+
 <pre>
 // Prompt user for two positive integers
 let numl = parse!nt(prompt("Enter the first positive integer:"));
@@ -7630,6 +7663,7 @@ if (’isNaN(numl) && !isNaN(num2) && Number.islnteger(numl) && Number.islnteger
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a positive integer and calculates and displays 
 its factors.</p>
+
 <pre>
 // Prompt user for a positive integer
 let number = parseInt(prompt("Enter a positive integer:"));
@@ -7654,6 +7688,7 @@ if (’isNaN(number) && Number.isInteger(number) && number > 0) {
 <p>This program calculates the sum of natural numbers up to a given positive integer using recursion. It
 prompts the user to enter a positive integer n and then calculates and displays the sum using a recursive
 function.</p>
+
 <pre>
 // Define a recursive function to calculate the sum of natural numbers
 function sumOfNaturalNumbers(n) {
@@ -7681,6 +7716,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
 <p>This program generates a random number between a specified range and allows the user 
 to guess the number. It provides feedback on whether the guessed number is too high, too 
 low, or correct. The user continues guessing until they correctly identify the random number.</p>
+
 <pre>
 // Generate a random number between 1 and 100 (you can adjust the range)
 const randomNumber = Math.floor(Math.random() &ast; 100) + 1;
@@ -7713,6 +7749,7 @@ do {
 <p>This program simulates shuffling a standard deck of playing cards. It generates a 
 deck of cards, displays the initial order, shuffles the deck, and then displays the 
 shuffled order.</p>
+
 <pre>
 // Function to create a standard deck of cards
 function createDeck() {
@@ -7738,6 +7775,7 @@ function shuffleDeck(deck) {
 const initialDeck = createDeck();
 console.log("Initial Deck:");
 console.log(initialDeck);
+
 // Shuffle the deck and display the shuffled deck
 const shuffledDeck = &lbrack;...initialDeck&rbrack;; // Create a copy to avoid modifying the original
 shuffleDeck(shuffledDeck);
@@ -7750,6 +7788,7 @@ console.log(shuffledDeck);
 <p>This program displays the Fibonacci sequence up to a specified number of terms using 
 recursion. It prompts the user to enter the number of terms and then uses a recursive 
 function to generate and display the Fibonacci sequence.</p>
+
 <pre>
 // Function to generate the Fibonacci sequence using recursion
 function fibonacci(n) {
@@ -7759,8 +7798,10 @@ function fibonacci(n) {
     return fibonacci(n -1) + fibonacci(n - 2);
   }
 }
+
 // Prompt user for the number of terms in the Fibonacci sequence
 let numTerms = parseInt(prompt("Enter the number of terms in the Fibonacci sequence:"));
+
 // Check if input is a valid non-negative integer
 if (’isNaN(numTerms) && Number.isInteger(numTerms) && numTerms >= 0) {
   console.log(`Fibonacci sequence of $ {numTerms} terms:`);
@@ -7778,6 +7819,7 @@ if (’isNaN(numTerms) && Number.isInteger(numTerms) && numTerms >= 0) {
 <p>This program calculates the factorial of a given non-negative integer using recursion. 
 It prompts the user to enter a non-negative integer and then uses a recursive function to 
 compute and display its factorial.</p>
+
 <pre>
 // Function to calculate the factorial using recursion
 function factorial(n) {
@@ -7787,8 +7829,10 @@ function factorial(n) {
     return n &ast; factorial(n -1);
   }
 }
+
 // Prompt user for a non-negative integer
 let number = parseInt(prompt("Enter a non-negative integer:"));
+
 // Check if input is a valid non-negative integer
 if (lisNaN(number) && Number.islnteger(number) && number >= 0) {
   // Calculate and display the factorial using recursion
@@ -7803,6 +7847,7 @@ if (lisNaN(number) && Number.islnteger(number) && number >= 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program converts a decimal number to its binary equivalent. It prompts the user 
 to enter a decimal number and then calculates and displays its binary representation.</p>
+
 <pre>
 // Function to convert decimal to binary
 function decimalToBinary(decimalNumber) {
@@ -7817,8 +7862,10 @@ function decimalToBinary(decimalNumber) {
   }
   return binaryResult;
 }
+
 // Prompt user for a decimal number
 let decimalNumber = parse!nt(prompt("Enter a decimal number:"));
+
 // Check if input is a valid integer
 if (!isNaN(decimalNumber) && Number jsInteger(decimalNumber) && decimalNumber >= 0) {
   // Convert and display the binary equivalent
@@ -7833,9 +7880,11 @@ if (!isNaN(decimalNumber) && Number jsInteger(decimalNumber) && decimalNumber >=
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a character and then calculates and displays 
 its ASCII value.</p>
+
 <pre>
 // Prompt user for a character
 let character = prompt("Enter a character:");
+
 // Check if input is a valid single character
 if (character.length === 1) {
   // Calculate and display the ASCII value
@@ -7850,6 +7899,7 @@ if (character.length === 1) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a given string is a palindrome or not. A palindrome is a 
 string that reads the same forward as backward.</p>
+
 <pre>
 // Function to check if a string is a palindrome
 function isPalindrome(str) {
@@ -7858,8 +7908,10 @@ function isPalindrome(str) {
   // Compare the original and reversed strings
   return cleanStr === cleanStr.split(").reverse().join(");
 }
+
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
+
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Check and display if the string is a palindrome
@@ -7877,9 +7929,11 @@ if (inputString.length > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a sentence or a list of words and then sorts 
 and displays the words in alphabetical order.</p>
+
 <pre>
 // Prompt user for a sentence or a list of words
 let inputstring = prompt("Enter a sentence or a list of words:");
+
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Split the input into an array of words
@@ -7899,9 +7953,11 @@ if (inputString.length > 0) {
 <p>This program prompts the user to enter a string, a target character, and a replacement 
 character. It then replaces all occurrences of the target character with the replacement 
 character and displays the modified string.</p>
+
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
+
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Prompt user for a target character and a replacement character
@@ -7925,9 +7981,11 @@ if (inputString.length > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a string and then reverses and displays the 
 characters of the string.</p>
+
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
+
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Reverse the string
@@ -7936,15 +7994,18 @@ if (inputString.length > 0) {
   console.log(`Reversed String: ${reversedString}`);
 } else {
   console.log("Please enter a valid string.");
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js37">37. Check the Number of Occurrences of a Character in the String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks the number of occurrences of a character in a given string:</p>
+
 <pre>
 // Prompt user for a string and a character
 let inputstring = prompt("Enter a string:");
 let targetchar = promptf'Enter the character to count:");
+
 // Check if input is valid
 if (inputString.length > 0 && targetChar.length === 1) {
   // Count occurrences of the target character
@@ -7958,11 +8019,13 @@ if (inputString.length > 0 && targetChar.length === 1) {
   console.log(`Number of occurrences of'${targetChar}' in '${inputstring}': ${count}`);
 } else {
   console.log("Please enter a valid string and a single character.");
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js38">38. Convert the First Letter of a String into Uppercase</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program converts the first letter of a string to uppercase:</p>
+
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
@@ -7983,6 +8046,7 @@ if (inputString.length > 0) {
 <h2 id="js39">39. Count the Number of Vowels in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program counts the number of vowels in a given string:</p>
+
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
@@ -8010,9 +8074,11 @@ if (inputString.length > 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a string starts and ends with certain characters using 
 the startsWith and endsWith methods in JavaScript:</p>
+
 <pre>
 // Prompt user for a string
 let inputstring = prompt("Enter a string:");
+
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Prompt user for start and end characters
@@ -8035,6 +8101,7 @@ if (inputString.length > 0) {
 <p>Replace all occurrences of a substring in a string in JavaScript, you can use the 
 <span class="consolas">replace()</span> method along with a regular expression with 
 the global ( <span class="consolas">g</span> ) flag.</p>
+
 <pre>
 // Example string
 let originalstring = "Hello world, world!";
@@ -8047,6 +8114,7 @@ let replacementstring = "universe";
 
 // Replace all occurrences using replace() with a global regex
 let modifiedString = originalString.replace(new RegExp(searchString, 'g'), replacementstring);
+
 // Display the result
 console.log(`Original String: ${originalString}`);
 console.log(`Modified String: ${modifiedString}`);
@@ -8055,25 +8123,28 @@ console.log(`Modified String: ${modifiedString}`);
 <h2 id="js42">42. Create Multiline Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program creates multiline strings using template literals (introduced in ECMAScript 6).</p>
+
 <pre>
 // Multiline string using template literals
 let multilineString = `
-This is a multiline string.
-It spans multiple lines.
-You can include line breaks and indentation easily.
+  This is a multiline string.
+  It spans multiple lines.
+  You can include line breaks and indentation easily.
 `;
+
 console.log(multilineString);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js43">43. Format Numbers as Currency Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program format numbers as currency strings:</p>
+
 <pre>
 // Example number
 let amount = 1234567.89;
 
 // Format as currency string
-let formattedAmount = amount.toLocaleString('en-US', {style: ’currency', currency: ‘USD1});
+let formattedAmount = amount.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
 
 // Display the formatted currency string
 console.log(`Formatted Amount: ${formattedAmount}`);
@@ -8083,16 +8154,18 @@ console.log(`Formatted Amount: ${formattedAmount}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random string in JavaScript, you can create a function that 
 generates a string with random characters.</p>
+
 <pre>
 function generateRandomString(length) {
-const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-let randomstring = '';
-for (let i = 0; i < length; i++) {
-  const randomIndex = Math.floor(Math.random() &ast; characters.length);
-  randomstring += characters.charAt(randomIndex);
-}
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let randomstring = '';
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() &ast; characters.length);
+    randomstring += characters.charAt(randomIndex);
+  }
   return randomstring;
 }
+
 // Generate a random string of length 8
 let randomstring = generateRandomString(8);
 
@@ -8104,6 +8177,7 @@ console.log(`Random String: ${randomstring}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a string starts with another string using the 
 <span class="consolas">startsWith</span> method.</p>
+
 <pre>
 // Example strings
 let mainString = "Hello, World!";
@@ -8119,6 +8193,7 @@ console.log(`Does the string start with '${searchString}'? ${startsWith}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program trims leading and trailing whitespaces from a string using the 
 <span class="consolas">trim()</span> method.</p>
+
 <pre>
 // Example string with leading and trailing whitespaces
 let stringWithSpaces = " Hello, World! ";
@@ -8152,14 +8227,18 @@ console.log(`Does the string contain '${substringToCheck}'? ${containsSubstring}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program compare two strings in JavaScript, you can use the standard comparison 
 operators ( <span class="consolas">=== , !== , &lt; , &gt; , &lt;= , &gt;=</span> ).</p>
+
 <pre>
 // Example strings
-let string 1 = "Hello";
+let string1 = "Hello";
 let string2 = "hello";
+
 // Case-sensitive comparison
 let caseSensitiveComparison = stringl === string2;
+
 // Case-insensitive comparison
-let caselnsensitiveComparison = string l.toLowerCase() === string2.toLowerCase();
+let caselnsensitiveComparison = stringl.toLowerCase() === string2.toLowerCase();
+
 // Display the results
 console.log(`Case-sensitive comparison: ${caseSensitiveComparison}`);
 console.log(`Case-insensitive comparison: ${caselnsensitiveComparison}`);
@@ -8173,6 +8252,7 @@ console.log(`Case-insensitive comparison: ${caselnsensitiveComparison}`);
 let originalstring = "Hello, !";
 // Encode the string to Base64 (for non-ASCII characters)
 let base64EncodedString = btoa(encodeURIComponent(originalString));
+
 // Display the result
 console.log(`Original String: ${originalstring}` );
 console.log(`Base64 Encoded String: ${base64EncodedString}`);
@@ -8182,15 +8262,20 @@ console.log(`Base64 Encoded String: ${base64EncodedString}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program replace all instances of a character in a string in JavaScript, you can use 
 the <span class="consolas">replace()</span> method with a regular expression.</p>
+
 <pre>
 // Example string
 let originalstring = "Hello, World!";
+
 // Character to replace
 let charToReplace = "1";
+
 // Replacement character
 let replacementchar = "x";
+
 // Replace all instances of charToReplace with replacementchar
 let modifiedString = originalString.replace(new RegExp(charToReplace, 'g'), replacementchar);
+
 // Display the result
 console.log(`Original String: ${originalString}`);
 console.log(`Modified String: ${modifiedString}`);
@@ -8201,13 +8286,17 @@ console.log(`Modified String: ${modifiedString}`);
 <p>This program replace all line breaks (newline characters) in a string with a specific 
 string or character, you can use the <span class="consolas">replace()</span> method with 
 a regular expression.</p>
+
 <pre>
 // Example string with line breaks
 let stringWithLineBreaks = "Hello,\nWorld!\nThis is a new line.";
+
 // Replacement string or character
 let replacementstring =
+
 // Replace all line breaks with the replacementstring
 let stringWithoutLineBreaks = stringWithLineBreaks.replace(/\n/g, replacementstring);
+
 // Display the result
 console.log("Original String:");
 console.log(stringWithLineBreaks);
@@ -8220,20 +8309,22 @@ console.log(stringWithoutLineBreaks);
 <p>This program checks if a year is a leap year with a simple function. A leap year is a 
 year that is evenly divisible by 4, except for years that are divisible by 100. However, 
 years divisible by 400 are leap years.</p>
+
 <pre>
 function isLeapYear(year) {
-  if ((year % 4 === 0 &&year % 100 !== 0) || (year % 400 === 0)) {
+  if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
     return true;
   } else {
     return false;
   }
 }
+
 // Example usage
 let yearToCheck = 2024;
 if (isLeapYear(yearToCheck)) {
-  console.log(' $ {yearToCheck} is a leap year.');
+  console.log(`${yearToCheck} is a leap year.`);
 } else {
-  console.log(' $ {yearToCheck} is not a leap year.');
+  console.log(`${yearToCheck} is not a leap year.`);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
