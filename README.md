@@ -992,7 +992,7 @@ numbers.</p>
 <h4>Number.MAX_VALUE Property:</h4>
 <pre>console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e + 308</pre>
 <h4>Number.MIN_VALUE Property:</h4>
-<pre>console.log(MIN_VALUE);  // Output: 5e-324</pre>
+<pre>console.log(Number.MIN_VALUE);  // Output: 5e-324</pre>
 <p>This comprehensive guide covers various aspects of JavaScript, including arithmetic operations,
 assignnment, data types, fuctions, objects, events, strings, string methods, string search, string
 templates, numbers, BigInt, number methods, and number properties, providing examples and 
@@ -1011,7 +1011,7 @@ let numbers = &lbrack;1,2,3,4,5&rbrack;; // Array of numbers
 let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 </pre>
 <h4>Accessging Elements:</h4>
-<pre>console.log(fruites&lbrack;0&rbrack;; // Output: 'apple'</pre>
+<pre>console.log(fruits&lbrack;0&rbrack;); // Output: 'apple'</pre>
 <h4>Modifying Elements:</h4>
 <pre>fruits&lbrack;1&rbrack; = 'grapes'; // Changing 'banana' to 'grapes'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1023,7 +1023,7 @@ efficiently.</p>
 <h3>Examples of JS Array Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>push() Method:</h4>
-<pre>fuits.push('melon'); // Adds 'melon' to the end of the array</pre>
+<pre>fruits.push('melon'); // Adds 'melon' to the end of the array</pre>
 <h4>pop() Method:</h4>
 <pre>let removedFruit = fruits.pop(); // Removes and returns the last element ('melon')</pre>
 <h4>splice() Method:</h4>
@@ -1066,7 +1066,7 @@ elements can be modified.</p>
 <pre>
 const weekdays = &lbrack;'Monday','Tuesday','Wednesday'&rbrack;;
 weekdays&lbrack;1&rbrack; = 'Thursday'; // Modifying an element is allowed
-// weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;; // This will throw an error
+weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex27">27. JS Dates</h2>
@@ -1091,7 +1091,7 @@ to different formats.</p>
 <h4>Formatting to String:</h4>
 <pre>let dateString = specificDate.toDateString(); // Convert to a human - readable string</pre>
 <h4>Formatting to Locale String:</h4>
-<pre>let localeString = specificDate.toLocaleString(); // Convert to local date and time string</pre>
+<pre>let localeString = specificDate.toLocaleString('en-US'); // Convert to local date and time string</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex29">29. JS Date Get Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1138,7 +1138,7 @@ and functions.</p>
 <h4>Generating Random Number:</h4>
 <pre>let randomNumber = Math.random(); // Random number between 0 and 1</pre>
 <h4>Generating Random Integer:</h4>
-<pre>let randominteger = Math.floor(Math.random () * 10); // Random integer between 0 and 9</pre>
+<pre>let randomInteger = Math.floor(Math.random() * 10); // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex33">33. JS Booleans</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10025,7 +10025,7 @@ function isPrime(num) {
 }
 
 function sumOfDigits(number) {
-  return number.toString().split('').reduce((sum, digit) => sum + parselnt(digit, 10), 0);
+  return number.toString().split('').reduce((sum, digit) => sum + parseInt(digit, 10), 0);
 }
 
 function primeFactors(number) {
@@ -11234,6 +11234,7 @@ console.log(' The surface area of the triangular prism is: ${triangularPrismSurf
 <p>This program checks if a given positive integer is both a Fibonacci number and a prime 
 number. A Fibonacci prime is a number that is both a Fibonacci number and a prime number.</p>
 <pre>
+
 function isPrime(number) {
   if (number <= 1) {
     return false;
@@ -11242,51 +11243,68 @@ function isPrime(number) {
     if (number % i === 0) {
       return false;
     }
-    return true;
-  function isPerfectSquare(number) {
-const sqrt = Math.sqrt(number);
-return sqrt === Math.floor(sqrt);
-function isFibonacciPrime(number) {
-return isPrime(number) && isPerfectSquare(5 &ast; Math.pow(number, 2) + 4) || isPerfectSquare(5 &ast; Math.pow(number, 2)
--4);
+  }
+  return true;
 }
+
+function isPerfectSquare(number) {
+  const sqrt = Math.sqrt(number);
+  return sqrt === Math.floor(sqrt);
+}
+
+function isFibonacciPrime(number) {
+return isPrime(number) && isPerfectSquare(5 &ast; Math.pow(number, 2) + 4) 
+  || isPerfectSquare(5 &ast; Math.pow(number, 2) - 4);
+}
+
 // Example usage
-const fibonacciPrimeCandidate = 13;// Replace with the number you want to check
+const fibonacciPrimeCandidate = 13; // Replace with the number you want to check
 if (isFibonacciPrime(fibonacciPrimeCandidate)) {
-console.log(' ${fibonacciPrimeCandidate} is a Fibonacci Prime!');
-} else {
-console.log(' ${fibonacciPrimeCandidate} is not a Fibonacci Prime.');
+  console.log(`${fibonacciPrimeCandidate} is a Fibonacci Prime!`);
+  } else {
+  console.log(`${fibonacciPrimeCandidate} is not a Fibonacci Prime.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js158">158. Check if a Number is a Squareful Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program checks if a given positive integer is a squareful number. A squareful number is a positive
-integer where the square of each prime factor occurs in its prime factorization.</p>
+<p>This program checks if a given positive integer is a squareful number. A squareful 
+number is a positive integer where the square of each prime factor occurs in its prime 
+factorization.</p>
+
 <pre>
 function isSquarefulNumber(number) {
-const factors = getFactors(number);
-const uniqueFactors = &lbrack;...new Set(factors)&rbrack;;
-for (const factor of uniqueFactors) {
-const count = factors.filter((num) => num === factor).length;
-if (count % 2 !== 0) {
-return false;
+  const factors = getFactors(number);
+  const uniqueFactors = &lbrack;...new Set(factors)&rbrack;;
+
+  for (const factor of uniqueFactors) {
+    const count = factors.filter((num) => num === factor).length;
+    if (count % 2 !== 0) {
+      return false;
+    }
+  }
+  return true;
 }
-}
-return true;
+
 function getFactors(number) {
-const factors = &lbrack;&rbrack;;
-for (let i = 1; i < = Math.sqrt(number); i++) {
-if (number % i === 0) {
-factors.push(i);
-if (i !== Math.sqrt(number)) {
-factors.push(number / i);
-return factors;
+  const factors = &lbrack;&rbrack;;
+  for (let i = 1; i < = Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      factors.push(i);
+      if (i !== Math.sqrt(number)) {
+        factors.push(number / i);
+      }
+    }
+  }
+  return factors;
+}
+
 // Example usage
 const squarefulNumber = 36; // Replace with the number you want to check
 if (isSquarefulNumber(squarefulNumber)) {
-console.log(' ${squarefulNumber} is a Squareful Number!');
+  console.log(`${squarefulNumber} is a Squareful Number!`);
 } else {
-console.log(' ${squarefulNumber} is not a Squareful Number.');
+  console.log(`${squarefulNumber} is not a Squareful Number.`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js159">159. Find the Area of a Tetrahedron</h2>
@@ -11295,15 +11313,17 @@ console.log(' ${squarefulNumber} is not a Squareful Number.');
 edges ( <span class="consolas">a</span> ). The formula for the surface area of a regular 
 tetrahedron is <span class="consolas">Surface Area = &radic;3 &ast; a^2</span>, where 
 <span class="consolas">a</span> is the length of an edge.</p>
+
 <pre>
 function calculateTetrahedronSurfaceArea(edgeLength) {
-const surfaceArea = Math.sqrt(3) &ast; Math.pow(edgeLength, 2);
-return surfaceArea;
+  const surfaceArea = Math.sqrt(3) &ast; Math.pow(edgeLength, 2);
+  return surfaceArea;
 }
+
 // Example usage
 const edgeLength = 5; // Replace with the length of an edge of the tetrahedron
 const tetrahedronSurfaceArea = calculateTetrahedronSurfaceArea(edgeLength);
-console.log(' The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.toFixed(2)}');
+console.log(`The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js160">160. Check if a Number is an Automorphic Number</h2>
@@ -11311,18 +11331,23 @@ console.log(' The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.t
 <p>This program checks if a given positive integer is an automorphic number. An automorphic number is a
 number whose square ends with the number itself. For example, 5 is an automorphic number because 5 A2 =
 25, and 25 ends with 5.</p>
+
 <pre>
 function isAutomorphicNumber(number) {
-const square = number &ast; number;
-const numberDigits = String(number);
-const squareDigits = String(square);
-return squareDigits.endsWith(numberDigits);
+  const square = number &ast; number;
+  const numberDigits = String(number);
+  const squareDigits = String(square);
+  
+  return squareDigits.endsWith(numberDigits);
+}
+
 // Example usage
 const automorphicNumber = 25; // Replace with the number you want to check
 if (isAutomorphicNumber(automorphicNumber)) {
-console.log(' ${automorphicNumber} is an Automorphic Number!');
+  console.log(`${automorphicNumber} is an Automorphic Number!`);
 } else {
-console.log(' ${automorphicNumber} is not an Automorphic Number.');
+  console.log(`${automorphicNumber} is not an Automorphic Number.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js161">161. Calculate the Area of a Pyramid</h2>
@@ -11333,43 +11358,54 @@ base side ( <span class="consolas">s</span> ) and the slant height (
 <span class="consolas">Surface Area = s^2 + 2 &ast; s &ast; l</span>, where
 <span class="consolas">s</span> is the length of a base side and 
 <span class="consolas">l</span> is the slant height.</p>
+
 <pre>
 function calculatePyramidSurfaceArea(sideLength, slantHeight) {
-const baseArea = Math.pow(sideLength, 2);
-const lateralArea = 2 &ast; sideLength &ast; slantHeight;
-const surfaceArea = baseArea + lateralArea;
-return surfaceArea;
+  const baseArea = Math.pow(sideLength, 2);
+  const lateralArea = 2 &ast; sideLength &ast; slantHeight;
+  const surfaceArea = baseArea + lateralArea;
+  return surfaceArea;
+}
+
 // Example usage
 const sideLength = 4; // Replace with the length of a side of the pyramid's base
 const slantHeight = 5; // Replace with the slant height of the pyramid
 const pyramidSurfaceArea = calculatePyramidSurfaceArea(sideLength, slantHeight);
-console.log(' The surface area of the pyramid is: ${pyramidSurfaceArea.toFixed(2)}');
+console.log(`The surface area of the pyramid is: ${pyramidSurfaceArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js162">162. Check if a Number is a Smith-Morra Gambit Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program checks if a given positive integer is a Smith-Morra Gambit number. A Smith-Morra Gambit
-number is a positive integer that can be expressed as the sum of the digits of its prime factors, including
-repetitions.</p>
+<p>This program checks if a given positive integer is a Smith-Morra Gambit number. A 
+Smith-Morra Gambit number is a positive integer that can be expressed as the sum of the 
+digits of its prime factors, including repetitions.</p>
+
 <pre>
 function isSmithMorraGambitNumber(number) {
-// Function to calculate the sum of digits
-const digitSum = (n) => n.toString().split(").reduce((acc, digit) => acc + parselnt(digit), 0);
-// Function to calculate the prime factorization of a number
-const primeFactorization = (n) => {
-const factors = &lbrack;&rbrack;;
-for (let i = 2;i<=n;i++){
-while (n % i === 0) {
-factors.push(i);
-n/= i;
+  // Function to calculate the sum of digits
+  const digitSum = (n) => n.toString().split('').reduce((acc, digit) => 
+    acc + parseInt(digit), 0);
+
+  // Function to calculate the prime factorization of a number
+  const primeFactorization = (n) => {
+    const factors = &lbrack;&rbrack;;
+    for (let i = 2; i <= n; i++) {
+      while (n % i === 0) {
+        factors.push(i);
+        n /= i;
+      }
+    }
+    return factors;
+  };
+
+  // Get the prime factorization of the number and calculate the sum of its digits
+  const factors = primeFactorization(number);
+  const sumOfDigits = factors.reduce((acc, factor) => acc + digitSum(factor), 0);
+
+  // Check if the sum of digits of prime factors equals the original number
+  return sumOfDigits === digitSum(number);
 }
-return factors;
-1;
-// Get the prime factorization of the number and calculate the sum of its digits
-const factors = primeFactorization(number);
-const sumOfDigits = factors.reduce((acc, factor) => acc + digitSum(factor), 0);
-// Check if the sum of digits of prime factors equals the original number
-return sumOfDigits === digitSum(number);
+
 // Example: Check if 22 is a Smith-Morra Gambit Number
 console.log(isSmithMorraGambitNumber(22)); // Output: true
 </pre>
@@ -11377,25 +11413,35 @@ console.log(isSmithMorraGambitNumber(22)); // Output: true
 <h2 id="js163">163. Check if a Number is a Solitary Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a number is a solitary number:</p>
+
 <pre>
 function getProperDivisorsSum(number) {
-let sum = 1; // Start with 1 as every number is divisible by 1
-for (let i = 2; i < = Math.sqrt(number); i++) {
-if (number % i === 0) {
-sum + = i;
-if (i !== number / i) {
-sum + = number / i;
-return sum;
-function isSolitaryNumber(number) {
-const sum = getProperDivisorsSum(number);
-return number !== sum;
+  let sum = 1; // Start with 1 as every number is divisible by 1
+  
+  for (let i = 2; i < = Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      sum + = i;
+
+      if (i !== number / i) {
+        sum + = number / i;
+      }
+    }
+  }
+  return sum;
 }
+
+function isSolitaryNumber(number) {
+  const sum = getProperDivisorsSum(number);
+  return number !== sum;
+}
+
 // Example usage
 const solitaryNumber = 28; // Replace with the number you want to check
 if (isSolitaryNumber(solitaryNumber)) {
-console.log(' ${solitaryNumber} is a Solitary Number!');
+  console.log(`${solitaryNumber} is a Solitary Number!`);
 } else {
-console.log(' ${solitaryNumber} is not a Solitary Number.');
+  console.log(`${solitaryNumber} is not a Solitary Number.`);
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js164">164. Basic Tower of Hanoi Puzzle</h2>
@@ -11405,15 +11451,17 @@ consists of three pegs and a number of disks of different sizes, which can slide
 any peg. The puzzle starts with the disks in a neat stack in ascending order of size 
 on one peg, the smallest at the top. The objective is to move the entire stack to 
 another peg, obeying the following simple rules:</p>
+
 <ol start="1">
   <li>Only one disk can be moved at a time.</li>
   <li>Each move consists of taking the upper disk from one of the stacks and placing it 
     on top of another stack or on an empty peg.</li>
   <li>No disk may be placed on top of a smaller disk.</li>
 </ol>
+
 <pre>
 function towerOfHanoi(n, source, auxiliary, target) {
-  if(n=== 1) {
+  if(n === 1) {
     console.log('Move disk 1 from ${source} to ${target}');
     return;
   }
@@ -11421,12 +11469,14 @@ function towerOfHanoi(n, source, auxiliary, target) {
   console.log('Move disk${n} from ${source} to ${target}');
   towerOfHanoi(n -1, auxiliary, source, target);
 }
+
 // Example usage
 const numberOfDisks = 3;
-const sourcePeg = 'A1;
+const sourcePeg = 'A';
 const auxiliaryPeg = 'B';
-const targetPeg = 'C;
-console.log('Tower of Hanoi solution for ${numberOfDisks} disks:');
+const targetPeg = 'C';
+
+console.log(`Tower of Hanoi solution for ${numberOfDisks} disks:`);
 towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11439,10 +11489,13 @@ top and bottom bases (<span class="consolas">r1</span> and
 is <span class="consolas">Surface Area = &pi; &ast; (rl + r2) &ast; l + &pi; &ast; rl^2 
 + &pi; &ast; r2^2</span>, where <span class="consolas">&pi;</span> is the mathematical 
 constant Pi.</p>
+
 <pre>
 function surfaceAreaOfFrustum(rl, r2, l) {
   const surfaceArea = Math.PI &ast; (rl + r2) &ast; l + Math.PI &ast; rl &ast;&ast; 2 + Math.PI &ast; r2 &ast;&ast; 2;
   console.log(`Surface Area of the frustum is: ${surfaceArea}`);
+}
+
 // Example: Calculate the surface area of a frustum with top radius 4, bottom radius 8, and slant height 6
 surfaceAreaOfFrustum(4, 8, 6);
 </pre>
@@ -11452,6 +11505,7 @@ surfaceAreaOfFrustum(4, 8, 6);
 <p>This program checks if a given positive integer is a Motzkin number. A Motzkin number is a number in
 the sequence of Motzkin numbers, which counts the number of different ways of drawing non-intersecting
 chords between points on a circle (not necessarily touching every point with a chord).</p>
+
 <pre>
 function isMotzkinNumber(number) {
   if (number < 0) {
@@ -11465,8 +11519,10 @@ function isMotzkinNumber(number) {
       + (3 &ast; n - 3) &ast; </i>motzkinNumbers&lbrack;n - 2&rbrack;) / (n + 2);
     motzkinNumbers.push(nextMotzkin);
   }
+
+  return motzkinNumbers.includes(number);
 }
-return motzkinNumbers.includes(number);
+
 // Example usage
 const motzkinNumber = 5; // Replace with the number you want to check
 if (isMotzkinNumber(motzkinNumber)) {
@@ -11514,10 +11570,12 @@ triangles to each side of the existing triangles.</p>
 
 <pre>
 function calculateKochSnowflakeArea(sideLength, iterations) {
-const sqrt3 = Math.sqrt(3);
-const area = (4 &ast; sqrt3 / 5) &ast; Math.pow((sideLength / 3), 2) &ast; Math.pow(3 / 2, iterations);
-return area;
+  const sqrt3 = Math.sqrt(3);
+  const area = (4 &ast; sqrt3 / 5) &ast; 
+    Math.pow((sideLength / 3), 2) &ast; Math.pow(3 / 2, iterations);
+  return area;
 }
+
 // Example usage
 const sideLength = 100; // Replace with the side length of the original equilateral triangle
 const iterations = 4; // Replace with the number of iterations
@@ -11548,7 +11606,7 @@ function startChat() {
   const userinput = prompt('You:');
   if (userinput !== null) {
     const response = chatbot(userlnput);
-    console.log('Chatbot:‘, response);
+    console.log('Chatbot:', response);
     startChatO; // Continue the conversation
   } else {
     console.log('Goodbye!');
@@ -11566,11 +11624,12 @@ startChat();
 function convertToHex(red, green, blue) {
   const toHex = value => {
     const hex = parseInt(value, 10).toString(16);
-    return hex.length === 1 ? 'O' + hex:hex;
+    return hex.length === 1 ? '0' + hex:hex;
   };
   const hexRed = toHex(red);
   const hexGreen = toHex(green);
   const hexBlue = toHex(blue);
+  
   return `#${hexRed}${hexGreen}${hexBlue}`;
 }
 
@@ -11578,6 +11637,7 @@ function convertToHex(red, green, blue) {
 const redValue = prompt('Enter the Red value (0-255):');
 const greenValue = prompt('Enter the Green value (0-255):');
 const blueValue = prompt('Enter the Blue value (0-255):');
+
 const hexResult = convertToHex(redValue, greenValue, blueValue);
 console.log(`HEX: ${hexResult}`);
 </pre>
@@ -12231,7 +12291,7 @@ function mathQuizGame() {
     const numl = Math.floor(Math.random() &ast; 10) + 1;
     const num2 = Math.floor(Math.random() &ast; 10) + 1;
     const correctAnswer = numl + num2;
-    const userAnswer = parselnt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
+    const userAnswer = parseInt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
     if (’isNaN(userAnswer) && userAnswer === correctAnswer) {
       console.log("Correct! Well done!");
       score++;
@@ -12629,10 +12689,10 @@ the formula <span class="consolas">Sum = n &ast; (n + 1) / 2</span>.</p>
 <pre>
 function findMaxIntegerForSum(targetSum) {
   let currentSum = 0;
-  let maxinteger = 0;
-  while (currentSum + maxinteger + 1 <= targetSum) {
+  let maxInteger = 0;
+  while (currentSum + maxInteger + 1 <= targetSum) {
     maxlnteger++;
-    currentSum += maxinteger;
+    currentSum += maxInteger;
   }
   console.log(`Maximum Integer (n) for Sum <= ${targetSum}: ${maxinteger}`);
 }
@@ -12775,9 +12835,9 @@ function reverseBitsl6BitUnsignedShort(integer) {
   const binaryRepresentation = integer.toString(2).padStart(16, '0');
   const reversedBinary = binaryRepresentation.split(").reverse().join(");
   const reversedlnteger = parseInt(reversedBinary, 2);
-  console.log(`Original Integer: $ {integer}`);
+  console.log(`Original Integer: ${integer}`);
   console.log(`Binary Representation: ${binaryRepresentation}`);
-  console.log(`Reversed Binary: $ {reversedBinary}`);
+  console.log(`Reversed Binary: ${reversedBinary}`);
   console.log(`Reversed Integer: ${reversedlnteger}`);
 }
 // Example: Reverse bits of the 16-bit unsigned short integer 5678
@@ -12862,10 +12922,10 @@ nextPrimeNumber( 10);
 binary representation, reverses the bits, and converts it back to an integer.</p>
 <pre>
 function reverseOrderOfBits(integer) {
-  const binaryRepresentation = integer.toString(2).padStart(8, ’O'); // Assuming 8 bits for simplicity
+  const binaryRepresentation = integer.toString(2).padStart(8, ’0'); // Assuming 8 bits for simplicity
   const reversedBinary = binaryRepresentation.split(").reverse().join(");
   const reversedInteger = parseInt(reversedBinary, 2);
-  console.log(`Original Integer: $ {integer}`);
+  console.log(`Original Integer: ${integer}`);
   console.log(`Binary Representation: ${binaryRepresentation}`);
   console.log(`Reversed Binary: ${reversedBinary}`);
   console.log(`Reversed Integer: ${reversedInteger}`);
