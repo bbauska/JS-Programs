@@ -4515,7 +4515,7 @@ window.history.pushState({page: 1}, "Title", "?page = 1");
 <p>The Web Storage API provides methods to store data in the browser.</p>
 <h4>Using localstorage:</h4>
 <pre>
-localstorage.setitem("key", "value");
+localstorage.setItem("key", "value");
 let data = localstorage.getItem("key");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5197,12 +5197,12 @@ booleans, or null.</p>
   "key6":["arrayValuel", "arrayValue2"]
 }
 </pre>
-<h4>JSON vs XML</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON vs XML</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more 
 lightweight and easier to read and parse than XML.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example Comparison between JSON and XML:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example Comparison between JSON and XML:</h4>
 <h5>json code</h5>
 <pre>
 // JSON
@@ -5221,7 +5221,9 @@ lightweight and easier to read and parse than XML.</p>
   &lt;city&gt;New York&lt;/city&gt;
 &lt;/user>&gt;
 </pre>
-<h4>JSON Data Types</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Data Types</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
 <h4>Example of Different Data Types in JSON:</h4>
 <h5>json code</h5>
@@ -5235,33 +5237,33 @@ lightweight and easier to read and parse than XML.</p>
   "array":[1,2,3]
 }
 </pre>
-<h4>JSON Parse</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Parse</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of JSON Parsing:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of JSON Parsing:</h4>
 <pre>
 let jsonString = '{"name": "Alice", "age": 28}';
 let jsonObj = JSON.parse(jsonString);
 console.log(jsonObj.name); // Output: Alice
 </pre>
-<h4>JSON Stringify</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Stringify</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a 
 JSON string.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of JSON Stringification:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of JSON Stringification:</h4>
 <pre>
 let obj = {name: "Bob ", age: 30};
 let jsonString = JSON.stringify(obj);
 console.log(jsonString); // Output: {"name": "Bob", "age": 30}
 </pre>
-<h4>JSON Objects</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Objects</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON objects contain key - value pairs enclosed in curly braces {}. Keys must be 
 strings, and values can be of any JSON data type.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of a JSON Object:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of a JSON Object:</h4>
 <h5>json code</h5>
 <pre>
 {
@@ -5270,22 +5272,22 @@ strings, and values can be of any JSON data type.</p>
   "city": "London"
 }
 </pre>
-<h4>JSON Arrays</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Arrays</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
 be of any JSON data type.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of a JSON Array:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>json code</h4>
+<h4>Example of a JSON Array:</h4>
+<h5>json code</h5>
 <pre>
 ["apple", "banana", "orange"]
 </pre>
-<h4>JSON Server</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON Server</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON is commonly used to transfer data between a server and a web client in web 
 development. Servers often provide data in JSON format through APIs.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of JSON Data from a Server:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of JSON Data from a Server:</h4>
 <h5>json code</h5>
 <pre>
 // Received from a server API endpoint
@@ -5295,12 +5297,12 @@ development. Servers often provide data in JSON format through APIs.</p>
   "content": "This is a sample post content."
 }
 </pre>
-<h4>JSON PHP</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON PHP</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode() and json.decode() 
 functions respectively, to convert data to and from JSON format.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of Encoding and Decoding JSON in PHP:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of Encoding and Decoding JSON in PHP:</h4>
 <h5>php code</h5>
 <pre>
 // Encoding PHP array to JSON
@@ -5311,11 +5313,11 @@ $jsonData = json.encode($data);
 $jsonString = '{" name": " Alice ", "age": 30}';
 $decodedData = json.decode($jsonString, true);
 </pre>
-<h4>JSON HTML</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>JSON HTML</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of Using JSON Data in HTML:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of Using JSON Data in HTML:</h4>
 <h5>html code</h5>
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
@@ -5338,9 +5340,7 @@ users.forEach(user =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different 
 domain in web development to bypass the same - origin policy limitations.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Example of JSONP Request:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Example of JSONP Request:</h4>
 <pre>
 function handleData(data) {
   console.log(data);
@@ -5356,7 +5356,6 @@ JSONP, with examples and explanations for each topic. JSON plays a crucial role 
 interchange in web development due to its simplicity, ease of use, and widespread support.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating a JSON Object:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {
   "name": "John",
@@ -5366,14 +5365,12 @@ let person = {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Accessing JSON Object Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(person.name); // Output: John
 console.log(person.age); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Nested JSON Objects:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employee = {
   "name": "Alice",
@@ -5386,7 +5383,6 @@ let employee = {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. JSON Array of Objects:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let books = [
   {"title": "Book1", "author": "Author1"},
@@ -5396,21 +5392,18 @@ let books = [
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Converting JSON to String:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonString = JSON.stringify(person);
 console.log(jsonString); // Output: {"name": "John", "age": 30, "city": "New York"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Parsing JSON String to Object:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonObject = JSON.parse('{"name": "Alice", "age": 25, "city": "London"}');
 console.log(jsonObject.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Fetching JSON Data from URL (using Fetch API):</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch('data.json')
   .then(response => response.json())
@@ -5419,7 +5412,6 @@ fetch('data.json')
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Displaying JSON Data Dynamically in HTML:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = {"name":"Bob", "age": 28};
 let displayDiv = document.getElementById('jsonDataDisplay');
@@ -5427,7 +5419,6 @@ displayDiv.innerHTML = ` <p>Name: ${jsonData.name} </p><p>Age: ${jsonData.age}</
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Handling JSON Data in Forms:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document. getElementById ('myForm');
 form.addEventListener('submit', function(event) {
@@ -5442,7 +5433,6 @@ form.addEventListener('submit', function(event) {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Stringifying and Parsing a More Complex Object:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let complexObj = {
   "name":"Sam",
@@ -5458,7 +5448,6 @@ console.log(parsedObj.addresses[0].address); // Output: 123 Main St
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. Filtering JSON Array Data:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employees = [
   {"name": "John", "department":" HR"},
@@ -5471,7 +5460,6 @@ let hrEmployees = employees.filter(employee => employee.department === "HR");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let product = {"name":"Chair", "price": 50};
 product.price = 60;
@@ -5479,7 +5467,6 @@ console.log(product); // Output: { " name " Chair", " price 60 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Removing a Property from JSON Object:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = {"name":"Kate", "age": 25};
 delete data.age;
@@ -5487,16 +5474,14 @@ console.log(data); // Output: {"name":"Kate"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Using JSON with Local Storage:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let userData = {"username":"user123", "email":"user@example.com"};
-localstorage.setitem('userData', JSON.stringify(userData));
+localstorage.setItem('userData', JSON.stringify(userData));
 let storedData = JSON.parse(localstorage.getItem('userData'));
 console.log(storedData.email); // Output: user@example.com
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Handling JSON Date Strings:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = {"date": "2023 - 12 - 31T08 : 00 : 00Z"};
 let date = new Date(jsonData.date);
@@ -5504,7 +5489,6 @@ console.log(date.toDateString()); // Output: Fri Dec 31 2023
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Using JSON in Asynchronous Functions:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   try {
@@ -5512,27 +5496,26 @@ async function fetchData() {
     let data = await response.json();
     console.log(data);
   } catch(error) {
-    console.error('Error: error');
+    console.error('Error:', error);
   }
-  fetchData ();
 }
+fetchData();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. JSON Serialization with Custom Functions:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {
-" name " Joe ",
-"birthday": new Date ('1990 - 01 - 15T00 : 00 : 00Z'),
-" tojson function () {
-return * { " name " ${this.name}", " birthday" ${this.birthday.toISOString ()}" }';
+  "name": "Joe",
+  "birthday": new Date('1990-01-15T00:00:00Z'),
+  "toJson": function() {
+    return `{"name":"${this.name}", "birthday":"${this.birthday.toISOString()}"}`;
+  }
 };
-let jsonString = obj.tojson ();
-console.log(jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
+let jsonString = obj.toJson();
+console.log(jsonString); // Output: {"name":"Joe", "birthday":"1990-01-15T00:00:00.000Z"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Handling JSON Data from an API (Using Axios):</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 axios.get('https://api.example.com/data')
   .then(response => console.log(response.data))
@@ -5540,16 +5523,14 @@ axios.get('https://api.example.com/data')
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Merging JSON Objects:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let objl = {"name":"Tom", "age": 30};
 let obj2 = {"city":"Paris", "country":"France"};
 let mergedObj = { ... objl, ... obj2};
-console.log(mergedObj); // Output: {"name":"Tom", "age" 30, "city":"Paris", "country":"France"}
+console.log(mergedObj); // Output: {"name":"Tom", "age": 30, "city":"Paris", "country":"France"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Mapping JSON Data to Another Structure:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = [
   {"id": 1, "name":"Item1"},
@@ -5563,8 +5544,15 @@ console.log(mappedData);
 <p>These examples showcase different aspects of using JSON in JavaScript, including 
 creating, manipulating, parsing, and working with JSON data in various scenarios.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex94">94. JS vs jQuery: A Comprehensive Comparison</h2>
+<h2 id="ex94">94. JavaScript vs jQuery: A Comprehensive Comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
+
+
+
+
 <p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is 
 easy for humans to read and write and easy for machines to parse and generate. It is 
 commonly used to transmit data between a server and a web application.</p>
@@ -5903,7 +5891,7 @@ console.log(data); // Output: {"name": "Kate"}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let userData = {"username": "user123", "email": "user@example.com"};
-localstorage.setitem('userData', JSON.stringify(userData));
+localstorage.setItem('userData', JSON.stringify(userData));
 let storedData = JSON.parse(localstorage.getItem('userData'));
 console.log(storedData.email); // Output: user@example.com
 </pre>
@@ -12881,8 +12869,8 @@ if (isPronicNumber(pronicNumber)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js149">149. Basic Minesweeper Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Creating a basic Minesweeper game involves generating a grid with mines and numbers, allowing the player
-to uncover cells, and providing feedback on the presence of mines.</p>
+<p>Creating a basic Minesweeper game involves generating a grid with mines and numbers, 
+allowing the player to uncover cells, and providing feedback on the presence of mines.</p>
 <pre>
 class MinesweeperGame {
   constructor(rows, cols, numMines) {
