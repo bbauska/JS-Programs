@@ -890,9 +890,9 @@ var list = {
   value: 1,
   rest: {
     value: 2,
-	rest: {
-	  value: 3,
-	  rest: null
+    rest: {
+      value: 3,
+      rest: null
     }
   }
 };
@@ -1835,8 +1835,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
   }<br>
   runGame(GAME_LEVELS, DOMDisplay);
 &lt;/script&gt;
-&lt;/body&gt;
-</pre>
+&lt;/body&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el42">42. A Platform Game: A monster</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1889,8 +1888,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 ..................................
 `), DOMDisplay);
   &lt;/script&gt;
-&lt;/body&gt;
-</pre>
+&lt;/body&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el43">43. Drawing on Canvas: Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1957,8 +1955,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.fill();
   }
   star(440, 20);
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el44">44. Drawing on Canvas: The pie chart</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1997,8 +1994,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.fillStyle = result.color;
     cx.fill();
   });
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el45">45. Drawing on Canvas: A bouncing ball</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2036,8 +2032,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.arc(x, y, radius, 0, 7);
     cx.fill();
   }
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el46">46. HTTP and Forms: Content negotiation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2053,8 +2048,7 @@ async function showTypes() {
     console.log(`${type}: ${await resp.text()}\n`);
   }
 }<br>
-showTypes();
-</pre>
+showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el47">47. HTTP and Forms: A JavaScript workbench</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2075,8 +2069,7 @@ showTypes();
       outputNode.innerText = "Error: " + e;
     }
   });
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el48">48. HTTP and Forms: Conway's Game of Life</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2159,8 +2152,7 @@ showTypes();
       running = setInterval(turn, 400);
     }
   });
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el49">49. A Pixel Art Editor: Keyboard bindings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2212,8 +2204,7 @@ showTypes();
   }<br>
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el50">50. </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2248,8 +2239,7 @@ showTypes();
   }<br>
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el51">51. A Pixel Art Editor: Circles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2283,8 +2273,7 @@ showTypes();
     tools: Object.assign({}, baseTools, {circle})
   });
   document.querySelector("div").appendChild(dom);
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el52">52. A Pixel Art Editor: Proper lines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2331,8 +2320,7 @@ showTypes();
     tools: {draw, line, fill, rectangle, pick}
   });
   document.querySelector("div").appendChild(dom);
-&lt;/script&gt;
-</pre>
+&lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el53">53. Node.js: Search tool</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2351,8 +2339,7 @@ function search(file) {
   } else if (searchTerm.test(readFileSync(file, "utf8"))) {
     console.log(file);
   }
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el54">54. Node.js: Directory creation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2401,8 +2388,7 @@ SkillShareServer.prototype.updated = function() {
   });
 };<br>
 // The line that starts the server must be changed to
-new SkillShareServer(loadTalks()).start(8000);
-</pre>
+new SkillShareServer(loadTalks()).start(8000);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2458,7 +2444,6 @@ class SkillShareApp {
   syncState(state) {
     if (state.talks == this.talks) return;
     this.talks = state.talks;<br>
-
     for (let talk of state.talks) {
       let cmp = this.talkMap[talk.title];
       if (cmp && cmp.talk.presenter == talk.presenter &&
@@ -2478,8 +2463,7 @@ class SkillShareApp {
       }
     }
   }
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el57">57. JS and Performance: Pathfinding</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
