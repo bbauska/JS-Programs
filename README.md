@@ -4677,7 +4677,7 @@ echo "Hello from PHP!";
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200 ) {
+  if (this.readyState == 4 && this.status == 200) {
     console.log(this.responseText);
   }
 };
@@ -4765,12 +4765,13 @@ function loadContent() {
 </pre>
 <h4>content.html (Sample Content):</h4>
 <h5>html code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Welcome to Dynamic Content</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This content was loaded dynamically using AJAX. </p>
-This example demonstrates a simple button that triggers an AJAX request to load content from an external HTML file
-and displays it on the webpage without refreshing the entire page.
+<pre>
+&lt;h2&gt;Welcome to Dynamic Content&lt;/h2&gt;
+&lt;p&gt;This content was loaded dynamically using AJAX.&lt;/p&gt;
+</pre>
+<p>This example demonstrates a simple 
+button that triggers an AJAX request to load content from an external HTML file and 
+displays it on the webpage without refreshing the entire page.</p>
 <h4>AJAX Example 4: Form Submission with AJAX</h4>
 <h5>HTML:</h5>
 <h5>html code</h5>
@@ -4817,9 +4818,10 @@ if ($_SERVER["REQUEST-METHOD"] == "POST") {
 }
 ?&gt;
 </pre>
-<p>This example demonstrates a form submission using AJAX. When the form is submitted, the data is sent
-asynchronously to a server - side PHP script for processing. The response from the server is displayed on the webpage
-without refreshing the entire page.</p>
+<p>This example demonstrates a form submission using AJAX. When the form is submitted, 
+the data is sent asynchronously to a server - side PHP script for processing. The 
+response from the server is displayed on the webpage without refreshing the entire 
+page.</p>
 <h4>AJAX Example 5: Fetching JSON Data</h4>
 <pre>
 fetch('data.json')
@@ -4839,10 +4841,11 @@ fetch('data.json')
   "city": "New York"
 }
 </pre>
-<p>This example utilizes the Fetch API to make an AJAX request to fetch JSON data from a file. Upon successful retrieval,
-the JSON data is processed and used within the JavaScript code.</p>
-<p>These additional examples showcase various use cases of AJAX, such as loading dynamic content, form submission
-without page refresh, and fetching and using JSON data asynchronously.</p>
+<p>This example utilizes the Fetch API to make an AJAX request to fetch JSON data from a 
+file. Upon successful retrieval, the JSON data is processed and used within the JavaScript 
+code.</p>
+<p>These additional examples showcase various use cases of AJAX, such as loading dynamic 
+content, form submission without page refresh, and fetching and using JSON data asynchronously.</p>
 <h4>AJAX Example 6: Image Gallery with AJAX</h4>
 <h5>HTML:</h5>
 <h5>html code</h5>
@@ -4890,9 +4893,9 @@ function loadimages () {
   // Add more image objects as needed
 ]
 </pre>
-<p>This example demonstrates loading images dynamically into an image gallery on a webpage using AJAX. The images
-and their respective URLs are stored in a JSON file, which is fetched asynchronously, and the images are displayed in the
-gallery.</p>
+<p>This example demonstrates loading images dynamically into an image gallery on a 
+webpage using AJAX. The images and their respective URLs are stored in a JSON file, 
+which is fetched asynchronously, and the images are displayed in the gallery.</p>
 <h4>AJAX Example 7: Autocomplete Search</h4>
 <h5>HTML:</h5>
 <h5>html code</h5>
@@ -4925,7 +4928,7 @@ function search() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>search.php(Server-side Script Handling Search):</p>
+<h4>search.php (Server-side Script Handling Search):</h4>
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -4939,11 +4942,13 @@ $results = [
 echo json.encode($results); // Return results as JSON
 ?&gt;
 </pre>
-<p>This example demonstrates an autocomplete search feature using AJAX. As the user types in the search input field,
-an AJAX request is made to a server - side PHP script ( search. php ) that processes the search query and returns
-matching results in JSON format, which are then displayed as autocomplete suggestions.</p>
-<p>These additional examples showcase different functionalities of AJAX, such as creating an image gallery dynamically
-and implementing an autocomplete search feature, using asynchronous data fetching and manipulation on a webpage.</p>
+<p>This example demonstrates an autocomplete search feature using AJAX. As the user types 
+in the search input field, an AJAX request is made to a server-side PHP script (search.php) 
+that processes the search query and returns matching results in JSON format, which are then 
+displayed as autocomplete suggestions.</p>
+<p>These additional examples showcase different functionalities of AJAX, such as creating 
+an image gallery dynamically and implementing an autocomplete search feature, using 
+asynchronous data fetching and manipulation on a webpage.</p>
 <h4>AJAX Example 8: Live Data Update</h4>
 <h5>HTML:</h5>
 <h5>html code</h5>
@@ -4971,18 +4976,18 @@ and implementing an autocomplete search feature, using asynchronous data fetchin
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>live_data.php(Server - side Script Providing Live Data):</p>
+<h4>live_data.php (Server - side Script Providing Live Data):</h4>
 <h5>php code</h5>
 <pre>
 &lt;?php
 // Simulate live data update
-Sdata = [ 'value' =&gt; rand (1,100)]; // Generate random value
+Sdata = ['value' =&gt; rand (1,100)]; // Generate random value
 echo json_encode($data); // Return live data as JSON
 ?&gt;
 </pre>
-<p>This example demonstrates updating live data on a webpage at regular intervals using AJAX. The JavaScript function
-updateData uses setinterval to fetch updated data from the server - side PHP script (live_data. php ) every 5 seconds
-and displays it on the webpage.</p>
+<p>This example demonstrates updating live data on a webpage at regular intervals using 
+AJAX. The JavaScript function updateData uses setinterval to fetch updated data from the 
+server - side PHP script (live_data. php ) every 5 seconds and displays it on the webpage.</p>
 <h4>AJAX Example 9: Infinite Scroll</h4>
 <h5>HTML:</h5>
 <h5>html code</h5>
@@ -4999,19 +5004,19 @@ and displays it on the webpage.</p>
 &lt;/style&gt;
 &lt;script&gt;
 let page = 1;
-function loadMoreContent () {
+function loadMoreContent() {
   let content = document.getElementById('content')
   let scrollHeight = content.scrollHeight;
   let scrollTop = content.scrollTop;
   let offsetHeight = content.offsetHeight;
   if (scrollHeight - scrollTop === offsetHeight) {
-    fetch (`content.php?page = ${page}`)
+    fetch(`content.php?page = ${page}`)
       .then(response =&gt; response.text())
       .then(data =&gt; {
         content.innerHTML += data;
         page++;
       })
-      .catch (error =&gt; console.error('Error :error));
+      .catch(error =&gt; console.error('Error :error));
   }
 }
 window.onscroll = loadMoreContent;
@@ -5024,7 +5029,7 @@ window.onscroll = loadMoreContent;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<h4>content.php(Server-side Script Providing Content):</h4>
+<h4>content.php (Server-side Script Providing Content):</h4>
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -5034,7 +5039,7 @@ $start = ($page - 1) * $limit; // Calculate starting index
 // Fetch content based on page number and limit
 // Example :$results = fetchDataFromDatabase($start, $limit);
 // Generate sample content for demonstration
-$results = range ($start + 1, $start + $limit);
+$results = range($start + 1, $start + $limit);
 foreach ($results as $result) {
   echo" &lt;p&gt;Item $result&lt;/p&gt;";
 }
@@ -5075,21 +5080,22 @@ function uploadFile () {
       alert('File uploaded successfully!');
     } else {
       alert('Error uploading file.');
-    };
+    }
+  };
   xhr.send(formData);
 }
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;input type ="file" id ="fileinput"&gt;
-&lt;button onclick =" uploadFile ()"&gt;Upload&lt;/button&gt;
-&lt;div id ="progressBarContainer"&gt;
-&lt;divid ="progressBar"&gt;&lt;/div&gt;
+&lt;input type = "file" id = "fileinput"&gt;
+&lt;button onclick ="uploadFile()"&gt;Upload&lt;/button&gt;
+&lt;div id = "progressBarContainer"&gt;
+&lt;divid = "progressBar"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>upload.php(Server - side Script for File Upload):</p>
+<h4>upload.php (Server-side Script for File Upload):</h4>
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -5108,9 +5114,7 @@ if ($_SERVER['REQUEST-METHOD'] === 'POST' && isset($_FILES['file'])) {
 When a user selects a file and clicks the " Upload" button, the file is uploaded 
 asynchronously to the server using an XMLHttpRequest. The progress bar visually indicates 
 the upload progress.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 11: Displaying Time Dynamically</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -5137,7 +5141,7 @@ function displayTime() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>getTime.php(Server-side Script to Get Current Time):</p>
+<h4>getTime.php (Server-side Script to Get Current Time):</h4>
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -5899,9 +5903,9 @@ console.log(storedData.email); // Output: user@example.com
 <h4>15. Handling JSON Date Strings:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let jsonData = { " date ": " 2023 - 12 - 31T08 : 00 : 00Z " };
+let jsonData = {"date": "2023-12-31T08:00:00Z"};
 let date = new Date(jsonData.date);
-console.log(date.toDateString ()); // Output: Fri Dec 31 2023
+console.log(date.toDateString()); // Output: Fri Dec 31 2023
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Using JSON in Asynchronous Functions:</h4>
@@ -7602,11 +7606,11 @@ immediatePromise.then(result => console.log(result)); // Output: 'Immediate reso
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>3. Using Array.findindex:</h4>
+<h4>3. Using Array.findIndex:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [5,12,8,130,44];
-const index = array.findindex(element => element > 10); // Output: 1 (index of first element > 10)
+const index = array.findIndex(element => element > 10); // Output: 1 (index of first element > 10)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.fill:</h4>
@@ -7937,26 +7941,26 @@ console.log(memoizedSum(2, 3)); // Output: 5 (Retrieved from cache)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>3. Using Array. reduce with Initial Value:</h4>
+<h4>3. Using Array.reduce with Initial Value:</h4>
 <pre>
 const array = [1, 2, 3, 4, 5];
 const sum = array.reduce((acc, curr) => acc + curr, 0); // Output: 15
 </pre>
-<h4>4. Array. findindex with Custom Predicate:</h4>
+<h4>4. Array.findIndex with Custom Predicate:</h4>
 <pre>
-const numbers = [10, 20, 30,40, 50];
-const index = numbers.findindex(num => num > 25 ); // Output: 2 (Index of first element > 25 )
+const numbers = [10, 20, 30, 40, 50];
+const index = numbers.findIndex(num => num > 25); // Output: 2 (Index of first element > 25)
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-</pre>
-<h4>5. Object. entries with Object. fromEntries:</h4>
+<h4>5. Object.entries with Object.fromEntries:</h4>
 <pre>
 const obj = {name: 'Alice', age: 30};
-const entries = Object.entries(obj); // Output: [[ 'name', 'Alice' ], [ 'age', 30 ]]
-const reconstructedObj = Object.fromEntries(entries );
+const entries = Object.entries(obj); // Output: [['name', 'Alice'], ['age', 30]]
+const reconstructedObj = Object.fromEntries(entries);
 </pre>
-<h4>6. Object. freeze for Immutable Objects:</h4>
+<h4>6. Object.freeze for Immutable Objects:</h4>
 <pre>
 const obj = {prop: 'value'};
 Object.freeze(obj);
@@ -7965,7 +7969,7 @@ obj.prop = 'newValue'; // Assignment not allowed in a frozen object
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>7. Promise . resolve and Promise . reject:</h4>
+<h4>7. Promise.resolve and Promise.reject:</h4>
 <pre>
 const resolvedPromise = Promise.resolve('Resolved');
 const rejectedPromise = Promise.reject('Rejected');
@@ -8004,7 +8008,7 @@ const compose = (... funcs) => funcs.reduce((f, g) => (... args) => f(g(... args
 const addAndMultiply = compose(multiply, add);
 console.log(addAndMultiply(3, 4)); // Output :21(3+4*3)
 </pre>
-<h4>2. Using Function . toString () to Get Function Source Code:</h4>
+<h4>2. Using Function.toString() to Get Function Source Code:</h4>
 <pre>
 function greet() {
   console.log('Hello!');
@@ -8121,12 +8125,12 @@ const reversedArray = array.slice().reverse(); // Output: [5, 4, 3, 2, 1]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>5. Using Object. fromEntries to Convert Array to Object:</h4>
+<h4>5. Using Object.fromEntries to Convert Array to Object:</h4>
 <pre>
 const entries = [[’a',1],['b',2],['c',3]];
 const obj = Object.fromEntries(entries); // Output: {a: 1, b: 2, c: 3}
 </pre>
-<h4>6. Object. assign for Merging Objects:</h4>
+<h4>6. Object.assign for Merging Objects:</h4>
 <pre>
 constobjl = {a: l,b: 2};
 constobj2 = {b: 3,c: 4};
