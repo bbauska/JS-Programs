@@ -762,15 +762,16 @@ for (let y = 0; y < size; y++) {
   }
   board += "\n";
 }
+
 console.log(board);
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
-&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;
+&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
-&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;
+&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
-&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;
+&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
-&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;
+&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el4">04. Functions</h2>
@@ -845,11 +846,9 @@ peanuts: 0.59026798116852
 </pre>
 <pre>
 var journal = [];
-
 function addEntry(events, squirrel) {
   journal.push({events, squirrel});
 }
-
 function phi(table) {
   return (table[3] * table[0] - table[2] * table[1]) /
     Math.sqrt((table[2] + table[3]) *
@@ -857,7 +856,6 @@ function phi(table) {
               (table[1] + table[3]) *
               (table[0] + table[2]));
 }
-
 function tableFor(event, journal) {
   let table = [0, 0, 0, 0];
   for (let i = 0; i < journal.length; i++) {
@@ -868,7 +866,6 @@ function tableFor(event, journal) {
   }
   return table;
 }
-
 function journalEvents(journal) {
   let events = [];
   for (let entry of journal) {
@@ -880,7 +877,6 @@ function journalEvents(journal) {
   }
   return events;
 }
-
 function max(...numbers) {
   let result = -Infinity;
   for (let number of numbers) {
@@ -888,7 +884,6 @@ function max(...numbers) {
   }
   return result;
 }
-
 var list = {
   value: 1,
   rest: {
@@ -906,7 +901,6 @@ var list = {
 <pre>
 function range(start, end, step = start < end ? 1 : -1) {
   let array = [];
-
   if (step > 0) {
     for (let i = start; i <= end; i += step) array.push(i);
   } else {
@@ -914,7 +908,6 @@ function range(start, end, step = start < end ? 1 : -1) {
   }
   return array;
 }
-
 function sum(array) {
   let total = 0;
   for (let value of array) {
@@ -938,7 +931,6 @@ function reverseArray(array) {
   }
   return output;
 }
-
 function reverseArrayInPlace(array) {
   for (let i = 0; i < Math.floor(array.length / 2); i++) {
     let old = array[i];
@@ -964,7 +956,6 @@ function arrayToList(array) {
   }
   return list;
 }
-
 function listToArray(list) {
   let array = [];
   for (let node = list; node; node = node.rest) {
@@ -972,11 +963,9 @@ function listToArray(list) {
   }
   return array;
 }
-
 function prepend(value, list) {
   return {value, rest: list};
 }
-
 function nth(list, n) {
   if (!list) return undefined;
   else if (n == 0) return list.value;
@@ -996,18 +985,18 @@ function deepEqual(a, b) {
   if (a === b) return true;
   if (a == null || typeof a != "object" ||
       b == null || typeof b != "object") return false;
-
+<br>
   let keysA = Object.keys(a), keysB = Object.keys(b);
-
+<br>
   if (keysA.length != keysB.length) return false;
-
   for (let key of keysA) {
     if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
   }
   return true;
 }
-
+<br>
 let obj = {here: {is: "an"}, object: 2};
+
 console.log(deepEqual(obj, obj)); // → true
 console.log(deepEqual(obj, {here: 1, object: 2})); // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
@@ -1017,7 +1006,7 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let arrays = [[1, 2, 3], [4, 5], [6]];
-
+<br>
 console.log(arrays.reduce((flat, current) => flat.concat(current), [])); 
 // → [1, 2, 3, 4, 5, 6]
 </pre>
@@ -1030,7 +1019,7 @@ function loop(start, test, update, body) {
     body(value);
   }
 }
-
+<br>
 loop(3, n => n > 0, n => n - 1, console.log);
 // → 3
 // → 2
@@ -1045,11 +1034,11 @@ function every(array, predicate) {
     if (!predicate(element)) return false;
   }
   return true;
-}
+}<br>
 function every2(array, predicate) {
   return !array.some(element => !predicate(element));
 }
-
+<br>
 console.log(every([1, 3, 5], n => n < 10)); // → true
 console.log(every([2, 4, 16], n => n < 10)); // → false
 console.log(every([], n => n < 10)); // → true
@@ -1066,7 +1055,7 @@ function dominantDirection(text) {
   if (counted.length == 0) return "ltr";
   return counted.reduce((a, b) => a.count > b.count ? a : b).name;
 }
-
+<br>
 console.log(dominantDirection("Hello!")); // → ltr
 console.log(dominantDirection("Hey, مساء الخير")); // → rtl
 </pre>
@@ -1089,7 +1078,7 @@ class Vec {
     return Math.sqrt(this.x * this.x + this.y * this.y);
   }
 }
-
+<br>
 console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
 console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
 console.log(new Vec(3, 4).length); // → 5
@@ -1121,7 +1110,7 @@ class Group {
     return group;
   }
 }
-
+<br>
 let group = Group.from([10, 20]);
 console.log(group.has(10)); // → true
 console.log(group.has(30)); // → false
@@ -1158,7 +1147,7 @@ class Group {
   &lbrack;Symbol.iterator&rbrack;() {
     return new GroupIterator(this);
   }
-}
+}<br>
 class GroupIterator {
   constructor(group) {
     this.group = group;
@@ -1174,7 +1163,7 @@ class GroupIterator {
       return result;
     }
   }
-}
+}<br>
 for (let value of Group.from(["a", "b", "c"])) {
   console.log(value);
 }
@@ -1187,7 +1176,7 @@ for (let value of Group.from(["a", "b", "c"])) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let map = {one: true, two: true, hasOwnProperty: true};
-
+<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1201,7 +1190,7 @@ function countSteps(state, robot, memory) {
     state = state.move(action.direction);
     memory = action.memory;
   }
-}
+}<br>
 function compareRobots(robot1, memory1, robot2, memory2) {
   let total1 = 0, total2 = 0;
   for (let i = 0; i < 100; i++) {
@@ -1266,7 +1255,7 @@ PGroup.empty = new PGroup([]);
 let a = PGroup.empty.add("a");
 let ab = a.add("b");
 let b = ab.delete("a");
-
+<br>
 console.log(b.has("b")); // → true
 console.log(a.has("b")); // → false
 console.log(b.has("a")); // → false
@@ -1282,7 +1271,7 @@ function primitiveMultiply(a, b) {
   } else {
     throw new MultiplicatorUnitFailure("Klunk");
   }
-}
+}<br>
 function reliableMultiply(a, b) {
   for (;;) {
     try {
@@ -1293,7 +1282,7 @@ function reliableMultiply(a, b) {
     }
   }
 }
-
+<br>
 console.log(reliableMultiply(8, 8)); // → 64
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
