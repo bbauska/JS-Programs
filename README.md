@@ -992,7 +992,6 @@ function deepEqual(a, b) {
   return true;
 }<br>
 let obj = {here: {is: "an"}, object: 2};<br>
-
 console.log(deepEqual(obj, obj)); // → true
 console.log(deepEqual(obj, {here: 1, object: 2})); // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
@@ -1900,11 +1899,9 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
 &lt;script src="code/levels.js"&gt;&lt;/script&gt;
 &lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;<br>
-
 &lt;canvas width="600" height="200"&gt;&lt;/canvas&gt;
 &lt;script&gt;
   let cx = document.querySelector("canvas").getContext("2d");<br>
-
   function trapezoid(x, y) {
     cx.beginPath();
     cx.moveTo(x, y);
@@ -1915,7 +1912,6 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.stroke();
   }
   trapezoid(30, 30);<br>
-
   function diamond(x, y) {
     cx.translate(x + 30, y + 30);
     cx.rotate(Math.PI / 4);
@@ -1924,7 +1920,6 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.resetTransform();
   }
   diamond(140, 30);<br>
-
   function zigzag(x, y) {
     cx.beginPath();
     cx.moveTo(x, y);
@@ -1935,7 +1930,6 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.stroke();
   }
   zigzag(240, 20);<br>
-
   function spiral(x, y) {
     let radius = 50, xCenter = x + radius, yCenter = y + radius;
     cx.beginPath();
@@ -1949,7 +1943,6 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.stroke();
   }
   spiral(340, 20);<br>
-
   function star(x, y) {
     let radius = 50, xCenter = x + radius, yCenter = y + radius;
     cx.beginPath();
@@ -1974,23 +1967,19 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
 &lt;script src="code/levels.js"&gt;&lt;/script&gt;
 &lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;<br>
-
 &lt;canvas width="600" height="300"&gt;&lt;/canvas&gt;
 &lt;script&gt;
   let cx = document.querySelector("canvas").getContext("2d");
   let total = results.reduce(function(sum, choice) {
     return sum + choice.count;
   }, 0);<br>
-
   let currentAngle = -0.5 * Math.PI;
   let centerX = 300, centerY = 150;<br>
-
   results.forEach(function(result) {
     let sliceAngle = (result.count / total) * 2 * Math.PI;
     cx.beginPath();
     cx.arc(centerX, centerY, 100,
            currentAngle, currentAngle + sliceAngle);<br>
-
     let middleAngle = currentAngle + 0.5 * sliceAngle;
     let textX = Math.cos(middleAngle) * 120 + centerX;
     let textY = Math.sin(middleAngle) * 120 + centerY;
@@ -2003,7 +1992,6 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.font = "15px sans-serif";
     cx.fillStyle = "black";
     cx.fillText(result.name, textX, textY);
-
     currentAngle += sliceAngle;
     cx.lineTo(centerX, centerY);
     cx.fillStyle = result.color;
@@ -2019,11 +2007,9 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
 &lt;script src="code/levels.js"&gt;&lt;/script&gt;
 &lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;<br>
-
 &lt;canvas width="400" height="400"&gt;&lt;/canvas&gt;
 &lt;script&gt;
   let cx = document.querySelector("canvas").getContext("2d");<br>
-
   let lastTime = null;
   function frame(time) {
     if (lastTime != null) {
@@ -2033,17 +2019,14 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);<br>
-
   let x = 100, y = 300;
   let radius = 10;
   let speedX = 100, speedY = 60;<br>
-
   function updateAnimation(step) {
     cx.clearRect(0, 0, 400, 400);
     cx.strokeStyle = "blue";
     cx.lineWidth = 4;
-    cx.strokeRect(25, 25, 350, 350);
-    
+    cx.strokeRect(25, 25, 350, 350);<br>
     x += step * speedX;
     y += step * speedY;
     if (x &lt; 25 + radius || x &gt; 375 - radius) speedX = -speedX;
@@ -2064,14 +2047,12 @@ const types = ["text/plain",
                "text/html",
                "application/json",
                "application/rainbows+unicorns"];<br>
-
 async function showTypes() {
   for (let type of types) {
     let resp = await fetch(url, {headers: {accept: type}});
     console.log(`${type}: ${await resp.text()}\n`);
   }
 }<br>
-
 showTypes();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2080,11 +2061,9 @@ showTypes();
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;<br>
-
 &lt;textarea id="code"&gt;return "hi";&lt;/textarea&gt;
 &lt;button id="button"&gt;Run&lt;/button&gt;
 &lt;pre id="output"&gt;&lt;/pre&gt;<br>
-
 &lt;script&gt;
   document.querySelector("#button").addEventListener("click", () =&gt; {
     let code = document.querySelector("#code").value;
@@ -2104,16 +2083,12 @@ showTypes();
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;<br>
-
 &lt;div id="grid"&gt;&lt;/div&gt;
 &lt;button id="next"&gt;Next generation&lt;/button&gt;
 &lt;button id="run"&gt;Auto run&lt;/button&gt;<br>
-
 &lt;script&gt;
   const width = 30, height = 15;<br>
-
   // I will represent the grid as an array of booleans.<br>
-
   let gridNode = document.querySelector("#grid");
   // This holds the checkboxes that display the grid in the document.
   let checkboxes = [];
@@ -2126,7 +2101,6 @@ showTypes();
     }
     gridNode.appendChild(document.createElement("br"));
   }<br>
-
   function gridFromCheckboxes() {
     return checkboxes.map(box =&gt; box.checked);
   }
@@ -2140,9 +2114,7 @@ showTypes();
     }
     return result;
   }<br>
-
   checkboxesFromGrid(randomGrid());<br>
-
   // This does a two-dimensional loop over the square around the given
   // x,y position, counting all fields that have a cell but are not the
   // center field.
@@ -2157,7 +2129,6 @@ showTypes();
     }
     return count;
   }<br>
-
   function nextGeneration(grid) {
     let newGrid = new Array(width * height);
     for (let y = 0; y &lt; height; y++) {
@@ -2175,13 +2146,10 @@ showTypes();
     }
     return newGrid;
   }<br>
-
   function turn() {
     checkboxesFromGrid(nextGeneration(gridFromCheckboxes()));
   }<br>
-
   document.querySelector("#next").addEventListener("click", turn);<br>
-
   let running = null;
   document.querySelector("#run").addEventListener("click", () =&gt; {
     if (running) {
@@ -2199,7 +2167,6 @@ showTypes();
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;<br>
-
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
   class PixelEditor {
@@ -2243,7 +2210,6 @@ showTypes();
       for (let ctrl of this.controls) ctrl.syncState(state);
     }
   }<br>
-
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
 &lt;/script&gt;
@@ -2254,7 +2220,6 @@ showTypes();
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
-
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
   PictureCanvas.prototype.syncState = function(picture) {
@@ -2262,7 +2227,6 @@ showTypes();
     drawPicture(picture, this.dom, scale, this.picture);
     this.picture = picture;
   }<br>
-
   function drawPicture(picture, canvas, scale, previous) {
     if (previous == null ||
         previous.width != picture.width ||
@@ -2271,7 +2235,6 @@ showTypes();
       canvas.height = picture.height * scale;
       previous = null;
     }<br>
-
     let cx = canvas.getContext("2d");
     for (let y = 0; y &lt; picture.height; y++) {
       for (let x = 0; x &lt; picture.width; x++) {
@@ -2283,7 +2246,6 @@ showTypes();
       }
     }
   }<br>
-
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
 &lt;/script&gt;
@@ -2294,7 +2256,6 @@ showTypes();
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
-
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
   function circle(pos, state, dispatch) {
@@ -2318,7 +2279,6 @@ showTypes();
     drawCircle(pos);
     return drawCircle;
   }<br>
-
   let dom = startPixelEditor({
     tools: Object.assign({}, baseTools, {circle})
   });
@@ -2331,7 +2291,6 @@ showTypes();
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
-
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
   function drawLine(from, to, color) {
@@ -2353,7 +2312,6 @@ showTypes();
     }
     return points;
   }<br>
-
   function draw(pos, state, dispatch) {
     function connect(newPos, state) {
       let line = drawLine(pos, newPos, state.color);
@@ -2363,14 +2321,12 @@ showTypes();
     connect(pos, state);
     return connect;
   }<br>
-
   function line(pos, state, dispatch) {
     return end =&gt; {
       let line = drawLine(pos, end, state.color);
       dispatch({picture: state.picture.draw(line)});
     };
   }<br>
-
   let dom = startPixelEditor({
     tools: {draw, line, fill, rectangle, pick}
   });
@@ -2382,13 +2338,10 @@ showTypes();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const {statSync, readdirSync, readFileSync} = require("fs");<br>
-
 let searchTerm = new RegExp(process.argv[2]);<br>
-
 for (let arg of process.argv.slice(3)) {
   search(arg);
 }<br>
-
 function search(file) {
   let stats = statSync(file);
   if (stats.isDirectory()) {
@@ -2406,9 +2359,7 @@ function search(file) {
 <pre>
 // This code won't work on its own, but is also included in the
 // js/file_server.js file, which defines the whole system.<br>
-
 const {mkdir} = require("fs").promises;<br>
-
 methods.MKCOL = async function(request) {
   let path = urlPath(request.url);
   let stats;
@@ -2429,11 +2380,8 @@ methods.MKCOL = async function(request) {
 <pre>
 // This isn't a stand-alone file, only a redefinition of a few
 // fragments from skillsharing/skillsharing_server.js<br>
-
 const {readFileSync, writeFile} = require("fs");<br>
-
 const fileName = "./talks.json";<br>
-
 function loadTalks() {
   let json;
   try {
@@ -2443,18 +2391,15 @@ function loadTalks() {
   }
   return Object.assign(Object.create(null), json);
 }<br>
-
 SkillShareServer.prototype.updated = function() {
   this.version++;
   let response = this.talkResponse();
   this.waiting.forEach(resolve => resolve(response));
   this.waiting = [];<br>
-
   writeFile(fileName, JSON.stringify(this.talks), e => {
     if (e) throw e;
   });
 };<br>
-
 // The line that starts the server must be changed to
 new SkillShareServer(loadTalks()).start(8000);
 </pre>
@@ -2464,7 +2409,6 @@ new SkillShareServer(loadTalks()).start(8000);
 <pre>
 / This isn't a stand-alone file, only a redefinition of the main
 // component from skillsharing/public/skillsharing_client.js<br>
-
 class Talk {
   constructor(talk, dispatch) {
     this.comments = elt("div");
@@ -2492,7 +2436,6 @@ class Talk {
           elt("button", {type: "submit"}, "Add comment")));
     this.syncState(talk);
   }<br>
-
   syncState(talk) {
     this.talk = talk;
     this.comments.textContent = "";
@@ -2501,7 +2444,6 @@ class Talk {
     }
   }
 }<br>
-
 class SkillShareApp {
   constructor(state, dispatch) {
     this.dispatch = dispatch;
@@ -2513,7 +2455,6 @@ class SkillShareApp {
                    renderTalkForm(dispatch));
     this.syncState(state);
   }<br>
-
   syncState(state) {
     if (state.talks == this.talks) return;
     this.talks = state.talks;<br>
@@ -2555,14 +2496,11 @@ function findPath(a, b) {
     }
   }
 }<br>
-
 let graph = treeGraph(4, 4);
 let root = graph[0], leaf = graph[graph.length - 1];
 console.log(findPath(root, leaf).length); // → 4<br>
-
 leaf.connect(root);
-console.log(findPath(root, leaf).length); // → 2
-</pre>
+console.log(findPath(root, leaf).length); // → 2</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el58">58. JS and Performance: Timing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2579,15 +2517,13 @@ function findPath(a, b) {
     }
   }
 }<br>
-
 function time(findPath) {
   let graph = treeGraph(6, 6);
   let startTime = Date.now();
   let result = findPath(graph[0], graph[graph.length - 1]);
   console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
 }<br>
-time(findPath);
-</pre>
+time(findPath);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el59">59. JS and Performance: Optimizing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2598,7 +2534,6 @@ function time(findPath) {
   let result = findPath(graph[0], graph[graph.length - 1]);
   console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
 }<br>
-
 function findPath_set(a, b) {
   let work = [[a]];
   let reached = new Set([a]);
@@ -2613,9 +2548,7 @@ function findPath_set(a, b) {
     }
   }
 }<br>
-
 time(findPath_set);<br>
-
 function pathToArray(path) {
   let result = [];
   for (; path; path = path.via) result.unshift(path.at);
@@ -13965,8 +13898,8 @@ function textRPGAdventure() {
       console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
     }
   }
-}
-// Start the text-based RPG adventure
+}<br>
+// Example: Start the text-based RPG adventure
 textRPGAdventure();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13978,9 +13911,8 @@ textRPGAdventure();
 function rollDice() {
   const result = Math.floor(Math.random() &ast; 6) + 1;
   console.log(`You rolled a ${result}`);
-}
-
-// Simulate rolling the dice
+}<br>
+// Example: Simulate rolling the dice
 rollDice();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13996,8 +13928,7 @@ function convertSecondsToTime(seconds) {
   const remainingSeconds = seconds % 60;
   
   console.log(`Time: ${hours} hours, ${minutes} minutes, ${remainingSeconds} seconds`);
-}
-
+}<br>
 // Example: Convert 3665 seconds to time
 const inputSeconds = 3665;
 convertSecondsToTime(inputSeconds);  / Time: 1 hours, 1 minutes, 5 seconds
@@ -14017,8 +13948,7 @@ function generateBarChart(data) {
     
     console.log(`${value} | ${bar}`);
   }
-}
-
+}<br>
 // Example: Generate a bar chart for data
 const chartData = &lbrack;5,8,12,4,6&rbrack;;
 generateBarChart(chartData);
@@ -14034,8 +13964,7 @@ function generateRightAngledTriangle(height) {
     const stars = '&ast;'.repeat(i);
     console.log(stars);
   }
-}
-
+}<br>
 // Example: Generate a right-angled triangle with a height of 5
 const triangleHeight = 5;
 generateRightAngledTriangle(triangleHeight);
@@ -14054,8 +13983,7 @@ function textBasedCalculator(expression) {
   } catch (error) {
     console.error('Error:', error.message);
   }
-}
-
+}<br>
 // Example: Evaluate a mathematical expression
 const userInput = prompt('Enter a mathematical expression:');
 textBasedCalculator(userInput);
@@ -14072,8 +14000,7 @@ function generateNumberPyramid(height) {
     const numbers = Array.from({length: i}, (_, index) => index + l).join(' ');
     console.log(spaces + numbers);
   }
-}
-
+}<br>
 // Example: Generate a number pyramid with a height of 4
 const pyramidHeight = 4;
 generateNumberPyramid(pyramidHeight);
@@ -14092,8 +14019,7 @@ function generateDiamondPattern(height) {
     const stars = '&ast;'.repeat(height - 2 &ast; spaces);
     console.log(''.repeat(spaces) + stars);
   }
-}
-
+}<br>
 // Example: Generate a diamond pattern with a height of 5
 const diamondHeight = 5;
 generateDiamondPattern(diamondHeight);
@@ -14154,8 +14080,8 @@ function hangmanGame() {
       }
     }
   }
-}
-// Start the Hangman game
+}<br>
+// Example: Start the Hangman game
 hangmanGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14189,9 +14115,9 @@ function countdownTimer() {
       secondsRemaining--;
     }
   }, 1000);
-}
+}<br>
 
-// Start the countdown timer
+// Example: Start the countdown timer
 countdownTimer();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14223,7 +14149,7 @@ function madLibsGame() {
   console.log("The end.");
 }
 
-// Start the Mad Libs game
+// Example: Start the Mad Libs game
 madLibsGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14263,7 +14189,7 @@ function guessTheNumberGame() {
   console.log(`Sorry, you've run out of attempts. The number was ${secretNumber}.`);
 }
 
-// Start the Guess the Number Game
+// Example: Start the Guess the Number Game
 guessTheNumberGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14317,7 +14243,7 @@ function whackAMoleGame() {
   }
 }
 
-// Start the Whack-a-Mole Game
+// Example: Start the Whack-a-Mole Game
 whackAMoleGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14363,7 +14289,7 @@ function coinTossingGame() {
   }
 }
 
-// Start the Coin Tossing Game
+// Example: Start the Coin Tossing Game
 coinTossingGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14389,7 +14315,7 @@ fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibon
 console.log(`Fibonacci numbers up to $ {limit}:`);
 console.log(fibonacciNumbers.slice(0, limit + 1));
 }
-// Start the Fibonacci Number Generator
+// Example: Start the Fibonacci Number Generator
 fibonacciNumberGenerator();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14417,7 +14343,7 @@ function mathQuizGame() {
   }
   console.log(`Quiz complete! Your final score is: ${score} out of ${maxQuestions}`);
 }
-// Start the Math Quiz Game
+// Example: Start the Math Quiz Game
 mathQuizGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14453,7 +14379,8 @@ function colorGuessingGame() {
 function generateRandomRGBValues() {
   return Array.from({ length: 3 }, () => Math.floor(Math.random() &ast; 256));
 }
-// Start the Color Guessing Game
+
+// Example: Start the Color Guessing Game
 colorGuessingGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14489,7 +14416,8 @@ function wordScrambleGame() {
 function scrambleWord(word) {
   return word.split("").sort(() => Math.random() - 0.5).join("");
 }
-// Start the Word Scramble Game
+
+// Example: Start the Word Scramble Game
 wordScrambleGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14521,7 +14449,8 @@ function countryCapitalQuizGame() {
   }
   console.log(' Quiz complete! Your final score is: ${score} out of ${countryCapitalPairs.length}');
 }
-// Start the Country Capital Quiz Game
+
+// Example: Start the Country Capital Quiz Game
 countryCapitalQuizGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14554,7 +14483,8 @@ function guessTheAnimalGame() {
   }
   console.log(`Game complete! Your final score is: ${score} out of ${animals.length}`);
 }
-// Start the Guess the Animal Game
+
+// Example: Start the Guess the Animal Game
 guessTheAnimalGame();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14594,7 +14524,8 @@ function jokeTellerProgram() {
       console.log("Oops! Something went wrong. No joke for you!");
   }
 }
-// Start the Joke Teller Program
+
+// Example: Start the Joke Teller Program
 jokeTellerProgram();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14649,7 +14580,8 @@ function shoppingListProgram() {
     }
   }
 }
-// Start the Shopping List Program
+
+// Example: Start the Shopping List Program
 shoppingListProgram();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14673,7 +14605,8 @@ function fizzBuzzGame() {
     console.log(output || i);
   }
 }
-// Start the FizzBuzz Game
+
+// Example: Start the FizzBuzz Game
 fizzBuzzGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14702,6 +14635,7 @@ function swapPairsOfAdjacentDigits(number) {
   console.log(`Original Number: ${number}`);
   console.log(`Number with Swapped Pairs of Adjacent Digits: ${result}`);
 }
+
 // Example: Swap pairs of adjacent digits of the number 123456
 swapPairsOfAdjacentDigits(123456);
 </pre>
@@ -14727,6 +14661,7 @@ function changeCapitalization(inputString) {
   console.log(`Original String: ${inputString}`);
   console.log(`String with Changed Capitalization: ${resultString}`);
 }
+
 // Example: Change the capitalization of the string "Hello World"
 changeCapitalization("Hello World");
 </pre>
@@ -14753,6 +14688,7 @@ function swapArrayHalves(arr) {
   console.log("Original Array:" + arr.join(","));
   console.logf Array with Swapped Halves:" + arr.join(","));
 }
+
 // Example: Swap halves of the array &lbrack;1,2,3,4,5,6&rbrack;
 swapArrayHalves(&lbrack;l,2,3,4,5,6&rbrack;);
 </pre>
@@ -14774,6 +14710,7 @@ function sumOfDigitsInString(inputString) {
   console.log(`Original String: ${inputstring}`);
   console.log(`Sum of Digits in the String: ${digitSum}`);
 }
+
 // Example: Compute the sum of digits in the string "abcl23xyz456"
 sumOfDigitsInString("abc123xyz456");
 </pre>
@@ -14792,6 +14729,7 @@ function sumOfCubes(upToInteger) {
   }
   console.log(`Sum of Cubes from 1 to ${upToInteger}: ${cubesSum}`);
 }
+
 // Example: Compute the sum of cubes up to the integer 5
 sumOfCubes(5);
 </pre>
@@ -14812,6 +14750,7 @@ function findMaxIntegerForSum(targetSum) {
   }
   console.log(`Maximum Integer (n) for Sum <= ${targetSum}: ${maxinteger}`);
 }
+
 // Example: Find the maximum integer for the sum <=15
 findMaxIntegerForSum(l 5);
 </pre>
@@ -14837,6 +14776,7 @@ function breakURL(url) {
   console.log("URL Parts:");
   console.log(urlParts);
 }
+
 // Example: Breakdown the URL "https://www.example.org/page"
 breakURL("https://www.example.org/page");
 </pre>
@@ -14854,6 +14794,7 @@ function sortStringsByLength(stringsArray) {
   console.log("Array of Strings Sorted by Length:");
   console.log(sortedArray);
 }
+
 // Example: Sort strings by length
 sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;);
 </pre>
