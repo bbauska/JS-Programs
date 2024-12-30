@@ -625,6 +625,7 @@ own ideas into a reality without even having to think about it.</p>
 for (let line = "#"; line.length < 8; line += "#")
   console.log(line);
 </pre>
+<h5>Solution:</h5>
 <pre>
 #
 ##
@@ -644,7 +645,9 @@ for (let n = 1; n <= 100; n++) {
   if (n % 5 == 0) output += "Buzz";
   console.log(output || n);
 }
-// Solution:
+</pre>
+<h5>Solution:</h5>
+<pre>
 1
 2
 Fizz
@@ -764,6 +767,9 @@ for (let y = 0; y < size; y++) {
 }
 
 console.log(board);
+</pre>
+<h5>Solution:</h5>
+<pre>
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
@@ -780,8 +786,7 @@ console.log(board);
 function min(a, b) {
   if (a < b) return a;
   else return b;
-}
-
+}<br>
 console.log(min(0, 10)); // → 0
 console.log(min(0, -10)); // → -10
 </pre>
@@ -794,8 +799,7 @@ function isEven(n) {
   else if (n == 1) return false;
   else if (n < 0) return isEven(-n);
   else return isEven(n - 2);
-}
-
+}<br>
 console.log(isEven(50)); // → true
 console.log(isEven(75)); // → false
 console.log(isEven(-1)); // → false
@@ -812,12 +816,10 @@ function countChar(string, ch) {
     }
   }
   return counted;
-}
-<br>
+}<br>
 function countBs(string) {
   return countChar(string, "B");
-}
-<br>
+}<br>
 console.log(countBs("BBC")); // → 2
 console.log(countChar("kakkerlak", "k")); // → 4
 </pre>
@@ -845,20 +847,17 @@ reading: 0.11068280537595927
 peanuts: 0.59026798116852
 </pre>
 <pre>
-var journal = [];
-<br>
+var journal = [];<br>
 function addEntry(events, squirrel) {
   journal.push({events, squirrel});
-}
-<br>
+}<br>
 function phi(table) {
   return (table[3] * table[0] - table[2] * table[1]) /
     Math.sqrt((table[2] + table[3]) *
               (table[0] + table[1]) *
               (table[1] + table[3]) *
               (table[0] + table[2]));
-}
-<br>
+}<br>
 function tableFor(event, journal) {
   let table = [0, 0, 0, 0];
   for (let i = 0; i < journal.length; i++) {
@@ -868,8 +867,7 @@ function tableFor(event, journal) {
     table[index] += 1;
   }
   return table;
-}
-<br>
+}<br>
 function journalEvents(journal) {
   let events = [];
   for (let entry of journal) {
@@ -880,16 +878,14 @@ function journalEvents(journal) {
     }
   }
   return events;
-}
-<br>
+}<br>
 function max(...numbers) {
   let result = -Infinity;
   for (let number of numbers) {
     if (number > result) result = number;
   }
   return result;
-}
-<br>
+}<br>
 var list = {
   value: 1,
   rest: {
@@ -913,16 +909,14 @@ function range(start, end, step = start < end ? 1 : -1) {
     for (let i = start; i >= end; i += step) array.push(i);
   }
   return array;
-}
-<br>
+}<br>
 function sum(array) {
   let total = 0;
   for (let value of array) {
     total += value;
   }
   return total;
-}
-<br>
+}<br>
 console.log(range(1, 10)) // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
 console.log(sum(range(1, 10))); // → 55
@@ -937,8 +931,7 @@ function reverseArray(array) {
     output.push(array[i]);
   }
   return output;
-}
-<br>
+}<br>
 function reverseArrayInPlace(array) {
   for (let i = 0; i < Math.floor(array.length / 2); i++) {
     let old = array[i];
@@ -946,8 +939,7 @@ function reverseArrayInPlace(array) {
     array[array.length - 1 - i] = old;
   }
   return array;
-}
-<br>
+}<br>
 console.log(reverseArray(["A", "B", "C"])); // → ["C", "B", "A"];
 let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
@@ -963,26 +955,22 @@ function arrayToList(array) {
     list = {value: array[i], rest: list};
   }
   return list;
-}
-<br>
+}<br>
 function listToArray(list) {
   let array = [];
   for (let node = list; node; node = node.rest) {
     array.push(node.value);
   }
   return array;
-}
-<br>
+}<br>
 function prepend(value, list) {
   return {value, rest: list};
-}
-<br>
+}<br>
 function nth(list, n) {
   if (!list) return undefined;
   else if (n == 0) return list.value;
   else return nth(list.rest, n - 1);
-}
-<br>
+}<br>
 console.log(arrayToList([10, 20])); // → {value: 10, rest: {value: 20, rest: null}}
 console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
 console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20, rest: null}}
@@ -1112,8 +1100,7 @@ class Group {
     }
     return group;
   }
-}
-<br>
+}<br>
 let group = Group.from([10, 20]);
 console.log(group.has(10)); // → true
 console.log(group.has(30)); // → false
@@ -1178,8 +1165,7 @@ for (let value of Group.from(["a", "b", "c"])) {
 <h2 id="el19">19. Borrowing a method</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let map = {one: true, two: true, hasOwnProperty: true};
-<br>
+let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1257,8 +1243,7 @@ class PGroup {
 PGroup.empty = new PGroup([]);
 let a = PGroup.empty.add("a");
 let ab = a.add("b");
-let b = ab.delete("a");
-<br>
+let b = ab.delete("a");<br>
 console.log(b.has("b")); // → true
 console.log(a.has("b")); // → false
 console.log(b.has("a")); // → false
@@ -1284,8 +1269,7 @@ function reliableMultiply(a, b) {
         throw e;
     }
   }
-}
-<br>
+}<br>
 console.log(reliableMultiply(8, 8)); // → 64
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1301,7 +1285,7 @@ const box = {
     if (this.locked) throw new Error("Locked!");
     return this._content;
   }
-};
+};<br>
 function withBoxUnlocked(body) {
   let locked = box.locked;
   if (!locked) {
@@ -1313,7 +1297,7 @@ function withBoxUnlocked(body) {
   } finally {
     box.lock();
   }
-}
+}<br>
 withBoxUnlocked(function() {
   box.content.push("gold piece");
 });
@@ -1323,44 +1307,35 @@ try {
   });
 } catch (e) {
   console.log("Error raised:", e);
-}
-
+}<br>
 console.log(box.locked); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el25">25. Regexp golf</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-// Fill in the regular expressions
-<br>
+// Fill in the regular expressions<br>
 verify(/ca[rt]/,
        ["my car", "bad cats"],
-       ["camper", "high art"]);
-<br>
+       ["camper", "high art"]);<br>
 verify(/pr?op/,
        ["pop culture", "mad props"],
-       ["plop", "prrrop"]);
-<br>
+       ["plop", "prrrop"]);<br>
 verify(/ferr(et|y|ari)/,
        ["ferret", "ferry", "ferrari"],
-       ["ferrum", "transfer A"]);
-<br>
+       ["ferrum", "transfer A"]);<br>
 verify(/ious\b/,
        ["how delicious", "spacious room"],
-       ["ruinous", "consciousness"]);
-<br>
+       ["ruinous", "consciousness"]);<br>
 verify(/\s[.,:;]/,
        ["bad punctuation ."],
-       ["escape the dot"]);
-<br>
+       ["escape the dot"]);<br>
 verify(/\w{7}/,
        ["Siebentausenddreihundertzweiundzwanzig"],
-       ["no", "three small words"]);
-<br>
+       ["no", "three small words"]);<br>
 verify(/\b[^\We]+\b/i,
        ["red platypus", "wobbling nest"],
-       ["earth bed", "learning ape", "BEET"]);
-<br>
+       ["earth bed", "learning ape", "BEET"]);<br>
 function verify(regexp, yes, no) {
   // Ignore unfinished exercises
   if (regexp.source == "...") return;
@@ -1376,8 +1351,7 @@ function verify(regexp, yes, no) {
 <h2 id="el26">26. Quoting style</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let text = "'I'm the cook,' he said, 'it's my job.'";
-<br>
+let text = "'I'm the cook,' he said, 'it's my job.'";<br>
 console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 // → "I'm the cook," he said, "it's my job."
 </pre>
@@ -1393,7 +1367,7 @@ for (let str of ["1", "-1", "+15", "1.55", ".5", "5.",
   if (!number.test(str)) {
     console.log(`Failed to match '${str}'`);
   }
-}
+}<br>
 for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
                  ".5.", "1f5", "."]) {
   if (number.test(str)) {
@@ -1414,8 +1388,7 @@ const roads = &lbrack;
   "Grete's House-Shop",          "Marketplace-Farm",
   "Marketplace-Post Office",     "Marketplace-Shop",
   "Marketplace-Town Hall",       "Shop-Town Hall"
-&rbrack;;
-<br>
+&rbrack;;<br>
 exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1429,8 +1402,7 @@ async function locateScalpel(nest) {
     if (next == current) return current;
     current = next;
   }
-}
-<br>
+}<br>
 function locateScalpel2(nest) {
   function loop(current) {
     return anyStorage(nest, current, "scalpel").then(next => {
@@ -1439,8 +1411,7 @@ function locateScalpel2(nest) {
     });
   }
   return loop(nest.name);
-}
-<br>
+}<br>
 locateScalpel(bigOak).then(console.log); // → Butcher's Shop
 locateScalpel2(bigOak).then(console.log); // → Butcher's Shop
 </pre>
@@ -1461,23 +1432,19 @@ function Promise_all(promises) {
     }
     if (promises.length == 0) resolve(results);
   });
-}
-<br>
+}<br>
 // Test code.
 Promise_all([]).then(array => {
   console.log("This should be []:", array);
-});
-<br>
+});<br>
 function soon(val) {
   return new Promise(resolve => {
     setTimeout(() => resolve(val), Math.random() * 500);
   });
-}
-<br>
+}<br>
 Promise_all([soon(1), soon(2), soon(3)]).then(array => {
   console.log("This should be [1, 2, 3]:", array);
-});
-<br>
+});<br>
 Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
   console.log("We should not get here");
 }).catch(error => {
@@ -1492,7 +1459,7 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
 <pre>
 topScope.array = (...values) => values;
 topScope.length = array => array.length;
-topScope.element = (array, i) => array[i];
+topScope.element = (array, i) => array[i];<br>
 run(`
 do(define(sum, fun(array,
      do(define(i, 0),
@@ -1502,8 +1469,7 @@ do(define(sum, fun(array,
              define(i, +(i, 1)))),
         sum))),
    print(sum(array(1, 2, 3))))
-`);
-<br>
+&#96;);<br>
 // → 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1513,16 +1479,13 @@ do(define(sum, fun(array,
 function skipSpace(string) {
   let skippable = string.match(/^(\s|#.*)*/);
   return string.slice(skippable[0].length);
-}
-<br>
+}<br>
 console.log(parse("# hello\nx"));
-// → {type: "word", name: "x"}
-<br>
+// → {type: "word", name: "x"}<br>
 console.log(parse("a # one\n   # two\n()"));
 // → {type: "apply",
 //    operator: {type: "word", name: "a"},
-//    args: []}
-<br>
+//    args: []}<br>
 //
 {type: "word", name: "x"}
 {type: "apply", operator: {type: "word", name: "a"}, …}
@@ -1544,26 +1507,24 @@ specialForms.set = (args, env) => {
     }
   }
   throw new ReferenceError(`Setting undefined variable ${varName}`);
-};
-<br>
+};<br>
 run(`
 do(define(x, 4),
    define(setx, fun(val, set(x, val))),
    setx(50),
    print(x))
 `);
-// → 50
-<br>
+// → 50<br>
 run(`set(quux, true)`); // → Some kind of ReferenceError
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el34">34. Build a table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-&lt;!doctype html&gt;
+&lt;!doctype html&gt;<br>
 &lt;meta charset="utf8"&gt;
 &lt;h1&gt;Mountains&lt;/h1&gt;
-&lt;div id="mountains"&gt;&lt;/div&gt;
+&lt;div id="mountains"&gt;&lt;/div&gt;<br>
 &lt;script&gt;
   const MOUNTAINS = [
     {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
@@ -1573,8 +1534,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     {name: "Denali", height: 6168, place: "United States"},
     {name: "Popocatepetl", height: 5465, place: "Mexico"},
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
-  ];
-<br>
+  ];<br>
   function buildTable(data) {
     let table = document.createElement("table");
     let fields = Object.keys(data[0]);
@@ -1584,8 +1544,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
       headCell.appendChild(document.createTextNode(field));
       headRow.appendChild(headCell);
     });
-    table.appendChild(headRow);
-<br>
+    table.appendChild(headRow);<br>
     data.forEach(function(object) {
       let row = document.createElement("tr");
       fields.forEach(function(field) {
@@ -1599,8 +1558,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
       table.appendChild(row);
     });
     return table;
-  }
-<br>
+  }<br>
   document.querySelector("#mountains")
     .appendChild(buildTable(MOUNTAINS));
 &lt;/script&gt;
@@ -1609,12 +1567,10 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <h2 id="el35">35. Elements by tag name</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-&lt;!doctype html&gt;
-<br>
+&lt;!doctype html&gt;<br>
 &lt;h1&gt;Heading with a &lt;span&gt;span&lt;/span&gt; element.&lt;/h1&gt;
 &lt;p&gt;A paragraph with &lt;span&gt;one&lt;/span&gt;, &lt;span&gt;two&lt;/span&gt;
-  spans.&lt;/p&gt;
-<br>
+  spans.&lt;/p&gt;<br>
 &lt;script&gt;
   function byTagName(node, tagName) {
     let found = [];
@@ -1630,8 +1586,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     }
     explore(node);
     return found;
-  }
-<br>
+  }<br>
   console.log(byTagName(document.body, "h1").length);   // → 1
   console.log(byTagName(document.body, "span").length); // → 3
   let para = document.querySelector("p");
@@ -1642,20 +1597,15 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <h2 id="el36">36. The cat's hat</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-&lt;!doctype html&gt;
-<br>
-&lt;meta charset="utf8"&gt;
-<br>
-&lt;base href="https://eloquentjavascript.net/"&gt;
-<br>
+&lt;!doctype html&gt;<br>
+&lt;meta charset="utf8"&gt;<br>
+&lt;base href="https://eloquentjavascript.net/"&gt;<br>
 &lt;style&gt;body { min-height: 200px }&lt;/style&gt;
 &lt;img src="img/cat.png" id="cat" style="position: absolute"&gt;
-&lt;img src="img/hat.png" id="hat" style="position: absolute"&gt;
-<br>
+&lt;img src="img/hat.png" id="hat" style="position: absolute"&gt;<br>
 &lt;script&gt;
   let cat = document.querySelector("#cat");
-  let hat = document.querySelector("#hat");
-<br>
+  let hat = document.querySelector("#hat");<br>
   let angle = 0;
   let lastTime = null;
   function animate(time) {
@@ -1664,8 +1614,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cat.style.top = (Math.sin(angle) * 40 + 40) + "px";
     cat.style.left = (Math.cos(angle) * 200 + 230) + "px";
     hat.style.top = (Math.sin(angle + Math.PI) * 40 + 40) + "px";
-    hat.style.left = (Math.cos(angle + Math.PI) * 200 + 230) + "px";
-<br>
+    hat.style.left = (Math.cos(angle + Math.PI) * 200 + 230) + "px";<br>
     requestAnimationFrame(animate);
   }
   requestAnimationFrame(animate);
@@ -1675,10 +1624,8 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <h2 id="el37">37. Balloon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-&lt;!doctype html&gt;
-<br>
-&lt;p&gt;🎈&lt;/p&gt;
-<br>
+&lt;!doctype html&gt;<br>
+&lt;p&gt;🎈&lt;/p&gt;<br>
 &lt;script&gt;
   let p = document.querySelector("p");
   let size;
@@ -1686,8 +1633,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     size = newSize;
     p.style.fontSize = size + "px";
   }
-  setSize(20);
-<br>
+  setSize(20);<br>
   function handleArrow(event) {
     if (event.key == "ArrowUp") {
       if (size &gt; 70) {
@@ -1706,13 +1652,74 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el38">38. </h2>
+<h2 id="el38">38. Mouse trail</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
+&lt;!doctype html&gt;<br>
+&lt;style&gt;
+  .trail { /* className for the trail elements */
+    position: absolute;
+    height: 6px; width: 6px;
+    border-radius: 3px;
+    background: teal;
+  }
+  body {
+    height: 300px;
+  }
+&lt;/style&gt;<br>
+&lt;body&gt;
+&lt;script&gt;
+  let dots = [];
+  for (let i = 0; i &lt; 12; i++) {
+    let node = document.createElement("div");
+    node.className = "trail";
+    document.body.appendChild(node);
+    dots.push(node);
+  }
+  let currentDot = 0;<br>  
+  window.addEventListener("mousemove", event =&gt; {
+    let dot = dots[currentDot];
+    dot.style.left = (event.pageX - 3) + "px";
+    dot.style.top = (event.pageY - 3) + "px";
+    currentDot = (currentDot + 1) % dots.length;
+  });
+&lt;/script&gt;
+&lt;/body&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el39">39. </h2>
+<h2 id="el39">39. Tabs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
+&lt;!doctype html&gt;<br>
+&lt;tab-panel&gt;
+  &lt;div data-tabname="one"&gt;Tab one&lt;/div&gt;
+  &lt;div data-tabname="two"&gt;Tab two&lt;/div&gt;
+  &lt;div data-tabname="three"&gt;Tab three&lt;/div&gt;
+&lt;/tab-panel&gt;
+&lt;script&gt;
+  function asTabs(node) {
+    let tabs = Array.from(node.children).map(node =&gt; {
+      let button = document.createElement("button");
+      button.textContent = node.getAttribute("data-tabname");
+      let tab = {node, button};
+      button.addEventListener("click", () =&gt; selectTab(tab));
+      return tab;
+    });<br>
+    let tabList = document.createElement("div");
+    for (let {button} of tabs) tabList.appendChild(button);
+    node.insertBefore(tabList, node.firstChild);<br>
+    function selectTab(selectedTab) {
+      for (let tab of tabs) {
+        let selected = tab == selectedTab;
+        tab.node.style.display = selected ? "" : "none";
+        tab.button.style.color = selected ? "red" : "";
+      }
+    }
+    selectTab(tabs[0]);
+  }<br>
+  asTabs(document.querySelector("tab-panel"));
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el40">40. </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
