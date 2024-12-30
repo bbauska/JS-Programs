@@ -813,11 +813,11 @@ function countChar(string, ch) {
   }
   return counted;
 }
-
+<br>
 function countBs(string) {
   return countChar(string, "B");
 }
-
+<br>
 console.log(countBs("BBC")); // → 2
 console.log(countChar("kakkerlak", "k")); // → 4
 </pre>
@@ -846,9 +846,11 @@ peanuts: 0.59026798116852
 </pre>
 <pre>
 var journal = [];
+<br>
 function addEntry(events, squirrel) {
   journal.push({events, squirrel});
 }
+<br>
 function phi(table) {
   return (table[3] * table[0] - table[2] * table[1]) /
     Math.sqrt((table[2] + table[3]) *
@@ -856,6 +858,7 @@ function phi(table) {
               (table[1] + table[3]) *
               (table[0] + table[2]));
 }
+<br>
 function tableFor(event, journal) {
   let table = [0, 0, 0, 0];
   for (let i = 0; i < journal.length; i++) {
@@ -866,6 +869,7 @@ function tableFor(event, journal) {
   }
   return table;
 }
+<br>
 function journalEvents(journal) {
   let events = [];
   for (let entry of journal) {
@@ -877,6 +881,7 @@ function journalEvents(journal) {
   }
   return events;
 }
+<br>
 function max(...numbers) {
   let result = -Infinity;
   for (let number of numbers) {
@@ -884,6 +889,7 @@ function max(...numbers) {
   }
   return result;
 }
+<br>
 var list = {
   value: 1,
   rest: {
@@ -908,6 +914,7 @@ function range(start, end, step = start < end ? 1 : -1) {
   }
   return array;
 }
+<br>
 function sum(array) {
   let total = 0;
   for (let value of array) {
@@ -915,7 +922,7 @@ function sum(array) {
   }
   return total;
 }
-
+<br>
 console.log(range(1, 10)) // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
 console.log(sum(range(1, 10))); // → 55
@@ -931,6 +938,7 @@ function reverseArray(array) {
   }
   return output;
 }
+<br>
 function reverseArrayInPlace(array) {
   for (let i = 0; i < Math.floor(array.length / 2); i++) {
     let old = array[i];
@@ -939,7 +947,7 @@ function reverseArrayInPlace(array) {
   }
   return array;
 }
-
+<br>
 console.log(reverseArray(["A", "B", "C"])); // → ["C", "B", "A"];
 let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
@@ -956,6 +964,7 @@ function arrayToList(array) {
   }
   return list;
 }
+<br>
 function listToArray(list) {
   let array = [];
   for (let node = list; node; node = node.rest) {
@@ -963,15 +972,17 @@ function listToArray(list) {
   }
   return array;
 }
+<br>
 function prepend(value, list) {
   return {value, rest: list};
 }
+<br>
 function nth(list, n) {
   if (!list) return undefined;
   else if (n == 0) return list.value;
   else return nth(list.rest, n - 1);
 }
-
+<br>
 console.log(arrayToList([10, 20])); // → {value: 10, rest: {value: 20, rest: null}}
 console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
 console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20, rest: null}}
@@ -984,18 +995,15 @@ console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 function deepEqual(a, b) {
   if (a === b) return true;
   if (a == null || typeof a != "object" ||
-      b == null || typeof b != "object") return false;
-<br>
-  let keysA = Object.keys(a), keysB = Object.keys(b);
-<br>
+      b == null || typeof b != "object") return false;<br>
+  let keysA = Object.keys(a), keysB = Object.keys(b);<br>
   if (keysA.length != keysB.length) return false;
   for (let key of keysA) {
     if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
   }
   return true;
-}
-<br>
-let obj = {here: {is: "an"}, object: 2};
+}<br>
+let obj = {here: {is: "an"}, object: 2};<br>
 
 console.log(deepEqual(obj, obj)); // → true
 console.log(deepEqual(obj, {here: 1, object: 2})); // → false
@@ -1005,8 +1013,7 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 <h2 id="el12">12. Flattening</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let arrays = [[1, 2, 3], [4, 5], [6]];
-<br>
+let arrays = [[1, 2, 3], [4, 5], [6]];<br>
 console.log(arrays.reduce((flat, current) => flat.concat(current), [])); 
 // → [1, 2, 3, 4, 5, 6]
 </pre>
@@ -1018,8 +1025,7 @@ function loop(start, test, update, body) {
   for (let value = start; test(value); value = update(value)) {
     body(value);
   }
-}
-<br>
+}<br>
 loop(3, n => n > 0, n => n - 1, console.log);
 // → 3
 // → 2
@@ -1037,8 +1043,7 @@ function every(array, predicate) {
 }<br>
 function every2(array, predicate) {
   return !array.some(element => !predicate(element));
-}
-<br>
+}<br>
 console.log(every([1, 3, 5], n => n < 10)); // → true
 console.log(every([2, 4, 16], n => n < 10)); // → false
 console.log(every([], n => n < 10)); // → true
@@ -1051,11 +1056,10 @@ function dominantDirection(text) {
   let counted = countBy(text, char => {
     let script = characterScript(char.codePointAt(0));
     return script ? script.direction : "none";
-  }).filter(({name}) => name != "none");
+  }).filter(({name}) => name != "none");<br>
   if (counted.length == 0) return "ltr";
-  return counted.reduce((a, b) => a.count > b.count ? a : b).name;
-}
-<br>
+    return counted.reduce((a, b) => a.count > b.count ? a : b).name;
+}<br>
 console.log(dominantDirection("Hello!")); // → ltr
 console.log(dominantDirection("Hey, مساء الخير")); // → rtl
 </pre>
@@ -1077,8 +1081,7 @@ class Vec {
   get length() {
     return Math.sqrt(this.x * this.x + this.y * this.y);
   }
-}
-<br>
+}<br>
 console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
 console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
 console.log(new Vec(3, 4).length); // → 5
