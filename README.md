@@ -1329,35 +1329,35 @@ console.log(box.locked); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Fill in the regular expressions
-
+<br>
 verify(/ca[rt]/,
        ["my car", "bad cats"],
        ["camper", "high art"]);
-
+<br>
 verify(/pr?op/,
        ["pop culture", "mad props"],
        ["plop", "prrrop"]);
-
+<br>
 verify(/ferr(et|y|ari)/,
        ["ferret", "ferry", "ferrari"],
        ["ferrum", "transfer A"]);
-
+<br>
 verify(/ious\b/,
        ["how delicious", "spacious room"],
        ["ruinous", "consciousness"]);
-
+<br>
 verify(/\s[.,:;]/,
        ["bad punctuation ."],
        ["escape the dot"]);
-
+<br>
 verify(/\w{7}/,
        ["Siebentausenddreihundertzweiundzwanzig"],
        ["no", "three small words"]);
-
+<br>
 verify(/\b[^\We]+\b/i,
        ["red platypus", "wobbling nest"],
        ["earth bed", "learning ape", "BEET"]);
-
+<br>
 function verify(regexp, yes, no) {
   // Ignore unfinished exercises
   if (regexp.source == "...") return;
@@ -1374,7 +1374,7 @@ function verify(regexp, yes, no) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let text = "'I'm the cook,' he said, 'it's my job.'";
-
+<br>
 console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 // → "I'm the cook," he said, "it's my job."
 </pre>
@@ -1412,7 +1412,7 @@ const roads = &lbrack;
   "Marketplace-Post Office",     "Marketplace-Shop",
   "Marketplace-Town Hall",       "Shop-Town Hall"
 &rbrack;;
-
+<br>
 exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1427,6 +1427,7 @@ async function locateScalpel(nest) {
     current = next;
   }
 }
+<br>
 function locateScalpel2(nest) {
   function loop(current) {
     return anyStorage(nest, current, "scalpel").then(next => {
@@ -1436,7 +1437,7 @@ function locateScalpel2(nest) {
   }
   return loop(nest.name);
 }
-
+<br>
 locateScalpel(bigOak).then(console.log); // → Butcher's Shop
 locateScalpel2(bigOak).then(console.log); // → Butcher's Shop
 </pre>
@@ -1458,18 +1459,22 @@ function Promise_all(promises) {
     if (promises.length == 0) resolve(results);
   });
 }
+<br>
 // Test code.
 Promise_all([]).then(array => {
   console.log("This should be []:", array);
 });
+<br>
 function soon(val) {
   return new Promise(resolve => {
     setTimeout(() => resolve(val), Math.random() * 500);
   });
 }
+<br>
 Promise_all([soon(1), soon(2), soon(3)]).then(array => {
   console.log("This should be [1, 2, 3]:", array);
 });
+<br>
 Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
   console.log("We should not get here");
 }).catch(error => {
@@ -1495,6 +1500,7 @@ do(define(sum, fun(array,
         sum))),
    print(sum(array(1, 2, 3))))
 `);
+<br>
 // → 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1505,15 +1511,15 @@ function skipSpace(string) {
   let skippable = string.match(/^(\s|#.*)*/);
   return string.slice(skippable[0].length);
 }
-
+<br>
 console.log(parse("# hello\nx"));
 // → {type: "word", name: "x"}
-
+<br>
 console.log(parse("a # one\n   # two\n()"));
 // → {type: "apply",
 //    operator: {type: "word", name: "a"},
 //    args: []}
-
+<br>
 //
 {type: "word", name: "x"}
 {type: "apply", operator: {type: "word", name: "a"}, …}
@@ -1536,6 +1542,7 @@ specialForms.set = (args, env) => {
   }
   throw new ReferenceError(`Setting undefined variable ${varName}`);
 };
+<br>
 run(`
 do(define(x, 4),
    define(setx, fun(val, set(x, val))),
@@ -1543,6 +1550,7 @@ do(define(x, 4),
    print(x))
 `);
 // → 50
+<br>
 run(`set(quux, true)`); // → Some kind of ReferenceError
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1563,6 +1571,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     {name: "Popocatepetl", height: 5465, place: "Mexico"},
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
   ];
+<br>
   function buildTable(data) {
     let table = document.createElement("table");
     let fields = Object.keys(data[0]);
@@ -1573,7 +1582,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
       headRow.appendChild(headCell);
     });
     table.appendChild(headRow);
-
+<br>
     data.forEach(function(object) {
       let row = document.createElement("tr");
       fields.forEach(function(field) {
@@ -1588,7 +1597,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     });
     return table;
   }
-
+<br>
   document.querySelector("#mountains")
     .appendChild(buildTable(MOUNTAINS));
 &lt;/script&gt;
@@ -1598,11 +1607,11 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-
+<br>
 &lt;h1&gt;Heading with a &lt;span&gt;span&lt;/span&gt; element.&lt;/h1&gt;
 &lt;p&gt;A paragraph with &lt;span&gt;one&lt;/span&gt;, &lt;span&gt;two&lt;/span&gt;
   spans.&lt;/p&gt;
-
+<br>
 &lt;script&gt;
   function byTagName(node, tagName) {
     let found = [];
@@ -1619,7 +1628,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     explore(node);
     return found;
   }
-
+<br>
   console.log(byTagName(document.body, "h1").length);   // → 1
   console.log(byTagName(document.body, "span").length); // → 3
   let para = document.querySelector("p");
@@ -1627,13 +1636,72 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el36">36. </h2>
+<h2 id="el36">36. The cat's hat</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
+&lt;!doctype html&gt;
+<br>
+&lt;meta charset="utf8"&gt;
+<br>
+&lt;base href="https://eloquentjavascript.net/"&gt;
+<br>
+&lt;style&gt;body { min-height: 200px }&lt;/style&gt;
+&lt;img src="img/cat.png" id="cat" style="position: absolute"&gt;
+&lt;img src="img/hat.png" id="hat" style="position: absolute"&gt;
+<br>
+&lt;script&gt;
+  let cat = document.querySelector("#cat");
+  let hat = document.querySelector("#hat");
+<br>
+  let angle = 0;
+  let lastTime = null;
+  function animate(time) {
+    if (lastTime != null) angle += (time - lastTime) * 0.001;
+    lastTime = time;
+    cat.style.top = (Math.sin(angle) * 40 + 40) + "px";
+    cat.style.left = (Math.cos(angle) * 200 + 230) + "px";
+    hat.style.top = (Math.sin(angle + Math.PI) * 40 + 40) + "px";
+    hat.style.left = (Math.cos(angle + Math.PI) * 200 + 230) + "px";
+<br>
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el37">37. </h2>
+<h2 id="el37">37. Balloon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>
+&lt;!doctype html&gt;
+<br>
+&lt;p&gt;🎈&lt;/p&gt;
+<br>
+&lt;script&gt;
+  let p = document.querySelector("p");
+  let size;
+  function setSize(newSize) {
+    size = newSize;
+    p.style.fontSize = size + "px";
+  }
+  setSize(20);
+<br>
+  function handleArrow(event) {
+    if (event.key == "ArrowUp") {
+      if (size &gt; 70) {
+        p.textContent = "💥";
+        document.body.removeEventListener("keydown", handleArrow);
+      } else {
+        setSize(size * 1.1);
+        event.preventDefault();
+      }
+    } else if (event.key == "ArrowDown") {
+      setSize(size * 0.9);
+      event.preventDefault();
+    }
+  }
+  document.body.addEventListener("keydown", handleArrow);
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el38">38. </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
