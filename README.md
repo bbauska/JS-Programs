@@ -1836,14 +1836,15 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
   }<br>
   runGame(GAME_LEVELS, DOMDisplay);
 &lt;/script&gt;
-</body>
+&lt;/body&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el42">42. A Platform Game: A monster</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-&lt;!doctype html&gt;
-&lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
-&lt;script src="code/levels.js"&gt;&lt;/script&gt;<br>
+&lt;!doctype html&gt;<br>
+&lt;script src="js/game.js"&gt;&lt;/script&gt;
+&lt;script src="js/levels.js"&gt;&lt;/script&gt;<br>
 &lt;link rel="stylesheet" href="css/game.css"&gt;<br>
 &lt;style&gt;
   .monster { background: purple }
@@ -1895,14 +1896,14 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <h2 id="el43">43. Drawing on Canvas: Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-&lt;!doctype html&gt;
+&lt;!doctype html&gt;<br>
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
 &lt;script src="code/levels.js"&gt;&lt;/script&gt;
-&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;<br>
 
 &lt;canvas width="600" height="200"&gt;&lt;/canvas&gt;
 &lt;script&gt;
-  let cx = document.querySelector("canvas").getContext("2d");
+  let cx = document.querySelector("canvas").getContext("2d");<br>
 
   function trapezoid(x, y) {
     cx.beginPath();
@@ -1913,7 +1914,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.closePath();
     cx.stroke();
   }
-  trapezoid(30, 30);
+  trapezoid(30, 30);<br>
 
   function diamond(x, y) {
     cx.translate(x + 30, y + 30);
@@ -1922,7 +1923,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     cx.fillRect(-30, -30, 60, 60);
     cx.resetTransform();
   }
-  diamond(140, 30);
+  diamond(140, 30);<br>
 
   function zigzag(x, y) {
     cx.beginPath();
@@ -1933,7 +1934,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     }
     cx.stroke();
   }
-  zigzag(240, 20);
+  zigzag(240, 20);<br>
 
   function spiral(x, y) {
     let radius = 50, xCenter = x + radius, yCenter = y + radius;
@@ -1947,7 +1948,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     }
     cx.stroke();
   }
-  spiral(340, 20);
+  spiral(340, 20);<br>
 
   function star(x, y) {
     let radius = 50, xCenter = x + radius, yCenter = y + radius;
@@ -1972,23 +1973,23 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
 &lt;script src="code/levels.js"&gt;&lt;/script&gt;
-&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;<br>
 
 &lt;canvas width="600" height="300"&gt;&lt;/canvas&gt;
 &lt;script&gt;
   let cx = document.querySelector("canvas").getContext("2d");
   let total = results.reduce(function(sum, choice) {
     return sum + choice.count;
-  }, 0);
+  }, 0);<br>
 
   let currentAngle = -0.5 * Math.PI;
-  let centerX = 300, centerY = 150;
+  let centerX = 300, centerY = 150;<br>
 
   results.forEach(function(result) {
     let sliceAngle = (result.count / total) * 2 * Math.PI;
     cx.beginPath();
     cx.arc(centerX, centerY, 100,
-           currentAngle, currentAngle + sliceAngle);
+           currentAngle, currentAngle + sliceAngle);<br>
 
     let middleAngle = currentAngle + 0.5 * sliceAngle;
     let textX = Math.cos(middleAngle) * 120 + centerX;
@@ -2017,11 +2018,11 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
 &lt;script src="code/levels.js"&gt;&lt;/script&gt;
-&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;<br>
 
 &lt;canvas width="400" height="400"&gt;&lt;/canvas&gt;
 &lt;script&gt;
-  let cx = document.querySelector("canvas").getContext("2d");
+  let cx = document.querySelector("canvas").getContext("2d");<br>
 
   let lastTime = null;
   function frame(time) {
@@ -2031,11 +2032,11 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
     lastTime = time;
     requestAnimationFrame(frame);
   }
-  requestAnimationFrame(frame);
+  requestAnimationFrame(frame);<br>
 
   let x = 100, y = 300;
   let radius = 10;
-  let speedX = 100, speedY = 60;
+  let speedX = 100, speedY = 60;<br>
 
   function updateAnimation(step) {
     cx.clearRect(0, 0, 400, 400);
@@ -2078,11 +2079,11 @@ showTypes();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-&lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;<br>
 
 &lt;textarea id="code"&gt;return "hi";&lt;/textarea&gt;
 &lt;button id="button"&gt;Run&lt;/button&gt;
-&lt;pre id="output"&gt;&lt;/pre&gt;
+&lt;pre id="output"&gt;&lt;/pre&gt;<br>
 
 &lt;script&gt;
   document.querySelector("#button").addEventListener("click", () =&gt; {
@@ -2102,16 +2103,16 @@ showTypes();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-&lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;<br>
 
 &lt;div id="grid"&gt;&lt;/div&gt;
 &lt;button id="next"&gt;Next generation&lt;/button&gt;
-&lt;button id="run"&gt;Auto run&lt;/button&gt;
+&lt;button id="run"&gt;Auto run&lt;/button&gt;<br>
 
 &lt;script&gt;
-  const width = 30, height = 15;
+  const width = 30, height = 15;<br>
 
-  // I will represent the grid as an array of booleans.
+  // I will represent the grid as an array of booleans.<br>
 
   let gridNode = document.querySelector("#grid");
   // This holds the checkboxes that display the grid in the document.
@@ -2124,7 +2125,7 @@ showTypes();
       checkboxes.push(box);
     }
     gridNode.appendChild(document.createElement("br"));
-  }
+  }<br>
 
   function gridFromCheckboxes() {
     return checkboxes.map(box =&gt; box.checked);
@@ -2138,9 +2139,9 @@ showTypes();
       result.push(Math.random() &lt; 0.3);
     }
     return result;
-  }
+  }<br>
 
-  checkboxesFromGrid(randomGrid());
+  checkboxesFromGrid(randomGrid());<br>
 
   // This does a two-dimensional loop over the square around the given
   // x,y position, counting all fields that have a cell but are not the
@@ -2155,7 +2156,7 @@ showTypes();
       }
     }
     return count;
-  }
+  }<br>
 
   function nextGeneration(grid) {
     let newGrid = new Array(width * height);
@@ -2173,13 +2174,13 @@ showTypes();
       }
     }
     return newGrid;
-  }
+  }<br>
 
   function turn() {
     checkboxesFromGrid(nextGeneration(gridFromCheckboxes()));
-  }
+  }<br>
 
-  document.querySelector("#next").addEventListener("click", turn);
+  document.querySelector("#next").addEventListener("click", turn);<br>
 
   let running = null;
   document.querySelector("#run").addEventListener("click", () =&gt; {
@@ -2197,7 +2198,7 @@ showTypes();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;<br>
 
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -2241,7 +2242,7 @@ showTypes();
       this.canvas.syncState(state.picture);
       for (let ctrl of this.controls) ctrl.syncState(state);
     }
-  }
+  }<br>
 
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
@@ -2252,7 +2253,7 @@ showTypes();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
+&lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
 
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -2260,7 +2261,7 @@ showTypes();
     if (this.picture == picture) return;
     drawPicture(picture, this.dom, scale, this.picture);
     this.picture = picture;
-  }
+  }<br>
 
   function drawPicture(picture, canvas, scale, previous) {
     if (previous == null ||
@@ -2269,7 +2270,7 @@ showTypes();
       canvas.width = picture.width * scale;
       canvas.height = picture.height * scale;
       previous = null;
-    }
+    }<br>
 
     let cx = canvas.getContext("2d");
     for (let y = 0; y &lt; picture.height; y++) {
@@ -2281,7 +2282,7 @@ showTypes();
         }
       }
     }
-  }
+  }<br>
 
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
@@ -2292,7 +2293,7 @@ showTypes();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
+&lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
 
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -2316,7 +2317,7 @@ showTypes();
     }
     drawCircle(pos);
     return drawCircle;
-  }
+  }<br>
 
   let dom = startPixelEditor({
     tools: Object.assign({}, baseTools, {circle})
@@ -2329,7 +2330,7 @@ showTypes();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
-&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
+&lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
 
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -2351,7 +2352,7 @@ showTypes();
       }
     }
     return points;
-  }
+  }<br>
 
   function draw(pos, state, dispatch) {
     function connect(newPos, state) {
@@ -2361,14 +2362,14 @@ showTypes();
     }
     connect(pos, state);
     return connect;
-  }
+  }<br>
 
   function line(pos, state, dispatch) {
     return end =&gt; {
       let line = drawLine(pos, end, state.color);
       dispatch({picture: state.picture.draw(line)});
     };
-  }
+  }<br>
 
   let dom = startPixelEditor({
     tools: {draw, line, fill, rectangle, pick}
