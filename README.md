@@ -619,7 +619,7 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el1">01. Looping a Triangle</h2>
+<h2 id="el1">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 for (let line = "#"; line.length < 8; line += "#")
@@ -636,7 +636,7 @@ for (let line = "#"; line.length < 8; line += "#")
 #######
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el2">02. FizzBuzz</h2>
+<h2 id="el2">02. Program Structure: FizzBuzz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 for (let n = 1; n <= 100; n++) {
@@ -750,7 +750,7 @@ Fizz
 Buzz
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el3">03. Chessboard</h2>
+<h2 id="el3">03. Program Structure: Chessboard</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let size = 8;
@@ -780,7 +780,7 @@ console.log(board);
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el4">04. Functions</h2>
+<h2 id="el4">04. Functions: Minimum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function min(a, b) {
@@ -791,7 +791,7 @@ console.log(min(0, 10)); // → 0
 console.log(min(0, -10)); // → -10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el5">05. Recursion</h2>
+<h2 id="el5">05. Functions: Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function isEven(n) {
@@ -805,7 +805,7 @@ console.log(isEven(75)); // → false
 console.log(isEven(-1)); // → false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el6">06. Bean counting</h2>
+<h2 id="el6">06. Functions: Bean counting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function countChar(string, ch) {
@@ -898,7 +898,7 @@ var list = {
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el8">The sum of a range</h2>
+<h2 id="el8">08. Data Structures: The sum of a range</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function range(start, end, step = start < end ? 1 : -1) {
@@ -922,7 +922,7 @@ console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
 console.log(sum(range(1, 10))); // → 55
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el9">09. Reversing an Array</h2>
+<h2 id="el9">09. Data-Structures: Reversing an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function reverseArray(array) {
@@ -946,7 +946,7 @@ reverseArrayInPlace(arrayValue);
 console.log(arrayValue); // → [5, 4, 3, 2, 1]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el10">10. A list</h2>
+<h2 id="el10">10. Data-Structures: A list</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function arrayToList(array) {
@@ -977,7 +977,7 @@ console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20
 console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el11">11. Deep comparison</h2>
+<h2 id="el11">11. Data-Structures: Deep comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function deepEqual(a, b) {
@@ -998,7 +998,7 @@ console.log(deepEqual(obj, {here: 1, object: 2})); // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el12">12. Flattening</h2>
+<h2 id="el12">12. Higher-Order Functions: Flattening</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let arrays = [[1, 2, 3], [4, 5], [6]];<br>
@@ -1006,7 +1006,7 @@ console.log(arrays.reduce((flat, current) => flat.concat(current), []));
 // → [1, 2, 3, 4, 5, 6]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el13">13. Your own loop</h2>
+<h2 id="el13">13. Higher-Order Functions: Your own loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function loop(start, test, update, body) {
@@ -1020,7 +1020,7 @@ loop(3, n => n > 0, n => n - 1, console.log);
 // → 1
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el14">14. Everything</h2>
+<h2 id="el14">14. Higher-Order Functions: Everything</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function every(array, predicate) {
@@ -1037,7 +1037,7 @@ console.log(every([2, 4, 16], n => n < 10)); // → false
 console.log(every([], n => n < 10)); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el15">15. Dominant writing direction</h2>
+<h2 id="el15">15. Higher-Order Functions: Dominant writing direction</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function dominantDirection(text) {
@@ -1052,7 +1052,7 @@ console.log(dominantDirection("Hello!")); // → ltr
 console.log(dominantDirection("Hey, مساء الخير")); // → rtl
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el16">16. A vector type</h2>
+<h2 id="el16">16. Objects: A vector type</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class Vec {
@@ -1075,7 +1075,7 @@ console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
 console.log(new Vec(3, 4).length); // → 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el17">17. Groups</h2>
+<h2 id="el17">17. Objects: Groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class Group {
@@ -1109,7 +1109,7 @@ group.delete(10);
 console.log(group.has(10));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el18">18. Iterable groups</h2>
+<h2 id="el18">18. Objects: Iterable groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class Group {
@@ -1162,14 +1162,14 @@ for (let value of Group.from(["a", "b", "c"])) {
 // → c
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el19">19. Borrowing a method</h2>
+<h2 id="el19">19. Objects: Borrowing a method</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el20">20. Measuring a robot</h2>
+<h2 id="el20">20. A Robot: Measuring a robot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function countSteps(state, robot, memory) {
@@ -1193,7 +1193,7 @@ function compareRobots(robot1, memory1, robot2, memory2) {
 compareRobots(routeRobot, [], goalOrientedRobot, []);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el21">21. Robot efficiency</h2>
+<h2 id="el21">21. A Robot: Robot efficiency</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function lazyRobot({place, parcels}, route) {
@@ -1221,7 +1221,7 @@ function lazyRobot({place, parcels}, route) {
 runRobotAnimation(VillageState.random(), lazyRobot, &lbrack;&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el22">22. Persistent group</h2>
+<h2 id="el22">22. A Robot: Persistent group</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class PGroup {
@@ -1249,7 +1249,7 @@ console.log(a.has("b")); // → false
 console.log(b.has("a")); // → false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el23">23. Retry</h2>
+<h2 id="el23">23. Bugs and Errors: Retry</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class MultiplicatorUnitFailure extends Error {}
@@ -1273,7 +1273,7 @@ function reliableMultiply(a, b) {
 console.log(reliableMultiply(8, 8)); // → 64
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el24">24. The locked box</h2>
+<h2 id="el24">24. Bugs and Errors: The locked box</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const box = {
@@ -1311,7 +1311,7 @@ try {
 console.log(box.locked); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el25">25. Regexp golf</h2>
+<h2 id="el25">25. Regular Expressions: Regexp golf</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Fill in the regular expressions<br>
@@ -1348,7 +1348,7 @@ function verify(regexp, yes, no) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el26">26. Quoting style</h2>
+<h2 id="el26">26. Regular Expressions: Quoting style</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let text = "'I'm the cook,' he said, 'it's my job.'";<br>
@@ -1356,7 +1356,7 @@ console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 // → "I'm the cook," he said, "it's my job."
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el27">27. Numbers again</h2>
+<h2 id="el27">27. Regular Expressions: Numbers again</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Fill in this regular expression.
@@ -1376,7 +1376,7 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el28">28. Roads module</h2>
+<h2 id="el28">28. Modules: Roads module</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const {buildGraph} = require("./graph");
@@ -1392,7 +1392,7 @@ const roads = &lbrack;
 exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el29">29. Tracking the scalpel</h2>
+<h2 id="el29">29. Asynchronous Programming: Tracking the scalpel</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function locateScalpel(nest) {
@@ -1416,7 +1416,7 @@ locateScalpel(bigOak).then(console.log); // → Butcher's Shop
 locateScalpel2(bigOak).then(console.log); // → Butcher's Shop
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el30">30. Building Promise.all</h2>
+<h2 id="el30">30. Asynchronous Programming: Building Promise.all</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function Promise_all(promises) {
@@ -1454,7 +1454,7 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el31">31. Arrays</h2>
+<h2 id="el31">31. A Programming Language: Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 topScope.array = (...values) => values;
@@ -1473,7 +1473,7 @@ do(define(sum, fun(array,
 // → 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el32">32. Comments</h2>
+<h2 id="el32">32. A Programming Language: Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function skipSpace(string) {
@@ -1491,7 +1491,7 @@ console.log(parse("a # one\n   # two\n()"));
 {type: "apply", operator: {type: "word", name: "a"}, …}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el33">33. Fixing scope</h2>
+<h2 id="el33">33. A Programming Language: Fixing scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 specialForms.set = (args, env) => {
@@ -1518,7 +1518,7 @@ do(define(x, 4),
 run(`set(quux, true)`); // → Some kind of ReferenceError
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el34">34. Build a table</h2>
+<h2 id="el34">34. The Document Object Model: Build a table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;<br>
@@ -1564,7 +1564,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el35">35. Elements by tag name</h2>
+<h2 id="el35">35. The Document Object Model: Elements by tag name</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;<br>
@@ -1594,7 +1594,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el36">36. The cat's hat</h2>
+<h2 id="el36">36. The Document Object Model: The cat's hat</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;<br>
@@ -1621,7 +1621,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el37">37. Balloon</h2>
+<h2 id="el37">37. Handling Events: Balloon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;<br>
@@ -1652,7 +1652,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el38">38. Mouse trail</h2>
+<h2 id="el38">38. Handling Events: Mouse trail</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;<br>
@@ -1687,7 +1687,7 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/body&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el39">39. Tabs</h2>
+<h2 id="el39">39. Handling Events: Tabs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;<br>
@@ -1721,90 +1721,920 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el40">40. </h2>
+<h2 id="el40">40. A Platform Game: Game over</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="js/game.js"&gt;&lt;/script&gt;
+&lt;script src="js/levels.js"&gt;&lt;/script&gt;<br>
+&lt;link rel="stylesheet" href="css/game.css"&gt;<br>
+&lt;body&gt;
+&lt;script&gt;
+  // The old runGame function. Modify it...
+  async function runGame(plans, Display) {
+    let lives = 3;
+    for (let level = 0; level &lt; plans.length && lives &gt; 0;) {
+      console.log(`Level ${level + 1}, lives: ${lives}`);
+      let status = await runLevel(new Level(plans[level]),
+                                  Display);
+      if (status == "won") level++;
+      else lives--;
+    }
+    if (lives &gt; 0) {
+      console.log("You've won!");
+    } else {
+      console.log("Game over");
+    }
+  }
+  runGame(GAME_LEVELS, DOMDisplay);
+&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el41">41. A Platform Game: Pausing the game</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="js/game.js"&gt;&lt;/script&gt;
+&lt;script src="js/levels.js"&gt;&lt;/script&gt;<br>
+&lt;link rel="stylesheet" href="css/game.css"&gt;<br>
+&lt;body&gt;
+&lt;script&gt;
+  // To know when to stop and restart the animation, a level that is
+  // being displayed may be in three `running` states:
+  //
+  // * "yes":     Running normally.
+  // * "no":      Paused, animation isn't running
+  // * "pausing": Must pause, but animation is still running
+  //
+  // The key handler, when it notices escape being pressed, will do a
+  // different thing depending on the current state. When running is
+  // "yes" or "pausing", it will switch to the other of those two
+  // states. When it is "no", it will restart the animation and switch
+  // the state to "yes".
+  //
+  // The animation function, when state is "pausing", will set the state
+  // to "no" and return false to stop the animation.<br>
+  function runLevel(level, Display) {
+    let display = new Display(document.body, level);
+    let state = State.start(level);
+    let ending = 1;
+    let running = "yes";<br>
+    return new Promise(resolve =&gt; {
+      function escHandler(event) {
+        if (event.key != "Escape") return;
+        event.preventDefault();
+        if (running == "no") {
+          running = "yes";
+          runAnimation(frame);
+        } else if (running == "yes") {
+          running = "pausing";
+        } else {
+          running = "yes";
+        }
+      }
+      window.addEventListener("keydown", escHandler);
+      let arrowKeys = trackKeys(["ArrowLeft", "ArrowRight", "ArrowUp"]);<br>
+      function frame(time) {
+        if (running == "pausing") {
+          running = "no";
+          return false;
+        }<br>
+        state = state.update(time, arrowKeys);
+        display.syncState(state);
+        if (state.status == "playing") {
+          return true;
+        } else if (ending &gt; 0) {
+          ending -= time;
+          return true;
+        } else {
+          display.clear();
+          window.removeEventListener("keydown", escHandler);
+          arrowKeys.unregister();
+          resolve(state.status);
+          return false;
+        }
+      }
+      runAnimation(frame);
+    });
+  }<br>
+  function trackKeys(keys) {
+    let down = Object.create(null);
+    function track(event) {
+      if (keys.includes(event.key)) {
+        down[event.key] = event.type == "keydown";
+        event.preventDefault();
+      }
+    }
+    window.addEventListener("keydown", track);
+    window.addEventListener("keyup", track);
+    down.unregister = () =&gt; {
+      window.removeEventListener("keydown", track);
+      window.removeEventListener("keyup", track);
+    };
+    return down;
+  }<br>
+  runGame(GAME_LEVELS, DOMDisplay);
+&lt;/script&gt;
+</body>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el42">42. A Platform Game: A monster</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
+&lt;script src="code/levels.js"&gt;&lt;/script&gt;<br>
+&lt;link rel="stylesheet" href="css/game.css"&gt;<br>
+&lt;style&gt;
+  .monster { background: purple }
+&lt;/style&gt;<br>
+&lt;body&gt;
+  &lt;script&gt;
+    const monsterSpeed = 4;<br>
+    class Monster {
+      constructor(pos) { this.pos = pos; }<br>
+      get type() { return "monster"; }<br>
+      static create(pos) { return new Monster(pos.plus(new Vec(0, -1))); }<br>
+      update(time, state) {
+        let player = state.player;
+        let speed = (player.pos.x &lt; this.pos.x ? -1 : 1) * time * monsterSpeed;
+        let newPos = new Vec(this.pos.x + speed, this.pos.y);
+        if (state.level.touches(newPos, this.size, "wall")) return this;
+        else return new Monster(newPos);
+      }<br>
+      collide(state) {
+        let player = state.player;
+        if (player.pos.y + player.size.y &lt; this.pos.y + 0.5) {
+          let filtered = state.actors.filter(a =&gt; a != this);
+          return new State(state.level, filtered, state.status);
+        } else {
+          return new State(state.level, state.actors, "lost");
+        }
+      }
+    }<br>
+    Monster.prototype.size = new Vec(1.2, 2);<br>
+    levelChars["M"] = Monster;<br>
+    runLevel(new Level(`
+..................................
+.################################.
+.#..............................#.
+.#..............................#.
+.#..............................#.
+.#...........................o..#.
+.#..@...........................#.
+.##########..............########.
+..........#..o..o..o..o..#........
+..........#...........M..#........
+..........################........
+..................................
+`), DOMDisplay);
+  &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el43">43. Drawing on Canvas: Shapes</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
+&lt;script src="code/levels.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;
 
+&lt;canvas width="600" height="200"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  let cx = document.querySelector("canvas").getContext("2d");
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el41">41. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  function trapezoid(x, y) {
+    cx.beginPath();
+    cx.moveTo(x, y);
+    cx.lineTo(x + 50, y);
+    cx.lineTo(x + 70, y + 50);
+    cx.lineTo(x - 20, y + 50);
+    cx.closePath();
+    cx.stroke();
+  }
+  trapezoid(30, 30);
 
+  function diamond(x, y) {
+    cx.translate(x + 30, y + 30);
+    cx.rotate(Math.PI / 4);
+    cx.fillStyle = "red";
+    cx.fillRect(-30, -30, 60, 60);
+    cx.resetTransform();
+  }
+  diamond(140, 30);
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el42">42. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  function zigzag(x, y) {
+    cx.beginPath();
+    cx.moveTo(x, y);
+    for (let i = 0; i &lt; 8; i++) {
+      cx.lineTo(x + 80, y + i * 8 + 4);
+      cx.lineTo(x, y + i * 8 + 8);
+    }
+    cx.stroke();
+  }
+  zigzag(240, 20);
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el43">43. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  function spiral(x, y) {
+    let radius = 50, xCenter = x + radius, yCenter = y + radius;
+    cx.beginPath();
+    cx.moveTo(xCenter, yCenter);
+    for (let i = 0; i &lt; 300; i++) {
+      let angle = i * Math.PI / 30;
+      let dist = radius * i / 300;
+      cx.lineTo(xCenter + Math.cos(angle) * dist,
+                yCenter + Math.sin(angle) * dist);
+    }
+    cx.stroke();
+  }
+  spiral(340, 20);
 
+  function star(x, y) {
+    let radius = 50, xCenter = x + radius, yCenter = y + radius;
+    cx.beginPath();
+    cx.moveTo(xCenter + radius, yCenter);
+    for (let i = 1; i &lt;= 8; i++) {
+      let angle = i * Math.PI / 4;
+      cx.quadraticCurveTo(xCenter, yCenter,
+                          xCenter + Math.cos(angle) * radius,
+                          yCenter + Math.sin(angle) * radius);
+    }
+    cx.fillStyle = "gold";
+    cx.fill();
+  }
+  star(440, 20);
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el44">44. </h2>
+<h2 id="el44">44. Drawing on Canvas: The pie chart</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
+&lt;script src="code/levels.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el45">45. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+&lt;canvas width="600" height="300"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  let cx = document.querySelector("canvas").getContext("2d");
+  let total = results.reduce(function(sum, choice) {
+    return sum + choice.count;
+  }, 0);
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el46">46. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  let currentAngle = -0.5 * Math.PI;
+  let centerX = 300, centerY = 150;
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el47">47. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  results.forEach(function(result) {
+    let sliceAngle = (result.count / total) * 2 * Math.PI;
+    cx.beginPath();
+    cx.arc(centerX, centerY, 100,
+           currentAngle, currentAngle + sliceAngle);
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el48">48. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    let middleAngle = currentAngle + 0.5 * sliceAngle;
+    let textX = Math.cos(middleAngle) * 120 + centerX;
+    let textY = Math.sin(middleAngle) * 120 + centerY;
+    cx.textBaseLine = "middle";
+    if (Math.cos(middleAngle) &gt; 0) {
+      cx.textAlign = "left";
+    } else {
+      cx.textAlign = "right";
+    }
+    cx.font = "15px sans-serif";
+    cx.fillStyle = "black";
+    cx.fillText(result.name, textX, textY);
 
+    currentAngle += sliceAngle;
+    cx.lineTo(centerX, centerY);
+    cx.fillStyle = result.color;
+    cx.fill();
+  });
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el49">49. </h2>
+<h2 id="el45">45. Drawing on Canvas: A bouncing ball</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
+&lt;script src="code/levels.js"&gt;&lt;/script&gt;
+&lt;script src="code/chapter/17_canvas.js"&gt;&lt;/script&gt;
 
+&lt;canvas width="400" height="400"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  let cx = document.querySelector("canvas").getContext("2d");
 
+  let lastTime = null;
+  function frame(time) {
+    if (lastTime != null) {
+      updateAnimation(Math.min(100, time - lastTime) / 1000);
+    }
+    lastTime = time;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  let x = 100, y = 300;
+  let radius = 10;
+  let speedX = 100, speedY = 60;
+
+  function updateAnimation(step) {
+    cx.clearRect(0, 0, 400, 400);
+    cx.strokeStyle = "blue";
+    cx.lineWidth = 4;
+    cx.strokeRect(25, 25, 350, 350);
+    
+    x += step * speedX;
+    y += step * speedY;
+    if (x &lt; 25 + radius || x &gt; 375 - radius) speedX = -speedX;
+    if (y &lt; 25 + radius || y &gt; 375 - radius) speedY = -speedY;
+    cx.fillStyle = "red";
+    cx.beginPath();
+    cx.arc(x, y, radius, 0, 7);
+    cx.fill();
+  }
+&lt;/script&gt;
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el46">46. HTTP and Forms: Content negotiation</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const url = "https://eloquentjavascript.net/author";
+const types = ["text/plain",
+               "text/html",
+               "application/json",
+               "application/rainbows+unicorns"];<br>
+
+async function showTypes() {
+  for (let type of types) {
+    let resp = await fetch(url, {headers: {accept: type}});
+    console.log(`${type}: ${await resp.text()}\n`);
+  }
+}<br>
+
+showTypes();
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el47">47. HTTP and Forms: A JavaScript workbench</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;
+
+&lt;textarea id="code"&gt;return "hi";&lt;/textarea&gt;
+&lt;button id="button"&gt;Run&lt;/button&gt;
+&lt;pre id="output"&gt;&lt;/pre&gt;
+
+&lt;script&gt;
+  document.querySelector("#button").addEventListener("click", () =&gt; {
+    let code = document.querySelector("#code").value;
+    let outputNode = document.querySelector("#output");
+    try {
+      let result = Function(code)();
+      outputNode.innerText = String(result);
+    } catch (e) {
+      outputNode.innerText = "Error: " + e;
+    }
+  });
+&lt;/script&gt;
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el48">48. HTTP and Forms: Conway's Game of Life</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;
+
+&lt;div id="grid"&gt;&lt;/div&gt;
+&lt;button id="next"&gt;Next generation&lt;/button&gt;
+&lt;button id="run"&gt;Auto run&lt;/button&gt;
+
+&lt;script&gt;
+  const width = 30, height = 15;
+
+  // I will represent the grid as an array of booleans.
+
+  let gridNode = document.querySelector("#grid");
+  // This holds the checkboxes that display the grid in the document.
+  let checkboxes = [];
+  for (let y = 0; y &lt; height; y++) {
+    for (let x = 0; x &lt; width; x++) {
+      let box = document.createElement("input");
+      box.type = "checkbox";
+      gridNode.appendChild(box);
+      checkboxes.push(box);
+    }
+    gridNode.appendChild(document.createElement("br"));
+  }
+
+  function gridFromCheckboxes() {
+    return checkboxes.map(box =&gt; box.checked);
+  }
+  function checkboxesFromGrid(grid) {
+    grid.forEach((value, i) =&gt; checkboxes[i].checked = value);
+  }
+  function randomGrid() {
+    let result = [];
+    for (let i = 0; i &lt; width * height; i++) {
+      result.push(Math.random() &lt; 0.3);
+    }
+    return result;
+  }
+
+  checkboxesFromGrid(randomGrid());
+
+  // This does a two-dimensional loop over the square around the given
+  // x,y position, counting all fields that have a cell but are not the
+  // center field.
+  function countNeighbors(grid, x, y) {
+    let count = 0;
+    for (let y1 = Math.max(0, y - 1); y1 &lt;= Math.min(height - 1, y + 1); y1++) {
+      for (let x1 = Math.max(0, x - 1); x1 &lt;= Math.min(width - 1, x + 1); x1++) {
+        if ((x1 != x || y1 != y) && grid[x1 + y1 * width]) {
+          count++;
+        }
+      }
+    }
+    return count;
+  }
+
+  function nextGeneration(grid) {
+    let newGrid = new Array(width * height);
+    for (let y = 0; y &lt; height; y++) {
+      for (let x = 0; x &lt; width; x++) {
+        let neighbors = countNeighbors(grid, x, y);
+        let offset = x + y * width;
+        if (neighbors &lt; 2 || neighbors &gt; 3) {
+          newGrid[offset] = false;
+        } else if (neighbors == 2) {
+          newGrid[offset] = grid[offset];
+        } else {
+          newGrid[offset] = true;
+        }
+      }
+    }
+    return newGrid;
+  }
+
+  function turn() {
+    checkboxesFromGrid(nextGeneration(gridFromCheckboxes()));
+  }
+
+  document.querySelector("#next").addEventListener("click", turn);
+
+  let running = null;
+  document.querySelector("#run").addEventListener("click", () =&gt; {
+    if (running) {
+      clearInterval(running);
+      running = null;
+    } else {
+      running = setInterval(turn, 400);
+    }
+  });
+&lt;/script&gt;
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el49">49. A Pixel Art Editor: Keyboard bindings</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
+
+&lt;div&gt;&lt;/div&gt;
+&lt;script&gt;
+  class PixelEditor {
+    constructor(state, config) {
+      let {tools, controls, dispatch} = config;
+      this.state = state;
+
+      this.canvas = new PictureCanvas(state.picture, pos =&gt; {
+        let tool = tools[this.state.tool];
+        let onMove = tool(pos, this.state, dispatch);
+        if (onMove) {
+          return pos =&gt; onMove(pos, this.state, dispatch);
+        }
+      });
+      this.controls = controls.map(
+        Control =&gt; new Control(state, config));
+      this.dom = elt("div", {
+        tabIndex: 0,
+        onkeydown: event =&gt; this.keyDown(event, config)
+      }, this.canvas.dom, elt("br"),
+         ...this.controls.reduce(
+           (a, c) =&gt; a.concat(" ", c.dom), []));
+    }
+    keyDown(event, config) {
+      if (event.key == "z" && (event.ctrlKey || event.metaKey)) {
+        event.preventDefault();
+        config.dispatch({undo: true});
+      } else if (!event.ctrlKey && !event.metaKey && !event.altKey) {
+        for (let tool of Object.keys(config.tools)) {
+          if (tool[0] == event.key) {
+            event.preventDefault();
+            config.dispatch({tool});
+            return;
+          }
+        }
+      }
+    }
+    syncState(state) {
+      this.state = state;
+      this.canvas.syncState(state.picture);
+      for (let ctrl of this.controls) ctrl.syncState(state);
+    }
+  }
+
+  document.querySelector("div")
+    .appendChild(startPixelEditor({}));
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el50">50. </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
 
+&lt;div&gt;&lt;/div&gt;
+&lt;script&gt;
+  PictureCanvas.prototype.syncState = function(picture) {
+    if (this.picture == picture) return;
+    drawPicture(picture, this.dom, scale, this.picture);
+    this.picture = picture;
+  }
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el51">51. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  function drawPicture(picture, canvas, scale, previous) {
+    if (previous == null ||
+        previous.width != picture.width ||
+        previous.height != picture.height) {
+      canvas.width = picture.width * scale;
+      canvas.height = picture.height * scale;
+      previous = null;
+    }
 
+    let cx = canvas.getContext("2d");
+    for (let y = 0; y &lt; picture.height; y++) {
+      for (let x = 0; x &lt; picture.width; x++) {
+        let color = picture.pixel(x, y);
+        if (previous == null || previous.pixel(x, y) != color) {
+          cx.fillStyle = color;
+          cx.fillRect(x * scale, y * scale, scale, scale);
+        }
+      }
+    }
+  }
 
+  document.querySelector("div")
+    .appendChild(startPixelEditor({}));
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el52">52. </h2>
+<h2 id="el51">51. A Pixel Art Editor: Circles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el53">53. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+&lt;div&gt;&lt;/div&gt;
+&lt;script&gt;
+  function circle(pos, state, dispatch) {
+    function drawCircle(to) {
+      let radius = Math.sqrt(Math.pow(to.x - pos.x, 2) +
+                             Math.pow(to.y - pos.y, 2));
+      let radiusC = Math.ceil(radius);
+      let drawn = [];
+      for (let dy = -radiusC; dy &lt;= radiusC; dy++) {
+        for (let dx = -radiusC; dx &lt;= radiusC; dx++) {
+          let dist = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+          if (dist &gt; radius) continue;
+          let y = pos.y + dy, x = pos.x + dx;
+          if (y &lt; 0 || y &gt;= state.picture.height ||
+              x &lt; 0 || x &gt;= state.picture.width) continue;
+          drawn.push({x, y, color: state.color});
+        }
+      }
+      dispatch({picture: state.picture.draw(drawn)});
+    }
+    drawCircle(pos);
+    return drawCircle;
+  }
 
+  let dom = startPixelEditor({
+    tools: Object.assign({}, baseTools, {circle})
+  });
+  document.querySelector("div").appendChild(dom);
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el54">54. </h2>
+<h2 id="el52">52. A Pixel Art Editor: Proper lines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+&lt;!doctype html&gt;
+&lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el55">55. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+&lt;div&gt;&lt;/div&gt;
+&lt;script&gt;
+  function drawLine(from, to, color) {
+    let points = [];
+    if (Math.abs(from.x - to.x) &gt; Math.abs(from.y - to.y)) {
+      if (from.x &gt; to.x) [from, to] = [to, from];
+      let slope = (to.y - from.y) / (to.x - from.x);
+      for (let {x, y} = from; x &lt;= to.x; x++) {
+        points.push({x, y: Math.round(y), color});
+        y += slope;
+      }
+    } else {
+      if (from.y &gt; to.y) [from, to] = [to, from];
+      let slope = (to.x - from.x) / (to.y - from.y);
+      for (let {x, y} = from; y &lt;= to.y; y++) {
+        points.push({x: Math.round(x), y, color});
+        x += slope;
+      }
+    }
+    return points;
+  }
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el56">56. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  function draw(pos, state, dispatch) {
+    function connect(newPos, state) {
+      let line = drawLine(pos, newPos, state.color);
+      pos = newPos;
+      dispatch({picture: state.picture.draw(line)});
+    }
+    connect(pos, state);
+    return connect;
+  }
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el57">57. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  function line(pos, state, dispatch) {
+    return end =&gt; {
+      let line = drawLine(pos, end, state.color);
+      dispatch({picture: state.picture.draw(line)});
+    };
+  }
 
+  let dom = startPixelEditor({
+    tools: {draw, line, fill, rectangle, pick}
+  });
+  document.querySelector("div").appendChild(dom);
+&lt;/script&gt;
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el58">58. </h2>
+<h2 id="el53">53. Node.js: Search tool</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+const {statSync, readdirSync, readFileSync} = require("fs");<br>
 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el59">59. </h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+let searchTerm = new RegExp(process.argv[2]);<br>
 
+for (let arg of process.argv.slice(3)) {
+  search(arg);
+}<br>
+
+function search(file) {
+  let stats = statSync(file);
+  if (stats.isDirectory()) {
+    for (let f of readdirSync(file)) {
+      search(file + "/" + f);
+    }
+  } else if (searchTerm.test(readFileSync(file, "utf8"))) {
+    console.log(file);
+  }
+}
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el54">54. Node.js: Directory creation</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+// This code won't work on its own, but is also included in the
+// js/file_server.js file, which defines the whole system.<br>
+
+const {mkdir} = require("fs").promises;<br>
+
+methods.MKCOL = async function(request) {
+  let path = urlPath(request.url);
+  let stats;
+  try {
+    stats = await stat(path);
+  } catch (error) {
+    if (error.code != "ENOENT") throw error;
+    await mkdir(path);
+    return {status: 204};
+  }
+  if (stats.isDirectory()) return {status: 204};
+  else return {status: 400, body: "Not a directory"};
+};
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el55">55. Skill-Sharing Website: Disk persistence</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+// This isn't a stand-alone file, only a redefinition of a few
+// fragments from skillsharing/skillsharing_server.js<br>
+
+const {readFileSync, writeFile} = require("fs");<br>
+
+const fileName = "./talks.json";<br>
+
+function loadTalks() {
+  let json;
+  try {
+    json = JSON.parse(readFileSync(fileName, "utf8"));
+  } catch (e) {
+    json = {};
+  }
+  return Object.assign(Object.create(null), json);
+}<br>
+
+SkillShareServer.prototype.updated = function() {
+  this.version++;
+  let response = this.talkResponse();
+  this.waiting.forEach(resolve => resolve(response));
+  this.waiting = [];<br>
+
+  writeFile(fileName, JSON.stringify(this.talks), e => {
+    if (e) throw e;
+  });
+};<br>
+
+// The line that starts the server must be changed to
+new SkillShareServer(loadTalks()).start(8000);
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+/ This isn't a stand-alone file, only a redefinition of the main
+// component from skillsharing/public/skillsharing_client.js<br>
+
+class Talk {
+  constructor(talk, dispatch) {
+    this.comments = elt("div");
+    this.dom = elt(
+      "section", {className: "talk"},
+      elt("h2", null, talk.title, " ", elt("button", {
+        type: "button",
+        onclick: () => dispatch({type: "deleteTalk",
+                                 talk: talk.title})
+      }, "Delete")),
+      elt("div", null, "by ",
+          elt("strong", null, talk.presenter)),
+      elt("p", null, talk.summary),
+      this.comments,
+      elt("form", {
+        onsubmit(event) {
+          event.preventDefault();
+          let form = event.target;
+          dispatch({type: "newComment",
+                    talk: talk.title,
+                    message: form.elements.comment.value});
+          form.reset();
+        }
+      }, elt("input", {type: "text", name: "comment"}), " ",
+          elt("button", {type: "submit"}, "Add comment")));
+    this.syncState(talk);
+  }<br>
+
+  syncState(talk) {
+    this.talk = talk;
+    this.comments.textContent = "";
+    for (let comment of talk.comments) {
+      this.comments.appendChild(renderComment(comment));
+    }
+  }
+}<br>
+
+class SkillShareApp {
+  constructor(state, dispatch) {
+    this.dispatch = dispatch;
+    this.talkDOM = elt("div", {className: "talks"});
+    this.talkMap = Object.create(null);
+    this.dom = elt("div", null,
+                   renderUserField(state.user, dispatch),
+                   this.talkDOM,
+                   renderTalkForm(dispatch));
+    this.syncState(state);
+  }<br>
+
+  syncState(state) {
+    if (state.talks == this.talks) return;
+    this.talks = state.talks;<br>
+
+    for (let talk of state.talks) {
+      let cmp = this.talkMap[talk.title];
+      if (cmp && cmp.talk.presenter == talk.presenter &&
+          cmp.talk.summary == talk.summary) {
+        cmp.syncState(talk);
+      } else {
+        if (cmp) cmp.dom.remove();
+        cmp = new Talk(talk, this.dispatch);
+        this.talkMap[talk.title] = cmp;
+        this.talkDOM.appendChild(cmp.dom);
+      }
+    }
+    for (let title of Object.keys(this.talkMap)) {
+      if (!state.talks.some(talk => talk.title == title)) {
+        this.talkMap[title].dom.remove();
+        delete this.talkMap[title];
+      }
+    }
+  }
+}
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el57">57. JS and Performance: Pathfinding</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function findPath(a, b) {
+  let work = [[a]];
+  for (let path of work) {
+    let end = path[path.length - 1];
+    if (end == b) return path;
+    for (let next of end.edges) {
+      if (!work.some(path => path[path.length - 1] == next)) {
+        work.push(path.concat([next]));
+      }
+    }
+  }
+}<br>
+
+let graph = treeGraph(4, 4);
+let root = graph[0], leaf = graph[graph.length - 1];
+console.log(findPath(root, leaf).length); // → 4<br>
+
+leaf.connect(root);
+console.log(findPath(root, leaf).length); // → 2
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el58">58. JS and Performance: Timing</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function findPath(a, b) {
+  let work = [[a]];
+  for (let path of work) {
+    let end = path[path.length - 1];
+    if (end == b) return path;
+    for (let next of end.edges) {
+      if (!work.some(path => path[path.length - 1] == next)) {
+        work.push(path.concat([next]));
+      }
+    }
+  }
+}<br>
+
+function time(findPath) {
+  let graph = treeGraph(6, 6);
+  let startTime = Date.now();
+  let result = findPath(graph[0], graph[graph.length - 1]);
+  console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
+}<br>
+time(findPath);
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el59">59. JS and Performance: Optimizing</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function time(findPath) {
+  let graph = treeGraph(6, 6);
+  let startTime = Date.now();
+  let result = findPath(graph[0], graph[graph.length - 1]);
+  console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
+}<br>
+
+function findPath_set(a, b) {
+  let work = [[a]];
+  let reached = new Set([a]);
+  for (let path of work) {
+    let end = path[path.length - 1];
+    if (end == b) return path;
+    for (let next of end.edges) {
+      if (!reached.has(next)) {
+        reached.add(next);
+        work.push(path.concat([next]));
+      }
+    }
+  }
+}<br>
+
+time(findPath_set);<br>
+
+function pathToArray(path) {
+  let result = [];
+  for (; path; path = path.via) result.unshift(path.at);
+  return result;
+}<br>
+function findPath_list(a, b) {
+  let work = [{at: a, via: null}];
+  let reached = new Set([a]);
+  for (let path of work) {
+    if (path.at == b) return pathToArray(path);
+    for (let next of path.at.edges) {
+      if (!reached.has(next)) {
+        reached.add(next);
+        work.push({at: next, via: path});
+      }
+    }
+  }
+}<br>
+time(findPath_list);
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex0">93 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5177,14 +6007,14 @@ fetchData ();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {
-  " name " Joe ",
-  "birthday": new Date ('1990 - 01 - 15T00 : 00 : 00Z'),
-  " tojson function () {
-    return * { " name " ${this.name}", " birthday" ${this.birthday.toISOString ()}" }';
+  "name": "Joe",
+  "birthday": new Date('1990-01-15T00:00:00Z'),
+  "tojson function() {
+    return * {"name" ${this.name}", "birthday" ${this.birthday.toISOString()}"}';
   };
   let jsonString = obj.tojson();
 }
-console.log(jsonString); // Output: { " name " Joe ", " birthday" 1990 - 01 - 15T00 : 00 : 00.000Z " }
+console.log(jsonString); // Output: {"name" "Joe", "birthday"1990-01-15T00:00:00.000Z"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Handling JSON Data from an API (Using Axios):</h4>
@@ -5209,14 +6039,15 @@ console.log(mergedObj); // Output: {name: 'Tom', age: 30, city: 'Paris', country
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = [
-  { "id": 1, " name Item 1 "},
-  { " id": 2, " name ":" Item 2 "},
-  { " id ": 3, " name ":" Item 3 "}
-];
-let mappedData = data.map(item => ({itemId : item.id, itemName : item.name}));
+  {"id": 1, "name":" "Item1"},
+  {"id": 2, "name":" "Item2"},
+  {"id": 3, "name":" "Item3"}
+];<br>
+let mappedData = data.map(item => ({itemId: item.id, itemName: item.name}));
 console.log(mappedData);
-// Output: [{ "itemId": 1, " itemName ":" Item 1" }, { "itemId": 2, " itemName":" Item 2 " }, { "itemId": 3,
-" itemName ":" Item 3 " } ]
+// Output: [{"itemId": 1, "itemName":"Item1"}, 
+  {"itemId": 2, "itemName":"Item2"}, 
+  {"itemId": 3, "itemName":"Item3"}]
 </pre>
 <p>These examples showcase different aspects of using JSON in JavaScript, including 
 creating, manipulating, parsing, and working with JSON data in various scenarios.</p>
@@ -5252,8 +6083,9 @@ complexities of JavaScript and provides a concise syntax for common tasks.</p>
 // jQuery code to change text color on button click
 $("#text").css("color", "blue");
 </pre>
-<p>jQuery simplifies common JavaScript tasks, such as event handling, animations, AJAX requests, and DOM
-manipulation, offering a more concise syntax compared to native JavaScript.</p>
+<p>jQuery simplifies common JavaScript tasks, such as event handling, animations, AJAX 
+requests, and DOM manipulation, offering a more concise syntax compared to native 
+JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Differences Between JavaScript and jQuery</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5296,8 +6128,9 @@ $ (".example ").css (" font - size ", "16px ");
 // Selecting all <p> elements inside <div> with ID 'content'
 $ (" #content p ").addClass (" highlight");
 </pre>
-<p>jQuery selectors, similar to CSS selectors, enable developers to target elements based on IDs, classes, attributes, element
-types, and more.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>jQuery selectors, similar to CSS selectors, enable developers to target elements based 
+on IDs, classes, attributes, element types, and more.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>jQuery HTML Manipulation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5628,22 +6461,24 @@ $("#myDiv").click (function() {
   $(this).css("background-color ", "red");
 });
 </pre>
-<p>These examples demonstrate how JavaScript and jQuery can achieve similar tasks, showcasing the differences in
-syntax and complexity between the two when performing common web development operations.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>These examples demonstrate how JavaScript and jQuery can achieve similar tasks, 
+showcasing the differences in syntax and complexity between the two when performing 
+common web development operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JavaScript Graphics Libraries: Explained</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. JavaScript Graphics</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript is a versatile language that allows developers to create interactive graphics and visualizations on the web.
-Several libraries and tools empower developers to generate captivating graphics for data representation, animations,
-games, and more.</p>
+<p>JavaScript is a versatile language that allows developers to create interactive 
+graphics and visualizations on the web. Several libraries and tools empower developers 
+to generate captivating graphics for data representation, animations, games, and more.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. JS Canvas</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The HTML <canvas> element is a powerful tool in JavaScript for drawing graphics on a web page dynamically. It
-provides a bitmap area where JavaScript code can be used to create animations, render shapes, images, and complex
-visualizations.</p>
+<p>The HTML &lt;canvas&gt; element is a powerful tool in JavaScript for drawing graphics 
+on a web page dynamically. It provides a bitmap area where JavaScript code can be used 
+to create animations, render shapes, images, and complex visualizations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example - Drawing a Circle on Canvas:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5657,9 +6492,10 @@ ctx.stroke();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. JS Plotly</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Plotly is a JavaScript graphing library that allows developers to create interactive and publication - quality graphs . It
-supports various chart types, including line plots, bar charts, pie charts, scatter plots, and more . Plotly provides easy -
-to - use APIs for customization and interactivity.</p>
+<p>Plotly is a JavaScript graphing library that allows developers to create interactive 
+and publication-quality graphs. It supports various chart types, including line plots, 
+bar charts, pie charts, scatter plots, and more. Plotly provides easy-to-use APIs for 
+customization and interactivity.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example - Creating a Line Chart with Plotly:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5670,8 +6506,9 @@ Plotly.newPlot('myDiv', data);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. JS Chart.js</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Chart.js is a popular JavaScript library for creating simple yet flexible charts . It supports various chart types and
-provides easy integration . With Chart. js, developers can create responsive and visually appealing charts.</p>
+<p>Chart.js is a popular JavaScript library for creating simple yet flexible charts. It 
+supports various chart types and provides easy integration. With Chart.js, developers 
+can create responsive and visually appealing charts.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example - Creating a Bar Chart with Chart.js:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
