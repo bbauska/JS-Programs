@@ -2164,8 +2164,7 @@ showTypes();</pre>
   class PixelEditor {
     constructor(state, config) {
       let {tools, controls, dispatch} = config;
-      this.state = state;
-
+      this.state = state;<br>
       this.canvas = new PictureCanvas(state.picture, pos =&gt; {
         let tool = tools[this.state.tool];
         let onMove = tool(pos, this.state, dispatch);
@@ -2206,7 +2205,7 @@ showTypes();</pre>
     .appendChild(startPixelEditor({}));
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el50">50. </h2>
+<h2 id="el50">50. A Pixel Art Editor: Efficient drawing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
