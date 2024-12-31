@@ -19,6 +19,62 @@ own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2><a href="#el0">49 Eloquent JS Examples</h2>
+<ul>
+  <li><a href="#el01">El01. Program Structure: Looping a Triangle</a></li>
+  <li><a href="#el02">El02. Program Structure: FizzBuzz</a></li>
+  <li><a href="#el03">El03. Program Structure: Chessboard</a></li>
+  <li><a href="#el04">El04. Functions: Minimum</a></li>
+  <li><a href="#el05">El05. Functions: Recursion</a></li>
+  <li><a href="#el06">El06. Functions: Bean counting</a></li>
+  <li><a href="#el07">El07. Data Structures: Objects and Arrays</a></li>
+  <li><a href="#el08">El08. Data Structures: The sum of a range</a></li>
+  <li><a href="#el09">El09. Data-Structures: Reversing an Array</a></li>
+  <li><a href="#el10">El10. Data-Structures: A list</a></li>
+  <li><a href="#el11">El11. Data-Structures: Deep comparison</a></li>
+
+  <li><a href="#el12">El12. </a></li>
+  <li><a href="#el13">El13. </a></li>
+  <li><a href="#el14">El14. </a></li>
+  <li><a href="#el15">El15. </a></li>
+  <li><a href="#el16">El16. </a></li>
+  <li><a href="#el17">El17. </a></li>
+  <li><a href="#el18">El18. </a></li>
+  <li><a href="#el19">El19. </a></li>
+  <li><a href="#el20">El20. </a></li>
+  <li><a href="#el21">El21. </a></li>
+  <li><a href="#el22">El22. </a></li>
+  <li><a href="#el23">El23. </a></li>
+  <li><a href="#el24">El24. </a></li>
+  <li><a href="#el25">El25. </a></li>
+  <li><a href="#el26">El26. </a></li>
+  <li><a href="#el27">El27. </a></li>
+  <li><a href="#el28">El28. </a></li>
+  <li><a href="#el29">El29. </a></li>
+  <li><a href="#el30">El30. </a></li>
+  <li><a href="#el31">El31. </a></li>
+  <li><a href="#el32">El32. </a></li>
+  <li><a href="#el33">El33. </a></li>
+  <li><a href="#el34">El34. </a></li>
+  <li><a href="#el35">El35. </a></li>
+  <li><a href="#el36">El36. </a></li>
+  <li><a href="#el37">El37. </a></li>
+  <li><a href="#el38">El38. </a></li>
+  <li><a href="#el39">El39. </a></li>
+  <li><a href="#el40">El40. </a></li>
+  <li><a href="#el41">El41. </a></li>
+  <li><a href="#el42">El42. </a></li>
+  <li><a href="#el43">El43. </a></li>
+  <li><a href="#el44">El44. </a></li>
+  <li><a href="#el45">El45. </a></li>
+  <li><a href="#el46">El46. </a></li>
+  <li><a href="#el47">El47. </a></li>
+  <li><a href="#el48">El48. </a></li>
+  <li><a href="#el49">El49. </a></li>
+
+</ul>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a href="#ex0">93 JavaScript Examples From Basics to Advanced</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol>
