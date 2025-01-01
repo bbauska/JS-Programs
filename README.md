@@ -32,45 +32,54 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#el09">El09. Data-Structures: Reversing an Array</a></li>
   <li><a href="#el10">El10. Data-Structures: A list</a></li>
   <li><a href="#el11">El11. Data-Structures: Deep comparison</a></li>
-
-  <li><a href="#el12">El12. </a></li>
-  <li><a href="#el13">El13. </a></li>
-  <li><a href="#el14">El14. </a></li>
-  <li><a href="#el15">El15. </a></li>
-  <li><a href="#el16">El16. </a></li>
-  <li><a href="#el17">El17. </a></li>
-  <li><a href="#el18">El18. </a></li>
-  <li><a href="#el19">El19. </a></li>
-  <li><a href="#el20">El20. </a></li>
-  <li><a href="#el21">El21. </a></li>
-  <li><a href="#el22">El22. </a></li>
-  <li><a href="#el23">El23. </a></li>
-  <li><a href="#el24">El24. </a></li>
-  <li><a href="#el25">El25. </a></li>
-  <li><a href="#el26">El26. </a></li>
-  <li><a href="#el27">El27. </a></li>
-  <li><a href="#el28">El28. </a></li>
-  <li><a href="#el29">El29. </a></li>
-  <li><a href="#el30">El30. </a></li>
-  <li><a href="#el31">El31. </a></li>
-  <li><a href="#el32">El32. </a></li>
-  <li><a href="#el33">El33. </a></li>
-  <li><a href="#el34">El34. </a></li>
-  <li><a href="#el35">El35. </a></li>
-  <li><a href="#el36">El36. </a></li>
-  <li><a href="#el37">El37. </a></li>
-  <li><a href="#el38">El38. </a></li>
-  <li><a href="#el39">El39. </a></li>
-  <li><a href="#el40">El40. </a></li>
-  <li><a href="#el41">El41. </a></li>
-  <li><a href="#el42">El42. </a></li>
-  <li><a href="#el43">El43. </a></li>
-  <li><a href="#el44">El44. </a></li>
-  <li><a href="#el45">El45. </a></li>
-  <li><a href="#el46">El46. </a></li>
-  <li><a href="#el47">El47. </a></li>
-  <li><a href="#el48">El48. </a></li>
-  <li><a href="#el49">El49. </a></li>
+  <li><a href="#el12">El12. Higher-Order Functions: Flattening</a></li>
+  <li><a href="#el13">El13. Higher-Order Functions: Your own loop</a></li>
+  <li><a href="#el14">El14. Higher-Order Functions: Everything</a></li>
+  <li><a href="#el15">El15. Higher-Order Functions: Dominant writing direction</a></li>
+  <li><a href="#el16">El16. Objects: A vector type</a></li>
+  <li><a href="#el17">El17. Objects: Groups</a></li>
+  <li><a href="#el18">El18. Objects: Iterable groups</a></li>
+  <li><a href="#el19">El19. Objects: Borrowing a method</a></li>
+  <li><a href="#el20">El20. A Robot: Measuring a robot</a></li>
+  <li><a href="#el21">El21. A Robot: Robot efficiency</a></li>
+  <li><a href="#el22">El22. A Robot: Persistent group</a></li>
+  <li><a href="#el23">El23. Bugs and Errors: Retry</a></li>
+  <li><a href="#el24">El24. Bugs and Errors: The locked box</a></li>
+  <li><a href="#el25">El25. Regular Expressions: Regexp golf</a></li>
+  <li><a href="#el26">El26. Regular Expressions: Quoting style</a></li>
+  <li><a href="#el27">El27. Regular Expressions: Numbers again</a></li>
+  <li><a href="#el28">El28. Modules: Roads module</a></li>
+  <li><a href="#el29">El29. Asynchronous Programming: Tracking the scalpel</a></li>
+  <li><a href="#el30">El30. Asynchronous Programming: Building Promise.all</a></li>
+  <li><a href="#el31">El31. A Programming Language: Arrays</a></li>
+  <li><a href="#el32">El32. A Programming Language: Comments</a></li>
+  <li><a href="#el33">El33. A Programming Language: Fixing scope</a></li>
+  <li><a href="#el34">El34. The Document Object Model: Build a table</a></li>
+  <li><a href="#el35">El35. The Document Object Model: Elements by tag name</a></li>
+  <li><a href="#el36">El36. The Document Object Model: The cat's hat</a></li>
+  <li><a href="#el37">El37. Handling Events: Balloon</a></li>
+  <li><a href="#el38">El38. Handling Events: Mouse trail</a></li>
+  <li><a href="#el39">El39. Handling Events: Tabs</a></li>
+  <li><a href="#el40">El40. A Platform Game: Game over</a></li>
+  <li><a href="#el41">El41. A Platform Game: Pausing the game</a></li>
+  <li><a href="#el42">El42. A Platform Game: A monster</a></li>
+  <li><a href="#el43">El43. Drawing on Canvas: Shapes</a></li>
+  <li><a href="#el44">El44. Drawing on Canvas: The pie chart</a></li>
+  <li><a href="#el45">El45. Drawing on Canvas: A bouncing ball</a></li>
+  <li><a href="#el46">El46. HTTP and Forms: Content negotiation</a></li>
+  <li><a href="#el47">El47. HTTP and Forms: A JavaScript workbench</a></li>
+  <li><a href="#el48">El48. HTTP and Forms: Conway's Game of Life</a></li>
+  <li><a href="#el49">El49. A Pixel Art Editor: Keyboard bindings</a></li>
+  <li><a href="#el50">El50. A Pixel Art Editor: Efficient drawing</a></li>
+  <li><a href="#el51">El51. A Pixel Art Editor: Circles</a></li>
+  <li><a href="#el52">El52. A Pixel Art Editor: Proper lines</a></li>
+  <li><a href="#el53">El53. Node.js: Search tool</a></li>
+  <li><a href="#el54">El54. Node.js: Directory creation</a></li>
+  <li><a href="#el55">El55. Skill-Sharing Website: Disk persistence</a></li>
+  <li><a href="#el56">El56. Skill-Sharing Website: Comment field resets</a></li>
+  <li><a href="#el57">El57. JS and Performance: Pathfinding</a></li>
+  <li><a href="#el58">El58. JS and Performance: Timing</a></li>
+  <li><a href="#el59">El59. JS and Performance: Optimizing</a></li>
 
 </ul>
 
@@ -694,6 +703,16 @@ for (let line = "#"; line.length < 8; line += "#")
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el2">02. Program Structure: FizzBuzz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Write a program that uses console.log to print all the numbers from 1 to 100, with two 
+exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for 
+numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, 
+modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 
+(and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+(This is actually an interview question that has been claimed to weed out a significant 
+percentage of programmer candidates. So if you solved it, you’re now allowed to feel
+good about yourself.)
+
 <pre>
 for (let n = 1; n <= 100; n++) {
   let output = "";
@@ -808,6 +827,11 @@ Buzz
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el3">03. Program Structure: Chessboard</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Write a program that creates a string that represents an 8×8 grid, using newline 
+characters to separate lines. At each position of the grid there is either a space or 
+a "#" character. The characters should form a chess board. Passing this string to 
+console.log should show something like Solution (below):</p>
+
 <pre>
 let size = 8;
 let board = "";
@@ -838,6 +862,34 @@ console.log(board);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el4">04. Functions: Minimum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+var makeNoise = function() {
+console.log("Pling!");
+};
+makeNoise();
+// → Pling!
+var power = function(base, exponent) {
+var result = 1;
+for (var count = 0; count < exponent; count++)
+result *= base;
+return result;
+};
+console.log(power(2, 10));
+// → 1024
+Some functions produce a value, such
+as power and square, and some
+don’t, such as makeNoise, which
+produces only a side effect. A return
+statement determines the value the
+function returns. When control comes
+across such a statement, it
+immediately jumps out of the current
+function and gives the returned value
+to the code that called the function.
+The return keyword without an
+expression after it will cause the
+function to return undefined.
+Parameters and scopes
+
 <pre>
 function min(a, b) {
   if (a < b) return a;
@@ -863,6 +915,32 @@ console.log(isEven(-1)); // → false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el6">06. Functions: Bean counting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You can get the Nth character, or
+letter, from a string by writing
+"string".charAt(N), similar to how
+you get its length with "s".length.
+The returned value will be a string
+containing only one character (for
+example, "b"). The first character has
+position zero, which causes the last
+one to be found at position
+string.length - 1. In other words,
+a two-character string has length 2,
+and its characters have positions 0
+and 1.
+Write a function countBs that takes a
+string as its only argument and
+returns a number that indicates how
+many uppercase “B” characters are in
+the string.
+Next, write a function called
+countChar that behaves like
+countBs, except it takes a second
+argument that indicates the character
+that is to be counted (rather than
+counting only uppercase "B"
+characters). Rewrite countBs to
+make use of this new function.</p>
 <pre>
 function countChar(string, ch) {
   let counted = 0;
@@ -1039,8 +1117,8 @@ console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 function deepEqual(a, b) {
   if (a === b) return true;
   if (a == null || typeof a != "object" ||
-      b == null || typeof b != "object") return false;<br>
-  let keysA = Object.keys(a), keysB = Object.keys(b);<br>
+      b == null || typeof b != "object") return false;
+  let keysA = Object.keys(a), keysB = Object.keys(b);
   if (keysA.length != keysB.length) return false;
   for (let key of keysA) {
     if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
