@@ -195,15 +195,15 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 <h2><a href="#js0">218 Simple JavaScript Example Scripts</a></h2>
 
 <ul type="square">
-  <li><a href="#js1">1. Print Hello World</a></li>
-  <li><a href="#js2">2. Add Two Numbers</a></li>
-  <li><a href="#js3">3. Find the Square Root</a></li>
-  <li><a href="#js4">4. Calculate the Area of a Triangle</a></li>
-  <li><a href="#js5">5. Swap Two Variables</a></li>
-  <li><a href="#js6">6. Solve Quadratic Equation</a></li>
-  <li><a href="#js7">7. Convert Kilometers to Miles</a></li>
-  <li><a href="#js8">8. Convert Celsius to Fahrenheit</a></li>
-  <li><a href="#js9">9. Generate a Random Number</a></li>
+  <li><a href="#js01">01. Print Hello World</a></li>
+  <li><a href="#js02">02. Add Two Numbers</a></li>
+  <li><a href="#js03">03. Find the Square Root</a></li>
+  <li><a href="#js04">04. Calculate the Area of a Triangle</a></li>
+  <li><a href="#js05">05. Swap Two Variables</a></li>
+  <li><a href="#js06">06. Solve Quadratic Equation</a></li>
+  <li><a href="#js07">07. Convert Kilometers to Miles</a></li>
+  <li><a href="#js08">08. Convert Celsius to Fahrenheit</a></li>
+  <li><a href="#js09">09. Generate a Random Number</a></li>
   <li><a href="#js10">10. Check if a number is Positive, Negative, or Zero</a></li>
   <li><a href="#js11">11. Check if a Number is Odd or Even</a></li>
   <li><a href="#js12">12. Find the Largest Among Three Numbers</a></li>
@@ -6096,6 +6096,9 @@ creating, manipulating, parsing, and working with JSON data in various scenarios
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex94">JavaScript vs jQuery: A Comprehensive Comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
 <p>JavaScript and jQuery are both powerful tools used in web development. JavaScript is a 
 programming language, while jQuery is a library built with JavaScript. Understanding their 
 differences, capabilities, and usage scenarios is crucial for developers.</p>
@@ -6166,9 +6169,9 @@ manipulate HTML elements.</p>
 <h4>Example of jQuery Selectors:</h4>
 <pre>
 // Selecting elements with class 'example'
-$ (".example ").css (" font - size ", "16px ");
-// Selecting all <p> elements inside <div> with ID 'content'
-$ (" #content p ").addClass (" highlight");
+$(".example").css("font-size","16px");
+// Selecting all &lt;p&gt; elements inside &lt;div&gt; with ID 'content'
+$("#content p").addClass("highlight");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>jQuery selectors, similar to CSS selectors, enable developers to target elements based 
@@ -6180,12 +6183,12 @@ on IDs, classes, attributes, element types, and more.</p>
 and modify HTML elements and their content.</p>
 <h4>Example of jQuery HTML Manipulation:</h4>
 <pre>
-// Appending a new <li> element to an unordered list
-$ (" ul").append (" <li>New Item< I li> ");
-// Changing text content inside a <div> element
-$ (" #content").text (" Updated content");
+// Appending a new &lt;li&gt; element to an unordered list
+$("ul").append("&lt;li&gt;New Item&lt;/li&gt;");
+// Changing text content inside a &lt;div&gt; element
+$("#content").text("Updated content");
 </pre>
-<p>With jQuery's methods like append, html, text, and remove , developers can efficiently 
+<p>With jQuery's methods like append, html, text, and remove, developers can efficiently
 modify HTML content on the fly.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>jQuery CSS Manipulation</h3>
@@ -6194,10 +6197,10 @@ modify HTML content on the fly.</p>
 <h4>Example of jQuery CSS Manipulation:</h4>
 <pre>
 // Changing the background color of an element
-$ (" #box ").css (" background - color ", " #f2f2f2 ");
+$("#box").css("background-color", "#f2f2f2");
 // Toggling a CSS class on an element
-$ (" #toggleBtn ").click (function () {
-$ (" #content").toggleclass (" active ");
+$("#toggleBtn").click(function() {
+  $("#content").toggleclass("active");
 });
 </pre>
 <p>jQuery's css, addClass, removeclass, and toggleClass methods simplify applying, 
@@ -6212,9 +6215,9 @@ relationships within the DOM.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Finding the next sibling element
-$ (" #current").next ().addClass (" highlight");
+$("#current").next().addClass("highlight");
 // Traversing up the DOM to find parent elements
-$ (" a ").closest (" div").addClass (" parent - div");
+$("a").closest("div").addClass("parent-div");
 </pre>
 <p>Using methods like next, prev, find, closest, and siblings, jQuery provides efficient 
 ways to navigate and manipulate elements within the DOM.</p>
@@ -7007,7 +7010,7 @@ function isPalindrome(str) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [ 5, 8, 3,12, 6 ];
-letmaxNumber = Math . max (... numbers ); // Output: 12
+letmaxNumber = Math.max(... numbers ); // Output: 12
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Sort Array of Objects by Property:</h4>
@@ -7990,7 +7993,7 @@ console.log(Object.is(5, '5')); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>7. Promise . allSettled with Optional Chaining:</h4>
+<h4>7. Promise.allSettled with Optional Chaining:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
@@ -13661,6 +13664,7 @@ startChat();
 <h2 id="js170">170. RGB to HEX Converter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows you to convert RBG values to hexadecimal.</p>
+
 <pre>
 function convertToHex(red, green, blue) {
   const toHex = value => {
@@ -13686,6 +13690,7 @@ console.log(`HEX: ${hexResult}`);
 <h2 id="js171">171. Counter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows you to increment, decrement and reset a counter.</p>
+
 <pre>
 let count = 0;
 
@@ -13808,6 +13813,7 @@ function generateRandomNumber(min, max) {
   return Math.floor(Math.random() &ast; (max - min + 1)) + min;
 }
 
+// Example usage
 const randomNumber = generateRandomNumber(l, 10);
 console.log("Random Number:", randomNumber);
 </pre>
@@ -13855,6 +13861,7 @@ function runQuiz() {
   }
   console.log(`Your final score: ${score} out of ${questions.length}`);
 }
+
 // Run the quiz
 runQuiz();
 </pre>
@@ -13891,6 +13898,7 @@ function textRPGAdventure() {
     }
   }
 }<br>
+
 // Example: Start the text-based RPG adventure
 textRPGAdventure();
 </pre>
@@ -13904,6 +13912,7 @@ function rollDice() {
   const result = Math.floor(Math.random() &ast; 6) + 1;
   console.log(`You rolled a ${result}`);
 }<br>
+
 // Example: Simulate rolling the dice
 rollDice();
 </pre>
@@ -13921,6 +13930,7 @@ function convertSecondsToTime(seconds) {
   
   console.log(`Time: ${hours} hours, ${minutes} minutes, ${remainingSeconds} seconds`);
 }<br>
+
 // Example: Convert 3665 seconds to time
 const inputSeconds = 3665;
 convertSecondsToTime(inputSeconds);  / Time: 1 hours, 1 minutes, 5 seconds
@@ -13941,6 +13951,7 @@ function generateBarChart(data) {
     console.log(`${value} | ${bar}`);
   }
 }<br>
+
 // Example: Generate a bar chart for data
 const chartData = &lbrack;5,8,12,4,6&rbrack;;
 generateBarChart(chartData);
@@ -13950,6 +13961,7 @@ generateBarChart(chartData);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a right-angled triangle pattern using asterisks and displays 
 it in the console.</p>
+
 <pre>
 function generateRightAngledTriangle(height) {
   for (let i = 1; i &lt;= height; i++) {
@@ -13957,6 +13969,7 @@ function generateRightAngledTriangle(height) {
     console.log(stars);
   }
 }<br>
+
 // Example: Generate a right-angled triangle with a height of 5
 const triangleHeight = 5;
 generateRightAngledTriangle(triangleHeight);
@@ -13976,6 +13989,7 @@ function textBasedCalculator(expression) {
     console.error('Error:', error.message);
   }
 }<br>
+
 // Example: Evaluate a mathematical expression
 const userInput = prompt('Enter a mathematical expression:');
 textBasedCalculator(userInput);
@@ -13993,6 +14007,7 @@ function generateNumberPyramid(height) {
     console.log(spaces + numbers);
   }
 }<br>
+
 // Example: Generate a number pyramid with a height of 4
 const pyramidHeight = 4;
 generateNumberPyramid(pyramidHeight);
@@ -14012,6 +14027,7 @@ function generateDiamondPattern(height) {
     console.log(''.repeat(spaces) + stars);
   }
 }<br>
+
 // Example: Generate a diamond pattern with a height of 5
 const diamondHeight = 5;
 generateDiamondPattern(diamondHeight);
@@ -14073,6 +14089,7 @@ function hangmanGame() {
     }
   }
 }<br>
+
 // Example: Start the Hangman game
 hangmanGame();
 </pre>
@@ -14291,22 +14308,23 @@ coinTossingGame();
 
 <pre>
 function fibonacciNumberGenerator() {
-const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
+  const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
 
-if (isNaN(limit) 11 limit < 1) {
-  console.log("Invalid input. Please enter a positive number.");
-  return;
+  if (isNaN(limit) 11 limit < 1) {
+    console.log("Invalid input. Please enter a positive number.");
+    return;
+  }
+
+  let fibonacciNumbers = &lbrack;0, 1&rbrack;;
+
+  for (let i = 2; i < = limit; i+ +) {
+   fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibonacciNumbers&lbrack;i - 2&rbrack;;
+  }
+
+  console.log(`Fibonacci numbers up to $ {limit}:`);
+  console.log(fibonacciNumbers.slice(0, limit + 1));
 }
 
-let fibonacciNumbers = &lbrack;0, 1&rbrack;;
-
-for (let i = 2; i < = limit; i+ +) {
-fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibonacciNumbers&lbrack;i - 2&rbrack;;
-}
-
-console.log(`Fibonacci numbers up to $ {limit}:`);
-console.log(fibonacciNumbers.slice(0, limit + 1));
-}
 // Example: Start the Fibonacci Number Generator
 fibonacciNumberGenerator();
 </pre>
@@ -14315,6 +14333,7 @@ fibonacciNumberGenerator();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Math Quiz game. The player is asked random 
 addition questions and scores points for correct answers.</p>
+
 <pre>
 function mathQuizGame() {
   const maxQuestions = 5;
@@ -14335,6 +14354,7 @@ function mathQuizGame() {
   }
   console.log(`Quiz complete! Your final score is: ${score} out of ${maxQuestions}`);
 }
+
 // Example: Start the Math Quiz Game
 mathQuizGame();
 </pre>
@@ -14343,6 +14363,7 @@ mathQuizGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Color Guessing game. The player is given RGB 
 values, and they need to guess the correct color.</p>
+
 <pre>
 function colorGuessingGame() {
   const colors = &lbrack;"red", "green", "blue", "yellow", "orange", "purple"&rbrack;;
@@ -14369,7 +14390,7 @@ function colorGuessingGame() {
   console.log("Sorry, you've run out of attempts. The correct color was revealed above.");
 }
 function generateRandomRGBValues() {
-  return Array.from({ length: 3 }, () => Math.floor(Math.random() &ast; 256));
+  return Array.from({length: 3}, () => Math.floor(Math.random() &ast; 256));
 }
 
 // Example: Start the Color Guessing Game
@@ -14380,6 +14401,7 @@ colorGuessingGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Word Scramble game. The player is presented with a 
 scrambled word and needs to unscramble it.</p>
+
 <pre>
 function wordScrambleGame() {
   const words = &lbrack;"javascript", "programming", "web", "hangman", "developer"&rbrack;;
@@ -14417,6 +14439,7 @@ wordScrambleGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Country Capital Quiz game. The player is asked to 
 match countries with their respective capitals.</p>
+
 <pre>
 function countryCapitalQuizGame() {
   const countryCapitalPairs = &lbrack;
@@ -14450,6 +14473,7 @@ countryCapitalQuizGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Guess the Animal game. The player is provided 
 with clues and needs to guess the correct animal.</p>
+
 <pre>
 function guessTheAnimalGame() {
   const animals = &lbrack;
@@ -14484,6 +14508,7 @@ guessTheAnimalGame();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Joke Teller. It randomly selects a joke category 
 and tells a joke from that category.</p>
+
 <pre>
 function jokeTellerProgram() {
   const jokeCategories = &lbrack;"knock-knock", "dad", "animal", "puns"&rbrack;;
@@ -14525,6 +14550,7 @@ jokeTellerProgram();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Shopping List. The user can add items, remove 
 items, and view the current shopping list.</p>
+
 <pre>
 function shoppingListProgram() {
   const shoppingList = &lbrack;&rbrack;;
@@ -14582,6 +14608,7 @@ shoppingListProgram();
 <p>The program prints numbers from 1 to 100, but for multiples of 3, it prints "Fizz," 
 for multiples of 5, it prints "Buzz," and for multiples of both 3 and 5, it prints 
 "FizzBuzz":</p>
+
 <pre>
 function fizzBuzzGame() {
   console.logf'Welcome to the FizzBuzz Game!");
@@ -14607,6 +14634,7 @@ fizzBuzzGameO;
 <p>This program takes an even-length integer and swaps pairs of adjacent digits. For 
 example, for the number 123456, the program will swap pairs of adjacent digits to 
 produce the number 214365.</p>
+
 <pre>
 function swapPairsOfAdjacentDigits(number) {
   // Convert the number to a string to manipulate individual digits
@@ -14637,6 +14665,7 @@ swapPairsOfAdjacentDigits(123456);
 <p>This program takes a string as input and changes the capitalization of all letters. 
 Uppercase letters are converted to lowercase, and lowercase letters are converted to 
 uppercase.</p>
+
 <pre>
 function changeCapitalization(inputString) {
   let resultString = "";
@@ -14661,6 +14690,7 @@ changeCapitalization("Hello World");
 <h2 id="js202">202. Array Halves Swapper</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes an array of integers with an even length and swaps its two halves.</p>
+
 <pre>
 function swapArrayHalves(arr) {
   const length = arr.length;
@@ -14689,6 +14719,7 @@ swapArrayHalves(&lbrack;l,2,3,4,5,6&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program computes the sum of all the digits that occur in a given string. It 
 identifies digits in the string and adds them up to calculate the total sum.</p>
+
 <pre>
 function sumOfDigitsInString(inputString) {
   let digitSum = 0;
@@ -14712,6 +14743,7 @@ sumOfDigitsInString("abc123xyz456");
 <p>This program computes the sum of cubes of all integers from 1 to a given integer. It 
 calculates the cube of each integer in the specified range and adds them up to find the 
 total sum.</p>
+
 <pre>
 function sumOfCubes(upToInteger) {
   let cubesSum = 0;
@@ -14732,6 +14764,7 @@ sumOfCubes(5);
 <span class="consolas">n</span> (inclusive) does not exceed a given target sum 
 <span class="consolas">targetSum</span>. It calculates the sum using 
 the formula <span class="consolas">Sum = n &ast; (n + 1) / 2</span>.</p>
+
 <pre>
 function findMaxIntegerForSum(targetSum) {
   let currentSum = 0;
@@ -14753,6 +14786,7 @@ findMaxIntegerForSum(l 5);
 structure considered is 
 <span class="consolas">schema://domain&lbrack;/:path &rbrack;</span>, where 
 <span class="consolas">path</span> is optional.</p>
+
 <pre>
 function breakURL(url) {
   const urlParts = {};
@@ -14778,6 +14812,7 @@ breakURL("https://www.example.org/page");
 <p>This program sorts the strings of a given array of strings in order of increasing 
 length. It uses the 
 <span class="consolas">Array.sort</span> method to achieve the desired order.</p>
+
 <pre>
 function sortStringsByLength(stringsArray) {
   const sortedArray = stringsArray.slice().sort((a, b) => a.length - b.length);
@@ -14798,6 +14833,7 @@ string representing the absolute path and simplifies it by resolving any redunda
 slashes (<span class="consolas">//</span>), parent directory references (
 <span class="consolas">..</span>), and current directory references (
 <span class="consolas">.</span>).</p>
+
 <pre>
 function simplifyAbsolutePath(path) {
   const parts = path.split('/');
@@ -14821,6 +14857,7 @@ simplifyAbsolutePath('/home/user/../documents/./file.txt');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program finds the number of common elements between two arrays. It compares the 
 elements in both arrays and counts the occurrences of common elements.</p>
+
 <pre>
 function countCommonElements(arrl, arr2) {
   const commonElements = arrl.filter(element => arr2.includes(element));
@@ -14830,6 +14867,7 @@ function countCommonElements(arrl, arr2) {
   console.log("Common Elements:", commonElements);
   console.log("Number of Common Elements:", numberOfCommonElements);
 }
+
 // Example usage: Count common elements between two arrays
 countCommonElements(&lbrack;l,2,3,4,5&rbrack;, &lbrack;3,4,5,6,7&rbrack;);
 </pre>
@@ -14838,6 +14876,7 @@ countCommonElements(&lbrack;l,2,3,4,5&rbrack;, &lbrack;3,4,5,6,7&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether all the digits in a given number are the same or not. It 
 converts the number to a string and compares each digit to the first digit.</p>
+
 <pre>
 function areAllDigitsSame(number) {
   const numberStr = String(number);
@@ -14850,6 +14889,7 @@ function areAllDigitsSame(number) {
   }
   console.log(`Digits in ${number} are all the same.`);
 }
+
 // Example: Check if all digits in the number 22222 are the same 
 areAllDigitsSame(22222);
 </pre>
@@ -14860,6 +14900,7 @@ areAllDigitsSame(22222);
 A round number is informally considered to be an integer that ends with one or more zeros. 
 The program iterates through the array from right to left and identifies the rightmost 
 round number, if any.</p>
+
 <pre>
 function rightmostRoundNumberPosition(arr) {
   for (let i = arr.length -1; i > = 0; i--) {
@@ -14870,6 +14911,7 @@ function rightmostRoundNumberPosition(arr) {
   }
   console.log("No round numbers found in the array. Position: 0");
 }
+
 // Example: Find the position of the rightmost round number
 rightmostRoundNumberPosition(&lbrack;123,450,678,900&rbrack;);
 </pre>
@@ -14879,6 +14921,7 @@ rightmostRoundNumberPosition(&lbrack;123,450,678,900&rbrack;);
 <p>This program reverses the bits of a given 16-bit unsigned short integer. It converts 
 the integer to its binary representation, reverses the bits, and converts it back to an 
 integer.</p>
+
 <pre>
 function reverseBitsl6BitUnsignedShort(integer) {
   const binaryRepresentation = integer.toString(2).padStart(16, '0');
@@ -14889,6 +14932,7 @@ function reverseBitsl6BitUnsignedShort(integer) {
   console.log(`Reversed Binary: ${reversedBinary}`);
   console.log(`Reversed Integer: ${reversedlnteger}`);
 }
+
 // Example: Reverse bits of the 16-bit unsigned short integer 5678
 reverseBits 16BitUnsignedShort(5678);
 </pre>
@@ -14911,12 +14955,14 @@ greaterThanl5Checker(20);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program replaces the first digit in a string (assuming the string has at least one 
 digit) with the <span class="consolas">$</span> character.</p>
+
 <pre>
 function replaceFirstDigitWithDollar(inputString) {
   const modifiedString = inputString.replace(/\d/,
   console.log(`Original String: $ {inputstring}`);
   console.log(`Modified String: $ {modifiedString}`);
 }
+
 // Example: Replace the first digit with $ in the string "abcl23xyz456"
 replaceFirstDigitWithDollar("abc123xyz456");
 </pre>
@@ -14926,6 +14972,7 @@ replaceFirstDigitWithDollar("abc123xyz456");
 <p>This program creates an array of prefix sums for a given array. The prefix sum of a 
 sequence is a new sequence where each element is the sum of all preceding elements in 
 the original sequence.</p>
+
 <pre>
 function prefixSums(inputArray) {
   let prefixSum = 0;
@@ -14937,6 +14984,7 @@ function prefixSums(inputArray) {
   console.log("Original Array:", inputArray);
   console.log("Prefix Sums Array:", prefixSumArray);
 }
+
 // Example: Create prefix sums for the array &lbrack;1, 2, 3, 4, 5&rbrack;
 prefixSums(&lbrack;l, 2, 3,4, 5&rbrack;);
 </pre>
@@ -14945,6 +14993,7 @@ prefixSums(&lbrack;l, 2, 3,4, 5&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program finds the smallest prime number strictly greater than a given number. It 
 checks numbers one by one starting from the given number until it finds the next prime.</p>
+
 <pre>
 function isPrime(num) {
   if (num < 2) return false;
@@ -14961,6 +15010,7 @@ function nextPrimeNumber(givenNumber) {
   console.log(`Given Number: $ {givenNumber}`);
   console.log(`Next Prime Number: ${nextNumber}`);
 }
+
 // Example: Find the next prime number greater than 10
 nextPrimeNumber( 10);
 </pre>
@@ -14969,6 +15019,7 @@ nextPrimeNumber( 10);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program reverses the order of bits in an integer. It converts the integer to its 
 binary representation, reverses the bits, and converts it back to an integer.</p>
+
 <pre>
 function reverseOrderOfBits(integer) {
   const binaryRepresentation = integer.toString(2).padStart(8, ’0'); // Assuming 8 bits for simplicity
@@ -14979,6 +15030,7 @@ function reverseOrderOfBits(integer) {
   console.log(`Reversed Binary: ${reversedBinary}`);
   console.log(`Reversed Integer: ${reversedInteger}`);
 }
+
 // Examples: Reverse order of bits for given integers
 reverseOrderOfBits(14);
 reverseOrderOfBits(56);
@@ -15012,6 +15064,7 @@ generateAsciiTriangle(triangleHeight);
 <p>celsiusToFahrenheit allows you to convert a temperature from Celsius to Fahrenheit. It 
 takes a value in Celsius as input and uses the formula (Celsius &ast; 9/5) + 32 to perform 
 the conversion.exadecimal representation.</p>
+
 <pre>
 const celsiusToFahrenheit = (celsius) => (celsius &ast; 9/5) + 32;
 
@@ -15022,10 +15075,12 @@ celsiusToFahrenheit(25); // Result: 77
 <h2 id="js-2">2. Get Value of a browser Cookie</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Retrieve the value of a cookie by accessing with document.cookie.</p>
+
 <pre>
 const cookie = name => `; ${document.cookie}.split(`;
   ${name}={'').pop().split(';').shift();
   cookie('_ga');
+
 // Result: "GA1.2.1929736587.1601974046"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15033,46 +15088,56 @@ const cookie = name => `; ${document.cookie}.split(`;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>rgbToHex enables you to convert RGB (Red, Green, Blue) values to their
 corresponding hexadecimal representation.</p>
+
 <pre>
 const rgbToHex = (r, g, b) =>
 "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 rgbToHex(0, 51, 255);
+
 // Result: #0033ff
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-4">4. Copy to Clipboard</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Easily copy any text to clipboard using navigator.clipboard.writeText.</p>
+
 <pre>
 const copyToClipboard = (text) => navigator.clipboard.writeText(text);
+
 copyToClipboard("Hello World");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-5">5. Check if Date is Valid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use the following snippet to check if a given date is valid or not.</p>
+
 <pre>
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 isDateValid("December 17, 1995 03:24:00");
+
 // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-6">6. Find the day of year</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find which is the day by a given date.</p>
+
 <pre>
 const dayOfYear = (date) =>
-Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-dayOfYear(new Date()); // Result: 272
+  Math.floor((date - newDate(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+
+dayOfYear(newDate()); // Result: 272
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-7">7. Capitalise a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Javascript doesn't have an inbuilt capitalise function, so we can use the
 following code for the purpose.</p>
+
 <pre>
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
 capitalize("follow for more")
+
 // Result: Follow for more
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15120,7 +15185,7 @@ const getParameters = (URL) => {
   return JSON.stringify(URL);
 };
 
-getParameters(window.location) // Result: { search : "easy", page : 3 }
+getParameters(window.location) // Result: {search : "easy", page : 3}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-12">12. Log Time from Date</h2>
@@ -15519,10 +15584,10 @@ console.log(minsToSecs(5)); // Output: 300
 const findMaxValue = (arr, key) => Math.max(...arr.map(item =>
   item&lbrack;key&rbrack;));
 const students = &lbrack;
-  { name: "Alice", score: 80 },
-  { name: "Bob", score: 95 },
-  { name: "Charlie", score: 70 }
-  &rbrack;;
+  {name: "Alice", score: 80},
+  {name: "Bob", score: 95},
+  {name: "Charlie", score: 70}
+&rbrack;;
 
 // Example usage
 console.log(findMaxValue( 
