@@ -1,25 +1,25 @@
-<!-- readme.md - 93 examples & 482 (218+264) JS Programs for Beginners -->
+<!-- readme.md - 637 = 59 + 94 examples & 484 (218+266) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1>575 JS Examples: 93, 218 &amp; 264 JS Programs for Beginners</h1>
+<h1>637 JS Examples: 59 + 94, 484, 218 &amp; 266 JS Programs for Beginners</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Programming in JS was complicated until you appreciated this wonderful blog.
-Focus on the most important thing writing code, starting from the first program to the last
-will help you quickly increase your skills as a programmer and will give you the knowledge
+<p>Programming in JS was complicated until you appreciated this wonderful blog. Focus on 
+the most important thing writing code, starting from the first program to the last will 
+help you quickly increase your skills as a programmer and will give you the knowledge
 necessary to understand:</p>
 <blockquote>
 The flow of a program, the syntax, the direction, how it works, what Add keywords to your
 code, make great decisions, and much more.
 </blockquote>
-<p>This is a very essential guide with which you can learn to create more than... Once you have
-solved a certain number of programs, you will be able to develop yourself and turn your
-own ideas into a reality without even having to think about it.</p>
+<p>This is a very essential guide with which you can learn to create more than... Once 
+you have solved a certain number of programs, you will be able to develop yourself and 
+turn your own ideas into a reality without even having to think about it.</p>
 <p>I've always considered JavaScript a 4th generation language. Perhaps even 5th.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#el0">49 Eloquent JS Examples</h2>
+<h2><a href="#el0">59 Eloquent JS Examples</h2>
 <ul>
   <li><a href="#el01">El01. Program Structure: Looping a Triangle</a></li>
   <li><a href="#el02">El02. Program Structure: FizzBuzz</a></li>
@@ -80,11 +80,9 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#el57">El57. JS and Performance: Pathfinding</a></li>
   <li><a href="#el58">El58. JS and Performance: Timing</a></li>
   <li><a href="#el59">El59. JS and Performance: Optimizing</a></li>
-
 </ul>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#ex0">93 JavaScript Examples From Basics to Advanced</a></h2>
+<h2><a href="#ex0">93+1 JavaScript Examples From Basics to Advanced</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol>
   <li><a href="#ex1">JS Statements</a></li>
@@ -188,6 +186,9 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#ex91">JS Web APIs</a></li>
   <li><a href="#ex92">JS AJAX</a></li>
   <li><a href="#ex93">JS JSON</a></li>
+<!-- JavaScript libraries &amp; frameworks -->
+<!-- jQuery, React, Redux, D3, TensorFlow.js, Angular, Node.js, Vue.js, Svelte, Three, 
+Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#ex94">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
 </ol>
 
@@ -414,7 +415,7 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js218">218. Pyramid</a></li>
 </ul>
 
-<h2><a href="#js-0">264 JavaScript Example Scripts</a></h2>
+<h2><a href="#js-0">266 JavaScript Example Scripts</a></h2>
 <ul type="disc">
   <li><a href="#js-1">js-1. Convert Celsius to Fahrenheit</a></li>
   <li><a href="#js-2">js-2. Get Value of a browser Cookie</a></li>
@@ -684,7 +685,7 @@ own ideas into a reality without even having to think about it.</p>
   <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el1">01. Program Structure: Looping a Triangle</h2>
+<h2 id="el01">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 for (let line = "#"; line.length < 8; line += "#")
@@ -701,17 +702,17 @@ for (let line = "#"; line.length < 8; line += "#")
 #######
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el2">02. Program Structure: FizzBuzz</h2>
+<h2 id="el02">02. Program Structure: FizzBuzz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Write a program that uses console.log to print all the numbers from 1 to 100, with two 
 exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for 
 numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, 
 modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 
-(and still print "Fizz" or "Buzz" for numbers divisible by only one of those).
+(and still print "Fizz" or "Buzz" for numbers divisible by only one of those).</p>
 
-(This is actually an interview question that has been claimed to weed out a significant 
+<p>(This is actually an interview question that has been claimed to weed out a significant 
 percentage of programmer candidates. So if you solved it, you’re now allowed to feel
-good about yourself.)
+good about yourself.)</p>
 
 <pre>
 for (let n = 1; n <= 100; n++) {
@@ -721,7 +722,9 @@ for (let n = 1; n <= 100; n++) {
   console.log(output || n);
 }
 </pre>
+
 <h5>Solution:</h5>
+
 <pre>
 1
 2
@@ -825,7 +828,7 @@ Fizz
 Buzz
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el3">03. Program Structure: Chessboard</h2>
+<h2 id="el03">03. Program Structure: Chessboard</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Write a program that creates a string that represents an 8×8 grid, using newline 
 characters to separate lines. At each position of the grid there is either a space or 
@@ -848,7 +851,9 @@ for (let y = 0; y < size; y++) {
 
 console.log(board);
 </pre>
+
 <h5>Solution:</h5>
+
 <pre>
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
@@ -860,7 +865,7 @@ console.log(board);
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el4">04. Functions: Minimum</h2>
+<h2 id="el04">04. Functions: Minimum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 var makeNoise = function() {
 console.log("Pling!");
@@ -873,23 +878,15 @@ for (var count = 0; count < exponent; count++)
 result *= base;
 return result;
 };
-console.log(power(2, 10));
-// → 1024
-Some functions produce a value, such
-as power and square, and some
-don’t, such as makeNoise, which
-produces only a side effect. A return
-statement determines the value the
-function returns. When control comes
-across such a statement, it
-immediately jumps out of the current
-function and gives the returned value
-to the code that called the function.
-The return keyword without an
-expression after it will cause the
-function to return undefined.
-Parameters and scopes
-
+console.log(power(2, 10)); // → 1024
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Some functions produce a value, such as power and square, and some don’t, such as 
+makeNoise, which produces only a side effect. A return statement determines the value the 
+function returns. When control comes across such a statement, it immediately jumps out of 
+the current function and gives the returned value to the code that called the function.
+The return keyword without an expression after it will cause the function to return 
+undefined. Parameters and scopes</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function min(a, b) {
   if (a < b) return a;
@@ -899,7 +896,7 @@ console.log(min(0, 10)); // → 0
 console.log(min(0, -10)); // → -10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el5">05. Functions: Recursion</h2>
+<h2 id="el05">05. Functions: Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function isEven(n) {
@@ -913,34 +910,19 @@ console.log(isEven(75)); // → false
 console.log(isEven(-1)); // → false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el6">06. Functions: Bean counting</h2>
+<h2 id="el06">06. Functions: Bean counting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>You can get the Nth character, or
-letter, from a string by writing
-"string".charAt(N), similar to how
-you get its length with "s".length.
-The returned value will be a string
-containing only one character (for
-example, "b"). The first character has
-position zero, which causes the last
-one to be found at position
-string.length - 1. In other words,
-a two-character string has length 2,
-and its characters have positions 0
-and 1.
-Write a function countBs that takes a
-string as its only argument and
-returns a number that indicates how
-many uppercase “B” characters are in
-the string.
-Next, write a function called
-countChar that behaves like
-countBs, except it takes a second
-argument that indicates the character
-that is to be counted (rather than
-counting only uppercase "B"
-characters). Rewrite countBs to
-make use of this new function.</p>
+<p>You can get the Nth character, or letter, from a string by writing "string".charAt(N), 
+similar to how you get its length with "s".length. The returned value will be a string
+containing only one character (for example, "b"). The first character has position zero, 
+which causes the last one to be found at position string.length - 1. In other words, a 
+two-character string has length 2, and its characters have positions 0 and 1.<?p>
+<p>Write a function countBs that takes a string as its only argument and returns a number 
+that indicates how many uppercase “B” characters are in the string. Next, write a function 
+called countChar that behaves like countBs, except it takes a second argument that 
+indicates the character that is to be counted (rather than counting only uppercase "B"  
+characters). Rewrite countBs to make use of this new function.</p>
+
 <pre>
 function countChar(string, ch) {
   let counted = 0;
@@ -958,7 +940,7 @@ console.log(countBs("BBC")); // → 2
 console.log(countChar("kakkerlak", "k")); // → 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el7">07. Data Structures: Objects and Arrays</h2>
+<h2 id="el07">07. Data Structures: Objects and Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Run code here in the context of Chapter 4 Eloquent JavaScript
@@ -1032,7 +1014,7 @@ var list = {
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el8">08. Data Structures: The sum of a range</h2>
+<h2 id="el08">08. Data Structures: The sum of a range</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function range(start, end, step = start < end ? 1 : -1) {
@@ -1056,7 +1038,7 @@ console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
 console.log(sum(range(1, 10))); // → 55
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el9">09. Data-Structures: Reversing an Array</h2>
+<h2 id="el09">09. Data-Structures: Reversing an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function reverseArray(array) {
@@ -2740,7 +2722,7 @@ interpreter or browser can understand.</p>
   </li>
   <li><h4>Array Declaration:</h4>
     <pre>const numbers = &lbrack;1,2,3,4,5&rbrack;;</pre>
-    </li>
+  </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex3">3. JS Comments</h2>
@@ -2871,6 +2853,7 @@ values to variables.</p>
 <h3>Examples of JS Assignment:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Assigning a Value to a Variable:</h4>
+
 <pre>let x = 10; // Assigning the value 10 to variable 'x'</pre>
 <h4>Assigning the Result of an Expression:</h4>
 <pre>let y = x + 5; // Assigning the result of an expression to 'y'</pre>
@@ -2908,6 +2891,7 @@ blocks of code that perform a specific task when called</span>.</p>
   return 'Hello, ' + name + '!';
 }</pre>
 <h4>Function Call:</h4>
+
 <pre>let message = greet('John'); // message = 'Hello, John!'</pre>
 <h4>Arrow Function:</h4>
 <pre>const multiply = (a,b) => a &ast; b;
@@ -2921,6 +2905,7 @@ let result = multiply(5,3); // result = 15</pre>
 <h3>Examples of JS Objects:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Object Declaration:</h4>
+
 <pre>let person = {
   name: 'Alice',
   age: 30,
@@ -2946,6 +2931,7 @@ field</span>.</p>
   console.log('Button clicked!');
 });</pre>
 <h4>Input Event:</h4>
+
 <pre>document.getElementById('myInput').addEventListener('input', function() {
   console.log('Input changed!');
 });</pre>
@@ -2958,6 +2944,7 @@ enclosed in single or double quotes.</p>
 <h3>Examples of JS Strings:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaring a String Variable:</h4>
+
 <pre>let message = 'Hello, World!';</pre>
 <h4>Concatenating Strings:</h4>
 <pre>let greeting = 'Hello, ';
@@ -2971,6 +2958,7 @@ let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 <h3>Examples of JS String Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>toUpperCase() Methods:</h4>
+
 <pre>let text = 'hello';
 let upperCaseText = text.toUpperCase(); // upperCaseText = 'HELLO'</pre>
 <h4>substring() Method:</h4>
@@ -2988,6 +2976,7 @@ a string</span>.</p>
 <pre>let text = 'Hello, World!';
 let position = text.indexOf('World'); // position = 7</pre>
 <h4>includes() Method:</h4>
+
 <pre>let sentence = 'This is a sentence';
 let containsWord = sentence.includes('sentence'); // containsWord = true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
