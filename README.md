@@ -687,6 +687,14 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el01">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You can start with a program that prints out the numbers 1 to 7, which you
+can derive by making a few modifications to the even number printing example
+given earlier in the chapter, where the for loop was introduced.</p>
+<p>Now consider the equivalence between numbers and strings of hash charac-
+ters. You can go from 1 to 2 by adding 1 (+= 1). You can go from "#" to
+"##" by adding a character (+= "#"). Thus, your solution can closely follow
+the number-printing program.</p>
+
 <pre>
 for (let line = "#"; line.length < 8; line += "#")
   console.log(line);
@@ -704,6 +712,20 @@ for (let line = "#"; line.length < 8; line += "#")
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el02">02. Program Structure: FizzBuzz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Going over the numbers is clearly a looping job, and selecting what to print is
+a matter of conditional execution. Remember the trick of using the remainder
+(%) operator for checking whether a number is divisible by another number (has
+a remainder of zero).</p>
+<p>In the first version, there are three possible outcomes for every number, so
+you’ll have to create an if/else if/else chain.</p>
+<p>The second version of the program has a straightforward solution and a clever
+one. The simple solution is to add another conditional “branch” to precisely
+test the given condition. For the clever solution, build up a string containing
+the word or words to output and print either this word or the number if there
+is no word, potentially by making good use of the || operator.</p>
+
+
+
 <p>Write a program that uses console.log to print all the numbers from 1 to 100, with two 
 exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for 
 numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, 
@@ -830,6 +852,21 @@ Buzz
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el03">03. Program Structure: Chessboard</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You can build the string by starting with an empty one ("") and repeatedly
+adding characters. A newline character is written "\n".</p>
+<p>To work with two dimensions, you will need a loop inside of a loop. Put
+braces around the bodies of both loops to make it easy to see where they start
+and end. Try to properly indent these bodies. The order of the loops must
+follow the order in which we build up the string (line by line, left to right, top
+to bottom). So the outer loop handles the lines, and the inner loop handles the
+characters on a line.</p>
+<p>You’ll need two bindings to track your progress. To know whether to put a
+space or a hash sign at a given position, you could test whether the sum of the
+two counters is even (% 2).</p>
+<p>Terminating a line by adding a newline character must happen after the line
+has been built up, so do this after the inner loop but inside the outer loop.</p>
+
+
 <p>Write a program that creates a string that represents an 8×8 grid, using newline 
 characters to separate lines. At each position of the grid there is either a space or 
 a "#" character. The characters should form a chess board. Passing this string to 
@@ -867,6 +904,11 @@ console.log(board);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el04">04. Functions: Minimum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>If you have trouble putting braces and parentheses in the right place to get a
+valid function definition, start by copying one of the examples in this chapter
+and modifying it.</p>
+<p>A function may contain multiple return statements.</p>
+
 <pre>
 function min(a, b) {
   if (a < b) return a;
@@ -886,6 +928,19 @@ undefined. Parameters and scopes</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el05">05. Functions: Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Your function will likely look somewhat similar to the inner find function in the
+recursive <a href="">findSolution example</a> in this chapter, with an if/else if/else chain
+that tests which of the three cases applies. The final else, corresponding to
+the third case, makes the recursive call. Each of the branches should contain
+a return statement or in some other way arrange for a specific value to be
+returned.
+<p>When given a negative number, the function will recurse again and again,
+passing itself an ever more negative number, thus getting further and further
+away from returning a result. It will eventually run out of stack space and
+abort.</p>
+
+
+
 <p>It is perfectly okay for a function to call itself, as long as it doesn’t do it so
 often that it overflows the stack. A function that calls itself is called recursive.
 Recursion allows some functions to be written in a different style. Take, for
@@ -928,6 +983,14 @@ console.log(isEven(-1)); // → false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el06">06. Functions: Bean counting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Your function will need a loop that looks at every character in the string. It
+can run an index from zero to one below its length (< string.length). If the
+character at the current position is the same as the one the function is looking
+for, it adds 1 to a counter variable. Once the loop has finished, the counter can
+be returned.</p>
+<p>Take care to make all the bindings used in the function local to the function
+by properly declaring them with the let or const keyword</p>
+
 <p>You can get the Nth character, or letter, from a string by writing "string".charAt(N), 
 similar to how you get its length with "s".length. The returned value will be a string
 containing only one character (for example, "b"). The first character has position zero, 
@@ -958,6 +1021,9 @@ console.log(countChar("kakkerlak", "k")); // → 4
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el07">07. Data Structures: Objects and Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+
 <pre>
 // Run code here in the context of Chapter 4 Eloquent JavaScript
 // journalEvents of journal.js
@@ -1032,6 +1098,23 @@ var list = {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el08">08. Data Structures: The sum of a range</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Building up an array is most easily done by first initializing a binding to []
+(a fresh, empty array) and repeatedly calling its push method to add a value.
+Don’t forget to return the array at the end of the function.
+<p>Since the end boundary is inclusive, you’ll need to use the <= operator rather
+than &lt; to check for the end of your loop.</p>
+<p>The step parameter can be an optional parameter that defaults (using the =
+operator) to 1.</p>
+<p>Having range understand negative step values is probably best done by writ-
+ing two separate loops—one for counting up and one for counting down—
+because the comparison that checks whether the loop is finished needs to be >=
+rather than &lt;= when counting downward.</p>
+<p>It might also be worthwhile to use a different default step, namely, -1, when
+the end of the range is smaller than the start. That way, range(5, 2) returns 
+something meaningful, rather than getting stuck in an infinite loop. It is possible 
+to refer to previous parameters in the default value of a parameter.</p>
+
+
 <pre>
 function range(start, end, step = start < end ? 1 : -1) {
   let array = [];
@@ -1057,6 +1140,25 @@ console.log(sum(range(1, 77))); // → 3003
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el09">09. Data-Structures: Reversing an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>There are two obvious ways to implement reverseArray. The first is to simply
+go over the input array from front to back and use the unshift method on
+the new array to insert each element at its start. The second is to loop over
+the input array backwards and use the push method. Iterating over an array
+backwards requires a (somewhat awkward) for specification, like (let i =
+array.length - 1; i >= 0; i--).</p>
+<p>Reversing the array in place is harder. You have to be careful not to overwrite
+elements that you will later need. Using reverseArray or otherwise copying
+the whole array (array.slice(0) is a good way to copy an array) works but is
+cheating.</p>
+<p>The trick is to swap the first and last elements, then the second and second-
+to-last, and so on. You can do this by looping over half the length of the array
+(use Math.floor to round down—you don’t need to touch the middle element
+in an array with an odd number of elements) and swapping the element at
+position i with the one at position array.length - 1 - i. You can use a local
+binding to briefly hold on to one of the elements, overwrite that one with its
+mirror image, and then put the value from the local binding in the place where
+the mirror image used to be.</p>
+
 <pre>
 function reverseArray(array) {
   let output = [];
@@ -1081,6 +1183,25 @@ console.log(arrayValue); // → [5, 4, 3, 2, 1]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el10">10. Data-Structures: A list</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Building up a list is easier when done back to front. So arrayToList could iter-
+ate over the array backwards (see the previous exercise) and, for each element,
+add an object to the list. You can use a local binding to hold the part of the
+list that was built so far and use an assignment like list = {value: X, rest:
+list} to add an element.</p>
+<p>To run over a list (in listToArray and nth), a for loop specification like this
+can be used:</p>
+<pre>for (let node = list; node; node = node.rest) {}</pre>
+<p>Can you see how that works? Every iteration of the loop, node points to the
+current sublist, and the body can read its value property to get the current
+element. At the end of an iteration, node moves to the next sublist. When that
+is null, we have reached the end of the list, and the loop is finished.</p>
+<p>The recursive version of nth will, similarly, look at an ever smaller part of
+the “tail” of the list and at the same time count down the index until it reaches
+zero, at which point it can return the value property of the node it is looking
+at. To get the zeroth element of a list, you simply take the value property of
+its head node. To get element N + 1, you take the _N_th element of the list
+that’s in this list’s rest property.</p>
+
 <pre>
 function arrayToList(array) {
   let list = null;
@@ -1112,8 +1233,9 @@ console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el11">11. Data-Structures: Deep comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Your test for whether you are dealing with a real object will look something like
-typeof x == "object" && x != null. Be careful to compare properties only
+<p>Your test for whether you are dealing with a real object will look something like;</p>
+<pre>typeof x == "object" && x != null</pre>
+Be careful to compare properties only
 when both arguments are objects. In all other cases you can just immediately
 return the result of applying ===.</p>
 <p>Use Object.keys to go over the properties. You need to test whether both
@@ -1147,6 +1269,10 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el12">12. Higher-Order Functions: Flattening</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Use the reduce method in combination with the concat method to “flatten”
+an array of arrays into a single array that has all the elements of the original
+arrays.</p>
+
 <p>Functions that operate on other functions, either by taking them as arguments
 or by returning them, are called higher-order functions. Since we have already
 seen that functions are regular values, there is nothing particularly remarkable
@@ -1204,6 +1330,15 @@ console.log(arrays.reduce((flat, current) => flat.concat(current), []));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el13">13. Higher-Order Functions: Your own loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Write a higher-order function loop that provides something like a for loop
+statement. It takes a value, a test function, an update function, and a body
+function. Each iteration, it first runs the test function on the current loop value
+and stops if that returns false. Then it calls the body function, giving it the
+current value. Finally, it calls the update function to create a new value and
+starts from the beginning.</p>
+<p>When defining the function, you can use a regular loop to do the actual
+looping.</p>
+
 <pre>
 function loop(start, test, update, body) {
   for (let value = start; test(value); value = update(value)) {
@@ -1218,6 +1353,14 @@ loop(3, n => n > 0, n => n - 1, console.log);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el14">14. Higher-Order Functions: Everything</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Analogous to the some method, arrays also have an every method. This one
+returns true when the given function returns true for every element in the array.
+In a way, some is a version of the || operator that acts on arrays, and every is
+like the && operator.</p>
+<p>Implement every as a function that takes an array and a predicate function
+as parameters. Write two versions, one using a loop and one using the some
+method.</p>
+
 <p>Like the && operator, the every method can stop evaluating further elements
 as soon as it has found one that doesn’t match. So the loop-based version
 can jump out of the loop—with break or return—as soon as it runs into an
@@ -1246,6 +1389,13 @@ console.log(every([], n => n < 10)); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el15">15. Higher-Order Functions: Dominant writing direction</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Write a function that computes the dominant writing direction in a string of
+text. Remember that each script object has a direction property that can be
+"ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).</p>
+<p>The dominant direction is the direction of a majority of the characters that
+have a script associated with them. The characterScript and countBy func-
+tions defined earlier in the chapter are probably useful here.</p>
+
 <p>Your solution might look a lot like the first half of the textScripts example.
 You again have to count characters by a criterion based on characterScript
 and then filter out the part of the result that refers to uninteresting (script-less)
@@ -1268,6 +1418,16 @@ console.log(dominantDirection("Hey, مساء الخير")); // → rtl
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el16">16. Objects: A vector type</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Look back to the <a href="">Rabbit class example</a> if you’re unsure how class declarations
+look.</p>
+<p>Adding a getter property to the constructor can be done by putting the word
+get before the method name. To compute the distance from (0, 0) to (x, y), you
+can use the Pythagorean theorem, which says that the square of the distance
+we are looking for is equal to the square of the x-coordinate plus the square of
+the y-coordinate. Thus, √ x2 + y2 is the number you want, and Math.sqrt is
+the way you compute a square root in JavaScript.</p>
+
+
 <p>Adding a getter property to the constructor can be done by putting the word
 get before the method name. To compute the distance from (0, 0) to (x, y), you
 can use the Pythagorean theorem, which says that the square of the distance
@@ -1343,6 +1503,13 @@ console.log(group.has(10));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el18">18. Objects: Iterable groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>It is probably worthwhile to define a new class GroupIterator. Iterator in-
+stances should have a property that tracks the current position in the group.
+Every time next is called, it checks whether it is done and, if not, moves past
+the current value and returns it.</p>
+<p>The Group class itself gets a method named by Symbol.iterator that, when
+called, returns a new instance of the iterator class for that group.</p>
+
 <pre>
 class Group {
   constructor() {
@@ -1396,6 +1563,11 @@ for (let value of Group.from(["a", "b", "c"])) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el19">19. Objects: Borrowing a method</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Remember that methods that exist on plain objects come from Object.prototype.</p>
+<p>Also remember that you can call a function with a specific this binding by
+using its call method.</p>
+
+
 <p>It is probably worthwhile to define a new class GroupIterator. Iterator in-
 stances should have a property that tracks the current position in the group.
 Every time next is called, it checks whether it is done and, if not, moves past
@@ -1409,7 +1581,14 @@ console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el20">20. A Robot: Measuring a robot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- define routeRobot -->
+<pre>
+function routeRobot(state, memory) {
+  if (memory.length == 0) {
+    memory = mailRoute;
+  }
+  return {direction: memory[0], memory: memory.slice(1)};
+}</pre>
+
 <p>You’ll have to write a variant of the runRobot function that, instead of log-
 ging the events to the console, returns the number of steps the robot took to
 complete the task.</p>
@@ -1449,6 +1628,7 @@ there are others much closer.</p>
 take the shortest one. Even better results can be obtained, if there are multiple
 shortest routes, by preferring the ones that go to pick up a package instead of
 delivering a package.</p>
+
 <pre>
 function lazyRobot({place, parcels}, route) {
   if (route.length == 0) {
@@ -1489,6 +1669,7 @@ to add it to the constructor after the class definition, as a regular property.<
 <p>You need only one empty instance because all empty groups are the same
 and instances of the class don’t change. You can create many different groups
 from that single empty group without affecting it.</p>
+
 <pre>
 class PGroup {
   constructor(members) {
@@ -1555,6 +1736,7 @@ block after it should lock the box again.</p>
 <p>To make sure we don’t lock the box when it wasn’t already locked, check its
 lock at the start of the function and unlock and lock it only when it started
 out locked.</p>
+
 <pre>
 const box = {
   locked: true,
@@ -2934,6 +3116,19 @@ coordinates.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el53">53. Node.js: Search tool</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>On Unix systems, there is a command line tool called grep that can be used to
+quickly search files for a regular expression.</p>
+<p>Write a Node script that can be run from the command line and acts some-
+what like grep. It treats its first command line argument as a regular expression
+and treats any further arguments as files to search. It should output the names
+of any file whose content matches the regular expression.</p>
+<p>When that works, extend it so that when one of the arguments is a directory,
+it searches through all files in that directory and its subdirectories.</p>
+<p>Use asynchronous or synchronous file system functions as you see fit. Setting
+things up so that multiple asynchronous actions are requested at the same time
+might speed things up a little, but not a huge amount, since most file systems
+can read only one thing at a time.</p>
+
 <p>Your first command line argument, the regular expression, can be found in
 process.argv[2]. The input files come after that. You can use the RegExp
 constructor to go from a string to a regular expression object.</p>
@@ -2971,6 +3166,14 @@ function search(file) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el54">54. Node.js: Directory creation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Though the DELETE method in our file server is able to delete directories (using
+rmdir), the server currently does not provide any way to create a directory.</p>
+<p>Add support for the MKCOL method (“make column”), which should create a
+directory by calling mkdir from the fs module. MKCOL is not a widely used HTTP
+method, but it does exist for this same purpose in the WebDAV standard, which
+specifies a set of conventions on top of HTTP that make it suitable for creating
+documents.</p>
+
 <p>You can use the function that implements the DELETE method as a blueprint
 for the MKCOL method. When no file is found, try to create a directory with
 mkdir. When a directory exists at that path, you can return a 204 response
@@ -2998,6 +3201,45 @@ methods.MKCOL = async function(request) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el55">55. Skill-Sharing Website: Disk persistence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>A skill-sharing meeting is an event where people with a shared interest come
+together and give small, informal presentations about things they know. At a
+gardening skill-sharing meeting, someone might explain how to cultivate celery.
+Or in a programming skill-sharing group, you could drop by and tell people
+about Node.js.</p>
+<p>Such meetups—also often called users’ groups when they are about computers—
+are a great way to broaden your horizon, learn about new developments, or
+simply meet people with similar interests. Many larger cities have JavaScript
+meetups. They are typically free to attend, and I’ve found the ones I’ve visited
+to be friendly and welcoming.</p>
+<p>In this final project chapter, our goal is to set up a website for managing
+talks given at a skill-sharing meeting. Imagine a small group of people meeting
+up regularly in the office of one of the members to talk about unicycling. The
+previous organizer of the meetings moved to another town, and nobody stepped
+forward to take over this task. We want a system that will let the participants
+propose and discuss talks among themselves, without a central organizer.</p>
+<p>The full code for the project can be downloaded from https://eloquentjavascript.net/
+code/skillsharing.zip.</p>
+<h2>Design</h2>
+<p>There is a server part to this project, written for Node.js, and a client part,
+written for the browser. The server stores the system’s data and provides it to
+the client. It also serves the files that implement the client-side system.</p>
+<p>The server keeps the list of talks proposed for the next meeting, and the
+client shows this list. Each talk has a presenter name, a title, a summary, and
+an array of comments associated with it. The client allows users to propose new
+talks (adding them to the list), delete talks, and comment on existing talks.
+Whenever the user makes such a change, the client makes an HTTP request to
+tell the server about it.</p>
+<!-- skill sharing image - page 370 -->
+<p>The application will be set up to show a live view of the current proposed
+talks and their comments. Whenever someone, somewhere, submits a new talk
+or adds a comment, all people who have the page open in their browsers should
+immediately see the change. This poses a bit of a challenge—there is no way
+for a web server to open a connection to a client, nor is there a good way to
+know which clients are currently looking at a given website.</p>
+<p>A common solution to this problem is called long polling, which happens to
+be one of the motivations for Node’s design.</p>
+
+
 <p>The simplest solution I can come up with is to encode the whole talks object as
 JSON and dump it to a file with writeFile. There is already a method (updated
 ) that is called every time the server’s data changes. It can be extended to write
@@ -3036,9 +3278,648 @@ SkillShareServer.prototype.updated = function() {
 };<br>
 // The line that starts the server must be changed to
 new SkillShareServer(loadTalks()).start(8000);</pre>
+
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2>Long Polling</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To be able to immediately notify a client that something changed, we need a
+connection to that client. Since web browsers do not traditionally accept con-
+nections and clients are often behind routers that would block such connections
+anyway, having the server initiate this connection is not practical.</p>
+<p>We can arrange for the client to open the connection and keep it around so
+that the server can use it to send information when it needs to do so.</p>
+<p>But an HTTP request allows only a simple flow of information: the client
+sends a request, the server comes back with a single response, and that is it.
+There is a technology called WebSockets, supported by modern browsers, that
+makes it possible to open connections for arbitrary data exchange. But using
+them properly is somewhat tricky.</p>
+<p>In this chapter, we use a simpler technique—long polling—where clients con-
+tinuously ask the server for new information using regular HTTP requests, and
+the server stalls its answer when it has nothing new to report.</p>
+<p>As long as the client makes sure it constantly has a polling request open, it
+will receive information from the server quickly after it becomes available. For
+example, if Fatma has our skill-sharing application open in her browser, that
+browser will have made a request for updates and will be waiting for a response
+to that request. When Iman submits a talk on Extreme Downhill Unicycling,
+the server will notice that Fatma is waiting for updates and send a response
+containing the new talk to her pending request. Fatma’s browser will receive
+the data and update the screen to show the talk.</p>
+<p>To prevent connections from timing out (being aborted because of a lack of
+activity), long polling techniques usually set a maximum time for each request,
+after which the server will respond anyway, even though it has nothing to
+report, after which the client will start a new request. Periodically restarting
+the request also makes the technique more robust, allowing clients to recover
+from temporary connection failures or server problems.
+<p>A busy server that is using long polling may have thousands of waiting
+requests, and thus TCP connections, open. Node, which makes it easy to
+manage many connections without creating a separate thread of control for
+each one, is a good fit for such a system.</p>
+
+<h2>HTTP Interface</h2>
+<p>Before we start designing either the server or the client, let’s think about the
+point where they touch: the HTTP interface over which they communicate.</p>
+<p>We will use JSON as the format of our request and response body. Like in
+the file server from Chapter 20, we’ll try to make good use of HTTP methods
+and headers. The interface is centered around the /talks path. Paths that
+do not start with /talks will be used for serving static files—the HTML and
+JavaScript code for the client-side system.</p>
+<p>A GET request to /talks returns a JSON document like this:</p>
+
+<pre>
+[{"title": "Unituning",
+"presenter": "Jamal",
+"summary": "Modifying your cycle for extra style",
+"comments": []}]}
+</pre>
+
+Creating a new talk is done by making a PUT request to a URL like /talks/
+Unituning, where the part after the second slash is the title of the talk. The PUT
+request’s body should contain a JSON object that has presenter and summary
+properties.
+Since talk titles may contain spaces and other characters that may not appear
+normally in a URL, title strings must be encoded with the encodeURIComponent
+function when building up such a URL.
+console.log("/talks/" + encodeURIComponent("How to Idle"));
+// → /talks/How%20to%20Idle
+A request to create a talk about idling might look something like this:
+PUT /talks/How%20to%20Idle HTTP/1.1
+Content-Type: application/json
+Content-Length: 92
+{"presenter": "Maureen",
+"summary": "Standing still on a unicycle"}
+Such URLs also support GET requests to retrieve the JSON representation of
+a talk and DELETE requests to delete a talk.
+Adding a comment to a talk is done with a POST request to a URL like /
+talks/Unituning/comments, with a JSON body that has author and message
+properties.
+POST /talks/Unituning/comments HTTP/1.1
+Content-Type: application/json
+Content-Length: 72
+{"author": "Iman",
+"message": "Will you talk about raising a cycle?"}
+To support long polling, GET requests to /talks may include extra headers
+that inform the server to delay the response if no new information is available.
+We’ll use a pair of headers normally intended to manage caching: ETag and
+If-None-Match.
+Servers may include an ETag (“entity tag”) header in a response. Its value is
+a string that identifies the current version of the resource. Clients, when they
+later request that resource again, may make a conditional request by including
+an If-None-Match header whose value holds that same string. If the resource
+hasn’t changed, the server will respond with status code 304, which means “not
+modified”, telling the client that its cached version is still current. When the
+tag does not match, the server responds as normal.
+We need something like this, where the client can tell the server which version
+of the list of talks it has, and the server responds only when that list has
+changed.
+But instead of immediately returning a 304 response, the server
+should stall the response and return only when something new is available or
+a given amount of time has elapsed. To distinguish long polling requests from
+normal conditional requests, we give them another header, Prefer: wait=90,
+which tells the server that the client is willing to wait up to 90 seconds for the
+response.
+The server will keep a version number that it updates every time the talks
+change and will use that as the ETag value. Clients can make requests like this
+to be notified when the talks change:
+GET /talks HTTP/1.1
+If-None-Match: "4"
+Prefer: wait=90
+(time passes)
+HTTP/1.1 200 OK
+Content-Type: application/json
+ETag: "5"
+Content-Length: 295
+[....]
+The protocol described here does not do any access control. Everybody can
+comment, modify talks, and even delete them. (Since the Internet is full of
+hooligans, putting such a system online without further protection probably
+wouldn’t end well.)
+
+<h2>The server</h2>
+
+<p>Let’s start by building the server-side part of the program. The code in this
+section runs on Node.js.</p>
+
+<h2>Routing</h2>
+
+Our server will use createServer to start an HTTP server. In the function
+that handles a new request, we must distinguish between the various kinds of
+requests (as determined by the method and the path) that we support. This
+can be done with a long chain of if statements, but there is a nicer way.
+A router is a component that helps dispatch a request to the function that
+can handle it. You can tell the router, for example, that PUT requests with
+a path that matches the regular expression /^\/talks\/([^\/]+)$/ (/talks/
+followed by a talk title) can be handled by a given function. In addition, it
+can help extract the meaningful parts of the path (in this case the talk title),
+wrapped in parentheses in the regular expression, and pass them to the handler
+function.
+There are a number of good router packages on NPM, but here we’ll write
+one ourselves to illustrate the principle.
+This is router.js, which we will later require from our server module:
+const {parse} = require("url");
+module.exports = class Router {
+constructor() {
+this.routes = [];
+}
+add(method, url, handler) {
+this.routes.push({method, url, handler});
+}
+resolve(context, request) {
+let path = parse(request.url).pathname;
+for (let {method, url, handler} of this.routes) {
+let match = url.exec(path);
+if (!match || request.method != method) continue;
+let urlParts = match.slice(1).map(decodeURIComponent);
+return handler(context, ...urlParts, request);
+}
+return null;
+}
+};
+The module exports the Router class. A router object allows new handlers
+to be registered with the add method and can resolve requests with its resolve
+method.
+The latter will return a response when a handler was found, and null other-
+wise. It tries the routes one at a time (in the order in which they were defined)
+until a matching one is found.
+The handler functions are called with the context value (which will be the
+server instance in our case), match strings for any groups they defined in their
+regular expression, and the request object. The strings have to be URL-decoded
+since the raw URL may contain %20-style codes.
+<h2>Serving files</h2>
+When a request matches none of the request types defined in our router, the
+server must interpret it as a request for a file in the public directory. It would
+be possible to use the file server defined in Chapter 20 to serve such files, but
+we neither need nor want to support PUT and DELETE requests on files, and we
+would like to have advanced features such as support for caching. So let’s use
+a solid, well-tested static file server from NPM instead.
+I opted for ecstatic. This isn’t the only such server on NPM, but it works
+well and fits our purposes. The ecstatic package exports a function that can
+be called with a configuration object to produce a request handler function.
+We use the root option to tell the server where it should look for files. The
+handler function accepts request and response parameters and can be passed
+directly to createServer to create a server that serves only files. We want to
+first check for requests that we should handle specially, though, so we wrap it
+in another function.
+const {createServer} = require("http");
+const Router = require("./router");
+const ecstatic = require("ecstatic");
+const router = new Router();
+const defaultHeaders = {"Content-Type": "text/plain"};
+class SkillShareServer {
+constructor(talks) {
+this.talks = talks;
+this.version = 0;
+this.waiting = [];
+let fileServer = ecstatic({root: "./public"});
+this.server = createServer((request, response) => {
+let resolved = router.resolve(this, request);
+if (resolved) {
+resolved.catch(error => {
+if (error.status != null) return error;
+return {body: String(error), status: 500};
+}).then(({body,
+status = 200,
+headers = defaultHeaders}) => {
+response.writeHead(status, headers);
+response.end(body);
+});
+} else {
+fileServer(request, response);
+}
+});
+}
+start(port) {
+this.server.listen(port);
+}
+stop() {
+this.server.close();
+}
+}
+This uses a similar convention as the file server from the previous chapter
+for responses—handlers return promises that resolve to objects describing the
+response. It wraps the server in an object that also holds its state.
+
+<h2>Talks as resources</h2>
+
+The talks that have been proposed are stored in the talks property of the
+server, an object whose property names are the talk titles.
+These will be
+exposed as HTTP resources under /talks/[title], so we need to add handlers
+to our router that implement the various methods that clients can use to work
+with them.
+The handler for requests that GET a single talk must look up the talk and
+respond either with the talk’s JSON data or with a 404 error response.
+const talkPath = /^\/talks\/([^\/]+)$/;
+router.add("GET", talkPath, async (server, title) => {
+if (title in server.talks) {
+return {body: JSON.stringify(server.talks[title]),
+headers: {"Content-Type": "application/json"}};
+} else {
+return {status: 404, body: `No talk '${title}' found`};
+}
+});
+Deleting a talk is done by removing it from the talks object.
+router.add("DELETE", talkPath, async (server, title) => {
+if (title in server.talks) {
+delete server.talks[title];
+server.updated();
+}
+return {status: 204};
+});
+The updated method, which we will define later, notifies waiting long polling
+requests about the change.
+To retrieve the content of a request body, we define a function called readStream
+, which reads all content from a readable stream and returns a promise that
+resolves to a string.
+function readStream(stream) {
+return new Promise((resolve, reject) => {
+let data = "";
+stream.on("error", reject);
+stream.on("data", chunk => data += chunk.toString());
+stream.on("end", () => resolve(data));
+});
+}
+One handler that needs to read request bodies is the PUT handler, which
+is used to create new talks. It has to check whether the data it was given
+has presenter and summary properties, which are strings. Any data coming
+from outside the system might be nonsense, and we don’t want to corrupt our
+internal data model or crash when bad requests come in.
+If the data looks valid, the handler stores an object that represents the new
+talk in the talks object, possibly overwriting an existing talk with this title,
+and again calls updated.
+router.add("PUT", talkPath,
+async (server, title, request) => {
+let requestBody = await readStream(request);
+let talk;
+try { talk = JSON.parse(requestBody); }
+catch (_) { return {status: 400, body: "Invalid JSON"}; }
+if (!talk ||
+typeof talk.presenter != "string" ||
+typeof talk.summary != "string") {
+return {status: 400, body: "Bad talk data"};
+}
+server.talks[title] = {title,
+presenter: talk.presenter,
+summary: talk.summary,
+comments: []};
+server.updated();
+return {status: 204};
+});
+Adding a comment to a talk works similarly. We use readStream to get the
+content of the request, validate the resulting data, and store it as a comment
+when it looks valid.
+router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
+async (server, title, request) => {
+let requestBody = await readStream(request);
+let comment;
+try { comment = JSON.parse(requestBody); }
+catch (_) { return {status: 400, body: "Invalid JSON"}; }
+if (!comment ||
+typeof comment.author != "string" ||
+typeof comment.message != "string") {
+return {status: 400, body: "Bad comment data"};
+} else if (title in server.talks) {
+server.talks[title].comments.push(comment);
+server.updated();
+return {status: 204};
+} else {
+return {status: 404, body: `No talk '${title}' found`};
+}
+});
+Trying to add a comment to a nonexistent talk returns a 404 error.
+
+<h2>Long polling support</h2>
+
+The most interesting aspect of the server is the part that handles long polling.
+When a GET request comes in for /talks, it may be either a regular request or
+a long polling request.
+There will be multiple places in which we have to send an array of talks to
+the client, so we first define a helper method that builds up such an array and
+includes an ETag header in the response.
+SkillShareServer.prototype.talkResponse = function() {
+let talks = [];
+for (let title of Object.keys(this.talks)) {
+talks.push(this.talks[title]);
+}
+return {
+body: JSON.stringify(talks),
+headers: {"Content-Type": "application/json",
+"ETag": `"${this.version}"`}
+};
+};
+The handler itself needs to look at the request headers to see whether If-
+None-Match and Prefer headers are present. Node stores headers, whose names
+are specified to be case insensitive, under their lowercase names.
+router.add("GET", /^\/talks$/, async (server, request) => {
+let tag = /"(.*)"/.exec(request.headers["if-none-match"]);
+let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
+if (!tag || tag[1] != server.version) {
+return server.talkResponse();
+} else if (!wait) {
+return {status: 304};
+} else {
+return server.waitForChanges(Number(wait[1]));
+}
+});
+If no tag was given or a tag was given that doesn’t match the server’s current
+version, the handler responds with the list of talks. If the request is conditional
+and the talks did not change, we consult the Prefer header to see whether we
+should delay the response or respond right away.
+Callback functions for delayed requests are stored in the server’s waiting ar-
+ray so that they can be notified when something happens. The waitForChanges
+method also immediately sets a timer to respond with a 304 status when the
+request has waited long enough.
+SkillShareServer.prototype.waitForChanges = function(time) {
+return new Promise(resolve => {
+this.waiting.push(resolve);
+setTimeout(() => {
+if (!this.waiting.includes(resolve)) return;
+this.waiting = this.waiting.filter(r => r != resolve);
+resolve({status: 304});
+}, time * 1000);
+});
+};
+Registering a change with updated increases the version property and wakes
+up all waiting requests.
+SkillShareServer.prototype.updated = function() {
+this.version++;
+let response = this.talkResponse();
+this.waiting.forEach(resolve => resolve(response));
+this.waiting = [];
+};
+That concludes the server code. If we create an instance of SkillShareServer
+and start it on port 8000, the resulting HTTP server serves files from the public
+subdirectory alongside a talk-managing interface under the /talks URL.
+new SkillShareServer(Object.create(null)).start(8000);
+The client
+The client-side part of the skill-sharing website consists of three files: a tiny
+HTML page, a style sheet, and a JavaScript file.
+HTML
+It is a widely used convention for web servers to try to serve a file named
+index.html when a request is made directly to a path that corresponds to a
+directory. The file server module we use, ecstatic, supports this convention.
+When a request is made to the path /, the server looks for the file ./public/
+index.html (./public being the root we gave it) and returns that file if found.
+Thus, if we want a page to show up when a browser is pointed at our server,
+we should put it in public/index.html. This is our index file:
+<!doctype html>
+<meta charset="utf-8">
+<title>Skill Sharing</title>
+<link rel="stylesheet" href="skillsharing.css">
+<h1>Skill Sharing</h1>
+<script src="skillsharing_client.js"></script>
+It defines the document title and includes a style sheet, which defines a few
+styles to, among other things, make sure there is some space between talks.
+At the bottom, it adds a heading at the top of the page and loads the script
+that contains the client-side application.
+Actions
+The application state consists of the list of talks and the name of the user, and
+we’ll store it in a {talks, user} object. We don’t allow the user interface to
+directly manipulate the state or send off HTTP requests. Rather, it may emit
+actions that describe what the user is trying to do.
+The handleAction function takes such an action and makes it happen. Be-
+cause our state updates are so simple, state changes are handled in the same
+function.
+function handleAction(state, action) {
+if (action.type == "setUser") {
+localStorage.setItem("userName", action.user);
+return Object.assign({}, state, {user: action.user});
+} else if (action.type == "setTalks") {
+return Object.assign({}, state, {talks: action.talks});
+} else if (action.type == "newTalk") {
+fetchOK(talkURL(action.title), {
+method: "PUT",
+headers: {"Content-Type": "application/json"},
+body: JSON.stringify({
+presenter: state.user,
+summary: action.summary
+})
+}).catch(reportError);
+} else if (action.type == "deleteTalk") {
+fetchOK(talkURL(action.talk), {method: "DELETE"})
+.catch(reportError);
+} else if (action.type == "newComment") {
+fetchOK(talkURL(action.talk) + "/comments", {
+method: "POST",
+headers: {"Content-Type": "application/json"},
+body: JSON.stringify({
+author: state.user,
+message: action.message
+})
+}).catch(reportError);
+}
+return state;
+}
+We’ll store the user’s name in localStorage so that it can be restored when
+the page is loaded.
+The actions that need to involve the server make network requests, using
+fetch, to the HTTP interface described earlier. We use a wrapper function,
+fetchOK, which makes sure the returned promise is rejected when the server
+returns an error code.
+function fetchOK(url, options) {
+return fetch(url, options).then(response => {
+if (response.status < 400) return response;
+else throw new Error(response.statusText);
+});
+}
+This helper function is used to build up a URL for a talk with a given title.
+function talkURL(title) {
+return "talks/" + encodeURIComponent(title);
+}
+When the request fails, we don’t want to have our page just sit there, doing
+nothing without explanation. So we define a function called reportError, which
+at least shows the user a dialog that tells them something went wrong.
+function reportError(error) {
+alert(String(error));
+}
+Rendering components
+We’ll use an approach similar to the one we saw in Chapter 19, splitting the
+application into components. But since some of the components either never
+need to update or are always fully redrawn when updated, we’ll define those
+not as classes but as functions that directly return a DOM node. For example,
+here is a component that shows the field where the user can enter their name:
+function renderUserField(name, dispatch) {
+return elt("label", {}, "Your name: ", elt("input", {
+type: "text",
+value: name,
+onchange(event) {
+dispatch({type: "setUser", user: event.target.value});
+}
+}));
+}
+The elt function used to construct DOM elements is the one we used in
+Chapter 19.
+A similar function is used to render talks, which include a list of comments
+and a form for adding a new comment.
+function renderTalk(talk, dispatch) {
+return elt(
+"section", {className: "talk"},
+elt("h2", null, talk.title, " ", elt("button", {
+type: "button",
+onclick() {
+dispatch({type: "deleteTalk", talk: talk.title});
+}
+}, "Delete")),
+elt("div", null, "by ",
+elt("strong", null, talk.presenter)),
+elt("p", null, talk.summary),
+...talk.comments.map(renderComment),
+elt("form", {
+onsubmit(event) {
+event.preventDefault();
+let form = event.target;
+dispatch({type: "newComment",
+talk: talk.title,
+message: form.elements.comment.value});
+form.reset();
+}
+}, elt("input", {type: "text", name: "comment"}), " ",
+elt("button", {type: "submit"}, "Add comment")));
+}
+The "submit" event handler calls form.reset to clear the form’s content after
+creating a "newComment" action.
+When creating moderately complex pieces of DOM, this style of program-
+ming starts to look rather messy. There’s a widely used (non-standard) JavaScript
+extension called JSX that lets you write HTML directly in your scripts, which
+can make such code prettier (depending on what you consider pretty). Before
+you can actually run such code, you have to run a program on your script to
+convert the pseudo-HTML into JavaScript function calls much like the ones we
+use here.
+Comments are simpler to render.
+function renderComment(comment) {
+return elt("p", {className: "comment"},
+elt("strong", null, comment.author),
+": ", comment.message);
+}
+Finally, the form that the user can use to create a new talk is rendered like
+this:
+function renderTalkForm(dispatch) {
+let title = elt("input", {type: "text"});
+let summary = elt("input", {type: "text"});
+return elt("form", {
+onsubmit(event) {
+event.preventDefault();
+dispatch({type: "newTalk",
+title: title.value,
+summary: summary.value});
+event.target.reset();
+}
+}, elt("h3", null, "Submit a Talk"),
+elt("label", null, "Title: ", title),
+elt("label", null, "Summary: ", summary),
+elt("button", {type: "submit"}, "Submit"));
+}
+Polling
+To start the app we need the current list of talks. Since the initial load is closely
+related to the long polling process—the ETag from the load must be used when
+polling—we’ll write a function that keeps polling the server for /talks and calls
+a callback function when a new set of talks is available.
+async function pollTalks(update) {
+let tag = undefined;
+for (;;) {
+let response;
+try {
+response = await fetchOK("/talks", {
+headers: tag && {"If-None-Match": tag,
+"Prefer": "wait=90"}
+});
+} catch (e) {
+console.log("Request failed: " + e);
+await new Promise(resolve => setTimeout(resolve, 500));
+continue;
+}
+if (response.status == 304) continue;
+tag = response.headers.get("ETag");
+update(await response.json());
+}
+}
+This is an async function so that looping and waiting for the request is easier.
+It runs an infinite loop that, on each iteration, retrieves the list of talks—either
+normally or, if this isn’t the first request, with the headers included that make
+it a long polling request.
+When a request fails, the function waits a moment and then tries again. This
+way, if your network connection goes away for a while and then comes back,
+the application can recover and continue updating. The promise resolved via
+setTimeout is a way to force the async function to wait.
+When the server gives back a 304 response, that means a long polling request
+timed out, so the function should just immediately start the next request. If
+the response is a normal 200 response, its body is read as JSON and passed to
+the callback, and its ETag header value is stored for the next iteration.
+The application
+The following component ties the whole user interface together:
+class SkillShareApp {
+constructor(state, dispatch) {
+this.dispatch = dispatch;
+this.talkDOM = elt("div", {className: "talks"});
+this.dom = elt("div", null,
+renderUserField(state.user, dispatch),
+this.talkDOM,
+renderTalkForm(dispatch));
+this.syncState(state);
+}
+syncState(state) {
+if (state.talks != this.talks) {
+this.talkDOM.textContent = "";
+for (let talk of state.talks) {
+this.talkDOM.appendChild(
+renderTalk(talk, this.dispatch));
+}
+this.talks = state.talks;
+}
+}
+}
+When the talks change, this component redraws all of them. This is simple
+but also wasteful. We’ll get back to that in the exercises.
+We can start the application like this:
+function runApp() {
+let user = localStorage.getItem("userName") || "Anon";
+let state, app;
+function dispatch(action) {
+state = handleAction(state, action);
+app.syncState(state);
+}
+pollTalks(talks => {
+if (!app) {
+state = {user, talks};
+app = new SkillShareApp(state, dispatch);
+document.body.appendChild(app.dom);
+} else {
+dispatch({type: "setTalks", talks});
+}
+}).catch(reportError);
+}
+runApp();
+If you run the server and open two browser windows for http://localhost:8000
+next to each other, you can see that the actions you perform in one window
+are immediately visible in the other.
+Exercises
+The following exercises will involve modifying the system defined in this chap-
+ter. To work on them, make sure you download the code first (https://eloquentjavascript.net/
+code/skillsharing.zip), have Node installed https://nodejs.org, and have in-
+stalled the project’s dependency with npm install.
+Disk persistence
+The skill-sharing server keeps its data purely in memory. This means that when
+it crashes or is restarted for any reason, all talks and comments are lost.
+Extend the server so that it stores the talk data to disk and automatically
+reloads the data when it is restarted. Do not worry about efficiency—do the
+simplest thing that works.
+
+
+
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The wholesale redrawing of talks works pretty well because you usually can’t
+tell the difference between a DOM node and its identical replacement. But
+there are exceptions. If you start typing something in the comment field for a
+talk in one browser window and then, in another, add a comment to that talk,
+the field in the first window will be redrawn, removing both its content and its
+focus.</p>
+<p>In a heated discussion, where multiple people are adding comments at the
+same time, this would be annoying. Can you come up with a way to solve it?</p>
+
 <p>The best way to do this is probably to make talks component objects, with a
 syncState method, so that they can be updated to show a modified version of
 the talk. During normal operation, the only way a talk can be changed is by
