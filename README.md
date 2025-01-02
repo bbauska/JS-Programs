@@ -867,26 +867,6 @@ console.log(board);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el04">04. Functions: Minimum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-var makeNoise = function() {
-console.log("Pling!");
-};
-makeNoise();
-// → Pling!
-var power = function(base, exponent) {
-var result = 1;
-for (var count = 0; count < exponent; count++)
-result *= base;
-return result;
-};
-console.log(power(2, 10)); // → 1024
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Some functions produce a value, such as power and square, and some don’t, such as 
-makeNoise, which produces only a side effect. A return statement determines the value the 
-function returns. When control comes across such a statement, it immediately jumps out of 
-the current function and gives the returned value to the code that called the function.
-The return keyword without an expression after it will cause the function to return 
-undefined. Parameters and scopes</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function min(a, b) {
   if (a < b) return a;
@@ -895,9 +875,45 @@ function min(a, b) {
 console.log(min(0, 10)); // → 0
 console.log(min(0, -10)); // → -10
 </pre>
+<pre>console.log(Math.min(2, 4) + 100); // → 102</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Some functions produce a value, such as power and square, and some don’t, such as 
+makeNoise, which produces only a side effect. A return statement determines the value the 
+function returns. When control comes across such a statement, it immediately jumps out of 
+the current function and gives the returned value to the code that called the function.
+The return keyword without an expression after it will cause the function to return 
+undefined. Parameters and scopes</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el05">05. Functions: Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>It is perfectly okay for a function to call itself, as long as it doesn’t do it so
+often that it overflows the stack. A function that calls itself is called recursive.
+Recursion allows some functions to be written in a different style. Take, for
+example, this alternative implementation of power.</p>
+<pre>
+function power(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
+}
+console.log(power(2, 3)); // → 8
+console.log(power(7, 4)); // → 2401
+</pre>
+<pre>
+var makeNoise = function() {
+  console.log("Pling!");
+};
+makeNoise(); // → Pling!
+var power = function(base, exponent) {
+  var result = 1;
+  for (var count = 0; count < exponent; count++)
+  result *= base;
+  return result;
+};
+console.log(power(2, 10)); // → 1024
+</pre>
 <pre>
 function isEven(n) {
   if (n == 0) return true;
@@ -1036,6 +1052,7 @@ function sum(array) {
 console.log(range(1, 10)) // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
 console.log(sum(range(1, 10))); // → 55
+console.log(sum(range(1, 77))); // → 3003
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el09">09. Data-Structures: Reversing an Array</h2>
@@ -1095,6 +1112,21 @@ console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el11">11. Data-Structures: Deep comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Your test for whether you are dealing with a real object will look something like
+typeof x == "object" && x != null. Be careful to compare properties only
+when both arguments are objects. In all other cases you can just immediately
+return the result of applying ===.</p>
+<p>Use Object.keys to go over the properties. You need to test whether both
+objects have the same set of property names and whether those properties have
+identical values. One way to do that is to ensure that both objects have the
+same number of properties (the lengths of the property lists are the same).
+And then, when looping over one of the object’s properties to compare them,
+always first make sure the other actually has a property by that name. If they
+have the same number of properties and all properties in one also exist in the
+other, they have the same set of property names.</p>
+<p>Returning the correct value from the function is best done by immediately
+returning false when a mismatch is found and returning true at the end of the
+function.</p>
 <pre>
 function deepEqual(a, b) {
   if (a === b) return true;
@@ -1115,6 +1147,55 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el12">12. Higher-Order Functions: Flattening</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Functions that operate on other functions, either by taking them as arguments
+or by returning them, are called higher-order functions. Since we have already
+seen that functions are regular values, there is nothing particularly remarkable
+about the fact that such functions exist. The term comes from mathemat-
+ics, where the distinction between functions and other values is taken more
+seriously.</p>
+<p>Higher-order functions allow us to abstract over actions, not just values.
+They come in several forms. For example, we can have functions that create
+new functions.</p>
+<pre>
+function greaterThan(n) {
+  return m => m > n;
+}
+let greaterThan10 = greaterThan(10);
+console.log(greaterThan10(11)); // → true
+</pre>
+<p>And we can have functions that change other functions.</p>
+<pre>
+function noisy(f) {
+  return (...args) => {
+    console.log("calling with", args);
+    let result = f(...args);
+    console.log("called with", args, ", returned", result);
+    return result;
+  };
+}
+noisy(Math.min)(3, 2, 1); // → calling with [3, 2, 1]
+// → called with [3, 2, 1] , returned 1
+</pre>
+<p>We can even write functions that provide new types of control flow.</p>
+<pre>
+function unless(test, then) {
+  if (!test) then();
+}
+repeat(3, n => {
+  unless(n % 2 == 1, () => {
+    console.log(n, "is even");
+  });
+});
+// → 0 is even
+// → 2 is even
+</pre>
+<p>There is a built-in array method, forEach, that provides something like a
+for/of loop as a higher-order function.</p>
+<pre>
+["A", "B"].forEach(l => console.log(l));
+// → A
+// → B
+</pre>
 <pre>
 let arrays = [[1, 2, 3], [4, 5], [6]];<br>
 console.log(arrays.reduce((flat, current) => flat.concat(current), [])); 
@@ -1137,6 +1218,17 @@ loop(3, n => n > 0, n => n - 1, console.log);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el14">14. Higher-Order Functions: Everything</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Like the && operator, the every method can stop evaluating further elements
+as soon as it has found one that doesn’t match. So the loop-based version
+can jump out of the loop—with break or return—as soon as it runs into an
+element for which the predicate function returns false. If the loop runs to its
+end without finding such an element, we know that all elements matched and
+we should return true.</p>
+<p>To build every on top of some, we can apply De Morgan’s laws, which state
+that a && b equals !(!a || !b). This can be generalized to arrays, where all
+elements in the array match if there is no element in the array that does not
+match.</p>
+
 <pre>
 function every(array, predicate) {
   for (let element of array) {
@@ -1154,6 +1246,13 @@ console.log(every([], n => n < 10)); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el15">15. Higher-Order Functions: Dominant writing direction</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Your solution might look a lot like the first half of the textScripts example.
+You again have to count characters by a criterion based on characterScript
+and then filter out the part of the result that refers to uninteresting (script-less)
+characters.</p>
+<p>Finding the direction with the highest character count can be done with
+reduce. If it’s not clear how, refer to the example earlier in the chapter, where
+reduce was used to find the script with the most characters.</p>
 <pre>
 function dominantDirection(text) {
   let counted = countBy(text, char => {
@@ -1169,6 +1268,12 @@ console.log(dominantDirection("Hey, مساء الخير")); // → rtl
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el16">16. Objects: A vector type</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Adding a getter property to the constructor can be done by putting the word
+get before the method name. To compute the distance from (0, 0) to (x, y), you
+can use the Pythagorean theorem, which says that the square of the distance
+we are looking for is equal to the square of the x-coordinate plus the square of
+the y-coordinate. Thus, √x2 + y2 is the number you want, and Math.sqrt is
+the way you compute a square root in JavaScript.</p>
 <pre>
 class Vec {
   constructor(x, y) {
@@ -1192,6 +1297,18 @@ console.log(new Vec(3, 4).length); // → 5
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el17">17. Objects: Groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The easiest way to do this is to store an array of group members in an instance
+property. The includes or indexOf methods can be used to check whether a
+given value is in the array.</p>
+<p>Your class’s constructor can set the member collection to an empty array.
+When add is called, it must check whether the given value is in the array or
+add it, for example with push, otherwise.</p>
+<p>Deleting an element from an array, in delete, is less straightforward, but
+you can use filter to create a new array without the value. Don’t forget to
+overwrite the property holding the members with the newly filtered version of
+the array.</p>
+<p>The from method can use a for/of loop to get the values out of the iterable
+object and call add to put them into a newly created group.</p>
 <pre>
 class Group {
   constructor() {
@@ -1279,6 +1396,12 @@ for (let value of Group.from(["a", "b", "c"])) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el19">19. Objects: Borrowing a method</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>It is probably worthwhile to define a new class GroupIterator. Iterator in-
+stances should have a property that tracks the current position in the group.
+Every time next is called, it checks whether it is done and, if not, moves past
+the current value and returns it.</p>
+<p>The Group class itself gets a method named by Symbol.iterator that, when
+called, returns a new instance of the iterator class for that group.</p>
 <pre>
 let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
@@ -1286,6 +1409,14 @@ console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el20">20. A Robot: Measuring a robot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- define routeRobot -->
+<p>You’ll have to write a variant of the runRobot function that, instead of log-
+ging the events to the console, returns the number of steps the robot took to
+complete the task.</p>
+<p>Your measurement function can then, in a loop, generate new states and
+count the steps each of the robots takes. When it has generated enough mea-
+surements, it can use console.log to output the average for each robot, which
+is the total number of steps taken divided by the number of measurements.</p>
 <pre>
 function countSteps(state, robot, memory) {
   for (let steps = 0;; steps++) {
@@ -1310,6 +1441,14 @@ compareRobots(routeRobot, [], goalOrientedRobot, []);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el21">21. A Robot: Robot efficiency</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The main limitation of goalOrientedRobot is that it considers only one parcel
+at a time. It will often walk back and forth across the village because the parcel
+it happens to be looking at happens to be at the other side of the map, even if
+there are others much closer.</p>
+<p>One possible solution would be to compute routes for all packages and then
+take the shortest one. Even better results can be obtained, if there are multiple
+shortest routes, by preferring the ones that go to pick up a package instead of
+delivering a package.</p>
 <pre>
 function lazyRobot({place, parcels}, route) {
   if (route.length == 0) {
@@ -1338,6 +1477,18 @@ runRobotAnimation(VillageState.random(), lazyRobot, &lbrack;&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el22">22. A Robot: Persistent group</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The most convenient way to represent the set of member values is still as an
+array since arrays are easy to copy.</p>
+<p>When a value is added to the group, you can create a new group with a copy
+of the original array that has the value added (for example, using concat).</p>
+<p>When a value is deleted, you filter it from the array.</p>
+<p>The class’s constructor can take such an array as argument and store it as
+the instance’s (only) property. This array is never updated.</p>
+<p>To add a property (empty) to a constructor that is not a method, you have
+to add it to the constructor after the class definition, as a regular property.</p>
+<p>You need only one empty instance because all empty groups are the same
+and instances of the class don’t change. You can create many different groups
+from that single empty group without affecting it.</p>
 <pre>
 class PGroup {
   constructor(members) {
@@ -1366,6 +1517,14 @@ console.log(b.has("a")); // → false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el23">23. Bugs and Errors: Retry</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The call to primitiveMultiply should definitely happen in a try block. The
+corresponding catch block should rethrow the exception when it is not an
+instance of MultiplicatorUnitFailure and ensure the call is retried when it is.</p>
+<p>To do the retrying, you can either use a loop that stops only when a call
+succeeds—as in the look example earlier in this chapter—or use recursion and
+hope you don’t get a string of failures so long that it overflows the stack (which
+is a pretty safe bet).</p>
+
 <pre>
 class MultiplicatorUnitFailure extends Error {}
 function primitiveMultiply(a, b) {
@@ -1390,6 +1549,12 @@ console.log(reliableMultiply(8, 8)); // → 64
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el24">24. Bugs and Errors: The locked box</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>This exercise calls for a finally block. Your function should first unlock the
+box and then call the argument function from inside a try body. The finally
+block after it should lock the box again.</p>
+<p>To make sure we don’t lock the box when it wasn’t already locked, check its
+lock at the start of the function and unlock and lock it only when it started
+out locked.</p>
 <pre>
 const box = {
   locked: true,
@@ -1465,6 +1630,14 @@ function verify(regexp, yes, no) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el26">26. Regular Expressions: Quoting style</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The most obvious solution is to replace only quotes with a nonword character
+on at least one side—something like /\W'|'\W/. But you also have to take the
+start and end of the line into account.</p>
+<p>In addition, you must ensure that the replacement also includes the charac-
+ters that were matched by the \W pattern so that those are not dropped. This
+can be done by wrapping them in parentheses and including their groups in
+the replacement string ($1, $2). Groups that are not matched will be replaced
+by nothing.</p>
 <pre>
 let text = "'I'm the cook,' he said, 'it's my job.'";<br>
 console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
@@ -1473,6 +1646,17 @@ console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el27">27. Regular Expressions: Numbers again</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>First, do not forget the backslash in front of the period.</p>
+<p>Matching the optional sign in front of the number, as well as in front of the
+exponent, can be done with [+\-]? or (\+|-|) (plus, minus, or nothing).</p>
+<p>The more complicated part of the exercise is the problem of matching both
+"5." and ".5" without also matching ".". For this, a good solution is to use
+the | operator to separate the two cases—either one or more digits optionally
+followed by a dot and zero or more digits or a dot followed by one or more
+digits.</p>
+<p>Finally, to make the e case insensitive, either add an i option to the regular
+expression or use [eE].</p>
+
 <pre>
 // Fill in this regular expression.
 let number = /^[+\-]?(\d+(\.\d*)?|\.\d+)([eE][+\-]?\d+)?$/;
@@ -1493,6 +1677,12 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el28">28. Modules: Roads module</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Since this is a CommonJS module, you have to use require to import the graph
+module. That was described as exporting a buildGraph function, which you
+can pick out of its interface object with a destructuring const declaration.</p>
+<p>To export roadGraph, you add a property to the exports object. Because
+buildGraph takes a data structure that doesn’t precisely match roads, the split-
+ting of the road strings must happen in your module.</p>
 <pre>
 const {buildGraph} = require("./graph");
 const roads = &lbrack;
@@ -1509,6 +1699,26 @@ exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el29">29. Asynchronous Programming: Tracking the scalpel</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>This can be done with a single loop that searches through the nests, moving
+forward to the next when it finds a value that doesn’t match the current nest’s
+name and returning the name when it finds a matching value. In the async
+function, a regular for or while loop can be used.</p>
+<p>To do the same in a plain function, you will have to build your loop using
+a recursive function. The easiest way to do this is to have that function re-
+turn a promise by calling then on the promise that retrieves the storage value.
+Depending on whether that value matches the name of the current nest, the
+handler returns that value or a further promise created by calling the loop
+function again.</p>
+<p>Don’t forget to start the loop by calling the recursive function once from the
+main function.</p>
+<p>In the async function, rejected promises are converted to exceptions by await. 
+When an async function throws an exception, its promise is rejected. So that
+works.</p>
+<p>If you implemented the non-async function as outlined earlier, the way then
+works also automatically causes a failure to end up in the returned promise.
+If a request fails, the handler passed to then isn’t called, and the promise it
+returns is rejected with the same reason.</p>
+
 <pre>
 async function locateScalpel(nest) {
   let current = nest.name;
@@ -1533,6 +1743,20 @@ locateScalpel2(bigOak).then(console.log); // → Butcher's Shop
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el30">30. Asynchronous Programming: Building Promise.all</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The function passed to the Promise constructor will have to call then on each
+of the promises in the given array. When one of them succeeds, two things
+need to happen. The resulting value needs to be stored in the correct position
+of a result array, and we must check whether this was the last pending promise
+and finish our own promise if it was.</p>
+<p>The latter can be done with a counter that is initialized to the length of
+the input array and from which we subtract 1 every time a promise succeeds.
+When it reaches 0, we are done. Make sure you take into account the situation
+where the input array is empty (and thus no promise will ever resolve).</p>
+<p>Handling failure requires some thought but turns out to be extremely simple.
+Just pass the reject function of the wrapping promise to each of the promises
+in the array as a catch handler or as a second argument to then so that a failure
+in one of them triggers the rejection of the whole wrapper promise.</p>
+
 <pre>
 function Promise_all(promises) {
   return new Promise((resolve, reject) => {
@@ -1571,6 +1795,9 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el31">31. A Programming Language: Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The easiest way to do this is to represent Egg arrays with JavaScript arrays.</p>
+<p>The values added to the top scope must be functions. By using a rest argu-
+ment (with triple-dot notation), the definition of array can be very simple.</p>
 <pre>
 topScope.array = (...values) => values;
 topScope.length = array => array.length;
@@ -1590,6 +1817,13 @@ do(define(sum, fun(array,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el32">32. A Programming Language: Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Make sure your solution handles multiple comments in a row, with potentially
+whitespace between or after them.</p>
+<p>A regular expression is probably the easiest way to solve this. Write some-
+thing that matches “whitespace or a comment, zero or more times”. Use the
+exec or match method and look at the length of the first element in the returned
+array (the whole match) to find out how many characters to slice off</p>
+
 <pre>
 function skipSpace(string) {
   let skippable = string.match(/^(\s|#.*)*/);
@@ -1608,6 +1842,15 @@ console.log(parse("a # one\n   # two\n()"));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el33">33. A Programming Language: Fixing scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You will have to loop through one scope at a time, using Object.getPrototypeOf
+to go to the next outer scope. For each scope, use hasOwnProperty to find out
+whether the binding, indicated by the name property of the first argument to
+set, exists in that scope. If it does, set it to the result of evaluating the second
+argument to set and then return that value.</p>
+<p>If the outermost scope is reached (Object.getPrototypeOf returns null) and
+we haven’t found the binding yet, it doesn’t exist, and an error should be
+thrown.</p>
+
 <pre>
 specialForms.set = (args, env) => {
   if (args.length != 2 || args[0].type != "word") {
@@ -1635,6 +1878,15 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el34">34. The Document Object Model: Build a table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You can use document.createElement to create new element nodes, document.
+createTextNode to create text nodes, and the appendChild method to put nodes
+into other nodes.</p>
+<p>You’ll want to loop over the key names once to fill in the top row and then
+again for each object in the array to construct the data rows. To get an array
+of key names from the first object, Object.keys will be useful.</p>
+<p>To add the table to the correct parent node, you can use document.getElementById
+or document.querySelector to find the node with the proper id attribute.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;meta charset="utf8"&gt;
@@ -1681,6 +1933,17 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el35">35. The Document Object Model: Elements by tag name</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The solution is most easily expressed with a recursive function, similar to the
+talksAbout function defined earlier in this chapter.</p>
+<p>You could call byTagname itself recursively, concatenating the resulting arrays
+to produce the output. Or you could create an inner function that calls itself
+recursively and that has access to an array binding defined in the outer function,
+to which it can add the matching elements it finds. Don’t forget to call the
+inner function once from the outer function to start the process.</p>
+<p>The recursive function must check the node type. Here we are interested only
+in node type 1 (Node.ELEMENT_NODE). For such nodes, we must loop over their
+children and, for each child, see whether the child matches the query while also
+doing a recursive call on it to inspect its own children.</p>
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;h1&gt;Heading with a &lt;span&gt;span&lt;/span&gt; element.&lt;/h1&gt;
@@ -1711,6 +1974,11 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el36">36. The Document Object Model: The cat's hat</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Math.cos and Math.sin measure angles in radians, where a full circle is 2π. For
+a given angle, you can get the opposite angle by adding half of this, which is
+Math.PI. This can be useful for putting the hat on the opposite side of the
+orbit.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;meta charset="utf8"&gt;<br>
@@ -1738,6 +2006,16 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el37">37. Handling Events: Balloon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You’ll want to register a handler for the "keydown" event and look at event.key
+to figure out whether the up or down arrow key was pressed.</p>
+<p>The current size can be kept in a binding so that you can base the new size on
+it. It’ll be helpful to define a function that updates the size—both the binding
+and the style of the balloon in the DOM—so that you can call it from your
+event handler, and possibly also once when starting, to set the initial size.</p>
+<p>You can change the balloon to an explosion by replacing the text node with
+another one (using replaceChild) or by setting the textContent property of its
+parent node to a new string.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;p&gt;🎈&lt;/p&gt;<br>
@@ -1769,6 +2047,22 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el38">38. Handling Events: Mouse trail</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Creating the elements is best done with a loop. Append them to the document
+to make them show up. To be able to access them later to change their position,
+you’ll want to store the elements in an array.</p>
+<p>Cycling through them can be done by keeping a counter variable and adding
+1 to it every time the "mousemove" event fires.
+The remainder operator (%
+elements.length) can then be used to get a valid array index to pick the
+element you want to position during a given event.</p>
+<p>Another interesting effect can be achieved by modeling a simple physics
+system. Use the "mousemove" event only to update a pair of bindings that
+track the mouse position. Then use requestAnimationFrame to simulate the
+trailing elements being attracted to the position of the mouse pointer.
+At every animation step, update their position based on their position relative to
+the pointer (and, optionally, a speed that is stored for each element). Figuring
+out a good way to do this is up to you.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;style&gt;
@@ -1804,6 +2098,22 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el39">39. Handling Events: Tabs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>One pitfall you might run into is that you can’t directly use the node’s childNodes
+property as a collection of tab nodes. For one thing, when you add the buttons,
+they will also become child nodes and end up in this object because it is a live
+data structure. For another, the text nodes created for the whitespace between
+the nodes are also in childNodes but should not get their own tabs. You can
+use children instead of childNodes to ignore text nodes.</p>
+<p>You could start by building up an array of tabs so that you have easy access
+to them. To implement the styling of the buttons, you could store objects that
+contain both the tab panel and its button.</p>
+<p>I recommend writing a separate function for changing tabs. You can either
+store the previously selected tab and change only the styles needed to hide that
+and show the new one, or you can just update the style of all tabs every time
+a new tab is selected.</p>
+<p>You might want to call this function immediately to make the interface start
+with the first tab visible.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;tab-panel&gt;
@@ -1868,6 +2178,18 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el41">41. A Platform Game: Pausing the game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>An animation can be interrupted by returning false from the function given
+to runAnimation. It can be continued by calling runAnimation again.</p>
+<p>So we need to communicate the fact that we are pausing the game to the
+function given to runAnimation. For that, you can use a binding that both the
+event handler and that function have access to.</p>
+<p>When finding a way to unregister the handlers registered by trackKeys, re-
+member that the exact same function value that was passed to addEventListener
+must be passed to removeEventListener to successfully remove a handler.
+Thus, the handler function value created in trackKeys must be available to the
+code that unregisters the handlers.</p>
+<p>You can add a property to the object returned by trackKeys, containing
+either that function value or a method that handles the unregistering directly.</p>
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/game.js"&gt;&lt;/script&gt;
@@ -1955,6 +2277,15 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el42">42. A Platform Game: A monster</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>If you want to implement a type of motion that is stateful, such as bounc-
+ing, make sure you store the necessary state in the actor object—include it as
+constructor argument and add it as a property.</p>
+<p>Remember that update returns a new object, rather than changing the old one.</p>
+<p>When handling collision, find the player in state.actors and compare its
+position to the monster’s position. To get the bottom of the player, you have
+to add its vertical size to its vertical position. The creation of an updated
+state will resemble either Coin’s collide method (removing the actor) or Lava
+’s (changing the status to "lost"), depending on the player position.</p>
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;script src="js/game.js"&gt;&lt;/script&gt;
@@ -2008,6 +2339,32 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el43">43. Drawing on Canvas: Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The trapezoid (1) is easiest to draw using a path. Pick suitable center coordi-
+nates and add each of the four corners around the center.</p>
+<p>The diamond (2) can be drawn the straightforward way, with a path, or the
+interesting way, with a rotate transformation. To use rotation, you will have to
+apply a trick similar to what we did in the flipHorizontally function. Because
+you want to rotate around the center of your rectangle and not around the point
+(0,0), you must first translate to there, then rotate, and then translate back.
+one. Make sure you reset the transformation after drawing any shape that creates
+<p>For the zigzag (3) it becomes impractical to write a new call to lineTo for
+each line segment. Instead, you should use a loop. You can have each iteration
+draw either two line segments (right and then left again) or one, in which case
+you must use the evenness (% 2) of the loop index to determine whether to go
+left or right.</p>
+<p>You’ll also need a loop for the spiral (4). If you draw a series of points, with
+each point moving further along a circle around the spiral’s center, you get a
+circle. If, during the loop, you vary the radius of the circle on which you are
+putting the current point and go around more than once, the result is a spiral.</p>
+<p>The star (5) depicted is built out of quadraticCurveTo lines.
+You could
+also draw one with straight lines.
+Divide a circle into eight pieces for a
+star with eight points, or however many pieces you want.
+Draw lines be-
+tween these points, making them curve toward the center of the star. With
+quadraticCurveTo, you can use the center as the control point.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
@@ -2075,6 +2432,28 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el44">44. Drawing on Canvas: The pie chart</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You will need to call fillText and set the context’s textAlign and textBaseline
+properties in such a way that the text ends up where you want it.</p>
+<p>A sensible way to position the labels would be to put the text on the line
+going from the center of the pie through the middle of the slice. You don’t
+want to put the text directly against the side of the pie but rather move the
+text out to the side of the pie by a given number of pixels.
+<p>The angle of this line is currentAngle + 0.5 * sliceAngle. The following
+code finds a position on this line 120 pixels from the center:</p>
+<pre>
+let middleAngle = currentAngle + 0.5 * sliceAngle;
+let textX = Math.cos(middleAngle) * 120 + centerX;
+let textY = Math.sin(middleAngle) * 120 + centerY;
+</pre>
+<p>For textBaseline, the value "middle" is probably appropriate when using
+this approach. What to use for textAlign depends on which side of the circle
+we are on. On the left, it should be "right", and on the right, it should be
+"left", so that the text is positioned away from the pie.</p>
+<p>If you are not sure how to find out which side of the circle a given angle is on,
+look to the explanation of Math.cos in Chapter 14. The cosine of an angle tells
+us which x-coordinate it corresponds to, which in turn tells us exactly which
+side of the circle we are on.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
@@ -2114,6 +2493,18 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el45">45. Drawing on Canvas: A bouncing ball</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>A box is easy to draw with strokeRect. Define a binding that holds its size or
+define two bindings if your box’s width and height differ. To create a round
+ball, start a path and call arc(x, y, radius, 0, 7), which creates an arc going
+from zero to more than a whole circle. Then fill the path.</p>
+<p>To model the ball’s position and speed, you can use the Vec class from
+Chapter 16. Give it a starting speed, preferably one that is not purely vertical or
+horizontal, and for every frame multiply that speed by the amount of time that
+elapsed. When the ball gets too close to a vertical wall, invert the x component
+in its speed. Likewise, invert the y component when it hits a horizontal wall.
+<p>After finding the ball’s new position and speed, use clearRect to delete the
+scene and redraw it using the new position.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/16_game.js"&gt;&lt;/script&gt;
@@ -2152,6 +2543,11 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el46">46. HTTP and Forms: Content negotiation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Base your code on the fetch examples earlier in the chapter.
+Asking for a bogus media type will return a response with code 406, “Not
+acceptable”, which is the code a server should return when it can’t fulfill the
+Accept header.</p>
+
 <pre>
 const url = "https://eloquentjavascript.net/author";
 const types = ["text/plain",
@@ -2168,6 +2564,19 @@ showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el47">47. HTTP and Forms: A JavaScript workbench</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Use document.querySelector or document.getElementById to get access to the
+elements defined in your HTML. An event handler for "click" or "mousedown
+" events on the button can get the value property of the text field and call
+Function on it.</p>
+<p>Make sure you wrap both the call to Function and the call to its result in a
+try block so you can catch the exceptions it produces. In this case, we really
+don’t know what type of exception we are looking for, so catch everything.</p>
+<p>The textContent property of the output element can be used to fill it with
+a string message. Or, if you want to keep the old content around, create a
+new text node using document.createTextNode and append it to the element.
+Remember to add a newline character to the end so that not all output appears
+on a single line.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;<br>
@@ -2189,6 +2598,24 @@ showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el48">48. HTTP and Forms: Conway's Game of Life</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>To solve the problem of having the changes conceptually happen at the same
+time, try to see the computation of a generation as a pure function, which takes
+one grid and produces a new grid that represents the next turn.</p>
+<p>Representing the matrix can be done in the way shown in Chapter 6. You can
+count live neighbors with two nested loops, looping over adjacent coordinates
+in both dimensions. Take care not to count cells outside of the field and to
+ignore the cell in the center, whose neighbors we are counting.</p>
+<p>Ensuring that changes to checkboxes take effect on the next generation can
+be done in two ways. An event handler could notice these changes and update
+the current grid to reflect them, or you could generate a fresh grid from the
+values in the checkboxes before computing the next turn.</p>
+<p>If you choose to go with event handlers, you might want to attach attributes
+that identify the position that each checkbox corresponds to so that it is easy
+to find out which cell to change.</p>
+<p>To draw the grid of checkboxes, you can either use a <table> element (see
+Chapter 14) or simply put them all in the same element and put <br> (line
+break) elements between the rows.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/18_http.js"&gt;&lt;/script&gt;<br>
@@ -2272,6 +2699,13 @@ showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el49">49. A Pixel Art Editor: Keyboard bindings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The key property of events for letter keys will be the lowercase letter itself, if
+shift isn’t being held. We’re not interested in key events with shift here.</p>
+<p>A "keydown" handler can inspect its event object to see whether it matches
+any of the shortcuts. You can automatically get the list of first letters from the
+tools object so that you don’t have to write them out.</p>
+<p>When the key event matches a shortcut, call preventDefault on it and dis-
+patch the appropriate action.</p>
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;<br>
@@ -2323,6 +2757,21 @@ showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el50">50. A Pixel Art Editor: Efficient drawing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>This exercise is a good example of how immutable data structures can make
+code faster. Because we have both the old and the new picture, we can compare
+them and redraw only the pixels that changed color, saving more than 99
+percent of the drawing work in most cases.</p>
+<p>You can either write a new function updatePicture or have drawPicture take
+an extra argument, which may be undefined or the previous picture. For each
+pixel, the function checks whether a previous picture was passed with the same
+color at this position and skips the pixel when that is the case.</p>
+<p>Because the canvas gets cleared when we change its size, you should also
+avoid touching its width and height properties when the old picture and the
+new picture have the same size. If they are different, which will happen when a
+new picture has been loaded, you can set the binding holding the old picture to
+null after changing the canvas size because you shouldn’t skip any pixels after
+you’ve changed the canvas size.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
@@ -2358,6 +2807,20 @@ showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el51">51. A Pixel Art Editor: Circles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You can take some inspiration from the rectangle tool. Like that tool, you’ll
+want to keep drawing on the starting picture, rather than the current picture,
+when the pointer moves.</p>
+<p>To figure out which pixels to color, you can use the Pythagorean theorem.
+First figure out the distance between the current pointer position and the start
+position by taking the square root (Math.sqrt) of the sum of the square (Math
+.pow(x, 2)) of the difference in x-coordinates and the square of the difference
+in y-coordinates. Then loop over a square of pixels around the start position,
+whose sides are at least twice the radius, and color those that are within the
+circle’s radius, again using the Pythagorean formula to figure out their distance
+from the center.</p>
+<p>Make sure you don’t try to color pixels that are outside of the picture’s
+boundaries.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
@@ -2392,6 +2855,38 @@ showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el52">52. A Pixel Art Editor: Proper lines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The thing about the problem of drawing a pixelated line is that it is really four
+similar but slightly different problems. Drawing a horizontal line from the left
+to the right is easy—you loop over the x-coordinates and color a pixel at every
+step. If the line has a slight slope (less than 45 degrees or ¼π radians), you
+can interpolate the y-coordinate along the slope. You still need one pixel per
+x position, with the y position of those pixels determined by the slope.
+<p>But as soon as your slope goes across 45 degrees, you need to switch the way
+you treat the coordinates. You now need one pixel per y position since the line
+goes up more than it goes left. And then, when you cross 135 degrees, you
+have to go back to looping over the x-coordinates, but from right to left.
+You don’t actually have to write four loops. Since drawing a line from A to
+B is the same as drawing a line from B to A, you can swap the start and end
+positions for lines going from right to left and treat them as going left to right.</p>
+<p>So you need two different loops. The first thing your line drawing function
+should do is check whether the difference between the x-coordinates is larger
+than the difference between the y-coordinates. If it is, this is a horizontal-ish
+line, and if not, a vertical-ish one.</p>
+<p>Make sure you compare the absolute values of the x and y difference, which
+you can get with Math.abs.</p>
+<p>Once you know along which axis you will be looping, you can check whether
+the start point has a higher coordinate along that axis than the endpoint and
+swap them if necessary. A succinct way to swap the values of two bindings in
+JavaScript uses destructuring assignment like this:</p>
+<pre>[start, end] = [end, start];</pre>
+<p>Then you can compute the slope of the line, which determines the amount
+the coordinate on the other axis changes for each step you take along your main
+axis. With that, you can run a loop along the main axis while also tracking
+the corresponding position on the other axis, and you can draw pixels on every
+iteration. Make sure you round the non-main axis coordinates since they are
+likely to be fractional and the draw method doesn’t respond well to fractional
+coordinates.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/paint.js"&gt;&lt;/script&gt;<br>
@@ -2439,6 +2934,24 @@ showTypes();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el53">53. Node.js: Search tool</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Your first command line argument, the regular expression, can be found in
+process.argv[2]. The input files come after that. You can use the RegExp
+constructor to go from a string to a regular expression object.</p>
+<p>Doing this synchronously, with readFileSync, is more straightforward, but
+if you use fs.promises again to get promise-returning functions and write an
+async function, the code looks similar.</p>
+<p>To figure out whether something is a directory, you can again use stat (or
+statSync) and the stats object’s isDirectory method.</p>
+<p>Exploring a directory is a branching process. You can do it either by using
+a recursive function or by keeping an array of work (files that still need to be
+explored). To find the files in a directory, you can call readdir or readdirSync.
+The strange capitalization—Node’s file system function naming is loosely based
+on standard Unix functions, such as readdir, that are all lowercase, but then
+it adds Sync with a capital letter.</p>
+<p>To go from a filename read with readdir to a full path name, you have to
+combine it with the name of the directory, putting a slash character (/) between
+them.</p>
+
 <pre>
 const {statSync, readdirSync, readFileSync} = require("fs");<br>
 let searchTerm = new RegExp(process.argv[2]);<br>
@@ -2458,6 +2971,12 @@ function search(file) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el54">54. Node.js: Directory creation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>You can use the function that implements the DELETE method as a blueprint
+for the MKCOL method. When no file is found, try to create a directory with
+mkdir. When a directory exists at that path, you can return a 204 response
+so that directory creation requests are idempotent. If a nondirectory file exists
+here, return an error code. Code 400 (“bad request”) would be appropriate.</p>
+
 <pre>
 // This code won't work on its own, but is also included in the
 // js/file_server.js file, which defines the whole system.<br>
@@ -2479,6 +2998,19 @@ methods.MKCOL = async function(request) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el55">55. Skill-Sharing Website: Disk persistence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The simplest solution I can come up with is to encode the whole talks object as
+JSON and dump it to a file with writeFile. There is already a method (updated
+) that is called every time the server’s data changes. It can be extended to write
+the new data to disk.</p>
+<p>Pick a filename, for example ./talks.json. When the server starts, it can
+try to read that file with readFile, and if that succeeds, the server can use the
+file’s contents as its starting data.</p>
+<p>Beware, though. The talks object started as a prototype-less object so that
+the in operator could reliably be used. JSON.parse will return regular objects
+with Object.prototype as their prototype. If you use JSON as your file format,
+you’ll have to copy the properties of the object returned by JSON.parse into a
+new, prototype-less object.</p>
+
 <pre>
 // This isn't a stand-alone file, only a redefinition of a few
 // fragments from skillsharing/skillsharing_server.js<br>
@@ -2507,6 +3039,21 @@ new SkillShareServer(loadTalks()).start(8000);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The best way to do this is probably to make talks component objects, with a
+syncState method, so that they can be updated to show a modified version of
+the talk. During normal operation, the only way a talk can be changed is by
+adding more comments, so the syncState method can be relatively simple.</p>
+<p>The difficult part is that, when a changed list of talks comes in, we have
+to reconcile the existing list of DOM components with the talks on the new
+list—deleting components whose talk was deleted and updating components
+whose talk changed.</p>
+<p>To do this, it might be helpful to keep a data structure that stores the talk
+components under the talk titles so that you can easily figure out whether a
+component exists for a given talk. You can then loop over the new array of
+talks, and for each of them, either synchronize an existing component or create
+a new one. To delete components for deleted talks, you’ll have to also loop over
+the components and check whether the corresponding talks still exist.</p>
+
 <pre>
 / This isn't a stand-alone file, only a redefinition of the main
 // component from skillsharing/public/skillsharing_client.js<br>
