@@ -690,8 +690,8 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 <p>You can start with a program that prints out the numbers 1 to 7, which you
 can derive by making a few modifications to the even number printing example
 given earlier in the chapter, where the for loop was introduced.</p>
-<p>Now consider the equivalence between numbers and strings of hash charac-
-ters. You can go from 1 to 2 by adding 1 (+= 1). You can go from "#" to
+<p>Now consider the equivalence between numbers and strings of hash characters. 
+You can go from 1 to 2 by adding 1 (+= 1). You can go from "#" to
 "##" by adding a character (+= "#"). Thus, your solution can closely follow
 the number-printing program.</p>
 
@@ -699,6 +699,7 @@ the number-printing program.</p>
 for (let line = "#"; line.length < 8; line += "#")
   console.log(line);
 </pre>
+
 <h5>Solution:</h5>
 <pre>
 #
@@ -917,6 +918,7 @@ function min(a, b) {
 console.log(min(0, 10)); // → 0
 console.log(min(0, -10)); // → -10
 </pre>
+
 <pre>console.log(Math.min(2, 4) + 100); // → 102</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Some functions produce a value, such as power and square, and some don’t, such as 
@@ -945,6 +947,7 @@ abort.</p>
 often that it overflows the stack. A function that calls itself is called recursive.
 Recursion allows some functions to be written in a different style. Take, for
 example, this alternative implementation of power.</p>
+
 <pre>
 function power(base, exponent) {
   if (exponent == 0) {
@@ -956,6 +959,7 @@ function power(base, exponent) {
 console.log(power(2, 3)); // → 8
 console.log(power(7, 4)); // → 2401
 </pre>
+
 <pre>
 var makeNoise = function() {
   console.log("Pling!");
@@ -969,6 +973,7 @@ var power = function(base, exponent) {
 };
 console.log(power(2, 10)); // → 1024
 </pre>
+
 <pre>
 function isEven(n) {
   if (n == 0) return true;
@@ -1044,6 +1049,7 @@ spaghetti: 0.242535625036333
 reading: 0.11068280537595927
 peanuts: 0.59026798116852
 </pre>
+
 <pre>
 var journal = [];<br>
 function addEntry(events, squirrel) {
@@ -1190,13 +1196,14 @@ list that was built so far and use an assignment like list = {value: X, rest:
 list} to add an element.</p>
 <p>To run over a list (in listToArray and nth), a for loop specification like this
 can be used:</p>
+
 <pre>for (let node = list; node; node = node.rest) {}</pre>
 <p>Can you see how that works? Every iteration of the loop, node points to the
 current sublist, and the body can read its value property to get the current
 element. At the end of an iteration, node moves to the next sublist. When that
 is null, we have reached the end of the list, and the loop is finished.</p>
 <p>The recursive version of nth will, similarly, look at an ever smaller part of
-the “tail” of the list and at the same time count down the index until it reaches
+the "tail" of the list and at the same time count down the index until it reaches
 zero, at which point it can return the value property of the node it is looking
 at. To get the zeroth element of a list, you simply take the value property of
 its head node. To get element N + 1, you take the _N_th element of the list
@@ -1234,8 +1241,10 @@ console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 <h2 id="el11">11. Data-Structures: Deep comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your test for whether you are dealing with a real object will look something like;</p>
+
 <pre>typeof x == "object" && x != null</pre>
-Be careful to compare properties only
+
+<p>Be careful to compare properties only
 when both arguments are objects. In all other cases you can just immediately
 return the result of applying ===.</p>
 <p>Use Object.keys to go over the properties. You need to test whether both
@@ -1249,6 +1258,7 @@ other, they have the same set of property names.</p>
 <p>Returning the correct value from the function is best done by immediately
 returning false when a mismatch is found and returning true at the end of the
 function.</p>
+
 <pre>
 function deepEqual(a, b) {
   if (a === b) return true;
@@ -1282,6 +1292,7 @@ seriously.</p>
 <p>Higher-order functions allow us to abstract over actions, not just values.
 They come in several forms. For example, we can have functions that create
 new functions.</p>
+
 <pre>
 function greaterThan(n) {
   return m => m > n;
@@ -1289,7 +1300,9 @@ function greaterThan(n) {
 let greaterThan10 = greaterThan(10);
 console.log(greaterThan10(11)); // → true
 </pre>
+
 <p>And we can have functions that change other functions.</p>
+
 <pre>
 function noisy(f) {
   return (...args) => {
@@ -1302,7 +1315,9 @@ function noisy(f) {
 noisy(Math.min)(3, 2, 1); // → calling with [3, 2, 1]
 // → called with [3, 2, 1] , returned 1
 </pre>
+
 <p>We can even write functions that provide new types of control flow.</p>
+
 <pre>
 function unless(test, then) {
   if (!test) then();
@@ -1315,13 +1330,16 @@ repeat(3, n => {
 // → 0 is even
 // → 2 is even
 </pre>
+
 <p>There is a built-in array method, forEach, that provides something like a
 for/of loop as a higher-order function.</p>
+
 <pre>
 ["A", "B"].forEach(l => console.log(l));
 // → A
 // → B
 </pre>
+
 <pre>
 let arrays = [[1, 2, 3], [4, 5], [6]];<br>
 console.log(arrays.reduce((flat, current) => flat.concat(current), [])); 
@@ -1403,6 +1421,7 @@ characters.</p>
 <p>Finding the direction with the highest character count can be done with
 reduce. If it’s not clear how, refer to the example earlier in the chapter, where
 reduce was used to find the script with the most characters.</p>
+
 <pre>
 function dominantDirection(text) {
   let counted = countBy(text, char => {
@@ -1434,6 +1453,7 @@ can use the Pythagorean theorem, which says that the square of the distance
 we are looking for is equal to the square of the x-coordinate plus the square of
 the y-coordinate. Thus, √x2 + y2 is the number you want, and Math.sqrt is
 the way you compute a square root in JavaScript.</p>
+
 <pre>
 class Vec {
   constructor(x, y) {
@@ -1469,6 +1489,7 @@ overwrite the property holding the members with the newly filtered version of
 the array.</p>
 <p>The from method can use a for/of loop to get the values out of the iterable
 object and call add to put them into a newly created group.</p>
+
 <pre>
 class Group {
   constructor() {
@@ -1567,7 +1588,6 @@ for (let value of Group.from(["a", "b", "c"])) {
 <p>Also remember that you can call a function with a specific this binding by
 using its call method.</p>
 
-
 <p>It is probably worthwhile to define a new class GroupIterator. Iterator in-
 stances should have a property that tracks the current position in the group.
 Every time next is called, it checks whether it is done and, if not, moves past
@@ -1578,16 +1598,119 @@ called, returns a new instance of the iterator class for that group.</p>
 let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el20">20. A Robot: Measuring a robot</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2>robot.js</h2>
 <pre>
+var roads = [
+  "Alice's House-Bob's House",   "Alice's House-Cabin",
+  "Alice's House-Post Office",   "Bob's House-Town Hall",
+  "Daria's House-Ernie's House", "Daria's House-Town Hall",
+  "Ernie's House-Grete's House", "Grete's House-Farm",
+  "Grete's House-Shop",          "Marketplace-Farm",
+  "Marketplace-Post Office",     "Marketplace-Shop",
+  "Marketplace-Town Hall",       "Shop-Town Hall"
+];<br>
+function buildGraph(edges) {
+  let graph = Object.create(null);
+  function addEdge(from, to) {
+    if (from in graph) {
+      graph[from].push(to);
+    } else {
+      graph[from] = [to];
+    }
+  }
+  for (let [from, to] of edges.map(r => r.split("-"))) {
+    addEdge(from, to);
+    addEdge(to, from);
+  }
+  return graph;
+}<br>
+var roadGraph = buildGraph(roads);
+var VillageState = class VillageState {
+  constructor(place, parcels) {
+    this.place = place;
+    this.parcels = parcels;
+  }<br>
+  move(destination) {
+    if (!roadGraph[this.place].includes(destination)) {
+      return this;
+    } else {
+      let parcels = this.parcels.map(p => {
+        if (p.place != this.place) return p;
+        return {place: destination, address: p.address};
+      }).filter(p => p.place != p.address);
+      return new VillageState(destination, parcels);
+    }
+  }
+}<br>
+function runRobot(state, robot, memory) {
+  for (let turn = 0;; turn++) {
+    if (state.parcels.length == 0) {
+      console.log(`Done in ${turn} turns`);
+      break;
+    }
+    let action = robot(state, memory);
+    state = state.move(action.direction);
+    memory = action.memory;
+    console.log(`Moved to ${action.direction}`);
+  }
+}<br>
+function randomPick(array) {
+  let choice = Math.floor(Math.random() * array.length);
+  return array[choice];
+}<br>
+function randomRobot(state) {
+  return {direction: randomPick(roadGraph[state.place])};
+}<br>
+VillageState.random = function(parcelCount = 5) {
+  let parcels = [];
+  for (let i = 0; i < parcelCount; i++) {
+    let address = randomPick(Object.keys(roadGraph));
+    let place;
+    do {
+      place = randomPick(Object.keys(roadGraph));
+    } while (place == address);
+    parcels.push({place, address});
+  }
+  return new VillageState("Post Office", parcels);
+};<br>
+var mailRoute = [
+  "Alice's House", "Cabin", "Alice's House", "Bob's House",
+  "Town Hall", "Daria's House", "Ernie's House",
+  "Grete's House", "Shop", "Grete's House", "Farm",
+  "Marketplace", "Post Office"
+];<br>
 function routeRobot(state, memory) {
   if (memory.length == 0) {
     memory = mailRoute;
   }
   return {direction: memory[0], memory: memory.slice(1)};
+}<br>
+function findRoute(graph, from, to) {
+  let work = [{at: from, route: []}];
+  for (let i = 0; i < work.length; i++) {
+    let {at, route} = work[i];
+    for (let place of graph[at]) {
+      if (place == to) return route.concat(place);
+      if (!work.some(w => w.at == place)) {
+        work.push({at: place, route: route.concat(place)});
+      }
+    }
+  }
+}<br>
+function goalOrientedRobot({place, parcels}, route) {
+  if (route.length == 0) {
+    let parcel = parcels[0];
+    if (parcel.place != place) {
+      route = findRoute(roadGraph, place, parcel.place);
+    } else {
+      route = findRoute(roadGraph, place, parcel.address);
+    }
+  }
+  return {direction: route[0], memory: route.slice(1)};
 }</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el20">20. A Robot: Measuring a robot</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <p>You’ll have to write a variant of the runRobot function that, instead of log-
 ging the events to the console, returns the number of steps the robot took to
@@ -17832,6 +17955,7 @@ console.log(removeNullAndUndefined(&lbrack;1, null, 2, 3, undefined, 4, null&rbr
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The reverseWords function takes a string as input and returns a new string
 where the order of words has been reversed.</p>
+
 <pre>
 const reverseWords = (str) => str.split(' ').reverse().join(' ');
 
@@ -19599,9 +19723,10 @@ console.log(regularOctagonArea(5)); // Output: 86.60254037844387
 <h2 id="js-236">236. Check if a Number is a Repunit Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a repunit number.</p>
+
 <pre>
 const isRepunitNumber = num => /^1+$/.test(num.toString());
-
+<br>
 // Example usage
 console.log(isRepunitNumber(111)); // Output: true
 console.log(isRepunitNumber(11)); // Output: false
@@ -19610,9 +19735,10 @@ console.log(isRepunitNumber(11)); // Output: false
 <h2 id="js-237">237. Calculate the Volume of a Ellipsoid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the volume of an ellipsoid using its semi-axes lengths.</p>
+
 <pre>
 const ellipsoidVolume = (a, b, c) => (4 / 3) &ast; Math.PI &ast; a &ast; b &ast; c;
-
+<br>
 // Example usage
 console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
 </pre>
@@ -19620,6 +19746,7 @@ console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
 <h2 id="js-238">238. Check if a String is a Valid URL (Alternative Approach)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a valid URL using an alternative approach.</p>
+
 <pre>
 const isValidURLAlt = (url) => /^(ftp|http|https):\/\/&lbrack;^ "&rbrack;+$/.test(url);
 
@@ -19631,6 +19758,7 @@ console.log(isValidURLAlt("invalid url"));             // Output: false
 <h2 id="js-239">239. Check if a String is a Valid Tax Identification Number (TIN)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a valid Tax Identification Number (TIN).</p>
+
 <pre>
 const isValidTIN = (tin) => /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
 
@@ -19642,6 +19770,7 @@ console.log(isValidTIN("invalid tin"));  // Output: false
 <h2 id="js-240">240. Check if a String is a Valid ISBN (International Standard Book Number)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a valid International Standard Book Number (ISBN).</p>
+
 <pre>
 const isValidISBN = (isbn) => /^(?:\d{9}&lbrack;\dX&rbrack;|(?:\d{3}-){2}\d{1}
 &lbrack;\dX&rbrack;)$/.test(isbn);
@@ -19654,6 +19783,7 @@ console.log(isValidISBN("invalid isbn")); // Output: false
 <h2 id="js-241">241. Check if a String is a Valid IP Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a valid IP address.</p>
+
 <pre>
 const isValidIPAddress = (ip) => /^((25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})\.){3}
 (25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})$/.test(ip);
@@ -19666,6 +19796,7 @@ console.log(isValidIPAddress("invalid ip")); // Output: false
 <h2 id="js-242">242. Reverse a String (Using Recursion)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Reverse a string using a recursive approach.</p>
+
 <pre>
 const reverseStringRecursive = str => str === " ? " :
 reverseStringRecursive(str.substr(1)) + str.charAt(0);
@@ -19677,6 +19808,7 @@ console.log(reverseStringRecursive('hello')); // Output: 'olleh'
 <h2 id="js-243">243. Count the Occurrences of Each Element in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Count the occurrences of each element in a given array and return the counts in an object.</p>
+
 <pre>
 const countOccurrences = arr => arr.reduce((acc, curr) => 
   (acc&lbrack;curr&rbrack; = (acc&lbrack;curr&rbrack; || 0) + 1, acc), {});
@@ -19689,6 +19821,7 @@ console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;));
 <h2 id="js-244">244. Check if Two Arrays are Equal (Shallow Comparison)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if two arrays are equal through a shallow comparison of their elements.</p>
+
 <pre>
 const arraysAreEqual = (arr1, arr2) => arr1.length === arr2.length &&
 arr1.every((val, index) => val === arr2&lbrack;index&rbrack;);
@@ -19701,6 +19834,7 @@ console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;)); /
 <h2 id="js-245">245. Find the Minimum Value in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the minimum value in a given array of numbers.</p>
+
 <pre>
 const findMinValue = arr => Math.min(...arr);
 
@@ -19711,6 +19845,7 @@ console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;)); // Output: 1
 <h2 id="js-246">246. Flatten an Array of Nested Arrays (Using concat)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Flatten an array of nested arrays using the concat method.</p>
+
 <pre>
 const flattenArray = arr => &lbrack;&rbrack;.concat(...arr);
 
@@ -19721,6 +19856,7 @@ console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lb
 <h2 id="js-247">247. Find the Average of Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the average of numbers in a given array.</p>
+
 <pre>
 const findAverage = arr => arr.reduce((sum, num) => sum + num, 0) / arr.length;
 
@@ -19731,6 +19867,7 @@ console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 <h2 id="js-248">248. Sum the Squares of Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of the squares of numbers in a given array.</p>
+
 <pre>
 const sumSquares = arr => arr.reduce((sum, num) => sum + num &ast;&ast; 2, 0);
 
@@ -19742,6 +19879,7 @@ console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is a palindrome, ignoring non-alphanumeric characters and 
 considering case-insensitivity.</p>
+
 <pre>
 const isPalindromeIgnoringNonAlphaNumeric = str => {
   const cleanedStr = str.replace(/&lbrack;^a-zA-Z0-9&rbrack;/g, ").toLowerCase();
@@ -19755,6 +19893,7 @@ console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a canal, Panama!
 <h2 id="js-250">250. Shuffle an Array (Using Fisher-Yates Algorithm)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Shuffle the elements of an array using the Fisher-Yates shuffle algorithm.</p>
+
 <pre>
 const shuffleArrayFisherYates = arr => {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -19773,14 +19912,16 @@ console.log(shuffleArrayFisherYates(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 
 <h2 id="js-251">251. Sort an Array of Objects by a Specific Property</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Sort an array of objects based on a specific property value.</p>
+
 <pre>
 const sortByProperty = (arr, prop) => 
   arr.sort((a, b) => 
-  a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
+    a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
 const data = &lbrack;
   { name: 'Alice', age: 25 }, 
   { name: 'Bob', age: 20 }, 
-  { name: 'Carol', age: 30 }&rbrack;;
+  { name: 'Carol', age: 30 }
+&rbrack;;
 
 // Example usage
 console.log(sortByProperty(data, 'age'));
@@ -19793,6 +19934,7 @@ console.log(sortByProperty(data, 'age'));
 <h2 id="js-252">252. Reverse Words in a Sentence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Reverse words in a sentence.</p>
+
 <pre>
 const originalSentence = "Hello world, how are you?";
 const reversedSentence = reverseWords(originalSentence);
@@ -19804,6 +19946,7 @@ console.log(reversedSentence); // Output: "you? are how world, Hello"
 <h2 id="js-253">253. Find the Median of Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the median value of numbers in a given array.</p>
+
 <pre>
 const findMedian = arr => {
 const sortedArr = arr.sort((a, b) => a - b);
@@ -19821,6 +19964,7 @@ console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;)); // Output: 3
 <h2 id="js-254">254. Count the Vowels in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Count the number of vowels in a given string.</p>
+
 <pre>
 const countVowels = str => (str.match(/&lbrack;aeiou&rbrack;/gi) || &lbrack;&rbrack;).length;
 
@@ -19831,12 +19975,13 @@ console.log(countVowels('Hello, how are you?')); // Output: 7
 <h2 id="js-255">255. Check if a Number is a Tribonacci Number (Alternative Approach)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Tribonacci number using an alternative approach.</p>
+
 <pre>
 const isTribonacciNumberAlt = num => &lbrack;0, 0,
 1&rbrack;.concat(&lbrack;...Array(num)&rbrack;).slice(3).map((_, i, arr) => 
-arr&lbrack;i - 3&rbrack; + 
-arr&lbrack;i - 2&rbrack; +
-arr&lbrack;i - 1&rbrack;).includes(num);
+  arr&lbrack;i - 3&rbrack; + 
+  arr&lbrack;i - 2&rbrack; +
+  arr&lbrack;i - 1&rbrack;).includes(num);
 
 // Example usage
 console.log(isTribonacciNumberAlt(21)); // Output: true
@@ -19845,6 +19990,7 @@ console.log(isTribonacciNumberAlt(21)); // Output: true
 <h2 id="js-256">256. Calculate the Fibonacci Sequence (Up to N Terms)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate the Fibonacci sequence up to a given number of terms n.</p>
+
 <pre>
 const fibonacciSequence = n => 
   &lbrack;...Array(n)&rbrack;.reduce((fibSeq, _, i) =>
@@ -19859,6 +20005,7 @@ console.log(fibonacciSequence(10));
 <h2 id="js-257">257. Find the ASCII Value of a Character</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Get the ASCII value of a given character.</p>
+
 <pre>
 const getAsciiValue = char => char.charCodeAt(0);
 
@@ -19870,6 +20017,7 @@ console.log(getAsciiValue('A')); // Output: 65
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string is an isogram, meaning it has no repeating characters 
 (case-insensitive).</p>
+
 <pre>
 const isIsogram = str => new Set(str.toLowerCase()).size === str.length;
 
@@ -19882,6 +20030,7 @@ console.log(isIsogram('world')); // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the Hamming distance between two equal-length strings, which is
 the count of differing characters at corresponding positions.</p>
+
 <pre>
 const hammingDistance = (str1, str2) => 
 &lbrack;...str1&rbrack;.reduce((distance, char, i) => 
@@ -19895,6 +20044,7 @@ console.log(hammingDistance('karolin', 'kathrin')); // Output: 3
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the Euclidean distance between two points in a 2D plane using the 
 Pythagorean theorem.</p>
+
 <pre>
 const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) => 
   Math.sqrt((x2 - x1) &ast;&ast; 2 + (y2 - y1) &ast;&ast; 2);
@@ -19907,57 +20057,58 @@ console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));
 <h2 id="js-261">261. Check if a String is a Positive Number (No Sign or Decimal Allowed)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string represents a positive integer without any sign or decimal point.</p>
+
 <pre>
 const isPositiveNumber = str => /^&lbrack;0-9&rbrack;+$/.test(str);
 
 // Example usage
-console.log(isPositiveNumber('123'));
-// Output: true
-console.log(isPositiveNumber('-123'));
-// Output: false
+console.log(isPositiveNumber('123')); // Output: true
+console.log(isPositiveNumber('-123')); // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-262">262. Find the First Non-Repeating Character in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find and return the first non-repeating character in a given string.</p>
+
 <pre>
 const findFirstNonRepeating = str => &lbrack;...str&rbrack;.find(char => 
   str.indexOf(char) === str.lastIndexOf(char));
 
 // Example usage
-console.log(findFirstNonRepeating('hello'));
-// Output: 'h'
+console.log(findFirstNonRepeating('hello')); // Output: 'h'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-263">263. Calculate the Area of a Kite</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a kite using the lengths of its diagonals.</p>
+
 <pre>
 const areaOfKite = (d1, d2) => 0.5 &ast; d1 &ast; d2;
 
-// Example usage
+// Example usage: length 10 by 6.
 console.log("Area of the kite:", areaOfKite(10, 6)); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-264">264. Calculate the Area of a Sector</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a sector within a circle based on the provided radius and angle.</p>
-<p>Example: radius=5, angle=60.</p>
-<pre>
-const sectorArea = (radius, angle) => (Math.PI &ast; radius &ast;&ast; 2 &ast; angle) / 360;
 
-// Example usage
+<pre>
+const sectorArea = (radius, angle) => 
+  (Math.PI &ast; radius &ast;&ast; 2 &ast; angle) / 360;
+
+// Example usage: radius=5, angle=60.
 console.log(sectorArea(5, 60)); // Output: 5.235987755982989
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-265">265. Display Confetti on Button Click</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When click button display confetti on screen; HTML, CSS & JS code.</p>
-<p>Example: .</p>
+<p>Example:</p>
 
-/* HTML */
 <p>HTML:</p>
 <pre>
+/* HTML */
 &lt;canvas id="confetti"&gt;&lt;/canvas&gt;
 
 &lt;button id="button" class="button-53" role="button"&gt;Celebrate!!!&lt;/button&gt;
@@ -19965,6 +20116,7 @@ console.log(sectorArea(5, 60)); // Output: 5.235987755982989
 &lt;script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"&gt;&lt;/script&gt;
 &lt;script src="script.js"&gt;&lt;/script&gt;
 </pre>
+
 <p>CSS:</p>
 <pre>
 /* CSS */
@@ -20093,7 +20245,9 @@ button.addEventListener('click', () => {
   }
 &lt;/script&gt;
 </pre>
+
 <h5>CSS</h5>
+
 <pre>
   #myBtn {
     display: none;
