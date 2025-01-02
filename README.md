@@ -936,6 +936,7 @@ that tests which of the three cases applies. The final else, corresponding to
 the third case, makes the recursive call. Each of the branches should contain
 a return statement or in some other way arrange for a specific value to be
 returned.
+
 <p>When given a negative number, the function will recurse again and again,
 passing itself an ever more negative number, thus getting further and further
 away from returning a result. It will eventually run out of stack space and
@@ -993,6 +994,7 @@ can run an index from zero to one below its length (< string.length). If the
 character at the current position is the same as the one the function is looking
 for, it adds 1 to a counter variable. Once the loop has finished, the counter can
 be returned.</p>
+
 <p>Take care to make all the bindings used in the function local to the function
 by properly declaring them with the let or const keyword</p>
 
@@ -1001,6 +1003,7 @@ similar to how you get its length with "s".length. The returned value will be a 
 containing only one character (for example, "b"). The first character has position zero, 
 which causes the last one to be found at position string.length - 1. In other words, a 
 two-character string has length 2, and its characters have positions 0 and 1.<?p>
+
 <p>Write a function countBs that takes a string as its only argument and returns a number 
 that indicates how many uppercase “B” characters are in the string. Next, write a function 
 called countChar that behaves like countBs, except it takes a second argument that 
@@ -1107,10 +1110,13 @@ var list = {
 <p>Building up an array is most easily done by first initializing a binding to []
 (a fresh, empty array) and repeatedly calling its push method to add a value.
 Don’t forget to return the array at the end of the function.
+
 <p>Since the end boundary is inclusive, you’ll need to use the <= operator rather
 than &lt; to check for the end of your loop.</p>
+
 <p>The step parameter can be an optional parameter that defaults (using the =
 operator) to 1.</p>
+
 <p>Having range understand negative step values is probably best done by writ-
 ing two separate loops—one for counting up and one for counting down—
 because the comparison that checks whether the loop is finished needs to be >=
@@ -1152,10 +1158,12 @@ the new array to insert each element at its start. The second is to loop over
 the input array backwards and use the push method. Iterating over an array
 backwards requires a (somewhat awkward) for specification, like (let i =
 array.length - 1; i >= 0; i--).</p>
+
 <p>Reversing the array in place is harder. You have to be careful not to overwrite
 elements that you will later need. Using reverseArray or otherwise copying
 the whole array (array.slice(0) is a good way to copy an array) works but is
 cheating.</p>
+
 <p>The trick is to swap the first and last elements, then the second and second-
 to-last, and so on. You can do this by looping over half the length of the array
 (use Math.floor to round down—you don’t need to touch the middle element
@@ -1202,6 +1210,7 @@ can be used:</p>
 current sublist, and the body can read its value property to get the current
 element. At the end of an iteration, node moves to the next sublist. When that
 is null, we have reached the end of the list, and the loop is finished.</p>
+
 <p>The recursive version of nth will, similarly, look at an ever smaller part of
 the "tail" of the list and at the same time count down the index until it reaches
 zero, at which point it can return the value property of the node it is looking
@@ -1247,6 +1256,7 @@ console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 <p>Be careful to compare properties only
 when both arguments are objects. In all other cases you can just immediately
 return the result of applying ===.</p>
+
 <p>Use Object.keys to go over the properties. You need to test whether both
 objects have the same set of property names and whether those properties have
 identical values. One way to do that is to ensure that both objects have the
@@ -1354,6 +1364,7 @@ function. Each iteration, it first runs the test function on the current loop va
 and stops if that returns false. Then it calls the body function, giving it the
 current value. Finally, it calls the update function to create a new value and
 starts from the beginning.</p>
+
 <p>When defining the function, you can use a regular loop to do the actual
 looping.</p>
 
@@ -1375,6 +1386,7 @@ loop(3, n => n > 0, n => n - 1, console.log);
 returns true when the given function returns true for every element in the array.
 In a way, some is a version of the || operator that acts on arrays, and every is
 like the && operator.</p>
+
 <p>Implement every as a function that takes an array and a predicate function
 as parameters. Write two versions, one using a loop and one using the some
 method.</p>
@@ -1385,6 +1397,7 @@ can jump out of the loop—with break or return—as soon as it runs into an
 element for which the predicate function returns false. If the loop runs to its
 end without finding such an element, we know that all elements matched and
 we should return true.</p>
+
 <p>To build every on top of some, we can apply De Morgan’s laws, which state
 that a && b equals !(!a || !b). This can be generalized to arrays, where all
 elements in the array match if there is no element in the array that does not
@@ -1418,6 +1431,7 @@ tions defined earlier in the chapter are probably useful here.</p>
 You again have to count characters by a criterion based on characterScript
 and then filter out the part of the result that refers to uninteresting (script-less)
 characters.</p>
+
 <p>Finding the direction with the highest character count can be done with
 reduce. If it’s not clear how, refer to the example earlier in the chapter, where
 reduce was used to find the script with the most characters.</p>
@@ -1439,6 +1453,7 @@ console.log(dominantDirection("Hey, مساء الخير")); // → rtl
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Look back to the <a href="">Rabbit class example</a> if you’re unsure how class declarations
 look.</p>
+
 <p>Adding a getter property to the constructor can be done by putting the word
 get before the method name. To compute the distance from (0, 0) to (x, y), you
 can use the Pythagorean theorem, which says that the square of the distance
@@ -1598,7 +1613,9 @@ called, returns a new instance of the iterator class for that group.</p>
 let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 </pre>
+
 <h2>robot.js</h2>
+
 <pre>
 var roads = [
   "Alice's House-Bob's House",   "Alice's House-Cabin",
@@ -1719,6 +1736,7 @@ complete the task.</p>
 count the steps each of the robots takes. When it has generated enough mea-
 surements, it can use console.log to output the average for each robot, which
 is the total number of steps taken divided by the number of measurements.</p>
+
 <pre>
 function countSteps(state, robot, memory) {
   for (let steps = 0;; steps++) {
@@ -16560,10 +16578,10 @@ function nextPrimeNumber(givenNumber) {
   }
   console.log(`Given Number: $ {givenNumber}`);
   console.log(`Next Prime Number: ${nextNumber}`);
-}
+}<br>
 
 // Example: Find the next prime number greater than 10
-nextPrimeNumber( 10);
+nextPrimeNumber(10);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js217">217. Reverse Order of Bits</h2>
@@ -16580,7 +16598,7 @@ function reverseOrderOfBits(integer) {
   console.log(`Binary Representation: ${binaryRepresentation}`);
   console.log(`Reversed Binary: ${reversedBinary}`);
   console.log(`Reversed Integer: ${reversedInteger}`);
-}
+}<br>
 
 // Examples: Reverse order of bits for given integers
 reverseOrderOfBits(14);
@@ -16599,7 +16617,7 @@ function generateAsciiTriangle(height) {
     const stars = '&ast;'.repeat(i &ast; 2 -1);
     console.log(spaces + stars);
   }
-}
+}<br>
 
 // Example usage:
 const triangleHeight = 5;
@@ -16675,9 +16693,9 @@ isDateValid("December 17, 1995 03:24:00");
 
 <pre>
 const dayOfYear = (date) =>
-  Math.floor((date - newDate(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+  Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
-dayOfYear(newDate()); // Result: 272
+dayOfYear(new Date()); // Result: 272
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-7">7. Capitalise a String</h2>
@@ -16687,9 +16705,7 @@ following code for the purpose.</p>
 
 <pre>
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
-capitalize("follow for more")
-
-// Result: Follow for more
+capitalize("follow for more") // Result: 'Follow for more'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-8">8. Find the number of days between two days</h2>
