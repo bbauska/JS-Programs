@@ -82,7 +82,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#el59">El59. JS and Performance: Optimizing</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#ex0">93+1 JavaScript Examples From Basics to Advanced</a></h2>
+<h2><a href="#ex0">94 JavaScript Examples From Basics to Advanced</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol>
   <li><a href="#ex1">JS Statements</a></li>
@@ -191,9 +191,9 @@ turn your own ideas into a reality without even having to think about it.</p>
 Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#ex94">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
 </ol>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a href="#js0">218 Simple JavaScript Example Scripts</a></h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul type="square">
   <li><a href="#js01">01. Print Hello World</a></li>
   <li><a href="#js02">02. Add Two Numbers</a></li>
@@ -414,8 +414,9 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js217">217. Reverse Order of Bits</a></li>
   <li><a href="#js218">218. Pyramid</a></li>
 </ul>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a href="#js-0">266 JavaScript Example Scripts</a></h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul type="disc">
   <li><a href="#js-1">js-1. Convert Celsius to Fahrenheit</a></li>
   <li><a href="#js-2">js-2. Get Value of a browser Cookie</a></li>
@@ -684,9 +685,9 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-265">js-265. Display Confetti on Button Click</a></li>
   <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
 </ul>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el01">01. Program Structure: Looping a Triangle</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can start with a program that prints out the numbers 1 to 7, which you
 can derive by making a few modifications to the even number printing example
 given earlier in the chapter, where the for loop was introduced.</p>
@@ -694,12 +695,10 @@ given earlier in the chapter, where the for loop was introduced.</p>
 You can go from 1 to 2 by adding 1 (+= 1). You can go from "#" to
 "##" by adding a character (+= "#"). Thus, your solution can closely follow
 the number-printing program.</p>
-
 <pre>
 for (let line = "#"; line.length < 8; line += "#")
   console.log(line);
 </pre>
-
 <h5>Solution:</h5>
 <pre>
 #
@@ -724,15 +723,11 @@ one. The simple solution is to add another conditional “branch” to precisely
 test the given condition. For the clever solution, build up a string containing
 the word or words to output and print either this word or the number if there
 is no word, potentially by making good use of the || operator.</p>
-
-
-
 <p>Write a program that uses console.log to print all the numbers from 1 to 100, with two 
 exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for 
 numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, 
 modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 
 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).</p>
-
 <p>(This is actually an interview question that has been claimed to weed out a significant 
 percentage of programmer candidates. So if you solved it, you’re now allowed to feel
 good about yourself.)</p>
@@ -747,7 +742,6 @@ for (let n = 1; n <= 100; n++) {
 </pre>
 
 <h5>Solution:</h5>
-
 <pre>
 1
 2
@@ -866,8 +860,6 @@ space or a hash sign at a given position, you could test whether the sum of the
 two counters is even (% 2).</p>
 <p>Terminating a line by adding a newline character must happen after the line
 has been built up, so do this after the inner loop but inside the outer loop.</p>
-
-
 <p>Write a program that creates a string that represents an 8×8 grid, using newline 
 characters to separate lines. At each position of the grid there is either a space or 
 a "#" character. The characters should form a chess board. Passing this string to 
@@ -891,7 +883,6 @@ console.log(board);
 </pre>
 
 <h5>Solution:</h5>
-
 <pre>
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
@@ -931,30 +922,47 @@ undefined. Parameters and scopes</p>
 <h2 id="el05">05. Functions: Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your function will likely look somewhat similar to the inner find function in the
-recursive <a href="">findSolution example</a> in this chapter, with an if/else if/else chain
-that tests which of the three cases applies. The final else, corresponding to
-the third case, makes the recursive call. Each of the branches should contain
-a return statement or in some other way arrange for a specific value to be
-returned.
-
+recursive <a href="findSolution">findSolution example</a> in this chapter, with an 
+if/else if/else chain that tests which of the three cases applies. The final else, 
+corresponding to the third case, makes the recursive call. Each of the branches should 
+contain a return statement or in some other way arrange for a specific value to be
+returned.</p>
 <p>When given a negative number, the function will recurse again and again,
 passing itself an ever more negative number, thus getting further and further
 away from returning a result. It will eventually run out of stack space and
 abort.</p>
-
-
-
 <p>It is perfectly okay for a function to call itself, as long as it doesn’t do it so
 often that it overflows the stack. A function that calls itself is called recursive.
 Recursion allows some functions to be written in a different style. Take, for
 example, this alternative implementation of power.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3 id="findSolution">function findSolution</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>
+function findSolution(target) {
+  function find(start, history) {
+    if (start == target)
+      return history;
+    else if (start > target)
+      return null;
+    else
+      return find(start + 5, "(" + history + " + 5)") ||
+      find(start &ast; 3, "(" + history + " &ast; 3)");
+  }
+  return find(1, "1");
+}
+
+console.log(findSolution(24)); // ▷ (((1 &ast; 3) + 5) &ast; 3)
+console.log(findSolution(24)); // ▷ (((1 &ast; 3) &ast; 3) &ast; 3)
+
+</pre>
 
 <pre>
 function power(base, exponent) {
   if (exponent == 0) {
     return 1;
   } else {
-    return base * power(base, exponent - 1);
+    return base &ast; power(base, exponent - 1);
   }
 }
 console.log(power(2, 3)); // → 8
@@ -969,7 +977,7 @@ makeNoise(); // → Pling!
 var power = function(base, exponent) {
   var result = 1;
   for (var count = 0; count < exponent; count++)
-  result *= base;
+  result &ast;= base;
   return result;
 };
 console.log(power(2, 10)); // → 1024
@@ -1059,10 +1067,10 @@ function addEntry(events, squirrel) {
   journal.push({events, squirrel});
 }<br>
 function phi(table) {
-  return (table[3] * table[0] - table[2] * table[1]) /
-    Math.sqrt((table[2] + table[3]) *
-              (table[0] + table[1]) *
-              (table[1] + table[3]) *
+  return (table[3] &ast; table[0] - table[2] &ast; table[1]) /
+    Math.sqrt((table[2] + table[3]) &ast;
+              (table[0] + table[1]) &ast;
+              (table[1] + table[3]) &ast;
               (table[0] + table[2]));
 }<br>
 function tableFor(event, journal) {
@@ -1482,7 +1490,7 @@ class Vec {
     return new Vec(this.x - other.x, this.y - other.y);
   }
   get length() {
-    return Math.sqrt(this.x * this.x + this.y * this.y);
+    return Math.sqrt(this.x &ast; this.x + this.y &ast; this.y);
   }
 }<br>
 console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
@@ -1672,7 +1680,7 @@ function runRobot(state, robot, memory) {
   }
 }<br>
 function randomPick(array) {
-  let choice = Math.floor(Math.random() * array.length);
+  let choice = Math.floor(Math.random() &ast; array.length);
   return array[choice];
 }<br>
 function randomRobot(state) {
@@ -1851,7 +1859,7 @@ is a pretty safe bet).</p>
 class MultiplicatorUnitFailure extends Error {}
 function primitiveMultiply(a, b) {
   if (Math.random() < 0.2) {
-    return a * b;
+    return a &ast; b;
   } else {
     throw new MultiplicatorUnitFailure("Klunk");
   }
@@ -1916,6 +1924,28 @@ console.log(box.locked); // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el25">25. Regular Expressions: Regexp golf</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Code golf is a term used for the game of trying to express a particular program
+in as few characters as possible. Similarly, regexp golf is the practice of writing
+as tiny a regular expression as possible to match a given pattern, and only that
+pattern.<p>
+<p>For each of the following items, write a regular expression to test whether any
+of the given substrings occur in a string. The regular expression should match
+only strings containing one of the substrings described. Do not worry about
+word boundaries unless explicitly mentioned. When your expression works, see
+whether you can make it any smaller.</p>
+<ol>
+  <li>1. car and cat</li>
+  <li>2. pop and prop</li>
+  <li>3. ferret, ferry, and ferrari</li>
+  <li>4. Any word ending in ious</li>
+  <li>5. A whitespace character followed by a period, comma, colon, or semicolon</li>
+  <li>6. A word longer than six letters</li>
+  <li>7. A word without the letter e (or E)</li>
+</ol>
+<p>Refer to the table in the chapter summary for help. Test each solution with
+a few test strings.</p>
+
+
 <pre>
 // Fill in the regular expressions<br>
 verify(/ca[rt]/,
@@ -1953,6 +1983,13 @@ function verify(regexp, yes, no) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el26">26. Regular Expressions: Quoting style</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Imagine you have written a story and used single quotation marks throughout
+to mark pieces of dialogue. Now you want to replace all the dialogue quotes
+with double quotes, while keeping the single quotes used in contractions like
+aren’t.</p>
+<p>Think of a pattern that distinguishes these two kinds of quote usage and
+craft a call to the replace method that does the proper replacement.</p>
+
 <p>The most obvious solution is to replace only quotes with a nonword character
 on at least one side—something like /\W'|'\W/. But you also have to take the
 start and end of the line into account.</p>
@@ -1969,6 +2006,13 @@ console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el27">27. Regular Expressions: Numbers again</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Write an expression that matches only JavaScript-style numbers. It must sup-
+port an optional minus or plus sign in front of the number, the decimal dot,
+and exponent notation—5e-3 or 1E10—again with an optional sign in front of
+the exponent. Also note that it is not necessary for there to be digits in front
+of or after the dot, but the number cannot be a dot alone. That is, .5 and 5.
+are valid JavaScript numbers, but a lone dot isn’t.</p>
+
 <p>First, do not forget the backslash in front of the period.</p>
 <p>Matching the optional sign in front of the number, as well as in front of the
 exponent, can be done with [+\-]? or (\+|-|) (plus, minus, or nothing).</p>
@@ -2101,7 +2145,7 @@ Promise_all([]).then(array => {
 });<br>
 function soon(val) {
   return new Promise(resolve => {
-    setTimeout(() => resolve(val), Math.random() * 500);
+    setTimeout(() => resolve(val), Math.random() &ast; 500);
   });
 }<br>
 Promise_all([soon(1), soon(2), soon(3)]).then(array => {
@@ -2315,12 +2359,12 @@ orbit.</p>
   let angle = 0;
   let lastTime = null;
   function animate(time) {
-    if (lastTime != null) angle += (time - lastTime) * 0.001;
+    if (lastTime != null) angle += (time - lastTime) &ast; 0.001;
     lastTime = time;
-    cat.style.top = (Math.sin(angle) * 40 + 40) + "px";
-    cat.style.left = (Math.cos(angle) * 200 + 230) + "px";
-    hat.style.top = (Math.sin(angle + Math.PI) * 40 + 40) + "px";
-    hat.style.left = (Math.cos(angle + Math.PI) * 200 + 230) + "px";<br>
+    cat.style.top = (Math.sin(angle) &ast; 40 + 40) + "px";
+    cat.style.left = (Math.cos(angle) &ast; 200 + 230) + "px";
+    hat.style.top = (Math.sin(angle + Math.PI) &ast; 40 + 40) + "px";
+    hat.style.left = (Math.cos(angle + Math.PI) &ast; 200 + 230) + "px";<br>
     requestAnimationFrame(animate);
   }
   requestAnimationFrame(animate);
@@ -2356,11 +2400,11 @@ parent node to a new string.</p>
         p.textContent = "💥";
         document.body.removeEventListener("keydown", handleArrow);
       } else {
-        setSize(size * 1.1);
+        setSize(size &ast; 1.1);
         event.preventDefault();
       }
     } else if (event.key == "ArrowDown") {
-      setSize(size * 0.9);
+      setSize(size &ast; 0.9);
       event.preventDefault();
     }
   }
@@ -2523,9 +2567,9 @@ either that function value or a method that handles the unregistering directly.<
   // To know when to stop and restart the animation, a level that is
   // being displayed may be in three `running` states:
   //
-  // * "yes":     Running normally.
-  // * "no":      Paused, animation isn't running
-  // * "pausing": Must pause, but animation is still running
+  // &ast; "yes":     Running normally.
+  // &ast; "no":      Paused, animation isn't running
+  // &ast; "pausing": Must pause, but animation is still running
   //
   // The key handler, when it notices escape being pressed, will do a
   // different thing depending on the current state. When running is
@@ -2626,7 +2670,7 @@ state will resemble either Coin’s collide method (removing the actor) or Lava
       static create(pos) { return new Monster(pos.plus(new Vec(0, -1))); }<br>
       update(time, state) {
         let player = state.player;
-        let speed = (player.pos.x &lt; this.pos.x ? -1 : 1) * time * monsterSpeed;
+        let speed = (player.pos.x &lt; this.pos.x ? -1 : 1) &ast; time &ast; monsterSpeed;
         let newPos = new Vec(this.pos.x + speed, this.pos.y);
         if (state.level.touches(newPos, this.size, "wall")) return this;
         else return new Monster(newPos);
@@ -2718,8 +2762,8 @@ quadraticCurveTo, you can use the center as the control point.</p>
     cx.beginPath();
     cx.moveTo(x, y);
     for (let i = 0; i &lt; 8; i++) {
-      cx.lineTo(x + 80, y + i * 8 + 4);
-      cx.lineTo(x, y + i * 8 + 8);
+      cx.lineTo(x + 80, y + i &ast; 8 + 4);
+      cx.lineTo(x, y + i &ast; 8 + 8);
     }
     cx.stroke();
   }
@@ -2729,10 +2773,10 @@ quadraticCurveTo, you can use the center as the control point.</p>
     cx.beginPath();
     cx.moveTo(xCenter, yCenter);
     for (let i = 0; i &lt; 300; i++) {
-      let angle = i * Math.PI / 30;
-      let dist = radius * i / 300;
-      cx.lineTo(xCenter + Math.cos(angle) * dist,
-                yCenter + Math.sin(angle) * dist);
+      let angle = i &ast; Math.PI / 30;
+      let dist = radius &ast; i / 300;
+      cx.lineTo(xCenter + Math.cos(angle) &ast; dist,
+                yCenter + Math.sin(angle) &ast; dist);
     }
     cx.stroke();
   }
@@ -2742,10 +2786,10 @@ quadraticCurveTo, you can use the center as the control point.</p>
     cx.beginPath();
     cx.moveTo(xCenter + radius, yCenter);
     for (let i = 1; i &lt;= 8; i++) {
-      let angle = i * Math.PI / 4;
+      let angle = i &ast; Math.PI / 4;
       cx.quadraticCurveTo(xCenter, yCenter,
-                          xCenter + Math.cos(angle) * radius,
-                          yCenter + Math.sin(angle) * radius);
+                          xCenter + Math.cos(angle) &ast; radius,
+                          yCenter + Math.sin(angle) &ast; radius);
     }
     cx.fillStyle = "gold";
     cx.fill();
@@ -2761,12 +2805,12 @@ properties in such a way that the text ends up where you want it.</p>
 going from the center of the pie through the middle of the slice. You don’t
 want to put the text directly against the side of the pie but rather move the
 text out to the side of the pie by a given number of pixels.
-<p>The angle of this line is currentAngle + 0.5 * sliceAngle. The following
+<p>The angle of this line is currentAngle + 0.5 &ast; sliceAngle. The following
 code finds a position on this line 120 pixels from the center:</p>
 <pre>
-let middleAngle = currentAngle + 0.5 * sliceAngle;
-let textX = Math.cos(middleAngle) * 120 + centerX;
-let textY = Math.sin(middleAngle) * 120 + centerY;
+let middleAngle = currentAngle + 0.5 &ast; sliceAngle;
+let textX = Math.cos(middleAngle) &ast; 120 + centerX;
+let textY = Math.sin(middleAngle) &ast; 120 + centerY;
 </pre>
 <p>For textBaseline, the value "middle" is probably appropriate when using
 this approach. What to use for textAlign depends on which side of the circle
@@ -2788,16 +2832,16 @@ side of the circle we are on.</p>
   let total = results.reduce(function(sum, choice) {
     return sum + choice.count;
   }, 0);<br>
-  let currentAngle = -0.5 * Math.PI;
+  let currentAngle = -0.5 &ast; Math.PI;
   let centerX = 300, centerY = 150;<br>
   results.forEach(function(result) {
-    let sliceAngle = (result.count / total) * 2 * Math.PI;
+    let sliceAngle = (result.count / total) &ast; 2 &ast; Math.PI;
     cx.beginPath();
     cx.arc(centerX, centerY, 100,
            currentAngle, currentAngle + sliceAngle);<br>
-    let middleAngle = currentAngle + 0.5 * sliceAngle;
-    let textX = Math.cos(middleAngle) * 120 + centerX;
-    let textY = Math.sin(middleAngle) * 120 + centerY;
+    let middleAngle = currentAngle + 0.5 &ast; sliceAngle;
+    let textX = Math.cos(middleAngle) &ast; 120 + centerX;
+    let textY = Math.sin(middleAngle) &ast; 120 + centerY;
     cx.textBaseLine = "middle";
     if (Math.cos(middleAngle) &gt; 0) {
       cx.textAlign = "left";
@@ -2853,8 +2897,8 @@ scene and redraw it using the new position.</p>
     cx.strokeStyle = "blue";
     cx.lineWidth = 4;
     cx.strokeRect(25, 25, 350, 350);<br>
-    x += step * speedX;
-    y += step * speedY;
+    x += step &ast; speedX;
+    y += step &ast; speedY;
     if (x &lt; 25 + radius || x &gt; 375 - radius) speedX = -speedX;
     if (y &lt; 25 + radius || y &gt; 375 - radius) speedY = -speedY;
     cx.fillStyle = "red";
@@ -2968,7 +3012,7 @@ break) elements between the rows.</p>
   }
   function randomGrid() {
     let result = [];
-    for (let i = 0; i &lt; width * height; i++) {
+    for (let i = 0; i &lt; width &ast; height; i++) {
       result.push(Math.random() &lt; 0.3);
     }
     return result;
@@ -2981,7 +3025,7 @@ break) elements between the rows.</p>
     let count = 0;
     for (let y1 = Math.max(0, y - 1); y1 &lt;= Math.min(height - 1, y + 1); y1++) {
       for (let x1 = Math.max(0, x - 1); x1 &lt;= Math.min(width - 1, x + 1); x1++) {
-        if ((x1 != x || y1 != y) && grid[x1 + y1 * width]) {
+        if ((x1 != x || y1 != y) && grid[x1 + y1 &ast; width]) {
           count++;
         }
       }
@@ -2989,11 +3033,11 @@ break) elements between the rows.</p>
     return count;
   }<br>
   function nextGeneration(grid) {
-    let newGrid = new Array(width * height);
+    let newGrid = new Array(width &ast; height);
     for (let y = 0; y &lt; height; y++) {
       for (let x = 0; x &lt; width; x++) {
         let neighbors = countNeighbors(grid, x, y);
-        let offset = x + y * width;
+        let offset = x + y &ast; width;
         if (neighbors &lt; 2 || neighbors &gt; 3) {
           newGrid[offset] = false;
         } else if (neighbors == 2) {
@@ -3109,8 +3153,8 @@ you’ve changed the canvas size.</p>
     if (previous == null ||
         previous.width != picture.width ||
         previous.height != picture.height) {
-      canvas.width = picture.width * scale;
-      canvas.height = picture.height * scale;
+      canvas.width = picture.width &ast; scale;
+      canvas.height = picture.height &ast; scale;
       previous = null;
     }<br>
     let cx = canvas.getContext("2d");
@@ -3119,7 +3163,7 @@ you’ve changed the canvas size.</p>
         let color = picture.pixel(x, y);
         if (previous == null || previous.pixel(x, y) != color) {
           cx.fillStyle = color;
-          cx.fillRect(x * scale, y * scale, scale, scale);
+          cx.fillRect(x &ast; scale, y &ast; scale, scale, scale);
         }
       }
     }
@@ -3753,7 +3797,7 @@ The handler itself needs to look at the request headers to see whether If-
 None-Match and Prefer headers are present. Node stores headers, whose names
 are specified to be case insensitive, under their lowercase names.
 router.add("GET", /^\/talks$/, async (server, request) => {
-let tag = /"(.*)"/.exec(request.headers["if-none-match"]);
+let tag = /"(.&ast;)"/.exec(request.headers["if-none-match"]);
 let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
 if (!tag || tag[1] != server.version) {
 return server.talkResponse();
@@ -3778,7 +3822,7 @@ setTimeout(() => {
 if (!this.waiting.includes(resolve)) return;
 this.waiting = this.waiting.filter(r => r != resolve);
 resolve({status: 304});
-}, time * 1000);
+}, time &ast; 1000);
 });
 };
 Registering a change with updated increases the version property and wakes
@@ -4237,6 +4281,7 @@ function findPath_list(a, b) {
 }<br>
 time(findPath_list);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex0">93 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4764,7 +4809,7 @@ and functions.</p>
 <h4>Generating Random Number:</h4>
 <pre>let randomNumber = Math.random(); // Random number between 0 and 1</pre>
 <h4>Generating Random Integer:</h4>
-<pre>let randomInteger = Math.floor(Math.random() * 10); // Random integer between 0 and 9</pre>
+<pre>let randomInteger = Math.floor(Math.random() &ast; 10); // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex33">33. JS Booleans</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6727,7 +6772,7 @@ window.onscroll = loadMoreContent;
 &lt;?php
 $page = $_GET['page']; // Get page number
 $limit = 10; // Number of items per page
-$start = ($page - 1) * $limit; // Calculate starting index
+$start = ($page - 1) &ast; $limit; // Calculate starting index
 // Fetch content based on page number and limit
 // Example :$results = fetchDataFromDatabase($start, $limit);
 // Generate sample content for demonstration
@@ -6763,7 +6808,7 @@ function uploadFile () {
   xhr.open('POST1, 'upload.php', true);
   xhr.upload.onprogress = function(e) {
     if (e.lengthComputable) {
-      let percentComplete = (e.loaded / e.total) * 100;
+      let percentComplete = (e.loaded / e.total) &ast; 100;
       document.getElementById('progressBar').style.width = percentComplete + '%';
     }
   };
@@ -7419,13 +7464,13 @@ $decodedData = json.decode($jsonString, true);
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
 &lt;script&gt;
-const users = [
+const users = &lbrack;
   {"name": "John", "age": 25},
   {"name": "Alice", "age": 30},
   {"name": "Bob", "age": 28}
-];
+&rbrack;;
 const userList = document.getElementById ("userList");
-users.forEach(user => {
+users.forEach(user =&gt; {
   let listitem = document.createElement("li");
   listitem.textContent = '`${user.name} - ${user.age} years old`;
   userList.appendChild(listitem);
@@ -7621,7 +7666,7 @@ letobj = {
   "name": "Joe",
   "birthday": new Date('1990-01-15T00:00:00Z'),
   "tojson function() {
-    return * {"name" ${this.name}", "birthday" ${this.birthday.toISOString()}"}';
+    return &ast; {"name" ${this.name}", "birthday" ${this.birthday.toISOString()}"}';
   };
   let jsonString = obj.tojson();
 }
@@ -8100,7 +8145,7 @@ to create animations, render shapes, images, and complex visualizations.</p>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 ctx.beginPath();
-ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+ctx.arc(100, 100, 50, 0, 2 &ast; Math.PI);
 ctx.stroke();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8229,7 +8274,7 @@ ctx.fillRect(10,10,100,50);
 const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d');
 ctx.beginPath();
-ctx.arc(100, 100, 50, 0, Math.PI * 2);
+ctx.arc(100, 100, 50, 0, Math.PI &ast; 2);
 ctx.fillstyle = 'red';
 ctx.fill();
 </pre>
@@ -8359,12 +8404,12 @@ const svg = d3.select('body')
 .append('svg')
 .attr('width; 100 )
 .attr('height; 100 );
-svg.append('rect*)
+svg.append('rect&ast;)
 .attr('x; 10 )
 .attr('y; 10)
 .attr('width; 80 )
 .attr('height; 50 )
-.attr('fill; 'green*);
+.attr('fill; 'green&ast;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Canvas Examples:</h4>
@@ -8384,7 +8429,7 @@ ctx.fillRect(10,10,100,50);
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 ctx.beginPath();
-ctx.arc(100,100,50,0,Math.PI * 2);
+ctx.arc(100,100,50,0,Math.PI &ast; 2);
 ctx.fillstyle = 'red';
 ctx.fill();
 </pre>
@@ -8539,7 +8584,7 @@ representations in web applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function celsiusToFahrenheit(Celsius) {
-  return(Celsius * 9 / 5) + 32;
+  return(Celsius &ast; 9 / 5) + 32;
 }
 let tempInFahrenheit = celsiusToFahrenheit(25); // Output: 77
 </pre>
@@ -8548,7 +8593,7 @@ let tempInFahrenheit = celsiusToFahrenheit(25); // Output: 77
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateCircleArea (radius ) {
-  return Math.PI * radius * radius;
+  return Math.PI &ast; radius &ast; radius;
 }
 let area = calculateCircleArea(5); // Output: ~78.54
 </pre>
@@ -8599,7 +8644,7 @@ products.sort((a, b) => a.price - b.price);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3];
-let doubled = numbers.map(num => num * 2); // Output: [2, 4, 6]
+let doubled = numbers.map(num => num &ast; 2); // Output: [2, 4, 6]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
@@ -8643,7 +8688,7 @@ for (let color of colors) {
 <pre>
 let randomNums = [];
 while (randomNums.length &lt; 5) {
-  randomNums.push(Math.floor(Math.random() * 10) + 1);
+  randomNums.push(Math.floor(Math.random() &ast; 10) + 1);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8757,7 +8802,7 @@ function outerFunction(outerValue) {
 <pre>
 function multiply(a) {
   return function(b) {
-    return a * b;
+    return a &ast; b;
   };
 }
 let multiplyByTwo = multiply(2);
@@ -8776,7 +8821,7 @@ let sum = numbers.reduce((acc, curr) => acc + curr, 0); // Output: 15
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3, 4, 5];
-let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); 
+let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num &ast; 2); 
 // Output: [4, 8]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8885,7 +8930,7 @@ document.addEventListener('click', function(event) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let name = 'Alice';
-let message = 'Hello, ${name}! *;
+let message = 'Hello, ${name}! &ast;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Spread Operator:</h4>
@@ -8943,7 +8988,7 @@ let evenNumbers = numbers.filter(num => num % 2 === 0); // Output: [2,4]
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letarr =[[1,2], [3,4], [5,6]];
-let flatArray = arr.flatMap(innerArr => innerArr.map(item => item * 2)); // Output: [2,4,6,8,10,12]
+let flatArray = arr.flatMap(innerArr => innerArr.map(item => item &ast; 2)); // Output: [2,4,6,8,10,12]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
@@ -9002,7 +9047,7 @@ executeAsyncOperations();
 <h4>8. Using Array. from with Mapping:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let newArray = Array.from ({length: 5}, (index) => index * 2 ); // Output: [ 0, 2, 4, 6, 8 ]
+let newArray = Array.from ({length: 5}, (index) => index &ast; 2 ); // Output: [ 0, 2, 4, 6, 8 ]
 </pre>
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9086,7 +9131,7 @@ let user = users.find(user => user.id === 2); // Output: {id: 2, name: 'Bob'}
 <h4>5. Generator Function:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-function * generatorFunction() {
+function &ast; generatorFunction() {
   yield 1;
   yield 2;
   yield 3;
@@ -9099,7 +9144,7 @@ console.log(generator.next().value); // Output: 2
 <h4>6. Async Generator Function:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function * asyncGenerator() {
+async function &ast; asyncGenerator() {
   yield 'First';
   await new Promise (resolve => setTimeout(resolve, 1000));
   yield ’Second';
@@ -9176,7 +9221,7 @@ function factorial(n) {
   if(n === 0||n === 1) {
     return 1;
   }
-  return n * factorial(n - 1);
+  return n &ast; factorial(n - 1);
 }<br>
 const memoizedFactorial = memoize(factorial);
 </pre>
@@ -9185,7 +9230,7 @@ const memoizedFactorial = memoize(factorial);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const add = x => x + 5;
-const multiply = x => x * 2;
+const multiply = x => x &ast; 2;
 const compose = (... fns) => x => fns . reduceRight((acc, fn) => fn (acc), x);
 const addAndMultiply = compose(multiply, add);
 </pre>
@@ -9424,7 +9469,7 @@ const throttled = throttle(throttledFunc, 3000);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [1, 2, 3, 4, 5, 6];
-const new Array = Array.from(numbers, x => x * 2 ).filter (x => x > 5); // Output: [6, 8, 10, 12]
+const new Array = Array.from(numbers, x => x &ast; 2 ).filter (x => x > 5); // Output: [6, 8, 10, 12]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array. reduceRight:</h4>
@@ -9484,7 +9529,7 @@ async function processitems(items) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function loadModule() {
-  const module = await import('./module.js*);
+  const module = await import('./module.js&ast;);
   module.doSomething();
 }
 </pre>
@@ -9505,7 +9550,7 @@ features like dynamic import and nullish coalescing operator.</p>
 <h4>1. Partial Application of Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const multiply = (a, b) => a * b;
+const multiply = (a, b) => a &ast; b;
 const partialMultiplyByTwo = multiply.bind(null, 2);
 console.log(partialMultiplyByTwo(5)); // Output: 10
 </pre>
@@ -9550,7 +9595,7 @@ const clonedArray = originalArray.slice(); // Clones the originalArray
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 constobj = {a: l,b: 2,c: 3};
-const mappedObj = Object.fromEntries(Object.keys(obj).map(key => [key, obj[key] * 2]));
+const mappedObj = Object.fromEntries(Object.keys(obj).map(key => [key, obj[key] &ast; 2]));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.is for Strict Equality Comparison:</h4>
@@ -9576,7 +9621,7 @@ const results = await Promise.allSettled(promises);
 <h4>8. Async Generator Function:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function * asyncGenerator() {
+async function &ast; asyncGenerator() {
   yield 'First';
   await new Promise(resolve => setTimeout(resolve, 1000));
   yield 'Second';
@@ -9612,7 +9657,7 @@ features like optional chaining and BigInt.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Currying Function:</h4>
 <pre>
-const multiply = (a) => (b) => a * b;
+const multiply = (a) => (b) => a &ast; b;
 const multiplyByTwo = multiply(2);
 console.log(multiplyByTwo(5)); // Output: 10
 </pre>
@@ -9698,10 +9743,10 @@ manipulations, object methods, promises and async / await functionalities.</p>
 <h4>1. Function Composition with Multiple Functions:</h4>
 <pre>
 const add = (x, y) => x + y;
-const multiply = (x, y) => x * y;
+const multiply = (x, y) => x &ast; y;
 const compose = (... funcs) => funcs.reduce((f, g) => (... args) => f(g(... args)));
 const addAndMultiply = compose(multiply, add);
-console.log(addAndMultiply(3, 4)); // Output :21(3+4*3)
+console.log(addAndMultiply(3, 4)); // Output :21(3+4&ast;3)
 </pre>
 <h4>2. Using Function.toString() to Get Function Source Code:</h4>
 <pre>
@@ -9717,7 +9762,7 @@ console.log(functionsource); // Output:" function greet() {console.log('Hello!')
 <h4>3. Array.flatMap for Flattening and Mapping:</h4>
 <pre>
 const arr = [1, 2, 3];
-const mappedAndFlattened = arr.flatMap(x => [x * 2, x * 3]);
+const mappedAndFlattened = arr.flatMap(x => [x &ast; 2, x &ast; 3]);
 console.log(mappedAndFlattened); // Output: [2, 3, 4, 6, 6, 9]
 </pre>
 <h4>4. Using Array.some with Custom Predicate:</h4>
@@ -9892,7 +9937,7 @@ function factorial (n) {
   if(n === 0 || n === 1) {
     return 1;
   }
-    return n * factorial(n - 1);
+    return n &ast; factorial(n - 1);
 }<br>
 console.log(factorial(5)); // Output: 120
 </pre>
@@ -9979,7 +10024,7 @@ ES6 + features like object destructuring and arrow functions.</p>
 <h4>2. Function that Returns Multiple Values:</h4>
 <pre>
 function calculateValues(x, y) {
-  return [x + y, x * y, x / y];
+  return [x + y, x &ast; y, x / y];
 }
 const[sum, product, division] = calculateValues(10, 5);
 console.log(sum, product, division); // Output: 15 50 2
@@ -9990,7 +10035,7 @@ console.log(sum, product, division); // Output: 15 50 2
 <h4>3. Using Array.map() for Transformation:</h4>
 <pre>
 const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map(num => num * 2); // Output: [2, 4, 6, 8, 10]
+const doubledNumbers = numbers.map(num => num &ast; 2); // Output: [2, 4, 6, 8, 10]
 </pre>
 <h4>4. Array. find () to Get First Matching Element:</h4>
 <pre>
@@ -19627,7 +19672,7 @@ console.log(isHarshadSmithNumber(10)); // Output: false
 const isPerfectPower = (num) => {
   for (let i = 2; i &ast; i <= num; i++) {
     let power = 2;
-    let result = i * i;
+    let result = i &ast; i;
     while (result <= num) {
       if (result === num) {
         return true;
@@ -19732,7 +19777,7 @@ console.log(isPluperfectNumber(20)); // Output: false
 <pre>
 const regularOctagonArea = (sideLength) => 2 &ast; (1 + Math.sqrt(2)) &ast; sideLength &ast;&ast; 2;
 
-// Example usage - **different for some reason**
+// Example usage - <b>different for some reason</b>
 console.log(regularOctagonArea(5)); // Output: 86.60254037844387
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
