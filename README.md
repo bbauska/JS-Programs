@@ -1,11 +1,11 @@
 <!-- readme.md - 637 = 59 + 94 examples & 484 (218+266) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1>687 JS Examples:<br>
-  50 JS Concepts Every Developer Should Know<br>
-  59 Eloquent JS Exammples,<br>
-  94 JavaScript Examples From Basics to Advanced,<br>
-  218 Simple JavaScript Example Scripts,<br>
-  266 JS Example Scripts</h1>
+  <a href="sk0">50 JS Concepts Every Developer Should Know<br>
+  <a href="#el0">59 Eloquent JS Exammples</a>,<br>
+  <a  href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,<br>
+  <a href="#js0">218 Simple JavaScript Example Scripts,<br>
+  <a href="#js-0">266 JS Example Scripts</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24,7 +24,7 @@ turn your own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#el0">59 Eloquent JS Examples</h2>
+<h2 id="#el0">59 Eloquent JS Examples</h2>
 <ul>
   <li><a href="#el01">El01. Program Structure: Looping a Triangle</a></li>
   <li><a href="#el02">El02. Program Structure: FizzBuzz</a></li>
