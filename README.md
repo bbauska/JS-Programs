@@ -2,7 +2,7 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1>687 JS Examples:<br>
   <a href="sk0">50 JS Concepts Every Developer Should Know<br>
-  <a href="#el0">59 Eloquent JS Exammples</a>,<br>
+  <a href="#el0">59 Eloquent JS Examples</a>,<br>
   <a  href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,<br>
   <a href="#js0">218 Simple JavaScript Example Scripts,<br>
   <a href="#js-0">266 JS Example Scripts</h1>
