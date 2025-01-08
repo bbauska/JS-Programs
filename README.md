@@ -1362,16 +1362,16 @@ which represents the entire document.</p>
 elements are nested and related to each other.</p>
 
 <pre>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Page</title>
-</head>
-<body>
-  <hl>Page Title</hl>
-  <p>This is a paragraph.</p>
-</body>
-</htmt>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;hl&gt;Page Title&lt;/hl&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/htmt&gt;
 </pre>
  
 <p>The corresponding document tree would have a structure similar to this:</p>
@@ -1379,14 +1379,14 @@ elements are nested and related to each other.</p>
 <blockquote>
 Document (html)<br>
 |— html<br>
-|&nbsp;&nbsp;|-- head<br>
-|&nbsp;&nbsp;|&nbsp;&nbsp;|-- title<br>
-|&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
-|&nbsp;&nbsp;|-- body<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|-- hl<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;|-- "Page Title"<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|-- p<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- head<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;|-- title<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- body<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- hl<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;|-- "Page Title"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- p<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
 </blockquote>
 
 <p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
