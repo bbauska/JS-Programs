@@ -1361,7 +1361,7 @@ which represents the entire document.</p>
 <p>In the case of a web page, the document tree represents how HTML
 elements are nested and related to each other.</p>
 
-```
+<pre>
 <!DOCTYPE html>
 <html>
 <head>
@@ -1372,7 +1372,7 @@ elements are nested and related to each other.</p>
   <p>This is a paragraph.</p>
 </body>
 </htmt>
-```
+</pre>
  
 <p>The corresponding document tree would have a structure similar to this:</p>
 
@@ -1592,7 +1592,7 @@ until it reaches the base object, which is the final prototype in the chain.</p>
 
 <p>Example of Prototypal Inheritance and Prototype Chain:</p>
 
-```
+<pre>
 // Define an "Animal" constructor 
 function Animal (name) {
   this.name = name;
@@ -1622,7 +1622,7 @@ Dog.prototype.bark = function() {
 const myDog = new Dog("Max", "Labrador");
 myDog.greet(); // Prints "Hello, I'm Max"
 myDog.bark(); // Prints "Woof woof!"
-```
+</pre>
 
 <p>In this example:</p>
 <ul>
@@ -1650,7 +1650,7 @@ implementing prototypal inheritance in JavaScript.</p>
 
 <p>Example of Object.create:</p>
 
-```
+<pre>
 const animal = {
   sound:  "Makes a sound",
   makeSound: function() {
@@ -1660,7 +1660,7 @@ const animal = {
 const dog = Object.create(animal);
 dog.sound = "Woof woof";
 dog.makeSound(); // Prints "Woof woof"
-```
+</pre>
 
 <p><b>Object.assign:</b> Object.assign is a method used to copy enumerable
 properties from one or more source objects to a target object If there are
@@ -1671,14 +1671,14 @@ overwritten. It's usefulfor combining objects or cloning objects.</p>
 
 <p>Example of Objectassign:</p>
 
-```
+<pre>
 const target =
 const sourcel = { name: "John", age: 30 };
 const source2 = { city: "New York" };
 Object.assign(target, sourcel, source2);
 console.log(target);
 // Prints { name: "John", age: 30, city: "New York" }
-```
+</pre>
 
 <p>In summary:</p>
 <ul>
@@ -1701,32 +1701,32 @@ a new array by applying a function to each element It returns a new
 array with the results of applying the function to each original element in
 the same order.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3, 4];
 const doubles = numbers.map(number => number * 2);
 // doubles is now [2, 6, 8]
-```
+</pre>
 
 <p><b>filter:</b> The filter method is used to create a new array with all elements
 that pass a test (meet a condition) provided by a function. It returns a new
 array with the elements that satisfy the condition.</p>
 
-```
+<pre>
 const numbers - [1, 2, 3, 5, 6];
 const evens - numbers.filter(number => number % 2 --- 0);
 // evens is now [2, 6]
-```
+</pre>
 
 <p><b>reduce:</b> The reduce method is used to reduce an array to a single
 cumulative value. It applies a function to an accumulator and each
 element in the array (from left to right), reducing the array to a single
 value.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3, 4, 5];
 const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 // sum is 15
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk20">20. Pure Functions, Side Effects, State Mutation, and Event</h2>
@@ -1781,7 +1781,7 @@ Closures enable the creation of functions that maintain access to
 variables even when they are no Longer in the scope of the function that
 created them.
 
-```
+<pre>
 function counterQ {
 let count = 0;
 function increment() {
@@ -1793,7 +1793,7 @@ return increment;
 const counterl = counter();
 counterlQ; // Prints: 1
 counterlO; // Prints: 2=
-```
+</pre>
 
 In this example, the counter function returns the increment function. The
 count variable is retained in the Lexical scope of the counter function but
@@ -1814,14 +1814,13 @@ more modular, reusable, and expressive code. High Order Functions make
 it easier to use common programming patterns such as mapping, filtering,
 and reducing data.</p>
 
-<p>Here are some examples and key concepts related to High Order.</p>
+<p>Here are some examples and key concepts related to High Order Functions:</p>
 
-Functions:
 <p><b>Functions as Arguments:</b> You can pass a function as an argument to
 another function. This allows customizing the behavior of the receiving
 function.</p>
 
-```
+<pre>
 function performOperation(operation, a, b) { 
   return operation(a, b);
 }
@@ -1834,164 +1833,163 @@ function subtract(x, y) {
   return x - y;
 }
  
-const resultAddition = performoperatlontadd, 5, 5J; // Result: 8
-const resultsubtraction = performOperation(subtract, 10, A);
-```
+const resultAddition = performOperation(add, 5, 3); // Result: 8
+const resultSubtraction = performOperation(subtract, 10, 4);  // Result: 6
+</pre>
 
-II Result: 6
+<p><b>Functions as Results:</b> You can return a function from another function.
+This allows creating specialized and parameterized functions.</p>
 
-Functions as Results: You can return a function from another function.
-This allows creating specialized and parameterized functions.
-
-```
+<pre>
 function multiplier(factor) {
   return function (number) {
     return number * factor;
   };
 }
 
-const double - multiplier(2);
-const triple - multiplier^);
+const double = multiplier(2);
+const triple = multiplier(3);
 
 const resultDouble = double(5); // Result: 10
-const resultTriple = tripled); // Result: 12
-```
+const resultTriple = triple(4); // Result: 12
+</pre>
 
 <p><b>Mapping (Map):</b> The map method of an array applies a function to each
 element of the array and returns a new array with the results.</p>
 
-```
-const numbers - [1, 2, 3, 4];
-const duplicates - numbers.map(number -> number * 2); // Result: [2, 4, 6, 8]
-```
+<pre>
+const numbers = [1, 2, 3, 4];
+const duplicates = numbers.map(number => number * 2); // Result: [2, 4, 6, 8]
+</pre>
 
-Filtering (Filter): The filter method of an array creates a new array with
-elements that pass a specified condition.
+<p><b>Filtering (Filter):</b> The filter method of an array creates a new array with
+elements that pass a specified condition.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3, 4, 5];
 const odds = numbers.filter(number => number % 2 !== 0); // Result: [1, 3, 5]
-```
+</pre>
 
-reducing (reduce): ine reduce metnod or an array accumulates
-elements by applying a reducing function and returns a single result
+<p><b>reducing (reduce):</b> The reduce method or an array accumulates
+elements by applying a reducing function and returns a single result.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3, A];
-const totalSum = numbers.reduce((accumulator, number) => accumulator + number, 0); // Result: 10
-```
-
+const totalSum = numbers.reduce((accumulator, number) => 
+  accumulator + number, 0); // Result: 10
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk23">23. Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Recursion is a programming concept where a function calls itself to solve
+<p>Recursion is a programming concept where a function calls itself to solve
 a problem. Essentially, it is a technique in which a function breaks down
 into smaller, more manageable problems until it reaches a base case that
 can be solved directly. Recursion is particularly useful for solving problems
-that have an intrinsic recursive structure.
+that have an intrinsic recursive structure.</p>
 
-Here's a simple example of a recursive function that calculates the
-factorial of a number:
+<p>Here's a simple example of a recursive function that calculates the
+factorial of a number:</p>
 
-```
+<pre>
 function factorial(n) {
-if (n === 0 || n === 1) {
-return 1; // Base case: factorial of 0 and 1 is 1 } else {
-return n * factorialfn - 1); // Recursive call
+  if (n === 0 || n === 1) {
+    return 1; // Base case: factorial of 0 and 1 is 1 
+  } else {
+    return n * factorial(n - 1); // Recursive call
+  }
+}
 
 const result = factorial(5); // Result: 120 (5 * 4 * 3 * 2 * 1)
-```
+</pre>
 
-In this example, the factorial function calls itself with a reduced argument
+<p>In this example, the factorial function calls itself with a reduced argument
 in each call until it reaches the base case, where the result is returned.
 Recursion can also have side effects, such as the use of the call stack, so
 it's essential to ensure a clear base case and that recursion converges
-toward it.
+toward it.</p>
 
-```
-ourrie ulussiu pruuierris sulvuu vviui reuursiuri iriuiuue rriuuierriuucuL
-```
-
+<p>Some classic problems solved with recursion include multiplication 
 calculations (factorials, Fibonacci numbers), tree and graph traversal, and
 divide and conquer in algorithms. However, it's crucial to use recursion
 carefully, as improper use can lead to performance issues and stack
-overflow errors.
-
+overflow errors.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk24">24. Collections and Generators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Collections and generators are important concepts in JavaScript that help
+<p>Collections and generators are important concepts in JavaScript that help
 handle and manipulate sets of data efficiently and flexibly. Here's a
-description of both:
+description of both:</p>
 
-Collections: Collections are data structures that allow storing and
+<p><b>Collections:</b> Collections are data structures that allow storing and
 organizing multiple elements. In JavaScript, some of the most common
-collections are:
+collections are:</p>
 
-Arrays: Ordered lists of elements that can contain any data type. Arrays
-have zero-based indices to access elements.
+<p><b>Arrays:</b> Ordered lists of elements that can contain any data type. Arrays
+have zero-based indices to access elements.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3, 4];
 const fruits = ['apple', 'orange', 'banana'];
-```
+</pre>
 
-Objects: Collections of key-value pairs where keys are strings (or symbols
-in ES6) and values can be any data type.
+<p><b>Objects:</b> Collections of key-value pairs where keys are strings (or symbols
+in ES6) and values can be any data type.</p>
 
-```
+<pre>
 const person = { name: 'John', age: 30 };
-```
+</pre>
 
-Maps: Structures similar to objects but allow using any value as a key and
-maintain the insertion order.
+<p><b>Maps:</b> Structures similar to objects but allow using any value as a key and
+maintain the insertion order.</p>
 
-```
+<pre>
 const map = new Map();
 map.set('name', 'Mary');
 map.set('age', 25);
-```
+</pre>
  
-Sets: Collections of unique and non-dupLicated values.
+<p><b>Sets: Collections of unique and non-dupLicated values.</p>
 
-```
+<pre>
 const set = new Set();
 set.add('red');
 set.add('green');
 set.add('red'); // Not added, as 'red' is already in the set
-```
+</pre>
 
-Generators: Generators are special functions that allow pausing and
+<p><b>Generators:</b> Generators are special functions that allow pausing and
 resuming their execution at a specific point. They enable creating a
 custom lazy and iterative control flow. They are defined using the
-function* keyword and use the yield statement to pause the function and
-return values.
+function&ast; keyword and use the yield statement to pause the function and
+return values.</p>
 
-```
+<pre>
 function* counter() {
   let num = 0;
   while (true) {
     yield num++;
   }
 }
-```
+</pre>
 
-const generator = counter(); console.log(generator.next().value); // Prints: 0 console.log(generator.next().value); // Prints: 1
-Generators are useful when you need to generate a sequence of values
+const generator = counter(); 
+console.log(generator.next().value); // Prints: 0 
+console.log(generator.next().value); // Prints: 1
+
+<p>Generators are useful when you need to generate a sequence of values
 on-demand, rather than generating all values at once. This can be
 beneficial for handling Large data streams or iterating over complex data
-structures.
+structures.</p>
 
-Both collections and generators are powerful tools in JavaScript that
-allow you to handle and manipulate data more efficiently and flexibly.
- 
+<p>Both collections and generators are powerful tools in JavaScript that
+allow you to handle and manipulate data more efficiently and flexibly.</p> 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk25">25. Promises</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Promises ore a design pattern and feature in JavaScript that allows for a
+<p>Promises ore a design pattern and feature in JavaScript that allows for a
 more elegant and efficient handling of asynchronous operations, such as
 network requests, fie read/write, and other tasks that may take time and
-block execution.
+block execution.</p>
 
 <p>Promises were introduced to address the issue of "callback hell" (excessive
 callback nesting) and to make asynchronous code more readable and
@@ -2001,41 +1999,41 @@ manageable.</p>
 constructor takes a function with two parameters, resolve and reject,
 which are functions to fulfill or reject the promise.</p>
 
-```
+<pre>
 const promise = new Promise((resolve, reject) => {
   // Perform an asynchronous operation here
   // If the operation is successful, call resolve(value)
   // If the operation fails, call reject(error)
 });
-```
+</pre>
 
 <p><b>Handling Promises:</b> You can chain methods to a promise to handle the
 result These methods include then to handle resolution and catch to
 handle rejection.</p>
 
-```
+<pre>
 nnomiqp.thpnfvalue => 4
 // Do something with the resolved value }).catch(error => {
 // Handle the error if the promise is rejected
 });
-```
+</pre>
 
 <p><b>Chaining Promises:</b> You can chain multiple promises using the then
 method, allowing for sequential asynchronous operations.</p>
 
-```
+<pre>
 doSomethingAsync()
   .then(resultl => doAnotherAsyncThing(resultl))
   .then(result2 => doMoreAsyncThings(result2))
   .then(finalResult => console.log(finalResult))
   .catch(error => console.error(error));
-```
+</pre>
 
 <p><b>Handling Multiple Promises:</b> The Promise.all method allows you to
 handle an array of promises and returns a new promise that is resolved
 when all promises in the array have been resolved.</p>
 
-```
+<pre>
 const promisel = fetchDatal();
 const promise2 = fetchData2();
 
@@ -2046,7 +2044,7 @@ Promise.all([promisel, promise2])
   // Do something with the results
 })
 .catch(error => console.error(error));
-```
+</pre>
 
 <p>Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
 However, as JavaScript evolved, more advanced readable syntax for working with 
@@ -2063,7 +2061,7 @@ that looks synchronous but efficiently handles asynchronous operations.</p>
 promise. You can use the await keyword within an async function to wait for the 
 resolution of a promise without blocking the main thread's execution.</p>
 
-```
+<pre>
 async function fetchDataQ 1
 
 const response = await fetch('https://api.example.com/data'); 
@@ -2073,7 +2071,7 @@ return data;
 fetchData()
 .then(data => console.log(data))
 .catch(error => console.error(error));
-```
+</pre>
 
 <p>In this example, fetchData is an asynchronous function that waits for the
 response of an API request and then awaits the conversion of that
@@ -2083,7 +2081,7 @@ though it's handling asynchronous operations.</p>
 <p><b>Error Handling:</b> You can use the try/catch block with async/await to
 handle errors more naturally.</p>
 
-```
+<pre>
 async function fetchData() {
   try {
     const response = await
@@ -2094,18 +2092,18 @@ async function fetchData() {
   console.error('Error:', error);
   }
 }
-```
+</pre>
 
 <p><b>Chaining Promises with async/await:</b> You can chain async functions
 using await, making the code more readable and avoiding excessive nesting.</p>
 
-```
+<pre>
 async function fetchAndProcessData() {
   const data = await fetchData();
   const result = processData(data);
   return result;
 }
-```
+</pre>
 
 <p>async/await is a powerful and elegant way to handle asynchronous
 operations in JavaScript Although it is newer than promises, it has gained
@@ -2132,39 +2130,39 @@ Lists of elements and are suitable for accessing elements by their index.</p>
 <p><b>Objects:</b> Objects are collections of key-value pairs. Keys are strings, and
 values can be of any type. Objects are useful for representing entities with properties and methods.</p>
 
-```
+<pre>
 const person = {
 name: 'John',
 age: 30,
 greet: functionO {
 console.logCHello, my name is Sfthis.name}');
-```
+</pre>
 
 <p><b>Maps:</b> Maps are collections of key-value pairs where keys can be of any
 type. Unlike objects, maps maintain the insertion order and allow keys of
 any type.</p>
 
-```
+<pre>
 const map = new Map();
 map.set('name', 'Maria');
 map.set(100, 'one hundred');
-```
+</pre>
 
 <p><b>Sets:</b> Sets are collections of unique and non-duplicated values. They are
 useful when you need to maintain a list of elements without duplicates.</p>
 
-```
+<pre>
 const set = new Set();
 set.add('red');
 set.add('green');
 set.add('red'); // Not added, as 'red' is already in the set
-```
+</pre>
 
 <p><b>Queues and Stacks:</b> Queues and stacks are data structures for managing elements 
 in order. Queues follow the FIFO (First In, First Out) principle, while stacks follow the 
 LIFO (Last In, First Out) principle.</p>
 
-```
+<pre>
 // Example of a queue 
 const queue = [];
 queue.push('a');
@@ -2176,7 +2174,7 @@ const stack = [];
 stack.push('x');
 stack.push('y');
 const lastElement = stack.pop(); // 'y'
-```
+</pre>
 
 <p>These are just some of the basic data structures in JavaScript The choice
 of the right data structure depends on the specific requirements of your
@@ -2284,7 +2282,7 @@ existing classes. A class that inherits from another (called a base class or
 superclass) acquires its attributes and methods, enabling code reuse and
 functionality extension.</p>
 
-```
+<pre>
 class Animal {
   constructor(name) {
     this.name = name;
@@ -2305,7 +2303,7 @@ class Dog extends Animal {
 }
 const myDog = new Dog('Max', 'Labrador');
 myDog.speak(); // Prints: "Max barks."
-```
+</pre>
 
 <p>In this example, Dog inherits from Animal and extends its functionality.
 This promotes code reuse and allows adding dog-specific behaviors in the
@@ -2316,7 +2314,7 @@ classes to respond to the same method call differently. It allows treating
 objects from different classes as if they were objects of the same base
 class, simplifying design and interaction between objects.</p>
 
-```
+<pre>
 class Shape {
   area() {
     return 0;
@@ -2345,7 +2343,7 @@ const circle = new Circle(3);
 
 console.log(square.area()); // Prints: 25
 console.log(circle.area()); // Prints: 28.274333882308138
-```
+</pre>
 
 <p>In this example, both Square and Circle are subclasses of Shape, and both
 implement the areaQ method. Although they are different classes,
@@ -2574,13 +2572,13 @@ or exceptional situations that may occur during program execution. In
 JavaScript, you can use the try...catch statements to capture and handle
 errors in a controlled manner.</p>
 
-```
+<pre>
 try {
   // Code that might throw an error 
 } catch (error) {
   // Block of code to handle the error
 }
-```
+</pre>
 
 <p>Here's a more detailed explanation:</p>
 <ul>
@@ -2589,14 +2587,14 @@ try {
   <li>The error parameter in the catch block is a variable that will hold the thrown error object.</li>
 </ul>
 
-```
+<pre>
 try {
   const result = divide(10, 0); // Trying to divide by zero 
   console.log(result);
 } catch (error) {
   console.error('Error:', error.message);
 }
-```
+</pre>
 
 <p>In this example, if the divide function throws an error while attempting to
 divide by zero, the catch block will capture the error and display an error
@@ -2617,7 +2615,7 @@ modules work:</p>
 <p><b>Export from a Module:</b> You can export values, functions, and classes from
 a module using the export keyword.</p>
 
-```
+<pre>
 // file: module.js
 export const PI = 3.14159;
 
@@ -2630,12 +2628,12 @@ export default class Person {
     this.name = name:
   }
 }
-```
+</pre>
 
 <p><b>Import into Another Module:</b> You con import exported values into
 another module using the import keyword.</p>
 
-```
+<pre>
 // file: app.js
 import { PI, sum } from './module.js';
 import Person from './module.js';
@@ -2645,12 +2643,12 @@ console.log(sum(5, 3)); // Prints: 8
 
 const person = new Person('John');
 console.log(person.name); // Prints: John
-```
+</pre>
 
 <p><b>Import Everything as an Alias:</b> You can import all exported values as an
 object using an alias.</p>
 
-```
+<pre>
 // file: app.js
 import * as module from ' ./module.js';
 
@@ -2659,18 +2657,18 @@ console.log(module.sum(5, 3)); // Prints: 8
 
 const person = new module.default('Maria');
 console.log(person.name); // Prints: Maria
-```
+</pre>
 
 <p><b>Import Only the Default Value:</b> If you have a default export, you can
 import it directly without using braces.</p>
 
-```
+<pre>
 // file: app.js
 import Person from './module.js';
 
 const person = new Person('Peter');
 console.log(person.name); // Prints: Peter
-```
+</pre>
  
 <p>ES6 modules promote modifying and code reuse, making it easier to build
 organized and maintainable applications. However, keep in mind that ES6
@@ -2693,29 +2691,29 @@ syntax of the ternary operator is as follows:
 
 Using the ternary operator to assign a value based on a condition:
 
-```
+<pre>
 const age = 18;
 const isAdult = age >= 18 ? "Yes" : "No";
 console.log(isAdult); // Prints: Yes
-```
+</pre>
 
 Using the ternary operator to perform an action based on a condition:
 
-```
+<pre>
 const hour = 14;
 const greeting = hour < 12 ? "Good morning" : "Good afternoon";
 console.log(greeting); // Prints: Good afternoon
-```
+</pre>
 
 Using the ternary operator to calculate a discount:
 
-```
+<pre>
 const originalPrice = 100;
 const hasDiscount = true;
 const finalPrice = hasDiscount ? originalPrice * 0.8 :
 originalPrice;
 console.log(finalPrice); // Prints: 80
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk37">37. Spread and Rest Operators</h2>
@@ -2729,7 +2727,7 @@ elements from arrays and objects. It is also used to create shallow copies
 of arrays and objects, which can be usefulto avoid unintended side effects
 when manipulating data.</p>
 
-```
+<pre>
 // Use spread to copy an array
 const originalArray = [1, 2, 3];
 const copiedArray = [...originalArray];
@@ -2738,11 +2736,11 @@ const copiedArray = [...originalArray];
 const arrayl = [1, 2, 3];
 const array2 = [4, 5, 6];
 const combined = [...arrayl, ...array2]; // [1, 2, 3, 4, 5, 6]
-```
+</pre>
  
 In objects, the spread operator is used to create shallow copies:
 
-```
+<pre>
 // Copy an object using spread
 const originalObject = { a: 1, b: 2 };
 const copiedObject - { ...originalObject
@@ -2751,13 +2749,13 @@ const copiedObject - { ...originalObject
 const objectl = { a: 1, b: 2 };
 const object2 = { b: 3, c: 4
 const combined = { ...objectl, ...object2 }; // { a: 1, b: 3, c: 4 }
-```
+</pre>
 
 <p><b>Rest Operator (...):</b> The rest operator is used to gather multiple elements
 into an array in contexts where function arguments or destructuring
 parameters are expected.</p>
 
-```
+<pre>
 // Use rest in functions
 function sum(...numbers) {
   return numbers.reduce((total, num) => total + num, 0);
@@ -2768,7 +2766,7 @@ console.log(sum(l, 2, 3, 4)); // Prints: 10
 const [first, ...rest] = [1, 2, 3, 4];
 console.log(first); // Prints: 1
 console.log(rest); // Prints: [2, 3, 4]
-```
+</pre>
 
 <p>In the example of the sum function, the rest operator gathers all
 arguments into an array named numbers. In destructuring, the rest
@@ -2788,7 +2786,7 @@ avoiding code repetition when accessing properties and elements.</p>
 
 <p><b>Destructuring with Arrays:</b></p>
 
-```
+<pre>
 const numbers = [1, 2, 3, 5];
 
 // Extracting individual values
@@ -2796,22 +2794,22 @@ const [first, second, ...rest] = numbers;
 console.log(first); // Prints: 1
 console.log(second); // Prints: 2
 console.log(rest); // Prints: [3, 4, 5]
-```
+</pre>
 
 <p><b>Destructuring with Objects:</b></p>
 
-```
+<pre>
 const person = { name: 'Ana', age: 30, city: 'Madrid' };
 
 // Extracting individual properties
 const { name, age } = person; 
 console.log(name); // Prints: Ana 
 console.log(age); // Prints: 30
-```
+</pre>
 
 <p><b>Nested Destructuring:</b> You con destructure nested objects and arrays:</p>
 
-```
+<pre>
 const product = {
   name:  'T-shirt',
   price: 20,
@@ -2824,14 +2822,14 @@ const product = {
 const { name, details: { color, sizes } } = product;
 console.log(name); // Prints: T-shirt
 console.log(color); // Prints: Red
-console.log(sizes); //Prints:  ['S', 'M', 'L'J
-```
+console.log(sizes); //Prints:  ['S', 'M', 'L']
+</pre>
 
 <p>Destructuring assignment is especially handy when working with
 functions that return objects or arrays, as you can extract the necessary
 values directly into the function parameters:</p>
 
-```
+<pre>
 function getInformation() {
   return { name: 'Juan', age: 25, profession: 'Programmer' };
 }
@@ -2839,7 +2837,7 @@ function getInformation() {
 const { name, age } = getInformation();
 console.log(name); // Prints: Juan
 console.log(age); // Prints: 25
-```
+</pre>
 
 <p>Destructuring assignment can save time and reduce the need for writing
 repetitive codewhen accessing values from arrays and objects.</p>
@@ -2856,7 +2854,7 @@ manual concatenation.</p>
 
 <p><b>Here's a basic example of how template literals work:</b></p>
 
-```
+<pre>
 const name = 'Juan';
 const age = 30;
 
@@ -2864,7 +2862,7 @@ const age = 30;
 const message = `Hello, my name is ${name} and I am ${age} years old.`
 
 console.log(message); // Prints "Hello, my name is Juan and I am 30 years old."
-```
+</pre>
 
 <p>The ${} are placeholders that indicate variables or expressions to be
 interpolated within them. Template literals also allow for including line
@@ -2872,11 +2870,11 @@ breaks and special characters without the need for escaping:</p>
 
 <p><b>Multiline and Special Characters:</b></p>
 
-```
+<pre>
 const multilineMessage = `
-Hello,
-This is a message 
-that spans multiple lines.
+  Hello,
+  This is a message 
+  that spans multiple lines.
 `;
 
 console.log(multilineMessage);
@@ -2884,7 +2882,7 @@ console.log(multilineMessage);
 // "Hello,
 // This is a message
 // that spans multiple lines."
-```
+</pre>
 
 <p>Template literals are especially useful when building complex strings that
 include dynamic values and formatted elements. Moreover, by using
@@ -2903,7 +2901,7 @@ context Here's an overview of how arrow functions are used:</p>
 where the parentheses contain the function parameters, and the arrow
 (=>) separates the parameters from the function body.</p>
 
-```
+<pre>
 // Traditional function
 function sum(a, b) {
   return a + b;
@@ -2913,7 +2911,7 @@ function sum(a, b) {
 const arrowSum = (a, b) => {
   return a + b;
 };
-```
+</pre>
 
 <p><b>Implicit Return:</b> If the function body contains only one expression, you
 can omit the curly braces and the return statement, and the function
@@ -3496,29 +3494,38 @@ whether you want the data to persist beyond the current browser session
 session (SessionStorage).
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk48">48. IlllebSockets and Socket.10</h2>
+<h2 id="sk48">48. WebSockets and Socket.IO</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Both WebSockets and SocketIO are technologies used in JavaScript to
+<p>Both WebSockets and Socket.IO are technologies used in JavaScript to
 enable real-time communication between the client and server in web
 applications. Although they have similar purposes, they differ in terms of
-functionality and use.
+functionality and use.</p>
 
-WebSockets:
-WebSockets are a real-time communication protocol that provides a
-persistent bidirectional communication channel between the client and
-server. Unlike HTTP, which follows a request-response approach,
-WebSockets allow continuous and Low-Latency communication. They are
-ideal for applications that require real-time updates, such as online chats,
+<p><b>WebSockets:</b></p>
+<p>WebSockets are a real-time communication protocol that provides a persistent 
+bi-directional communication channel between the client and server. Unlike HTTP, 
+which follows a request-response approach, WebSockets allow continuous and 
+low-latency communication. They are ideal for applications that require real-time 
+updates, such as online chats.</p>
 
-Features of WebSockets:
+<p>Websockets are ideal for applications that require real-time updates, such as online 
+chats, because they enable a persistent, two-way communication channel between a 
+client and server, allowing for immediate data exchange without the need for constant 
+polling or refreshing, making them perfect for live messaging features.</p>
 
-• Bidirectional communication: Both the client and server can send and receive data at any time.
-• Persistence: The connection remains open, allowing continuous communication.
-• Low latency: Minimizes delay in data transmission.
-• Manual implementation: Requires manual configuration and handling on both ends (client and server).
+<p><b>Features of WebSockets:</b></p>
+<ul>
+  <li><b>Bi-directional communication:</b> Both the client and server can send and 
+    receive data at any time.</li>
+  <li><b>Persistence:</b> The connection remains open, allowing continuous communication.</li>
+  <li><b>Low latency:</b> Minimizes delay in data transmission.</li>
+  <li><b>Manual implementation:</b> Requires manual configuration and handling on both 
+    ends (client and server).</li>
+</ul>
 
-Example of WebSockets:
-```
+<p><b>Example of WebSockets:</b></p>
+
+<pre>
 // Client
 const socket = new WebSocket('ws://localhost:3000');
 socket.addEventListener('open', () -> {
@@ -3536,22 +3543,24 @@ console.log('Message from the client:', message);
 ws.send('Message received: ' + message);
 });
 });
-```
+</pre>
 
-Socket.lO: SocketIO is a Library built on top of WebSockets but adds
+<p><b>Socket.IO:</b> SocketIO is a Library built on top of WebSockets but adds
 layers of abstraction and fallback handling to ensure real-time
 communication works even in environments where WebSockets are not
 supported. SocketIO also includes features such as chat rooms,
-broadcasting, and automatic reconnection.
+broadcasting, and automatic reconnection.</p>
 
-Features of SocketJO:
+<p><b>Features of Socket.IO:</b></p>
+<ul>
+  <li><b>Based on WebSockets:</b> Uses WebSockets as the main method of communication when possible.</li>
+  <li><b>Automatic fallback:</b> Uses other technologies Like Long Polling when WebSockets are not available.</li>
+  <li><b>Additional features:</b> Provides features such as chat rooms and broadcasting.</li>
+  <li><b>Simplified implementation:</b> Offers a simpler API for handling communication.</li>
+</ul>
 
-• Based on WebSockets: Uses WebSockets as the main method of communication when possible.
-• Automatic fallback: Uses other technologies Like Long Polling when WebSockets are not available.
-• Additional features: Provides features such as chat rooms and broadcasting.
-• Simplified implementation: Offers a simpler API for handling communication.
+<p><b>Example of Socket.IO:</b></p>
 
-Example of SocketIO:
 ```
 // Client
 const socket = io('http://localhost:3000');
@@ -3574,26 +3583,25 @@ server.listen(3000);
 });
 ```
 
-both WebSockets and SocketIO allow real-time communication between
+<p>Both WebSockets and Socket.IO allow real-time communication between
 the client and server in web applications. WebSockets are the underlying
-protocol that enables real-time communication, while SocketlO adds
+protocol that enables real-time communication, while Socket.IO adds
 additional functionality and fallback handling to improve compatibility
 and the developer experience. The choice between them depends on the
 specific needs of your application and the level of abstraction you prefer
-to use.
-
+to use.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk49">49. Canvas and SebGL</h2>
+<h2 id="sk49">49. Canvas and WebGL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Both Canvas and WebGL are technologies used in JavaScript to render
+<p>Both Canvas and WebGL are technologies used in JavaScript to render
 graphics in web browsers, but they differ in terms of functionality and
-complexity.
+complexity.</p>
 
-Canvas: Canvas is an HTML5 API that provides a drawing area in which
+<p><b>Canvas:</b> Canvas is an HTML5 API that provides a drawing area in which
 2D graphics can be created using JavaScript. It is ideal for creating simple
 graphics, visualizations, 2D games, and visual design elements on a web
 page. You can draw lines, shapes, text, and work with images on the
-canvas.
+canvas.</p>
  
 Features of Canvas:
 
@@ -3613,20 +3621,21 @@ Canvas Example:
 </script>
 ```
 
-WebGL: WebGL (Web Graphics Library) is a more advanced technology
+<p><b>WebGL:</b> WebGL (Web Graphics Library) is a more advanced technology
 that provides access to hardware acceleration for rendering 3D graphics
 in web browsers. It uses a specification similar to OpenGL and is perfect
 for creating immersive 3D experiences, complex visualizations, and 3D
-games.
+games.</p>
 
-Features of WebGL:
+<p><b>Features of WebGL:</b></p>
 
 • 3D graphics: Focuses on three-dimensional graphics.
 • Based on OpenGL Uses a specification similar to OpenGL
 • Higher complexity: Requires a deeper knowledge of graphics programming and mathematics.
 • Ideal for: 3D aranhics. 3D names, interactive simulations.
 
-WebGL Example:
+<p><b>WebGL Example:</b></p>
+
 ```
 <canvas id="myCanvas" width="800" height="600"x/canvas>
 <script>
@@ -3643,7 +3652,7 @@ to use. Your choice will depend on the type of visual experience you want
 to provide in your web application.
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk50">50. Testing uuith Jest or Mocha</h2>
+<h2 id="sk50">50. Testing with Jest or Mocha</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Jest and Mocha are two popular frameworks for unit and integration
 testing in JavaScript Both allow for automated testing to ensure that the
@@ -3651,23 +3660,25 @@ code functions correctly and behaves as expected. However, they have
 some differences in terms of their approach and features. Here's a
 description of each:
 
-Jest: Jest is a testing framework developed by Facebook. It is designed to
+<p><b>Jest:</b> Jest is a testing framework developed by Facebook. It is designed to
 be easy to set up and use, especially in projects using React. Jest includes
 many useful features, such as built-in assertions, automatic module
 mocking, and a simple structure for organizing tests. It also comes with its
-own test runner, meaning you don't need to set up an additional runner.
+own test runner, meaning you don't need to set up an additional runner.</p>
  
-Features of Jest:
+<p>Features of Jest:</p>
 
-• Simple Configuration: Jest comes with a default configuration that is suitable for most projects.
-• Assertions and Matchers: Provides built-in assertions and multiple matchers to verify results.
-• Automatic Mocking: Allows for automatic creation of module mocks, making it easy to simulate dependencies.
-• Snapshot Testing: Enables creating snapshots of components and verifying changes in them.
-• Parallel Testing: Can run tests in parallel, improving speed in Large projects.
-• Integration with React: Particularly good for React projects and has specific tools for component testing.
+<ul>
+  <li><b>Simple Configuration:</b> Jest comes with a default configuration that is suitable for most projects.</li>
+  <li><b>Assertions and Matchers:</b> Provides built-in assertions and multiple matchers to verify results.</li>
+  <li><b>Automatic Mocking:</b> Allows for automatic creation of module mocks, making it easy to simulate dependencies.</li>
+  <li><b>Snapshot Testing:</b> Enables creating snapshots of components and verifying changes in them.</li>
+  <li><b>Parallel Testing:</b> Can run tests in parallel, improving speed in Large projects.</li>
+  <li><b>Integration with React:</b> Particularly good for React projects and has specific tools for component testing.</li>
+</ul>
 
-Example with Jest: Let's assume we want to test a simple function that
-adds two numbers:
+<p><b>Example with Jest:</b> Let's assume we want to test a simple function that adds two 
+numbers:</p>
 
 ```
 // math.js
@@ -3678,34 +3689,38 @@ module.exports = { sum
 // math.test.js (tests with Jest) const { sum } = require('./math');
 
 test('Correctly adds two numbers', () => {
-expect(sum(2, 3)).toBe(5);
+  expect(sum(2, 3)).toBe(5);
 });
 test ('Correctly adds negative numbers', () => { expect(sum(-2, -3)).toBe(-5);
 ```
 
-In this example, we are using Jest for testing along with Jest's built-in
+<p>In this example, we are using Jest for testing along with Jest's built-in
 assertions. In the second example, we use Mocha, Chai for assertions, and
-Sinon for HTTP request mocking.
+Sinon for HTTP request mocking.</p>
 
-Mocha: Mocha is a more flexible and extensible testing framework
+<p><b>Mocha:</b> Mocha is a more flexible and extensible testing framework
 compared to Jest It focuses on providing a solid structure for writing tests
 and allows developers to choose assertion Libraries and mocking tools
 according to their preferences. Mocha itself does not include built-in
-assertions or mocking, so it is commonlg used in conjunction with libraries
+assertions or mocking, so it is commonlg used in conjunction with libraries.</p>
 
-Like Chai (for assertions) and Sinon (for mocking).
+<p>Like Chai (for assertions) and Sinon (for mocking).</p>
 
-Features of Mocha:
+<p><b>Features of Mocha:</b></p>
 
-. Flexibility: Mocha is more flexible and allows developers to choose
-assertion and mocking tools that fit their needs.
+<ul>
+  <li><b>Flexibility:</b> Mocha is more flexible and allows developers to choose 
+    assertion and mocking tools that fit their needs.</li>
+  <li><b>Clear Structure:</b> Provides a clear structure for organizing tests and suites.</li>
+  <li><b>Plugins and Extensions: Mocha can be extended with a variety of plugins to add 
+    specific functionalities.</li>
+  <li><b>Independence: Unlike Jest, Mocha does not include test runners or assertion 
+    libraries by default, providing more control but requiring more configuration.</li>
+</ul>
 
-• Clear Structure: Provides a clear structure for organizing tests and suites.
-• Plugins and Extensions: Mocha can be extended with a variety of plugins to add specific functionalities.
-• Independence: Unlike Jest, Mocha does not include test runners or assertion libraries by default, providing more control but requiring more configuration.
- 
-Example with Mocha, Chai, and Sinon: Let's assume we want to test a
-function that makes a simulated HTTP request using Sinon:
+<p><b>Example with Mocha, Chai, and Sinon:</b> Let's assume we want to test a
+function that makes a simulated HTTP request using Sinon:</p>
+
 ```
 // http.js
 const request = require('request');
@@ -3746,9 +3761,9 @@ describe('fetchData', () => {
 });
 ```
 
-The choice between Jest and Mocha depends on your needs and preferences. Jest is quicker to get started and offers useful built-in features, especially for React projects. 
+<p>The choice between Jest and Mocha depends on your needs and preferences. Jest is quicker to get started and offers useful built-in features, especially for React projects. 
 Mocha is a solid choice if you want more flexibility and prefer to choose your own assertion 
-libraries and mocking tools.
+libraries and mocking tools.</p>
 
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
@@ -7012,26 +7027,26 @@ function fetchOK(url, options) {
 }
 ```
 This helper function is used to build up a URL for a talk with a given title.
-```
+<pre>
 function talkURL(title) {
   return "talks/" + encodeURIComponent(title);
 }
-```
+</pre>
 When the request fails, we don’t want to have our page just sit there, doing
 nothing without explanation. So we define a function called reportError, which
 at least shows the user a dialog that tells them something went wrong.
-```
+<pre>
 function reportError(error) {
   alert(String(error));
 }
-```
+</pre>
 Rendering components
 We’ll use an approach similar to the one we saw in Chapter 19, splitting the
 application into components. But since some of the components either never
 need to update or are always fully redrawn when updated, we’ll define those
 not as classes but as functions that directly return a DOM node. For example,
 here is a component that shows the field where the user can enter their name:
-```
+<pre>
 function renderUserField(name, dispatch) {
   return elt("label", {}, "Your name: ", elt("input", {
     type: "text",
@@ -7041,12 +7056,12 @@ function renderUserField(name, dispatch) {
     }
   }));
 }
-```
+</pre>
 The elt function used to construct DOM elements is the one we used in
 Chapter 19.
 A similar function is used to render talks, which include a list of comments
 and a form for adding a new comment.
-```
+<pre>
 function renderTalk(talk, dispatch) {
   return elt(
     "section", {className: "talk"},
@@ -7072,7 +7087,7 @@ function renderTalk(talk, dispatch) {
     }, elt("input", {type: "text", name: "comment"}), " ",
   elt("button", {type: "submit"}, "Add comment")));
 }
-```
+</pre>
 The "submit" event handler calls form.reset to clear the form’s content after
 creating a "newComment" action.
 When creating moderately complex pieces of DOM, this style of program-
@@ -7083,16 +7098,16 @@ you can actually run such code, you have to run a program on your script to
 convert the pseudo-HTML into JavaScript function calls much like the ones we
 use here.
 Comments are simpler to render.
-```
+<pre>
 function renderComment(comment) {
   return elt("p", {className: "comment"},
   elt("strong", null, comment.author),
   ": ", comment.message);
 }
-```
+</pre>
 Finally, the form that the user can use to create a new talk is rendered like
 this:
-```
+<pre>
 function renderTalkForm(dispatch) {
   let title = elt("input", {type: "text"});
   let summary = elt("input", {type: "text"});
@@ -7109,13 +7124,13 @@ function renderTalkForm(dispatch) {
   elt("label", null, "Summary: ", summary),
   elt("button", {type: "submit"}, "Submit"));
 }
-```
+</pre>
 Polling
 To start the app we need the current list of talks. Since the initial load is closely
 related to the long polling process—the ETag from the load must be used when
 polling—we’ll write a function that keeps polling the server for /talks and calls
 a callback function when a new set of talks is available.
-```
+<pre>
 async function pollTalks(update) {
   let tag = undefined;
   for (;;) {
@@ -7135,7 +7150,7 @@ async function pollTalks(update) {
     update(await response.json());
   }
 }
-```
+</pre>
 This is an async function so that looping and waiting for the request is easier.
 It runs an infinite loop that, on each iteration, retrieves the list of talks—either
 normally or, if this isn’t the first request, with the headers included that make
@@ -7150,7 +7165,7 @@ the response is a normal 200 response, its body is read as JSON and passed to
 the callback, and its ETag header value is stored for the next iteration.
 The application
 The following component ties the whole user interface together:
-```
+<pre>
 class SkillShareApp {
 constructor(state, dispatch) {
 this.dispatch = dispatch;
@@ -7172,11 +7187,11 @@ this.talks = state.talks;
 }
 }
 }
-```
+</pre>
 When the talks change, this component redraws all of them. This is simple
 but also wasteful. We’ll get back to that in the exercises.
 We can start the application like this:
-```
+<pre>
 function runApp() {
 let user = localStorage.getItem("userName") || "Anon";
 let state, app;
@@ -7195,7 +7210,7 @@ dispatch({type: "setTalks", talks});
 }).catch(reportError);
 }
 runApp();
-```
+</pre>
 If you run the server and open two browser windows for http://localhost:8000
 next to each other, you can see that the actions you perform in one window
 are immediately visible in the other.
