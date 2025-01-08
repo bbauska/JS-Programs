@@ -1700,10 +1700,10 @@ with arrays in a more functional and elegant way. Each one has a specific
 purpose and is widely used for transforming, filtering, and reducing data in
 arrays.</p>
 
-map: The map method is used to transform each element of an array into
+<p><b>map:</b> The map method is used to transform each element of an array into
 a new array by applying a function to each element It returns a new
 array with the results of applying the function to each original element in
-the same order.
+the same order.</p>
 
 ```
 const numbers = [1, 2, 3, 4];
@@ -1711,9 +1711,9 @@ const doubles = numbers.map(number => number * 2);
 // doubles is now [2,  6, 8]
 ```
 
-filter: The filter method is used to create a new array with all elements
+<p><b>filter:</b> The filter method is used to create a new array with all elements
 that pass a test (meet a condition) provided by a function. It returns a new
-array with the elements that satisfy the condition.
+array with the elements that satisfy the condition.</p>
 
 ```
 const numbers - [1, 2, 3,  5, 6];
@@ -1721,10 +1721,10 @@ const evens - numbers.filter(number => number % 2 --- 0);
 // evens is now [2,  6]
 ```
 
-reduce: The reduce method is used to reduce an array to a single
+<p><b>reduce:</b> The reduce method is used to reduce an array to a single
 cumulative value. It applies a function to an accumulator and each
 element in the array (from left to right), reducing the array to a single
-value.
+value.</p>
 
 ```
 const numbers = [1, 2, 3, 4, 5];
@@ -1735,44 +1735,46 @@ const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Propagation
-These  concepts  are  related  to  functional  programming,  data
+<p><b>Propagation</b></p>
+<p>These  concepts  are  related  to  functional  programming,  data
 manipulation, and interaction in JavaScript Here's an explanation of each
-one:
+one:</p>
 
-Pure Functions: Pure functions are functions that produce the same
+<p><b>Pure Functions:</b> Pure functions are functions that produce the same
 result for the  same  arguments  and  have  no  side  effects  on  the
 environment This means they don't modify external variables, perform
-input/output operations, and don't depend on external mutable data.
+input/output operations, and don't depend on external mutable data.</p>
 
-Characteristics of pure functions:
-	♦  Determinism: Same input same result
-	♦  No side effects: They don't alter data outside the function.
+<p>Characteristics of pure functions:</p>
+<ul>
+  <li><b>Determinism:</b> Same input same result.</li>
+  <li><b>No side effects:</b> They don't alter data outside the function.</li>
+</ul>
 
-Side Effects: Side effects are observable changes outside a function due
+<p><b>Side Effects:</b> Side effects are observable changes outside a function due
 to its execution. These changes can include modifying external variables,
-accessing external resources (network, files), and manipulating the DOM.
+accessing external resources (network, files), and manipulating the DOM.</p>
 
-State Mutation: State mutation occurs when mutable data, such as
+<p><b>State Mutation:</b> State mutation occurs when mutable data, such as
 objects or arrays, is modified directly instead of creating new ones. It can
-lead to unwanted side effects and make tracking changes difficult
+lead to unwanted side effects and make tracking changes difficult.</p>
 
-Fvpnt Prnnnnntinn* In thp rnnfpvt nf thp DOM nnrl infprnrtinnQ nn n \a/pH
+<p><b>Fvpnt Prnnnnntinn</b> In thp rnnfpvt nf thp DOM nnrl infprnrtinnQ nn n \a/pH
 page, event propagation refers to the flow of an event through the
 hierarchy of elements. Events can propagate from the target element to
-ancestor elements or vice versa.
+ancestor elements or vice versa.</p>
 
-Phases of Event Propagation:
-	•  Capture: The event descends from the root element to the target.
-	•  Target: The event reaches the target element
-	•  Bubbling: The event ascends from the target to the root element
+<p>Phases of Event Propagation:</p>
+<ul>
+  <li><b>Capture:</b> The event descends from the root element to the target.</li>
+  <li><b>Target:</b> The event reaches the target element.</li>
+  <li><b>Bubbling:</b> The event ascends from the target to the root element.</li>
 
-These  concepts  are  fundamental  for  writing  more  predictable,
-maintainable, and scalable code. The focus on pure functions and avoiding
-side effects contributes to functional programming, while understanding
-state  mutation  is  crucial  for  working  with  changing  data.  Event
-propagation is essential for managing interaction in web applications.
-
+<p>These concepts are fundamental for writing more predictable, maintainable, and 
+scalable code. The focus on pure functions and avoiding side effects contributes to 
+functional programming, while understanding state  mutation  is  crucial  for  working  
+with changing data. Event propagation is essential for managing interaction in web 
+applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">sk21. Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1809,19 +1811,19 @@ like modules and callback functions in events.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk22">sk22. High Order Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-High Order Functions are functions that can accept other functions as
+<p>High Order Functions are functions that can accept other functions as
 arguments and/or return functions as results. These functions are a
 fundamental part of functional programming and enable the creation of
 more modular, reusable, and expressive code. High Order Functions make
 it easier to use common programming patterns such as mapping, filtering,
-and reducing data.
+and reducing data.</p>
 
-Here are some examples and  key concepts related to  High Order
+<p>Here are some examples and key concepts related to High Order.</p>
 
 Functions:
-Functions as Arguments: You can pass a function as an argument to
+<p><b>Functions as Arguments:</b> You can pass a function as an argument to
 another function. This allows customizing the behavior of the receiving
-function.
+function.</p>
 
 ```
 function performOperation(operation, a, b) { 
@@ -1859,8 +1861,8 @@ const resultDouble = double(5); // Result: 10
 const resultTriple = tripled); // Result: 12
 ```
 
-Mapping (Map): The map method of an array applies a function to each
-element of the array and returns a new array with the results.
+<p><b>Mapping (Map):</b> The map method of an array applies a function to each
+element of the array and returns a new array with the results.</p>
 
 ```
 const numbers - [1, 2, 3, 4];
@@ -1995,13 +1997,13 @@ more elegant and efficient handling of asynchronous operations, such as
 network requests, fie read/write, and other tasks that may take time and
 block execution.
 
-Promises were introduced to address the issue of "callback hell" (excessive
+<p>Promises were introduced to address the issue of "callback hell" (excessive
 callback nesting) and to make asynchronous code more readable and
-manageable.
+manageable.</p>
 
-Creating a Promise: You can create a promise using its constructor. The
+<p><b>Creating a Promise:</b> You can create a promise using its constructor. The
 constructor takes a function with two parameters, resolve and reject,
-which are functions to fulfill or reject the promise.
+which are functions to fulfill or reject the promise.</p>
 
 ```
 const promise = new Promise((resolve, reject) => {
@@ -2011,9 +2013,9 @@ const promise = new Promise((resolve, reject) => {
 });
 ```
 
-Handling Promises: You can chain methods to a promise to handle the
+<p><b>Handling Promises:</b> You can chain methods to a promise to handle the
 result These methods include then to handle resolution and catch to
-handle rejection.
+handle rejection.</p>
 
 ```
 nnomiqp.thpnfvalue => 4
@@ -2022,8 +2024,8 @@ nnomiqp.thpnfvalue => 4
 });
 ```
 
-Chaining Promises: You can chain multiple promises using the then
-method, allowing for sequential asynchronous operations.
+<p><b>Chaining Promises:</b> You can chain multiple promises using the then
+method, allowing for sequential asynchronous operations.</p>
 
 ```
 doSomethingAsync()
@@ -2033,9 +2035,9 @@ doSomethingAsync()
   .catch(error => console.error(error));
 ```
 
-Handling Multiple Promises: The Promise.all method allows you to
+<p><b>Handling Multiple Promises:</b> The Promise.all method allows you to
 handle an array of promises and returns a new promise that is resolved
-when all promises in the array have been resolved.
+when all promises in the array have been resolved.</p>
 
 ```
 const promisel = fetchDatal();
@@ -2050,20 +2052,20 @@ Promise.all([promisel, promise2])
 .catch(error => console.error(error));
 ```
 
-Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
+<p>Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
 However, as JavaScript evolved, more advanced readable syntax for working with 
-asynchronous operations.
+asynchronous operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk26">sk26. async/await</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-async/await is a feature introduced in  ECMAScript 2017 (ES8) that simplifies 
+<p>async/await is a feature introduced in ECMAScript 2017 (ES8) that simplifies 
 asynchronous programming in JavaScript It provides a cleaner and more readable syntax for 
 working with promises and asynchronous operations. With async/await, you can write code 
-that looks synchronous but efficiently handles asynchronous operations.
+that looks synchronous but efficiently handles asynchronous operations.</p>
 
-Async Functions: A function declared with the async keyword automatically returns a 
+<p><b>Async Functions:</b> A function declared with the async keyword automatically returns a 
 promise. You can use the await keyword within an async function to wait for the 
-resolution of a promise without blocking the main thread's execution.
+resolution of a promise without blocking the main thread's execution.</p>
 
 ```
 async function fetchDataQ 1
@@ -2077,27 +2079,29 @@ fetchData()
 .catch(error => console.error(error));
 ```
 
-In this example, fetchData is an asynchronous function that waits for the
+<p>In this example, fetchData is an asynchronous function that waits for the
 response of an API request and then awaits the conversion of that
 response into a JSON object The code looks like a synchronous flow, even
-though it's handling asynchronous operations.
+though it's handling asynchronous operations.</p>
 
-Error Handling: You can use the try/catch block with async/await to
-handle errors more naturally.
+<p><b>Error Handling:</b> You can use the try/catch block with async/await to
+handle errors more naturally.</p>
 
 ```
 async function fetchData() {
-try {
-const response = await
-fetch('https://api.example.com/data'); const data = await response.json(); return data;
-} catch (error) {
-console.error('Error:', error);
-}
+  try {
+    const response = await
+    fetch('https://api.example.com/data'); 
+	const data = await response.json(); 
+	return data;
+  } catch (error) {
+  console.error('Error:', error);
+  }
 }
 ```
 
-Chaining Promises with async/await: You can chain async functions
-using await, making the code more readable and avoiding excessive nesting.
+<p><b>Chaining Promises with async/await:</b> You can chain async functions
+using await, making the code more readable and avoiding excessive nesting.</p>
 
 ```
 async function fetchAndProcessData() {
@@ -2107,32 +2111,30 @@ async function fetchAndProcessData() {
 }
 ```
 
-async/await is a powerful and elegant way to handle asynchronous
+<p>async/await is a powerful and elegant way to handle asynchronous
 operations in JavaScript Although it is newer than promises, it has gained
 popularity due to its simpler and easier-to-understand syntax. However,
 it's essential to remember that async/await still relies on underlying
 promises, so understanding how promises work is crucial to make the
-most out of asy nc/await.
+most out of asy nc/await.</p>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk27">sk27. Data Structures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Data structures are organized and efficient ways to store and manage
+<p>Data structures are organized and efficient ways to store and manage
 data in a program. These structures allow operations such as insertion,
 search, modification, and deletion of data to be performed efficiently. In
 JavaScript, there are several data structures that can be used for different
-purposes.
+purposes.</p>
 
-Arrays: Arrays are ordered collections of elements. Each element in an
+<p><b>Arrays:</b> Arrays are ordered collections of elements. Each element in an
 array has a numeric index indicating its position. Arrays are used to store
-Lists of elements and are suitable for accessing elements by their index.
+Lists of elements and are suitable for accessing elements by their index.</p>
 
-```
-const fruits = ['apple',  'orange',  'banana'];
-```
+<pre>const fruits = ['apple',  'orange',  'banana'];</pre>
 
-Objects: Objects are collections of key-value pairs. Keys are strings, and
-values can be of any type. Objects are useful for representing entities with properties and methods.
+<p><b>Objects:</b> Objects are collections of key-value pairs. Keys are strings, and
+values can be of any type. Objects are useful for representing entities with properties and methods.</p>
 
 ```
 const person = {
@@ -2142,9 +2144,9 @@ greet: functionO {
 console.logCHello, my name is Sfthis.name}');
 ```
 
-Maps: Maps are collections of key-value pairs where keys can be of any
+<p><b>Maps:</b> Maps are collections of key-value pairs where keys can be of any
 type. Unlike objects, maps maintain the insertion order and allow keys of
-any type.
+any type.</p>
 
 ```
 const map = new Map();
@@ -2152,33 +2154,37 @@ map.set('name',  'Maria');
 map.set(100,  'one hundred');
 ```
 
-Sets: Sets are collections of unique and non-duplicated values. They are
-useful when you need to maintain a list of elements without duplicates.
-const set = new Set();
+<p><b>Sets:</b> Sets are collections of unique and non-duplicated values. They are
+useful when you need to maintain a list of elements without duplicates.</p>
 
 ```
+const set = new Set();
 set.add('red');
 set.add('green');
 set.add('red'); // Not added, as 'red' is already in the set
 ```
 
-Queues and Stacks: Queues and stacks are data structures for managing
-elements in order. Queues follow the FIFO (First In, First Out) principle, while stacks follow the LIFO (Last In, First Out) principle.
+<p><b>Queues and Stacks:</b> Queues and stacks are data structures for managing elements 
+in order. Queues follow the FIFO (First In, First Out) principle, while stacks follow the 
+LIFO (Last In, First Out) principle.</p>
 
 ```
-//  Example of a queue const queue = []; queue.push('a'); queue.push('b');
+// Example of a queue 
+const queue = [];
+queue.push('a');
+queue.push('b');
 const firstElement = queue.shift(); // 'a'
-//  Example of a stack
+
+// Example of a stack
 const stack = [];
 stack.push('x');
 stack.push('y');
 const lastElement = stack.pop(); // 'y'
 ```
 
-These are just some of the basic data structures in JavaScript The choice
+<p>These are just some of the basic data structures in JavaScript The choice
 of the right data structure depends on the specific requirements of your
-program and the operations you need to perform on the stored data.
-
+program and the operations you need to perform on the stored data.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk28">sk28. Costly Operations and Big 0 Notation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2188,159 +2194,156 @@ negatively impact the performance and efficiency of your program. One
 way to measure and compare the efficiency of different algorithms or
 operations is through Big 0 notation.
 
-Big 0 Notation: Big 0 notation is a way to express the time or space
+<p><b>Big 0 Notation:</b> Big 0 notation is a way to express the time or space
 complexity of an algorithm in terms of the input size. It helps understand
 how the execution time or memory usage increases as the size of the
 problem grows. It is used to evaluate the relative performance of different
-algorithms based on the input
+algorithms based on the input.</p>
 
-Some common Big 0 notations include:
-
-•  0(1) (Constant Time): The operation does not depend on the size of
-the input Example: accessing elements in an array by index.
-•  O(log n) (Logarithmic Time): The operation becomes slower as the
-size of the input increases, but not proportionally. Example: binary search in a sorted array.
-•  0(n) (Linear Time): The execution time or memory usage increases
-linearly witn tne size or tne input txampie: traversing an elements in
-an array.
-
-•  0(n log n) (Linearithmic Time): Common in efficient sorting algorithms Like Merge 
-   Sort and Quicksort
-•  0(nA2), 0(nA3), ... (Quadratic, Cubic Time): The execution time increases 
-   quadratically, cubically, etc., in relation to the size of the input 
-   Example: nested Loops.
-•  0(2An), 0(n!) (Exponential, Factorial Time): These notations indicate exponential or 
+<p>Some common Big 0 notations include:</p>
+<ul>
+  <li><b>0(1) (Constant Time):</b> The operation does not depend on the size of the input.
+    Example: accessing elements in an array by index.</li>
+  <li><b>0(log n) (Logarithmic Time):</b> The operation becomes slower as the size of the 
+    input increases, but not proportionally. Example: binary search in a sorted array.</li>
+  <li><b>0(n) (Linear Time):</b> The execution time or memory usage increases linearly 
+    with tne size or tne input txampie: traversing an elements in an array.</li>
+  <li><b>0(n log n) (Linearithmic Time):</b> Common in efficient sorting algorithms Like Merge 
+    Sort and Quicksort.</li>
+  <li><b>0(nA2), 0(nA3), ... (Quadratic, Cubic Time):</b> The execution time increases 
+    quadratically, cubically, etc., in relation to the size of the input.
+	Example: nested Loops.</li>
+  <li><b>0(2An), 0(n!) (Exponential, Factorial Time):</b> These notations indicate exponential or 
    factorial growth in execution time and are generally considered inefficient for large 
-   input sizes.
+   input sizes.</li>
+</ul>
 
-Choosing efficient algorithms and data structures is crucial to minimize
+<p>Choosing efficient algorithms and data structures is crucial to minimize
 costly operations. In many cases, algorithms with lower Big 0 notations
 are sought to improve performance. However, it's essential to consider
 context and other factors that may influence the choice of the right
-algorithm.
+algorithm.</p>
  
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk29">sk29. Algorithms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Algorithms ore ordered sets of steps or instructions that solve a problem
+<p>Algorithms ore ordered sets of steps or instructions that solve a problem
 or perform a specific task. In programming, algorithms are fundamental
 for addressing a wide varietg of challenges, from data manipulation to
 decision-making and optimization. A good algorithm should be efficient,
-clear, and capable of solving the given problem.
+clear, and capable of solving the given problem.</p>
 
-Here are some examples of algorithms and areas where they are applied:
+<p>Here are some examples of algorithms and areas where they are applied:</p>
 
-Sorting: Sorting algorithms are used to rearrange elements in a sequence
+<p><b>Sorting:</b> Sorting algorithms are used to rearrange elements in a sequence
 according to certain rules. Examples of sorting algorithms include Quick
-Sort, Merge Sort, and Bubble Sort.
+Sort, Merge Sort, and Bubble Sort.</p>
 
-Searching: Searching algorithms are used to find a specific element
+<p><b>Searching:</b> Searching algorithms are used to find a specific element
 within a collection of data. Examples include binary search and Linear
-search.
+search.</p>
 
-Graphs and Trees: Algorithms Like Depth-First Search (DFS) and Breadth-
-First Search (BFS) are used to traverse and search in graphs and trees.
+<p><b>Graphs and Trees:</b> Algorithms Like Depth-First Search (DFS) and Breadth-
+First Search (BFS) are used to traverse and search in graphs and trees.</p>
 
-Recursion: Recursive algorithms solve problems by breaking them down
-into smaller subproblems and  solving  each  subproblem  recursively.
+<p><b>Recursion:</b> Recursive algorithms solve problems by breaking them down
+into smaller subproblems and  solving  each  subproblem  recursively.</p>
 
-Examples include factorial calculations and Fibonacci numbers.
+<p>Examples include factorial calculations and Fibonacci numbers.</p>
 
-Dynamic Programming: This approach divides a problem into smaller
+<p><b>Dynamic Programming:</b> This approach divides a problem into smaller
 subproblems and solves each subproblem only once, storing its results to
 avoid duplicates. It is used in optimization problems, such as efficiently
-calculating the Fibonacci sequence.
+calculating the Fibonacci sequence.</p>
 
-Backtracking: This approach is used to explore all possible solutions to a
+<p><b>Backtracking:</b> This approach is used to explore all possible solutions to a
 problem, backtracking and retrying if a partial solution doesn't work. It is
-applied in problems like Sudoku and the N-Queens problem.
+applied in problems like Sudoku and the N-Queens problem.</p>
 
-Linear Algebra: Algorithms Like Gaussian Elimination are used to solve
-systems of Linear equations.
+<p><b>Linear Algebra:</b> Algorithms Like Gaussian Elimination are used to solve
+systems of Linear equations.</p>
 
-Cryptography:  Cryptographic  algorithms  are  used  to  secure
+<p><b>Cryptography:</b>  Cryptographic  algorithms  are  used  to  secure
 communication and protect information. Examples include encryption
-algorithms Like AES and RSA.
+algorithms Like AES and RSA.</p>
 
-Optimization: Optimization algorithms seek to find the best solution
+<p><b>Optimization:</b> Optimization algorithms seek to find the best solution
 among multiple options. Examples include genetic algorithms and search
-optimization algorithms.
+optimization algorithms.</p>
 
-Artificial Intelligence: Algorithms  Like  decision  trees  and  machine
+<p><b>Artificial Intelligence:</b> Algorithms  Like  decision  trees  and  machine
 learning  algorithms  are used for decision-making and  prediction in
-artificial intelligence systems.
+artificial intelligence systems.</p>
 
-Algorithms are an essential part of programming and are used in various
+<p>Algorithms are an essential part of programming and are used in various
 contexts to solve problems effectively and efficiently. Each algorithm has
 advantages and disadvantages depending on the problem and available
-resources, so choosing the right approach for each situation is crucial
-
+resources, so choosing the right approach for each situation is crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk30">sk30. Inheritance, Polymorphism, and Code Reusability</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Inheritance: Inheritance is a fundamental concept in object-oriented
+<p><b>Inheritance:</b> Inheritance is a fundamental concept in object-oriented
 programming (OOP) that allows the creation of new classes based on
 existing classes. A class that inherits from another (called a base class or
 superclass) acquires its attributes and methods, enabling code reuse and
-functionality extension.
+functionality extension.</p>
 
 ```
 class Animal {
-constructor(name) {
-this.name = name;
-}
-speak() {
-console.log('${this.name} makes a sound.');
-}
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log('${this.name} makes a sound.');
+  }
 }
 
 class Dog extends Animal {
-constructor(name, breed) {
-super(name);
-this.breed = breed;
-}
- 
-speak() {
-console.log('${this.name} barks.');
-}
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  speak() {
+    console.log('${this.name} barks.');
+  }
 }
 const myDog = new Dog('Max',  'Labrador');
 myDog.speak(); // Prints: "Max barks."
 ```
 
-In this example, Dog inherits from Animal and extends its functionality.
+<p>In this example, Dog inherits from Animal and extends its functionality.
 This promotes code reuse and allows adding dog-specific behaviors in the
-subclass.
+subclass.</p>
 
-Polymorphism: Polymorphism is the ability of objects from different
+<p><b>Polymorphism:</b> Polymorphism is the ability of objects from different
 classes to respond to the same method call differently. It allows treating
 objects from different classes as if they were objects of the same base
-class, simplifying design and interaction between objects.
+class, simplifying design and interaction between objects.</p>
 
 ```
 class Shape {
-area() {
-return 0;
-}
+  area() {
+    return 0;
+  }
 }
 class Square extends Shape {
-constructor(side) {
-super();
-this.side = side;
+  constructor(side) {
+    super();
+    this.side = side;
+  }
+  area() {
+    return this.side * this.side;
+  }
+  class Circle extends Shape {
+    constructor(radius) {
+      super();
+      this.radius = radius;
+    }
+    area() {
+      return Math.PI * this.radius * this.radius;
+    }
+  }
 }
-area() ■{
-return this.side * this.side;
-}
-
-class Circle extends Shape {
-constructor(radius) {
-super();
-this.radius = radius;
-}
-area() {
-return Math.PI * this.radius * this.radius;
-}
-
 const square = new Square(5);
 const circle = new Circle(3);
 
@@ -2348,302 +2351,336 @@ console.log(square.area()); // Prints: 25
 console.log(circle.area()); // Prints: 28.274333882308138
 ```
 
-In this example, both Square and Circle are subclasses of Shape, and both
+<p>In this example, both Square and Circle are subclasses of Shape, and both
 implement the areaQ  method. Although they  are  different classes,
-polymorphism allows treating them uniformly in the area calculation.
+polymorphism allows treating them uniformly in the area calculation.</p>
 
-Code  Reusability:  Inheritance  and  polymorphism  promote  code
+<p><b>Code Reusability:</b> Inheritance and polymorphism promote code
 reusability in OOP. By inheriting attributes and methods from a base class,
-you  avoid  duplicating  code  and  maintain  an  organized  structure.
+you avoid duplicating code and maintain an organized structure.</p>
 
-Additionally, polymorphism allows treating objects from different classes
+<p>Additionally, polymorphism allows treating objects from different classes
 homogeneously, facilitating the creation of generic interfaces to operate
-with different types of objects.
+with different types of objects.</p>
 
-Together,  inheritance,  polymorphism,  and  code  reusability  are  key
+<p>Together,  inheritance,  polymorphism,  and  code  reusability  are  key
 concepts for building more efficient, maintainable, and scalable object-
-oriented applications.
-
+oriented applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk31">sk31. Design Patterns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Design  patterns  are  proven  solutions to  common  software  design
+<p>Design  patterns  are  proven  solutions to  common  software  design
 problems. These patterns provide guidance for effectively and efficiently
 solving specific problems, promoting good design practices, modularity,
 and code reusability. There are various types of design patterns, each
 serving a specific purpose. Here are some of the most well-known design
-patterns:
+patterns:</p>
 
-1.  Creational Patterns: These patterns focus on how object instances are created.
+<ol type="1">
+  <li>Creational Patterns: These patterns focus on how object instances are created.
+    <ul>
+    <li><b>Factory Method:</b> Defines an interface for creating objects in a superclass, 
+	  allowing subclasses to decide which class to instantiate.</li>
+    <li><b>Abstract Factory:</b> Provides an interface for creating families of related 
+	  objects without specifying their concrete classes.</li>
+	<li><b>Singleton:</b> Ensures that a class has only one instance and provides a 
+	  global point of access to that instance.</li>
+	<li><b>Builder:</b> Abstracts the construction of complex objects, allowing them to 
+	  be constructed step by step.</li>
+    </ul>
+  </li>
+  <li>Structural Patterns: These patterns deal with how classes and objects are composed.
+    <ul>
+    <li><b>Adapter:</b> Allows objects with incompatible interfaces to work together 
+	  through an adapter class.</li>
+	<li><b>Decorator:</b> Dynamically adds additional responsibilities to an object.</li>
+	<li><b>Facade:</b> Provides a simplified interface for a set of more complex interfaces.</li>
+	<li><b>Composite:</b> Allows treating individual objects and compositions of objects 
+	  uniformly.</li>
+    </ul>
+  </li>
+  <li><b>Behavioral Patterns:</b> These patterns focus on how objects interact and communicate 
+    with each other.
+    <ul>
+    <li><b>Observer:</b> Defines a one-to-many dependency between objects, so that when one 
+      object changes state, its dependents are notified and updated automatically.</li>
+    <li><b>Strategy:</b> Defines a family of interchangeable algorithms and allows each one 
+      to be used independently.</li>
+    <li><b>Chain of Responsibility:</b> Allows more than one object to handle a request by 
+      passing it along a chain of possible handlers.</li>
+    <li><b>Command:</b> Encapsulates a request as an object, allowing clients to be 
+      parameterized with different requests.</li>
+    </ul>
+  </li>
+  <li><b>Architectural Patterns:</b> These patterns address large-scale system 
+    architecture problems.
+    <ul>
+    <li><b>MVC (Model-View-Controller):</b> Separates the business logic, presentation, and 
+	  interaction into three distinct components.</li>
+	<li><b>MWM (Model-View-ViewModel):</b> A variation of the MVC pattern, designed 
+	  especially for graphical interfaces and modern applications.</li>
+    <li><b>Repository:</b> Abstracts data access logic, enabling uniform access to 
+	  different data sources.</li>
+    </ul>
+  </li>
+  <li><b>Concurrency Patterns:</b> These patterns focus on handling concurrency and 
+    parallel execution in software.
+    <ul>
+    <li><b>Mutex:</b> Provides mutual exclusion to protect shared data in concurrent 
+      environments.</li>
+    <li><b>Read-Write Lock:</b> Allows multiple threads to access data for reading, but 
+      only one for writing.</li>
+    <li><b>Producer-Consumer:</b> Coordinates between producer and consumer threads or 
+      processes to avoid race conditions.</li>
+    </ul>
+  </li>
+</ol>
 
-•  Factory Method: Defines an interface for creating objects in a superclass, allowing subclasses to decide which class to instantiate.
-•  Abstract Factory: Provides an interface for creating families of related objects without specifying their concrete classes.
-•  Singleton: Ensures that a class has only one instance and provides a global point of access to that instance.
-•  Builder: Abstracts the construction of complex objects, allowing them to be constructed step by step.
-
-2.  Structural Patterns: These patterns deal with how classes and objects are composed.
- 
-•  Adapter: Allows objects with incompatible interfaces to work togetherthrough an adapter class.
-•  Decorator: Dynamically adds additional responsibilities to an object
-•  Facade: Provides a simplified interface for a set of more complex interfaces.
-•  Composite: Allows treating individual objects and compositions of objects uniformly.
-
-3.  Behavioral Patterns: These patterns focus on how objects interact and communicate with each other.
-•  Observer: Defines a one-to-many dependency between objects, so
-that when one object changes state, its dependents are notified and
-updated automatically.
-
-•  Strategy: Defines a family of interchangeable algorithms and allows each one to be used independently.
-•  Chain of Responsibility: Allows more than one object to handle a request by passing it along a chain of possible handlers.
-•  Command: Encapsulates a request as an object, allowing clients to be parameterized with different requests.
-
-4.  Architectural Patterns: These patterns address large-scale system architecture problems.
-•  MVC (Model-View-Controller): Separates the business logic,
-presentation, and interaction into three distinct components.
-
-. MWM (Model-View-ViewModel): A variation of the MVC pattern,
-designed especially for graphical interfaces and modern applications.
-
-•  Repository: Abstracts data access logic, enabling uniform access to different data sources. 
-
-5.  Concurrency Patterns: These patterns focus on handling concurrency and parallel execution in software.
-•  Mutex: Provides mutual exclusion to protect shared data in concurrent environments.
-•  Read-Write Lock: Allows multiple threads to access data for reading, but only one for writing.
-•  Producer-Consumer: Coordinates between producer and consumer threads or processes to avoid race conditions.
-
-Each of these patterns ha its own purpose and context of use. By
+<p>Each of these patterns ha its own purpose and context of use. By
 understanding and applying the appropriate design patterns, you can
-enhance the quality, maintainability, and scalability of your applications.
-
+enhance the quality, maintainability, and scalability of your applications.<br>
 However, it's important to note that not all patterns are applicable in
 every situation, and evaluating the suitability of a pattern for the specific
-problem you're facing is crucial.
- 
+problem you're facing is crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk32">sk32. Partial Application, Currying, Composition, and Pipe</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Partial Application: Partial application is a technique in functional
+<p><b>Partial Application:</b> Partial application is a technique in functional
 programming where you provide some, but not all, arguments to a
 function. The resulting function expects the remaining arguments to
 complete the call This is useful for creating more specific functions from
-more general ones.
+more general ones.</p>
 
-```
+<pre>
 function sum(a, b) {
-return a + b;
+  return a + b;
 }
 
-const sum5 = sum.bind(null, 5); // Partial application of 'a' console.log(sum5(3)); // Prints: 8
-```
+const sum5 = sum.bind(null, 5); // Partial application of 'a' 
+console.log(sum5(3)); // Prints: 8
+</pre>
 
-In this example, sum5 is a function that already has the first argument
-preset to 5. When calling sum5(3), you get the result of adding 5 and 3.
+<p>In this example, sum5 is a function that already has the first argument
+preset to 5. When calling sum5(3), you get the result of adding 5 and 3.</p>
 
-Currying: Currying is a related technique that converts a function with
+<p><b>Currying:</b> Currying is a related technique that converts a function with
 multiple arguments into a sequence of functions that take a single
+argument. Eah can return a new function that expects the next argument.</p>
 
-.XX.  I I  .^4-________  ~  ________  r.  4-L„4-  ____________ 4--.  4-L„  _______ 4-
- 
-argument. cuuri  cun returns u  new lunutiuri  tnut expects trie  next
-argument.
-
-```
+<pre>
 function sum(a) {
-return function(b) {
-return a + b;
-};
+  return function(b) {
+    return a + b;
+  };
 }
+
 const sum5 = sum(5);
 console.log(sum5(3)); // Prints: 8
-```
+</pre>
 
-In this case, sum is transformed into a curried function. The first call
+<p>In this case, sum is transformed into a curried function. The first call
 sum(5) returns a function that expects the next argument. Then, sum5(3)
-produces the desired result
+produces the desired result.</p>
 
-Composition: Composition is a technique for combining two or more
+<p><b>Composition:</b> Composition is a technique for combining two or more
 functions to form a new function. You can think of it as the sequence of
 function execution, where the output of one function becomes the input to
-the next
+the next.</p>
 
-```
+<pre>
 function double(x) {
-return x * 2;
-
-function increment(x) {
-return x + 1;
+  return x * 2;
 }
 
-const doubleIncrement = x => increment(double(x)); console.log(doublelncrement(3)); // Prints: 7
-```
+function increment(x) {
+  return x + 1;
+}
 
-In this example, doubleIncrement is a function that first doubles the value
-and then adds 1.
- 
+const doubleIncrement = x => increment(double(x));
+console.log(doubleIncrement(3)); // Prints: 7
+</pre>
 
-Pipe: Pipe is a technique that combines functions in a sequence, passing
+<p>In this example, doubleIncrement is a function that first doubles the value
+and then adds 1.</p>
+
+<p><b>Pipe:</b> Pipe is a technique that combines functions in a sequence, passing
 the output of one function as the input to the next This allows you to
-create chains of transformations in a more readable syntax.
+create chains of transformations in a more readable syntax.</p>
 
-```
-const pipe = (...funcs) => input => funcs.reduce((value, func) => func(value), input);
+<pre>
+const pipe = (...funcs) => input => 
+  funcs.reduce((value, func) => 
+  func(value), input);
+
 const result = pipe(
-double,
-increment,
-double
+  double,
+  increment,
+  double
 )(3);
 
 console.log(result); // Prints: 16 (3 * 2 + 1) * 2
-```
+</pre>
 
-In this example, the pipe function takes a series of functions and returns a
-new function that executes each one in sequence.
-ALL of these techniques (partial application, currying, composition, and
+<p>In this example, the pipe function takes a series of functions and returns a
+new function that executes each one in sequence.</p>
+
+<p>ALL of these techniques (partial application, currying, composition, and
 pipe) are fundamental in functional programming and enable building
 more  modular,  readable,  and  maintainable  programs  by  breaking
-operations into smaller, reusable units.
- 
+operations into smaller, reusable units.</p> 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk33">sk33. Clean Code</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Clean code is a fundamental concept in programming that refers to
+<p>Clean code is a fundamental concept in programming that refers to
 writing code that is easy to understand, maintain, and collaborate on.
 Clean  code  is  readable,  clear,  well-structured,  and  follows  good
 programming  practices. Below are some principles and  practices to
-achieve clean code:
+achieve clean code:</p>
+<ol type="1">
+  <li><b>Meaningful Names:</b> Use descriptive names for variables, functions, and classes. 
+    Names should be clear and representative of their purpose.</li>
+  <li><b>Small and Specific Functions:</b> Divide your functions into smaller, more 
+    specific units. Each function should do one thing and do it well.</li>
+  <li><b>Relevant Comments:</b> Add comments only when necessary and explain why 
+    something is done, not what is done (code should be self-explanatory). 
+	Excessive comments may indicate that the code is not clear enough.</li>
+  <li><b>Avoid Repetition (DRY - Don’t Repeat Yourself):</b> Do not duplicate code. Instead, 
+    encapsulate loqic in reusable functions and use them in different places.</li>
+  <li><b>Consistent Indentation and Formatting:</b> Maintain consistent indentation and 
+    formatting throughout the code. This makes the code easier to read and follow.</li>
+  <li><b>Keep Code Lines Short</b> Long Lines of code can be hard to read. Keep gour code 
+    Lines at a reasonable Length.</li>
+  <li><b>Minimize Side Effects:</b> Functions should have a clear purpose and should not 
+    have unexpected side effects in other parts of the program.</li>
+  <li><b>Avoid Magic Numbers:</b> Avoid the use of magic values or "hardcoded" numbers. 
+    Use constants or variables with descriptive names to improve readabilitg.</li>
+  <li><b>Plan and Refactor:</b> Plan the design of gour code before gou start writing, and 
+    refactor as gou go to keep it clean and organized.</li>
+  <li><b>Follow SOLID Principles:</b> The SOLID principles (Single Responsibilitg, 
+    Open-Closed, Liskov Substitution, Interface Segregation, and Dependencg Inversion) 
+	promote modularitg and code reuse.</li>
+  <li><b>Unit Testing:</b> Write unit tests to validate the functionalitg of gour code. 
+    Tests help catch errors and ensure that future changes do not break existing code.</li>
+  <li><b>Clear Documentation:</b> Provide clear documentation for gour code, explaining 
+    its usaae and ouroose. This is esoeciallu useful for Libraries or collaborative projects.</li>
+</ol>
 
-1.  Meaningful Names: Use descriptive names for variables, functions, and classes. Names should be clear and representative of their purpose.
-
-2.  Small and Specific Functions: Divide your functions into smaller, more specific units. Each function should do one thing and do it well
-
-3.  Relevant Comments: Add comments only when necessary and explain why something is done, not what is done (code should be self-explanatory). Excessive comments may indicate that the code is not clear enough.
-
-4.  Avoid Repetition (DRY - Don’t Repeat Yourself): Do not duplicate code. Instead, encapsulate loqic in reusable functions and use them in
-different places.
-
-5.  Consistent Indentation and Formatting: Maintain consistent indentation and formatting throughout the code. This makes the code easier to read and follow.
-
-6.  Keep Code Lines Short Long Lines of code can be hard to read. Keep gour code Lines at a reasonable Length.
-
-7.  Minimize Side Effects: Functions should have a clear purpose and should not have unexpected side effects in other parts of the program.
-
-8.  Avoid Magic Numbers: Avoid the use of magic values or "hardcoded" numbers. Use constants or variables with descriptive names to improve readabilitg.
-
-9.  Plan and Refactor: Plan the design of gour code before gou start writing, and refactor as gou go to keep it clean and organized.
-
-10.  Follow SOLID Principles: The SOLID principles (Single Responsibilitg, Open-Closed, Liskov Substitution, Interface Segregation, and Dependencg Inversion) promote modularitg and code reuse.
-
-11.  Unit Testing: Write unit tests to validate the functionalitg of gour code. Tests help catch errors and ensure that future changes do not break existing code.
-
-12.  Clear Documentation: Provide clear documentation for gour code, exolainina its usaae and ouroose. This is esoeciallu useful for Libraries or
-collaborative projects.
-
-The goal of clean code is not only to make it work but also to make it
+<p>The goal of clean code is not only to make it work but also to make it
 easily understandable for other developers and yourself in the future. By
 following these practices, you can improve the quality and maintainability
 of your code, ultimately making problem-solving and project evolution
-more straightforward.
-
+more straightforward.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk34">sk34. Error Handling (try...catch)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Error handling is an essential part of programming to manage unexpected
+<p>Error handling is an essential part of programming to manage unexpected
 or exceptional situations that may occur during program execution. In
 JavaScript, you can use the try...catch statements to capture and handle
-errors in a controlled manner.
+errors in a controlled manner.</p>
 
 ```
 try {
-//  Code that might throw an error } catch (error) {
-//  Block of code to handle the error
-```
-
-Here's a more detailed explanation:
-•  The try block contains the code where an error might occur.
-•  If an error occurs within the try block, the control flow moves to the catch block.
-•  The error parameter in the catch block is a variable that will hold the thrown error object
-
-```
-try {
-const result = divideiiu, oj; ll Trying to divide by zero console.log(result);
+  // Code that might throw an error 
 } catch (error) {
-console.error('Error:', error.message);
+  // Block of code to handle the error
 }
 ```
 
-In this example, if the divide function throws an error while attempting to
+<p>Here's a more detailed explanation:</p>
+<ul>
+  <li>The try block contains the code where an error might occur.</li>
+  <li>If an error occurs within the try block, the control flow moves to the catch block.</li>
+  <li>The error parameter in the catch block is a variable that will hold the thrown error object.</li>
+</ul>
+
+```
+try {
+  const result = divide(10, 0); // Trying to divide by zero 
+  console.log(result);
+} catch (error) {
+  console.error('Error:', error.message);
+}
+```
+
+<p>In this example, if the divide function throws an error while attempting to
 divide by zero, the catch block will capture the error and display an error
-message.
+message.</p>
 
-It's important to note that you shouldn't use try...catch to control normal
-programflowsbuttohandleexceptionalsituations.
-
+<p>It's important to note that you shouldn't use try...catch to control normal
+program flows but to handle exceptional situations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk35">sk35. ES6 Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-In ECMAScript 6 (ES6) and Later versions, modules are a built-in feature
-that allows organizing and structuring code into smaller, reusable units.
-
+<p>In ECMAScript 6 (ES6) and later versions, modules are a built-in feature
+that allows organizing and structuring code into smaller, reusable units.<br>
 Modules provide a mechanism for exporting and importing functionality
 between different JavaScript files, making it easier to separate concerns
 and build more maintainable applications. Here's an overview of how ES6
+modules work:</p>
 
-modules work:
-Export from a Module: You can export values, functions, and classes from
-a module using the export keyword.
+<p><b>Export from a Module:</b> You can export values, functions, and classes from
+a module using the export keyword.</p>
 
 ```
 // file: module.js
 export const PI = 3.14159;
+
 export function sum(a, b) {
-return a + b;
+  return a + b;
 }
+
 export default class Person {
-constructor(name) {
-this.name = name:
+  constructor(name) {
+    this.name = name:
+  }
+}
 ```
 
-Import into Another Module: You con import exported values into
-another module using the import keyword.
+<p><b>Import into Another Module:</b> You con import exported values into
+another module using the import keyword.</p>
 
 ```
 // file: app.js
 import { PI, sum } from './module.js';
 import Person from './module.js';
+
 console.log(PI); // Prints: 3.14159
 console.log(sum(5, 3)); // Prints: 8
-const person = new PersonCJohn');
+
+const person = new Person('John');
 console.log(person.name); // Prints: John
 ```
 
-Import Everything as an Alias: You can import all exported values as an
-object using an alias.
+<p><b>Import Everything as an Alias:</b> You can import all exported values as an
+object using an alias.</p>
 
 ```
 // file: app.js
 import * as module from ' ./module.js';
+
 console.log(module.PI); // Prints: 3.14159
 console.log(module.sum(5, 3)); // Prints: 8
-const person = new module.default('Maria'); console.log(person.name); // Prints: Maria
+
+const person = new module.default('Maria');
+console.log(person.name); // Prints: Maria
 ```
 
-Import Only the Default Value: If you have a default export, you can
-import it directly without using braces.
+<p><b>Import Only the Default Value:</b> If you have a default export, you can
+import it directly without using braces.</p>
 
 ```
 // file: app.js
 import Person from './module.js';
-const person = new PersonC Peter');
+
+const person = new Person('Peter');
 console.log(person.name); // Prints: Peter
 ```
  
-coo i riouuLOb pi 01 no io i iioulillii ity uno coue i eubo, i no mi ly il eubiei to uliilci
+<p>ES6 modules promote modifying and code reuse, making it easier to build
 organized and maintainable applications. However, keep in mind that ES6
 module  support  may  vary  across  different  runtime  environments
 (browsers, Node.js, etc.), so you might need transpilers or additional
-configurations in certain cases.
-
+configurations in certain cases.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk36">sk36. Ternary Operator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2652,7 +2689,7 @@ constructthat allows for a conditional evaluation in a single Line of code. It
 is a concise way to express an if...else statement in a single Line. The basic
 syntax of the ternary operator is as follows:
 
-condition ? true.expression : false.expression;
+<pre>condition ? true.expression : false.expression;</pre>
 
 •  The condition is an expression that evaluates to true or false.
 •  true.expression is the value returned if the condition is true.
@@ -2666,7 +2703,7 @@ const isAdult = age >= 18 ? "Yes" : "No";
 console.log(isAdult); // Prints: Yes
 ```
 
-Using the ternary operator to perform an action based on a condition
+Using the ternary operator to perform an action based on a condition:
 
 ```
 const hour = 14;
@@ -2674,7 +2711,7 @@ const greeting = hour < 12 ? "Good morning" : "Good afternoon";
 console.log(greeting); // Prints: Good afternoon
 ```
 
-Using the ternary operator to calculate a discount
+Using the ternary operator to calculate a discount:
 
 ```
 const originalPrice = 100;
@@ -2691,14 +2728,17 @@ The spread and  rest operators are powerful features in JavaScript
 introduced in ES6 (ECMAScript 2015) that allow for more flexible and
 concise manipulation of arrays and objects.
 
-Spread Operator (...): The spread operator is used to spread or unpack
+<p><b>Spread Operator (...):</b> The spread operator is used to spread or unpack
 elements from arrays and objects. It is also used to create shallow copies
 of arrays and objects, which can be usefulto avoid unintended side effects
-when manipulating data.
+when manipulating data.</p>
 
 ```
-//  Use spread to copy an array const originalArray = [1, 2, 3]; const copiedArray = [...originalArray];
-//  Combine arrays using spread
+// Use spread to copy an array
+const originalArray = [1, 2, 3];
+const copiedArray = [...originalArray];
+
+// Combine arrays using spread
 const arrayl = [1, 2, 3];
 const array2 = [4, 5, 6];
 const combined = [...arrayl,  ...array2]; // [1, 2, 3, 4, 5, 6]
@@ -2706,25 +2746,27 @@ const combined = [...arrayl,  ...array2]; // [1, 2, 3, 4, 5, 6]
  
 In objects, the spread operator is used to create shallow copies:
 
-II  Copy an object using spread
-
 ```
-const originalObject = ■{ a: 1, b: 2 };
+// Copy an object using spread
+const originalObject = { a: 1, b: 2 };
 const copiedObject - { ...originalObject
 
-//  Combine objects using spread const objectl = { a: 1, b: 2 }; const object2 = { b: 3, c: 4
+// Combine objects using spread
+const objectl = { a: 1, b: 2 };
+const object2 = { b: 3, c: 4
 const combined = { ...objectl, ...object2 }; // { a: 1, b: 3, c: 4 }
 ```
 
-Rest Operator (...): The rest operator is used to gather multiple elements
+<p><b>Rest Operator (...):</b> The rest operator is used to gather multiple elements
 into an array in contexts where function arguments or destructuring
-parameters are expected.
+parameters are expected.</p>
 
 ```
-//  Use rest in functions function sum(...numbers) {
-return numbers.reduce((total, num) => total + num, 0);
+//  Use rest in functions
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
 }
-console.log(sum(l,  2, 3, 4)); // Prints: 10
+console.log(sum(l, 2, 3, 4)); // Prints: 10
 
 // Use rest in destructuring
 const [first,  ...rest] = [1, 2, 3, 4];
@@ -2732,23 +2774,23 @@ console.log(first); // Prints: 1
 console.log(rest); // Prints:  [2, 3, 4]
 ```
 
-In the example of the sum function, the rest operator gathers all
+<p>In the example of the sum function, the rest operator gathers all
 arguments into an array named numbers. In destructuring, the rest
-operator gathers the remaining elements into a new array named rest.
+operator gathers the remaining elements into a new array named rest.</p>
 
+<p>Both the spread and rest operators are powerful tools that make
 manipulation and handling of arrays and objects in JavaScript more
-readable and concise, leading to cleaner code.
-
+readable and concise, leading to cleaner code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk38">sk38. Destructuring</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Destructuring assignment is a feature in JavaScript introduced in ES6
+<p>Destructuring assignment is a feature in JavaScript introduced in ES6
 (ECMAScript 2015) that allows for extracting values from arrays and
 objects and assigning them to variables in a more concise and readable
 way. This feature is useful for working with complex data structures and
-avoiding code repetition when accessing properties and elements.
+avoiding code repetition when accessing properties and elements.</p>
 
-Destructuring with Arrays:
+<p><b>Destructuring with Arrays:</b></p>
 
 ```
 const numbers = [1, 2, 3,  5];
@@ -2757,28 +2799,29 @@ const numbers = [1, 2, 3,  5];
 const [first, second,  ...rest] = numbers;
 console.log(first); // Prints: 1
 console.log(second); // Prints: 2
-console.log(rest); // Prints:  [3, k, 5]
+console.log(rest); // Prints:  [3, 4, 5]
 ```
 
-Destructuring with Objects:
+<p><b>Destructuring with Objects:</b></p>
 
 ```
-const person = { name:  'Ana', age: 30, city:  'Madrid' };
-//  Extracting individual properties
+const person = { name: 'Ana', age: 30, city: 'Madrid' };
+
+// Extracting individual properties
 const { name, age } = person; 
 console.log(name); // Prints: Ana 
 console.log(age); // Prints: 30
 ```
 
-Nested Destructuring: You con destructure nested objects and arrays:
+<p><b>Nested Destructuring:</b> You con destructure nested objects and arrays:</p>
 
 ```
 const product = {
-  nname:  'T-shirt',
+  name:  'T-shirt',
   price: 20,
   details: {
-    color:  'Red',
-    sizes:  ['S',  'M',  'L'J
+    color: 'Red',
+    sizes: ['S', 'M', 'L']
   }
 };
 
@@ -2788,227 +2831,247 @@ console.log(color); // Prints: Red
 console.log(sizes); //Prints:  ['S',  'M',  'L'J
 ```
 
-Destructuring  assignment  is  especially  handy  when  working  with
+<p>Destructuring  assignment  is  especially  handy  when  working  with
 functions that return objects or arrays, as you can extract the necessary
-values directly into the function parameters:
+values directly into the function parameters:</p>
 
 ```
 function getInformation() {
   return { name: 'Juan', age: 25, profession: 'Programmer' };
 }
+
 const { name, age } = getInformation();
 console.log(name); // Prints: Juan
 console.log(age); // Prints: 25
 ```
 
-Destructuring assignment can save time and reduce the need for writing
-repetitive codewhen accessing values from arrays and objects.
-
+<p>Destructuring assignment can save time and reduce the need for writing
+repetitive codewhen accessing values from arrays and objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk39">sk39. Template Literals</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Template Literals are a feature introduced in ECMAScript 6 (ES6) that
+<p>Template Literals are a feature introduced in ECMAScript 6 (ES6) that
 allows for creating strings in a  more readable and flexible way in
 JavaScript Template literals are defined using backticks ('') instead of
 traditional single or double  quotes  ('1  or  \"').  This  enables  the
 interpolation of variables and expressions directly into the string, as well
 as the inclusion of Line breaks and special characters without the need for
-manual concatenation.
+manual concatenation.</p>
 
-Here's a basic example of how template literals work:
+<p><b>Here's a basic example of how template literals work:</b></p>
 
 ```
 const name = 'Juan';
 const age = 30;
+
 // Using template literals
-const message = 'Hello, my name is ${name} and I am ${age} years old.';
-console.log(message); // Prints "Hello, my name is Juan and I am 30 years old.
+const message = `Hello, my name is ${name} and I am ${age} years old.`
+
+console.log(message); // Prints "Hello, my name is Juan and I am 30 years old."
 ```
 
-The are placeholders that indicate variables or expressions to be
+<p>The ${} are placeholders that indicate variables or expressions to be
 interpolated within them. Template literals also allow for including line
-breaks and special characters without the need for escaping:
+breaks and special characters without the need for escaping:</p>
 
-Multiline and Special Characters:
+<p><b>Multiline and Special Characters:</b></p>
 
 ```
-const multilineMessage =
+const multilineMessage = `
 Hello,
-```
+This is a message 
+that spans multiple lines.
+`;
 
-This is a message that spans multiple lines.
-
-```
 console.log(multilineMessage);
-//  Prints:
-//  "Hello,
-//  This is a message
-//  that spans multiple lines."
+// Prints:
+// "Hello,
+// This is a message
+// that spans multiple lines."
 ```
 
-Template literals are especially useful when building complex strings that
+<p>Template literals are especially useful when building complex strings that
 include dynamic values and formatted elements. Moreover, by using
 template Literals, the code becomes more readable and avoids manual
-string concatenation, which can be error-prone and confusing. 
-
+string concatenation, which can be error-prone and confusing.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk40">sk40. Arrow Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that
+<p>Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that
 provide  a  more  concise and  clear syntax for defining functions in
 JavaScript Arrow functions are especially useful when working with
 anonymous functions or functions that do not require a special this
-context Here's an overview of how arrow functions are used:
+context Here's an overview of how arrow functions are used:</p>
 
-Basic Syntax: An arrow function is defined using the syntax 0 =>
+<p><b>Basic Syntax:</b> An arrow function is defined using the syntax 0 =>
 where the parentheses contain the function parameters, and the arrow
-(=>) separates the parameters from the function body.
+(=>) separates the parameters from the function body.</p>
 
 ```
-//  Traditional function function sum(a, b) {
-return a + b;
+//  Traditional function
+function sum(a, b) {
+  return a + b;
 }
-//  Equivalent arrow function const arrowSum = (a, b) => {
-rexurn a + o;
+
+//  Equivalent arrow function
+const arrowSum = (a, b) => {
+  return a + b;
 };
 ```
 
-Implicit Return: If the function body contains only one expression, you
+<p><b>Implicit Return:</b> If the function body contains only one expression, you
 can omit the curly braces  and the return statement, and the function
-will automatically return the result of that expression.
+will automatically return the result of that expression.</p>
 
-//  Arrow function with implicit return const arrowSum = (a, b) => a + b;
-Single  Parameter:  If the  function  has  only  one  parameter,  the
-parentheses around the parameters can also be omitted.
+<pre>
+// Arrow function with implicit return
+const arrowSum = (a, b) => a + b;
+</pre>
 
-//  Arrow function with a single parameter const square = num => num * num;
-No Parameters: If the function has no parameters, empty parentheses Q
-must be used.
+<p><b>Single Parameter:</b> If the  function  has  only  one  parameter,  the
+parentheses around the parameters can also be omitted.</p>
 
-//  Arrow function with no parameters const getCurrentDate = () => new Date();
-Using this: One of the advantages of arrow functions is that they inherit
+<pre>
+// Arrow function with a single parameter
+const square = num => num * num;
+</pre>
+
+<p><b>No Parameters:</b> If the function has no parameters, empty parentheses Q
+must be used.</p>
+
+<pre>
+// Arrow function with no parameters
+const getCurrentDate = () => new Date();
+</pre>
+
+<p><b>Using this:</b> One of the advantages of arrow functions is that they inherit
 the this value from the context they are in. This means they do not have
 their own this value, which can make them more predictable in situations
-where you work with objects and classes.
+where you work with objects and classes.</p>
 
 ``` 
 const person = {
-name:  'John',
-greet: function() {
-setTimeout(() => {
-console.log('Hello, I am ${this.name}'); }, 1000);
-}
+  name:  'John',
+  greet: function() {
+    setTimeout(() => {
+      console.log(`Hello, I am ${this.name}`); 
+	}, 1000);
+  }
 };
+
 person.greet(); // Prints "Hello, I am John" after 1 second
 ```
 
-In summary, arrow functions provide a more concise and convenient way
+<p>In summary, arrow functions provide a more concise and convenient way
 to define functions in JavaScript, especially in situations where you aim to
 simplify syntax and maintain predictable this behavior. However, it's
 essential to understand their differences from regular functions, especially
-when dealing with more complex this contexts.
-
+when dealing with more complex this contexts.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk41">sk41. Array Methods (forEach, some, every, find, findindex, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The Array object in JavaScript provides a variety of methods for working
+<p>The Array object in JavaScript provides a variety of methods for working
 with arrays and  performing operations on their elements. Here's a
-description of some of the most common Array methods:
+description of some of the most common Array methods:</p>
 
-Array.length: The length property returns the number of elements in the
-array.
+<p><b>Array.length:</b> The length property returns the number of elements in the
+array.</p>
 
 ```
 const numbers = [1, 2, 3, 4, 5];
 const elementcount = numbers.length; // Result: 5
 ```
 
-Array.push(elementl, element2, ...): The push method adds one or
+<p><b>Array.push(elementl, element2, ...):</b> The push method adds one or
 more elements to the end of the array and returns the new Length of the
-array.
+array.</p>
 
 ``` 
-const fruits - ['apple',  'pear'];
-fruits.push('orange',  'banana');
-//Result:  ['apple',  'pear',  'orange',  'banana']
+const fruits = ['apple', 'pear'];
+fruits.push('orange', 'banana');
+// Result:  ['apple', 'pear', 'orange', 'banana']
 ```
 
-Array.popQ: The pop method removes the Last element from the array
-and returns it
+<p><b>Array.pop():</b> The pop method removes the Last element from the array
+and returns it.</p>
 
 ```
 const numbers = [1, 2, 3, 4];
 const lastNumber = numbers.pop();
-// Result: k (numbers is now [1, 2, 3])
+// Result: 4 (numbers is now [1, 2, 3])
 ```
 
-Array.shiftQ: The shift method removes the first element from the array
-and returns it
+<p><b>Array.shift():</b> The shift method removes the first element from the array
+and returns it.</p>
 
 ```
-const colors = ['red',  'green',  'blue'];
+const colors = ['red', 'green', 'blue'];
 const firstColor = colors.shift();
-// Result:  'red'  (colors is now ['green',  'blue'])
+// Result:  'red' (colors is now ['green', 'blue'])
 ```
 
-Array.unshift(elementl, element2,  The unshift method adds one or
-more elements to the beginning of the array and returns the new Length
-of the array.
+<p><b>Array.unshift(elementl, element2,...):</b>  The unshift method adds one or
+more elements to the beginning of the array and returns the new length
+of the array.</p>
 
 ```
 const numbers = [2, 3, 4];
 numbers.unshift(l, 0); // Result:  [1, 0, 2, 3, 4]
 ```
 
-Array.forEach(callback(currentValue,  index,  array)):  The  forEach
+<p><b>Array.forEach(callback(currentValue, index, array)):</b> The forEach
 method iterates over each element of the array and executes the provided
-callback function for each one.
+callback function for each one.</p>
 
 ```
 const numbers = [1, 2, 3];
 numbers.forEach(number => console.log(number)); // Prints 1, 2, 3
 ```
-Array.some(callback(currentValue, index, array)): The some method
+
+<p><b>Array.some(callback(currentValue, index, array)):</b> The some method
 checks if at Least one element in the array satisfies the condition specified
-in the callbackfunction.
+in the callbackfunction.</p>
 
 ``` 
-const numbers - [2. k. 6];
-const hasOdd = numbers.some(number => number % 2 !== 0); // Result: false
+const numbers - [2, 4, 6];
+const hasOdd = numbers.some(number => number % 2 !== 0);
+// Result: false
 ```
 
-Array.every(callback(currentValue, index, array)): The every method
+<p><b>Array.every(callback(currentValue, index, array)):</b> The every method
 checks if aLL elements in the array satisfy the condition specified in the
-callback function.
+callback function.</p>
 
 ```
 const numbers = {2, 4, 6];
-const allEven - numbers.every(number => number % 2 --- 0); // Result: true
+const allEven - numbers.every(number => number % 2 --- 0);
+// Result: true
 ```
 
-Array.find(callback(currentValue, index, array)): The find  method
+<p><b>Array.find(callback(currentValue, index, array)):</b> The find  method
 returns the first element in the array that satisfies the condition specified
-in the callback function.
+in the callback function.</p>
 
 ```
-const people - [
-{ name: 'John', age: 25 },
-{ name: 'Mary', age: 30 },
-{ name: 'Peter', age: 22 }
+const people = [
+  { name: 'John', age: 25 },
+  { name: 'Mary', age: 30 },
+  { name: 'Peter', age: 22 }
 ];
 
-const person - people.find(person => person.age > 25); // Result: { name: 'Mary', age: 30 }
+const person - people.find(person => person.age > 25); 
+// Result: { name: 'Mary', age: 30 }
 ```
 
-Array.findlndex(callback(currentValue, index, array)): The findindex
+<p><b>Array.findIndex(callback(currentValue, index, array)):</b> The findindex
 method returns the index of the first element in the array that satisfies the
-condition specified in the callbackfunction.
+condition specified in the callbackfunction.</p>
 
-``` 
+<pre>
 const numbers = [10, 20, 30, 40];
-const index = numbers.findlndex(number => number > 25); // Result: 2 (30 is the first number greater than 25)
-```
-
+const index = numbers.findlndex(number => number > 25);
+// Result: 2 (30 is the first number greater than 25)
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk42">sk42. String Methods (split, trim, replace, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3016,78 +3079,83 @@ The  String  object in JavaScript provides  a  variety  of methods for
 manipulating and working with text strings. Here’s a description of some
 of the most common String methods:
 
-String.length: The  Length  property  returns the  Length  (number of
-characters) of a text string.
+<p><b>String.length:</b> The length property returns the length (number of
+characters) of a text string.</p>
 
 ```
 const text = 'Hello, world!';
 const length = text.length; // Result: 12
 ```
 
-String.charAt(index): The charAt method returns the character at the
-specified position in the string.
+<p><b>String.charAt(index):</b> The charAt method returns the character at the
+specified position in the string.</p>
 
 ```
 const text = 'Hello';
-const firstCharacter = text.charAt(O); // Result:  'H'
+const firstCharacter = text.charAt(0); // Result:  'H'
 ```
 
-String.concat(strl, str2,...): The concat method combines two or more
-strings into a single string.
+<p><b>String.concat(strl, str2,...):</b> The concat method combines two or more
+strings into a single string.</p>
 
 ```
 const greeting = 'Hello';
 const name = 'John';
-const message = greeting.concat(', ', name); // Result: 'Hello, John'
+const message = greeting.concat(', ', name);
+// Result: 'Hello, John'
 ```
 
-String.indexOf(substring, start): The indexOf method returns the first
+<p><b>String.indexOf(substring, start):</b> The indexOf method returns the first
 position at which a substring is found within the string. If not found, it
-returns-1.
+returns -1.</p>
 
 ```
 const phrase = 'Hello, world!';
 const position - phrase.indexOf('world'); // Result: 7
 ```
 
-String.substring(start, end): The substring method extracts a substring
-from start to end (exclusive) of the string.
+<p><b>String.substring(start, end):</b> The substring method extracts a substring
+from start to end (exclusive) of the string.</p>
 
 ```
 const text = 'Hello, world!';
 const substring = text.substring(6, 11); // Result:  'world'
 ```
 
-String.split(separator, limit): The split method divides a string into an
-array of substrings using the separator as the splitting point
+<p><b>String.split(separator, limit):</b> The split method divides a string into an
+array of substrings using the separator as the splitting point.</p>
 
 ```
 const text = 'Apple,Orange,Pear';
 const fruits - text.split(',');
-//Result:  ['Apple',  'Orange',  'Pear']
+//Result:  ['Apple', 'Orange', 'Pear']
 ```
 
-String.trimO: The trim method removes leading and trailing whitespaces
-from a string.
+<p><b>String.trim():</b> The trim method removes leading and trailing whitespaces
+from a string.</p>
+
 ```
 const text = '  Hello, world!  ';
 const cleanText = text.trim(); // Result:  'Hello, world!'
 ```
 
-String.replace(search, replacement): The replace method replaces a
-search substring with another replacement string in the original string.
+<p><b>String.replace(search, replacement):</b> The replace method replaces a
+search substring with another replacement string in the original string.</p>
+
 ```
 const text = 'Hello, name!';
-const newText = text.replace('name', 'John'); // Result: 'Hello, John!'
+const newText = text.replace('name', 'John');
+// Result: 'Hello, John!'
 ```
 
-String.toUpperCaseO and String.toLowerCase(): The toUpperCase and
+<p><b>String.toUpperCase() and String.toLowerCase():</b> The toUpperCase and
 toLowerCase  methods convert a  string  to  uppercase or lowercase,
-respectively.
+respectively.</p>
+
 ```
 const text = 'Hello, World!';
-const uppercase = text.toUpperCaseO; // Result:  'HELLO, WORLD!'
-const lowercase = text.toLowerCaseO; // Result:  'hello, world!'
+const uppercase = text.toUpperCaseO; // Result: 'HELLO, WORLD!'
+const lowercase = text.toLowerCaseO; // Result: 'hello, world!'
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3097,24 +3165,24 @@ The Object object in JavaScript provides several useful methods for
 working with object properties and values. Here’s a description of some of
 the most common methods of Object:
 
-Object.keys(obj): The keys method returns an array of enumerable keys
-(properties) of an object
+<p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys
+(properties) of an object.</p>
 
 ```
 const object = { a: 1, b: 2, c: 3 };
-const keys = Object.keys(object); // Result:  ['a',  'b',  'c'J
+const keys = Object.keys(object); // Result: ['a', 'b', 'c']
 ```
 
-Object, values(obj): The values method returns an array of values of the
-enumerable properties of an object.
+<p><b>Object, values(obj):</b> The values method returns an array of values of the
+enumerable properties of an object.</p>
 
 ```
 const object = { a: 1, b: 2, c: 3 };
 const values = Object.values(object); // Result:  [1, 2, 3]
 ``` 
 
-Object.entries(obj): The entries method returns on array of arrays with
-key-value pairs ofthe enumerable properties of an object
+<p><b>Object.entries(obj):</b> The entries method returns on array of arrays with
+key-value pairs ofthe enumerable properties of an object.</p>
 
 ```
 const object = ■{ a: 1, b: 2, c: 3 };
@@ -3122,9 +3190,9 @@ const entries = Object.entries(object);
 // Result:  [['a', 1],  ['b', 2],  ['c', 3]]
 ```
 
-Object.assign(target, sourcel, source2,...): The assign method copies
+<p><b>Object.assign(target, sourcel, source2,...):</b> The assign method copies
 the enumerable properties of one or more source objects into a target
-object It returns the target object
+object It returns the target object.</p>
 
 ```
 const target = { a: 1 };
@@ -3133,8 +3201,8 @@ Object.assign(target, source);
 console.log(target); // Result: { a: 1, b: 2, c: 3 }
 ```
 
-Object.hasOwnProperty(prop): The hasOwnProperty method checks if
-an object has an own property with the specified name.
+<p><b>Object.hasOwnProperty(prop):</b> The hasOwnProperty method checks if
+an object has an own property with the specified name.</p>
 
 ```
 const object = { a: 1, b: 2 };
@@ -3142,8 +3210,8 @@ const hasPropertyA = object.hasOwnProperty('a'); // Result: true
 const hasPropertyC = object.hasOwnPropertyC'c'); // Result: false
 ```
 
-Object.freeze(obj): The freeze method freezes an object, meaning that its
-existing properties cannot be added, deleted, or modified.
+<p><b>Object.freeze(obj):</b> The freeze method freezes an object, meaning that its
+existing properties cannot be added, deleted, or modified.</p>
 
 ```
 const object = { a: 1, b: 2 };
@@ -3151,24 +3219,24 @@ Object.freeze(object);
 object.a - 10; // No effect
 ```
 
-Object.keys(obj): The keys method returns an array of enumerable keys
-(properties) of an object
+<p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys
+(properties) of an object.</p>
 
 ```
 const object = { a: 1, b: 2, c: 3 };
 const keys - Object.keys(object); // Result:  ['a',  'b',  'c']
 ```
 
-Object, values(obj): The values method returns an array of values of the
-enumerable properties of an object.
+<p><b>Object, values(obj):</b> The values method returns an array of values of the
+enumerable properties of an object.</p>
 
 ```
 const object = { a: 1, b: 2, c: 3 };
-const values - Object.values(object); H Result:  [1, 2, 3]
+const values - Object.values(object); // Result: [1, 2, 3]
 ```
 
-Object.entries(obj): The entries method returns an array of arrays with
-key-value pairs ofthe enumerable properties of an object
+<p><b>Object.entries(obj):</b> The entries method returns an array of arrays with
+key-value pairs ofthe enumerable properties of an object.</p>
 
 ```
 const object = { a: 1, b: 2, c: 3 };
@@ -3176,14 +3244,14 @@ const entries = Object.entries(object);
 // Result:  [['a', 1],  ['b', 2],  ['c', 3]]
 ```
 
-Object.getOwnPropertyNames(obj):  The  getOwnPropertyNames
+<p><b>Object.getOwnPropertyNames(obj):</b> The getOwnPropertyNames 
 method returns an array with all properties (enumerable or not) of an
-object.
+object.</p>
 
 ```
 const object = { a: 1, b: 2 };
 const properties = Object.getOwnPropertyNames(object);
-//  Result: ['a', 'b']
+// Result: ['a', 'b']
 ```
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3194,23 +3262,23 @@ properties for  mathematical  operations  and  numerical calculations.
 
 Here's a description of some ofthe most common methods of Math:
 
-Math.floor(x): The floor method rounds a number down to the nearest
-integer.
+<p><b>Math.floor(x):</b> The floor method rounds a number down to the nearest
+integer.</p>
 
 ```
 const number = 5.7;
 const roundedNumber - Math.floor(number); // Result: 5
 ```
 
-Math.ceil(x): The ceil method rounds a number up to the nearest integer.
+<p><b>Math.ceil(x):</b> The ceil method rounds a number up to the nearest integer.</p>
 
 ```
 const number = 5.2;
 const roundedNumber = Math.ceil(number); // Result: 6
 ```
 
-Math.round(x): The round method rounds a number to the nearest
-integer. If the decimal is 0.5 or greater, it will round to the next integer.
+<p><b>Math.round(x):</b> The round method rounds a number to the nearest
+integer. If the decimal is 0.5 or greater, it will round to the next integer.</p>
 
 ```
 const  numberl = 5.2;
@@ -3219,28 +3287,31 @@ const  roundingl = Math.round(numberl);  // Result: 5
 const  rounding2 = Math.round(number2);  // Result: 6
 ```
 
-Math.max(...args) and Math.min(...args): The max and min methods
+<p><b>Math.max(...args) and Math.min(...args):</b> The max and min methods
 return the maximum and minimum values, respectively, of a series of
-numeric arguments.
+numeric arguments.</p>
 
 ```
 const maximum = Math.max(5, 10, 3, 8); // Result: 10
 const minimum = Math.min(5, 10, 3, 8); // Result: 3
 ```
 
-Math.pow(base, exponent): The pow method calculates the power of a
-given number.
+<p><b>Math.pow(base, exponent):</b> The pow method calculates the power of a
+given number.</p>
 
 ```
 const result = Math.pow(2, 3); // Result: 8 (2 to the power of 3)
 ```
 
-Math.sqrt(x): The sqrt method calculates the square root of a number.
+<p><b>Math.sqrt(x):</b> The sqrt method calculates the square root of a number.</p>
+
 ```
 const squareRoot = Math.sqrt(25); // Result: 5 (square root of 25)
 ```
-Math.abs(x): The abs method returns the absolute value of a number, i.e.,
-its value without a sign.
+
+<p><b>Math.abs(x):</b> The abs method returns the absolute value of a number, i.e.,
+its value without a sign.</p>
+
 ```
 const absoluteValue - Math.abs(-7); // Result: 7
 ```
@@ -3248,62 +3319,70 @@ const absoluteValue - Math.abs(-7); // Result: 7
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk45">sk45. JSON and Object Serialization/Deserialization</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JSON (JavaScript Object Notation) is a Lightweight and widely used data
+<p>JSON (JavaScript Object Notation) is a Lightweight and widely used data
 interchange format in programming. It allows for the representation of
 data structures in a readable and organized way and is common in
 communication between client and server applications. Serialization and
 deserialization of objects in JSON are essential processes for converting
 objects into a format that can be transmitted and then recovered in their
-originalform.
+originalform.</p>
 
-Serialization: Serialization refers to the conversion of a JavaScript object
+<p><b>Serialization:</b> Serialization refers to the conversion of a JavaScript object
 into a JSON string. This is useful for sending data over a network or saving
-it in a file. The JSON.stringifyQ function is used for serialization.
+it in a file. The JSON.stringifyQ function is used for serialization.</p>
 
 ``` 
 const person = {
-name:  'Juan',
-age: 30,
-city:  'Mexico'
+  name:  'Juan',
+  age: 30,
+  city:  'Mexico'
 };
+
 const personJSON = JSON.stringify(person);
 console.log(personJSON); // Outputs
 '{"name":"Juan","age":30,"city":"Mexico"}'
 ```
 
-Deserialization: Deserialization is the reverse process—converting a
+<p><b>Deserialization:</b> Deserialization is the reverse process—converting a
 JSON string into a JavaScript object This is useful when receiving JSON
 data from the server and needing to convert it back into objects for
 manipulation  in  the  code.  The  JSON.parseQ  function  is  used  for
-deserialization.
+deserialization.</p>
 
-Deserialization Example:
+<p><b>Deserialization Example:</b></p>
+
 ```
-const personJSON = '{"name":"Juan","age":30,"city":"Mexico"}'; const person = JSON.parse(personJSON); console.log(person);
-// Outputs { name:  'Juan', age: 30, city:  'Mexico' }
+const personJSON = '{"name":"Juan","age":30,"city":"Mexico"}';
+const person = JSON.parse(personJSON);
+console.log(person);
+// Outputs { name: 'Juan', age: 30, city: 'Mexico' }
 ```
-Serialization and Deserialization of Complex Objects: JSON can
+
+<p><b>Serialization and Deserialization of Complex Objects:</b> JSON can
 represent more complex data structures, such as nested arrays and
-objects.
+objects.</p>
+
 ```
 const book = {
-title:  'The Shadow of the Wind',
-author: {
-name:  'Carlos Ruiz Zafon',
-nationality:  'Spanish'
-},
-genres:  ['Fiction',  'Mystery']
+  title: 'The Shadow of the Wind',
+  author: {
+    name: 'Carlos Ruiz Zafon',
+    nationality: 'Spanish'
+  },
+  genres: ['Fiction', 'Mystery']
 };
+
 const bookJSON = JSON.stringify(book);
 console.log(bookJSON);
+
 const bookParsed = JSON.parse(bookJSON);
 console.log(bookParsed);
 ```
-In summary, JSON is a key format in web data communication.
+
+<p>In summary, JSON is a key format in web data communication.
 Serialization and deserialization allow for the conversion of JavaScript
 objects into JSON strings and vice versa, facilitating the transfer of data
-between different systems and the persistence of information.
-
+between different systems and the persistence of information.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk46">sk46. Fetch API and AJAX</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
