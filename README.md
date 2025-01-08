@@ -1383,14 +1383,14 @@ elements are nested and related to each other.</p>
 <blockquote>
 Document (html)<br>
 |— html<br>
-|  |-- head<br>
-|  |   |-- title<br>
-|  |       |-- "My Page"<br>
-|  |-- body<br>
-|     |-- hl<br>
-|     |   |-- "Page Title"<br>
-|     |-- p<br>
-|         |-- "This is a paragraph."
+|&nbsp;&nbsp;|-- head<br>
+|&nbsp;&nbsp;|&nbsp;&nbsp;|-- title<br>
+|&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
+|&nbsp;&nbsp;|-- body<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- hl<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;|-- "Page Title"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- p<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
 </blockquote>
 
 <p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
