@@ -1118,9 +1118,10 @@ import { greet } from "./module.js";
 greet();
 </pre>
 
-<p><b>Namespaces: Namespaces are an older approach to code organization.
+<p><b>Namespaces:</b> Namespaces are an older approach to code organization.
 They allow grouping related objects and functions under a common name
 to avoid naming collisions. This is done using global objects.</p>
+
 <pre>
 // MyNamespace.js 
 var MyNamespace = { 
