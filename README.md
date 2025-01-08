@@ -838,7 +838,7 @@ value is copied into the variable.</p>
   <li>Null</li>
   <li>Undefined</li>
   <li>Symbol</li>
-  <li>Biglnt</li>
+  <li>BigInt</li>
 </ol>
 
 <pre>
@@ -942,8 +942,8 @@ entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk05">sk05. == vs === vs typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>== - === - and typeof are operators used to compare values and retrieve
-information about data types. Here's an explanation of each:</p>
+<p><span class="gimme">==, ===, and typeof</span> are operators used to compare values 
+and retrieve information about data types. Here's an explanation of each:</p>
 
 <p><b>==  (Weak Equality):</b> The == operator compares two values for equality but 
 performs type conversion if the values are of different types. This is called "weak 
@@ -972,10 +972,10 @@ typeof true; // "boolean"
   <li>typeof returns the data type of an expression as a string.</li>
 </ul>
 
-<p>It is important to understand the difference between == and === to avoid
-unexpected comparison issues due to automatic type conversion. The use
-of === is generally safer and recommended as it provides more accurate
-comparisons and avoids surprises in your program's behavior.</p>
+<p>It is important to understand the difference between <b>== and ===</b> to avoid 
+unexpected comparison issues due to automatic type conversion. The use of <b>===</b> 
+is generally safer and recommended as it provides more accurate comparisons and avoids 
+surprises in your program's behavior.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk06">sk06. Function Scope, Block Scope, and Lexical Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -991,7 +991,7 @@ function scope.</p>
 function myFunction() {
   var functionVariable = 42;
   console.log(functionVariable);
-  //  Accessible within the function
+  // Accessible within the function
 }
 
 console.log(functionVariable);
@@ -1045,10 +1045,10 @@ function calls that evaluates to a single value. It can be as simple as a
 literal value or as complex as a mathematical operation or a function call.
 
 <pre>
-5 + 3  // Mathematical operation
-"Hello, " + "World"  // String concatenation
-myFunctionO  // Function call
-42  // Literal value
+5 + 3               // Mathematical operation
+"Hello, " + "World" // String concatenation
+myFunction()        // Function call
+42                  // Literal value
 </pre>
 
 <p><b>Statement:</b> A statement is a unit of code that performs an action or a
@@ -1077,17 +1077,16 @@ for (let i = 0; i < 5; i++) {
     actions in a program.</li>
 </ul>
 
-<p>An important distinction is that expressions have a resulting value, while
-statements  can  change  the  program's  execution  flow  or  perform
-operations without necessarily returning a value. Both concepts are
-essential for writing coherent and effective code in any programming
-language.</p>
+<p>An important distinction is that expressions have a resulting value, while statements 
+can change the program's execution flow or perform operations without necessarily 
+returning a value. Both concepts are essential for writing coherent and effective code in 
+any programming language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk08">sk08. IIFE, Modules, and Namespaces</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Immediately  Invoked  Function  Expressions  (IIFE),  modules,  and
-namespaces are techniques used to modularize and organize code. Each
-addresses scope management and code organization in different ways.</p>
+<p>Immediately Invoked Function Expressions (IIFE), modules, and namespaces are techniques 
+used to modularize and organize code. Each addresses scope management and code organization 
+in different ways.</p>
 
 <p><b>IIFE (Immediately Invoked Function Expression):</b> An IIFE is a function
 that is defined and executed immediately after its creation. It is useful for
@@ -1132,37 +1131,34 @@ var MyNamespace = {
 MyNamespace.func();
 </pre>
 
-<p>Each approach has its own advantages and disadvantages. IIFE is useful
-for creating private scopes but can become complex in large projects.
-Modules are the modern way to modularize code and are more efficient
-for maintenance and scalability. Namespaces are an older technique but
-can still be useful in certain situations where full modularity is not
-necessary.</p>
+<p>Each approach has its own advantages and disadvantages. IIFE is useful for creating 
+private scopes but can become complex in large projects. Modules are the modern way to 
+modularize code and are more efficient for maintenance and scalability. Namespaces are 
+an older technique but can still be useful in certain situations where full modularity 
+is not necessary.</p>
 
-<p>In modern projects, it is recommended to use modules to effectively
-organize code and maintain cleaner control over scope and code reuse.</p>
+<p>In modern projects, it is recommended to use modules to effectively organize code and 
+maintain cleaner control over scope and code reuse.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk09">sk09. Message Queue and Event Loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The message queue and event Loop are crucial concepts to understand
-how event handling and asynchronous operations work in JavaScript.</p>
+<p>The message queue and event Loop are crucial concepts to understand how event handling 
+and asynchronous operations work in JavaScript.</p>
 
-<p><b>Message Queue:</b> The message queue is a structure where events and
-pending callback functions are stored to be executed. These events can
-include user interactions, timers, network requests, and more.</p>
+<p><b>Message Queue:</b> The message queue is a structure where events and pending 
+callback functions are stored to be executed. These events can include user interactions, 
+timers, network requests, and more.</p>
 
-<p><b>Event Loop:</b> The event Loop is a  continuous  cycle  running  in the
-background of the JavaScript program. Its function is to constantly check
-if there are tasks in the message queue to be processed. If there are tasks
-pending in the queue, the event Loop takes them one by one and executes
-them in order.</p>
+<p><b>Event Loop:</b> The event Loop is a continuous cycle running in the background 
+of the JavaScript program. Its function is to constantly check if there are tasks in the 
+message queue to be processed. If there are tasks pending in the queue, the event loop 
+takes them one by one and executes them in order.</p>
 
-<p>The interaction between the message queue and the event loop is
-fundamental to understanding how JavaScript handles asynchronous and
-non-blocking tasks. When an event occurs or an asynchronous task is
-completed (such as an AJAX request or a timer), a callback function is
-added to the message queue. The event Loop takes these functions one by
-one and executes them.</p>
+<p>The interaction between the message queue and the event loop is fundamental to 
+understanding how JavaScript handles asynchronous and non-blocking tasks. When an event 
+occurs or an asynchronous task is completed (such as an AJAX request or a timer), a 
+callback function is added to the message queue. The event Loop takes these functions 
+one by one and executes them.</p>
 
 <p><b>Example of Message Queue and Event Loop:</b></p>
 
@@ -1191,7 +1187,7 @@ In this example, the code executes in the following order:</p>
 </ol>
 
 <p>Understanding how the message queue and event loop work is crucial for
-writing  asynchronous  JavaScript  code  and  avoiding  blocking  and
+writing asynchronous JavaScript code and avoiding blocking and
 bottlenecks in program execution.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk10">sk10. setTimeout, setInterval, and requestAnimationFrame</h2>
@@ -1257,7 +1253,7 @@ and efficient animations in the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk11">sk11. JavaScript Engines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript  engines  are  fundamental  components  in  browsers  and
+<p>JavaScript engines are fundamental components in browsers and
 execution environments that interpret and execute JavaScript code. Each
 browser and environment has its own JavaScript engine.</p>
 
@@ -1581,7 +1577,7 @@ allowing the creation of objects with shared properties and behaviors.</p>
 in JavaScript for achieving code reuse and establishing relationships
 between objects.</p>
 
-<p><b>Prototypal Inheritance:</b> In  JavaScript,  prototypal  inheritance  is  a
+<p><b>Prototypal Inheritance:</b> In JavaScript, prototypal inheritance is a
 mechanism by which an object can inherit properties and methods from
 another object called its "prototype." Instead of traditional classes,
 JavaScript uses prototypal inheritance to create relationships between
@@ -1668,10 +1664,10 @@ dog.makeSound(); // Prints "Woof woof"
 
 <p><b>Object.assign:</b> Object.assign is a method used to copy enumerable
 properties from one or more source objects to a target object If there are
-properties with the same  name in the target object they will be
+properties with the same name in the target object they will be
 overwritten. It's usefulfor combining objects or cloning objects.</p>
 
-<pre>Object.assign(targetobject, sourceObjectl, source0bject2,  ...);</pre>
+<pre>Object.assign(targetobject, sourceObjectl, source0bject2, ...);</pre>
 
 <p>Example of Objectassign:</p>
 
@@ -1681,7 +1677,7 @@ const sourcel = { name: "John", age: 30 };
 const source2 = { city: "New York" };
 Object.assign(target, sourcel, source2);
 console.log(target);
-// Prints { name:  "John", age: 30, city: "New York" }
+// Prints { name: "John", age: 30, city: "New York" }
 ```
 
 <p>In summary:</p>
@@ -1708,7 +1704,7 @@ the same order.</p>
 ```
 const numbers = [1, 2, 3, 4];
 const doubles = numbers.map(number => number * 2);
-// doubles is now [2,  6, 8]
+// doubles is now [2, 6, 8]
 ```
 
 <p><b>filter:</b> The filter method is used to create a new array with all elements
@@ -1716,9 +1712,9 @@ that pass a test (meet a condition) provided by a function. It returns a new
 array with the elements that satisfy the condition.</p>
 
 ```
-const numbers - [1, 2, 3,  5, 6];
+const numbers - [1, 2, 3, 5, 6];
 const evens - numbers.filter(number => number % 2 --- 0);
-// evens is now [2,  6]
+// evens is now [2, 6]
 ```
 
 <p><b>reduce:</b> The reduce method is used to reduce an array to a single
@@ -1736,12 +1732,12 @@ const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 <h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><b>Propagation</b></p>
-<p>These  concepts  are  related  to  functional  programming,  data
+<p>These concepts are related to functional programming, data
 manipulation, and interaction in JavaScript Here's an explanation of each
 one:</p>
 
 <p><b>Pure Functions:</b> Pure functions are functions that produce the same
-result for the  same  arguments  and  have  no  side  effects  on  the
+result for the same arguments and have no side effects on the
 environment This means they don't modify external variables, perform
 input/output operations, and don't depend on external mutable data.</p>
 
@@ -1772,16 +1768,16 @@ ancestor elements or vice versa.</p>
 
 <p>These concepts are fundamental for writing more predictable, maintainable, and 
 scalable code. The focus on pure functions and avoiding side effects contributes to 
-functional programming, while understanding state  mutation  is  crucial  for  working  
+functional programming, while understanding state mutation is crucial for working 
 with changing data. Event propagation is essential for managing interaction in web 
 applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">sk21. Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Closures ore on important concept in  programming, referring to a
+Closures ore on important concept in programming, referring to a
 function's ability to access and remember variables from its lexical scope
 even after that function has finished execution and Left that scope.
-Closures enable the creation  of functions that maintain  access to
+Closures enable the creation of functions that maintain access to
 variables even when they are no Longer in the scope of the function that
 created them.
 
@@ -1842,7 +1838,7 @@ const resultAddition = performoperatlontadd, 5, 5J; // Result: 8
 const resultsubtraction = performOperation(subtract, 10, A);
 ```
 
-II  Result: 6
+II Result: 6
 
 Functions as Results: You can return a function from another function.
 This allows creating specialized and parameterized functions.
@@ -1877,7 +1873,7 @@ const numbers = [1, 2, 3, 4, 5];
 const odds = numbers.filter(number => number % 2 !== 0); // Result: [1, 3, 5]
 ```
 
-reducing  (reduce):  ine  reduce  metnod  or an  array  accumulates
+reducing (reduce): ine reduce metnod or an array accumulates
 elements by applying a reducing function and returns a single result
 
 ```
@@ -1913,7 +1909,7 @@ it's essential to ensure a clear base case and that recursion converges
 toward it.
 
 ```
-ourrie  ulussiu  pruuierris  sulvuu  vviui  reuursiuri  iriuiuue  rriuuierriuucuL
+ourrie ulussiu pruuierris sulvuu vviui reuursiuri iriuiuue rriuuierriuucuL
 ```
 
 calculations (factorials, Fibonacci numbers), tree and graph traversal, and
@@ -1937,14 +1933,14 @@ have zero-based indices to access elements.
 
 ```
 const numbers = [1, 2, 3, 4];
-const fruits = ['apple',  'orange',  'banana'];
+const fruits = ['apple', 'orange', 'banana'];
 ```
 
 Objects: Collections of key-value pairs where keys are strings (or symbols
 in ES6) and values can be any data type.
 
 ```
-const person = { name:  'John', age: 30 };
+const person = { name: 'John', age: 30 };
 ```
 
 Maps: Structures similar to objects but allow using any value as a key and
@@ -1952,7 +1948,7 @@ maintain the insertion order.
 
 ```
 const map = new Map();
-map.set('name',  'Mary');
+map.set('name', 'Mary');
 map.set('age', 25);
 ```
  
@@ -1967,7 +1963,7 @@ set.add('red'); // Not added, as 'red' is already in the set
 
 Generators: Generators are special functions that allow pausing and
 resuming their execution at a specific point. They enable creating a
-custom  lazy  and iterative control flow. They are defined  using the
+custom lazy and iterative control flow. They are defined using the
 function* keyword and use the yield statement to pause the function and
 return values.
 
@@ -2007,9 +2003,9 @@ which are functions to fulfill or reject the promise.</p>
 
 ```
 const promise = new Promise((resolve, reject) => {
-  //  Perform an asynchronous operation here
-  //  If the operation is successful, call resolve(value)
-  //  If the operation fails, call reject(error)
+  // Perform an asynchronous operation here
+  // If the operation is successful, call resolve(value)
+  // If the operation fails, call reject(error)
 });
 ```
 
@@ -2019,8 +2015,8 @@ handle rejection.</p>
 
 ```
 nnomiqp.thpnfvalue => 4
-//  Do something with the resolved value }).catch(error => {
-//  Handle the error if the promise is rejected
+// Do something with the resolved value }).catch(error => {
+// Handle the error if the promise is rejected
 });
 ```
 
@@ -2092,8 +2088,8 @@ async function fetchData() {
   try {
     const response = await
     fetch('https://api.example.com/data'); 
-	const data = await response.json(); 
-	return data;
+    const data = await response.json(); 
+    return data;
   } catch (error) {
   console.error('Error:', error);
   }
@@ -2131,14 +2127,14 @@ purposes.</p>
 array has a numeric index indicating its position. Arrays are used to store
 Lists of elements and are suitable for accessing elements by their index.</p>
 
-<pre>const fruits = ['apple',  'orange',  'banana'];</pre>
+<pre>const fruits = ['apple', 'orange', 'banana'];</pre>
 
 <p><b>Objects:</b> Objects are collections of key-value pairs. Keys are strings, and
 values can be of any type. Objects are useful for representing entities with properties and methods.</p>
 
 ```
 const person = {
-name:  'John',
+name: 'John',
 age: 30,
 greet: functionO {
 console.logCHello, my name is Sfthis.name}');
@@ -2150,8 +2146,8 @@ any type.</p>
 
 ```
 const map = new Map();
-map.set('name',  'Maria');
-map.set(100,  'one hundred');
+map.set('name', 'Maria');
+map.set(100, 'one hundred');
 ```
 
 <p><b>Sets:</b> Sets are collections of unique and non-duplicated values. They are
@@ -2212,7 +2208,7 @@ algorithms based on the input.</p>
     Sort and Quicksort.</li>
   <li><b>0(nA2), 0(nA3), ... (Quadratic, Cubic Time):</b> The execution time increases 
     quadratically, cubically, etc., in relation to the size of the input.
-	Example: nested Loops.</li>
+    Example: nested Loops.</li>
   <li><b>0(2An), 0(n!) (Exponential, Factorial Time):</b> These notations indicate exponential or 
    factorial growth in execution time and are generally considered inefficient for large 
    input sizes.</li>
@@ -2247,7 +2243,7 @@ search.</p>
 First Search (BFS) are used to traverse and search in graphs and trees.</p>
 
 <p><b>Recursion:</b> Recursive algorithms solve problems by breaking them down
-into smaller subproblems and  solving  each  subproblem  recursively.</p>
+into smaller subproblems and solving each subproblem recursively.</p>
 
 <p>Examples include factorial calculations and Fibonacci numbers.</p>
 
@@ -2263,7 +2259,7 @@ applied in problems like Sudoku and the N-Queens problem.</p>
 <p><b>Linear Algebra:</b> Algorithms Like Gaussian Elimination are used to solve
 systems of Linear equations.</p>
 
-<p><b>Cryptography:</b>  Cryptographic  algorithms  are  used  to  secure
+<p><b>Cryptography:</b> Cryptographic algorithms are used to secure
 communication and protect information. Examples include encryption
 algorithms Like AES and RSA.</p>
 
@@ -2271,8 +2267,8 @@ algorithms Like AES and RSA.</p>
 among multiple options. Examples include genetic algorithms and search
 optimization algorithms.</p>
 
-<p><b>Artificial Intelligence:</b> Algorithms  Like  decision  trees  and  machine
-learning  algorithms  are used for decision-making and  prediction in
+<p><b>Artificial Intelligence:</b> Algorithms Like decision trees and machine
+learning algorithms are used for decision-making and prediction in
 artificial intelligence systems.</p>
 
 <p>Algorithms are an essential part of programming and are used in various
@@ -2307,7 +2303,7 @@ class Dog extends Animal {
     console.log('${this.name} barks.');
   }
 }
-const myDog = new Dog('Max',  'Labrador');
+const myDog = new Dog('Max', 'Labrador');
 myDog.speak(); // Prints: "Max barks."
 ```
 
@@ -2352,7 +2348,7 @@ console.log(circle.area()); // Prints: 28.274333882308138
 ```
 
 <p>In this example, both Square and Circle are subclasses of Shape, and both
-implement the areaQ  method. Although they  are  different classes,
+implement the areaQ method. Although they are different classes,
 polymorphism allows treating them uniformly in the area calculation.</p>
 
 <p><b>Code Reusability:</b> Inheritance and polymorphism promote code
@@ -2363,13 +2359,13 @@ you avoid duplicating code and maintain an organized structure.</p>
 homogeneously, facilitating the creation of generic interfaces to operate
 with different types of objects.</p>
 
-<p>Together,  inheritance,  polymorphism,  and  code  reusability  are  key
+<p>Together, inheritance, polymorphism, and code reusability are key
 concepts for building more efficient, maintainable, and scalable object-
 oriented applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk31">sk31. Design Patterns</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Design  patterns  are  proven  solutions to  common  software  design
+<p>Design patterns are proven solutions to common software design
 problems. These patterns provide guidance for effectively and efficiently
 solving specific problems, promoting good design practices, modularity,
 and code reusability. There are various types of design patterns, each
@@ -2380,23 +2376,23 @@ patterns:</p>
   <li>Creational Patterns: These patterns focus on how object instances are created.
     <ul>
     <li><b>Factory Method:</b> Defines an interface for creating objects in a superclass, 
-	  allowing subclasses to decide which class to instantiate.</li>
+      allowing subclasses to decide which class to instantiate.</li>
     <li><b>Abstract Factory:</b> Provides an interface for creating families of related 
-	  objects without specifying their concrete classes.</li>
-	<li><b>Singleton:</b> Ensures that a class has only one instance and provides a 
-	  global point of access to that instance.</li>
-	<li><b>Builder:</b> Abstracts the construction of complex objects, allowing them to 
-	  be constructed step by step.</li>
+      objects without specifying their concrete classes.</li>
+    <li><b>Singleton:</b> Ensures that a class has only one instance and provides a 
+      global point of access to that instance.</li>
+    <li><b>Builder:</b> Abstracts the construction of complex objects, allowing them to 
+      be constructed step by step.</li>
     </ul>
   </li>
   <li>Structural Patterns: These patterns deal with how classes and objects are composed.
     <ul>
     <li><b>Adapter:</b> Allows objects with incompatible interfaces to work together 
-	  through an adapter class.</li>
-	<li><b>Decorator:</b> Dynamically adds additional responsibilities to an object.</li>
-	<li><b>Facade:</b> Provides a simplified interface for a set of more complex interfaces.</li>
-	<li><b>Composite:</b> Allows treating individual objects and compositions of objects 
-	  uniformly.</li>
+      through an adapter class.</li>
+    <li><b>Decorator:</b> Dynamically adds additional responsibilities to an object.</li>
+    <li><b>Facade:</b> Provides a simplified interface for a set of more complex interfaces.</li>
+    <li><b>Composite:</b> Allows treating individual objects and compositions of objects 
+      uniformly.</li>
     </ul>
   </li>
   <li><b>Behavioral Patterns:</b> These patterns focus on how objects interact and communicate 
@@ -2416,11 +2412,11 @@ patterns:</p>
     architecture problems.
     <ul>
     <li><b>MVC (Model-View-Controller):</b> Separates the business logic, presentation, and 
-	  interaction into three distinct components.</li>
-	<li><b>MWM (Model-View-ViewModel):</b> A variation of the MVC pattern, designed 
-	  especially for graphical interfaces and modern applications.</li>
+      interaction into three distinct components.</li>
+    <li><b>MWM (Model-View-ViewModel):</b> A variation of the MVC pattern, designed 
+      especially for graphical interfaces and modern applications.</li>
     <li><b>Repository:</b> Abstracts data access logic, enabling uniform access to 
-	  different data sources.</li>
+      different data sources.</li>
     </ul>
   </li>
   <li><b>Concurrency Patterns:</b> These patterns focus on handling concurrency and 
@@ -2526,15 +2522,15 @@ new function that executes each one in sequence.</p>
 
 <p>ALL of these techniques (partial application, currying, composition, and
 pipe) are fundamental in functional programming and enable building
-more  modular,  readable,  and  maintainable  programs  by  breaking
+more modular, readable, and maintainable programs by breaking
 operations into smaller, reusable units.</p> 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk33">sk33. Clean Code</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Clean code is a fundamental concept in programming that refers to
 writing code that is easy to understand, maintain, and collaborate on.
-Clean  code  is  readable,  clear,  well-structured,  and  follows  good
-programming  practices. Below are some principles and  practices to
+Clean code is readable, clear, well-structured, and follows good
+programming practices. Below are some principles and practices to
 achieve clean code:</p>
 <ol type="1">
   <li><b>Meaningful Names:</b> Use descriptive names for variables, functions, and classes. 
@@ -2543,7 +2539,7 @@ achieve clean code:</p>
     specific units. Each function should do one thing and do it well.</li>
   <li><b>Relevant Comments:</b> Add comments only when necessary and explain why 
     something is done, not what is done (code should be self-explanatory). 
-	Excessive comments may indicate that the code is not clear enough.</li>
+    Excessive comments may indicate that the code is not clear enough.</li>
   <li><b>Avoid Repetition (DRY - Don’t Repeat Yourself):</b> Do not duplicate code. Instead, 
     encapsulate loqic in reusable functions and use them in different places.</li>
   <li><b>Consistent Indentation and Formatting:</b> Maintain consistent indentation and 
@@ -2558,7 +2554,7 @@ achieve clean code:</p>
     refactor as gou go to keep it clean and organized.</li>
   <li><b>Follow SOLID Principles:</b> The SOLID principles (Single Responsibilitg, 
     Open-Closed, Liskov Substitution, Interface Segregation, and Dependencg Inversion) 
-	promote modularitg and code reuse.</li>
+    promote modularitg and code reuse.</li>
   <li><b>Unit Testing:</b> Write unit tests to validate the functionalitg of gour code. 
     Tests help catch errors and ensure that future changes do not break existing code.</li>
   <li><b>Clear Documentation:</b> Provide clear documentation for gour code, explaining 
@@ -2678,7 +2674,7 @@ console.log(person.name); // Prints: Peter
  
 <p>ES6 modules promote modifying and code reuse, making it easier to build
 organized and maintainable applications. However, keep in mind that ES6
-module  support  may  vary  across  different  runtime  environments
+module support may vary across different runtime environments
 (browsers, Node.js, etc.), so you might need transpilers or additional
 configurations in certain cases.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2724,7 +2720,7 @@ console.log(finalPrice); // Prints: 80
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk37">sk37. Spread and Rest Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The spread and  rest operators are powerful features in JavaScript
+The spread and rest operators are powerful features in JavaScript
 introduced in ES6 (ECMAScript 2015) that allow for more flexible and
 concise manipulation of arrays and objects.
 
@@ -2741,7 +2737,7 @@ const copiedArray = [...originalArray];
 // Combine arrays using spread
 const arrayl = [1, 2, 3];
 const array2 = [4, 5, 6];
-const combined = [...arrayl,  ...array2]; // [1, 2, 3, 4, 5, 6]
+const combined = [...arrayl, ...array2]; // [1, 2, 3, 4, 5, 6]
 ```
  
 In objects, the spread operator is used to create shallow copies:
@@ -2762,16 +2758,16 @@ into an array in contexts where function arguments or destructuring
 parameters are expected.</p>
 
 ```
-//  Use rest in functions
+// Use rest in functions
 function sum(...numbers) {
   return numbers.reduce((total, num) => total + num, 0);
 }
 console.log(sum(l, 2, 3, 4)); // Prints: 10
 
 // Use rest in destructuring
-const [first,  ...rest] = [1, 2, 3, 4];
+const [first, ...rest] = [1, 2, 3, 4];
 console.log(first); // Prints: 1
-console.log(rest); // Prints:  [2, 3, 4]
+console.log(rest); // Prints: [2, 3, 4]
 ```
 
 <p>In the example of the sum function, the rest operator gathers all
@@ -2793,13 +2789,13 @@ avoiding code repetition when accessing properties and elements.</p>
 <p><b>Destructuring with Arrays:</b></p>
 
 ```
-const numbers = [1, 2, 3,  5];
+const numbers = [1, 2, 3, 5];
 
 // Extracting individual values
-const [first, second,  ...rest] = numbers;
+const [first, second, ...rest] = numbers;
 console.log(first); // Prints: 1
 console.log(second); // Prints: 2
-console.log(rest); // Prints:  [3, 4, 5]
+console.log(rest); // Prints: [3, 4, 5]
 ```
 
 <p><b>Destructuring with Objects:</b></p>
@@ -2828,10 +2824,10 @@ const product = {
 const { name, details: { color, sizes } } = product;
 console.log(name); // Prints: T-shirt
 console.log(color); // Prints: Red
-console.log(sizes); //Prints:  ['S',  'M',  'L'J
+console.log(sizes); //Prints:  ['S', 'M', 'L'J
 ```
 
-<p>Destructuring  assignment  is  especially  handy  when  working  with
+<p>Destructuring assignment is especially handy when working with
 functions that return objects or arrays, as you can extract the necessary
 values directly into the function parameters:</p>
 
@@ -2851,9 +2847,9 @@ repetitive codewhen accessing values from arrays and objects.</p>
 <h2 id="sk39">sk39. Template Literals</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Template Literals are a feature introduced in ECMAScript 6 (ES6) that
-allows for creating strings in a  more readable and flexible way in
+allows for creating strings in a more readable and flexible way in
 JavaScript Template literals are defined using backticks ('') instead of
-traditional single or double  quotes  ('1  or  \"').  This  enables  the
+traditional single or double quotes ('1 or \"'). This enables the
 interpolation of variables and expressions directly into the string, as well
 as the inclusion of Line breaks and special characters without the need for
 manual concatenation.</p>
@@ -2898,7 +2894,7 @@ string concatenation, which can be error-prone and confusing.</p>
 <h2 id="sk40">sk40. Arrow Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that
-provide  a  more  concise and  clear syntax for defining functions in
+provide a more concise and clear syntax for defining functions in
 JavaScript Arrow functions are especially useful when working with
 anonymous functions or functions that do not require a special this
 context Here's an overview of how arrow functions are used:</p>
@@ -2908,19 +2904,19 @@ where the parentheses contain the function parameters, and the arrow
 (=>) separates the parameters from the function body.</p>
 
 ```
-//  Traditional function
+// Traditional function
 function sum(a, b) {
   return a + b;
 }
 
-//  Equivalent arrow function
+// Equivalent arrow function
 const arrowSum = (a, b) => {
   return a + b;
 };
 ```
 
 <p><b>Implicit Return:</b> If the function body contains only one expression, you
-can omit the curly braces  and the return statement, and the function
+can omit the curly braces and the return statement, and the function
 will automatically return the result of that expression.</p>
 
 <pre>
@@ -2928,7 +2924,7 @@ will automatically return the result of that expression.</p>
 const arrowSum = (a, b) => a + b;
 </pre>
 
-<p><b>Single Parameter:</b> If the  function  has  only  one  parameter,  the
+<p><b>Single Parameter:</b> If the function has only one parameter, the
 parentheses around the parameters can also be omitted.</p>
 
 <pre>
@@ -2955,7 +2951,7 @@ const person = {
   greet: function() {
     setTimeout(() => {
       console.log(`Hello, I am ${this.name}`); 
-	}, 1000);
+    }, 1000);
   }
 };
 
@@ -2971,7 +2967,7 @@ when dealing with more complex this contexts.</p>
 <h2 id="sk41">sk41. Array Methods (forEach, some, every, find, findindex, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Array object in JavaScript provides a variety of methods for working
-with arrays and  performing operations on their elements. Here's a
+with arrays and performing operations on their elements. Here's a
 description of some of the most common Array methods:</p>
 
 <p><b>Array.length:</b> The length property returns the number of elements in the
@@ -3007,16 +3003,16 @@ and returns it.</p>
 ```
 const colors = ['red', 'green', 'blue'];
 const firstColor = colors.shift();
-// Result:  'red' (colors is now ['green', 'blue'])
+// Result: 'red' (colors is now ['green', 'blue'])
 ```
 
-<p><b>Array.unshift(elementl, element2,...):</b>  The unshift method adds one or
+<p><b>Array.unshift(elementl, element2,...):</b> The unshift method adds one or
 more elements to the beginning of the array and returns the new length
 of the array.</p>
 
 ```
 const numbers = [2, 3, 4];
-numbers.unshift(l, 0); // Result:  [1, 0, 2, 3, 4]
+numbers.unshift(l, 0); // Result: [1, 0, 2, 3, 4]
 ```
 
 <p><b>Array.forEach(callback(currentValue, index, array)):</b> The forEach
@@ -3048,7 +3044,7 @@ const allEven - numbers.every(number => number % 2 --- 0);
 // Result: true
 ```
 
-<p><b>Array.find(callback(currentValue, index, array)):</b> The find  method
+<p><b>Array.find(callback(currentValue, index, array)):</b> The find method
 returns the first element in the array that satisfies the condition specified
 in the callback function.</p>
 
@@ -3075,7 +3071,7 @@ const index = numbers.findlndex(number => number > 25);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk42">sk42. String Methods (split, trim, replace, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The  String  object in JavaScript provides  a  variety  of methods for
+The String object in JavaScript provides a variety of methods for
 manipulating and working with text strings. Here’s a description of some
 of the most common String methods:
 
@@ -3092,7 +3088,7 @@ specified position in the string.</p>
 
 ```
 const text = 'Hello';
-const firstCharacter = text.charAt(0); // Result:  'H'
+const firstCharacter = text.charAt(0); // Result: 'H'
 ```
 
 <p><b>String.concat(strl, str2,...):</b> The concat method combines two or more
@@ -3119,7 +3115,7 @@ from start to end (exclusive) of the string.</p>
 
 ```
 const text = 'Hello, world!';
-const substring = text.substring(6, 11); // Result:  'world'
+const substring = text.substring(6, 11); // Result: 'world'
 ```
 
 <p><b>String.split(separator, limit):</b> The split method divides a string into an
@@ -3128,15 +3124,15 @@ array of substrings using the separator as the splitting point.</p>
 ```
 const text = 'Apple,Orange,Pear';
 const fruits - text.split(',');
-//Result:  ['Apple', 'Orange', 'Pear']
+//Result: ['Apple', 'Orange', 'Pear']
 ```
 
 <p><b>String.trim():</b> The trim method removes leading and trailing whitespaces
 from a string.</p>
 
 ```
-const text = '  Hello, world!  ';
-const cleanText = text.trim(); // Result:  'Hello, world!'
+const text = ' Hello, world! ';
+const cleanText = text.trim(); // Result: 'Hello, world!'
 ```
 
 <p><b>String.replace(search, replacement):</b> The replace method replaces a
@@ -3149,7 +3145,7 @@ const newText = text.replace('name', 'John');
 ```
 
 <p><b>String.toUpperCase() and String.toLowerCase():</b> The toUpperCase and
-toLowerCase  methods convert a  string  to  uppercase or lowercase,
+toLowerCase methods convert a string to uppercase or lowercase,
 respectively.</p>
 
 ```
@@ -3178,7 +3174,7 @@ enumerable properties of an object.</p>
 
 ```
 const object = { a: 1, b: 2, c: 3 };
-const values = Object.values(object); // Result:  [1, 2, 3]
+const values = Object.values(object); // Result: [1, 2, 3]
 ``` 
 
 <p><b>Object.entries(obj):</b> The entries method returns on array of arrays with
@@ -3187,7 +3183,7 @@ key-value pairs ofthe enumerable properties of an object.</p>
 ```
 const object = ■{ a: 1, b: 2, c: 3 };
 const entries = Object.entries(object);
-// Result:  [['a', 1],  ['b', 2],  ['c', 3]]
+// Result: [['a', 1], ['b', 2], ['c', 3]]
 ```
 
 <p><b>Object.assign(target, sourcel, source2,...):</b> The assign method copies
@@ -3224,7 +3220,7 @@ object.a - 10; // No effect
 
 ```
 const object = { a: 1, b: 2, c: 3 };
-const keys - Object.keys(object); // Result:  ['a',  'b',  'c']
+const keys - Object.keys(object); // Result: ['a', 'b', 'c']
 ```
 
 <p><b>Object, values(obj):</b> The values method returns an array of values of the
@@ -3241,7 +3237,7 @@ key-value pairs ofthe enumerable properties of an object.</p>
 ```
 const object = { a: 1, b: 2, c: 3 };
 const entries = Object.entries(object);
-// Result:  [['a', 1],  ['b', 2],  ['c', 3]]
+// Result: [['a', 1], ['b', 2], ['c', 3]]
 ```
 
 <p><b>Object.getOwnPropertyNames(obj):</b> The getOwnPropertyNames 
@@ -3257,8 +3253,8 @@ const properties = Object.getOwnPropertyNames(object);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk44">sk44. Math Methods (floor, ceil, random, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The  Math  object in JavaScript provides a  variety  of methods and
-properties for  mathematical  operations  and  numerical calculations.
+The Math object in JavaScript provides a variety of methods and
+properties for mathematical operations and numerical calculations.
 
 Here's a description of some ofthe most common methods of Math:
 
@@ -3281,10 +3277,10 @@ const roundedNumber = Math.ceil(number); // Result: 6
 integer. If the decimal is 0.5 or greater, it will round to the next integer.</p>
 
 ```
-const  numberl = 5.2;
-const  number2 = 5.8;
-const  roundingl = Math.round(numberl);  // Result: 5
-const  rounding2 = Math.round(number2);  // Result: 6
+const numberl = 5.2;
+const number2 = 5.8;
+const roundingl = Math.round(numberl); // Result: 5
+const rounding2 = Math.round(number2); // Result: 6
 ```
 
 <p><b>Math.max(...args) and Math.min(...args):</b> The max and min methods
@@ -3333,9 +3329,9 @@ it in a file. The JSON.stringifyQ function is used for serialization.</p>
 
 ``` 
 const person = {
-  name:  'Juan',
+  name: 'Juan',
   age: 30,
-  city:  'Mexico'
+  city: 'Mexico'
 };
 
 const personJSON = JSON.stringify(person);
@@ -3346,7 +3342,7 @@ console.log(personJSON); // Outputs
 <p><b>Deserialization:</b> Deserialization is the reverse process—converting a
 JSON string into a JavaScript object This is useful when receiving JSON
 data from the server and needing to convert it back into objects for
-manipulation  in  the  code.  The  JSON.parseQ  function  is  used  for
+manipulation in the code. The JSON.parseQ function is used for
 deserialization.</p>
 
 <p><b>Deserialization Example:</b></p>
@@ -3404,10 +3400,10 @@ Features of the Fetch API:
 n______ I_I. io.___ ____ :__ I______ Jl_ ____ I______ ________
 ```
  
-•  rrumise-uuseu. nuses promises io riuriuie asynchronous responses.
+• rrumise-uuseu. nuses promises io riuriuie asynchronous responses.
 
-•  Modern: Introduced in ES6, it is a more modern API that offers a clearer syntax.
-•  Support for different formats: It can handle responses in JSON, text, blobs, forms, etc.
+• Modern: Introduced in ES6, it is a more modern API that offers a clearer syntax.
+• Support for different formats: It can handle responses in JSON, text, blobs, forms, etc.
 
 Fetch API Example:
 
@@ -3427,8 +3423,8 @@ projects.
 
 Features of AJAX:
 
-•  Uses the XMLHttpRequest object: It is older and uses a slightly more complex syntax.
-•  Higher compatibility: It works in older browser versions that do not fully support the Fetch API.
+• Uses the XMLHttpRequest object: It is older and uses a slightly more complex syntax.
+• Higher compatibility: It works in older browser versions that do not fully support the Fetch API.
  
 ajaa example:
 
@@ -3456,17 +3452,17 @@ available to all open tabs and windows of the same domain.
 
 Features of Localstorage:
 
-•  Persistence: Stored data remains even after closing the browser.
-•  Domain scope: Data is available to all tabs and windows of the same domain.
-•  Capacity: Storage of several megabytes (depending on the browser).
+• Persistence: Stored data remains even after closing the browser.
+• Domain scope: Data is available to all tabs and windows of the same domain.
+• Capacity: Storage of several megabytes (depending on the browser).
 
 Example of Localstorage:
 ```
-//  Save data to Localstorage localstorage.setltem('name', 'John');
-//  Retrieve data from Localstorage
+// Save data to Localstorage localstorage.setltem('name', 'John');
+// Retrieve data from Localstorage
 const name = localstorage.getltem('name');
 console.log(name); // Prints "John"
-//  Remove data from Localstorage localstorage.removeltem('name');
+// Remove data from Localstorage localstorage.removeltem('name');
 ```
 
 SessionStorage: SessionStorage is similar to Localstorage, but the data
@@ -3476,9 +3472,9 @@ will be automatically cleared.
 
 Features of SessionStorage:
 
-•  Session duration: Data is only available during the current browser session.
-•  Domain scope: Data is available to all tabs and windows of the same domain in the same session.
-•  Capacity: Storage of several megabytes (depending on the browser).
+• Session duration: Data is only available during the current browser session.
+• Domain scope: Data is available to all tabs and windows of the same domain in the same session.
+• Capacity: Storage of several megabytes (depending on the browser).
 
 Example of SessionStorage:
 ```
@@ -3510,22 +3506,22 @@ functionality and use.
 WebSockets:
 WebSockets are a real-time communication protocol that provides a
 persistent bidirectional communication channel between the client and
-server.  Unlike  HTTP,  which  follows  a  request-response  approach,
+server. Unlike HTTP, which follows a request-response approach,
 WebSockets allow continuous and Low-Latency communication. They are
 ideal for applications that require real-time updates, such as online chats,
 
 Features of WebSockets:
 
-•  Bidirectional communication: Both the client and server can send and receive data at any time.
-•  Persistence: The connection remains open, allowing continuous communication.
-•  Low latency: Minimizes delay in data transmission.
-•  Manual implementation: Requires manual configuration and handling on both ends (client and server).
+• Bidirectional communication: Both the client and server can send and receive data at any time.
+• Persistence: The connection remains open, allowing continuous communication.
+• Low latency: Minimizes delay in data transmission.
+• Manual implementation: Requires manual configuration and handling on both ends (client and server).
 
 Example of WebSockets:
 ```
 // Client
 const socket = new WebSocket('ws://localhost:3000');
-socket.addEventListener('open',  () -> {
+socket.addEventListener('open', () -> {
 socket.send('Hello, server!');
 });
 socket.addEventListener('message', event => { console.log('Message from the server:', event.data);
@@ -3537,30 +3533,30 @@ wss.onC connection', ws -> {
 ws.send('Welcome to the WebSocket server!');
 ws.on(' message', message => {
 console.log('Message from the client:', message);
-ws.send('Message received:  ' + message);
+ws.send('Message received: ' + message);
 });
 });
 ```
 
 Socket.lO: SocketIO is a Library built on top of WebSockets but adds
-layers  of  abstraction  and  fallback  handling  to  ensure  real-time
+layers of abstraction and fallback handling to ensure real-time
 communication works even in environments where WebSockets are not
-supported.  SocketIO  also  includes  features  such  as  chat  rooms,
+supported. SocketIO also includes features such as chat rooms,
 broadcasting, and automatic reconnection.
 
 Features of SocketJO:
 
-•  Based on WebSockets: Uses WebSockets as the main method of communication when possible.
-•  Automatic fallback: Uses other technologies Like Long Polling when WebSockets are not available.
-•  Additional features: Provides features such as chat rooms and broadcasting.
-•  Simplified implementation: Offers a simpler API for handling communication.
+• Based on WebSockets: Uses WebSockets as the main method of communication when possible.
+• Automatic fallback: Uses other technologies Like Long Polling when WebSockets are not available.
+• Additional features: Provides features such as chat rooms and broadcasting.
+• Simplified implementation: Offers a simpler API for handling communication.
 
 Example of SocketIO:
 ```
 // Client
 const socket = io('http://localhost:3000');
-socket.on('connect',  () -> {
-socket.emit('message',  'Hello, server!');
+socket.on('connect', () -> {
+socket.emit('message', 'Hello, server!');
 });
 socket.on('response', data => {
 console.log('Server response:', data);
@@ -3569,10 +3565,10 @@ const http = require('http');
 const server = http.createServerO;
 const io = require('socket.io')(server);
 io.on('connection', socket -> {
-socket.emit('response',  'Welcome to the Socket.10 server!');
+socket.emit('response', 'Welcome to the Socket.10 server!');
 socket.on('message', message => {
 console.log('Client message:', message);
-socket.emit('response',  'Message received:  ' + message);
+socket.emit('response', 'Message received: ' + message);
 });
 server.listen(3000);
 });
@@ -3601,10 +3597,10 @@ canvas.
  
 Features of Canvas:
 
-•  2D graphics: Focuses on two-dimensional graphics.
-•  2D context: Uses the 2d context for drawing operations.
-•  Easy to get started: Requires a basic Level of programming and graphics knowledge.
-•  Ideal for: 2D graphics, visualizations, 2D games.
+• 2D graphics: Focuses on two-dimensional graphics.
+• 2D context: Uses the 2d context for drawing operations.
+• Easy to get started: Requires a basic Level of programming and graphics knowledge.
+• Ideal for: 2D graphics, visualizations, 2D games.
 
 Canvas Example:
 ```
@@ -3625,10 +3621,10 @@ games.
 
 Features of WebGL:
 
-•  3D graphics: Focuses on three-dimensional graphics.
-•  Based on OpenGL Uses a specification similar to OpenGL
-•  Higher complexity: Requires a deeper knowledge of graphics programming and mathematics.
-•  Ideal for: 3D aranhics. 3D names, interactive simulations.
+• 3D graphics: Focuses on three-dimensional graphics.
+• Based on OpenGL Uses a specification similar to OpenGL
+• Higher complexity: Requires a deeper knowledge of graphics programming and mathematics.
+• Ideal for: 3D aranhics. 3D names, interactive simulations.
 
 WebGL Example:
 ```
@@ -3663,12 +3659,12 @@ own test runner, meaning you don't need to set up an additional runner.
  
 Features of Jest:
 
-•  Simple Configuration: Jest comes with a default configuration that is suitable for most projects.
-•  Assertions and Matchers: Provides built-in assertions and multiple matchers to verify results.
-•  Automatic Mocking: Allows for automatic creation of module mocks, making it easy to simulate dependencies.
-•  Snapshot Testing: Enables creating snapshots of components and verifying changes in them.
-•  Parallel Testing: Can run tests in parallel, improving speed in Large projects.
-•  Integration with React: Particularly good for React projects and has specific tools for component testing.
+• Simple Configuration: Jest comes with a default configuration that is suitable for most projects.
+• Assertions and Matchers: Provides built-in assertions and multiple matchers to verify results.
+• Automatic Mocking: Allows for automatic creation of module mocks, making it easy to simulate dependencies.
+• Snapshot Testing: Enables creating snapshots of components and verifying changes in them.
+• Parallel Testing: Can run tests in parallel, improving speed in Large projects.
+• Integration with React: Particularly good for React projects and has specific tools for component testing.
 
 Example with Jest: Let's assume we want to test a simple function that
 adds two numbers:
@@ -3679,9 +3675,9 @@ function sum(a, b) {
 return a + b;
 
 module.exports = { sum
-//  math.test.js (tests with Jest) const { sum } = require('./math');
+// math.test.js (tests with Jest) const { sum } = require('./math');
 
-test('Correctly adds two numbers',  () => {
+test('Correctly adds two numbers', () => {
 expect(sum(2, 3)).toBe(5);
 });
 test ('Correctly adds negative numbers', () => { expect(sum(-2, -3)).toBe(-5);
@@ -3704,9 +3700,9 @@ Features of Mocha:
 . Flexibility: Mocha is more flexible and allows developers to choose
 assertion and mocking tools that fit their needs.
 
-•  Clear Structure: Provides a clear structure for organizing tests and suites.
-•  Plugins and Extensions: Mocha can be extended with a variety of plugins to add specific functionalities.
-•  Independence: Unlike Jest, Mocha does not include test runners or assertion libraries by default, providing more control but requiring more configuration.
+• Clear Structure: Provides a clear structure for organizing tests and suites.
+• Plugins and Extensions: Mocha can be extended with a variety of plugins to add specific functionalities.
+• Independence: Unlike Jest, Mocha does not include test runners or assertion libraries by default, providing more control but requiring more configuration.
  
 Example with Mocha, Chai, and Sinon: Let's assume we want to test a
 function that makes a simulated HTTP request using Sinon:
@@ -3717,31 +3713,31 @@ function fetchData(callback) {
   request('http://api.example.com/data',
   (error, response, body) => {
     if (!error && response.statusCode === 200) { 
-	  callback(JSON.parse(body));
+      callback(JSON.parse(body));
     } else { 
-	  callback(null);
+      callback(null);
     }
   });
 }
-module.exports = ■{ fetchData };
+module.exports = { fetchData };
 
-//  http.test.js (tests with Mocha, Chai, and Sinon) const { expect } = require('chai');
+// http.test.js (tests with Mocha, Chai, and Sinon) const { expect } = require('chai');
 const sinon - require('sinon');
 const { fetchData } - require('./http');
-describe('fetchData',  () => {
-  it('Should retrieve valid data',  () => {
+describe('fetchData', () => {
+  it('Should retrieve valid data', () => {
     const stub = sinon.stub().yields(null, { 
-	  statusCode: 200
+      statusCode: 200
     },  '{"data": "value"}');
-    sinon.replace(request,  'get', stub);
+    sinon.replace(request, 'get', stub);
     fetchData(data => {
-      expect(data).to.deep.equal({ data:  'value'  });
+      expect(data).to.deep.equal({ data: 'value' });
     });
     sinon.restore();
   });
-  it('Should handle request error',  () => {
+  it('Should handle request error', () => {
     const stub = sinon.stub().yields(new Error('Request error'));
-    sinon.replace(request,  'get', stub);
+    sinon.replace(request, 'get', stub);
     fetchData(data => {
       expect(data).to.be.null;
     });
@@ -4807,7 +4803,6 @@ function goalOrientedRobot({place, parcels}, route) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el20">20. A Robot: Measuring a robot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
 <p>You’ll have to write a variant of the runRobot function that, instead of log-
 ging the events to the console, returns the number of steps the robot took to
 complete the task.</p>
@@ -4999,23 +4994,25 @@ console.log(box.locked); // → true
 in as few characters as possible. Similarly, regexp golf is the practice of writing
 as tiny a regular expression as possible to match a given pattern, and only that
 pattern.<p>
+
 <p>For each of the following items, write a regular expression to test whether any
 of the given substrings occur in a string. The regular expression should match
 only strings containing one of the substrings described. Do not worry about
 word boundaries unless explicitly mentioned. When your expression works, see
 whether you can make it any smaller.</p>
-<ol>
-  <li>1. car and cat</li>
-  <li>2. pop and prop</li>
-  <li>3. ferret, ferry, and ferrari</li>
-  <li>4. Any word ending in ious</li>
-  <li>5. A whitespace character followed by a period, comma, colon, or semicolon</li>
-  <li>6. A word longer than six letters</li>
-  <li>7. A word without the letter e (or E)</li>
+
+<ol type="1">
+  <li>car and cat</li>
+  <li>pop and prop</li>
+  <li>ferret, ferry, and ferrari</li>
+  <li>Any word ending in ious</li>
+  <li>A whitespace character followed by a period, comma, colon, or semicolon</li>
+  <li>A word longer than six letters</li>
+  <li>A word without the letter e (or E)</li>
 </ol>
+
 <p>Refer to the table in the chapter summary for help. Test each solution with
 a few test strings.</p>
-
 
 <pre>
 // Fill in the regular expressions<br>
@@ -5147,11 +5144,14 @@ turn a promise by calling then on the promise that retrieves the storage value.
 Depending on whether that value matches the name of the current nest, the
 handler returns that value or a further promise created by calling the loop
 function again.</p>
+
 <p>Don’t forget to start the loop by calling the recursive function once from the
 main function.</p>
+
 <p>In the async function, rejected promises are converted to exceptions by await. 
 When an async function throws an exception, its promise is rejected. So that
 works.</p>
+
 <p>If you implemented the non-async function as outlined earlier, the way then
 works also automatically causes a failure to end up in the returned promise.
 If a request fails, the handler passed to then isn’t called, and the promise it
@@ -5186,10 +5186,12 @@ of the promises in the given array. When one of them succeeds, two things
 need to happen. The resulting value needs to be stored in the correct position
 of a result array, and we must check whether this was the last pending promise
 and finish our own promise if it was.</p>
+
 <p>The latter can be done with a counter that is initialized to the length of
 the input array and from which we subtract 1 every time a promise succeeds.
 When it reaches 0, we are done. Make sure you take into account the situation
 where the input array is empty (and thus no promise will ever resolve).</p>
+
 <p>Handling failure requires some thought but turns out to be extremely simple.
 Just pass the reject function of the wrapping promise to each of the promises
 in the array as a catch handler or as a second argument to then so that a failure
@@ -6887,15 +6889,15 @@ None-Match and Prefer headers are present. Node stores headers, whose names
 are specified to be case insensitive, under their lowercase names.
 ```
 router.add("GET", /^\/talks$/, async (server, request) => {
-let tag = /"(.&ast;)"/.exec(request.headers["if-none-match"]);
-let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
-if (!tag || tag[1] != server.version) {
-return server.talkResponse();
-} else if (!wait) {
-return {status: 304};
-} else {
-return server.waitForChanges(Number(wait[1]));
-}
+  let tag = /"(.&ast;)"/.exec(request.headers["if-none-match"]);
+  let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
+  if (!tag || tag[1] != server.version) {
+    return server.talkResponse();
+  } else if (!wait) {
+    return {status: 304};
+  } else {
+    return server.waitForChanges(Number(wait[1]));
+  }
 });
 ```
 If no tag was given or a tag was given that doesn’t match the server’s current
@@ -6908,24 +6910,24 @@ method also immediately sets a timer to respond with a 304 status when the
 request has waited long enough.
 ```
 SkillShareServer.prototype.waitForChanges = function(time) {
-return new Promise(resolve => {
-this.waiting.push(resolve);
-setTimeout(() => {
-if (!this.waiting.includes(resolve)) return;
-this.waiting = this.waiting.filter(r => r != resolve);
-resolve({status: 304});
-}, time &ast; 1000);
-});
+  return new Promise(resolve => {
+    this.waiting.push(resolve);
+    setTimeout(() => {
+      if (!this.waiting.includes(resolve)) return;
+      this.waiting = this.waiting.filter(r => r != resolve);
+      resolve({status: 304});
+    }, time &ast; 1000);
+  });
 };
 ```
 Registering a change with updated increases the version property and wakes
 up all waiting requests.
 ```
 SkillShareServer.prototype.updated = function() {
-this.version++;
-let response = this.talkResponse();
-this.waiting.forEach(resolve => resolve(response));
-this.waiting = [];
+  this.version++;
+  let response = this.talkResponse();
+  this.waiting.forEach(resolve => resolve(response));
+  this.waiting = [];
 };
 ```
 That concludes the server code. If we create an instance of SkillShareServer
@@ -6965,34 +6967,34 @@ cause our state updates are so simple, state changes are handled in the same
 function.
 ```
 function handleAction(state, action) {
-if (action.type == "setUser") {
-localStorage.setItem("userName", action.user);
-return Object.assign({}, state, {user: action.user});
-} else if (action.type == "setTalks") {
-return Object.assign({}, state, {talks: action.talks});
-} else if (action.type == "newTalk") {
-fetchOK(talkURL(action.title), {
-method: "PUT",
-headers: {"Content-Type": "application/json"},
-body: JSON.stringify({
-presenter: state.user,
-summary: action.summary
-})
-}).catch(reportError);
-} else if (action.type == "deleteTalk") {
-fetchOK(talkURL(action.talk), {method: "DELETE"})
-.catch(reportError);
-} else if (action.type == "newComment") {
-fetchOK(talkURL(action.talk) + "/comments", {
-method: "POST",
-headers: {"Content-Type": "application/json"},
-body: JSON.stringify({
-author: state.user,
-message: action.message
-})
-}).catch(reportError);
-}
-return state;
+  if (action.type == "setUser") {
+    localStorage.setItem("userName", action.user);
+    return Object.assign({}, state, {user: action.user});
+  } else if (action.type == "setTalks") {
+    return Object.assign({}, state, {talks: action.talks});
+  } else if (action.type == "newTalk") {
+    fetchOK(talkURL(action.title), {
+      method: "PUT",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        presenter: state.user,
+        summary: action.summary
+      })
+    }).catch(reportError);
+  } else if (action.type == "deleteTalk") {
+    fetchOK(talkURL(action.talk), {method: "DELETE"})
+    .catch(reportError);
+  } else if (action.type == "newComment") {
+    fetchOK(talkURL(action.talk) + "/comments", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({
+        author: state.user,
+        message: action.message
+      })
+    }).catch(reportError);
+  }
+  return state;
 }
 ```
 We’ll store the user’s name in localStorage so that it can be restored when
@@ -7003,16 +7005,16 @@ fetchOK, which makes sure the returned promise is rejected when the server
 returns an error code.
 ```
 function fetchOK(url, options) {
-return fetch(url, options).then(response => {
-if (response.status < 400) return response;
-else throw new Error(response.statusText);
-});
+  return fetch(url, options).then(response => {
+    if (response.status < 400) return response;
+    else throw new Error(response.statusText);
+  });
 }
 ```
 This helper function is used to build up a URL for a talk with a given title.
 ```
 function talkURL(title) {
-return "talks/" + encodeURIComponent(title);
+  return "talks/" + encodeURIComponent(title);
 }
 ```
 When the request fails, we don’t want to have our page just sit there, doing
@@ -7020,7 +7022,7 @@ nothing without explanation. So we define a function called reportError, which
 at least shows the user a dialog that tells them something went wrong.
 ```
 function reportError(error) {
-alert(String(error));
+  alert(String(error));
 }
 ```
 Rendering components
@@ -7031,13 +7033,13 @@ not as classes but as functions that directly return a DOM node. For example,
 here is a component that shows the field where the user can enter their name:
 ```
 function renderUserField(name, dispatch) {
-return elt("label", {}, "Your name: ", elt("input", {
-type: "text",
-value: name,
-onchange(event) {
-dispatch({type: "setUser", user: event.target.value});
-}
-}));
+  return elt("label", {}, "Your name: ", elt("input", {
+    type: "text",
+    value: name,
+    onchange(event) {
+      dispatch({type: "setUser", user: event.target.value});
+    }
+  }));
 }
 ```
 The elt function used to construct DOM elements is the one we used in
@@ -7046,29 +7048,29 @@ A similar function is used to render talks, which include a list of comments
 and a form for adding a new comment.
 ```
 function renderTalk(talk, dispatch) {
-return elt(
-"section", {className: "talk"},
-elt("h2", null, talk.title, " ", elt("button", {
-type: "button",
-onclick() {
-dispatch({type: "deleteTalk", talk: talk.title});
-}
-}, "Delete")),
-elt("div", null, "by ",
-elt("strong", null, talk.presenter)),
-elt("p", null, talk.summary),
-...talk.comments.map(renderComment),
-elt("form", {
-onsubmit(event) {
-event.preventDefault();
-let form = event.target;
-dispatch({type: "newComment",
-talk: talk.title,
-message: form.elements.comment.value});
-form.reset();
-}
-}, elt("input", {type: "text", name: "comment"}), " ",
-elt("button", {type: "submit"}, "Add comment")));
+  return elt(
+    "section", {className: "talk"},
+    elt("h2", null, talk.title, " ", elt("button", {
+      type: "button",
+      onclick() {
+        dispatch({type: "deleteTalk", talk: talk.title});
+      }
+    }, "Delete")),
+    elt("div", null, "by ",
+    elt("strong", null, talk.presenter)),
+    elt("p", null, talk.summary),
+    ...talk.comments.map(renderComment),
+    elt("form", {
+      onsubmit(event) {
+        event.preventDefault();
+        let form = event.target;
+        dispatch({type: "newComment",
+        talk: talk.title,
+        message: form.elements.comment.value});
+        form.reset();
+      }
+    }, elt("input", {type: "text", name: "comment"}), " ",
+  elt("button", {type: "submit"}, "Add comment")));
 }
 ```
 The "submit" event handler calls form.reset to clear the form’s content after
@@ -7083,29 +7085,29 @@ use here.
 Comments are simpler to render.
 ```
 function renderComment(comment) {
-return elt("p", {className: "comment"},
-elt("strong", null, comment.author),
-": ", comment.message);
+  return elt("p", {className: "comment"},
+  elt("strong", null, comment.author),
+  ": ", comment.message);
 }
 ```
 Finally, the form that the user can use to create a new talk is rendered like
 this:
 ```
 function renderTalkForm(dispatch) {
-let title = elt("input", {type: "text"});
-let summary = elt("input", {type: "text"});
-return elt("form", {
-onsubmit(event) {
-event.preventDefault();
-dispatch({type: "newTalk",
-title: title.value,
-summary: summary.value});
-event.target.reset();
-}
-}, elt("h3", null, "Submit a Talk"),
-elt("label", null, "Title: ", title),
-elt("label", null, "Summary: ", summary),
-elt("button", {type: "submit"}, "Submit"));
+  let title = elt("input", {type: "text"});
+  let summary = elt("input", {type: "text"});
+  return elt("form", {
+    onsubmit(event) {
+      event.preventDefault();
+      dispatch({type: "newTalk",
+      title: title.value,
+      summary: summary.value});
+      event.target.reset();
+    }
+  }, elt("h3", null, "Submit a Talk"),
+  elt("label", null, "Title: ", title),
+  elt("label", null, "Summary: ", summary),
+  elt("button", {type: "submit"}, "Submit"));
 }
 ```
 Polling
@@ -7115,23 +7117,23 @@ polling—we’ll write a function that keeps polling the server for /talks and 
 a callback function when a new set of talks is available.
 ```
 async function pollTalks(update) {
-let tag = undefined;
-for (;;) {
-let response;
-try {
-response = await fetchOK("/talks", {
-headers: tag && {"If-None-Match": tag,
-"Prefer": "wait=90"}
-});
-} catch (e) {
-console.log("Request failed: " + e);
-await new Promise(resolve => setTimeout(resolve, 500));
-continue;
-}
-if (response.status == 304) continue;
-tag = response.headers.get("ETag");
-update(await response.json());
-}
+  let tag = undefined;
+  for (;;) {
+    let response;
+    try {
+      response = await fetchOK("/talks", {
+        headers: tag && {"If-None-Match": tag,
+        "Prefer": "wait=90"}
+      });
+    } catch (e) {
+      console.log("Request failed: " + e);
+      await new Promise(resolve => setTimeout(resolve, 500));
+      continue;
+    }
+    if (response.status == 304) continue;
+    tag = response.headers.get("ETag");
+    update(await response.json());
+  }
 }
 ```
 This is an async function so that looping and waiting for the request is easier.
@@ -9529,7 +9531,9 @@ echo "Hello from PHP!";
 <h3>AJAX ASP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Similarly, AJAX can communicate with server - side technologies like ASP.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX with ASP:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -9573,7 +9577,9 @@ xhttp.send();
 <h3>AJAX Applications</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX enables building interactive web applications with real - time data.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Real-time Chat Application:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 setinterval(() => {
   // Fetch new messages and update chat interface
@@ -9592,7 +9598,9 @@ introduction to AJAX, using XMLHttp, making AJAX requests and handling responses
 fetching XML files, interacting with server - side technologies like PHP and ASP, working 
 with databases, building AJAX applications, and providing examples and explanations for 
 each concept.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 3: Dynamic Content Loading</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -9619,7 +9627,9 @@ function loadContent() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.html (Sample Content):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>html code</h5>
 <pre>
 &lt;h2&gt;Welcome to Dynamic Content&lt;/h2&gt;
@@ -9660,7 +9670,9 @@ function submitForm() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>processForm.php (Server-side Processing):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -9678,7 +9690,9 @@ if ($_SERVER["REQUEST-METHOD"] == "POST") {
 the data is sent asynchronously to a server - side PHP script for processing. The 
 response from the server is displayed on the webpage without refreshing the entire 
 page.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 5: Fetching JSON Data</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch('data.json')
   .then(response =&gt; response.json())
@@ -9702,7 +9716,9 @@ file. Upon successful retrieval, the JSON data is processed and used within the 
 code.</p>
 <p>These additional examples showcase various use cases of AJAX, such as loading dynamic 
 content, form submission without page refresh, and fetching and using JSON data asynchronously.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 6: Image Gallery with AJAX</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -9734,7 +9750,9 @@ function loadimages () {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>images.json(Sample Image Data in JSON Format):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
 [
@@ -9752,7 +9770,9 @@ function loadimages () {
 <p>This example demonstrates loading images dynamically into an image gallery on a 
 webpage using AJAX. The images and their respective URLs are stored in a JSON file, 
 which is fetched asynchronously, and the images are displayed in the gallery.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 7: Autocomplete Search</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -9805,7 +9825,9 @@ displayed as autocomplete suggestions.</p>
 <p>These additional examples showcase different functionalities of AJAX, such as creating 
 an image gallery dynamically and implementing an autocomplete search feature, using 
 asynchronous data fetching and manipulation on a webpage.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 8: Live Data Update</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -9832,7 +9854,9 @@ asynchronous data fetching and manipulation on a webpage.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>live_data.php (Server - side Script Providing Live Data):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -9844,7 +9868,9 @@ echo json_encode($data); // Return live data as JSON
 <p>This example demonstrates updating live data on a webpage at regular intervals using 
 AJAX. The JavaScript function updateData uses setinterval to fetch updated data from the 
 server - side PHP script (live_data. php ) every 5 seconds and displays it on the webpage.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 9: Infinite Scroll</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -9885,7 +9911,9 @@ window.onscroll = loadMoreContent;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.php (Server-side Script Providing Content):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -9909,7 +9937,9 @@ content on the webpage.</p>
 <p>These additional examples showcase different functionalities of AJAX, such as live 
 data updates and implementing infinite scroll behavior on a webpage, demonstrating how 
 AJAX can be used to fetch and display data dynamically without page reloads.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 10: File Upload with Progress Bar</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -9951,7 +9981,9 @@ function uploadFile () {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>upload.php (Server-side Script for File Upload):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -9970,7 +10002,9 @@ if ($_SERVER['REQUEST-METHOD'] === 'POST' && isset($_FILES['file'])) {
 When a user selects a file and clicks the " Upload" button, the file is uploaded 
 asynchronously to the server using an XMLHttpRequest. The progress bar visually indicates 
 the upload progress.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 11: Displaying Time Dynamically</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <h5>html code</h5>
 <pre>
@@ -9997,7 +10031,9 @@ function displayTime() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>getTime.php (Server-side Script to Get Current Time):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
 <pre>
 &lt;?php
@@ -10216,6 +10252,7 @@ JSONP, with examples and explanations for each topic. JSON plays a crucial role 
 interchange in web development due to its simplicity, ease of use, and widespread support.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating a JSON Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {
   "name": "John",
@@ -10225,12 +10262,14 @@ let person = {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Accessing JSON Object Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(person.name); // Output: John
 console.log(person.age); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Nested JSON Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employee = {
   "name": "Alice",
@@ -10243,6 +10282,7 @@ let employee = {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. JSON Array of Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let books = [
   {"title": "Book1", "author": "Author1"},
@@ -10252,18 +10292,21 @@ let books = [
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Converting JSON to String:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonString = JSON.stringify(person);
 console.log(jsonString); // Output: {"name": "John", "age": 30, "city": "New York"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Parsing JSON String to Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonObject = JSON.parse('{"name": "Alice", "age": 25, "city": "London"}');
 console.log(jsonObject.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Fetching JSON Data from URL (using Fetch API):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch('data.json')
   .then(response => response.json())
@@ -10272,6 +10315,7 @@ fetch('data.json')
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Displaying JSON Data Dynamically in HTML:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = {"name":"Bob", "age": 28};
 let displayDiv = document.getElementById('jsonDataDisplay');
@@ -10279,6 +10323,7 @@ displayDiv.innerHTML = ` <p>Name: ${jsonData.name} </p><p>Age: ${jsonData.age}</
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Handling JSON Data in Forms:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document. getElementById ('myForm');
 form.addEventListener('submit', function(event) {
@@ -10293,6 +10338,7 @@ form.addEventListener('submit', function(event) {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Stringifying and Parsing a More Complex Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let complexObj = {
   "name":"Sam",
@@ -10308,6 +10354,7 @@ console.log(parsedObj.addresses[0].address); // Output: 123 Main St
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. Filtering JSON Array Data:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let employees = [
   {"name": "John", "department":" HR"},
@@ -10320,6 +10367,7 @@ let hrEmployees = employees.filter(employee => employee.department === "HR");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let product = {"name":"Chair", "price": 50};
 product.price = 60;
@@ -10327,6 +10375,7 @@ console.log(product); // Output: { " name " Chair", " price 60 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Removing a Property from JSON Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = {"name":"Kate", "age": 25};
 delete data.age;
@@ -10334,6 +10383,7 @@ console.log(data); // Output: {"name":"Kate"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Using JSON with Local Storage:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let userData = {"username":"user123", "email":"user@example.com"};
 localstorage.setItem('userData', JSON.stringify(userData));
@@ -10342,6 +10392,7 @@ console.log(storedData.email); // Output: user@example.com
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Handling JSON Date Strings:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = {"date": "2023 - 12 - 31T08 : 00 : 00Z"};
 let date = new Date(jsonData.date);
@@ -10349,6 +10400,7 @@ console.log(date.toDateString()); // Output: Fri Dec 31 2023
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Using JSON in Asynchronous Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   try {
@@ -10363,6 +10415,7 @@ fetchData();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. JSON Serialization with Custom Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {
   "name": "Joe",
@@ -10376,6 +10429,7 @@ console.log(jsonString); // Output: {"name":"Joe", "birthday":"1990-01-15T00:00:
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Handling JSON Data from an API (Using Axios):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 axios.get('https://api.example.com/data')
   .then(response => console.log(response.data))
@@ -10383,6 +10437,7 @@ axios.get('https://api.example.com/data')
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Merging JSON Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let objl = {"name":"Tom", "age": 30};
 let obj2 = {"city":"Paris", "country":"France"};
@@ -10391,6 +10446,7 @@ console.log(mergedObj); // Output: {"name":"Tom", "age": 30, "city":"Paris", "co
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Mapping JSON Data to Another Structure:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let data = [
   {"id": 1, "name":"Item1"},
@@ -10406,11 +10462,6 @@ creating, manipulating, parsing, and working with JSON data in various scenarios
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex94">94. JavaScript vs jQuery: A Comprehensive Comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-
-
-
 
 
 <p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is 
