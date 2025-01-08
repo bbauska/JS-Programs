@@ -940,7 +940,7 @@ const canary = {
 entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk05">sk5. == vs === vs typeof</h2>
+<h2 id="sk05">sk05. == vs === vs typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>== - === - and typeof are operators used to compare values and retrieve
 information about data types. Here's an explanation of each:</p>
@@ -6534,9 +6534,7 @@ SkillShareServer.prototype.updated = function() {
 };<br>
 // The line that starts the server must be changed to
 new SkillShareServer(loadTalks()).start(8000);</pre>
-
-
-
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Long Polling</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6584,10 +6582,10 @@ JavaScript code for the client-side system.</p>
 <p>A GET request to /talks returns a JSON document like this:</p>
 
 <pre>
-[{"title": "Unituning",
+&lbrack;{"title": "Unituning",
 "presenter": "Jamal",
 "summary": "Modifying your cycle for extra style",
-"comments": []}]}
+"comments": &lbrack;&rbrack;}&rbrack;
 </pre>
 
 Creating a new talk is done by making a PUT request to a URL like /talks/
@@ -6597,6 +6595,8 @@ properties.
 Since talk titles may contain spaces and other characters that may not appear
 normally in a URL, title strings must be encoded with the encodeURIComponent
 function when building up such a URL.
+
+```
 console.log("/talks/" + encodeURIComponent("How to Idle"));
 // → /talks/How%20to%20Idle
 A request to create a talk about idling might look something like this:
@@ -6605,16 +6605,20 @@ Content-Type: application/json
 Content-Length: 92
 {"presenter": "Maureen",
 "summary": "Standing still on a unicycle"}
+```
+
 Such URLs also support GET requests to retrieve the JSON representation of
 a talk and DELETE requests to delete a talk.
 Adding a comment to a talk is done with a POST request to a URL like /
 talks/Unituning/comments, with a JSON body that has author and message
 properties.
+```
 POST /talks/Unituning/comments HTTP/1.1
 Content-Type: application/json
 Content-Length: 72
 {"author": "Iman",
 "message": "Will you talk about raising a cycle?"}
+```
 To support long polling, GET requests to /talks may include extra headers
 that inform the server to delay the response if no new information is available.
 We’ll use a pair of headers normally intended to manage caching: ETag and
@@ -6638,6 +6642,7 @@ response.
 The server will keep a version number that it updates every time the talks
 change and will use that as the ETag value. Clients can make requests like this
 to be notified when the talks change:
+```
 GET /talks HTTP/1.1
 If-None-Match: "4"
 Prefer: wait=90
@@ -6647,6 +6652,7 @@ Content-Type: application/json
 ETag: "5"
 Content-Length: 295
 [....]
+```
 The protocol described here does not do any access control. Everybody can
 comment, modify talks, and even delete them. (Since the Internet is full of
 hooligans, putting such a system online without further protection probably
@@ -6673,6 +6679,7 @@ function.
 There are a number of good router packages on NPM, but here we’ll write
 one ourselves to illustrate the principle.
 This is router.js, which we will later require from our server module:
+```
 const {parse} = require("url");
 module.exports = class Router {
 constructor() {
@@ -6692,6 +6699,7 @@ return handler(context, ...urlParts, request);
 return null;
 }
 };
+```
 The module exports the Router class. A router object allows new handlers
 to be registered with the add method and can resolve requests with its resolve
 method.
@@ -6717,6 +6725,7 @@ handler function accepts request and response parameters and can be passed
 directly to createServer to create a server that serves only files. We want to
 first check for requests that we should handle specially, though, so we wrap it
 in another function.
+```
 const {createServer} = require("http");
 const Router = require("./router");
 const ecstatic = require("ecstatic");
@@ -6752,6 +6761,7 @@ stop() {
 this.server.close();
 }
 }
+```
 This uses a similar convention as the file server from the previous chapter
 for responses—handlers return promises that resolve to objects describing the
 response. It wraps the server in an object that also holds its state.
@@ -6766,6 +6776,7 @@ to our router that implement the various methods that clients can use to work
 with them.
 The handler for requests that GET a single talk must look up the talk and
 respond either with the talk’s JSON data or with a 404 error response.
+```
 const talkPath = /^\/talks\/([^\/]+)$/;
 router.add("GET", talkPath, async (server, title) => {
 if (title in server.talks) {
@@ -6796,6 +6807,7 @@ stream.on("data", chunk => data += chunk.toString());
 stream.on("end", () => resolve(data));
 });
 }
+```
 One handler that needs to read request bodies is the PUT handler, which
 is used to create new talks. It has to check whether the data it was given
 has presenter and summary properties, which are strings. Any data coming
@@ -6804,6 +6816,7 @@ internal data model or crash when bad requests come in.
 If the data looks valid, the handler stores an object that represents the new
 talk in the talks object, possibly overwriting an existing talk with this title,
 and again calls updated.
+```
 router.add("PUT", talkPath,
 async (server, title, request) => {
 let requestBody = await readStream(request);
@@ -6822,9 +6835,11 @@ comments: []};
 server.updated();
 return {status: 204};
 });
+```
 Adding a comment to a talk works similarly. We use readStream to get the
 content of the request, validate the resulting data, and store it as a comment
 when it looks valid.
+```
 router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
 async (server, title, request) => {
 let requestBody = await readStream(request);
@@ -6843,6 +6858,7 @@ return {status: 204};
 return {status: 404, body: `No talk '${title}' found`};
 }
 });
+```
 Trying to add a comment to a nonexistent talk returns a 404 error.
 
 <h2>Long polling support</h2>
@@ -6853,6 +6869,7 @@ a long polling request.
 There will be multiple places in which we have to send an array of talks to
 the client, so we first define a helper method that builds up such an array and
 includes an ETag header in the response.
+```
 SkillShareServer.prototype.talkResponse = function() {
 let talks = [];
 for (let title of Object.keys(this.talks)) {
@@ -6864,9 +6881,11 @@ headers: {"Content-Type": "application/json",
 "ETag": `"${this.version}"`}
 };
 };
+```
 The handler itself needs to look at the request headers to see whether If-
 None-Match and Prefer headers are present. Node stores headers, whose names
 are specified to be case insensitive, under their lowercase names.
+```
 router.add("GET", /^\/talks$/, async (server, request) => {
 let tag = /"(.&ast;)"/.exec(request.headers["if-none-match"]);
 let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
@@ -6878,6 +6897,7 @@ return {status: 304};
 return server.waitForChanges(Number(wait[1]));
 }
 });
+```
 If no tag was given or a tag was given that doesn’t match the server’s current
 version, the handler responds with the list of talks. If the request is conditional
 and the talks did not change, we consult the Prefer header to see whether we
@@ -6886,6 +6906,7 @@ Callback functions for delayed requests are stored in the server’s waiting ar-
 ray so that they can be notified when something happens. The waitForChanges
 method also immediately sets a timer to respond with a 304 status when the
 request has waited long enough.
+```
 SkillShareServer.prototype.waitForChanges = function(time) {
 return new Promise(resolve => {
 this.waiting.push(resolve);
@@ -6896,14 +6917,17 @@ resolve({status: 304});
 }, time &ast; 1000);
 });
 };
+```
 Registering a change with updated increases the version property and wakes
 up all waiting requests.
+```
 SkillShareServer.prototype.updated = function() {
 this.version++;
 let response = this.talkResponse();
 this.waiting.forEach(resolve => resolve(response));
 this.waiting = [];
 };
+```
 That concludes the server code. If we create an instance of SkillShareServer
 and start it on port 8000, the resulting HTTP server serves files from the public
 subdirectory alongside a talk-managing interface under the /talks URL.
@@ -6919,10 +6943,12 @@ When a request is made to the path /, the server looks for the file ./public/
 index.html (./public being the root we gave it) and returns that file if found.
 Thus, if we want a page to show up when a browser is pointed at our server,
 we should put it in public/index.html. This is our index file:
+```
 <!doctype html>
 <meta charset="utf-8">
 <title>Skill Sharing</title>
 <link rel="stylesheet" href="skillsharing.css">
+```
 <h1>Skill Sharing</h1>
 <script src="skillsharing_client.js"></script>
 It defines the document title and includes a style sheet, which defines a few
@@ -6937,6 +6963,7 @@ actions that describe what the user is trying to do.
 The handleAction function takes such an action and makes it happen. Be-
 cause our state updates are so simple, state changes are handled in the same
 function.
+```
 function handleAction(state, action) {
 if (action.type == "setUser") {
 localStorage.setItem("userName", action.user);
@@ -6967,34 +6994,42 @@ message: action.message
 }
 return state;
 }
+```
 We’ll store the user’s name in localStorage so that it can be restored when
 the page is loaded.
 The actions that need to involve the server make network requests, using
 fetch, to the HTTP interface described earlier. We use a wrapper function,
 fetchOK, which makes sure the returned promise is rejected when the server
 returns an error code.
+```
 function fetchOK(url, options) {
 return fetch(url, options).then(response => {
 if (response.status < 400) return response;
 else throw new Error(response.statusText);
 });
 }
+```
 This helper function is used to build up a URL for a talk with a given title.
+```
 function talkURL(title) {
 return "talks/" + encodeURIComponent(title);
 }
+```
 When the request fails, we don’t want to have our page just sit there, doing
 nothing without explanation. So we define a function called reportError, which
 at least shows the user a dialog that tells them something went wrong.
+```
 function reportError(error) {
 alert(String(error));
 }
+```
 Rendering components
 We’ll use an approach similar to the one we saw in Chapter 19, splitting the
 application into components. But since some of the components either never
 need to update or are always fully redrawn when updated, we’ll define those
 not as classes but as functions that directly return a DOM node. For example,
 here is a component that shows the field where the user can enter their name:
+```
 function renderUserField(name, dispatch) {
 return elt("label", {}, "Your name: ", elt("input", {
 type: "text",
@@ -7004,10 +7039,12 @@ dispatch({type: "setUser", user: event.target.value});
 }
 }));
 }
+```
 The elt function used to construct DOM elements is the one we used in
 Chapter 19.
 A similar function is used to render talks, which include a list of comments
 and a form for adding a new comment.
+```
 function renderTalk(talk, dispatch) {
 return elt(
 "section", {className: "talk"},
@@ -7033,6 +7070,7 @@ form.reset();
 }, elt("input", {type: "text", name: "comment"}), " ",
 elt("button", {type: "submit"}, "Add comment")));
 }
+```
 The "submit" event handler calls form.reset to clear the form’s content after
 creating a "newComment" action.
 When creating moderately complex pieces of DOM, this style of program-
@@ -7043,13 +7081,16 @@ you can actually run such code, you have to run a program on your script to
 convert the pseudo-HTML into JavaScript function calls much like the ones we
 use here.
 Comments are simpler to render.
+```
 function renderComment(comment) {
 return elt("p", {className: "comment"},
 elt("strong", null, comment.author),
 ": ", comment.message);
 }
+```
 Finally, the form that the user can use to create a new talk is rendered like
 this:
+```
 function renderTalkForm(dispatch) {
 let title = elt("input", {type: "text"});
 let summary = elt("input", {type: "text"});
@@ -7066,11 +7107,13 @@ elt("label", null, "Title: ", title),
 elt("label", null, "Summary: ", summary),
 elt("button", {type: "submit"}, "Submit"));
 }
+```
 Polling
 To start the app we need the current list of talks. Since the initial load is closely
 related to the long polling process—the ETag from the load must be used when
 polling—we’ll write a function that keeps polling the server for /talks and calls
 a callback function when a new set of talks is available.
+```
 async function pollTalks(update) {
 let tag = undefined;
 for (;;) {
@@ -7090,6 +7133,7 @@ tag = response.headers.get("ETag");
 update(await response.json());
 }
 }
+```
 This is an async function so that looping and waiting for the request is easier.
 It runs an infinite loop that, on each iteration, retrieves the list of talks—either
 normally or, if this isn’t the first request, with the headers included that make
@@ -7104,6 +7148,7 @@ the response is a normal 200 response, its body is read as JSON and passed to
 the callback, and its ETag header value is stored for the next iteration.
 The application
 The following component ties the whole user interface together:
+```
 class SkillShareApp {
 constructor(state, dispatch) {
 this.dispatch = dispatch;
@@ -7125,9 +7170,11 @@ this.talks = state.talks;
 }
 }
 }
+```
 When the talks change, this component redraws all of them. This is simple
 but also wasteful. We’ll get back to that in the exercises.
 We can start the application like this:
+```
 function runApp() {
 let user = localStorage.getItem("userName") || "Anon";
 let state, app;
@@ -7146,6 +7193,7 @@ dispatch({type: "setTalks", talks});
 }).catch(reportError);
 }
 runApp();
+```
 If you run the server and open two browser windows for http://localhost:8000
 next to each other, you can see that the actions you perform in one window
 are immediately visible in the other.
