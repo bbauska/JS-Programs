@@ -1765,6 +1765,7 @@ ancestor elements or vice versa.</p>
   <li><b>Capture:</b> The event descends from the root element to the target.</li>
   <li><b>Target:</b> The event reaches the target element.</li>
   <li><b>Bubbling:</b> The event ascends from the target to the root element.</li>
+</ul>
 
 <p>These concepts are fundamental for writing more predictable, maintainable, and 
 scalable code. The focus on pure functions and avoiding side effects contributes to 
@@ -1774,36 +1775,68 @@ applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">21. Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Closures ore on important concept in programming, referring to a
-function's ability to access and remember variables from its lexical scope
-even after that function has finished execution and Left that scope.
-Closures enable the creation of functions that maintain access to
-variables even when they are no Longer in the scope of the function that
-created them.
+<p>Closures are an important concept in programming, referring to a function's ability 
+to access and remember variables from its lexical scope even after that function has 
+finished execution and Left that scope. Closures enable the creation of functions that 
+maintain access to variables even when they are no Longer in the scope of the function 
+that created them.</p>
 
 <pre>
-function counterQ {
-let count = 0;
-function increment() {
-count++;
-console.log(count);
+function counter() {
+  let count = 0;
+  
+  function increment() {
+    count++;
+    console.log(count);
+  }
+  return increment;
 }
-return increment;
 
 const counterl = counter();
-counterlQ; // Prints: 1
-counterlO; // Prints: 2=
+counterl(); // Prints: 1
+counterl(); // Prints: 2=
 </pre>
 
-In this example, the counter function returns the increment function. The
+<p>In this example, the counter function returns the increment function. The
 count variable is retained in the Lexical scope of the counter function but
 remains accessible through the increment function even after the counter
-function has finished execution. This is made possible by closures.
- 
-Closures ore particularly useful for creating functions with private states,
-maintaining encapsulation in JavaScript. They are also used in patterns
-like modules and callback functions in events.
+function has finished execution. This is made possible by closures.</p>
 
+<pre>
+function makeCounter() {
+  let count = 0;
+
+  return function() {
+    return count++;
+  };
+}
+
+const counter = makeCounter();
+
+console.log(counter()); // 0
+console.log(counter()); // 1
+console.log(counter()); // 2
+</pre>
+
+<p><b>Explanation:</b></p>
+
+<blockquote>
+makeCounter function:
+  - It creates a local variable count initialized to 0.
+  - It defines and returns an inner function that increments and returns the value of count.
+
+counter variable:
+  - It stores the function returned by makeCounter.
+  - This function has access to the count variable in the outer scope, even after makeCounter has finished executing.
+
+Calling counter:
+  - Each time counter is called, it increments the count variable and returns the updated value.
+  - This is possible because the inner function "remembers" its surrounding state (the count variable) due to the closure mechanism.
+</blockquote>
+ 
+<p>Closures ore particularly useful for creating functions with private states,
+maintaining encapsulation in JavaScript. They are also used in patterns
+like modules and callback functions in events.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk22">22. High Order Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1874,7 +1907,7 @@ const odds = numbers.filter(number => number % 2 !== 0); // Result: [1, 3, 5]
 elements by applying a reducing function and returns a single result.</p>
 
 <pre>
-const numbers = [1, 2, 3, A];
+const numbers = [1, 2, 3, 4];
 const totalSum = numbers.reduce((accumulator, number) => 
   accumulator + number, 0); // Result: 10
 </pre>
@@ -1948,7 +1981,7 @@ map.set('name', 'Mary');
 map.set('age', 25);
 </pre>
  
-<p><b>Sets: Collections of unique and non-dupLicated values.</p>
+<p><b>Sets:</b> Collections of unique and non-dupLicated values.</p>
 
 <pre>
 const set = new Set();
