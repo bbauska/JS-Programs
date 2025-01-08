@@ -806,28 +806,16 @@ data categories such as integers, floating-point numbers, characters, and boolea
 values.</p>
 
 <p><b>Integer:</b></p>
-
-```
-let age = 25; // Integer
-```
+<pre>let age = 25; // Integer</pre>
 
 <p><b>Floating-point:</b></p>
-
-```
-let temperature = 26.5; // Float
-```
+<pre>let temperature = 26.5; // Float</pre>
 
 <p><b>Floating-point:</b></p>
-
-```
-let grade = 'A'; // Character
-```
+<pre>let grade = 'A'; // Character</pre>
 
 <p><b>Floating-point:</b></p>
-
-```
-let isStudent = true; // Boolean
-```
+<pre>let isStudent = true; // Boolean</pre>
 
 <p>These are examples of primitive types because they represent the most basic forms of 
 data in the language and are not composed of other types. They serve as the building 
@@ -844,20 +832,20 @@ value is copied into the variable.</p>
 
 <p><b>Example:</b></p>
 <ol type="1">
-  <li>1. Number</li>
-  <li>2. String</li>
-  <li>3. Boolean</li>
-  <li>4. Null</li>
-  <li>5. Undefined</li>
-  <li>6. Symbol</li>
-  <li>7. Biglnt</li>
+  <li>Number</li>
+  <li>String</li>
+  <li>Boolean</li>
+  <li>Null</li>
+  <li>Undefined</li>
+  <li>Symbol</li>
+  <li>Biglnt</li>
 </ol>
 
-```
+<pre>
 let numl = 42; // Value type (Number)
 let text = "Hello"; // Value type (String)
 let isTrue = true; // Value type (Boolean)
-```
+</pre>
 
 <p><b>Reference Types (Objects):</b> Reference types represent more complex objects and 
 are stored by reference, meaning the variable contains a reference to the memory 
@@ -872,14 +860,14 @@ location where the object is stored.</p>
 
 <p><b>Example:</b></p>
 
-```
+<pre>
 let person = { name: "Ana", age: 30 };
 // Reference type (Literal Object)
 let colors = ["red", "green", "blue"];
 // Reference type (Array)
 function greet() { console.log("Hello"); } 
 // Reference type (Function)
-```
+</pre>
 
 <p><b>Key Difference:</b> The main difference between value types and reference types 
 lies in how they are stored and manipulated in memory. Value types are immutable, 
@@ -896,21 +884,17 @@ Here is a description of the different types of typing:</p>
 automatically determined based on the assigned value. No explicit type declaration is 
 needed.</p>
 
-```
-let number = 42; // Type is inferred as Number
-```
+<pre>let number = 42; // Type is inferred as Number</pre>
 
 <p><b>Explicit Typing:</b> In languages with explicit typing, the programmer must 
 explicitly declare the data type of a variable during its creation.</p>
 
-```
-let name: string = "Juan"; // Type is declared as String
-```
+<pre>let name: string = "Juan"; // Type is declared as String</pre>
 
 <p><b>Nominal Typing:</b> Nominal typing relies on type names and focuses on nominal 
 differences between types, even if their internal structure is identical.</p>
 
-```
+<pre>
 type User = { name: string };
 type Employee = { name: string };
 
@@ -920,13 +904,13 @@ function greet(user: User) {
 
 const employee: Employee = { name: "Ana" };
 greet(employee); // Nominal typing error, even though the structure is the same
-```
+</pre>
 
 <p><b>Structural Typing:</b> Structuraltyping is based on the structure and shape of data 
 types, rather than their names. Two types are considered compatible if they have the same 
 structure.</p>
 
-```
+<pre>
 type Person = { name: string };
 type Citizen = { name: string };
 
@@ -936,12 +920,12 @@ function greet(person: Person) {
 
 const citizen: Citizen = { name: "Carlos" };
 greet(citizen); // No structural typing error, the structure is the same
-```
+</pre>
 
 <p><b>Duck Typing:</b> Duck typing is based on whether an object behaves Like a
 certain type, regardless of its structure or name.</p>
 
-```
+<pre>
 interface CanSing {
   sing(): void;
 }
@@ -954,7 +938,7 @@ const canary = {
   sing: () => console.log("Tweet tweet")
 };
 entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
-```
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk05">sk5. == vs === vs typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -971,16 +955,16 @@ equality" or "type coercion."</p>
 without performing type conversion. This is known as "strict equality" and is 
 recommended for precise comparisons.</p>
 
-<pre>5 === "5"; // false, no type conversion is performed</p>
+<pre>5 === "5"; // false, no type conversion is performed</pre>
 
 <p><b>typeof (typeof Operator):</b> The typeof operator is used to obtain the data
 type of an expression. It returns a string representing the data type.</p>
 
-```
+<pre>
 typeof 42; // "number"
 typeof "Hello"; // "string"
 typeof true; // "boolean"
-```
+</pre>
 
 <ul>
   <li>== compares values allowing type conversion.</li>
@@ -1003,7 +987,7 @@ visible and accessible only within that function and any nested functions
 within it This is called function scope. Variables declared with var have
 function scope.</p>
 
-```
+<pre>
 function myFunction() {
   var functionVariable = 42;
   console.log(functionVariable);
@@ -1012,28 +996,28 @@ function myFunction() {
 
 console.log(functionVariable);
 // Not accessible outside the function
-```
+</pre>
 
 <p><b>Block Scope:</b> With the introduction of Let and const in ES6, block scope
 was introduced. Variables declared with let and const have a scope
 Limited to the block in which they are declared, such as within an if, a for, a
 while, etc.</p>
 
-```
+<pre>
 if (true) {
   let blockvariable = "Hello";
   const anotherBlockVariable = "World";
 }
 console.log(blockvariable); // Error, outside block scope 
 console.log(anotherBlockVariable); // Error, outside block scope
-```
+</pre>
 
 <p><b>Lexical Scope:</b> Lexical scope refers to how nested functions can access
 variables from their parent functions, regardless of where they are called.
 This is because functions in JavaScript maintain a reference to the scope in
 which they were created.</p>
 
-```
+<pre>
 function outer() {
   let outervariable = "Outer";
 
@@ -1045,7 +1029,7 @@ function outer() {
 
 const nestedFunction = outer();
 nestedFunction(); // Prints "Outer"
-```
+</pre>
 
 <p>Function scope, block scope, and lexical scope are essential concepts to understand 
 how variables behave in different contexts. These concepts play a key role in 
@@ -1060,12 +1044,12 @@ programs.</p>
 function calls that evaluates to a single value. It can be as simple as a
 literal value or as complex as a mathematical operation or a function call.
 
-```
-5 + 3  //  Mathematical operation
-"Hello, " + "World"  //  String concatenation
-myFunctionO  //  Function  call
-42  //  Literal  value
-```
+<pre>
+5 + 3  // Mathematical operation
+"Hello, " + "World"  // String concatenation
+myFunctionO  // Function call
+42  // Literal value
+</pre>
 
 <p><b>Statement:</b> A statement is a unit of code that performs an action or a
 series of actions. It represents a complete instruction in a program and
@@ -1135,9 +1119,9 @@ greet();
 
 <p><b>Namespaces: Namespaces are an older approach to code organization.
 They allow grouping related objects and functions under a common name
-to avoid naming collisions. This is done using global objects.
-
-//  MyNamespace.js 
+to avoid naming collisions. This is done using global objects.</p>
+<pre>
+// MyNamespace.js 
 var MyNamespace = { 
   variable: 42,
   func: function() {
@@ -1146,16 +1130,17 @@ var MyNamespace = {
 };
 
 MyNamespace.func();
+</pre>
 
-Each approach has its own advantages and disadvantages. IIFE is useful
+<p>Each approach has its own advantages and disadvantages. IIFE is useful
 for creating private scopes but can become complex in large projects.
 Modules are the modern way to modularize code and are more efficient
 for maintenance and scalability. Namespaces are an older technique but
 can still be useful in certain situations where full modularity is not
-necessary.
+necessary.</p>
 
-In modern projects, it is recommended to use modules to effectively
-organize code and maintain cleaner control over scope and code reuse.
+<p>In modern projects, it is recommended to use modules to effectively
+organize code and maintain cleaner control over scope and code reuse.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk09">sk09. Message Queue and Event Loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1195,13 +1180,13 @@ console.log("End of the program");
 <p>Start of the program End of the program Asynchronous task completed
 In this example, the code executes in the following order:</p>
 
-<ol>
-  <li>1. "Start of the program" is printed.</li>
-  <li>2. A timer is initiated with setTimeout.</li>
-  <li>3. "End ofthe program" is printed.</li>
-  <li>4. After 1 second (1000 ms), the timer completes, and the callback function is 
+<ol type="1">
+  <li>"Start of the program" is printed.</li>
+  <li>A timer is initiated with setTimeout.</li>
+  <li>"End ofthe program" is printed.</li>
+  <li>After 1 second (1000 ms), the timer completes, and the callback function is 
     added to the message queue.</li>
-  <li>5. The event loop takes the callback function from the queue and executes it, 
+  <li>The event loop takes the callback function from the queue and executes it, 
     printing "Asynchronous task completed."</li>
 </ol>
 
