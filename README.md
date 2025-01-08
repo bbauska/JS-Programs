@@ -754,11 +754,11 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 important concepts such as:</p>
 
 <ul>
-  <li>•  Design Patterns</li>
-  <li>•  Clean Code</li>
-  <li>•  Fetch API and AJAX</li>
-  <li>•  Destructuring</li>
-  <li>•  Partial Application, Currying, Composition, and Pipe<li>
+  <li>Design Patterns</li>
+  <li>Clean Code</li>
+  <li>Fetch API and AJAX</li>
+  <li>Destructuring</li>
+  <li>Partial Application, Currying, Composition, and Pipe</li>
 </ul>
 
 <p>Learning these concepts will help you level up quickly as a JavaScript developer, 
@@ -770,8 +770,8 @@ they are concepts that you should know if you want to be at a higher level.</p>
 or function calls in a computer program. It operates on a Last In, First Out (LIFO) basis, 
 meaning that the last function called is the first one to be resolved or completed.</p>
 
-```
-//  Function definitions
+<pre>
+// Function definitions
 function washDish() {
   console.log("Washing dish");
   dryDish();
@@ -790,7 +790,7 @@ function storeDish() {
 
 // Calling the main function
 washDish();
-```
+</pre>
 
 <p>In this example, when washDish is called, it gets added to the call
 stack. Inside washDish, dryDish() called, which, in turn, gets added
@@ -942,7 +942,7 @@ entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk05">sk5. == vs === vs typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>=- ==- and typeof are operators used to compare values and retrieve
+<p>== - === - and typeof are operators used to compare values and retrieve
 information about data types. Here's an explanation of each:</p>
 
 <p><b>==  (Weak Equality):</b> The == operator compares two values for equality but 
@@ -1060,13 +1060,11 @@ etc.</p>
 if (condition) {
   // If statement
 }
-
 let x = 10; // Assignment
 
 function greet() {
   // Function statement
 }
-
 for (let i = 0; i < 5; i++) {
   // For loop statement
 }
@@ -1328,7 +1326,8 @@ efficiently.</p>
 <ul>
   <li><b>Int8Array:</b> 8-bit signed integer array.</li>
   <li><b>Uint8Array:</b> 8-bit unsigned integer array.</li>
-  <li>Float32Array:</b> 32-bit floating-point number array.</;i>
+  <li><b>Float32Array:</b> 32-bit floating-point number array.</li>
+</ul>
 
 <pre>const intArray = new Int8Array([10, 20, 30]);</pre>
 
@@ -1336,6 +1335,7 @@ efficiently.</p>
 memory area that can contain binary data. Array Buffers are used to
 work with binary data efficiently, and Typed Arrays are views of these
 buffers that provide a manipulation interface.</p>
+
 <pre>
 const buffer = new ArrayBuffer(8);
 // Create an 8-byte buffer
@@ -1379,22 +1379,25 @@ elements are nested and related to each other.</p>
 ```
  
 <p>The corresponding document tree would have a structure similar to this:</p>
+
 <blockquote>
-Document (html)
-|— html
-|  |-- head
-|  |   |-- title
-|  |       |-- "My Page"
-|  |-- body
-|     |-- hl
-|     |   |-- "Page Title"
-|     |-- p
+Document (html)<br>
+|— html<br>
+|  |-- head<br>
+|  |   |-- title<br>
+|  |       |-- "My Page"<br>
+|  |-- body<br>
+|     |-- hl<br>
+|     |   |-- "Page Title"<br>
+|     |-- p<br>
 |         |-- "This is a paragraph."
 </blockquote>
+
 <p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
 content and structure of a web page via the DOM. You can access
 elements, modify their attributes, add or remove nodes, and change their
 content.</p>
+
 <pre>
 // Access an element and change its content 
 const heading = document.querySelector("hl"); 
@@ -1516,10 +1519,10 @@ greetPerson('Maria'); // Prints: "Hello, Maria! My name is John"
 
 <p>In summary:</p>
 <ul>
-  <li>♦ this: Refers to the current execution context.</li>
-  <li>♦ call: Invokes a function with a specific value for this and individually passed arguments.</li>
-  <li>♦ apply: Similar to call, but arguments are passed as an array.</li>
-  <li>♦ bind: Creates a new function with this and arguments fixed.</li>
+  <li>this: Refers to the current execution context.</li>
+  <li>call: Invokes a function with a specific value for this and individually passed arguments.</li>
+  <li>apply: Similar to call, but arguments are passed as an array.</li>
+  <li>bind: Creates a new function with this and arguments fixed.</li>
 </ul>
 
 <p>These methods ore useful for controlling the context of this in different
@@ -1563,10 +1566,10 @@ created with its own properties and methods.</p>
 
 <p>In summary:</p>
 <ul>
-  <li>♦ new: A keyword used to create instances of objects from constructors.</li>
-  <li>♦ Constructor: A function used to create and configure objects.</li>
-  <li>♦ instanceof: An operator to check if an object is an instance of a class or constructor.</li>
-  <li>♦ Instances: Unique objects created from constructors.</li>
+  <li><b>new:</b> A keyword used to create instances of objects from constructors.</li>
+  <li><b>Constructor:</b> A function used to create and configure objects.</li>
+  <li><b>instanceof:</b> An operator to check if an object is an instance of a class or constructor.</li>
+  <li><b>Instances:</b> Unique objects created from constructors.</li>
 </ul>
 
 <p>Constructors and instances are essential for object-oriented programming in JavaScript, 
@@ -1625,31 +1628,31 @@ myDog.greet(); // Prints "Hello, I'm Max"
 myDog.bark(); // Prints "Woof woof!"
 ```
 
-In this example:
-	♦  We create the Animal constructor with a greet method.
-	♦  We create the Dog constructor that inherits from Animal and has a bark method.
-	♦  Prototypal inheritance is established using Object create Q, and we ensure that the 
-       Dog constructor points correctly.
-	♦  We create an instance of Dog, and we can access methods from both Animal and Dog.
+<p>In this example:</p>
+<ul>
+  <li>We create the Animal constructor with a greet method.</li>
+  <li>We create the Dog constructor that inherits from Animal and has a bark method.</li>
+  <li>Prototypal inheritance is established using Object create Q, and we ensure that the 
+       Dog constructor points correctly.</li>
+  <li>We create an instance of Dog, and we can access methods from both Animal and Dog.</li>
+</ul>
  
-Prototypal inheritance and the prototype chain are crucial for understanding how objects 
-work and code reuse in JavaScript.
+<p>Prototypal inheritance and the prototype chain are crucial for understanding how objects 
+work and code reuse in JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk18">sk18. Object.create and Object.assign</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Both Objectcreate and Objectassign are important methods in JavaScript
-used for working with objects, but they serve different purposes.
+<p>Both Objectcreate and Objectassign are important methods in JavaScript
+used for working with objects, but they serve different purposes.</p>
 
-Object.create: Object.create is a method used to create a new object and
+<p><b>Object.create:</b> Object.create is a method used to create a new object and
 set its prototype (parent object). It allows creating objects that inherit
 properties and methods from another object It's especially useful for
-implementing prototypal inheritance in JavaScript.
+implementing prototypal inheritance in JavaScript.</p>
 
-```
-const newObj = Object.create(prototype);
-```
+<pre>const newObj = Object.create(prototype);</pre>
 
-Example of Object.create:
+<p>Example of Object.create:</p>
 
 ```
 const animal = {
@@ -1663,16 +1666,14 @@ dog.sound = "Woof woof";
 dog.makeSound(); // Prints "Woof woof"
 ```
 
-Object.assign: Object.assign is a method used to copy enumerable
+<p><b>Object.assign:</b> Object.assign is a method used to copy enumerable
 properties from one or more source objects to a target object If there are
 properties with the same  name in the target object they will be
-overwritten. It's usefulfor combining objects or cloning objects.
+overwritten. It's usefulfor combining objects or cloning objects.</p>
 
-``` 
-Object.assign(targetobject, sourceObjectl, source0bject2,  ...);
-```
+<pre>Object.assign(targetobject, sourceObjectl, source0bject2,  ...);</pre>
 
-Example of Objectassign:
+<p>Example of Objectassign:</p>
 
 ```
 const target =
@@ -1683,20 +1684,21 @@ console.log(target);
 // Prints { name:  "John", age: 30, city: "New York" }
 ```
 
-In summary:
+<p>In summary:</p>
+<ul>
+  <li><b>Objectcreate:</b> Creates a new object with a specified prototype.</li>
+  <li><b>Objectassign:</b> Combines or copies enumerable properties from source objects to a target object.</li>
+</ul>
 
-	•  Objectcreate: Creates a new object with a specified prototype.
-	•  Objectassign: Combines or copies enumerable properties from source objects to a target object.
-
-Objectcreate is useful for establishing prototypal inheritance relationships, while 
-Object.assign is useful for combining properties from multiple objects or for cloning objects.
+<p>Objectcreate is useful for establishing prototypal inheritance relationships, while 
+Object.assign is useful for combining properties from multiple objects or for cloning objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk19">sk19. map, reduce, and filter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-These are three high-level methods provided by JavaScript for working
+<p>These are three high-level methods provided by JavaScript for working
 with arrays in a more functional and elegant way. Each one has a specific
 purpose and is widely used for transforming, filtering, and reducing data in
-arrays.
+arrays.</p>
 
 map: The map method is used to transform each element of an array into
 a new array by applying a function to each element It returns a new
