@@ -748,7 +748,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 </ul>
 <h1>We begin here</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#sk0">50 JS Concepts Every Developer Should Know</a></h2>
+<h2 id="sk0">50 JavaScript Concepts Every Developer Should Know</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 This book is on essential guide for all JavaScript programmers since it has very 
 important concepts such as:
@@ -761,8 +761,6 @@ important concepts such as:
 
 Learning these concepts will help you level up quickly as a JavaScript developer, they 
 are concepts that you should know if you want to be at a higher level.
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk0">50 JavaScript Concepts Every Developer Should Know</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk01">sk01. Call Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1540,10 +1538,10 @@ const person2 = new Person("Maria", 25);
 
 In summary:
 
-♦ new: A keyword used to create instances of objects from constructors.
-♦ Constructor: A function used to create and configure objects.
-♦ instanceof: An operator to check if an object is an instance of a class or constructor.
-♦ Instances: Unique objects created from constructors.
+	♦ new: A keyword used to create instances of objects from constructors.
+	♦ Constructor: A function used to create and configure objects.
+	♦ instanceof: An operator to check if an object is an instance of a class or constructor.
+	♦ Instances: Unique objects created from constructors.
 
 Constructors and instances are essential for object-oriented programming in JavaScript, 
 allowing the creation of objects with shared properties and behaviors.
@@ -1602,11 +1600,11 @@ myDog.bark(); // Prints "Woof woof!"
 ```
 
 In this example:
-♦  We create the Animal constructor with a greet method.
-♦  We create the Dog constructor that inherits from Animal and has a bark method.
-♦  Prototypal inheritance is established using Object create Q, and we ensure that the 
-   Dog constructor points correctly.
-♦  We create an instance of Dog, and we can access methods from both Animal and Dog.
+	♦  We create the Animal constructor with a greet method.
+	♦  We create the Dog constructor that inherits from Animal and has a bark method.
+	♦  Prototypal inheritance is established using Object create Q, and we ensure that the 
+       Dog constructor points correctly.
+	♦  We create an instance of Dog, and we can access methods from both Animal and Dog.
  
 Prototypal inheritance and the prototype chain are crucial for understanding how objects 
 work and code reuse in JavaScript.
@@ -1661,8 +1659,8 @@ console.log(target);
 
 In summary:
 
-•  Objectcreate: Creates a new object with a specified prototype.
-•  Objectassign: Combines or copies enumerable properties from source objects to a target object.
+	•  Objectcreate: Creates a new object with a specified prototype.
+	•  Objectassign: Combines or copies enumerable properties from source objects to a target object.
 
 Objectcreate is useful for establishing prototypal inheritance relationships, while 
 Object.assign is useful for combining properties from multiple objects or for cloning objects.
@@ -1720,8 +1718,8 @@ environment This means they don't modify external variables, perform
 input/output operations, and don't depend on external mutable data.
 
 Characteristics of pure functions:
-♦  Determinism: Same input same result
-♦  No side effects: They don't alter data outside the function.
+	♦  Determinism: Same input same result
+	♦  No side effects: They don't alter data outside the function.
 
 Side Effects: Side effects are observable changes outside a function due
 to its execution. These changes can include modifying external variables,
@@ -1737,9 +1735,9 @@ hierarchy of elements. Events can propagate from the target element to
 ancestor elements or vice versa.
 
 Phases of Event Propagation:
-•  Capture: The event descends from the root element to the target.
-•  Target: The event reaches the target element
-•  Bubbling: The event ascends from the target to the root element
+	•  Capture: The event descends from the root element to the target.
+	•  Target: The event reaches the target element
+	•  Bubbling: The event ascends from the target to the root element
 
 These  concepts  are  fundamental  for  writing  more  predictable,
 maintainable, and scalable code. The focus on pure functions and avoiding
@@ -2017,30 +2015,27 @@ const promise2 = fetchData2();
 
 Promise.all([promisel, promise2])
 .then(results => {
-const resultl = results[0];
-const result2 = results[l];
-// Do something with the results
+  const resultl = results[0];
+  const result2 = results[l];
+  // Do something with the results
 })
 .catch(error => console.error(error));
 ```
 
-Promises are a  powerful and flexible way to handle asynchronous
-operations in JavaScript. However, as JavaScript evolved, more advanced
-readable syntax for working with asynchronous operations.
-
+Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
+However, as JavaScript evolved, more advanced readable syntax for working with 
+asynchronous operations.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk26">sk26. async/await</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-async/await is a feature introduced in  ECMAScript 2017 (ES8) that
-simplifies asynchronous programming in JavaScript It provides a cleaner
-and more readable syntax for working with promises and asynchronous
-operations. With async/await, you can write code that looks synchronous
-but efficiently handles asynchronous operations.
+async/await is a feature introduced in  ECMAScript 2017 (ES8) that simplifies 
+asynchronous programming in JavaScript It provides a cleaner and more readable syntax for 
+working with promises and asynchronous operations. With async/await, you can write code 
+that looks synchronous but efficiently handles asynchronous operations.
 
-Async  Functions:  A  function  declared  with  the  async  keyword
-automatically returns a promise. You can use the await keyword within an
-async function to wait for the resolution of a promise without blocking the
-main thread's execution.
+Async Functions: A function declared with the async keyword automatically returns a 
+promise. You can use the await keyword within an async function to wait for the 
+resolution of a promise without blocking the main thread's execution.
 
 ```
 async function fetchDataQ 1
@@ -2049,10 +2044,8 @@ const response = await fetch('https://api.example.com/data');
 const data = await response.jsonQ;
 return data;
 
-fetchDataQ
-
+fetchData()
 .then(data => console.log(data))
-
 .catch(error => console.error(error));
 ```
 
