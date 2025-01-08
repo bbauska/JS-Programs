@@ -1019,7 +1019,7 @@ which they were created.</p>
 
 <pre>
 function outer() {
-  let outervariable = "Outer";
+  let outerVariable = "Outer";
 
   function inner() {
     console.log(outerVariable); // Access to the variable from the parent function
