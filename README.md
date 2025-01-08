@@ -750,24 +750,25 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk0">50 JavaScript Concepts Every Developer Should Know</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-This book is on essential guide for all JavaScript programmers since it has very 
-important concepts such as:
+<p>This book is on essential guide for all JavaScript programmers since it has very 
+important concepts such as:</p>
 
-	•  Design Patterns
-	•  Clean Code
-	•  Fetch API and AJAX
-	•  Destructuring
-	•  Partial Application, Currying, Composition, and Pipe
+<ul>
+  <li>•  Design Patterns</li>
+  <li>•  Clean Code</li>
+  <li>•  Fetch API and AJAX</li>
+  <li>•  Destructuring</li>
+  <li>•  Partial Application, Currying, Composition, and Pipe<li>
+</ul>
 
-Learning these concepts will help you level up quickly as a JavaScript developer, they 
-are concepts that you should know if you want to be at a higher level.
+<p>Learning these concepts will help you level up quickly as a JavaScript developer, 
+they are concepts that you should know if you want to be at a higher level.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk01">sk01. Call Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-A call stack is a data structure that stores information about the 
-active subroutines or function calls in a computer program. It
-operates on a Last In, First Out (LIFO) basis, meaning that the last
-function called is the first one to be resolved or completed.
+<p>A call stack is a data structure that stores information about the active subroutines 
+or function calls in a computer program. It operates on a Last In, First Out (LIFO) basis, 
+meaning that the last function called is the first one to be resolved or completed.</p>
 
 ```
 //  Function definitions
@@ -785,70 +786,72 @@ function dryDish() {
 
 function storeDish() {
   console.log("Storing dish");
-
 }
 
-//  Calling the main function
+// Calling the main function
 washDish();
 ```
 
-In this example, when washDish is called, it gets added to the call
-stack. Inside washDish, dryDishO's called, which, in turn, gets added
-to the call stack Finally, storeDishQ is called from dryDishQ, and it
-also gets added to the call stack.
+<p>In this example, when washDish is called, it gets added to the call
+stack. Inside washDish, dryDish() called, which, in turn, gets added
+to the call stack. Finally, storeDish() is called from dryDish(), and it
+also gets added to the call stack.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk02">sk02. Primitive Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Primitive types refer to the fundamental data types that are not
-composed of other types. They are the simplest and most basic data
-entities directly supported by the programming language. Primitive
-types are usually built-in and include fundamental data categories
-such as integers, floating-point numbers, characters, and boolean
-values.
+<p>Primitive types refer to the fundamental data types that are not composed of other 
+types. They are the simplest and most basic data entities directly supported by the 
+programming language. Primitive types are usually built-in and include fundamental 
+data categories such as integers, floating-point numbers, characters, and boolean
+values.</p>
+
+<p><b>Integer:</b></p>
 
 ```
-Integer:
 let age = 25; // Integer
+```
 
-Floating-point:
+<p><b>Floating-point:</b></p>
+
+```
 let temperature = 26.5; // Float
+```
 
-Floating-point:
+<p><b>Floating-point:</b></p>
+
+```
 let grade = 'A'; // Character
+```
 
-Floating-point:
+<p><b>Floating-point:</b></p>
+
+```
 let isStudent = true; // Boolean
 ```
-These are examples of primitive types because they represent the
-most basic forms of data in the language and are not composed of
-other types. They serve as the building blocks for more complex data
-structures.
+
+<p>These are examples of primitive types because they represent the most basic forms of 
+data in the language and are not composed of other types. They serve as the building 
+blocks for more complex data structures.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk03">sk03. Value Types and Reference Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Values can be classified into two categories: value types and reference
-types. This distinction is crucial to understand how data is handled and
-stored in memory.
+<p>Values can be classified into two categories: value types and reference types. This 
+distinction is crucial to understand how data is handled and stored in memory.</p>
 
-Value Types (Primitives): Value types represent simple data and are
-stored directly in the variable. When you assign a primitive value to a
-variable, the actual value is copied into the variable.
+<p><b>Value Types (Primitives):</b> Value types represent simple data and are stored 
+directly in the variable. When you assign a primitive value to a variable, the actual 
+value is copied into the variable.</p>
 
-Example:
-
-1.  Number
-
-2.  String
-
-3.  Boolean
-
-4.  Null
-
-5.  Undefined
-
-6.  Symbol
-
-7.  Biglnt
+<p><b>Example:</b></p>
+<ol type="1">
+  <li>1. Number</li>
+  <li>2. String</li>
+  <li>3. Boolean</li>
+  <li>4. Null</li>
+  <li>5. Undefined</li>
+  <li>6. Symbol</li>
+  <li>7. Biglnt</li>
+</ol>
 
 ```
 let numl = 42; // Value type (Number)
@@ -856,20 +859,19 @@ let text = "Hello"; // Value type (String)
 let isTrue = true; // Value type (Boolean)
 ```
 
-Reference Types (Objects): Reference types represent more complex
-objects and are stored by reference, meaning the variable contains a
-reference to the memory location where the object is stored.
+<p><b>Reference Types (Objects):</b> Reference types represent more complex objects and 
+are stored by reference, meaning the variable contains a reference to the memory 
+location where the object is stored.</p>
 
-1.  Literal Objects
+<ol type="1">
+  <li>Literal Objects</li>
+  <li>Arrays</li>
+  <li>Functions</li>
+  <li>User-Defined Objects</li>
+</ol>
 
-2.  Arrays
+<p><b>Example:</b></p>
 
-3.  Functions
-
-4.  User-Defined Objects
-
-
-Example:
 ```
 let person = { name: "Ana", age: 30 };
 // Reference type (Literal Object)
@@ -878,55 +880,67 @@ let colors = ["red", "green", "blue"];
 function greet() { console.log("Hello"); } 
 // Reference type (Function)
 ```
-Key Difference: The main difference between value types and reference
-types Lies in how they are stored and manipulated in memory. Value types
-are immutable, meaning that modifying them creates a new instance in
-memory. In contrast, reference types are passed by reference, so
-modifying them also modifies the original object in memory.
+
+<p><b>Key Difference:</b> The main difference between value types and reference types 
+lies in how they are stored and manipulated in memory. Value types are immutable, 
+meaning that modifying them creates a new instance in memory. In contrast, reference 
+types are passed by reference, so modifying them also modifies the original object in 
+memory.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk04">sk04. Implicit, Explicit, Nominal, Structural, and Duck Typing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The concepts of typing refer to how data types are managed and
-assigned in a language. Here is a description of the different types of
-typing:
+<p>The concepts of typing refer to how data types are managed and assigned in a language. 
+Here is a description of the different types of typing:</p>
 
-Implicit Typing: In Languages with implicit typing, a variable's data type
-is automatically determined based on the assigned value. No explicit type
-declaration is needed.
+<p><b>Implicit Typing:</b> In Languages with implicit typing, a variable's data type is 
+automatically determined based on the assigned value. No explicit type declaration is 
+needed.</p>
+
+```
 let number = 42; // Type is inferred as Number
+```
 
-Explicit Typing: In languages with explicit typing, the programmer must
-explicitly declare the data type of a variable during its creation.
+<p><b>Explicit Typing:</b> In languages with explicit typing, the programmer must 
+explicitly declare the data type of a variable during its creation.</p>
+
+```
 let name: string = "Juan"; // Type is declared as String
+```
 
-Nominal Typing: Nominal typing relies on type names and focuses on
-nominal differences between types, even if their internal structure is
-identical.
+<p><b>Nominal Typing:</b> Nominal typing relies on type names and focuses on nominal 
+differences between types, even if their internal structure is identical.</p>
+
 ```
 type User = { name: string };
 type Employee = { name: string };
+
 function greet(user: User) {
-console.log('Hello, ${user.name}');
+  console.log(`Hello, ${user.name}`);
 }
+
 const employee: Employee = { name: "Ana" };
 greet(employee); // Nominal typing error, even though the structure is the same
 ```
 
-Structural Typing: Structuraltyping is based on the structure and shape
-of data types, rather than their names. Two types are considered
-compatible if they have the same structure.
+<p><b>Structural Typing:</b> Structuraltyping is based on the structure and shape of data 
+types, rather than their names. Two types are considered compatible if they have the same 
+structure.</p>
+
 ```
-type Person = { name: string
+type Person = { name: string };
 type Citizen = { name: string };
 
 function greet(person: Person) {
   console.log(`Hello, ${person.name}`);
 }
+
 const citizen: Citizen = { name: "Carlos" };
 greet(citizen); // No structural typing error, the structure is the same
 ```
-Duck Typing: Duck typing is based on whether an object behaves Like a
-certain type, regardless of its structure or name.
+
+<p><b>Duck Typing:</b> Duck typing is based on whether an object behaves Like a
+certain type, regardless of its structure or name.</p>
+
 ```
 interface CanSing {
   sing(): void;
@@ -944,17 +958,23 @@ entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk05">sk5. == vs === vs typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-=- ==- and typeof are operators used to compare values and retrieve
-information about data types. Here's an explanation of each:
+<p>=- ==- and typeof are operators used to compare values and retrieve
+information about data types. Here's an explanation of each:</p>
 
-==  (Weak Equality): The == operator compares two values for equality but performs type conversion if the values are of different types. This is called "weak equality" or "type coercion."
-5 == "5"; // true, type conversion is performed.
+<p><b>==  (Weak Equality):</b> The == operator compares two values for equality but 
+performs type conversion if the values are of different types. This is called "weak 
+equality" or "type coercion."</p>
 
-===  (Strict Equality): The === operator compares two values for equality without performing type conversion. This is known as "strict equality" and is recommended for precise comparisons.
-5 === "5"; // false, no type conversion is performed.
+<pre>5 == "5"; // true, type conversion is performed</pre>
 
-typeof (typeof Operator): The typeof operator is used to obtain the data
-type of an expression. It returns a string representing the data type.
+<p><b>=== (Strict Equality):</b> The === operator compares two values for equality 
+without performing type conversion. This is known as "strict equality" and is 
+recommended for precise comparisons.</p>
+
+<pre>5 === "5"; // false, no type conversion is performed</p>
+
+<p><b>typeof (typeof Operator):</b> The typeof operator is used to obtain the data
+type of an expression. It returns a string representing the data type.</p>
 
 ```
 typeof 42; // "number"
@@ -962,40 +982,43 @@ typeof "Hello"; // "string"
 typeof true; // "boolean"
 ```
 
-•  == compares values allowing type conversion.
-•  === compares values without allowing type conversion (strict equality).
-•  typeof returns the data type of an expression as a string.
+<ul>
+  <li>== compares values allowing type conversion.</li>
+  <li>=== compares values without allowing type conversion (strict equality).</li>
+  <li>typeof returns the data type of an expression as a string.</li>
+</ul>
 
-It is important to understand the difference between == and === to avoid
+<p>It is important to understand the difference between == and === to avoid
 unexpected comparison issues due to automatic type conversion. The use
 of === is generally safer and recommended as it provides more accurate
-comparisons and avoids surprises in your program's behavior.
+comparisons and avoids surprises in your program's behavior.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk06">sk06. Function Scope, Block Scope, and Lexical Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The concepts of function scope, block scope, and Lexical scope refer to how
-variables are accessed and managed in different contexts within the code.
+<p>The concepts of function scope, block scope, and Lexical scope refer to how
+variables are accessed and managed in different contexts within the code.</p>
 
-Function Scope: In JavaScript, variables declared within a function are
+<p><b>Function Scope:</b> In JavaScript, variables declared within a function are
 visible and accessible only within that function and any nested functions
 within it This is called function scope. Variables declared with var have
-function scope.
+function scope.</p>
 
 ```
 function myFunction() {
-  var functionvariable = 42;
+  var functionVariable = 42;
   console.log(functionVariable);
   //  Accessible within the function
 }
 
-console.log(functionvariable);
+console.log(functionVariable);
 // Not accessible outside the function
 ```
 
-Block Scope: With the introduction of Let and const in ES6, block scope
+<p><b>Block Scope:</b> With the introduction of Let and const in ES6, block scope
 was introduced. Variables declared with let and const have a scope
 Limited to the block in which they are declared, such as within an if, a for, a
-while, etc.
+while, etc.</p>
+
 ```
 if (true) {
   let blockvariable = "Hello";
@@ -1005,10 +1028,11 @@ console.log(blockvariable); // Error, outside block scope
 console.log(anotherBlockVariable); // Error, outside block scope
 ```
 
-Lexical Scope: Lexical scope refers to how nested functions can access
+<p><b>Lexical Scope:</b> Lexical scope refers to how nested functions can access
 variables from their parent functions, regardless of where they are called.
 This is because functions in JavaScript maintain a reference to the scope in
-which they were created.
+which they were created.</p>
+
 ```
 function outer() {
   let outervariable = "Outer";
@@ -1020,36 +1044,39 @@ function outer() {
 }
 
 const nestedFunction = outer();
-nestedFunctionO; // Prints "Outer"
+nestedFunction(); // Prints "Outer"
 ```
 
-Function scope, block scope, and lexical scope are essential concepts to
-understand how variables behave in different contexts. These concepts
-play a key role in understanding JavaScript execution and preventing
-errors related to variable scope.
+<p>Function scope, block scope, and lexical scope are essential concepts to understand 
+how variables behave in different contexts. These concepts play a key role in 
+understanding JavaScript execution and preventing errors related to variable scope.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk07">sk07. Expression vs Statement</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Expressions and statements are fundamental concepts used to construct
-programs.
+<p>Expressions and statements are fundamental concepts used to construct
+programs.</p>
 
-Expression: An expression is a combination of values, operators, and
+<p><b>Expression:</b> An expression is a combination of values, operators, and
 function calls that evaluates to a single value. It can be as simple as a
 literal value or as complex as a mathematical operation or a function call.
 
+```
 5 + 3  //  Mathematical operation
 "Hello, " + "World"  //  String concatenation
 myFunctionO  //  Function  call
 42  //  Literal  value
+```
 
-Statement: A statement is a unit of code that performs an action or a
+<p><b>Statement:</b> A statement is a unit of code that performs an action or a
 series of actions. It represents a complete instruction in a program and
 can be a control flow statement, an assignment, a function declaration,
-etc.
+etc.</p>
 
+<pre>
 if (condition) {
   // If statement
 }
+
 let x = 10; // Assignment
 
 function greet() {
@@ -1059,36 +1086,43 @@ function greet() {
 for (let i = 0; i < 5; i++) {
   // For loop statement
 }
+</pre>
 
-•  Expression: It is a combination of values, operators, and/or function calls that evaluates to a single value.
-•  Statement: It is a unit of code that performs an action or a series of actions in a program.
+<ul>
+  <li><b>Expression:</b> It is a combination of values, operators, and/or function calls 
+    that evaluates to a single value.</li>
+  <li><b>Statement:</b> It is a unit of code that performs an action or a series of 
+    actions in a program.</li>
 
-An important distinction is that expressions have a resulting value, while
+<p>An important distinction is that expressions have a resulting value, while
 statements  can  change  the  program's  execution  flow  or  perform
 operations without necessarily returning a value. Both concepts are
 essential for writing coherent and effective code in any programming
-language.
+language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk08">sk08. IIFE, Modules, and Namespaces</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Immediately  Invoked  Function  Expressions  (IIFE),  modules,  and
+<p>Immediately  Invoked  Function  Expressions  (IIFE),  modules,  and
 namespaces are techniques used to modularize and organize code. Each
-addresses scope management and code organization in different ways.
+addresses scope management and code organization in different ways.</p>
 
-IIFE (Immediately Invoked Function Expression): An IIFE is a function
+<p><b>IIFE (Immediately Invoked Function Expression):</b> An IIFE is a function
 that is defined and executed immediately after its creation. It is useful for
 creating a private function scope and avoiding pollution of the global
-scope.
+scope.</p>
 
+<pre>
 (function() {
   // Code inside the IIFE
 })();
+</pe>
 
-Modules: Modules are a more modern and structured way of organizing
+<p><b>Modules:</b> Modules are a more modern and structured way of organizing
 code, They allow breaking the code into separate and reusable parts while
 maintaining the local scope of variables. In ES6, the import and export
-keywords were introduced to work with modules.
+keywords were introduced to work with modules.</p>
 
+<pre>
 // module.js
 export function greet() {
   console.log("Hello from the module!");
@@ -1097,8 +1131,9 @@ export function greet() {
 // main.js
 import { greet } from "./module.js";
 greet();
+</pre>
 
-Namespaces: Namespaces are an older approach to code organization.
+<p><b>Namespaces: Namespaces are an older approach to code organization.
 They allow grouping related objects and functions under a common name
 to avoid naming collisions. This is done using global objects.
 
@@ -1124,76 +1159,83 @@ organize code and maintain cleaner control over scope and code reuse.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk09">sk09. Message Queue and Event Loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The message queue and event Loop are crucial concepts to understand
-how event handling and asynchronous operations work in JavaScript
+<p>The message queue and event Loop are crucial concepts to understand
+how event handling and asynchronous operations work in JavaScript.</p>
 
-Message Queue: The message queue is a structure where events and
+<p><b>Message Queue:</b> The message queue is a structure where events and
 pending callback functions are stored to be executed. These events can
-include user interactions, timers, network requests, and more.
+include user interactions, timers, network requests, and more.</p>
 
-Event Loop: The event Loop is a  continuous  cycle  running  in the
+<p><b>Event Loop:</b> The event Loop is a  continuous  cycle  running  in the
 background of the JavaScript program. Its function is to constantly check
 if there are tasks in the message queue to be processed. If there are tasks
 pending in the queue, the event Loop takes them one by one and executes
-them in order.
+them in order.</p>
 
-The interaction between the message queue and the event loop is
+<p>The interaction between the message queue and the event loop is
 fundamental to understanding how JavaScript handles asynchronous and
 non-blocking tasks. When an event occurs or an asynchronous task is
 completed (such as an AJAX request or a timer), a callback function is
 added to the message queue. The event Loop takes these functions one by
-one and executes them.
+one and executes them.</p>
 
-Example of Message Queue and Event Loop:
+<p><b>Example of Message Queue and Event Loop:</b></p>
 
+<pre>
 console.log("Start of the program");
 setTimeout(function() {
   console.log("Asynchronous task completed");
 }, 1000);
+
 console.log("End of the program");
- 
+</pre> 
 
-Expected Output:
+<p><b>Expected Output:</b></p>
 
-Start of the program End of the program Asynchronous task completed
-In this example, the code executes in the following order:
+<p>Start of the program End of the program Asynchronous task completed
+In this example, the code executes in the following order:</p>
 
-1.  "Start of the program" is printed.
+<ol>
+  <li>1. "Start of the program" is printed.</li>
+  <li>2. A timer is initiated with setTimeout.</li>
+  <li>3. "End ofthe program" is printed.</li>
+  <li>4. After 1 second (1000 ms), the timer completes, and the callback function is 
+    added to the message queue.</li>
+  <li>5. The event loop takes the callback function from the queue and executes it, 
+    printing "Asynchronous task completed."</li>
+</ol>
 
-2.  A timer is initiated with setTimeout
-
-3.  "End ofthe program" is printed.
-
-4.  After 1 second (1000 ms), the timer completes, and the callback function is added to the message queue.
-
-5.  The event loop takes the callback function from the queue and executes it, printing "Asynchronous task completed."
-
-Understanding how the message queue and event loop work is crucial for
+<p>Understanding how the message queue and event loop work is crucial for
 writing  asynchronous  JavaScript  code  and  avoiding  blocking  and
-bottlenecks in program execution.
+bottlenecks in program execution.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk10">sk10. setTimeout, setinterval, and requestAnimationFrame</h2>
+<h2 id="sk10">sk10. setTimeout, setInterval, and requestAnimationFrame</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-These three functions are very useful for working with timers and
+<p>These three functions are very useful for working with timers and
 performing asynchronous tasks in JavaScript However, each has its own
-purpose and advantages.
+purpose and advantages.</p>
 
-setTimeout: setTimeout is used to schedule the execution of a function
+<p><b>setTimeout:</b> setTimeout is used to schedule the execution of a function
 after a certain period of time (in milliseconds). You can use it to create
-delays in code execution or to perform actions after a specified time.
+delays in code execution or to perform actions after a specified time.</p>
 
+<pre>
 console.log("Start");
 
 setTimeout(function() {
   console.log("Step after 1000 ms");
 }, 1000);
+
 console.log("End");
+</pre>
 
-setinterval: setinterval is used to repeatedly execute a function at regular
+<p><b>setinterval:</b> setinterval is used to repeatedly execute a function at regular
 time intervals. Unlike setTimeout, setlnterval will keep running the function
-in a loop until explicitly stopped.
+in a loop until explicitly stopped.</p>
 
+<pre>
 let counter = 0;
+
 let interval = setlnterval(function() {
   console.log("Counter:", counter);
   counter++;
@@ -1202,13 +1244,12 @@ let interval = setlnterval(function() {
     clearlnterval(interval);  // Stop the interval after 5 times
   }
 }, 1000);
+</pre>
 
-
-requestAnimationFrame:  requestAnimationFrame  is  a  function
-specifically used for creating smooth animations in the browser. It ensures
-that animations run in sync with screen refreshes, improving performance
-and user experience.
-
+<p><b>requestAnimationFrame:</b> requestAnimationFrame is a function specifically used 
+for creating smooth animations in the browser. It ensures that animations run in sync 
+with screen refreshes, improving performance and user experience.</p>
+<pre>
 function animate(timestamp) {
   // Perform animation changes here
   // Call requestAnimationFrame again 
@@ -1216,145 +1257,142 @@ function animate(timestamp) {
 }
 
 requestAnimationFrame(animate);
+</pre>
 
-•  setTimeout: Executes a function after a certain time.
-•  setinterval: Executes a function at regular intervals.
-•  requestAnimationFrame: Used for creating smooth and efficient animations.
+<ul>
+  <li><b>setTimeout:</b> Executes a function after a certain time.</li>
+  <li><b>setinterval:</b> Executes a function at regular intervals.</li>
+  <li><b>requestAnimationFrame:</b> Used for creating smooth and efficient animations.</li>
+</ul>
 
-Choose the appropriate function based on your needs. setTimeout and
+<p>Choose the appropriate function based on your needs. setTimeout and
 setinterval are useful for controlling time and executing code after certain
 intervals, while requestAnimationFrame is specific for creating smooth
-and efficient animations in the browser.
+and efficient animations in the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk11">sk11. JavaScript Engines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-JavaScript  engines  are  fundamental  components  in  browsers  and
+<p>JavaScript  engines  are  fundamental  components  in  browsers  and
 execution environments that interpret and execute JavaScript code. Each
-browser and environment has its own JavaScript engine.
+browser and environment has its own JavaScript engine.</p>
 
-Here are some of the well-known engines:
+<p><b>Here are some of the well-known engines:</b></p>
 
-V8 (Google Chrome, Node.js): V8 is an open-source JavaScript engine
+<p><b>V8 (Google Chrome, Node.js):</b> V8 is an open-source JavaScript engine
 developed by Google. It is known for its speed and efficiency in executing
 code. It is used in Google Chrome and is also the engine behind Node.js,
-enabling JavaScript to run on the server.
+enabling JavaScript to run on the server.</p>
 
-SpiderMonkey (Mozilla Firefox): SpiderMonkey is the JavaScript engine
+<p><b>SpiderMonkey (Mozilla Firefox):</b> SpiderMonkey is the JavaScript engine
 used in Mozilla Firefox. It was one of the first JavaScript engines and has
-been extensively optimized overtime to improve performance.
+been extensively optimized overtime to improve performance.</p>
 
-JavaScriptCore (Safari): JavaScriptCore, also known as Nitro, is the
+<p><b>JavaScriptCore (Safari):</b> JavaScriptCore, also known as Nitro, is the
 JavaScript engine for Safari. It is developed by Apple and is used in Safari
-browsers and other Apple products.
+browsers and other Apple products.</p>
 
-Chakra (Internet Explorer, Microsoft Edge Legacy): Chakra was the
+<p><b>Chakra (Internet Explorer, Microsoft Edge Legacy):</b> Chakra was the
 JavaScript engine used in earlier versions of Internet Explorer and the
 initial versions of Microsoft Edge (up to EdgeHTML). However, Microsoft
-Edge has migrated to a new engine called Blink.
- 
-Blink (Chromium, Microsoft Edge): Blink is an open source rendering
+Edge has migrated to a new engine called Blink.</p>
+
+<p><b>Blink (Chromium, Microsoft Edge):</b> Blink is an open source rendering
 engine that also includes a JavaScript engine. It is used in the Chromium
 project (the base for Google Chrome) and in the latest version of Microsoft
-Edge.
+Edge.</p>
 
-JerryScript: JerrgScript is a JavaScript engine designed for devices with
-Limited resources,such as microcontrollers and embedded systems.
+<p><b>JerryScript:</b> JerrgScript is a JavaScript engine designed for devices with
+Limited resources, such as microcontrollers and embedded systems.</p>
 
-Nashorn (Java): Nashorn was a JavaScript engine developed by Oracle
+<p><b>Nashorn (Java):</b> Nashorn was a JavaScript engine developed by Oracle
 and integrated into the Java platform. However, starting from Java 11,
-Nashorn was removed from the JDK in favor of other technologies.
+Nashorn was removed from the JDK in favor of other technologies.</p>
 
-These are just a few examples of the many JavaScript engines that exist
+<p>These are just a few examples of the many JavaScript engines that exist
 Each engine has its own features and approaches to optimizing and
 executing JavaScript code, contributing to the browsing experience and
-performance of online applications.
+performance of online applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk12">sk12. Bitwise Operators, Typed Arrays, and Array Buffers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-These concepts are related to advanced data manipulations in JavaScript
+<p>These concepts are related to advanced data manipulations in JavaScript.</p>
 
-Bitwise Operators: Bitwise operators allow you to perform
+<p><b>Bitwise Operators:</b> Bitwise operators allow you to perform
 manipulations at the bit level rather than on entire integer values. They
 are useful for bitwise operations such as masks and individual bit
-manipulations.
+manipulations.</p>
 
-Some bitwise operators in JavaScript include:
+<p>Some bitwise operators in JavaScript include:</p>
+<ul>
+  <li><b>& (AND):</b> Performs a bitwise AND operation.</li>
+  <li><b>| (OR):</b> Performs a bitwise OR operation.</li>
+  <li><b>^ (XOR):</b> Performs a bitwise XOR operation.</li>
+  <li><b>~ (NOT):</b> Performs a bitwise NOT operation.</li>
+  <li><b>« &lt;&lt; (Left Shift):</b> Shifts bits to the left.</li>
+  <li><b>» &gt;&gt; (Right Shift with Sign):</b> Shifts bits to the right preserving the sign.</li>
+</ul>
 
-• & (AND): Performs a bitwise AND operation.
-
-• | (OR): Performs a bitwise OR operation.
-
-. ^ (XOR): Performs a bitwise XOR operation.
-
-. ~ (NOT): Performs a bitwise NOT operation.
-
-• « &lt;&lt; (Left Shift): Shifts bits to the left
-
-• » &gt;&gt; (Right Shift with Sign): Shifts bits to the right preserving the sign.
-
-Typed Arrays: Typed Arrays are data structures in JavaScript that allow
+<p><b>Typed Arrays:</b> Typed Arrays are data structures in JavaScript that allow
 you to store binary data of specific types, such as integers, floats, etc. They
 are useful for manipulating raw data and performing low-level operations
-efficiently.
+efficiently.</p>
 
-Some types of typed arrays in JavaScript are:
+<p>Some types of typed arrays in JavaScript are:</p>
+<ul>
+  <li><b>Int8Array:</b> 8-bit signed integer array.</li>
+  <li><b>Uint8Array:</b> 8-bit unsigned integer array.</li>
+  <li>Float32Array:</b> 32-bit floating-point number array.</;i>
 
-• Int8Array: 8-bit signed integer array.
-• Uint8Array: 8-bit unsigned integer array.
-• Float32Array: 32-bit fioating-point number arrau.
+<pre>const intArray = new Int8Array([10, 20, 30]);</pre>
 
-const intArray = new Int8Array([10, 20, 30]);
-
-
-
-Array Buffers: Array Buffers are a data structure representing a raw
+<p><b>Array Buffers:</b> Array Buffers are a data structure representing a raw
 memory area that can contain binary data. Array Buffers are used to
 work with binary data efficiently, and Typed Arrays are views of these
-buffers that provide a manipulation interface.
-
+buffers that provide a manipulation interface.</p>
+<pre>
 const buffer = new ArrayBuffer(8);
 // Create an 8-byte buffer
 const intArray = new Int32Array(buffer);
 // View the buffer as a 32-bit integer array
+</pre>
 
-These concepts are more advanced and are typically used when bitwise
+<p>These concepts are more advanced and are typically used when bitwise
 manipulation and low-level operations are required. They are especially
 useful in applications dealing with network protocols, binary data, and
-performance optimization.
+performance optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk13">sk13. DOM and Document Trees</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-The DOM (Document Object Model) is a structural representation of an
+<p>The DOM (Document Object Model) is a structural representation of an
 HTML or XML document that allows interaction and manipulation of a
 web page's content and structure through programming. The DOM
 organizes document elements into a hierarchical structure called the
-documenttree.
+documenttree.</p>
 
-Document Tree (DOM Tree): The document tree is a hierarchical
+<p><b>Document Tree (DOM Tree):</b> The document tree is a hierarchical
 structure that organizes all the elements of an HTML or XML document
 Each element attribute, and text content is represented as a node in the
 tree. Nodes are organized hierarchically, starting from the root node,
-which represents the entire document.
+which represents the entire document.</p>
 
-In the case of a web page, the document tree represents how HTML
-elements are nested and related to each other.
+<p>In the case of a web page, the document tree represents how HTML
+elements are nested and related to each other.</p>
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<title>My Page</title>
+  <title>My Page</title>
 </head>
 <body>
-<hl>Page Title</hl>
-<p>This is a paragraph.</p>
+  <hl>Page Title</hl>
+  <p>This is a paragraph.</p>
 </body>
 </htmt>
 ```
  
-The corresponding document tree would have a structure similar to this:
+<p>The corresponding document tree would have a structure similar to this:</p>
  
-
 Document (html)
 |— html
 |  |-- head
@@ -1366,20 +1404,21 @@ Document (html)
 |     |-- p
 |         |-- "This is a paragraph."
 
-DOM Manipulation: Through JavaScript, you can interact and modify the
+<p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
 content and structure of a web page via the DOM. You can access
 elements, modify their attributes, add or remove nodes, and change their
-content.
-
+content.</p>
+<pre>
 // Access an element and change its content 
 const heading = document.querySelector("hl"); 
 heading.textcontent = "New Title";
+</pre>
 
-The DOM and the document tree are essential concepts for
+<p>The DOM and the document tree are essential concepts for
 understanding how browsers represent and manipulate HTML and XML
 documents. The ability to interact with the DOM through JavaScript
 enables the creation of dynamic interactions and rich experiences on web
-pages. 
+pages.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk14">sk14. Factories and Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
