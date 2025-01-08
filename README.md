@@ -1427,12 +1427,12 @@ function createPerson(name, age) {
     age: age,
     greet: function() {
       console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
-  }
-};
+    }
+  };
+}
 
 const personl = createPerson("John", 30);
-personl.greet();
-// Prints "Hello, I'm John and I'm 30 years old."
+personl.greet();  // Prints "Hello, I'm John and I'm 30 years old."
 </pre>
 
 <p><b>Classes:</b> Classes are a concept introduced in ES6 that allows creating
