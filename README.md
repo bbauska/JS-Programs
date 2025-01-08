@@ -1,9 +1,9 @@
 <!-- readme.md - 637 = 59 + 94 examples & 484 (218+266) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1>687 JS Examples:<br>
-  <a href="sk0">50 JS Concepts Every Developer Should Know<br>
+  <a href="#sk0">50 JS Concepts Every Developer Should Know<br>
   <a href="#el0">59 Eloquent JS Examples</a>,<br>
-  <a  href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,<br>
+  <a href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,<br>
   <a href="#js0">218 Simple JavaScript Example Scripts,<br>
   <a href="#js-0">266 JS Example Scripts</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24,7 +24,63 @@ turn your own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="#sk0">50 JS Concepts Every Developer Should Know</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ul>
+  <li><a href="#sk01">sk01. Call Stack</a></li>
+  <li><a href="#sk02">sk02. Primitive Types</a></li>
+  <li><a href="#sk03">sk03. Value Types and Reference Types</a></li>
+  <li><a href="#sk04">sk04. Implicit, Explicit, Nominal, Structural, and Duck Typing</a></li>
+  <li><a href="#sk05">sk05. == vs === vs typeof</a></li>
+  <li><a href="#sk06">sk06. Function Scope, Block Scope, and Lexcal Scope</a></li>
+  <li><a href="#sk07">sk07. Expression vs Statement</a></li>
+  <li><a href="#sk08">sk08. IIFE, Modules, and Namespaces</a></li>
+  <li><a href="#sk09">sk09. Message Queue and Event Loop</a></li>
+  <li><a href="#sk10">sk10. setTimeout, setinterval, and requestAnimationFrame</a></li>
+  <li><a href="#sk11">sk11. JavaScript Engines</a></li>
+  <li><a href="#sk12">sk12. Bitwise Operators, Typed Arrays, and Array Buffers</a></li>
+  <li><a href="#sk13">sk13. DOM and Document Trees</a></li>
+  <li><a href="#sk14">sk14. Factories and Classes</a></li>
+  <li><a href="#sk15">sk15. this, call, apply, and bind</a></li>
+  <li><a href="#sk16">sk16. new, Constructor, instanceof, and Instances</a></li>
+  <li><a href="#sk17">sk17. Prototypal Inheritance and Prototype Chain</a></li>
+  <li><a href="#sk18">sk18. Object.create and Object.assign</a></li>
+  <li><a href="#sk19">sk19. map, reduce, and filter</a></li>
+  <li><a href="#sk20">sk20. Pure Functions, Side Effects, State</a></li>
+  <li><a href="#sk21">sk21. Closures</a></li>
+  <li><a href="#sk22">sk22. High Order Functions</a></li>
+  <li><a href="#sk23">sk23. Recursion</a></li>
+  <li><a href="#sk24">sk24. Collections and Generators</a></li>
+  <li><a href="#sk25">sk25. Promises</a></li>
+  <li><a href="#sk26">sk26. async/await</a></li>
+  <li><a href="#sk27">sk27. Data Structures</a></li>
+  <li><a href="#sk28">sk28. Costly Operations and Big O Notation</a></li>
+  <li><a href="#sk29">sk29. Algorithms</a></li>
+  <li><a href="#sk30">sk30. Inheritance, Polymorphism, and Code Reusability</a></li>
+  <li><a href="#sk31">sk31. Design Patterns</a></li>
+  <li><a href="#sk32">sk32. Partial Application, Currying, Composition, and Pipe</a></li>
+  <li><a href="#sk33">sk33. Clean Code</a></li>
+  <li><a href="#sk34">sk34. Error Handling (try...catch)</a></li>
+  <li><a href="#sk35">sk35. ES6 Modules</a></li>
+  <li><a href="#sk36">sk36. Ternary Operator</a></li>
+  <li><a href="#sk37">sk37. Spread and Rest Operators</a></li>
+  <li><a href="#sk38">sk38. Destructuring</a></li>
+  <li><a href="#sk39">sk39. Template Literals</a></li>
+  <li><a href="#sk40">sk40. Arrow Functions</a></li>
+  <li><a href="#sk41">sk41. Array Methods (forEach, some, every, find, findindex, etc.)</a></li>
+  <li><a href="#sk42">sk42. String Methods (split, trim, replace, eta)</a></li>
+  <li><a href="#sk43">sk43. Object Methods (kegs, values, entries, etc.)</a></li>
+  <li><a href="#sk44">sk44. Math Methods (floor, ceil, random, etc.)</a></li>
+  <li><a href="#sk45">sk45. JSON and Object Serialization/Deserialization</a></li>
+  <li><a href="#sk46">sk46. Fetch API and AJAX</a></li>
+  <li><a href="#sk47">sk47. Localstorage and Sessionstorage</a></li>
+  <li><a href="#sk48">sk48. WebSockets and Socket.10</a></li>
+  <li><a href="#sk49">sk49. Canvas and WebGL</a></li>
+  <li><a href="#sk50">sk50. Testing with Jest or Mocha</a></li>
+</ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#el0">59 Eloquent JS Examples</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
   <li><a href="#el01">El01. Program Structure: Looping a Triangle</a></li>
   <li><a href="#el02">El02. Program Structure: FizzBuzz</a></li>
@@ -90,15 +146,15 @@ turn your own ideas into a reality without even having to think about it.</p>
 <h2><a href="#ex0">94 JavaScript Examples From Basics to Advanced</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol>
-  <li><a href="#ex1">JS Statements</a></li>
-  <li><a href="#ex2">JS Syntax</a></li>
-  <li><a href="#ex3">JS Comments</a></li>
-  <li><a href="#ex4">JS Variables</a></li>
-  <li><a href="#ex5">JS let</a></li>
-  <li><a href="#ex6">JS const</a></li>
-  <li><a href="#ex7">JS Operators</a></li>
-  <li><a href="#ex8">JS Arithmetic</a></li>
-  <li><a href="#ex9">JS Assignment</a></li>
+  <li><a href="#ex01">JS Statements</a></li>
+  <li><a href="#ex02">JS Syntax</a></li>
+  <li><a href="#ex03">JS Comments</a></li>
+  <li><a href="#ex04">JS Variables</a></li>
+  <li><a href="#ex05">JS let</a></li>
+  <li><a href="#ex06">JS const</a></li>
+  <li><a href="#ex07">JS Operators</a></li>
+  <li><a href="#ex08">JS Arithmetic</a></li>
+  <li><a href="#ex09">JS Assignment</a></li>
   <li><a href="#ex10">JS Data Types</a></li>
   <li><a href="#ex11">JS Functions</a></li>
   <li><a href="#ex12">JS Objects</a></li>
@@ -423,15 +479,15 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 <h2><a href="#js-0">266 JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul type="disc">
-  <li><a href="#js-1">js-1. Convert Celsius to Fahrenheit</a></li>
-  <li><a href="#js-2">js-2. Get Value of a browser Cookie</a></li>
-  <li><a href="#js-3">js-3. Convert RGB to Hex</a></li>
-  <li><a href="#js-4">js-4. Copy to Clipboard</a></li>
-  <li><a href="#js-5">js-5. Check if Date is Valid</a></li>
-  <li><a href="#js-6">js-6. Find the Day of Year</a></li>
-  <li><a href="#js-7">js-7. Capitalize a String</a></li>
-  <li><a href="#js-8">js-8. Find the Number of Days between Two Days</a></li>
-  <li><a href="#js-9">js-9. Clear All Cookies</a></li>
+  <li><a href="#js-01">js-01. Convert Celsius to Fahrenheit</a></li>
+  <li><a href="#js-02">js-02. Get Value of a browser Cookie</a></li>
+  <li><a href="#js-03">js-03. Convert RGB to Hex</a></li>
+  <li><a href="#js-04">js-04. Copy to Clipboard</a></li>
+  <li><a href="#js-05">js-05. Check if Date is Valid</a></li>
+  <li><a href="#js-06">js-06. Find the Day of Year</a></li>
+  <li><a href="#js-07">js-07. Capitalize a String</a></li>
+  <li><a href="#js-08">js-08. Find the Number of Days between Two Days</a></li>
+  <li><a href="#js-09">js-09. Clear All Cookies</a></li>
   <li><a href="#js-10">js-10. Generate Random Hex</a></li>
   <li><a href="#js-11">js-11. Get Query Params from URL</a></li>
   <li><a href="#js-12">js-12. Log Time from Date</a></li>
@@ -1042,9 +1098,6 @@ console.log(countChar("kakkerlak", "k")); // → 4
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el07">07. Data Structures: Objects and Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-
 <pre>
 // Run code here in the context of Chapter 4 Eloquent JavaScript
 // journalEvents of journal.js
