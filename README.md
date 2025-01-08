@@ -1077,6 +1077,7 @@ for (let i = 0; i < 5; i++) {
     that evaluates to a single value.</li>
   <li><b>Statement:</b> It is a unit of code that performs an action or a series of 
     actions in a program.</li>
+</ul>
 
 <p>An important distinction is that expressions have a resulting value, while
 statements  can  change  the  program's  execution  flow  or  perform
@@ -1099,7 +1100,7 @@ scope.</p>
 (function() {
   // Code inside the IIFE
 })();
-</pe>
+</pre>
 
 <p><b>Modules:</b> Modules are a more modern and structured way of organizing
 code, They allow breaking the code into separate and reusable parts while
