@@ -1379,7 +1379,7 @@ elements are nested and related to each other.</p>
 ```
  
 <p>The corresponding document tree would have a structure similar to this:</p>
- 
+<blockquote>
 Document (html)
 |— html
 |  |-- head
@@ -1390,7 +1390,7 @@ Document (html)
 |     |   |-- "Page Title"
 |     |-- p
 |         |-- "This is a paragraph."
-
+</blockquote>
 <p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
 content and structure of a web page via the DOM. You can access
 elements, modify their attributes, add or remove nodes, and change their
@@ -1409,15 +1409,15 @@ pages.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk14">sk14. Factories and Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Factories and classes are two approaches to creating objects and
-structures in JavaScript Each has its own purpose and advantages.
+<p>Factories and classes are two approaches to creating objects and
+structures in JavaScript Each has its own purpose and advantages.</p>
 
-Factories: Factories are functions that generate and return objects. These
+<p><b>Factories:</b> Factories are functions that generate and return objects. These
 functions act as "factories" to create instances of objects with specific
 properties and methods. Factories are a flexible way to create objects in
 JavaScript as they can customize object creation based on the provided
-arguments.
-
+arguments.</p>
+<pre>
 function createPerson(name, age) {
   return {
     name: name,
@@ -1430,15 +1430,15 @@ function createPerson(name, age) {
 const personl = createPerson("John", 30);
 personl.greet();
 // Prints "Hello, I'm John and I'm 30 years old."
+</pre>
 
-Classes: Classes are a concept introduced in ES6 that allows creating
+<p><b>Classes:</b> Classes are a concept introduced in ES6 that allows creating
 objects using a more object-oriented syntax. Classes serve as a blueprint
 for creating objects and define properties and methods that all instances
 will share. Although in JavaScript, classes are "syntactic sugar" over the
 prototype system, they provide a more structured way of working with
-objects.
-
-```
+objects.</p>
+<pre>
 class Person {
   constructor(name, age) {
     this.name = name;
@@ -1452,146 +1452,146 @@ const person2 = new Person("Jane", 25);
 person2.greet();
 
 // Prints "Hello, I'm Jane and I'm 25 years old."
-```
+</pre>
 
-In summary:
+<p>In summary:</p>
+<ul>
+  <li>Factories: Use functions to create and customize objects.</li>
+  <li>Classes: Define object blueprints with shared properties and methods.</li>
+</ul>
 
-• Factories: Use functions to create and customize objects.
-
-• Classes: Define object blueprints with shared properties and methods.
-
-The choice between factories and classes depends on your needs and
+<p>The choice between factories and classes depends on your needs and
 preferences. Factories are more flexible and versatile, while classes
 provide a more object-oriented structure and are especially useful when
-working with inheritance and similar objects.
+working with inheritance and similar objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk15">sk15. this, call, apply, and bind</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-this, call, apply, and bind are concepts and methods in JavaScript related
+<p>this, call, apply, and bind are concepts and methods in JavaScript related
 to managing the value of this in the context of a function. Here's a
-description of each of them:
+description of each of them:</p>
 
-this: In JavaScript, this refers to the object that is the current "execution
+<p><b>this:</b> In JavaScript, this refers to the object that is the current "execution
 context" in a function. The value of this can change depending on how a
-function is called and where it is in the code.
-call and apply: Both methods allow temporarily changing the value of
+function is called and where it is in the code.</p>
+
+<p><b>call and apply:</b> Both methods allow temporarily changing the value of
 this in a function and then executing it The main difference between call
-and apply Lies in how arguments are passed:
+and apply Lies in how arguments are passed:</p>
 
-call: Invokes a function with a specific value for this and individually
-passed arguments.
+<p><b>call:</b> Invokes a function with a specific value for this and individually
+passed arguments.</p>
 
-```
+<pre>
 function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
 }
 const person - { name: 'John'
   greet.call(person, 'Maria'); // Prints: "Hello, Maria! My name is John"
 }
-``` 
+</pre> 
 
-apply: Similar to call, but arguments are passed as an array.
-
+<p><b>apply:</b> Similar to call, but arguments are passed as an array.</p>
+<pre>
 function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
 }
 const person - { name: 'John' };
 greet.apply(person, ['Maria']);
 // Prints: "Hello, Maria! My name is John"
+</pre>
 
-
-bind: The bind method returns a new function where the value of this is
+<p><b>bind:</b> The bind method returns a new function where the value of this is
 fixed to the provided value, and the initial arguments (if any) are "bound"
-to the new function.
+to the new function.</p>
 
-```
+<pre>
 function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
 }
 const person - { name: 'John'
 const greetPerson - greet.bind(person);
 greetPerson('Maria'); // Prints: "Hello, Maria! My name is John"
-```
+</pre>
 
-In summary:
+<p>In summary:</p>
+<ul>
+  <li>♦ this: Refers to the current execution context.</li>
+  <li>♦ call: Invokes a function with a specific value for this and individually passed arguments.</li>
+  <li>♦ apply: Similar to call, but arguments are passed as an array.</li>
+  <li>♦ bind: Creates a new function with this and arguments fixed.</li>
+</ul>
 
-♦ this: Refers to the current execution context
-♦ call: Invokes a function with a specific value for this and individually passed arguments.
-♦ apply: Similar to call, but arguments are passed as an array.
-♦ bind: Creates a new function with this and arguments fixed.
- 
-These methods ore useful for controlling the context of this in different
+<p>These methods ore useful for controlling the context of this in different
 situations, especially when working with functions that are part of objects
-or when you need to manipulate how a function is invoked.
+or when you need to manipulate how a function is invoked.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk16">sk16. new, Constructor, instanceof, and Instances</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-These concepts are related to the creation and use of objects through constructors in 
-JavaScript.
+<p>These concepts are related to the creation and use of objects through constructors in 
+JavaScript.</p>
 
-new: new is a keyword used to create a new instance of an object from a
+<p><b>new:</b> new is a keyword used to create a new instance of an object from a
 constructor function. When used with a constructor function, new creates
 a new object and assigns the value of this within the function to the new object.
-Then, the constructor function can initialize properties and methods on that object
-```
+Then, the constructor function can initialize properties and methods on that object.</p>
+
+<pre>
 function Person(name, age) {
   this.name = name;
   this.age = age;
 }
 const personl = new Person("John", 30);
-```
+</pre>
 
-Constructor: A constructor is a function used to create and configure
+<p><b>Constructor:</b> A constructor is a function used to create and configure
 objects. Constructors often follow a naming convention with the first
 Letter capitalized. Inside the constructor, you can initialize properties and
-methods of the object that will be created with new.
+methods of the object that will be created with new.</p>
 
-instanceof: instanceof is an operator used to check if an object is an
+<p><b>instanceof:</b> instanceof is an operator used to check if an object is an
 instance of a specific class or constructor. It returns true if the object is an
-instance of the given class, otherwise, it returns false.
+instance of the given class, otherwise, it returns false.</p>
 
-```
-console.log(personl instanceof Person); // Returns true
-```
+<pre>console.log(personl instanceof Person); // Returns true</pre>
 
-Instances: An instance is a unique object created from a constructor. Each
+<p><b>Instances:</b> An instance is a unique object created from a constructor. Each
 time you use new with a constructor, a new instance of the object is
-created with its own properties and methods.
+created with its own properties and methods.</p>
 
-```
-const person2 = new Person("Maria", 25);
-```
+<pre>const person2 = new Person("Maria", 25);</pre>
 
-In summary:
+<p>In summary:</p>
+<ul>
+  <li>♦ new: A keyword used to create instances of objects from constructors.</li>
+  <li>♦ Constructor: A function used to create and configure objects.</li>
+  <li>♦ instanceof: An operator to check if an object is an instance of a class or constructor.</li>
+  <li>♦ Instances: Unique objects created from constructors.</li>
+</ul>
 
-	♦ new: A keyword used to create instances of objects from constructors.
-	♦ Constructor: A function used to create and configure objects.
-	♦ instanceof: An operator to check if an object is an instance of a class or constructor.
-	♦ Instances: Unique objects created from constructors.
-
-Constructors and instances are essential for object-oriented programming in JavaScript, 
-allowing the creation of objects with shared properties and behaviors.
+<p>Constructors and instances are essential for object-oriented programming in JavaScript, 
+allowing the creation of objects with shared properties and behaviors.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk17">sk17. Prototypal Inheritance and Prototype Chain</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Prototypal inheritance and the prototype chain are fundamental concepts
+<p>Prototypal inheritance and the prototype chain are fundamental concepts
 in JavaScript for achieving code reuse and establishing relationships
-between objects.
+between objects.</p>
 
-Prototypal  Inheritance: In  JavaScript,  prototypal  inheritance  is  a
+<p><b>Prototypal Inheritance:</b> In  JavaScript,  prototypal  inheritance  is  a
 mechanism by which an object can inherit properties and methods from
 another object called its "prototype." Instead of traditional classes,
 JavaScript uses prototypal inheritance to create relationships between
 objects. When a property or method is looked up in an object, if it's not
 found in the object itself, it is searched in its prototype and in the
-ascending prototype chain.
+ascending prototype chain.</p>
 
-Prototype Chain: The prototype chain is a series of links between
+<p><b>Prototype Chain:</b> The prototype chain is a series of links between
 prototype objects. Each object has an internal link to its prototype, and
 that prototype, in turn, may have its own prototype. This chain continues
-until it reaches the base object, which is the final prototype in the chain.
+until it reaches the base object, which is the final prototype in the chain.</p>
 
-Example of Prototypal Inheritance and Prototype Chain:
+<p>Example of Prototypal Inheritance and Prototype Chain:</p>
 
 ```
 // Define an "Animal" constructor 
