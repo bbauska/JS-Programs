@@ -764,7 +764,6 @@ are concepts that you should know if you want to be at a higher level.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk0">50 JavaScript Concepts Every Developer Should Know</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk01">sk01. Call Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 A call stack is a data structure that stores information about the 
@@ -800,7 +799,7 @@ stack. Inside washDish, dryDishO's called, which, in turn, gets added
 to the call stack Finally, storeDishQ is called from dryDishQ, and it
 also gets added to the call stack.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk02">2. Primitive Types</h2>
+<h2 id="sk02">sk02. Primitive Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Primitive types refer to the fundamental data types that are not
 composed of other types. They are the simplest and most basic data
@@ -817,7 +816,7 @@ Floating-point:
 let temperature = 26.5; // Float
 
 Floating-point:
-let grade = 'A1; // Character
+let grade = 'A'; // Character
 
 Floating-point:
 let isStudent = true; // Boolean
@@ -827,7 +826,7 @@ most basic forms of data in the language and are not composed of
 other types. They serve as the building blocks for more complex data
 structures.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk03">3. Value Types and Reference Types</h2>
+<h2 id="sk03">sk03. Value Types and Reference Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Values can be classified into two categories: value types and reference
 types. This distinction is crucial to understand how data is handled and
@@ -886,9 +885,9 @@ types Lies in how they are stored and manipulated in memory. Value types
 are immutable, meaning that modifying them creates a new instance in
 memory. In contrast, reference types are passed by reference, so
 modifying them also modifies the original object in memory.
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk04">sk04. Implicit, Explicit, Nominal, Structural, and Duck Typing</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The concepts of typing refer to how data types are managed and
 assigned in a language. Here is a description of the different types of
 typing:
@@ -944,8 +943,9 @@ const canary = {
 };
 entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
 ```
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk05">sk5. == vs === vs typeof</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 =- ==- and typeof are operators used to compare values and retrieve
 information about data types. Here's an explanation of each:
 
@@ -957,6 +957,7 @@ information about data types. Here's an explanation of each:
 
 typeof (typeof Operator): The typeof operator is used to obtain the data
 type of an expression. It returns a string representing the data type.
+
 ```
 typeof 42; // "number"
 typeof "Hello"; // "string"
@@ -971,8 +972,9 @@ It is important to understand the difference between == and === to avoid
 unexpected comparison issues due to automatic type conversion. The use
 of === is generally safer and recommended as it provides more accurate
 comparisons and avoids surprises in your program's behavior.
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk06">sk06. Function Scope, Block Scope, and Lexical Scope</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The concepts of function scope, block scope, and Lexical scope refer to how
 variables are accessed and managed in different contexts within the code.
 
@@ -980,6 +982,7 @@ Function Scope: In JavaScript, variables declared within a function are
 visible and accessible only within that function and any nested functions
 within it This is called function scope. Variables declared with var have
 function scope.
+
 ```
 function myFunction() {
   var functionvariable = 42;
@@ -1026,8 +1029,9 @@ Function scope, block scope, and lexical scope are essential concepts to
 understand how variables behave in different contexts. These concepts
 play a key role in understanding JavaScript execution and preventing
 errors related to variable scope.
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk07">sk07. Expression vs Statement</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Expressions and statements are fundamental concepts used to construct
 programs.
 
@@ -1066,9 +1070,9 @@ statements  can  change  the  program's  execution  flow  or  perform
 operations without necessarily returning a value. Both concepts are
 essential for writing coherent and effective code in any programming
 language.
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk08">sk08. IIFE, Modules, and Namespaces</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Immediately  Invoked  Function  Expressions  (IIFE),  modules,  and
 namespaces are techniques used to modularize and organize code. Each
 addresses scope management and code organization in different ways.
@@ -1119,9 +1123,9 @@ necessary.
 
 In modern projects, it is recommended to use modules to effectively
 organize code and maintain cleaner control over scope and code reuse.
- 
-<h2 id="sk09">sk09.  Message Queue and Event Loop</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="sk09">sk09. Message Queue and Event Loop</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The message queue and event Loop are crucial concepts to understand
 how event handling and asynchronous operations work in JavaScript
 
@@ -1169,10 +1173,9 @@ In this example, the code executes in the following order:
 Understanding how the message queue and event loop work is crucial for
 writing  asynchronous  JavaScript  code  and  avoiding  blocking  and
 bottlenecks in program execution.
- 
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk10">sk10. setTimeout, setinterval, and requestAnimationFrame</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 These three functions are very useful for working with timers and
 performing asynchronous tasks in JavaScript However, each has its own
 purpose and advantages.
@@ -1224,10 +1227,9 @@ Choose the appropriate function based on your needs. setTimeout and
 setinterval are useful for controlling time and executing code after certain
 intervals, while requestAnimationFrame is specific for creating smooth
 and efficient animations in the browser.
- 
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk11">sk11. JavaScript Engines</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 JavaScript  engines  are  fundamental  components  in  browsers  and
 execution environments that interpret and execute JavaScript code. Each
 browser and environment has its own JavaScript engine.
@@ -1268,8 +1270,9 @@ These are just a few examples of the many JavaScript engines that exist
 Each engine has its own features and approaches to optimizing and
 executing JavaScript code, contributing to the browsing experience and
 performance of online applications.
- 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk12">sk12. Bitwise Operators, Typed Arrays, and Array Buffers</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 These concepts are related to advanced data manipulations in JavaScript
 
 Bitwise Operators: Bitwise operators allow you to perform
@@ -1320,8 +1323,9 @@ These concepts are more advanced and are typically used when bitwise
 manipulation and low-level operations are required. They are especially
 useful in applications dealing with network protocols, binary data, and
 performance optimization.
- 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk13">sk13. DOM and Document Trees</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The DOM (Document Object Model) is a structural representation of an
 HTML or XML document that allows interaction and manipulation of a
 web page's content and structure through programming. The DOM
@@ -1378,9 +1382,9 @@ understanding how browsers represent and manipulate HTML and XML
 documents. The ability to interact with the DOM through JavaScript
 enables the creation of dynamic interactions and rich experiences on web
 pages. 
-
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk14">sk14. Factories and Classes</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Factories and classes are two approaches to creating objects and
 structures in JavaScript Each has its own purpose and advantages.
 
@@ -1402,7 +1406,6 @@ function createPerson(name, age) {
 const personl = createPerson("John", 30);
 personl.greet();
 // Prints "Hello, I'm John and I'm 30 years old."
- 
 
 Classes: Classes are a concept introduced in ES6 that allows creating
 objects using a more object-oriented syntax. Classes serve as a blueprint
@@ -1427,7 +1430,6 @@ person2.greet();
 // Prints "Hello, I'm Jane and I'm 25 years old."
 ```
 
-
 In summary:
 
 • Factories: Use functions to create and customize objects.
@@ -1438,10 +1440,9 @@ The choice between factories and classes depends on your needs and
 preferences. Factories are more flexible and versatile, while classes
 provide a more object-oriented structure and are especially useful when
 working with inheritance and similar objects.
-
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk15">sk15. this, call, apply, and bind</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 this, call, apply, and bind are concepts and methods in JavaScript related
 to managing the value of this in the context of a function. Here's a
 description of each of them:
@@ -1498,21 +1499,23 @@ In summary:
 These methods ore useful for controlling the context of this in different
 situations, especially when working with functions that are part of objects
 or when you need to manipulate how a function is invoked.
-
-
-<h2 id="sk16">sk16. neuu, Constructor, instanceof, and Instances</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="sk16">sk16. new, Constructor, instanceof, and Instances</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 These concepts are related to the creation and use of objects through constructors in 
 JavaScript.
 
 new: new is a keyword used to create a new instance of an object from a
 constructor function. When used with a constructor function, new creates
-a new object and assigns the value of this within the function to the new object Then, the constructor function can initialize properties and methods on that object
-
+a new object and assigns the value of this within the function to the new object.
+Then, the constructor function can initialize properties and methods on that object
+```
 function Person(name, age) {
   this.name = name;
   this.age = age;
 }
 const personl = new Person("John", 30);
+```
 
 Constructor: A constructor is a function used to create and configure
 objects. Constructors often follow a naming convention with the first
@@ -1523,13 +1526,17 @@ instanceof: instanceof is an operator used to check if an object is an
 instance of a specific class or constructor. It returns true if the object is an
 instance of the given class, otherwise, it returns false.
 
+```
 console.log(personl instanceof Person); // Returns true
+```
 
 Instances: An instance is a unique object created from a constructor. Each
 time you use new with a constructor, a new instance of the object is
 created with its own properties and methods.
 
+```
 const person2 = new Person("Maria", 25);
+```
 
 In summary:
 
@@ -1538,18 +1545,18 @@ In summary:
 ♦ instanceof: An operator to check if an object is an instance of a class or constructor.
 ♦ Instances: Unique objects created from constructors.
 
-Constructors and instances  are  essential  for  object-oriented
-programming in JavaScript, allowing the creation of objects with shared
-properties and behaviors.
- 
-<h2 id="sk17">sk17.  Prototypal Inheritance and Prototype Chain</h2>
+Constructors and instances are essential for object-oriented programming in JavaScript, 
+allowing the creation of objects with shared properties and behaviors.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="sk17">sk17. Prototypal Inheritance and Prototype Chain</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Prototypal inheritance and the prototype chain are fundamental concepts
 in JavaScript for achieving code reuse and establishing relationships
 between objects.
 
 Prototypal  Inheritance: In  JavaScript,  prototypal  inheritance  is  a
 mechanism by which an object can inherit properties and methods from
-another object called  its  "prototype."  Instead  of traditional classes,
+another object called its "prototype." Instead of traditional classes,
 JavaScript uses prototypal inheritance to create relationships between
 objects. When a property or method is looked up in an object, if it's not
 found in the object itself, it is searched in its prototype and in the
@@ -1561,8 +1568,9 @@ that prototype, in turn, may have its own prototype. This chain continues
 until it reaches the base object, which is the final prototype in the chain.
 
 Example of Prototypal Inheritance and Prototype Chain:
+
 ```
-//  Define an "Animal" constructor 
+// Define an "Animal" constructor 
 function Animal (name) {
   this.name = name;
 }
@@ -1572,22 +1580,22 @@ Animal.prototype.greet = functionU i console.log(Hello, I'm a ${this.name}');
 
 };
 
-//  Define a "Dog" constructor that inherits from "Animal"
+// Define a "Dog" constructor that inherits from "Animal"
 function Dog(name, breed) {
   Animal.call(this, name); // Call the "Animal" constructor 
   this.breed = breed;
 }
 
-//  Establish prototypal inheritance
+// Establish prototypal inheritance
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 
-//  Add an additional method to "Dog" 
+// Add an additional method to "Dog" 
 Dog.prototype.bark = function() { 
   console.log("Woof woof!");
 };
 
-//  Create an instance of "Dog"
+// Create an instance of "Dog"
 const myDog = new Dog("Max", "Labrador");
 myDog.greet(); // Prints "Hello, I'm Max"
 myDog.bark(); // Prints "Woof woof!"
@@ -1595,21 +1603,20 @@ myDog.bark(); // Prints "Woof woof!"
 
 In this example:
 ♦  We create the Animal constructor with a greet method.
-
 ♦  We create the Dog constructor that inherits from Animal and has a bark method.
-
-♦  Prototypal inheritance is established using Object create Q, and we ensure that the Dog constructor points correctly.
-
-♦  We create an instance of Dog, and we can access methods from both Animaland Dog.
+♦  Prototypal inheritance is established using Object create Q, and we ensure that the 
+   Dog constructor points correctly.
+♦  We create an instance of Dog, and we can access methods from both Animal and Dog.
  
-Prototypal  inheritance  and  the  prototype  chain  are  crucial  for
-understanding how objects work and code reuse in JavaScript
-
+Prototypal inheritance and the prototype chain are crucial for understanding how objects 
+work and code reuse in JavaScript.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk18">sk18. Object.create and Object.assign</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Both Objectcreate and Objectassign are important methods in JavaScript
 used for working with objects, but they serve different purposes.
 
-Objectxreate: Objectcreate is a method used to create a new object and
+Object.create: Object.create is a method used to create a new object and
 set its prototype (parent object). It allows creating objects that inherit
 properties and methods from another object It's especially useful for
 implementing prototypal inheritance in JavaScript.
@@ -1618,21 +1625,21 @@ implementing prototypal inheritance in JavaScript.
 const newObj = Object.create(prototype);
 ```
 
-Example of Objectcreate:
+Example of Object.create:
 
 ```
 const animal = {
-sound:  "Makes a sound",
-makeSound: function() ■{
-console.log(this.sound);
-}
+  sound:  "Makes a sound",
+  makeSound: function() {
+    console.log(this.sound);
+  }
 };
 const dog = Object.create(animal);
 dog.sound = "Woof woof";
 dog.makeSound(); // Prints "Woof woof"
 ```
 
-Objectassign: Objectassign is a method used to copy enumerable
+Object.assign: Object.assign is a method used to copy enumerable
 properties from one or more source objects to a target object If there are
 properties with the same  name in the target object they will be
 overwritten. It's usefulfor combining objects or cloning objects.
@@ -1645,7 +1652,7 @@ Example of Objectassign:
 
 ```
 const target =
-const sourcel = ■{ name: "John", age: 30
+const sourcel = { name: "John", age: 30 };
 const source2 = { city: "New York" };
 Object.assign(target, sourcel, source2);
 console.log(target);
@@ -1655,13 +1662,13 @@ console.log(target);
 In summary:
 
 •  Objectcreate: Creates a new object with a specified prototype.
-•  Objectassign: Combines or copies enumerable properties from source objects to a target object
+•  Objectassign: Combines or copies enumerable properties from source objects to a target object.
 
-Objectcreate  is  useful  for  establishing  prototypal  inheritance
-relationships, while Objectassign is useful for combining properties from
-multiple objects or for cloning objects.
-
+Objectcreate is useful for establishing prototypal inheritance relationships, while 
+Object.assign is useful for combining properties from multiple objects or for cloning objects.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk19">sk19. map, reduce, and filter</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 These are three high-level methods provided by JavaScript for working
 with arrays in a more functional and elegant way. Each one has a specific
 purpose and is widely used for transforming, filtering, and reducing data in
@@ -1699,8 +1706,9 @@ const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 // sum is 15
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Propagation
 These  concepts  are  related  to  functional  programming,  data
 manipulation, and interaction in JavaScript Here's an explanation of each
@@ -1738,8 +1746,10 @@ maintainable, and scalable code. The focus on pure functions and avoiding
 side effects contributes to functional programming, while understanding
 state  mutation  is  crucial  for  working  with  changing  data.  Event
 propagation is essential for managing interaction in web applications.
- 
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">sk21. Closures</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Closures ore on important concept in  programming, referring to a
 function's ability to access and remember variables from its lexical scope
 even after that function has finished execution and Left that scope.
@@ -1770,7 +1780,9 @@ Closures ore particularly useful for creating functions with private states,
 maintaining encapsulation in JavaScript. They are also used in patterns
 like modules and callback functions in events.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk22">sk22. High Order Functions</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 High Order Functions are functions that can accept other functions as
 arguments and/or return functions as results. These functions are a
 fundamental part of functional programming and enable the creation of
@@ -1845,8 +1857,9 @@ const numbers = [1, 2, 3, A];
 const totalSum = numbers.reduce((accumulator, number) => accumulator + number, 0); // Result: 10
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk23">sk23. Recursion</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Recursion is a programming concept where a function calls itself to solve
 a problem. Essentially, it is a technique in which a function breaks down
 into smaller, more manageable problems until it reaches a base case that
@@ -1880,7 +1893,9 @@ divide and conquer in algorithms. However, it's crucial to use recursion
 carefully, as improper use can lead to performance issues and stack
 overflow errors.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk24">sk24. Collections and Generators</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Collections and generators are important concepts in JavaScript that help
 handle and manipulate sets of data efficiently and flexibly. Here's a
 description of both:
@@ -1946,7 +1961,9 @@ structures.
 Both collections and generators are powerful tools in JavaScript that
 allow you to handle and manipulate data more efficiently and flexibly.
  
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk25">sk25. Promises</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Promises ore a design pattern and feature in JavaScript that allows for a
 more elegant and efficient handling of asynchronous operations, such as
 network requests, fie read/write, and other tasks that may take time and
@@ -2011,8 +2028,9 @@ Promises are a  powerful and flexible way to handle asynchronous
 operations in JavaScript. However, as JavaScript evolved, more advanced
 readable syntax for working with asynchronous operations.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk26">sk26. async/await</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 async/await is a feature introduced in  ECMAScript 2017 (ES8) that
 simplifies asynchronous programming in JavaScript It provides a cleaner
 and more readable syntax for working with promises and asynchronous
@@ -2075,7 +2093,9 @@ it's essential to remember that async/await still relies on underlying
 promises, so understanding how promises work is crucial to make the
 most out of asy nc/await.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk27">sk27. Data Structures</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Data structures are organized and efficient ways to store and manage
 data in a program. These structures allow operations such as insertion,
 search, modification, and deletion of data to be performed efficiently. In
@@ -2138,7 +2158,9 @@ These are just some of the basic data structures in JavaScript The choice
 of the right data structure depends on the specific requirements of your
 program and the operations you need to perform on the stored data.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk28">sk28. Costly Operations and Big 0 Notation</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Costly operations refer to actions in a program that consume a significant
 amount of resources, such as time and memory. These operations can
 negatively impact the performance and efficiency of your program. One
@@ -2155,17 +2177,20 @@ Some common Big 0 notations include:
 
 •  0(1) (Constant Time): The operation does not depend on the size of
 the input Example: accessing elements in an array by index.
-
 •  O(log n) (Logarithmic Time): The operation becomes slower as the
 size of the input increases, but not proportionally. Example: binary search in a sorted array.
-
 •  0(n) (Linear Time): The execution time or memory usage increases
 linearly witn tne size or tne input txampie: traversing an elements in
 an array.
 
-•  O(n log n) (Linearithmic Time): Common in efficient sorting algorithms Like Merge Sort and Quicksort
-•  0(nA2), 0(nA3), ... (Quadratic, Cubic Time): The execution time increases quadratically, cubically, etc., in relation to the size of the input Example: nested Loops.
-•  0(2An), O(n!) (Exponential, Factorial Time): These notations indicate exponential or factorial growth in execution time and are generally considered inefficient for large input sizes.
+•  0(n log n) (Linearithmic Time): Common in efficient sorting algorithms Like Merge 
+   Sort and Quicksort
+•  0(nA2), 0(nA3), ... (Quadratic, Cubic Time): The execution time increases 
+   quadratically, cubically, etc., in relation to the size of the input 
+   Example: nested Loops.
+•  0(2An), 0(n!) (Exponential, Factorial Time): These notations indicate exponential or 
+   factorial growth in execution time and are generally considered inefficient for large 
+   input sizes.
 
 Choosing efficient algorithms and data structures is crucial to minimize
 costly operations. In many cases, algorithms with lower Big 0 notations
@@ -2173,8 +2198,9 @@ are sought to improve performance. However, it's essential to consider
 context and other factors that may influence the choice of the right
 algorithm.
  
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk29">sk29. Algorithms</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Algorithms ore ordered sets of steps or instructions that solve a problem
 or perform a specific task. In programming, algorithms are fundamental
 for addressing a wide varietg of challenges, from data manipulation to
@@ -2228,7 +2254,9 @@ contexts to solve problems effectively and efficiently. Each algorithm has
 advantages and disadvantages depending on the problem and available
 resources, so choosing the right approach for each situation is crucial
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk30">sk30. Inheritance, Polymorphism, and Code Reusability</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Inheritance: Inheritance is a fundamental concept in object-oriented
 programming (OOP) that allows the creation of new classes based on
 existing classes. A class that inherits from another (called a base class or
@@ -2315,7 +2343,9 @@ Together,  inheritance,  polymorphism,  and  code  reusability  are  key
 concepts for building more efficient, maintainable, and scalable object-
 oriented applications.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk31">sk31. Design Patterns</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Design  patterns  are  proven  solutions to  common  software  design
 problems. These patterns provide guidance for effectively and efficiently
 solving specific problems, promoting good design practices, modularity,
@@ -2368,7 +2398,9 @@ However, it's important to note that not all patterns are applicable in
 every situation, and evaluating the suitability of a pattern for the specific
 problem you're facing is crucial.
  
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk32">sk32. Partial Application, Currying, Composition, and Pipe</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Partial Application: Partial application is a technique in functional
 programming where you provide some, but not all, arguments to a
 function. The resulting function expects the remaining arguments to
@@ -2450,7 +2482,9 @@ pipe) are fundamental in functional programming and enable building
 more  modular,  readable,  and  maintainable  programs  by  breaking
 operations into smaller, reusable units.
  
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk33">sk33. Clean Code</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Clean code is a fundamental concept in programming that refers to
 writing code that is easy to understand, maintain, and collaborate on.
 Clean  code  is  readable,  clear,  well-structured,  and  follows  good
@@ -2489,7 +2523,9 @@ following these practices, you can improve the quality and maintainability
 of your code, ultimately making problem-solving and project evolution
 more straightforward.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk34">sk34. Error Handling (try...catch)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Error handling is an essential part of programming to manage unexpected
 or exceptional situations that may occur during program execution. In
 JavaScript, you can use the try...catch statements to capture and handle
@@ -2521,7 +2557,9 @@ message.
 It's important to note that you shouldn't use try...catch to control normal
 programflowsbuttohandleexceptionalsituations.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk35">sk35. ES6 Modules</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 In ECMAScript 6 (ES6) and Later versions, modules are a built-in feature
 that allows organizing and structuring code into smaller, reusable units.
@@ -2585,7 +2623,9 @@ module  support  may  vary  across  different  runtime  environments
 (browsers, Node.js, etc.), so you might need transpilers or additional
 configurations in certain cases.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk36">sk36. Ternary Operator</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The ternary operator, also known as the conditional operator, is a
 constructthat allows for a conditional evaluation in a single Line of code. It
 is a concise way to express an if...else statement in a single Line. The basic
@@ -2623,7 +2663,9 @@ originalPrice;
 console.log(finalPrice); // Prints: 80
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk37">sk37. Spread and Rest Operators</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The spread and  rest operators are powerful features in JavaScript
 introduced in ES6 (ECMAScript 2015) that allow for more flexible and
 concise manipulation of arrays and objects.
@@ -2676,7 +2718,9 @@ operator gathers the remaining elements into a new array named rest.
 manipulation and handling of arrays and objects in JavaScript more
 readable and concise, leading to cleaner code.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk38">sk38. Destructuring</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Destructuring assignment is a feature in JavaScript introduced in ES6
 (ECMAScript 2015) that allows for extracting values from arrays and
 objects and assigning them to variables in a more concise and readable
@@ -2739,7 +2783,9 @@ console.log(age); // Prints: 25
 Destructuring assignment can save time and reduce the need for writing
 repetitive codewhen accessing values from arrays and objects.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk39">sk39. Template Literals</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Template Literals are a feature introduced in ECMAScript 6 (ES6) that
 allows for creating strings in a  more readable and flexible way in
 JavaScript Template literals are defined using backticks ('') instead of
@@ -2784,8 +2830,9 @@ include dynamic values and formatted elements. Moreover, by using
 template Literals, the code becomes more readable and avoids manual
 string concatenation, which can be error-prone and confusing. 
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk40">sk40. Arrow Functions</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that
 provide  a  more  concise and  clear syntax for defining functions in
 JavaScript Arrow functions are especially useful when working with
@@ -2840,7 +2887,9 @@ simplify syntax and maintain predictable this behavior. However, it's
 essential to understand their differences from regular functions, especially
 when dealing with more complex this contexts.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk41">sk41. Array Methods (forEach, some, every, find, findindex, etc.)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The Array object in JavaScript provides a variety of methods for working
 with arrays and  performing operations on their elements. Here's a
 description of some of the most common Array methods:
@@ -2939,7 +2988,9 @@ const numbers = [10, 20, 30, 40];
 const index = numbers.findlndex(number => number > 25); // Result: 2 (30 is the first number greater than 25)
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk42">sk42. String Methods (split, trim, replace, etc.)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The  String  object in JavaScript provides  a  variety  of methods for
 manipulating and working with text strings. Here’s a description of some
 of the most common String methods:
@@ -3018,8 +3069,9 @@ const uppercase = text.toUpperCaseO; // Result:  'HELLO, WORLD!'
 const lowercase = text.toLowerCaseO; // Result:  'hello, world!'
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk43">sk43. Object Methods (keys, values, entries, etc.)</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The Object object in JavaScript provides several useful methods for
 working with object properties and values. Here’s a description of some of
 the most common methods of Object:
@@ -3113,8 +3165,9 @@ const properties = Object.getOwnPropertyNames(object);
 //  Result: ['a', 'b']
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk44">sk44. Math Methods (floor, ceil, random, etc.)</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 The  Math  object in JavaScript provides a  variety  of methods and
 properties for  mathematical  operations  and  numerical calculations.
 
@@ -3171,8 +3224,9 @@ its value without a sign.
 const absoluteValue - Math.abs(-7); // Result: 7
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk45">sk45. JSON and Object Serialization/Deserialization</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 JSON (JavaScript Object Notation) is a Lightweight and widely used data
 interchange format in programming. It allows for the representation of
 data structures in a readable and organized way and is common in
@@ -3229,8 +3283,9 @@ Serialization and deserialization allow for the conversion of JavaScript
 objects into JSON strings and vice versa, facilitating the transfer of data
 between different systems and the persistence of information.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk46">sk46. Fetch API and AJAX</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Both the Fetch API and AJAX are methods used in JavaScript to make
 requests and receive responses from web servers, enabling interaction
 between a web application and a server. Although both serve the same
@@ -3286,8 +3341,9 @@ if (xhr.readyState --- k && xhr.status --- 200) { const data = JS0N.parse(xhr.re
 xhr.sendO;
 ```
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk47">sk47. Localstorage and Sessionstorage</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Both LocaLStorage and SessionStorage are mechanisms for Local storage
 in the browser that allow web applications to save data in the browser for
 later retrieval Although they have similarities, they differ in terms of data
@@ -3343,8 +3399,9 @@ whether you want the data to persist beyond the current browser session
 (Locals to rage) or if you only need it to be available during the current
 session (SessionStorage).
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk48">sk48. IlllebSockets and Socket.10</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Both WebSockets and SocketIO are technologies used in JavaScript to
 enable real-time communication between the client and server in web
 applications. Although they have similar purposes, they differ in terms of
@@ -3429,8 +3486,9 @@ and the developer experience. The choice between them depends on the
 specific needs of your application and the level of abstraction you prefer
 to use.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk49">sk49. Canvas and SebGL</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Both Canvas and WebGL are technologies used in JavaScript to render
 graphics in web browsers, but they differ in terms of functionality and
 complexity.
@@ -3488,8 +3546,9 @@ graphics, 3D games, or interactive visualizations, WebGL is the technology
 to use. Your choice will depend on the type of visual experience you want
 to provide in your web application.
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk50">sk50. Testing uuith Jest or Mocha</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 Jest and Mocha are two popular frameworks for unit and integration
 testing in JavaScript Both allow for automated testing to ensure that the
 code functions correctly and behaves as expected. However, they have
@@ -3598,7 +3657,8 @@ libraries and mocking tools.
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el00">59 Eloquent JS Examples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el01">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
