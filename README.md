@@ -1491,6 +1491,7 @@ const person - { name: 'John'
 </pre> 
 
 <p><b>apply:</b> Similar to call, but arguments are passed as an array.</p>
+
 <pre>
 function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
@@ -1513,7 +1514,7 @@ const greetPerson - greet.bind(person);
 greetPerson('Maria'); // Prints: "Hello, Maria! My name is John"
 </pre>
 
-<p>In summary:</p>
+<p><b>In summary:</b></p>
 <ul>
   <li>this: Refers to the current execution context.</li>
   <li>call: Invokes a function with a specific value for this and individually passed arguments.</li>
@@ -1560,7 +1561,7 @@ created with its own properties and methods.</p>
 
 <pre>const person2 = new Person("Maria", 25);</pre>
 
-<p>In summary:</p>
+<p><b>In summary:</b></p>
 <ul>
   <li><b>new:</b> A keyword used to create instances of objects from constructors.</li>
   <li><b>Constructor:</b> A function used to create and configure objects.</li>
@@ -1590,7 +1591,7 @@ prototype objects. Each object has an internal link to its prototype, and
 that prototype, in turn, may have its own prototype. This chain continues
 until it reaches the base object, which is the final prototype in the chain.</p>
 
-<p>Example of Prototypal Inheritance and Prototype Chain:</p>
+<p><b>Example of Prototypal Inheritance and Prototype Chain:</b></p>
 
 <pre>
 // Define an "Animal" constructor 
@@ -1599,8 +1600,8 @@ function Animal (name) {
 }
 
 // Add a "greet" method to the prototype of "Animal"
-Animal.prototype.greet = functionU i console.log(Hello, I'm a ${this.name}');
-
+Animal.prototype.greet = function() {
+  console.log(`Hello, I'm a ${this.name}`);
 };
 
 // Define a "Dog" constructor that inherits from "Animal"
@@ -1628,8 +1629,8 @@ myDog.bark(); // Prints "Woof woof!"
 <ul>
   <li>We create the Animal constructor with a greet method.</li>
   <li>We create the Dog constructor that inherits from Animal and has a bark method.</li>
-  <li>Prototypal inheritance is established using Object create Q, and we ensure that the 
-       Dog constructor points correctly.</li>
+  <li>Prototypal inheritance is established using Object.create(), and we ensure that the 
+    Dog constructor points correctly.</li>
   <li>We create an instance of Dog, and we can access methods from both Animal and Dog.</li>
 </ul>
  
@@ -1648,7 +1649,7 @@ implementing prototypal inheritance in JavaScript.</p>
 
 <pre>const newObj = Object.create(prototype);</pre>
 
-<p>Example of Object.create:</p>
+<p><b>Example of Object.create:</b></p>
 
 <pre>
 const animal = {
@@ -1667,27 +1668,30 @@ properties from one or more source objects to a target object If there are
 properties with the same name in the target object they will be
 overwritten. It's usefulfor combining objects or cloning objects.</p>
 
-<pre>Object.assign(targetobject, sourceObjectl, source0bject2, ...);</pre>
+<pre>Object.assign(targetObject, sourceObjectl, sourceObject2, ...);</pre>
 
-<p>Example of Objectassign:</p>
+<p><b>Example of Objectassign:</b></p>
 
 <pre>
 const target =
 const sourcel = { name: "John", age: 30 };
 const source2 = { city: "New York" };
+
 Object.assign(target, sourcel, source2);
 console.log(target);
 // Prints { name: "John", age: 30, city: "New York" }
 </pre>
 
-<p>In summary:</p>
+<p><b>In summary:</b></p>
 <ul>
   <li><b>Objectcreate:</b> Creates a new object with a specified prototype.</li>
-  <li><b>Objectassign:</b> Combines or copies enumerable properties from source objects to a target object.</li>
+  <li><b>Objectassign:</b> Combines or copies enumerable properties from source objects 
+    to a target object.</li>
 </ul>
 
 <p>Objectcreate is useful for establishing prototypal inheritance relationships, while 
-Object.assign is useful for combining properties from multiple objects or for cloning objects.</p>
+Object.assign is useful for combining properties from multiple objects or for cloning 
+objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk19">19. map, reduce, and filter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1727,14 +1731,11 @@ const numbers = [1, 2, 3, 4, 5];
 const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 // sum is 15
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="sk20">20. Pure Functions, Side Effects, State Mutation, and Event</h2>
+<h2 id="sk20">20. Pure Functions, Side Effects, State Mutation, and Event Propagation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Propagation</b></p>
-<p>These concepts are related to functional programming, data
-manipulation, and interaction in JavaScript Here's an explanation of each
-one:</p>
+<p>These concepts are related to functional programming, data manipulation, and 
+interaction in JavaScript Here's an explanation of each one:</p>
 
 <p><b>Pure Functions:</b> Pure functions are functions that produce the same
 result for the same arguments and have no side effects on the
@@ -1755,12 +1756,12 @@ accessing external resources (network, files), and manipulating the DOM.</p>
 objects or arrays, is modified directly instead of creating new ones. It can
 lead to unwanted side effects and make tracking changes difficult.</p>
 
-<p><b>Fvpnt Prnnnnntinn</b> In thp rnnfpvt nf thp DOM nnrl infprnrtinnQ nn n \a/pH
+<p><b>Event Propagation</b> In the context of the DOM and interactions on a web 
 page, event propagation refers to the flow of an event through the
 hierarchy of elements. Events can propagate from the target element to
 ancestor elements or vice versa.</p>
 
-<p>Phases of Event Propagation:</p>
+<p><b>Phases of Event Propagation:</b></p>
 <ul>
   <li><b>Capture:</b> The event descends from the root element to the target.</li>
   <li><b>Target:</b> The event reaches the target element.</li>
