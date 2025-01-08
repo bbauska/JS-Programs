@@ -771,6 +771,7 @@ A call stack is a data structure that stores information about the
 active subroutines or function calls in a computer program. It
 operates on a Last In, First Out (LIFO) basis, meaning that the last
 function called is the first one to be resolved or completed.
+
 ```
 //  Function definitions
 function washDish() {
@@ -793,6 +794,7 @@ function storeDish() {
 //  Calling the main function
 washDish();
 ```
+
 In this example, when washDish is called, it gets added to the call
 stack. Inside washDish, dryDishO's called, which, in turn, gets added
 to the call stack Finally, storeDishQ is called from dryDishQ, and it
@@ -806,6 +808,7 @@ entities directly supported by the programming language. Primitive
 types are usually built-in and include fundamental data categories
 such as integers, floating-point numbers, characters, and boolean
 values.
+
 ```
 Integer:
 let age = 25; // Integer
