@@ -23,8 +23,9 @@ turn your own ideas into a reality without even having to think about it.</p>
 <p>I've always considered JavaScript a 4th generation language. Perhaps even 5th.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="#toc">Table of Contents</h2>
+<h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="#sk0">50 JS Concepts Every Developer Should Know</h2>
+<h2><a href="#sk0">50 JS Concepts Every Developer Should Know</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
   <li><a href="#sk01">sk01. Call Stack</a></li>
@@ -79,7 +80,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#sk50">sk50. Testing with Jest or Mocha</a></li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="#el0">59 Eloquent JS Examples</h2>
+<h2><a href="#el0">59 Eloquent JS Examples</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
   <li><a href="#el01">El01. Program Structure: Looping a Triangle</a></li>
@@ -746,6 +747,2839 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-265">js-265. Display Confetti on Button Click</a></li>
   <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
 </ul>
+<h1>We begin here</h1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="sk01">sk01. Call Stack</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+A call stack is a data structure that stores information about the 
+active subroutines or function calls in a computer program. It
+operates on a Last In, First Out (LIFO) basis, meaning that the last
+function called is the first one to be resolved or completed.
+```
+//  Function definitions
+function washDish() {
+  console.log("Washing dish");
+  dryDish();
+  console.log("Finished washing dish");
+}
+
+function dryDish() {
+  console.log("Drying dish");
+  storeDish();
+  console.log("Finished drying dish");
+}
+
+function storeDish() {
+  console.log("Storing dish");
+
+}
+
+//  Calling the main function
+washDish();
+```
+In this example, when washDish is called, it gets added to the call
+stack. Inside washDish, dryDishO's called, which, in turn, gets added
+to the call stack Finally, storeDishQ is called from dryDishQ, and it
+also gets added to the call stack.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="sk02">2. Primitive Types</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Primitive types refer to the fundamental data types that are not
+composed of other types. They are the simplest and most basic data
+entities directly supported by the programming language. Primitive
+types are usually built-in and include fundamental data categories
+such as integers, floating-point numbers, characters, and boolean
+values.
+```
+Integer:
+let age = 25; // Integer
+
+Floating-point:
+let temperature = 26.5; // Float
+
+Floating-point:
+let grade = 'A1; // Character
+
+Floating-point:
+let isStudent = true; // Boolean
+```
+These are examples of primitive types because they represent the
+most basic forms of data in the language and are not composed of
+other types. They serve as the building blocks for more complex data
+structures.
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="sk03">3. Value Types and Reference Types</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+Values can be classified into two categories: value types and reference
+types. This distinction is crucial to understand how data is handled and
+stored in memory.
+
+Value Types (Primitives): Value types represent simple data and are
+stored directly in the variable. When you assign a primitive value to a
+variable, the actual value is copied into the variable.
+
+Example:
+
+1.  Number
+
+2.  String
+
+3.  Boolean
+
+4.  Null
+
+5.  Undefined
+
+6.  Symbol
+
+7.  Biglnt
+
+```
+let numl = 42; // Value type (Number)
+let text = "Hello"; // Value type (String)
+let isTrue = true; // Value type (Boolean)
+```
+
+Reference Types (Objects): Reference types represent more complex
+objects and are stored by reference, meaning the variable contains a
+reference to the memory location where the object is stored.
+
+1.  Literal Objects
+
+2.  Arrays
+
+3.  Functions
+
+4.  User-Defined Objects
+
+
+Example:
+```
+let person = { name: "Ana", age: 30 };
+// Reference type (Literal Object)
+let colors = ["red", "green", "blue"];
+// Reference type (Array)
+function greet() { console.log("Hello"); } 
+// Reference type (Function)
+```
+Key Difference: The main difference between value types and reference
+types Lies in how they are stored and manipulated in memory. Value types
+are immutable, meaning that modifying them creates a new instance in
+memory. In contrast, reference types are passed by reference, so
+modifying them also modifies the original object in memory.
+
+<h2 id="sk04">sk04. Implicit, Explicit, Nominal, Structural, and Duck Typing</h2>
+
+The concepts of typing refer to how data types are managed and
+assigned in a language. Here is a description of the different types of
+typing:
+
+Implicit Typing: In Languages with implicit typing, a variable's data type
+is automatically determined based on the assigned value. No explicit type
+declaration is needed.
+let number = 42; // Type is inferred as Number
+
+Explicit Typing: In languages with explicit typing, the programmer must
+explicitly declare the data type of a variable during its creation.
+let name: string = "Juan"; // Type is declared as String
+
+Nominal Typing: Nominal typing relies on type names and focuses on
+nominal differences between types, even if their internal structure is
+identical.
+```
+type User = { name: string };
+type Employee = { name: string };
+function greet(user: User) {
+console.log('Hello, ${user.name}');
+}
+const employee: Employee = { name: "Ana" };
+greet(employee); // Nominal typing error, even though the structure is the same
+```
+
+Structural Typing: Structuraltyping is based on the structure and shape
+of data types, rather than their names. Two types are considered
+compatible if they have the same structure.
+```
+type Person = { name: string
+type Citizen = { name: string };
+
+function greet(person: Person) {
+  console.log(`Hello, ${person.name}`);
+}
+const citizen: Citizen = { name: "Carlos" };
+greet(citizen); // No structural typing error, the structure is the same
+```
+Duck Typing: Duck typing is based on whether an object behaves Like a
+certain type, regardless of its structure or name.
+```
+interface CanSing {
+  sing(): void;
+}
+
+function entertain(concert: CanSing) {
+  concert.sing();
+}
+
+const canary = {
+  sing: () => console.log("Tweet tweet")
+};
+entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
+```
+<h2 id="sk05">sk5. == vs === vs typeof</h2>
+
+=- ==- and typeof are operators used to compare values and retrieve
+information about data types. Here's an explanation of each:
+
+==  (Weak Equality): The == operator compares two values for equality but performs type conversion if the values are of different types. This is called "weak equality" or "type coercion."
+5 == "5"; // true, type conversion is performed.
+
+===  (Strict Equality): The === operator compares two values for equality without performing type conversion. This is known as "strict equality" and is recommended for precise comparisons.
+5 === "5"; // false, no type conversion is performed.
+
+typeof (typeof Operator): The typeof operator is used to obtain the data
+type of an expression. It returns a string representing the data type.
+```
+typeof 42; // "number"
+typeof "Hello"; // "string"
+typeof true; // "boolean"
+```
+
+•  == compares values allowing type conversion.
+•  === compares values without allowing type conversion (strict equality).
+•  typeof returns the data type of an expression as a string.
+
+It is important to understand the difference between == and === to avoid
+unexpected comparison issues due to automatic type conversion. The use
+of === is generally safer and recommended as it provides more accurate
+comparisons and avoids surprises in your program's behavior.
+
+<h2 id="sk06">sk06. Function Scope, Block Scope, and Lexical Scope</h2>
+The concepts of function scope, block scope, and Lexical scope refer to how
+variables are accessed and managed in different contexts within the code.
+
+Function Scope: In JavaScript, variables declared within a function are
+visible and accessible only within that function and any nested functions
+within it This is called function scope. Variables declared with var have
+function scope.
+```
+function myFunction() {
+  var functionvariable = 42;
+  console.log(functionVariable);
+  //  Accessible within the function
+}
+
+console.log(functionvariable);
+// Not accessible outside the function
+```
+
+Block Scope: With the introduction of Let and const in ES6, block scope
+was introduced. Variables declared with let and const have a scope
+Limited to the block in which they are declared, such as within an if, a for, a
+while, etc.
+```
+if (true) {
+  let blockvariable = "Hello";
+  const anotherBlockVariable = "World";
+}
+console.log(blockvariable); // Error, outside block scope 
+console.log(anotherBlockVariable); // Error, outside block scope
+```
+
+Lexical Scope: Lexical scope refers to how nested functions can access
+variables from their parent functions, regardless of where they are called.
+This is because functions in JavaScript maintain a reference to the scope in
+which they were created.
+```
+function outer() {
+  let outervariable = "Outer";
+
+  function inner() {
+    console.log(outerVariable); // Access to the variable from the parent function
+  }
+  return inner;
+}
+
+const nestedFunction = outer();
+nestedFunctionO; // Prints "Outer"
+```
+
+Function scope, block scope, and lexical scope are essential concepts to
+understand how variables behave in different contexts. These concepts
+play a key role in understanding JavaScript execution and preventing
+errors related to variable scope.
+
+<h2 id="sk07">sk07. Expression vs Statement</h2>
+Expressions and statements are fundamental concepts used to construct
+programs.
+
+Expression: An expression is a combination of values, operators, and
+function calls that evaluates to a single value. It can be as simple as a
+literal value or as complex as a mathematical operation or a function call.
+
+5 + 3  //  Mathematical operation
+"Hello, " + "World"  //  String concatenation
+myFunctionO  //  Function  call
+42  //  Literal  value
+
+Statement: A statement is a unit of code that performs an action or a
+series of actions. It represents a complete instruction in a program and
+can be a control flow statement, an assignment, a function declaration,
+etc.
+
+if (condition) {
+  // If statement
+}
+let x = 10; // Assignment
+
+function greet() {
+  // Function statement
+}
+
+for (let i = 0; i < 5; i++) {
+  // For loop statement
+}
+
+•  Expression: It is a combination of values, operators, and/or function calls that evaluates to a single value.
+•  Statement: It is a unit of code that performs an action or a series of actions in a program.
+
+An important distinction is that expressions have a resulting value, while
+statements  can  change  the  program's  execution  flow  or  perform
+operations without necessarily returning a value. Both concepts are
+essential for writing coherent and effective code in any programming
+language.
+
+<h2 id="sk08">sk08. IIFE, Modules, and Namespaces</h2>
+
+Immediately  Invoked  Function  Expressions  (IIFE),  modules,  and
+namespaces are techniques used to modularize and organize code. Each
+addresses scope management and code organization in different ways.
+
+IIFE (Immediately Invoked Function Expression): An IIFE is a function
+that is defined and executed immediately after its creation. It is useful for
+creating a private function scope and avoiding pollution of the global
+scope.
+
+(function() {
+  // Code inside the IIFE
+})();
+
+Modules: Modules are a more modern and structured way of organizing
+code, They allow breaking the code into separate and reusable parts while
+maintaining the local scope of variables. In ES6, the import and export
+keywords were introduced to work with modules.
+
+// module.js
+export function greet() {
+  console.log("Hello from the module!");
+}
+
+// main.js
+import { greet } from "./module.js";
+greet();
+
+Namespaces: Namespaces are an older approach to code organization.
+They allow grouping related objects and functions under a common name
+to avoid naming collisions. This is done using global objects.
+
+//  MyNamespace.js 
+var MyNamespace = { 
+  variable: 42,
+  func: function() {
+    console.log("Function in MyNamespace");
+  }
+};
+
+MyNamespace.func();
+
+Each approach has its own advantages and disadvantages. IIFE is useful
+for creating private scopes but can become complex in large projects.
+Modules are the modern way to modularize code and are more efficient
+for maintenance and scalability. Namespaces are an older technique but
+can still be useful in certain situations where full modularity is not
+necessary.
+
+In modern projects, it is recommended to use modules to effectively
+organize code and maintain cleaner control over scope and code reuse.
+ 
+<h2 id="sk09">sk09.  Message Queue and Event Loop</h2>
+
+The message queue and event Loop are crucial concepts to understand
+how event handling and asynchronous operations work in JavaScript
+
+Message Queue: The message queue is a structure where events and
+pending callback functions are stored to be executed. These events can
+include user interactions, timers, network requests, and more.
+
+Event Loop: The event Loop is a  continuous  cycle  running  in the
+background of the JavaScript program. Its function is to constantly check
+if there are tasks in the message queue to be processed. If there are tasks
+pending in the queue, the event Loop takes them one by one and executes
+them in order.
+
+The interaction between the message queue and the event loop is
+fundamental to understanding how JavaScript handles asynchronous and
+non-blocking tasks. When an event occurs or an asynchronous task is
+completed (such as an AJAX request or a timer), a callback function is
+added to the message queue. The event Loop takes these functions one by
+one and executes them.
+
+Example of Message Queue and Event Loop:
+
+console.log("Start of the program");
+setTimeout(function() {
+  console.log("Asynchronous task completed");
+}, 1000);
+console.log("End of the program");
+ 
+
+Expected Output:
+
+Start of the program End of the program Asynchronous task completed
+In this example, the code executes in the following order:
+
+1.  "Start of the program" is printed.
+
+2.  A timer is initiated with setTimeout
+
+3.  "End ofthe program" is printed.
+
+4.  After 1 second (1000 ms), the timer completes, and the callback function is added to the message queue.
+
+5.  The event loop takes the callback function from the queue and executes it, printing "Asynchronous task completed."
+
+Understanding how the message queue and event loop work is crucial for
+writing  asynchronous  JavaScript  code  and  avoiding  blocking  and
+bottlenecks in program execution.
+ 
+
+<h2 id="sk10">sk10. setTimeout, setinterval, and requestAnimationFrame</h2>
+
+These three functions are very useful for working with timers and
+performing asynchronous tasks in JavaScript However, each has its own
+purpose and advantages.
+
+setTimeout: setTimeout is used to schedule the execution of a function
+after a certain period of time (in milliseconds). You can use it to create
+delays in code execution or to perform actions after a specified time.
+
+console.log("Start");
+
+setTimeout(function() {
+  console.log("Step after 1000 ms");
+}, 1000);
+console.log("End");
+
+setinterval: setinterval is used to repeatedly execute a function at regular
+time intervals. Unlike setTimeout, setlnterval will keep running the function
+in a loop until explicitly stopped.
+
+let counter = 0;
+let interval = setlnterval(function() {
+  console.log("Counter:", counter);
+  counter++;
+
+  if (counter > 5) {
+    clearlnterval(interval);  // Stop the interval after 5 times
+  }
+}, 1000);
+
+
+requestAnimationFrame:  requestAnimationFrame  is  a  function
+specifically used for creating smooth animations in the browser. It ensures
+that animations run in sync with screen refreshes, improving performance
+and user experience.
+
+function animate(timestamp) {
+  // Perform animation changes here
+  // Call requestAnimationFrame again 
+  requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
+
+•  setTimeout: Executes a function after a certain time.
+•  setinterval: Executes a function at regular intervals.
+•  requestAnimationFrame: Used for creating smooth and efficient animations.
+
+Choose the appropriate function based on your needs. setTimeout and
+setinterval are useful for controlling time and executing code after certain
+intervals, while requestAnimationFrame is specific for creating smooth
+and efficient animations in the browser.
+ 
+
+<h2 id="sk11">sk11. JavaScript Engines</h2>
+
+JavaScript  engines  are  fundamental  components  in  browsers  and
+execution environments that interpret and execute JavaScript code. Each
+browser and environment has its own JavaScript engine.
+
+Here are some of the well-known engines:
+
+V8 (Google Chrome, Node.js): V8 is an open-source JavaScript engine
+developed by Google. It is known for its speed and efficiency in executing
+code. It is used in Google Chrome and is also the engine behind Node.js,
+enabling JavaScript to run on the server.
+
+SpiderMonkey (Mozilla Firefox): SpiderMonkey is the JavaScript engine
+used in Mozilla Firefox. It was one of the first JavaScript engines and has
+been extensively optimized overtime to improve performance.
+
+JavaScriptCore (Safari): JavaScriptCore, also known as Nitro, is the
+JavaScript engine for Safari. It is developed by Apple and is used in Safari
+browsers and other Apple products.
+
+Chakra (Internet Explorer, Microsoft Edge Legacy): Chakra was the
+JavaScript engine used in earlier versions of Internet Explorer and the
+initial versions of Microsoft Edge (up to EdgeHTML). However, Microsoft
+Edge has migrated to a new engine called Blink.
+ 
+Blink (Chromium, Microsoft Edge): Blink is an open source rendering
+engine that also includes a JavaScript engine. It is used in the Chromium
+project (the base for Google Chrome) and in the latest version of Microsoft
+Edge.
+
+JerryScript: JerrgScript is a JavaScript engine designed for devices with
+Limited resources,such as microcontrollers and embedded systems.
+
+Nashorn (Java): Nashorn was a JavaScript engine developed by Oracle
+and integrated into the Java platform. However, starting from Java 11,
+Nashorn was removed from the JDK in favor of other technologies.
+
+These are just a few examples of the many JavaScript engines that exist
+Each engine has its own features and approaches to optimizing and
+executing JavaScript code, contributing to the browsing experience and
+performance of online applications.
+ 
+<h2 id="sk12">sk12. Bitwise Operators, Typed Arrays, and Array Buffers</h2>
+These concepts are related to advanced data manipulations in JavaScript
+
+Bitwise Operators: Bitwise operators allow you to perform
+manipulations at the bit level rather than on entire integer values. They
+are useful for bitwise operations such as masks and individual bit
+manipulations.
+
+Some bitwise operators in JavaScript include:
+
+• & (AND): Performs a bitwise AND operation.
+
+• | (OR): Performs a bitwise OR operation.
+
+. ^ (XOR): Performs a bitwise XOR operation.
+
+. ~ (NOT): Performs a bitwise NOT operation.
+
+• « &lt;&lt; (Left Shift): Shifts bits to the left
+
+• » &gt;&gt; (Right Shift with Sign): Shifts bits to the right preserving the sign.
+
+Typed Arrays: Typed Arrays are data structures in JavaScript that allow
+you to store binary data of specific types, such as integers, floats, etc. They
+are useful for manipulating raw data and performing low-level operations
+efficiently.
+
+Some types of typed arrays in JavaScript are:
+
+• Int8Array: 8-bit signed integer array.
+• Uint8Array: 8-bit unsigned integer array.
+• Float32Array: 32-bit fioating-point number arrau.
+
+const intArray = new Int8Array([10, 20, 30]);
+
+
+
+Array Buffers: Array Buffers are a data structure representing a raw
+memory area that can contain binary data. Array Buffers are used to
+work with binary data efficiently, and Typed Arrays are views of these
+buffers that provide a manipulation interface.
+
+const buffer = new ArrayBuffer(8);
+// Create an 8-byte buffer
+const intArray = new Int32Array(buffer);
+// View the buffer as a 32-bit integer array
+
+These concepts are more advanced and are typically used when bitwise
+manipulation and low-level operations are required. They are especially
+useful in applications dealing with network protocols, binary data, and
+performance optimization.
+ 
+<h2 id="sk13">sk13. DOM and Document Trees</h2>
+The DOM (Document Object Model) is a structural representation of an
+HTML or XML document that allows interaction and manipulation of a
+web page's content and structure through programming. The DOM
+organizes document elements into a hierarchical structure called the
+documenttree.
+
+Document Tree (DOM Tree): The document tree is a hierarchical
+structure that organizes all the elements of an HTML or XML document
+Each element attribute, and text content is represented as a node in the
+tree. Nodes are organized hierarchically, starting from the root node,
+which represents the entire document.
+
+In the case of a web page, the document tree represents how HTML
+elements are nested and related to each other.
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+</head>
+<body>
+<hl>Page Title</hl>
+<p>This is a paragraph.</p>
+</body>
+</htmt>
+```
+ 
+The corresponding document tree would have a structure similar to this:
+ 
+
+Document (html)
+|— html
+|  |-- head
+|  |   |-- title
+|  |       |-- "My Page"
+|  |-- body
+|     |-- hl
+|     |   |-- "Page Title"
+|     |-- p
+|         |-- "This is a paragraph."
+
+DOM Manipulation: Through JavaScript, you can interact and modify the
+content and structure of a web page via the DOM. You can access
+elements, modify their attributes, add or remove nodes, and change their
+content.
+
+// Access an element and change its content 
+const heading = document.querySelector("hl"); 
+heading.textcontent = "New Title";
+
+The DOM and the document tree are essential concepts for
+understanding how browsers represent and manipulate HTML and XML
+documents. The ability to interact with the DOM through JavaScript
+enables the creation of dynamic interactions and rich experiences on web
+pages. 
+
+
+<h2 id="sk14">sk14. Factories and Classes</h2>
+Factories and classes are two approaches to creating objects and
+structures in JavaScript Each has its own purpose and advantages.
+
+Factories: Factories are functions that generate and return objects. These
+functions act as "factories" to create instances of objects with specific
+properties and methods. Factories are a flexible way to create objects in
+JavaScript as they can customize object creation based on the provided
+arguments.
+
+function createPerson(name, age) {
+  return {
+    name: name,
+    age: age,
+    greet: function() {
+      console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
+  }
+};
+
+const personl = createPerson("John", 30);
+personl.greet();
+// Prints "Hello, I'm John and I'm 30 years old."
+ 
+
+Classes: Classes are a concept introduced in ES6 that allows creating
+objects using a more object-oriented syntax. Classes serve as a blueprint
+for creating objects and define properties and methods that all instances
+will share. Although in JavaScript, classes are "syntactic sugar" over the
+prototype system, they provide a more structured way of working with
+objects.
+
+```
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  greet() {
+    console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
+  }
+}
+const person2 = new Person("Jane", 25);
+person2.greet();
+
+// Prints "Hello, I'm Jane and I'm 25 years old."
+```
+
+
+In summary:
+
+• Factories: Use functions to create and customize objects.
+
+• Classes: Define object blueprints with shared properties and methods.
+
+The choice between factories and classes depends on your needs and
+preferences. Factories are more flexible and versatile, while classes
+provide a more object-oriented structure and are especially useful when
+working with inheritance and similar objects.
+
+
+<h2 id="sk15">sk15. this, call, apply, and bind</h2>
+
+this, call, apply, and bind are concepts and methods in JavaScript related
+to managing the value of this in the context of a function. Here's a
+description of each of them:
+
+this: In JavaScript, this refers to the object that is the current "execution
+context" in a function. The value of this can change depending on how a
+function is called and where it is in the code.
+call and apply: Both methods allow temporarily changing the value of
+this in a function and then executing it The main difference between call
+and apply Lies in how arguments are passed:
+
+call: Invokes a function with a specific value for this and individually
+passed arguments.
+
+```
+function greet(name) {
+  console.log(`Hello, ${name}! My name is ${this.name}`);
+}
+const person - { name: 'John'
+  greet.call(person, 'Maria'); // Prints: "Hello, Maria! My name is John"
+}
+``` 
+
+apply: Similar to call, but arguments are passed as an array.
+
+function greet(name) {
+  console.log(`Hello, ${name}! My name is ${this.name}`);
+}
+const person - { name: 'John' };
+greet.apply(person, ['Maria']);
+// Prints: "Hello, Maria! My name is John"
+
+
+bind: The bind method returns a new function where the value of this is
+fixed to the provided value, and the initial arguments (if any) are "bound"
+to the new function.
+
+```
+function greet(name) {
+  console.log(`Hello, ${name}! My name is ${this.name}`);
+}
+const person - { name: 'John'
+const greetPerson - greet.bind(person);
+greetPerson('Maria'); // Prints: "Hello, Maria! My name is John"
+```
+
+In summary:
+
+♦ this: Refers to the current execution context
+♦ call: Invokes a function with a specific value for this and individually passed arguments.
+♦ apply: Similar to call, but arguments are passed as an array.
+♦ bind: Creates a new function with this and arguments fixed.
+ 
+These methods ore useful for controlling the context of this in different
+situations, especially when working with functions that are part of objects
+or when you need to manipulate how a function is invoked.
+
+
+<h2 id="sk16">sk16. neuu, Constructor, instanceof, and Instances</h2>
+These concepts are related to the creation and use of objects through constructors in 
+JavaScript.
+
+new: new is a keyword used to create a new instance of an object from a
+constructor function. When used with a constructor function, new creates
+a new object and assigns the value of this within the function to the new object Then, the constructor function can initialize properties and methods on that object
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+const personl = new Person("John", 30);
+
+Constructor: A constructor is a function used to create and configure
+objects. Constructors often follow a naming convention with the first
+Letter capitalized. Inside the constructor, you can initialize properties and
+methods of the object that will be created with new.
+
+instanceof: instanceof is an operator used to check if an object is an
+instance of a specific class or constructor. It returns true if the object is an
+instance of the given class, otherwise, it returns false.
+
+console.log(personl instanceof Person); // Returns true
+
+Instances: An instance is a unique object created from a constructor. Each
+time you use new with a constructor, a new instance of the object is
+created with its own properties and methods.
+
+const person2 = new Person("Maria", 25);
+
+In summary:
+
+♦ new: A keyword used to create instances of objects from constructors.
+♦ Constructor: A function used to create and configure objects.
+♦ instanceof: An operator to check if an object is an instance of a class or constructor.
+♦ Instances: Unique objects created from constructors.
+
+Constructors and instances  are  essential  for  object-oriented
+programming in JavaScript, allowing the creation of objects with shared
+properties and behaviors.
+ 
+<h2 id="sk17">sk17.  Prototypal Inheritance and Prototype Chain</h2>
+Prototypal inheritance and the prototype chain are fundamental concepts
+in JavaScript for achieving code reuse and establishing relationships
+between objects.
+
+Prototypal  Inheritance: In  JavaScript,  prototypal  inheritance  is  a
+mechanism by which an object can inherit properties and methods from
+another object called  its  "prototype."  Instead  of traditional classes,
+JavaScript uses prototypal inheritance to create relationships between
+objects. When a property or method is looked up in an object, if it's not
+found in the object itself, it is searched in its prototype and in the
+ascending prototype chain.
+
+Prototype Chain: The prototype chain is a series of links between
+prototype objects. Each object has an internal link to its prototype, and
+that prototype, in turn, may have its own prototype. This chain continues
+until it reaches the base object, which is the final prototype in the chain.
+
+Example of Prototypal Inheritance and Prototype Chain:
+```
+//  Define an "Animal" constructor 
+function Animal (name) {
+  this.name = name;
+}
+
+// Add a "greet" method to the prototype of "Animal"
+Animal.prototype.greet = functionU i console.log(Hello, I'm a ${this.name}');
+
+};
+
+//  Define a "Dog" constructor that inherits from "Animal"
+function Dog(name, breed) {
+  Animal.call(this, name); // Call the "Animal" constructor 
+  this.breed = breed;
+}
+
+//  Establish prototypal inheritance
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+//  Add an additional method to "Dog" 
+Dog.prototype.bark = function() { 
+  console.log("Woof woof!");
+};
+
+//  Create an instance of "Dog"
+const myDog = new Dog("Max", "Labrador");
+myDog.greet(); // Prints "Hello, I'm Max"
+myDog.bark(); // Prints "Woof woof!"
+```
+
+In this example:
+♦  We create the Animal constructor with a greet method.
+
+♦  We create the Dog constructor that inherits from Animal and has a bark method.
+
+♦  Prototypal inheritance is established using Object create Q, and we ensure that the Dog constructor points correctly.
+
+♦  We create an instance of Dog, and we can access methods from both Animaland Dog.
+ 
+Prototypal  inheritance  and  the  prototype  chain  are  crucial  for
+understanding how objects work and code reuse in JavaScript
+
+<h2 id="sk18">sk18. Object.create and Object.assign</h2>
+Both Objectcreate and Objectassign are important methods in JavaScript
+used for working with objects, but they serve different purposes.
+
+Objectxreate: Objectcreate is a method used to create a new object and
+set its prototype (parent object). It allows creating objects that inherit
+properties and methods from another object It's especially useful for
+implementing prototypal inheritance in JavaScript.
+
+```
+const newObj = Object.create(prototype);
+```
+
+Example of Objectcreate:
+
+```
+const animal = {
+sound:  "Makes a sound",
+makeSound: function() ■{
+console.log(this.sound);
+}
+};
+const dog = Object.create(animal);
+dog.sound = "Woof woof";
+dog.makeSound(); // Prints "Woof woof"
+```
+
+Objectassign: Objectassign is a method used to copy enumerable
+properties from one or more source objects to a target object If there are
+properties with the same  name in the target object they will be
+overwritten. It's usefulfor combining objects or cloning objects.
+
+``` 
+Object.assign(targetobject, sourceObjectl, source0bject2,  ...);
+```
+
+Example of Objectassign:
+
+```
+const target =
+const sourcel = ■{ name: "John", age: 30
+const source2 = { city: "New York" };
+Object.assign(target, sourcel, source2);
+console.log(target);
+// Prints { name:  "John", age: 30, city: "New York" }
+```
+
+In summary:
+
+•  Objectcreate: Creates a new object with a specified prototype.
+•  Objectassign: Combines or copies enumerable properties from source objects to a target object
+
+Objectcreate  is  useful  for  establishing  prototypal  inheritance
+relationships, while Objectassign is useful for combining properties from
+multiple objects or for cloning objects.
+
+<h2 id="sk19">sk19. map, reduce, and filter</h2>
+These are three high-level methods provided by JavaScript for working
+with arrays in a more functional and elegant way. Each one has a specific
+purpose and is widely used for transforming, filtering, and reducing data in
+arrays.
+
+map: The map method is used to transform each element of an array into
+a new array by applying a function to each element It returns a new
+array with the results of applying the function to each original element in
+the same order.
+
+```
+const numbers = [1, 2, 3, 4];
+const doubles = numbers.map(number => number * 2);
+// doubles is now [2,  6, 8]
+```
+
+filter: The filter method is used to create a new array with all elements
+that pass a test (meet a condition) provided by a function. It returns a new
+array with the elements that satisfy the condition.
+
+```
+const numbers - [1, 2, 3,  5, 6];
+const evens - numbers.filter(number => number % 2 --- 0);
+// evens is now [2,  6]
+```
+
+reduce: The reduce method is used to reduce an array to a single
+cumulative value. It applies a function to an accumulator and each
+element in the array (from left to right), reducing the array to a single
+value.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
+// sum is 15
+```
+
+<h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event</h2>
+
+Propagation
+These  concepts  are  related  to  functional  programming,  data
+manipulation, and interaction in JavaScript Here's an explanation of each
+one:
+
+Pure Functions: Pure functions are functions that produce the same
+result for the  same  arguments  and  have  no  side  effects  on  the
+environment This means they don't modify external variables, perform
+input/output operations, and don't depend on external mutable data.
+
+Characteristics of pure functions:
+♦  Determinism: Same input same result
+♦  No side effects: They don't alter data outside the function.
+
+Side Effects: Side effects are observable changes outside a function due
+to its execution. These changes can include modifying external variables,
+accessing external resources (network, files), and manipulating the DOM.
+
+State Mutation: State mutation occurs when mutable data, such as
+objects or arrays, is modified directly instead of creating new ones. It can
+lead to unwanted side effects and make tracking changes difficult
+
+Fvpnt Prnnnnntinn* In thp rnnfpvt nf thp DOM nnrl infprnrtinnQ nn n \a/pH
+page, event propagation refers to the flow of an event through the
+hierarchy of elements. Events can propagate from the target element to
+ancestor elements or vice versa.
+
+Phases of Event Propagation:
+•  Capture: The event descends from the root element to the target.
+•  Target: The event reaches the target element
+•  Bubbling: The event ascends from the target to the root element
+
+These  concepts  are  fundamental  for  writing  more  predictable,
+maintainable, and scalable code. The focus on pure functions and avoiding
+side effects contributes to functional programming, while understanding
+state  mutation  is  crucial  for  working  with  changing  data.  Event
+propagation is essential for managing interaction in web applications.
+ 
+<h2 id="sk21">sk21. Closures</h2>
+Closures ore on important concept in  programming, referring to a
+function's ability to access and remember variables from its lexical scope
+even after that function has finished execution and Left that scope.
+Closures enable the creation  of functions that maintain  access to
+variables even when they are no Longer in the scope of the function that
+created them.
+
+```
+function counterQ {
+let count = 0;
+function increment() {
+count++;
+console.log(count);
+}
+return increment;
+
+const counterl = counter();
+counterlQ; // Prints: 1
+counterlO; // Prints: 2=
+```
+
+In this example, the counter function returns the increment function. The
+count variable is retained in the Lexical scope of the counter function but
+remains accessible through the increment function even after the counter
+function has finished execution. This is made possible by closures.
+ 
+Closures ore particularly useful for creating functions with private states,
+maintaining encapsulation in JavaScript. They are also used in patterns
+like modules and callback functions in events.
+
+<h2 id="sk22">sk22. High Order Functions</h2>
+High Order Functions are functions that can accept other functions as
+arguments and/or return functions as results. These functions are a
+fundamental part of functional programming and enable the creation of
+more modular, reusable, and expressive code. High Order Functions make
+it easier to use common programming patterns such as mapping, filtering,
+and reducing data.
+
+Here are some examples and  key concepts related to  High Order
+
+Functions:
+Functions as Arguments: You can pass a function as an argument to
+another function. This allows customizing the behavior of the receiving
+function.
+
+```
+function performOperation(operation, a, b) { 
+  return operation(a, b);
+}
+
+function add(x, y) {
+  return x + y;
+}
+
+function subtract(x, y) {
+  return x - y;
+}
+ 
+const resultAddition = performoperatlontadd, 5, 5J; // Result: 8
+const resultsubtraction = performOperation(subtract, 10, A);
+```
+
+II  Result: 6
+
+Functions as Results: You can return a function from another function.
+This allows creating specialized and parameterized functions.
+
+```
+function multiplier(factor) {
+  return function (number) {
+    return number * factor;
+  };
+}
+
+const double - multiplier(2);
+const triple - multiplier^);
+
+const resultDouble = double(5); // Result: 10
+const resultTriple = tripled); // Result: 12
+```
+
+Mapping (Map): The map method of an array applies a function to each
+element of the array and returns a new array with the results.
+
+```
+const numbers - [1, 2, 3, 4];
+const duplicates - numbers.map(number -> number * 2); // Result: [2, 4, 6, 8]
+```
+
+Filtering (Filter): The filter method of an array creates a new array with
+elements that pass a specified condition.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+const odds = numbers.filter(number => number % 2 !== 0); // Result: [1, 3, 5]
+```
+
+reducing  (reduce):  ine  reduce  metnod  or an  array  accumulates
+elements by applying a reducing function and returns a single result
+
+```
+const numbers = [1, 2, 3, A];
+const totalSum = numbers.reduce((accumulator, number) => accumulator + number, 0); // Result: 10
+```
+
+<h2 id="sk23">sk23. Recursion</h2>
+
+Recursion is a programming concept where a function calls itself to solve
+a problem. Essentially, it is a technique in which a function breaks down
+into smaller, more manageable problems until it reaches a base case that
+can be solved directly. Recursion is particularly useful for solving problems
+that have an intrinsic recursive structure.
+
+Here's a simple example of a recursive function that calculates the
+factorial of a number:
+
+```
+function factorial(n) {
+if (n === 0 || n === 1) {
+return 1; // Base case: factorial of 0 and 1 is 1 } else {
+return n * factorialfn - 1); // Recursive call
+
+const result = factorial(5); // Result: 120 (5 * 4 * 3 * 2 * 1)
+```
+
+In this example, the factorial function calls itself with a reduced argument
+in each call until it reaches the base case, where the result is returned.
+Recursion can also have side effects, such as the use of the call stack, so
+it's essential to ensure a clear base case and that recursion converges
+toward it.
+
+```
+ourrie  ulussiu  pruuierris  sulvuu  vviui  reuursiuri  iriuiuue  rriuuierriuucuL
+```
+
+calculations (factorials, Fibonacci numbers), tree and graph traversal, and
+divide and conquer in algorithms. However, it's crucial to use recursion
+carefully, as improper use can lead to performance issues and stack
+overflow errors.
+
+<h2 id="sk24">sk24. Collections and Generators</h2>
+Collections and generators are important concepts in JavaScript that help
+handle and manipulate sets of data efficiently and flexibly. Here's a
+description of both:
+
+Collections: Collections are data structures that allow storing and
+organizing multiple elements. In JavaScript, some of the most common
+collections are:
+
+Arrays: Ordered lists of elements that can contain any data type. Arrays
+have zero-based indices to access elements.
+
+```
+const numbers = [1, 2, 3, 4];
+const fruits = ['apple',  'orange',  'banana'];
+```
+
+Objects: Collections of key-value pairs where keys are strings (or symbols
+in ES6) and values can be any data type.
+
+```
+const person = { name:  'John', age: 30 };
+```
+
+Maps: Structures similar to objects but allow using any value as a key and
+maintain the insertion order.
+
+```
+const map = new Map();
+map.set('name',  'Mary');
+map.set('age', 25);
+```
+ 
+Sets: Collections of unique and non-dupLicated values.
+
+```
+const set = new Set();
+set.add('red');
+set.add('green');
+set.add('red'); // Not added, as 'red' is already in the set
+```
+
+Generators: Generators are special functions that allow pausing and
+resuming their execution at a specific point. They enable creating a
+custom  lazy  and iterative control flow. They are defined  using the
+function* keyword and use the yield statement to pause the function and
+return values.
+
+```
+function* counter() {
+  let num = 0;
+  while (true) {
+    yield num++;
+  }
+}
+```
+
+const generator = counter(); console.log(generator.next().value); // Prints: 0 console.log(generator.next().value); // Prints: 1
+Generators are useful when you need to generate a sequence of values
+on-demand, rather than generating all values at once. This can be
+beneficial for handling Large data streams or iterating over complex data
+structures.
+
+Both collections and generators are powerful tools in JavaScript that
+allow you to handle and manipulate data more efficiently and flexibly.
+ 
+<h2 id="sk25">sk25. Promises</h2>
+Promises ore a design pattern and feature in JavaScript that allows for a
+more elegant and efficient handling of asynchronous operations, such as
+network requests, fie read/write, and other tasks that may take time and
+block execution.
+
+Promises were introduced to address the issue of "callback hell" (excessive
+callback nesting) and to make asynchronous code more readable and
+manageable.
+
+Creating a Promise: You can create a promise using its constructor. The
+constructor takes a function with two parameters, resolve and reject,
+which are functions to fulfill or reject the promise.
+
+```
+const promise = new Promise((resolve, reject) => {
+  //  Perform an asynchronous operation here
+  //  If the operation is successful, call resolve(value)
+  //  If the operation fails, call reject(error)
+});
+```
+
+Handling Promises: You can chain methods to a promise to handle the
+result These methods include then to handle resolution and catch to
+handle rejection.
+
+```
+nnomiqp.thpnfvalue => 4
+//  Do something with the resolved value }).catch(error => {
+//  Handle the error if the promise is rejected
+});
+```
+
+Chaining Promises: You can chain multiple promises using the then
+method, allowing for sequential asynchronous operations.
+
+```
+doSomethingAsync()
+  .then(resultl => doAnotherAsyncThing(resultl))
+  .then(result2 => doMoreAsyncThings(result2))
+  .then(finalResult => console.log(finalResult))
+  .catch(error => console.error(error));
+```
+
+Handling Multiple Promises: The Promise.all method allows you to
+handle an array of promises and returns a new promise that is resolved
+when all promises in the array have been resolved.
+
+```
+const promisel = fetchDatal();
+const promise2 = fetchData2();
+
+Promise.all([promisel, promise2])
+.then(results => {
+const resultl = results[0];
+const result2 = results[l];
+// Do something with the results
+})
+.catch(error => console.error(error));
+```
+
+Promises are a  powerful and flexible way to handle asynchronous
+operations in JavaScript. However, as JavaScript evolved, more advanced
+readable syntax for working with asynchronous operations.
+
+<h2 id="sk26">sk26. async/await</h2>
+
+async/await is a feature introduced in  ECMAScript 2017 (ES8) that
+simplifies asynchronous programming in JavaScript It provides a cleaner
+and more readable syntax for working with promises and asynchronous
+operations. With async/await, you can write code that looks synchronous
+but efficiently handles asynchronous operations.
+
+Async  Functions:  A  function  declared  with  the  async  keyword
+automatically returns a promise. You can use the await keyword within an
+async function to wait for the resolution of a promise without blocking the
+main thread's execution.
+
+```
+async function fetchDataQ 1
+
+const response = await fetch('https://api.example.com/data'); 
+const data = await response.jsonQ;
+return data;
+
+fetchDataQ
+
+.then(data => console.log(data))
+
+.catch(error => console.error(error));
+```
+
+In this example, fetchData is an asynchronous function that waits for the
+response of an API request and then awaits the conversion of that
+response into a JSON object The code looks like a synchronous flow, even
+though it's handling asynchronous operations.
+
+Error Handling: You can use the try/catch block with async/await to
+handle errors more naturally.
+
+```
+async function fetchData() {
+try {
+const response = await
+fetch('https://api.example.com/data'); const data = await response.json(); return data;
+} catch (error) {
+console.error('Error:', error);
+}
+}
+```
+
+Chaining Promises with async/await: You can chain async functions
+using await, making the code more readable and avoiding excessive nesting.
+
+```
+async function fetchAndProcessData() {
+  const data = await fetchData();
+  const result = processData(data);
+  return result;
+}
+```
+
+async/await is a powerful and elegant way to handle asynchronous
+operations in JavaScript Although it is newer than promises, it has gained
+popularity due to its simpler and easier-to-understand syntax. However,
+it's essential to remember that async/await still relies on underlying
+promises, so understanding how promises work is crucial to make the
+most out of asy nc/await.
+
+<h2 id="sk27">sk27. Data Structures</h2>
+Data structures are organized and efficient ways to store and manage
+data in a program. These structures allow operations such as insertion,
+search, modification, and deletion of data to be performed efficiently. In
+JavaScript, there are several data structures that can be used for different
+purposes.
+
+Arrays: Arrays are ordered collections of elements. Each element in an
+array has a numeric index indicating its position. Arrays are used to store
+Lists of elements and are suitable for accessing elements by their index.
+
+```
+const fruits = ['apple',  'orange',  'banana'];
+```
+
+Objects: Objects are collections of key-value pairs. Keys are strings, and
+values can be of any type. Objects are useful for representing entities with properties and methods.
+
+```
+const person = {
+name:  'John',
+age: 30,
+greet: functionO {
+console.logCHello, my name is Sfthis.name}');
+```
+
+Maps: Maps are collections of key-value pairs where keys can be of any
+type. Unlike objects, maps maintain the insertion order and allow keys of
+any type.
+
+```
+const map = new Map();
+map.set('name',  'Maria');
+map.set(100,  'one hundred');
+```
+
+Sets: Sets are collections of unique and non-duplicated values. They are
+useful when you need to maintain a list of elements without duplicates.
+const set = new Set();
+
+```
+set.add('red');
+set.add('green');
+set.add('red'); // Not added, as 'red' is already in the set
+```
+
+Queues and Stacks: Queues and stacks are data structures for managing
+elements in order. Queues follow the FIFO (First In, First Out) principle, while stacks follow the LIFO (Last In, First Out) principle.
+
+```
+//  Example of a queue const queue = []; queue.push('a'); queue.push('b');
+const firstElement = queue.shift(); // 'a'
+//  Example of a stack
+const stack = [];
+stack.push('x');
+stack.push('y');
+const lastElement = stack.pop(); // 'y'
+```
+
+These are just some of the basic data structures in JavaScript The choice
+of the right data structure depends on the specific requirements of your
+program and the operations you need to perform on the stored data.
+
+<h2 id="sk28">sk28. Costly Operations and Big 0 Notation</h2>
+Costly operations refer to actions in a program that consume a significant
+amount of resources, such as time and memory. These operations can
+negatively impact the performance and efficiency of your program. One
+way to measure and compare the efficiency of different algorithms or
+operations is through Big 0 notation.
+
+Big 0 Notation: Big 0 notation is a way to express the time or space
+complexity of an algorithm in terms of the input size. It helps understand
+how the execution time or memory usage increases as the size of the
+problem grows. It is used to evaluate the relative performance of different
+algorithms based on the input
+
+Some common Big 0 notations include:
+
+•  0(1) (Constant Time): The operation does not depend on the size of
+the input Example: accessing elements in an array by index.
+
+•  O(log n) (Logarithmic Time): The operation becomes slower as the
+size of the input increases, but not proportionally. Example: binary search in a sorted array.
+
+•  0(n) (Linear Time): The execution time or memory usage increases
+linearly witn tne size or tne input txampie: traversing an elements in
+an array.
+
+•  O(n log n) (Linearithmic Time): Common in efficient sorting algorithms Like Merge Sort and Quicksort
+•  0(nA2), 0(nA3), ... (Quadratic, Cubic Time): The execution time increases quadratically, cubically, etc., in relation to the size of the input Example: nested Loops.
+•  0(2An), O(n!) (Exponential, Factorial Time): These notations indicate exponential or factorial growth in execution time and are generally considered inefficient for large input sizes.
+
+Choosing efficient algorithms and data structures is crucial to minimize
+costly operations. In many cases, algorithms with lower Big 0 notations
+are sought to improve performance. However, it's essential to consider
+context and other factors that may influence the choice of the right
+algorithm.
+ 
+<h2 id="sk29">sk29. Algorithms</h2>
+
+Algorithms ore ordered sets of steps or instructions that solve a problem
+or perform a specific task. In programming, algorithms are fundamental
+for addressing a wide varietg of challenges, from data manipulation to
+decision-making and optimization. A good algorithm should be efficient,
+clear, and capable of solving the given problem.
+
+Here are some examples of algorithms and areas where they are applied:
+
+Sorting: Sorting algorithms are used to rearrange elements in a sequence
+according to certain rules. Examples of sorting algorithms include Quick
+Sort, Merge Sort, and Bubble Sort.
+
+Searching: Searching algorithms are used to find a specific element
+within a collection of data. Examples include binary search and Linear
+search.
+
+Graphs and Trees: Algorithms Like Depth-First Search (DFS) and Breadth-
+First Search (BFS) are used to traverse and search in graphs and trees.
+
+Recursion: Recursive algorithms solve problems by breaking them down
+into smaller subproblems and  solving  each  subproblem  recursively.
+
+Examples include factorial calculations and Fibonacci numbers.
+
+Dynamic Programming: This approach divides a problem into smaller
+subproblems and solves each subproblem only once, storing its results to
+avoid duplicates. It is used in optimization problems, such as efficiently
+calculating the Fibonacci sequence.
+
+Backtracking: This approach is used to explore all possible solutions to a
+problem, backtracking and retrying if a partial solution doesn't work. It is
+applied in problems like Sudoku and the N-Queens problem.
+
+Linear Algebra: Algorithms Like Gaussian Elimination are used to solve
+systems of Linear equations.
+
+Cryptography:  Cryptographic  algorithms  are  used  to  secure
+communication and protect information. Examples include encryption
+algorithms Like AES and RSA.
+
+Optimization: Optimization algorithms seek to find the best solution
+among multiple options. Examples include genetic algorithms and search
+optimization algorithms.
+
+Artificial Intelligence: Algorithms  Like  decision  trees  and  machine
+learning  algorithms  are used for decision-making and  prediction in
+artificial intelligence systems.
+
+Algorithms are an essential part of programming and are used in various
+contexts to solve problems effectively and efficiently. Each algorithm has
+advantages and disadvantages depending on the problem and available
+resources, so choosing the right approach for each situation is crucial
+
+<h2 id="sk30">sk30. Inheritance, Polymorphism, and Code Reusability</h2>
+Inheritance: Inheritance is a fundamental concept in object-oriented
+programming (OOP) that allows the creation of new classes based on
+existing classes. A class that inherits from another (called a base class or
+superclass) acquires its attributes and methods, enabling code reuse and
+functionality extension.
+
+```
+class Animal {
+constructor(name) {
+this.name = name;
+}
+speak() {
+console.log('${this.name} makes a sound.');
+}
+}
+
+class Dog extends Animal {
+constructor(name, breed) {
+super(name);
+this.breed = breed;
+}
+ 
+speak() {
+console.log('${this.name} barks.');
+}
+}
+const myDog = new Dog('Max',  'Labrador');
+myDog.speak(); // Prints: "Max barks."
+```
+
+In this example, Dog inherits from Animal and extends its functionality.
+This promotes code reuse and allows adding dog-specific behaviors in the
+subclass.
+
+Polymorphism: Polymorphism is the ability of objects from different
+classes to respond to the same method call differently. It allows treating
+objects from different classes as if they were objects of the same base
+class, simplifying design and interaction between objects.
+
+```
+class Shape {
+area() {
+return 0;
+}
+}
+class Square extends Shape {
+constructor(side) {
+super();
+this.side = side;
+}
+area() ■{
+return this.side * this.side;
+}
+
+class Circle extends Shape {
+constructor(radius) {
+super();
+this.radius = radius;
+}
+area() {
+return Math.PI * this.radius * this.radius;
+}
+
+const square = new Square(5);
+const circle = new Circle(3);
+
+console.log(square.area()); // Prints: 25
+console.log(circle.area()); // Prints: 28.274333882308138
+```
+
+In this example, both Square and Circle are subclasses of Shape, and both
+implement the areaQ  method. Although they  are  different classes,
+polymorphism allows treating them uniformly in the area calculation.
+
+Code  Reusability:  Inheritance  and  polymorphism  promote  code
+reusability in OOP. By inheriting attributes and methods from a base class,
+you  avoid  duplicating  code  and  maintain  an  organized  structure.
+
+Additionally, polymorphism allows treating objects from different classes
+homogeneously, facilitating the creation of generic interfaces to operate
+with different types of objects.
+
+Together,  inheritance,  polymorphism,  and  code  reusability  are  key
+concepts for building more efficient, maintainable, and scalable object-
+oriented applications.
+
+<h2 id="sk31">sk31. Design Patterns</h2>
+Design  patterns  are  proven  solutions to  common  software  design
+problems. These patterns provide guidance for effectively and efficiently
+solving specific problems, promoting good design practices, modularity,
+and code reusability. There are various types of design patterns, each
+serving a specific purpose. Here are some of the most well-known design
+patterns:
+
+1.  Creational Patterns: These patterns focus on how object instances are created.
+
+•  Factory Method: Defines an interface for creating objects in a superclass, allowing subclasses to decide which class to instantiate.
+•  Abstract Factory: Provides an interface for creating families of related objects without specifying their concrete classes.
+•  Singleton: Ensures that a class has only one instance and provides a global point of access to that instance.
+•  Builder: Abstracts the construction of complex objects, allowing them to be constructed step by step.
+
+2.  Structural Patterns: These patterns deal with how classes and objects are composed.
+ 
+•  Adapter: Allows objects with incompatible interfaces to work togetherthrough an adapter class.
+•  Decorator: Dynamically adds additional responsibilities to an object
+•  Facade: Provides a simplified interface for a set of more complex interfaces.
+•  Composite: Allows treating individual objects and compositions of objects uniformly.
+
+3.  Behavioral Patterns: These patterns focus on how objects interact and communicate with each other.
+•  Observer: Defines a one-to-many dependency between objects, so
+that when one object changes state, its dependents are notified and
+updated automatically.
+
+•  Strategy: Defines a family of interchangeable algorithms and allows each one to be used independently.
+•  Chain of Responsibility: Allows more than one object to handle a request by passing it along a chain of possible handlers.
+•  Command: Encapsulates a request as an object, allowing clients to be parameterized with different requests.
+
+4.  Architectural Patterns: These patterns address large-scale system architecture problems.
+•  MVC (Model-View-Controller): Separates the business logic,
+presentation, and interaction into three distinct components.
+
+. MWM (Model-View-ViewModel): A variation of the MVC pattern,
+designed especially for graphical interfaces and modern applications.
+
+•  Repository: Abstracts data access logic, enabling uniform access to different data sources. 
+
+5.  Concurrency Patterns: These patterns focus on handling concurrency and parallel execution in software.
+•  Mutex: Provides mutual exclusion to protect shared data in concurrent environments.
+•  Read-Write Lock: Allows multiple threads to access data for reading, but only one for writing.
+•  Producer-Consumer: Coordinates between producer and consumer threads or processes to avoid race conditions.
+
+Each of these patterns ha its own purpose and context of use. By
+understanding and applying the appropriate design patterns, you can
+enhance the quality, maintainability, and scalability of your applications.
+
+However, it's important to note that not all patterns are applicable in
+every situation, and evaluating the suitability of a pattern for the specific
+problem you're facing is crucial.
+ 
+<h2 id="sk32">sk32. Partial Application, Currying, Composition, and Pipe</h2>
+Partial Application: Partial application is a technique in functional
+programming where you provide some, but not all, arguments to a
+function. The resulting function expects the remaining arguments to
+complete the call This is useful for creating more specific functions from
+more general ones.
+
+```
+function sum(a, b) {
+return a + b;
+}
+
+const sum5 = sum.bind(null, 5); // Partial application of 'a' console.log(sum5(3)); // Prints: 8
+```
+
+In this example, sum5 is a function that already has the first argument
+preset to 5. When calling sum5(3), you get the result of adding 5 and 3.
+
+Currying: Currying is a related technique that converts a function with
+multiple arguments into a sequence of functions that take a single
+
+.XX.  I I  .^4-________  ~  ________  r.  4-L„4-  ____________ 4--.  4-L„  _______ 4-
+ 
+argument. cuuri  cun returns u  new lunutiuri  tnut expects trie  next
+argument.
+
+```
+function sum(a) {
+return function(b) {
+return a + b;
+};
+}
+const sum5 = sum(5);
+console.log(sum5(3)); // Prints: 8
+```
+
+In this case, sum is transformed into a curried function. The first call
+sum(5) returns a function that expects the next argument. Then, sum5(3)
+produces the desired result
+
+Composition: Composition is a technique for combining two or more
+functions to form a new function. You can think of it as the sequence of
+function execution, where the output of one function becomes the input to
+the next
+
+```
+function double(x) {
+return x * 2;
+
+function increment(x) {
+return x + 1;
+}
+
+const doubleIncrement = x => increment(double(x)); console.log(doublelncrement(3)); // Prints: 7
+```
+
+In this example, doubleIncrement is a function that first doubles the value
+and then adds 1.
+ 
+
+Pipe: Pipe is a technique that combines functions in a sequence, passing
+the output of one function as the input to the next This allows you to
+create chains of transformations in a more readable syntax.
+
+```
+const pipe = (...funcs) => input => funcs.reduce((value, func) => func(value), input);
+const result = pipe(
+double,
+increment,
+double
+)(3);
+
+console.log(result); // Prints: 16 (3 * 2 + 1) * 2
+```
+
+In this example, the pipe function takes a series of functions and returns a
+new function that executes each one in sequence.
+ALL of these techniques (partial application, currying, composition, and
+pipe) are fundamental in functional programming and enable building
+more  modular,  readable,  and  maintainable  programs  by  breaking
+operations into smaller, reusable units.
+ 
+<h2 id="sk33">sk33. Clean Code</h2>
+Clean code is a fundamental concept in programming that refers to
+writing code that is easy to understand, maintain, and collaborate on.
+Clean  code  is  readable,  clear,  well-structured,  and  follows  good
+programming  practices. Below are some principles and  practices to
+achieve clean code:
+
+1.  Meaningful Names: Use descriptive names for variables, functions, and classes. Names should be clear and representative of their purpose.
+
+2.  Small and Specific Functions: Divide your functions into smaller, more specific units. Each function should do one thing and do it well
+
+3.  Relevant Comments: Add comments only when necessary and explain why something is done, not what is done (code should be self-explanatory). Excessive comments may indicate that the code is not clear enough.
+
+4.  Avoid Repetition (DRY - Don’t Repeat Yourself): Do not duplicate code. Instead, encapsulate loqic in reusable functions and use them in
+different places.
+
+5.  Consistent Indentation and Formatting: Maintain consistent indentation and formatting throughout the code. This makes the code easier to read and follow.
+
+6.  Keep Code Lines Short Long Lines of code can be hard to read. Keep gour code Lines at a reasonable Length.
+
+7.  Minimize Side Effects: Functions should have a clear purpose and should not have unexpected side effects in other parts of the program.
+
+8.  Avoid Magic Numbers: Avoid the use of magic values or "hardcoded" numbers. Use constants or variables with descriptive names to improve readabilitg.
+
+9.  Plan and Refactor: Plan the design of gour code before gou start writing, and refactor as gou go to keep it clean and organized.
+
+10.  Follow SOLID Principles: The SOLID principles (Single Responsibilitg, Open-Closed, Liskov Substitution, Interface Segregation, and Dependencg Inversion) promote modularitg and code reuse.
+
+11.  Unit Testing: Write unit tests to validate the functionalitg of gour code. Tests help catch errors and ensure that future changes do not break existing code.
+
+12.  Clear Documentation: Provide clear documentation for gour code, exolainina its usaae and ouroose. This is esoeciallu useful for Libraries or
+collaborative projects.
+
+The goal of clean code is not only to make it work but also to make it
+easily understandable for other developers and yourself in the future. By
+following these practices, you can improve the quality and maintainability
+of your code, ultimately making problem-solving and project evolution
+more straightforward.
+
+<h2 id="sk34">sk34. Error Handling (try...catch)</h2>
+Error handling is an essential part of programming to manage unexpected
+or exceptional situations that may occur during program execution. In
+JavaScript, you can use the try...catch statements to capture and handle
+errors in a controlled manner.
+
+```
+try {
+//  Code that might throw an error } catch (error) {
+//  Block of code to handle the error
+```
+
+Here's a more detailed explanation:
+•  The try block contains the code where an error might occur.
+•  If an error occurs within the try block, the control flow moves to the catch block.
+•  The error parameter in the catch block is a variable that will hold the thrown error object
+
+```
+try {
+const result = divideiiu, oj; ll Trying to divide by zero console.log(result);
+} catch (error) {
+console.error('Error:', error.message);
+}
+```
+
+In this example, if the divide function throws an error while attempting to
+divide by zero, the catch block will capture the error and display an error
+message.
+
+It's important to note that you shouldn't use try...catch to control normal
+programflowsbuttohandleexceptionalsituations.
+
+<h2 id="sk35">sk35. ES6 Modules</h2>
+
+In ECMAScript 6 (ES6) and Later versions, modules are a built-in feature
+that allows organizing and structuring code into smaller, reusable units.
+
+Modules provide a mechanism for exporting and importing functionality
+between different JavaScript files, making it easier to separate concerns
+and build more maintainable applications. Here's an overview of how ES6
+
+modules work:
+Export from a Module: You can export values, functions, and classes from
+a module using the export keyword.
+
+```
+// file: module.js
+export const PI = 3.14159;
+export function sum(a, b) {
+return a + b;
+}
+export default class Person {
+constructor(name) {
+this.name = name:
+```
+
+Import into Another Module: You con import exported values into
+another module using the import keyword.
+
+```
+// file: app.js
+import { PI, sum } from './module.js';
+import Person from './module.js';
+console.log(PI); // Prints: 3.14159
+console.log(sum(5, 3)); // Prints: 8
+const person = new PersonCJohn');
+console.log(person.name); // Prints: John
+```
+
+Import Everything as an Alias: You can import all exported values as an
+object using an alias.
+
+```
+// file: app.js
+import * as module from ' ./module.js';
+console.log(module.PI); // Prints: 3.14159
+console.log(module.sum(5, 3)); // Prints: 8
+const person = new module.default('Maria'); console.log(person.name); // Prints: Maria
+```
+
+Import Only the Default Value: If you have a default export, you can
+import it directly without using braces.
+
+```
+// file: app.js
+import Person from './module.js';
+const person = new PersonC Peter');
+console.log(person.name); // Prints: Peter
+```
+ 
+coo i riouuLOb pi 01 no io i iioulillii ity uno coue i eubo, i no mi ly il eubiei to uliilci
+organized and maintainable applications. However, keep in mind that ES6
+module  support  may  vary  across  different  runtime  environments
+(browsers, Node.js, etc.), so you might need transpilers or additional
+configurations in certain cases.
+
+<h2 id="sk36">sk36. Ternary Operator</h2>
+The ternary operator, also known as the conditional operator, is a
+constructthat allows for a conditional evaluation in a single Line of code. It
+is a concise way to express an if...else statement in a single Line. The basic
+syntax of the ternary operator is as follows:
+
+condition ? true.expression : false.expression;
+
+•  The condition is an expression that evaluates to true or false.
+•  true.expression is the value returned if the condition is true.
+•  false_expression is the value returned if the condition is false.
+
+Using the ternary operator to assign a value based on a condition:
+
+```
+const age = 18;
+const isAdult = age >= 18 ? "Yes" : "No";
+console.log(isAdult); // Prints: Yes
+```
+
+Using the ternary operator to perform an action based on a condition
+
+```
+const hour = 14;
+const greeting = hour < 12 ? "Good morning" : "Good afternoon";
+console.log(greeting); // Prints: Good afternoon
+```
+
+Using the ternary operator to calculate a discount
+
+```
+const originalPrice = 100;
+const hasDiscount = true;
+const finalPrice = hasDiscount ? originalPrice * 0.8 :
+originalPrice;
+console.log(finalPrice); // Prints: 80
+```
+
+<h2 id="sk37">sk37. Spread and Rest Operators</h2>
+The spread and  rest operators are powerful features in JavaScript
+introduced in ES6 (ECMAScript 2015) that allow for more flexible and
+concise manipulation of arrays and objects.
+
+Spread Operator (...): The spread operator is used to spread or unpack
+elements from arrays and objects. It is also used to create shallow copies
+of arrays and objects, which can be usefulto avoid unintended side effects
+when manipulating data.
+
+```
+//  Use spread to copy an array const originalArray = [1, 2, 3]; const copiedArray = [...originalArray];
+//  Combine arrays using spread
+const arrayl = [1, 2, 3];
+const array2 = [4, 5, 6];
+const combined = [...arrayl,  ...array2]; // [1, 2, 3, 4, 5, 6]
+```
+ 
+In objects, the spread operator is used to create shallow copies:
+
+II  Copy an object using spread
+
+```
+const originalObject = ■{ a: 1, b: 2 };
+const copiedObject - { ...originalObject
+
+//  Combine objects using spread const objectl = { a: 1, b: 2 }; const object2 = { b: 3, c: 4
+const combined = { ...objectl, ...object2 }; // { a: 1, b: 3, c: 4 }
+```
+
+Rest Operator (...): The rest operator is used to gather multiple elements
+into an array in contexts where function arguments or destructuring
+parameters are expected.
+
+```
+//  Use rest in functions function sum(...numbers) {
+return numbers.reduce((total, num) => total + num, 0);
+}
+console.log(sum(l,  2, 3, 4)); // Prints: 10
+
+// Use rest in destructuring
+const [first,  ...rest] = [1, 2, 3, 4];
+console.log(first); // Prints: 1
+console.log(rest); // Prints:  [2, 3, 4]
+```
+
+In the example of the sum function, the rest operator gathers all
+arguments into an array named numbers. In destructuring, the rest
+operator gathers the remaining elements into a new array named rest.
+
+manipulation and handling of arrays and objects in JavaScript more
+readable and concise, leading to cleaner code.
+
+<h2 id="sk38">sk38. Destructuring</h2>
+Destructuring assignment is a feature in JavaScript introduced in ES6
+(ECMAScript 2015) that allows for extracting values from arrays and
+objects and assigning them to variables in a more concise and readable
+way. This feature is useful for working with complex data structures and
+avoiding code repetition when accessing properties and elements.
+
+Destructuring with Arrays:
+
+```
+const numbers = [1, 2, 3,  5];
+
+// Extracting individual values
+const [first, second,  ...rest] = numbers;
+console.log(first); // Prints: 1
+console.log(second); // Prints: 2
+console.log(rest); // Prints:  [3, k, 5]
+```
+
+Destructuring with Objects:
+
+```
+const person = { name:  'Ana', age: 30, city:  'Madrid' };
+//  Extracting individual properties
+const { name, age } = person; 
+console.log(name); // Prints: Ana 
+console.log(age); // Prints: 30
+```
+
+Nested Destructuring: You con destructure nested objects and arrays:
+
+```
+const product = {
+  nname:  'T-shirt',
+  price: 20,
+  details: {
+    color:  'Red',
+    sizes:  ['S',  'M',  'L'J
+  }
+};
+
+const { name, details: { color, sizes } } = product;
+console.log(name); // Prints: T-shirt
+console.log(color); // Prints: Red
+console.log(sizes); //Prints:  ['S',  'M',  'L'J
+```
+
+Destructuring  assignment  is  especially  handy  when  working  with
+functions that return objects or arrays, as you can extract the necessary
+values directly into the function parameters:
+
+```
+function getInformation() {
+  return { name: 'Juan', age: 25, profession: 'Programmer' };
+}
+const { name, age } = getInformation();
+console.log(name); // Prints: Juan
+console.log(age); // Prints: 25
+```
+
+Destructuring assignment can save time and reduce the need for writing
+repetitive codewhen accessing values from arrays and objects.
+
+<h2 id="sk39">sk39. Template Literals</h2>
+Template Literals are a feature introduced in ECMAScript 6 (ES6) that
+allows for creating strings in a  more readable and flexible way in
+JavaScript Template literals are defined using backticks ('') instead of
+traditional single or double  quotes  ('1  or  \"').  This  enables  the
+interpolation of variables and expressions directly into the string, as well
+as the inclusion of Line breaks and special characters without the need for
+manual concatenation.
+
+Here's a basic example of how template literals work:
+
+```
+const name = 'Juan';
+const age = 30;
+// Using template literals
+const message = 'Hello, my name is ${name} and I am ${age} years old.';
+console.log(message); // Prints "Hello, my name is Juan and I am 30 years old.
+```
+
+The are placeholders that indicate variables or expressions to be
+interpolated within them. Template literals also allow for including line
+breaks and special characters without the need for escaping:
+
+Multiline and Special Characters:
+
+```
+const multilineMessage =
+Hello,
+```
+
+This is a message that spans multiple lines.
+
+```
+console.log(multilineMessage);
+//  Prints:
+//  "Hello,
+//  This is a message
+//  that spans multiple lines."
+```
+
+Template literals are especially useful when building complex strings that
+include dynamic values and formatted elements. Moreover, by using
+template Literals, the code becomes more readable and avoids manual
+string concatenation, which can be error-prone and confusing. 
+
+<h2 id="sk40">sk40. Arrow Functions</h2>
+
+Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that
+provide  a  more  concise and  clear syntax for defining functions in
+JavaScript Arrow functions are especially useful when working with
+anonymous functions or functions that do not require a special this
+context Here's an overview of how arrow functions are used:
+
+Basic Syntax: An arrow function is defined using the syntax 0 =>
+where the parentheses contain the function parameters, and the arrow
+(=>) separates the parameters from the function body.
+
+```
+//  Traditional function function sum(a, b) {
+return a + b;
+}
+//  Equivalent arrow function const arrowSum = (a, b) => {
+rexurn a + o;
+};
+```
+
+Implicit Return: If the function body contains only one expression, you
+can omit the curly braces  and the return statement, and the function
+will automatically return the result of that expression.
+
+//  Arrow function with implicit return const arrowSum = (a, b) => a + b;
+Single  Parameter:  If the  function  has  only  one  parameter,  the
+parentheses around the parameters can also be omitted.
+
+//  Arrow function with a single parameter const square = num => num * num;
+No Parameters: If the function has no parameters, empty parentheses Q
+must be used.
+
+//  Arrow function with no parameters const getCurrentDate = () => new Date();
+Using this: One of the advantages of arrow functions is that they inherit
+the this value from the context they are in. This means they do not have
+their own this value, which can make them more predictable in situations
+where you work with objects and classes.
+
+``` 
+const person = {
+name:  'John',
+greet: function() {
+setTimeout(() => {
+console.log('Hello, I am ${this.name}'); }, 1000);
+}
+};
+person.greet(); // Prints "Hello, I am John" after 1 second
+```
+
+In summary, arrow functions provide a more concise and convenient way
+to define functions in JavaScript, especially in situations where you aim to
+simplify syntax and maintain predictable this behavior. However, it's
+essential to understand their differences from regular functions, especially
+when dealing with more complex this contexts.
+
+<h2 id="sk41">sk41. Array Methods (forEach, some, every, find, findindex, etc.)</h2>
+The Array object in JavaScript provides a variety of methods for working
+with arrays and  performing operations on their elements. Here's a
+description of some of the most common Array methods:
+
+Array.length: The length property returns the number of elements in the
+array.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+const elementcount = numbers.length; // Result: 5
+```
+
+Array.push(elementl, element2, ...): The push method adds one or
+more elements to the end of the array and returns the new Length of the
+array.
+
+``` 
+const fruits - ['apple',  'pear'];
+fruits.push('orange',  'banana');
+//Result:  ['apple',  'pear',  'orange',  'banana']
+```
+
+Array.popQ: The pop method removes the Last element from the array
+and returns it
+
+```
+const numbers = [1, 2, 3, 4];
+const lastNumber = numbers.pop();
+// Result: k (numbers is now [1, 2, 3])
+```
+
+Array.shiftQ: The shift method removes the first element from the array
+and returns it
+
+```
+const colors = ['red',  'green',  'blue'];
+const firstColor = colors.shift();
+// Result:  'red'  (colors is now ['green',  'blue'])
+```
+
+Array.unshift(elementl, element2,  The unshift method adds one or
+more elements to the beginning of the array and returns the new Length
+of the array.
+
+```
+const numbers = [2, 3, 4];
+numbers.unshift(l, 0); // Result:  [1, 0, 2, 3, 4]
+```
+
+Array.forEach(callback(currentValue,  index,  array)):  The  forEach
+method iterates over each element of the array and executes the provided
+callback function for each one.
+
+```
+const numbers = [1, 2, 3];
+numbers.forEach(number => console.log(number)); // Prints 1, 2, 3
+```
+Array.some(callback(currentValue, index, array)): The some method
+checks if at Least one element in the array satisfies the condition specified
+in the callbackfunction.
+
+``` 
+const numbers - [2. k. 6];
+const hasOdd = numbers.some(number => number % 2 !== 0); // Result: false
+```
+
+Array.every(callback(currentValue, index, array)): The every method
+checks if aLL elements in the array satisfy the condition specified in the
+callback function.
+
+```
+const numbers = {2, 4, 6];
+const allEven - numbers.every(number => number % 2 --- 0); // Result: true
+```
+
+Array.find(callback(currentValue, index, array)): The find  method
+returns the first element in the array that satisfies the condition specified
+in the callback function.
+
+```
+const people - [
+{ name: 'John', age: 25 },
+{ name: 'Mary', age: 30 },
+{ name: 'Peter', age: 22 }
+];
+
+const person - people.find(person => person.age > 25); // Result: { name: 'Mary', age: 30 }
+```
+
+Array.findlndex(callback(currentValue, index, array)): The findindex
+method returns the index of the first element in the array that satisfies the
+condition specified in the callbackfunction.
+
+``` 
+const numbers = [10, 20, 30, 40];
+const index = numbers.findlndex(number => number > 25); // Result: 2 (30 is the first number greater than 25)
+```
+
+<h2 id="sk42">sk42. String Methods (split, trim, replace, etc.)</h2>
+The  String  object in JavaScript provides  a  variety  of methods for
+manipulating and working with text strings. Here’s a description of some
+of the most common String methods:
+
+String.length: The  Length  property  returns the  Length  (number of
+characters) of a text string.
+
+```
+const text = 'Hello, world!';
+const length = text.length; // Result: 12
+```
+
+String.charAt(index): The charAt method returns the character at the
+specified position in the string.
+
+```
+const text = 'Hello';
+const firstCharacter = text.charAt(O); // Result:  'H'
+```
+
+String.concat(strl, str2,...): The concat method combines two or more
+strings into a single string.
+
+```
+const greeting = 'Hello';
+const name = 'John';
+const message = greeting.concat(', ', name); // Result: 'Hello, John'
+```
+
+String.indexOf(substring, start): The indexOf method returns the first
+position at which a substring is found within the string. If not found, it
+returns-1.
+
+```
+const phrase = 'Hello, world!';
+const position - phrase.indexOf('world'); // Result: 7
+```
+
+String.substring(start, end): The substring method extracts a substring
+from start to end (exclusive) of the string.
+
+```
+const text = 'Hello, world!';
+const substring = text.substring(6, 11); // Result:  'world'
+```
+
+String.split(separator, limit): The split method divides a string into an
+array of substrings using the separator as the splitting point
+
+```
+const text = 'Apple,Orange,Pear';
+const fruits - text.split(',');
+//Result:  ['Apple',  'Orange',  'Pear']
+```
+
+String.trimO: The trim method removes leading and trailing whitespaces
+from a string.
+```
+const text = '  Hello, world!  ';
+const cleanText = text.trim(); // Result:  'Hello, world!'
+```
+
+String.replace(search, replacement): The replace method replaces a
+search substring with another replacement string in the original string.
+```
+const text = 'Hello, name!';
+const newText = text.replace('name', 'John'); // Result: 'Hello, John!'
+```
+
+String.toUpperCaseO and String.toLowerCase(): The toUpperCase and
+toLowerCase  methods convert a  string  to  uppercase or lowercase,
+respectively.
+```
+const text = 'Hello, World!';
+const uppercase = text.toUpperCaseO; // Result:  'HELLO, WORLD!'
+const lowercase = text.toLowerCaseO; // Result:  'hello, world!'
+```
+
+<h2 id="sk43">sk43. Object Methods (keys, values, entries, etc.)</h2>
+
+The Object object in JavaScript provides several useful methods for
+working with object properties and values. Here’s a description of some of
+the most common methods of Object:
+
+Object.keys(obj): The keys method returns an array of enumerable keys
+(properties) of an object
+
+```
+const object = { a: 1, b: 2, c: 3 };
+const keys = Object.keys(object); // Result:  ['a',  'b',  'c'J
+```
+
+Object, values(obj): The values method returns an array of values of the
+enumerable properties of an object.
+
+```
+const object = { a: 1, b: 2, c: 3 };
+const values = Object.values(object); // Result:  [1, 2, 3]
+``` 
+
+Object.entries(obj): The entries method returns on array of arrays with
+key-value pairs ofthe enumerable properties of an object
+
+```
+const object = ■{ a: 1, b: 2, c: 3 };
+const entries = Object.entries(object);
+// Result:  [['a', 1],  ['b', 2],  ['c', 3]]
+```
+
+Object.assign(target, sourcel, source2,...): The assign method copies
+the enumerable properties of one or more source objects into a target
+object It returns the target object
+
+```
+const target = { a: 1 };
+const source = ■{ b: 2, c: 3 };
+Object.assign(target, source);
+console.log(target); // Result: { a: 1, b: 2, c: 3 }
+```
+
+Object.hasOwnProperty(prop): The hasOwnProperty method checks if
+an object has an own property with the specified name.
+
+```
+const object = { a: 1, b: 2 };
+const hasPropertyA = object.hasOwnProperty('a'); // Result: true
+const hasPropertyC = object.hasOwnPropertyC'c'); // Result: false
+```
+
+Object.freeze(obj): The freeze method freezes an object, meaning that its
+existing properties cannot be added, deleted, or modified.
+
+```
+const object = { a: 1, b: 2 };
+Object.freeze(object);
+object.a - 10; // No effect
+```
+
+Object.keys(obj): The keys method returns an array of enumerable keys
+(properties) of an object
+
+```
+const object = { a: 1, b: 2, c: 3 };
+const keys - Object.keys(object); // Result:  ['a',  'b',  'c']
+```
+
+Object, values(obj): The values method returns an array of values of the
+enumerable properties of an object.
+
+```
+const object = { a: 1, b: 2, c: 3 };
+const values - Object.values(object); H Result:  [1, 2, 3]
+```
+
+Object.entries(obj): The entries method returns an array of arrays with
+key-value pairs ofthe enumerable properties of an object
+
+```
+const object = { a: 1, b: 2, c: 3 };
+const entries = Object.entries(object);
+// Result:  [['a', 1],  ['b', 2],  ['c', 3]]
+```
+
+Object.getOwnPropertyNames(obj):  The  getOwnPropertyNames
+method returns an array with all properties (enumerable or not) of an
+object.
+
+```
+const object = { a: 1, b: 2 };
+const properties = Object.getOwnPropertyNames(object);
+//  Result: ['a', 'b']
+```
+
+<h2 id="sk44">sk44. Math Methods (floor, ceil, random, etc.)</h2>
+
+The  Math  object in JavaScript provides a  variety  of methods and
+properties for  mathematical  operations  and  numerical calculations.
+
+Here's a description of some ofthe most common methods of Math:
+
+Math.floor(x): The floor method rounds a number down to the nearest
+integer.
+
+```
+const number = 5.7;
+const roundedNumber - Math.floor(number); // Result: 5
+```
+
+Math.ceil(x): The ceil method rounds a number up to the nearest integer.
+
+```
+const number = 5.2;
+const roundedNumber = Math.ceil(number); // Result: 6
+```
+
+Math.round(x): The round method rounds a number to the nearest
+integer. If the decimal is 0.5 or greater, it will round to the next integer.
+
+```
+const  numberl = 5.2;
+const  number2 = 5.8;
+const  roundingl = Math.round(numberl);  // Result: 5
+const  rounding2 = Math.round(number2);  // Result: 6
+```
+
+Math.max(...args) and Math.min(...args): The max and min methods
+return the maximum and minimum values, respectively, of a series of
+numeric arguments.
+
+```
+const maximum = Math.max(5, 10, 3, 8); // Result: 10
+const minimum = Math.min(5, 10, 3, 8); // Result: 3
+```
+
+Math.pow(base, exponent): The pow method calculates the power of a
+given number.
+
+```
+const result = Math.pow(2, 3); // Result: 8 (2 to the power of 3)
+```
+
+Math.sqrt(x): The sqrt method calculates the square root of a number.
+```
+const squareRoot = Math.sqrt(25); // Result: 5 (square root of 25)
+```
+Math.abs(x): The abs method returns the absolute value of a number, i.e.,
+its value without a sign.
+```
+const absoluteValue - Math.abs(-7); // Result: 7
+```
+
+<h2 id="sk45">sk45. JSON and Object Serialization/Deserialization</h2>
+
+JSON (JavaScript Object Notation) is a Lightweight and widely used data
+interchange format in programming. It allows for the representation of
+data structures in a readable and organized way and is common in
+communication between client and server applications. Serialization and
+deserialization of objects in JSON are essential processes for converting
+objects into a format that can be transmitted and then recovered in their
+originalform.
+
+Serialization: Serialization refers to the conversion of a JavaScript object
+into a JSON string. This is useful for sending data over a network or saving
+it in a file. The JSON.stringifyQ function is used for serialization.
+
+``` 
+const person = {
+name:  'Juan',
+age: 30,
+city:  'Mexico'
+};
+const personJSON = JSON.stringify(person);
+console.log(personJSON); // Outputs
+'{"name":"Juan","age":30,"city":"Mexico"}'
+```
+
+Deserialization: Deserialization is the reverse process—converting a
+JSON string into a JavaScript object This is useful when receiving JSON
+data from the server and needing to convert it back into objects for
+manipulation  in  the  code.  The  JSON.parseQ  function  is  used  for
+deserialization.
+
+Deserialization Example:
+```
+const personJSON = '{"name":"Juan","age":30,"city":"Mexico"}'; const person = JSON.parse(personJSON); console.log(person);
+// Outputs { name:  'Juan', age: 30, city:  'Mexico' }
+```
+Serialization and Deserialization of Complex Objects: JSON can
+represent more complex data structures, such as nested arrays and
+objects.
+```
+const book = {
+title:  'The Shadow of the Wind',
+author: {
+name:  'Carlos Ruiz Zafon',
+nationality:  'Spanish'
+},
+genres:  ['Fiction',  'Mystery']
+};
+const bookJSON = JSON.stringify(book);
+console.log(bookJSON);
+const bookParsed = JSON.parse(bookJSON);
+console.log(bookParsed);
+```
+In summary, JSON is a key format in web data communication.
+Serialization and deserialization allow for the conversion of JavaScript
+objects into JSON strings and vice versa, facilitating the transfer of data
+between different systems and the persistence of information.
+
+<h2 id="sk46">sk46. Fetch API and AJAX</h2>
+
+Both the Fetch API and AJAX are methods used in JavaScript to make
+requests and receive responses from web servers, enabling interaction
+between a web application and a server. Although both serve the same
+purpose, they differ in terms of functionality and approach.
+
+Fetch API: The Fetch API is a modern API introduced in JavaScript that
+provides a more elegant and flexible way to make HTTP requests and
+handle responses. It uses promises to handle asynchronous responses,
+making it easier to manage the logic of request and response. The Fetch
+API supports a variety of data types and response formats, such as JSON,
+text, blobs, and more.
+
+Features of the Fetch API:
+
+```
+n______ I_I. io.___ ____ :__ I______ Jl_ ____ I______ ________
+```
+ 
+•  rrumise-uuseu. nuses promises io riuriuie asynchronous responses.
+
+•  Modern: Introduced in ES6, it is a more modern API that offers a clearer syntax.
+•  Support for different formats: It can handle responses in JSON, text, blobs, forms, etc.
+
+Fetch API Example:
+
+```
+fetch('https://api.example.com/data')
+.thenfresponse => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+AJAX: AJAX (Asynchronous JavaScript and XML) is an older approach to
+making asynchronous requests to the server using the XMLHttp Request
+object Although the name suggests it is related to XML, it can actually be
+used for any type of response, such as JSON or plain text AJAX was very
+popular before the arrival of the Fetch API and is still used in many
+projects.
+
+Features of AJAX:
+
+•  Uses the XMLHttpRequest object: It is older and uses a slightly more complex syntax.
+•  Higher compatibility: It works in older browser versions that do not fully support the Fetch API.
+ 
+ajaa example:
+
+```
+const xhr = new XMLHttpRequestO;
+xhr.open('GET', 'https://api.example.com/data', true); xhr.onreadystatechange = functionO {
+if (xhr.readyState --- k && xhr.status --- 200) { const data = JS0N.parse(xhr.responseText); console.log(data);
+}
+};
+xhr.sendO;
+```
+
+<h2 id="sk47">sk47. Localstorage and Sessionstorage</h2>
+
+Both LocaLStorage and SessionStorage are mechanisms for Local storage
+in the browser that allow web applications to save data in the browser for
+later retrieval Although they have similarities, they differ in terms of data
+duration and scope. Here is a description of each:
+
+LocaLStorage: LocaLStorage is an object that provides a way to store key­
+value pairs persistently in the browser. Data stored in LocaLStorage
+persists even after closing the browser and reopening it This data is
+available to all open tabs and windows of the same domain.
+
+Features of Localstorage:
+
+•  Persistence: Stored data remains even after closing the browser.
+•  Domain scope: Data is available to all tabs and windows of the same domain.
+•  Capacity: Storage of several megabytes (depending on the browser).
+
+Example of Localstorage:
+```
+//  Save data to Localstorage localstorage.setltem('name', 'John');
+//  Retrieve data from Localstorage
+const name = localstorage.getltem('name');
+console.log(name); // Prints "John"
+//  Remove data from Localstorage localstorage.removeltem('name');
+```
+
+SessionStorage: SessionStorage is similar to Localstorage, but the data
+stored in SessionStorage is only available during the current browser
+session. If the browser or tab is closed, the data stored in SessionStorage
+will be automatically cleared.
+
+Features of SessionStorage:
+
+•  Session duration: Data is only available during the current browser session.
+•  Domain scope: Data is available to all tabs and windows of the same domain in the same session.
+•  Capacity: Storage of several megabytes (depending on the browser).
+
+Example of SessionStorage:
+```
+// Save data to SessionStorage
+sessionstorage.setltem('language', 'Spanish');
+
+// Retrieve data from SessionStorage
+const language - sessionstorage.getltem('language');
+console.log(language); // Prints "Spanish"
+
+// Remove data from Sessionstorage
+sessionstorage.removeltem('language');
+```
+
+In summary, both LocaLStorage and SessionStorage are useful ways to
+store data Locally in the browser. The choice between them will depend on
+whether you want the data to persist beyond the current browser session
+(Locals to rage) or if you only need it to be available during the current
+session (SessionStorage).
+
+<h2 id="sk48">sk48. IlllebSockets and Socket.10</h2>
+
+Both WebSockets and SocketIO are technologies used in JavaScript to
+enable real-time communication between the client and server in web
+applications. Although they have similar purposes, they differ in terms of
+functionality and use.
+
+WebSockets:
+WebSockets are a real-time communication protocol that provides a
+persistent bidirectional communication channel between the client and
+server.  Unlike  HTTP,  which  follows  a  request-response  approach,
+WebSockets allow continuous and Low-Latency communication. They are
+ideal for applications that require real-time updates, such as online chats,
+
+Features of WebSockets:
+
+•  Bidirectional communication: Both the client and server can send and receive data at any time.
+•  Persistence: The connection remains open, allowing continuous communication.
+•  Low latency: Minimizes delay in data transmission.
+•  Manual implementation: Requires manual configuration and handling on both ends (client and server).
+
+Example of WebSockets:
+```
+// Client
+const socket = new WebSocket('ws://localhost:3000');
+socket.addEventListener('open',  () -> {
+socket.send('Hello, server!');
+});
+socket.addEventListener('message', event => { console.log('Message from the server:', event.data);
+});
+// Server (Node.js)
+const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: 3000 });
+wss.onC connection', ws -> {
+ws.send('Welcome to the WebSocket server!');
+ws.on(' message', message => {
+console.log('Message from the client:', message);
+ws.send('Message received:  ' + message);
+});
+});
+```
+
+Socket.lO: SocketIO is a Library built on top of WebSockets but adds
+layers  of  abstraction  and  fallback  handling  to  ensure  real-time
+communication works even in environments where WebSockets are not
+supported.  SocketIO  also  includes  features  such  as  chat  rooms,
+broadcasting, and automatic reconnection.
+
+Features of SocketJO:
+
+•  Based on WebSockets: Uses WebSockets as the main method of communication when possible.
+•  Automatic fallback: Uses other technologies Like Long Polling when WebSockets are not available.
+•  Additional features: Provides features such as chat rooms and broadcasting.
+•  Simplified implementation: Offers a simpler API for handling communication.
+
+Example of SocketIO:
+```
+// Client
+const socket = io('http://localhost:3000');
+socket.on('connect',  () -> {
+socket.emit('message',  'Hello, server!');
+});
+socket.on('response', data => {
+console.log('Server response:', data);
+// Server (Node.js)
+const http = require('http');
+const server = http.createServerO;
+const io = require('socket.io')(server);
+io.on('connection', socket -> {
+socket.emit('response',  'Welcome to the Socket.10 server!');
+socket.on('message', message => {
+console.log('Client message:', message);
+socket.emit('response',  'Message received:  ' + message);
+});
+server.listen(3000);
+});
+```
+
+both WebSockets and SocketIO allow real-time communication between
+the client and server in web applications. WebSockets are the underlying
+protocol that enables real-time communication, while SocketlO adds
+additional functionality and fallback handling to improve compatibility
+and the developer experience. The choice between them depends on the
+specific needs of your application and the level of abstraction you prefer
+to use.
+
+<h2 id="sk49">sk49. Canvas and SebGL</h2>
+
+Both Canvas and WebGL are technologies used in JavaScript to render
+graphics in web browsers, but they differ in terms of functionality and
+complexity.
+
+Canvas: Canvas is an HTML5 API that provides a drawing area in which
+2D graphics can be created using JavaScript. It is ideal for creating simple
+graphics, visualizations, 2D games, and visual design elements on a web
+page. You can draw lines, shapes, text, and work with images on the
+canvas.
+ 
+Features of Canvas:
+
+•  2D graphics: Focuses on two-dimensional graphics.
+•  2D context: Uses the 2d context for drawing operations.
+•  Easy to get started: Requires a basic Level of programming and graphics knowledge.
+•  Ideal for: 2D graphics, visualizations, 2D games.
+
+Canvas Example:
+```
+<canvas id="myCanvas" width="400" height="300"x/canvas>
+<script>
+  const canvas = document.getElementById('myCanvas'); 
+  const context = canvas.getContext('2d');
+  context.fiULStyle = 'blue';
+  context.fiURect(50, 50, 100, 100);
+</script>
+```
+
+WebGL: WebGL (Web Graphics Library) is a more advanced technology
+that provides access to hardware acceleration for rendering 3D graphics
+in web browsers. It uses a specification similar to OpenGL and is perfect
+for creating immersive 3D experiences, complex visualizations, and 3D
+games.
+
+Features of WebGL:
+
+•  3D graphics: Focuses on three-dimensional graphics.
+•  Based on OpenGL Uses a specification similar to OpenGL
+•  Higher complexity: Requires a deeper knowledge of graphics programming and mathematics.
+•  Ideal for: 3D aranhics. 3D names, interactive simulations.
+
+WebGL Example:
+```
+<canvas id="myCanvas" width="800" height="600"x/canvas>
+<script>
+  const canvas = document.getElementByld('myCanvas');
+  const gl = canvas.getContext('webgl');
+  // Here, you would write code to render 3D content with WebGL 
+</script>
+```
+
+In summary, if you need simple 2D graphics or visual elements on your
+website, Canvas is an excellent choice. If you want to create complex 3D
+graphics, 3D games, or interactive visualizations, WebGL is the technology
+to use. Your choice will depend on the type of visual experience you want
+to provide in your web application.
+
+<h2 id="sk50">sk50. Testing uuith Jest or Mocha</h2>
+
+Jest and Mocha are two popular frameworks for unit and integration
+testing in JavaScript Both allow for automated testing to ensure that the
+code functions correctly and behaves as expected. However, they have
+some differences in terms of their approach and features. Here's a
+description of each:
+
+Jest: Jest is a testing framework developed by Facebook. It is designed to
+be easy to set up and use, especially in projects using React. Jest includes
+many useful features, such as built-in assertions, automatic module
+mocking, and a simple structure for organizing tests. It also comes with its
+own test runner, meaning you don't need to set up an additional runner.
+ 
+Features of Jest:
+
+•  Simple Configuration: Jest comes with a default configuration that is suitable for most projects.
+•  Assertions and Matchers: Provides built-in assertions and multiple matchers to verify results.
+•  Automatic Mocking: Allows for automatic creation of module mocks, making it easy to simulate dependencies.
+•  Snapshot Testing: Enables creating snapshots of components and verifying changes in them.
+•  Parallel Testing: Can run tests in parallel, improving speed in Large projects.
+•  Integration with React: Particularly good for React projects and has specific tools for component testing.
+
+Example with Jest: Let's assume we want to test a simple function that
+adds two numbers:
+
+```
+// math.js
+function sum(a, b) {
+return a + b;
+
+module.exports = { sum
+//  math.test.js (tests with Jest) const { sum } = require('./math');
+
+test('Correctly adds two numbers',  () => {
+expect(sum(2, 3)).toBe(5);
+});
+test ('Correctly adds negative numbers', () => { expect(sum(-2, -3)).toBe(-5);
+```
+
+In this example, we are using Jest for testing along with Jest's built-in
+assertions. In the second example, we use Mocha, Chai for assertions, and
+Sinon for HTTP request mocking.
+
+Mocha: Mocha is a more flexible and extensible testing framework
+compared to Jest It focuses on providing a solid structure for writing tests
+and allows developers to choose assertion Libraries and mocking tools
+according to their preferences. Mocha itself does not include built-in
+assertions or mocking, so it is commonlg used in conjunction with libraries
+
+Like Chai (for assertions) and Sinon (for mocking).
+
+Features of Mocha:
+
+. Flexibility: Mocha is more flexible and allows developers to choose
+assertion and mocking tools that fit their needs.
+
+•  Clear Structure: Provides a clear structure for organizing tests and suites.
+•  Plugins and Extensions: Mocha can be extended with a variety of plugins to add specific functionalities.
+•  Independence: Unlike Jest, Mocha does not include test runners or assertion libraries by default, providing more control but requiring more configuration.
+ 
+Example with Mocha, Chai, and Sinon: Let's assume we want to test a
+function that makes a simulated HTTP request using Sinon:
+```
+// http.js
+const request = require('request');
+function fetchData(callback) {
+  request('http://api.example.com/data',
+  (error, response, body) => {
+    if (!error && response.statusCode === 200) { 
+	  callback(JSON.parse(body));
+    } else { 
+	  callback(null);
+    }
+  });
+}
+module.exports = ■{ fetchData };
+
+//  http.test.js (tests with Mocha, Chai, and Sinon) const { expect } = require('chai');
+const sinon - require('sinon');
+const { fetchData } - require('./http');
+describe('fetchData',  () => {
+  it('Should retrieve valid data',  () => {
+    const stub = sinon.stub().yields(null, { 
+	  statusCode: 200
+    },  '{"data": "value"}');
+    sinon.replace(request,  'get', stub);
+    fetchData(data => {
+      expect(data).to.deep.equal({ data:  'value'  });
+    });
+    sinon.restore();
+  });
+  it('Should handle request error',  () => {
+    const stub = sinon.stub().yields(new Error('Request error'));
+    sinon.replace(request,  'get', stub);
+    fetchData(data => {
+      expect(data).to.be.null;
+    });
+    sinon.restore();
+  });
+});
+```
+
+The choice between Jest and Mocha depends on your needs and preferences. Jest is quicker to get started and offers useful built-in features, especially for React projects. 
+Mocha is a solid choice if you want more flexibility and prefer to choose your own assertion 
+libraries and mocking tools.
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el01">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10636,8 +13470,7 @@ VS Code to manage the entire project structure. Additionally, for more advanced
 development or working on larger projects, using a module bundler like Webpack or a
 task runner like Gulp might be beneficial to enhance your development environment further.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js0">218 JS Samples</h2>
+<h2 id="js0">218 JavaScript Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js1">1. Print Hello World</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
