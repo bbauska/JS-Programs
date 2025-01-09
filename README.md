@@ -1232,6 +1232,7 @@ let interval = setlnterval(function() {
 <p><b>requestAnimationFrame:</b> requestAnimationFrame is a function specifically used 
 for creating smooth animations in the browser. It ensures that animations run in sync 
 with screen refreshes, improving performance and user experience.</p>
+
 <pre>
 function animate(timestamp) {
   // Perform animation changes here
@@ -7945,6 +7946,7 @@ variables into strings.</p>
 <h4>Basic Template Literal:</h4>
 <pre>let name = 'Alice';
 let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
+
 <h4>Multi-line Template Literal:</h4>
 <pre>let multiLineMessage = `
   This is a
@@ -7959,8 +7961,10 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Whole Numbers:</h4>
 <pre>let integerNumber = 42;</pre>
+
 <h4>Decimal Numbers:</h4>
 <pre>let decimalNumber = 3.14;</pre>
+
 <h4>Scientific Notation:</h4>
 <pre>let scientificNumber = 2e3; // scientificNumber = 2000</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7973,6 +7977,7 @@ represent integers with arbitrary precision.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a BigInt:</h4>
 <pre>let bigNumber = 12345678912345678901234567890n;</pre>
+
 <h4>Performing Operations with a BigInt:</h4>
 <pre>let bigSum = bigNumber + 1n;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7988,6 +7993,7 @@ manipulations</span> with numbers.</p>
 let number = 3.14159;
 let roundedNumber = number.toFixed(2); // roundedNumber = '3.14'
 </pre>
+
 <h4>parseInt() Method:</h4>
 <pre>
 let stringNumber = '42';
@@ -8003,8 +8009,10 @@ numbers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Number.MAX_VALUE Property:</h4>
 <pre>console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e + 308</pre>
+
 <h4>Number.MIN_VALUE Property:</h4>
 <pre>console.log(Number.MIN_VALUE);  // Output: 5e-324</pre>
+
 <p>This comprehensive guide covers various aspects of JavaScript, including arithmetic operations,
 assignnment, data types, fuctions, objects, events, strings, string methods, string search, string
 templates, numbers, BigInt, number methods, and number properties, providing examples and 
@@ -8022,8 +8030,10 @@ in a single variable.</p>
 let numbers = &lbrack;1,2,3,4,5&rbrack;; // Array of numbers
 let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 </pre>
+
 <h4>Accessging Elements:</h4>
 <pre>console.log(fruits&lbrack;0&rbrack;); // Output: 'apple'</pre>
+
 <h4>Modifying Elements:</h4>
 <pre>fruits&lbrack;1&rbrack; = 'grapes'; // Changing 'banana' to 'grapes'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8036,8 +8046,10 @@ efficiently.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>push() Method:</h4>
 <pre>fruits.push('melon'); // Adds 'melon' to the end of the array</pre>
+
 <h4>pop() Method:</h4>
 <pre>let removedFruit = fruits.pop(); // Removes and returns the last element ('melon')</pre>
+
 <h4>splice() Method:</h4>
 <pre>numbers.splice(2,1); // Removes 1 element at index 2 (removes '3')</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8049,6 +8061,7 @@ efficiently.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sorting Numbers:</h4>
 <pre>numbers.sort((a, b) => a - b); // Ascending order</pre>
+
 <h4>Sorting Strings:</h4>
 <pre>fruits.sort(); // Alphabetic Order</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8065,6 +8078,7 @@ numbers.forEach(number => {
   console.log(number);
 });
 </pre>
+
 <h4>map() Method:</h4>
 <pre>let doubledNumbers = numbers.map(number => number &ast; 2);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8090,6 +8104,7 @@ and times.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Date Object:</h4>
 <pre>let specificDate = new Date();  // Current date and time</pre>
+
 <h4>Creating a Specific Date:</h4>
 <pre>let specificDate = new Date('2024-12-25'); // December 25, 2024</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8102,6 +8117,7 @@ to different formats.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Formatting to String:</h4>
 <pre>let dateString = specificDate.toDateString(); // Convert to a human - readable string</pre>
+
 <h4>Formatting to Locale String:</h4>
 <pre>let localeString = specificDate.toLocaleString('en-US'); // Convert to local date and time string</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8114,6 +8130,7 @@ to different formats.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>getFullYear() Method:</h4>
 <pre>let year = specificDate.getFullYear(); // Get the year (2023)</pre>
+
 <h4>getMonth() Method:</h4>
 <pre>let month = specificDate.getMonth(); // Get the month (11 for December)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8126,6 +8143,7 @@ to different formats.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>setFullYear () Method:</h4>
 <pre>specificDate.setFullYear(2024); // Set the year to 2024</pre>
+
 <h4>setMonth() Method:</h4>
 <pre>specificDate.setMonth(0); // Set the month to January (0 index)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8138,6 +8156,7 @@ and functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Math.PI Property:</h4>
 <pre>let piValue = Math.PI; // Value of PI & piValue (3.141592653589793)</pre>
+
 <h4>Math.sqrt() Method:</h4>
 <pre>let squareRoot = Math.sqrt(25); // Square root of 25 (5)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8149,6 +8168,7 @@ and functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Generating Random Number:</h4>
 <pre>let randomNumber = Math.random(); // Random number between 0 and 1</pre>
+
 <h4>Generating Random Integer:</h4>
 <pre>let randomInteger = Math.floor(Math.random() &ast; 10); // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8164,6 +8184,7 @@ let isTrue = true;
 let isFalse = false;
 </pre>
 <h4>Comparison:</h4>
+
 <pre>
 let greaterThan = 5 &gt; 3; // true
 let equalTo = 5 === 5; // true
@@ -8178,6 +8199,7 @@ compare values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>== (Equality Operator):</h4>
 <pre>console.log(5 == '5'); // true (coerces types)</pre>
+
 <h4> === (Strict Equality Operator):</h4>
 <pre>console.log(5 === '5'); // false (compares both value and type)</pre>
 <p>This comprehensive guide covers various aspects of JavaScript including arrays, array 
@@ -8202,6 +8224,7 @@ if (num > 0) {
   console.log('Number is not positive');
 }
 </pre>
+
 <h4>Nested if...else:</h4>
 <pre>
 let x = 5;
@@ -8250,6 +8273,7 @@ for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 </pre>
+
 <h4>Looping Array Elements:</h4>
 <pre>
 let arr = ['apple', 'banana', 'orange'];
@@ -8353,6 +8377,7 @@ mySet.add(1);
 mySet.add(2);
 mySet.add(3);
 </pre>
+
 <h4>Iterating Over a Set:</h4>
 <pre>
 for (let item of mySet) {
@@ -8373,6 +8398,7 @@ let myMap = new Map();
 myMap.set('keyl', 'value1');
 myMap.set('key2', 'value2');
 </pre>
+
 <h4>Iterating Over a Map:</h4>
 <pre>
 for (let [key, value] of myMap) {
@@ -8406,6 +8432,7 @@ from one data type to another.</p>
 let strNumber = '10';
 let num = parseInt(strNumber);
 </pre>
+
 <h4>Number to String:</h4>
 <pre>
 let number = 15;
@@ -8436,6 +8463,7 @@ const b = 3; // 00000000000000000000000000000011
 console.log(a & b); // 00000000000000000000000000000001
 let result = 5 & 3; // Output: 1
 </pre>
+
 <h4>Bitwise NOT Operator (~):</h4>
 <pre>
 const a = 5;  // 00000000000000000000000000000101
@@ -8445,6 +8473,7 @@ console.log(~a); // 11111111111111111111111111111010
 console.log(~b); // 00000000000000000000000000000010
 // Expected output: 2
 </pre>
+
 <h4>Bitwise OR Operator (|):</h4>
 <pre>
 const a = 5; // 00000000000000000000000000000101
@@ -8452,6 +8481,7 @@ const b = 3; // 00000000000000000000000000000011
 console.log(a | b); // 00000000000000000000000000000111
 let result = 5 | 3; // Output: 7
 </pre>
+
 <h4>Bitwise XOR Operator (^):</h4>
 <pre>
 const a = 5; // 00000000000000000000000000000101
@@ -8469,7 +8499,9 @@ let result = 5 ^ 3; // Output: 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Regular Expression:</h4>
 <pre>let pattern = / hello / i; // Case - insensitive 'hello'</pre>
+
 <h4>Testing a String with RegExp:</h4>
+
 <pre>
 let str = 'Hello, World ! ';
 console.log(pattern.test(str)); // Output: true
@@ -8492,9 +8524,12 @@ console.log(pattern.test(str)); // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Syntax Error:</h4>
 <pre>let x = 10</pre>
+
 <p>This will throw a syntax error due to the missing semicolon.</p>
+
 <h4>Reference Error:</h4>
 <pre>console.log(undefinedVariable);</pre>
+
 <p>This will throw a reference error as undefinedVariable is not defined.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex51">51. JS Scope</h2>
@@ -8537,6 +8572,7 @@ function sayHello() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Enabling Strict Mode:</h4>
 <pre>'use strict’;</pre>
+
 <h4>Using Strict Mode Inside a Function:</h4>
 <pre>
 function myFunction() {
@@ -8570,6 +8606,7 @@ person.greet(); // Outputs : 'Hello, my name is Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic Arrow Function:</h4>
 <pre>let multiply = (a, b) => a &ast; b;</pre>
+
 <h4>Arrow Function with Multiple Lines:</h4>
 <pre>
 let greet = (name ) => {
@@ -8596,7 +8633,6 @@ class Person {
 let alice = new Person('Alice');
 alice.greet(); // Outputs : 'Hello, my name is Alice'
 </pre>
-</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex57">57. JS Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8612,6 +8648,7 @@ export function greet(name) {
   console.log('Hello,' + name + '!');
 }
 </pre>
+
 <h4>Importing a Module:</h4>
 <pre>
 // Main.js
@@ -8631,6 +8668,7 @@ let jsonStr = '{"name":" Alice", "age": 30}';
 let obj = JSON.parse (jsonStr);
 console.log(obj.name); // Output: 'Alice'
 </pre>
+
 <h4>Stringify Object to JSON:</h4>
 <pre>
 let obj = {name: 'Alice',age: 30};
@@ -8644,6 +8682,7 @@ let jsonString = JSON.stringify(obj);
 <h3>Examples of JS Debugging:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using console.log() for Debugging:</h4>
+
 <pre>
 let x = 5;
 console.log(x);
@@ -8671,6 +8710,7 @@ and maintainable code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Use Meaningful Variable Names:</h4>
 <pre>let d = new Date(); // Instead, use let currentDate = new Date();</pre>
+
 <h4>Avoid Global Variables:</h4>
 <p>Encapsulate code to avoid polluting the global scope.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8682,7 +8722,9 @@ and maintainable code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Missing Semicolon:</h4>
 <pre>let x = 5</pre>
+
 <p>Remember to add a semicolon at the end of the statement.</p>
+
 <h4>Uninitialized Variables:</h4>
 <pre>
 let y;
@@ -8729,6 +8771,7 @@ let person = {
   }
 };
 </pre>
+
 <h4>Using the Object Constructor:</h4>
 <pre>
 let car = new Object();
@@ -8744,6 +8787,7 @@ car. model = 'Camry';
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Properties:</h4>
 <pre>console.log(person.name ); // Accessing property 'name'</pre>
+
 <h4>Adding or Modifying Properties:</h4>
 <pre>
 car.color = 'blue'; // Adding property 'color'
@@ -8758,6 +8802,7 @@ car.model = 'Corolla'; // Modifying property 'model'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Methods:</h4>
 <pre>console.log(person.greet()); // Accessing method 'greet'</pre>
+
 <h4>Adding Methods to an Object:</h4>
 <pre>
 car. start = function() {
@@ -8773,6 +8818,7 @@ car. start = function() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using console.log():</h4>
 <pre>console.log(person); // Output the entire object</pre>
+
 <h4>Stringify with JSON:</h4>
 <pre>
 let carString = JSON.stringify(car);
@@ -8849,6 +8895,7 @@ for (let key in person) {
   console.log(key + ': ' + person[key]);
 }
 </pre>
+
 <h4>Using Object.keys():</h4>
 <pre>let keys = Object.keys(person); // Get an array of object keys</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8865,6 +8912,7 @@ mySet.add(1);
 mySet.add(2);
 mySet.add(3);
 </pre>
+
 <h4>Checking Set Membership:</h4>
 <pre>console.log(mySet.has(2)); // Output: true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8894,11 +8942,13 @@ myMap.set('key2', 'value2');
 let object1 = {name: 'John'};
 let object2 = objectl; // object2 points to the same object as object 1
 </pre>
+
 <h4>Changing Object through Reference:</h4>
 <pre>
 object2.name = 'Alice';
 console.log(objectl.name); // Output: Alice'
 </pre>
+
 <p>This comprehensive guide covers various aspects of JavaScript objects, including 
 definitions, properties, methods, display, accessors, constructors, prototypes, 
 iterables, sets, maps, and object references, with examples and explanations for each 
@@ -8916,12 +8966,14 @@ function greet() {
   return 'Hello!';
 }
 </pre>
+
 <h4>Function Expression:</h4>
 <pre>
 let greet = function() {
   return 'Hello!';
 };
 </pre>
+
 <h4>Arrow Function:</h4>
 <pre>
 let greet = () => {
@@ -8941,7 +8993,9 @@ function greet(name) {
   return 'Hello,' + name + '!';
 }
 </pre>
+
 <h4>Multiple Parameters:</h4>
+
 <pre>
 function sum(a, b) {
   return a + b;
@@ -8955,6 +9009,7 @@ function sum(a, b) {
 <h3>Function Invocation Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Calling a Function:</h4>
+
 <pre>
 greet(); // Function call
 let result = sum(5,3); // Function call with arguments
@@ -8968,6 +9023,7 @@ value and arguments provided individually.</p>
 <h3>Function Call Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using call():</h4>
+
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -8984,6 +9040,7 @@ value and arguments provided as an array.</p>
 <h3>Function Apply Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using apply():</h4>
+
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9001,6 +9058,7 @@ keyword set to a specified value.</p>
 <h3>Function Bind Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using bind():</h4>
+
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9018,6 +9076,7 @@ where they were defined.</p>
 <h3>Function Closures Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Closure Example:</h4>
+
 <pre>
 function outerFunction() {
   let outerVariable = 'I am from the outer function';
@@ -9029,6 +9088,7 @@ function outerFunction() {
 let closure = outerFunction();
 closure(); // Output: 'I am from the outer function'
 </pre>
+
 <p>This comprehensive guide covers various aspects of JavaScript functions, including 
 definitions, parameters, invocation, call, apply, bind, and closures, with examples 
 and explanations for each concept.</p>
@@ -9040,6 +9100,7 @@ and explanations for each concept.</p>
 <h3>Class Intro:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Class Declaration:</h4>
+
 <pre>
 class Animal {
   constructor(name, age) {
@@ -9051,7 +9112,9 @@ class Animal {
   }
 }
 </pre>
+
 <h4>Creating Instances:</h4>
+
 <pre>
 let dog = new Animal('Buddy', 3);
 console.log(dog.sound()); // Output: 'Animal sound'
@@ -9065,6 +9128,7 @@ from a superclass.</p>
 <h3>Class Inheritance Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Extending a Class:</h4>
+
 <pre>
 class Dog extends Animal {
   constructor(name, age, breed) {
@@ -9077,6 +9141,7 @@ class Dog extends Animal {
 }
 </pre>
 <h4>Using Inherited Methods:</h4>
+
 <pre>
 let puppy = new Dog('Max', 1, 'Labrador');
 console.log(puppy.sound()); // Output: 'Woof!'
@@ -9090,6 +9155,7 @@ instances of the class.</p>
 <h3>Class Static Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding a Static Method:</h4>
+
 <pre>
 class Calculator {
   static add(a, b) {
@@ -9110,6 +9176,7 @@ immediately.</p>
 <p>Callbacks in JavaScript are functions passed as arguments to another function to be 
 executed later.</p>
 <h4>Callbacks Example:</h4>
+
 <pre>
 function fetchData(callback) {
   setTimeout(() => {
@@ -9127,6 +9194,7 @@ fetchData(processData); // Output after 2 seconds : 'Data received : Some data'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Asynchronous operations in JavaScript allow non - blocking execution of code.</p>
 <h4>Asynchronous Example:</h4>
+
 <pre>
 console.log('Start');
 setTimeout(() => {
@@ -9144,6 +9212,7 @@ resolve or reject in the future.</p>
 <h3>Promises Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Promise:</h4>
+
 <pre>
 let myPromise = new Promise((resolve, reject) => {
   setTimeout (() => {
@@ -9163,6 +9232,7 @@ using promises.</p>
 <h3>Async / Await Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Async / Await:</h4>
+
 <pre>
 async function fetchData() {
   return new Promise((resolve) => {
@@ -9191,6 +9261,7 @@ representing the document as a tree structure.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing an Element by ID:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9209,6 +9280,7 @@ representing the document as a tree structure.</p>
 <p>DOM methods provide various ways to manipulate HTML elements.</p>
 <h4>Changing Element Content:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9226,6 +9298,7 @@ representing the document as a tree structure.</p>
 <p>The document object represents the entire HTML document.</p>
 <h4>Accessing Document Properties:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9243,6 +9316,7 @@ console.log(document.URL);   // Output: Document URL
 <p>Elements in the DOM represent HTML tags.</p>
 <h4>Changing Element Styles:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9262,6 +9336,7 @@ console.log(document.URL);   // Output: Document URL
 <p>The DOM HTML includes properties that deal with the HTML content.</p>
 <h4>Changing HTML Attributes:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9280,6 +9355,7 @@ console.log(document.URL);   // Output: Document URL
 <p>The DOM allows manipulation of HTML forms.</p>
 <h4>Accessing Form Elements:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9301,6 +9377,7 @@ console.log(document.URL);   // Output: Document URL
 <p>The DOM CSS allows manipulation of CSS styles.</p>
 <h4>Changing CSS Classes:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9319,6 +9396,7 @@ console.log(document.URL);   // Output: Document URL
 <p>The DOM supports creating simple animations.</p>
 <h4>Animating an Element:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9345,6 +9423,7 @@ console.log(document.URL);   // Output: Document URL
 <p>Events in the DOM represent interactions by users or by the browser.</p>
 <h4>Click Event Handling:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9364,6 +9443,7 @@ console.log(document.URL);   // Output: Document URL
 <p>The addEventListener method is used to attach an event to an element.</p>
 <h4>Mouseover Event Handling:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9383,6 +9463,7 @@ console.log(document.URL);   // Output: Document URL
 <p>The DOM allows navigation between elements.</p>
 <h4>Traversing Child Elements:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9406,6 +9487,7 @@ console.log(document.URL);   // Output: Document URL
 <p>Nodes are the fundamental building blocks in the DOM.</p>
 <h4>Creating a New Node:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9426,6 +9508,7 @@ console.log(document.URL);   // Output: Document URL
 <p>Collections in the DOM are arrays of HTML elements.</p>
 <h4>Accessing Collection Elements:</h4>
 <h5>html code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10420,6 +10503,7 @@ development. Servers often provide data in JSON format through APIs.</p>
 functions respectively, to convert data to and from JSON format.</p>
 <h4>Example of Encoding and Decoding JSON in PHP:</h4>
 <h5>php code</h5>
+
 <pre>
 // Encoding PHP array to JSON
 $data = array("name " => " Peter ", " age " => 28 );
@@ -10435,6 +10519,7 @@ $decodedData = json.decode($jsonString, true);
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
 <h4>Example of Using JSON Data in HTML:</h4>
 <h5>html code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
 &lt;script&gt;
@@ -10715,8 +10800,11 @@ literals. It's widely used for data exchange between web servers and web clients
 <p>JSON syntax is derived from JavaScript object notation, consisting of key-value pairs 
 enclosed in curly braces {}, and values can be strings, numbers, objects, arrays, booleans, 
 or null.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Syntax:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
 "keyl valuel",
@@ -10743,7 +10831,9 @@ lightweight and easier to read and parse than XML.</p>
   "city":"New York"
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>xml code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!-- XML --&gt;
 &lt;user&gt;
@@ -10881,6 +10971,11 @@ let script = document.createElement('script');
 script.src = 'https://example.com/data?callback=handleData';
 document.head.appendChild(script);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including 
 an introduction, syntax, comparison with XML, data types, parsing, stringifying, JSON 
 objects and arrays, working with JSON in server-side technologies like PHP, HTML, and 
@@ -11095,6 +11190,11 @@ console.log(mappedData);
   {"itemId": 2, "itemName":"Item2"}, 
   {"itemId": 3, "itemName":"Item3"}]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These examples showcase different aspects of using JSON in JavaScript, including 
 creating, manipulating, parsing, and working with JSON data in various scenarios.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11135,6 +11235,10 @@ $("#text").css("color", "blue");
 <p>jQuery simplifies common JavaScript tasks, such as event handling, animations, AJAX 
 requests, and DOM manipulation, offering a more concise syntax compared to native 
 JavaScript.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Differences Between JavaScript and jQuery</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11236,6 +11340,11 @@ JavaScript's native features are often preferred due to advancements in web stan
 while jQuery remains relevant for legacy projects or when compatibility with older 
 browsers is a concern. Understanding both JavaScript and jQuery empowers developers 
 to choose the right tool for the job and build robust, interactive web applications.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>JavaScript and jQuery in various Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Selecting an Element by ID:</h4>
@@ -11511,6 +11620,11 @@ $("#myDiv").click (function() {
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These examples demonstrate how JavaScript and jQuery can achieve similar tasks, 
 showcasing the differences in syntax and complexity between the two when performing 
 common web development operations.</p>
@@ -11646,6 +11760,10 @@ extensive customization and advanced features, catering to various needs in data
 representation, UII UX enhancements, and more in web development. Understanding and 
 leveraging these libraries empower developers to craft visually compelling and data-driven 
 web applications.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Canvas Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11963,6 +12081,10 @@ svg.append('rect')
   .attr('fill', 'green');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These examples demonstrate how to create basic graphics, charts, and visualizations using 
 different JavaScript libraries such as Canvas, Plotly, Chart.js, Google Charts, and D3.js. 
 They serve as a starting point for building more complex and customized graphical 
@@ -12169,6 +12291,11 @@ let isMatch = pattern.test('Hello 123'); // Output: true
 let str = 'Hello 123';
 let replaced = str.replace (/\d+/,'456'); // Output: 'Hello 456'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These examples cover a range of JavaScript functionalities, including basic operations, 
 string I array manipulations, functions, objects, loops, error handling, asynchronous 
 operations, DOM manipulations, and regular expressions.</p>
@@ -12352,6 +12479,11 @@ function validateNumber(num) {
 let emailPattern = / A [ A\s@ ]+ @ [ A\s@ ]+ \ .[ A\s@ ]+ $ /;
 let isValidEmail = emailPattern.test('test@example.com'); // Output: true
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These examples delve deeper into JavaScript's functionalities, including advanced 
 functions, array and object manipulation, iteration methods, async operations, DOM 
 manipulation, and newer ES6 + features.</p>
@@ -12439,6 +12571,7 @@ executeAsyncOperations();
 <pre>
 let newArray = Array.from ({length: 5}, (index) => index &ast; 2 ); // Output: [ 0, 2, 4, 6, 8 ]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Using Finally Block:</h4>
@@ -12466,6 +12599,11 @@ super (message );
 this . name = this . constructor. name;
 throw new CustomError ('Custom error message1);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These additional code snippets expand on various JavaScript concepts such as higher-
 order functions, array methods, object manipulation, advanced loops, error handling, and 
 new features like optional chaining and async / await.</p>
@@ -12586,6 +12724,11 @@ const bigNumber = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1);
 // BigInt:
 9007199254740992n + In
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These code snippets expand on JavaScript functionalities like object manipulation, 
 array methods, generator functions, async operations, error handling with promises, 
 and ES6 + features like destructuring and BigInt datatype.</p>
@@ -12707,6 +12850,10 @@ const intArray = new Int32Array(buffer);
 intArray[0] = 42;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These additional JavaScript code snippets demonstrate advanced function techniques, 
 array methods, object manipulation, promises and async I await functionality, ES6 + 
 features like optional chaining and array buffer with typed arrays.</p>
@@ -12806,6 +12953,11 @@ Promise.resolve('Success')
   .finally(() => console.log('Finally block executed'))
   .then(result => console.log(result)); // Output: 'Success'
 </pre>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets showcase more advanced function operations, array 
 manipulations, object methods, promises and async / await functionalities, and ES6 + 
@@ -12930,6 +13082,10 @@ async function loadModule() {
 const x = null;
 const y = x??'default value'; // Output: 'default value'
 </pre>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets introduce advanced function operations, array 
 manipulations, object methods, promises and async / await functionalities, and ES6 + 
@@ -13217,6 +13373,10 @@ const arrl = [1, 2, 3];
 const arr2 = [4, 5, 6];
 const combined = [...arrl, ...arr2]; // Output: [1, 2, 3, 4, 5, 6]
 </pre>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets explore advanced function operations, array 
 manipulations, object methods, promises and async / await functionalities, and ES6 + 
@@ -13303,6 +13463,10 @@ const users = [
 ];
 const user = users.find(user => user.id === 2); // Output: {id: 2, name: 'Bob'}
 </pre>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets explore advanced function operations, array 
 manipulations, object methods, promises and async / await functionalities, and ES6 + 
@@ -13397,6 +13561,10 @@ console.log(name, age); // Output: 'Alice' 30
 const sum = (a, b) => a + b;
 console.log(sum(2,3)); // Output: 5
 </pre>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets delve into advanced function operations, array 
 manipulations, object methods, promises and async / await functionalities, and 
@@ -13819,6 +13987,10 @@ emailField.addEventListener('input', () => {
   }
 });
 </pre>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript snippets showcase various event handling techniques, including keyboard 
 events, focus and blur events, event delegation, bubbling, window and document events, and 
@@ -13894,6 +14066,10 @@ fullScreenButton.addEventListener('click', () => {
   }
 });
 </pre>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript snippets showcase browser manipulation using the Browser Object Model 
 (BOM), exploring navigator and location objects, screen attributes, opening / closing 
@@ -22072,6 +22248,7 @@ console.log(gcdIterative(48, 18)); // Output: 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The cylinderVolume function calculates the volume of a cylinder using the formula: π 
 &ast; radius^2 &ast; height.</p>
+
 <pre>
 const cylinderVolume = (radius, height) => Math.PI &ast; radius &ast;&ast; 2 &ast; height;
 
@@ -22082,6 +22259,7 @@ console.log(cylinderVolume(5, 10)); // Output: 785.3981633974483
 <h2 id="js-157">157. Check if a Number is a Smith Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isSmithNumber function checks whether a given number is a Smith number.</p>
+
 <pre>
 const sumOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((sum, digit) => 
   sum + Number(digit), 0);
@@ -22110,6 +22288,7 @@ console.log(isSmithNumber(123)); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The decimalToOctal function converts a decimal (base 10) number to its octal (base 8) 
 representation using the .toString() method with the base argument set to 8.</p>
+
 <pre>
 const decimalToOctal = (num) => num.toString(8);
 
@@ -22121,6 +22300,7 @@ console.log(decimalToOctal(27)); // Output: "33"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The lcm function calculates the least common multiple (LCM) of two given numbers 
 using the formula: (num1 &ast; num2) / gcd(num1, num2).</p>
+
 <pre>
 const lcm = (num1, num2) => (num1 &ast; num2) / gcd(num1, num2);
 
@@ -22132,6 +22312,7 @@ console.log(lcm(24, 36)); // Output: 72
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isValidPhoneNumber function checks whether a given string is a valid phone number 
 in the North American format "XXX-XXX-XXXX", where X represents a digit.</p>
+
 <pre>
 const isValidPhoneNumber = (phone) => /^\d{3}-\d{3}-\d{4}$/.test(phone);
 
@@ -22144,6 +22325,7 @@ console.log(isValidPhoneNumber("123-4567")); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The sumOfNaturals function calculates the sum of the first N natural
 numbers using the formula: (n &ast; (n + 1)) / 2.</p>
+
 <pre>
 const sumOfNaturals = (n) => (n &ast; (n + 1)) / 2;
 
@@ -22156,6 +22338,7 @@ console.log(sumOfNaturals(10)); // Output: 55
 <p>The isPerfectNumber function checks whether a given number is a perfect number. A 
 perfect number is a positive integer that is equal to the sum of its proper divisors 
 (excluding itself).</p>
+
 <pre>
 const isPerfectNumber = (num) => {
   let sum = 0;
@@ -22176,6 +22359,7 @@ console.log(isPerfectNumber(12)); // Output: false
 and the number itself. It iterates through the numbers from 2 up to one less
 than the given number, checking if the given number is divisible by each of
 those numbers.</p>
+
 <pre>
 const factors = (num) => {
   const result = &lbrack;&rbrack;;
@@ -22193,6 +22377,7 @@ console.log(factors(12)); // Output: &lbrack;2, 3, 4, 6&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The triangleArea function calculates the area of a triangle using the formula: 
 0.5 &ast; base &ast; height.</p>
+
 <pre>
 const triangleArea = (base, height) => 0.5 &ast; base &ast; height;
 
@@ -22205,6 +22390,7 @@ console.log(triangleArea(5, 10)); // Output: 25
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isValidSSN function checks whether a given string is a valid Social Security 
 Number (SSN) in the format "XXX-XX-XXXX", where X represents a digit.</p>
+
 <pre>
 const isValidSSN = (ssn) => /^\d{3}-\d{2}-\d{4}$/.test(ssn);
 
@@ -22218,6 +22404,7 @@ console.log(isValidSSN("123-45-678"));  // Output: false
 <p>The randomArrayInRange function generates an array of random numbers within a 
 specified range and of a specified length. It uses the Array.from method with a mapping 
 function to create the desired array.</p>
+
 <pre>
 const randomArrayInRange = (min, max, length) => 
   Array.from({ length }, () => 
@@ -22232,6 +22419,7 @@ console.log(randomArrayInRange(1, 100, 5)); // Output: &lbrack;34, 87, 19, 56, 7
 <p>The isMagicNumber function checks whether a given number is a magic number. A magic 
 number is a number that eventually reaches the value 1 when the sum of its digits is 
 repeatedly calculated.</p>
+
 <pre>
 const isMagicNumber = (num) => {
   let sum = 0;
@@ -22250,6 +22438,7 @@ console.log(isMagicNumber(123)); // Output: false
 <h2 id="js-168">168. Check if a String is a Valid IPv4 Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isValidIPv4 function checks whether a given string represents a valid IPv4 address.</p>
+
 <pre>
 const isValidIPv4 = (ip) => /^(?:(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)\.)
 {3}(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)$/.test(ip);
@@ -22264,6 +22453,7 @@ console.log(isValidIPv4("256.0.0.1"));   // Output: false
 <p>The decimalToHex function converts a decimal (base 10) number to its equivalent 
 hexadecimal (base 16) representation using the built-in toString method with a radix of 
 16.</p>
+
 <pre>
 const decimalToHex = (num) => num.toString(16);
 
@@ -22275,6 +22465,7 @@ console.log(decimalToHex(255)); // Output: "ff"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isValidDate function checks whether a given string is a valid date in the format 
 "YYYY-MM-DD".</p>
+
 <pre>
 const isValidDate = (date) => /^\d{4}-\d{2}-\d{2}$/.test(date);
 
@@ -22289,6 +22480,7 @@ console.log(isValidDate("02-08-2023")); // Output: false
 the Euclidean algorithm. The lcmArray function then calculates the least
 common multiple (LCM) of an array of numbers by reducing the array and
 applying the formula (lcm &ast; num) / gcd(lcm, num).</p>
+
 <pre>
 const lcmArray = (arr) => arr.reduce((lcm, num) => (lcm &ast; num) / gcd(lcm, num));
 
@@ -22302,6 +22494,7 @@ console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;)); // Output: 60
 function uses a regular expression to validate a password. The regular expression 
 requires that the password contains at least one letter (&lbrack;A-Za-z&rbrack;), 
 one digit (\d), and one special character (&lbrack;@$!%&ast;?&&rbrack;).</p>
+
 <pre>
 const isValidPassword = (password) => /^(?=.&ast;&lbrack;A-Za-z&rbrack;)(?=.&ast;\d)(?=.&ast;
   &lbrack;@$!%&ast;?&&rbrack;)&lbrack;A-Za-z\d@$!%&ast;?&&rbrack;{8,}$/.test(password);
@@ -22314,6 +22507,7 @@ console.log(isValidPassword("password123")); // Output: false
 <h2 id="js-173">173. Find the Nth Fibonacci Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The fibonacci function calculates the Nth Fibonacci number using an iterative approach.</p>
+
 <pre>
 const fibonacci = (n) => {
   if (n === 1) return 0;
@@ -22336,6 +22530,7 @@ console.log(fibonacci(7)); // Output: 8
 <h2 id="js-174">174. Check if a Number is a Deficient Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isDeficientNumber function determines whether a given number is a deficient number.</p>
+
 <pre>
 const isDeficientNumber = (num) => num > sumOfProperDivisors(num);
 
@@ -22349,6 +22544,7 @@ console.log(isDeficientNumber(28)); // Output: false
 <p>The distanceBetweenPoints function calculates the Euclidean distance between two 
 points in a 2D plane. Given the coordinates of two points (x1, y1) and (x2, y2), it 
 uses the formula sqrt((x2 - x1)^2 + (y2 - y1)^2) to compute the distance between them.</p>
+
 <pre>
 const distanceBetweenPoints = (x1, y1, x2, y2) => 
   Math.sqrt((x2 - x1) &ast;&ast; 2 + (y2 - y1) &ast;&ast; 2);
@@ -22360,6 +22556,7 @@ console.log(distanceBetweenPoints(0, 0, 3, 4));  // Output: 5
 <h2 id="js-176">176. Check if a Number is an Abundant Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isAbundantNumber function determines whether a given number is an abundant number.</p>
+
 <pre>
 const isAbundantNumber = (num) => num < sumOfProperDivisors(num);
 
@@ -22373,6 +22570,7 @@ console.log(isAbundantNumber(28)); // Output: false
 <p>The cubeVolume function calculates the volume of a cube based on its side length. The 
 formula for the volume of a cube is side^3, where side is the length of one side of the 
 cube.</p>
+
 <pre>
 const cubeVolume = (side) => side &ast;&ast; 3;
 
@@ -22383,6 +22581,7 @@ console.log(cubeVolume(5)); // Output: 125
 <h2 id="js-178">178. Check if a String is a Valid Credit Card Number (Visa,MasterCard,Discover,American Express)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isValidCreditCard function uses a regular expression to validate a credit card number.</p>
+
 <pre>
 const isValidCreditCard = (card) => /^(?:4&lbrack;0-9&rbrack;{12}(?:&lbrack;0-9&rbrack;{3})?|5&lbrack;1-5&rbrack;&lbrack;0-
 9&rbrack;{14}|6(?:011|5&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;)&lbrack;0-9&rbrack;{12}|3&lbrack;47&rbrack;&lbrack;0-9&rbrack;{13})$/.test(card);
@@ -22397,6 +22596,7 @@ console.log(isValidCreditCard("1234-5678-9012-3456")); // Output: false
 <p>The trianglePerimeter function calculates the perimeter of a triangle given its three 
 side lengths. It simply adds up the lengths of all three sides and returns the result as 
 the perimeter of the triangle.</p>
+
 <pre>
 const trianglePerimeter = (side1, side2, side3) => side1 + side2 + side3;
 
@@ -22407,6 +22607,7 @@ console.log(trianglePerimeter(5, 10, 7)); // Output: 22
 <h2 id="js-180">180. Check if a Number is a Vampire Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isVampireNumber function checks if a given number is a vampire number.</p>
+
 <pre>
 const isVampireNumber = (num) => {
   const numStr = String(num);
@@ -22434,6 +22635,7 @@ console.log(isVampireNumber(1250)); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>sumOfDigitsRaisedToPower calculates the sum of digits raised to the power of their 
 respective positions.</p>
+
 <pre>
 const sumOfDigitsRaisedToPower = (num) => {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
@@ -22448,6 +22650,7 @@ console.log(sumOfDigitsRaisedToPower(12345)); // Output: 115
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isDuckNumber function checks whether a given number is a duck number. A duck 
 number is a number that contains the digit "0" but does not start with "0".</p>
+
 <pre>
 const isDuckNumber = (num) => 
   String(num).includes('0') &&
@@ -22461,6 +22664,7 @@ console.log(isDuckNumber(12345)); // Output: false
 <h2 id="js-183">183. Generate a Random Password</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The randomPassword function generates a random password of the specified length.</p>
+
 <pre>
 const randomPassword = (length) => Array.from({ length }, () =>
   Math.random().toString(36).charAt(2)).join('');
@@ -22473,6 +22677,7 @@ console.log(randomPassword(8)); // Output: "3klS0p9x"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The trapezoidArea function calculates the area of a trapezoid using the formula: 
 0.5 &ast; (base1 + base2) &ast; height.</p>
+
 <pre>
 const trapezoidArea = (base1, base2, height) => 
   0.5 &ast; (base1 + base2) &ast; height;
@@ -22484,6 +22689,7 @@ console.log(trapezoidArea(4, 8, 6)); // Output: 36
 <h2 id="js-185">185. Check if a Number is a Kaprekar Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isKaprekarNumber function checks if a given number is a Kaprekar number.</p>
+
 <pre>
 const isKaprekarNumber = (num) => {
   const square = num &ast;&ast; 2;
@@ -22506,6 +22712,7 @@ console.log(isKaprekarNumber(45));  // Output: false
 radius and height. It applies the formula for the volume of a cone: <br>
 V = (1/3) &ast; π &ast; r² &ast; h, <br>
 where r is the radius of the base and h is the height of the cone.</p>
+
 <pre>
 const coneVolume = (radius, height) => (1 / 3) &ast; Math.PI &ast; radius &ast;&ast; 2;
 
@@ -22516,6 +22723,7 @@ console.log(coneVolume(5, 10)); // Output: 261.79938779914943
 <h2 id="js-187">187. Check if a String is a Valid US Phone Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isValidUSPhoneNumber function uses a regular expression to validate US phone numbers.</p>
+
 <pre>
 const isValidUSPhoneNumber = (phone) => /^(?:(?:\+1\s?)?(?:\(?\d{3}\)?
 &lbrack;\s.-&rbrack;?)?\d{3}&lbrack;\s.-&rbrack;?\d{4})$/.test(phone);
@@ -22530,6 +22738,7 @@ console.log(isValidUSPhoneNumber("1-800-ABC-DEFG"));    // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The sumOfDigitsRaisedToPowerUpToThousand function calculates the sum of numbers where 
 each digit raised to the power of its respective position is equal to the number itself.</p>
+
 <pre>
 const sumOfDigitsRaisedToPowerUpToThousand = () => {
   let sum = 0;
@@ -22548,6 +22757,7 @@ console.log(sumOfDigitsRaisedToPowerUpToThousand()); // Output: 443839
 <h2 id="js-189">189. Check if a Number is a Carol Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isCarolNumber function checks if a given number is a Carol number.</p>
+
 <pre>
 const isCarolNumber = (num) => {
   const carolPrime = (2 &ast;&ast; num) - 1;
@@ -22564,6 +22774,7 @@ console.log(isCarolNumber(6));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isCatalanNumber function checks if a given number is a Catalan number. It first 
 ensures that the input number is a non-negative integer.</p>
+
 <pre>
 const isCatalanNumber = (num) => num >= 0 && Number.isInteger(num)
   && num === ((factorial(2 &ast; num)) / (factorial(num + 1) &ast; factorial(num)));
@@ -22577,6 +22788,7 @@ console.log(isCatalanNumber(10)); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The cuboidVolume function calculates the volume of a cuboid given its length, width, 
 and height.</p>
+
 <pre>
 const cuboidVolume = (length, width, height) => length &ast; width &ast; height;
 
@@ -22587,6 +22799,7 @@ console.log(cuboidVolume(5, 10, 8)); // Output: 400
 <h2 id="js-192">192. Check if a Number is a Dudeney Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The isDudeneyNumber function checks if a number is a Dudeney number.</p>
+
 <pre>
 const isDudeneyNumber = (num) => num === sumOfDigitsCube(num);
 
@@ -22598,6 +22811,7 @@ console.log(isDudeneyNumber(64));  // Output: false
 <h2 id="js-193">193. Generate a Random Color (Hexadecimal Format)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random color in hexadecimal format (#RRGGBB).</p>
+
 <pre>
 const randomColorHex = () => `#${Math.floor(Math.random() &ast;
 16777215).toString(16)}`;
@@ -22608,6 +22822,7 @@ console.log(randomColorHex());
 <h2 id="js-194">194. Calculate the Area of a Circle Sector</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a circle sector given the radius and the central angle in degrees.</p>
+
 <pre>
 const circleSectorArea = (radius, angle) => (angle / 360) &ast; Math.PI &ast; radius &ast;&ast; 2;
 
@@ -22619,6 +22834,7 @@ console.log(circleSectorArea(5, 90));
 <h2 id="js-195">195. Calculate the Area of a Regular Polygon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular polygon given the side length and the number of sides.</p>
+
 <pre>
 const regularPolygonArea = (sideLength, numOfSides) => 
   (numOfSides &ast; sideLength &ast;&ast; 2) / (4 &ast; Math.tan(Math.PI / numOfSides));
@@ -22631,6 +22847,7 @@ console.log(regularPolygonArea(5, 6));
 <h2 id="js-196">196. Remove Duplicates from Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Remove duplicates from an array while preserving the order of the elements.</p>
+
 <pre>
 const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
 console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Output: &lbrack; 1, 2, 3,
@@ -22833,7 +23050,8 @@ console.log(isPowerfulNumber(36)); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-209">209. Find the Product of Digits of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Find the product of the digits of a given number.<?p>
+<p>Find the product of the digits of a given number.</p>
+
 <pre>
 const productOfDigits = (num) => 
   &lbrack;...String(num)&rbrack;.reduce((product, digit) => 
@@ -22846,6 +23064,7 @@ console.log(productOfDigits(12345)); // Output: 120
 <h2 id="js-210">210. Check if a Number is a Practical Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a practical number.</p>
+
 <pre>
 const isPracticalNumber = (num) => {
   const factors = primeFactors(num);
@@ -22865,7 +23084,8 @@ console.log(isPracticalNumber(14)); // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-211">211. Calculate the Sum of Cubes of First n Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Calculate the sum of the cubes of the first n natural numbers.
+<p>Calculate the sum of the cubes of the first n natural numbers.</p>
+
 <pre>
 const sumOfCubes = (n) => Math.pow((n &ast; (n + 1)) / 2, 2);
 
@@ -22876,6 +23096,7 @@ console.log(sumOfCubes(5)); // Output: 225
 <h2 id="js-212">212. Check if a Number is a Strange Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a strange number.</p>
+
 <pre>
 const isStrangeNumber = (num) => {
   const factors = primeFactors(num);
@@ -22892,6 +23113,7 @@ console.log(isStrangeNumber(20)); // Output: false
 <h2 id="js-213">213. Check if a Number is a Tau Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Tau number.</p>
+
 <pre>
 const isTauNumber = (num) => {
   const factors = primeFactors(num);
@@ -22908,6 +23130,7 @@ console.log(isTauNumber(25)); // Output: false
 <h2 id="js-214">214. Generate a Random Alphanumeric String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generate a random alphanumeric string of a given length.</p>
+
 <pre>
 const randomAlphanumericString = (length) => {
   const characters =
@@ -22927,6 +23150,7 @@ console.log(randomAlphanumericString(8)); // Output: "Yw83XmLb"
 <h2 id="js-215">215. Calculate the Area of a Regular Hexagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular hexagon using its side length.</p>
+
 <pre>
 const regularHexagonArea = (sideLength) => 
   (3 &ast; Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 2;
@@ -22938,6 +23162,7 @@ console.log(regularHexagonArea(5)); // Output: 64.9519052838329
 <h2 id="js-216">216. Calculate the Sum of Divisors of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of divisors of a given number.</p>
+
 <pre>
 const sumOfDivisors = (num) => sumOfArray(divisors(num));
 
@@ -22949,6 +23174,7 @@ console.log(sumOfDivisors(12)); // Output: 28
 <h2 id="js-217">217. Check if a Number is a Zeisel Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Zeisel number.</p>
+
 <pre>
 const isZeiselNumber = (num) => {
   const factors = primeFactors(num);
@@ -22963,6 +23189,7 @@ console.log(isZeiselNumber(10));   // Output: false
 <h2 id="js-218">218. Check if a Number is a Reversible Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a reversible number.</p>
+
 <pre>
 const isReversibleNumber = (num) => {
   const reversedNum = Number(String(num).split('').reverse().join(''));
@@ -22978,6 +23205,7 @@ console.log(isReversibleNumber(10)); // Output: false
 <h2 id="js-219">219. Calculate the Circumference of a Circle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the circumference of a circle using its radius.</p>
+
 <pre>
 const circleCircumference = (radius) => 2 &ast; Math.PI &ast; radius;
 
@@ -22988,6 +23216,7 @@ console.log(circleCircumference(5)); // Output: 31.41592653589793
 <h2 id="js-220">220. Find the Shortest Word in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the shortest word in a given string.</p>
+
 <pre>
 const shortestWord = (str) => str.split(' ').reduce((shortest, word) =>
 (word.length < shortest.length ? word : shortest), '');
@@ -22999,6 +23228,7 @@ console.log(shortestWord("This is a test sentence"));  // Output: "a"
 <h2 id="js-221">221. Find the Longest Word Length in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the length of the longest word in a given string.</p>
+
 <pre>
 const longestWordLength = (str) => 
   Math.max(...str.split(' ').map(word => word.length));
@@ -23010,6 +23240,7 @@ console.log(longestWordLength("This is a test sentence")); // Output: 8
 <h2 id="js-222">222. Find the Sum of Proper Divisors of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the sum of the proper divisors of a given number.</p>
+
 <pre>
 const sumOfProperDivisors = (num) => sumOfArray(divisors(num)) - num;
 
@@ -23021,6 +23252,7 @@ console.log(sumOfProperDivisors(12)); // Output: 16
 <h2 id="js-223">223. Check if a Number is a Unitary Perfect Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a unitary perfect number.</p>
+
 <pre>
 const isUnitaryPerfectNumber = (num) => 
   num === sumOfUnitaryDivisors(num);
@@ -23034,6 +23266,7 @@ console.log(isUnitaryPerfectNumber(28));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the perimeter of a regular polygon using its side length and the
 number of sides.</p>
+
 <pre>
 const regularPolygonPerimeter = (sideLength, numSides) => 
   sideLength &ast; numSides;
@@ -23045,6 +23278,7 @@ console.log(regularPolygonPerimeter(5, 6)); // Output: 30
 <h2 id="js-225">225. Calculate the Area of an Equilateral Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of an equilateral triangle using its side length.</p>
+
 <pre>
 const equilateralTriangleArea = (sideLength) => 
   (Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 4;
@@ -23056,6 +23290,7 @@ console.log(equilateralTriangleArea(5)); // Output: 10.825317547305486
 <h2 id="js-226">226. Check if a Number is a Harshad Smith Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is both a Harshad number and a Smith number.</p>
+
 <pre>
 const isHarshadSmithNumber = (num) => isHarshadNumber(num) &&
 isSmithNumber(num);
@@ -23067,6 +23302,7 @@ console.log(isHarshadSmithNumber(10)); // Output: false
 <h2 id="js-227">227. Check if a Number is a Perfect Power</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a perfect power.</p>
+
 <pre>
 const isPerfectPower = (num) => {
   for (let i = 2; i &ast; i <= num; i++) {
@@ -23091,6 +23327,7 @@ console.log(isPerfectPower(25)); // Output: false
 <h2 id="js-228">228. Calculate the Sum of Digits Raised to Their Own Power</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the sum of digits raised to their own power for a given number and power.</p>
+
 <pre>
 const sumOfDigitsToPower = (num, power) =>
   sumOfDigitsRaisedToPower(num, power);
@@ -23103,6 +23340,7 @@ console.log(sumOfDigitsToPower(4150, 5)); // Output: 4150
 <h2 id="js-229">229. Check if a Number is a Dudeney Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Dudeney number.</p>
+
 <pre>
 const isDudeneyNumber = (num) => Math.cbrt(num) === sumOfDigits(num);
 
@@ -23114,6 +23352,7 @@ console.log(isDudeneyNumber(27));  // Output: false
 <h2 id="js-230">230. Calculate the Area of a Regular Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular pentagon using its side length.</p>
+
 <pre>
 const regularPentagonArea = (sideLength) => (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2
 &ast; Math.sqrt(5))) &ast; sideLength &ast;&ast; 2;
@@ -23125,6 +23364,7 @@ console.log(regularPentagonArea(5)); // Output: 43.01193501472417
 <h2 id="js-231">231. Calculate the Volume of a Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the volume of a pyramid using its base area and height.</p>
+
 <pre>
 const pyramidVolume = (baseArea, height) => (1 / 3) &ast; baseArea &ast; height;
 
@@ -23135,6 +23375,7 @@ console.log(pyramidVolume(25, 10)); // Output: 83.33333333333333
 <h2 id="js-232">232. Check if a Number is a Wedderburn-Etherington Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a Wedderburn-Etherington number.</p>
+
 <pre>
 const isWedderburnEtheringtonNumber = (num) => {
   const primes = primeFactors(num);
@@ -23151,6 +23392,7 @@ console.log(isWedderburnEtheringtonNumber(12)); // Output: false
 <h2 id="js-233">233. Calculate the Surface Area of a Cube</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the surface area of a cube using its side length.</p>
+
 <pre>
 const cubeSurfaceArea = (sideLength) => 6 &ast; sideLength &ast;&ast; 2;
 
@@ -23161,6 +23403,7 @@ console.log(cubeSurfaceArea(5)); // Output: 150
 <h2 id="js-234">234. Check if a Number is a Pluperfect Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given number is a pluperfect number.</p>
+
 <pre>
 const isPluperfectNumber = (num) => num ===
 sumOfDivisors(sumOfDivisors(num)) - num;
@@ -23173,6 +23416,7 @@ console.log(isPluperfectNumber(20)); // Output: false
 <h2 id="js-235">235. Calculate the Area of a Regular Octagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a regular octagon using its side length.</p>
+
 <pre>
 const regularOctagonArea = (sideLength) => 2 &ast; (1 + Math.sqrt(2)) &ast; sideLength &ast;&ast; 2;
 
@@ -23578,6 +23822,7 @@ console.log(sectorArea(5, 60)); // Output: 5.235987755982989
 </pre>
 
 <p>CSS:</p>
+
 <pre>
 /* CSS */
 body {
@@ -23666,6 +23911,7 @@ canvas#confetti {
 </pre>
 
 <p>JS:</p>
+
 <pre>
 /&ast; JavaScript - confetti &ast;/
 const button = document.querySelector('#button');
@@ -23681,6 +23927,7 @@ button.addEventListener('click', () => {
 </pre>
 
 <!-- goto ch1 --->
+
 <pre>
 &lt;h2 id="ch1"&gt;Chapter 1: Getting started with JavaScript&lt;/h2&gt;
 &lt;script&gt;
@@ -23730,8 +23977,13 @@ button.addEventListener('click', () => {
 </pre>
 <!-- end of goto table of contents -->
 
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+
 <footer>
 <h7>/* the end */</h7>
+
 <p>In every line of code, they have woven a story of innovation and creativity.
 This website is your starting line for racing into a vast new world of JavaScript.
 More like a pentathlon of races. Each being a little easier then the prior.
