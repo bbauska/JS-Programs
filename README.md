@@ -1516,10 +1516,10 @@ greetPerson('Maria'); // Prints: "Hello, Maria! My name is John"
 
 <p><b>In summary:</b></p>
 <ul>
-  <li>this: Refers to the current execution context.</li>
-  <li>call: Invokes a function with a specific value for this and individually passed arguments.</li>
-  <li>apply: Similar to call, but arguments are passed as an array.</li>
-  <li>bind: Creates a new function with this and arguments fixed.</li>
+  <li><b>this:</b> Refers to the current execution context.</li>
+  <li><b>call:</b> Invokes a function with a specific value for this and individually passed arguments.</li>
+  <li><b>apply:</b> Similar to call, but arguments are passed as an array.</li>
+  <li><b>bind:</b> Creates a new function with this and arguments fixed.</li>
 </ul>
 
 <p>These methods ore useful for controlling the context of this in different
@@ -1673,7 +1673,7 @@ overwritten. It's usefulfor combining objects or cloning objects.</p>
 <p><b>Example of Objectassign:</b></p>
 
 <pre>
-const target =
+const target = {};
 const sourcel = { name: "John", age: 30 };
 const source2 = { city: "New York" };
 
