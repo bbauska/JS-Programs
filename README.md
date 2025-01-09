@@ -1,6 +1,6 @@
 <!-- readme.md - 637 = 59 + 94 examples & 484 (218+266) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1>687 JS Examples:<br>
+<h1 id="#toc">687 JS Examples:<br>
   <a href="#sk0">50 JS Concepts Every Developer Should Know<br>
   <a href="#el0">59 Eloquent JS Examples</a>,<br>
   <a href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,<br>
