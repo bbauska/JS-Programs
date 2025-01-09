@@ -1,0 +1,152 @@
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**/
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ style.css in js-programs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**/
+/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**/
+img.displayed {
+  display: block;
+  margin: 0 auto;
+}
+.border {
+  border-width: 1px;
+  border-color: #778899;  /* dark grayish blue */
+  border-style: solid; }
+
+ol,ul li { 
+  line-height: 130%;
+}
+
+p { 
+  font-size: 15px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif;
+  text-align: left; 
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none; 
+}
+a[href]:hover {
+  color: #000000;
+  background-color: #ffff00;
+  text-decoration: underline; 
+}
+
+div {
+  float: left; 
+}
+
+h2,h3,h4,h5,h6 {
+  margin-left: 10px;
+}
+h1 { 
+  font-size: 25px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif, Consolas;
+  text-align: center;
+}
+h2 { 
+  font-size: 18px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif, Consolas; 
+  text-align: left;
+  margin-left: 10px;
+}
+h3 { 
+  font-size: 17px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif, Consolas; 
+  text-align: left;
+  margin-left: 10px;
+}
+h4 { 
+  font-size: 13px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif, Consolas; 
+  text-align: left;
+  margin-left: 10px;
+}
+h5 { 
+  font-size: 12px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif, Consolas; 
+  text-align: left;
+  margin-left: 10px;
+}
+h6 { 
+  font-size: 10px;
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif;
+  text-align: left;
+  margin-left: 10px;
+}
+
+background: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%)
+
+body {
+  font-family: Bahnschrift, Inter, Helvetic, sans-serif;
+  font-size: 1.2rem;
+  background-color: #eee;  /* very light gray */
+  color: #000000;  /* black */
+  text-align: left;
+  margin-left: 10px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 11px;
+  border: none;
+  outline: none;
+  background-color: #8b0000;  /* dark red */
+  color: #fdfeff;  /* very pale (mostly white) blue */
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 1px;
+}
+#myBtn:hover {
+  background-color: #ffc0cb;  /* light pink */
+}
+
+p.highlight {
+  background-color: yellow;
+  color: #333;
+}
+
+#datetime {
+  font-size: 1.5rem;
+  color: #333333;
+  white-space: pre;
+}
+
+.cd__main{
+background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab) !important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.clockdate-wrapper {
+  background: #005C97;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding:25px;
+  max-width:350px;
+  width:100%;
+  text-align:center;
+  border-radius:5px;
+  margin:0 auto;
+}
+#clock{
+  font-family: sans-serif;
+  font-size:60px;
+  text-shadow:0px 0px 1px #fff;
+  color:#fff;
+}
+#clock span {
+  color:#888;
+  text-shadow:0px 0px 1px #333;
+  font-size:50px;
+  position:relative;
+  top:-5px;
+  left:10px;
+}
+#date {
+  letter-spacing:3px;
+  font-size:14px;
+  font-family:arial,sans-serif;
+  color:#fff;
+}
