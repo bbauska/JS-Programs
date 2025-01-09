@@ -6793,11 +6793,11 @@ Content-Length: 92
 "summary": "Standing still on a unicycle"}
 </pre>
 
-Such URLs also support GET requests to retrieve the JSON representation of
+<p>Such URLs also support GET requests to retrieve the JSON representation of
 a talk and DELETE requests to delete a talk.
 Adding a comment to a talk is done with a POST request to a URL like /
 talks/Unituning/comments, with a JSON body that has author and message
-properties.
+properties.</p>
 
 <pre>
 POST /talks/Unituning/comments HTTP/1.1
@@ -6807,29 +6807,29 @@ Content-Length: 72
 "message": "Will you talk about raising a cycle?"}
 </pre>
 
-To support long polling, GET requests to /talks may include extra headers
+<p>To support long polling, GET requests to /talks may include extra headers
 that inform the server to delay the response if no new information is available.
 We’ll use a pair of headers normally intended to manage caching: ETag and
-If-None-Match.
-Servers may include an ETag (“entity tag”) header in a response. Its value is
+If-None-Match.</p>
+<p>Servers may include an ETag (“entity tag”) header in a response. Its value is
 a string that identifies the current version of the resource. Clients, when they
 later request that resource again, may make a conditional request by including
 an If-None-Match header whose value holds that same string. If the resource
 hasn’t changed, the server will respond with status code 304, which means “not
 modified”, telling the client that its cached version is still current. When the
-tag does not match, the server responds as normal.
-We need something like this, where the client can tell the server which version
+tag does not match, the server responds as normal.</p>
+<p>We need something like this, where the client can tell the server which version
 of the list of talks it has, and the server responds only when that list has
-changed.
-But instead of immediately returning a 304 response, the server
+changed.</p>
+<p>But instead of immediately returning a 304 response, the server
 should stall the response and return only when something new is available or
 a given amount of time has elapsed. To distinguish long polling requests from
 normal conditional requests, we give them another header, Prefer: wait=90,
 which tells the server that the client is willing to wait up to 90 seconds for the
-response.
-The server will keep a version number that it updates every time the talks
+response.</p>
+<p>The server will keep a version number that it updates every time the talks
 change and will use that as the ETag value. Clients can make requests like this
-to be notified when the talks change:
+to be notified when the talks change:</p>
 
 <pre>
 GET /talks HTTP/1.1
@@ -6843,10 +6843,10 @@ Content-Length: 295
 [....]
 </pre>
 
-The protocol described here does not do any access control. Everybody can
+<p>The protocol described here does not do any access control. Everybody can
 comment, modify talks, and even delete them. (Since the Internet is full of
 hooligans, putting such a system online without further protection probably
-wouldn’t end well.)
+wouldn’t end well.)</p>
 
 <h2>The server</h2>
 
@@ -6855,70 +6855,73 @@ section runs on Node.js.</p>
 
 <h2>Routing</h2>
 
-Our server will use createServer to start an HTTP server. In the function
+<p>Our server will use createServer to start an HTTP server. In the function
 that handles a new request, we must distinguish between the various kinds of
 requests (as determined by the method and the path) that we support. This
-can be done with a long chain of if statements, but there is a nicer way.
-A router is a component that helps dispatch a request to the function that
+can be done with a long chain of if statements, but there is a nicer way.</p>
+<p>A router is a component that helps dispatch a request to the function that
 can handle it. You can tell the router, for example, that PUT requests with
 a path that matches the regular expression /^\/talks\/([^\/]+)$/ (/talks/
 followed by a talk title) can be handled by a given function. In addition, it
 can help extract the meaningful parts of the path (in this case the talk title),
 wrapped in parentheses in the regular expression, and pass them to the handler
-function.
-There are a number of good router packages on NPM, but here we’ll write
+function.</p>
+<p>There are a number of good router packages on NPM, but here we’ll write
 one ourselves to illustrate the principle.
-This is router.js, which we will later require from our server module:
+This is router.js, which we will later require from our server module:</p>
 
 <pre>
 const {parse} = require("url");
 module.exports = class Router {
 constructor() {
-this.routes = [];
+  this.routes = [];
 }
+
 add(method, url, handler) {
-this.routes.push({method, url, handler});
+  this.routes.push({method, url, handler});
 }
+
 resolve(context, request) {
-let path = parse(request.url).pathname;
-for (let {method, url, handler} of this.routes) {
-let match = url.exec(path);
-if (!match || request.method != method) continue;
-let urlParts = match.slice(1).map(decodeURIComponent);
-return handler(context, ...urlParts, request);
-}
-return null;
+  let path = parse(request.url).pathname;
+  for (let {method, url, handler} of this.routes) {
+    let match = url.exec(path);
+    if (!match || request.method != method) continue;
+    let urlParts = match.slice(1).map(decodeURIComponent);
+    return handler(context, ...urlParts, request);
+  }
+  return null;
 }
 };
 </pre>
 
-The module exports the Router class. A router object allows new handlers
+<p>The module exports the Router class. A router object allows new handlers
 to be registered with the add method and can resolve requests with its resolve
-method.
-The latter will return a response when a handler was found, and null other-
+method.</p>
+<p>The latter will return a response when a handler was found, and null other-
 wise. It tries the routes one at a time (in the order in which they were defined)
-until a matching one is found.
-The handler functions are called with the context value (which will be the
+until a matching one is found.</p>
+<p>The handler functions are called with the context value (which will be the
 server instance in our case), match strings for any groups they defined in their
 regular expression, and the request object. The strings have to be URL-decoded
-since the raw URL may contain %20-style codes.
+since the raw URL may contain %20-style codes.</p>
 
 <h2>Serving files</h2>
 
-When a request matches none of the request types defined in our router, the
+<p>When a request matches none of the request types defined in our router, the
 server must interpret it as a request for a file in the public directory. It would
 be possible to use the file server defined in Chapter 20 to serve such files, but
 we neither need nor want to support PUT and DELETE requests on files, and we
 would like to have advanced features such as support for caching. So let’s use
-a solid, well-tested static file server from NPM instead.
-I opted for ecstatic. This isn’t the only such server on NPM, but it works
+a solid, well-tested static file server from NPM instead.</p>
+
+<p>I opted for ecstatic. This isn’t the only such server on NPM, but it works
 well and fits our purposes. The ecstatic package exports a function that can
 be called with a configuration object to produce a request handler function.
 We use the root option to tell the server where it should look for files. The
 handler function accepts request and response parameters and can be passed
 directly to createServer to create a server that serves only files. We want to
 first check for requests that we should handle specially, though, so we wrap it
-in another function.
+in another function.</p>
 
 <pre>
 const {createServer} = require("http");
@@ -6958,20 +6961,19 @@ this.server.close();
 }
 </pre>
 
-This uses a similar convention as the file server from the previous chapter
+<p>This uses a similar convention as the file server from the previous chapter
 for responses—handlers return promises that resolve to objects describing the
-response. It wraps the server in an object that also holds its state.
+response. It wraps the server in an object that also holds its state.</p>
 
 <h2>Talks as resources</h2>
 
-The talks that have been proposed are stored in the talks property of the
-server, an object whose property names are the talk titles.
-These will be
-exposed as HTTP resources under /talks/[title], so we need to add handlers
+<p>The talks that have been proposed are stored in the talks property of the
+server, an object whose property names are the talk titles.</p>
+<p>These will be exposed as HTTP resources under /talks/[title], so we need to add handlers
 to our router that implement the various methods that clients can use to work
-with them.
-The handler for requests that GET a single talk must look up the talk and
-respond either with the talk’s JSON data or with a 404 error response.
+with them.</p>
+<p>The handler for requests that GET a single talk must look up the talk and
+respond either with the talk’s JSON data or with a 404 error response.</p>
 
 <pre>
 const talkPath = /^\/talks\/([^\/]+)$/;
@@ -7006,14 +7008,14 @@ stream.on("end", () => resolve(data));
 }
 </pre>
 
-One handler that needs to read request bodies is the PUT handler, which
+<p>One handler that needs to read request bodies is the PUT handler, which
 is used to create new talks. It has to check whether the data it was given
 has presenter and summary properties, which are strings. Any data coming
 from outside the system might be nonsense, and we don’t want to corrupt our
-internal data model or crash when bad requests come in.
-If the data looks valid, the handler stores an object that represents the new
+internal data model or crash when bad requests come in.</p>
+<p>If the data looks valid, the handler stores an object that represents the new
 talk in the talks object, possibly overwriting an existing talk with this title,
-and again calls updated.
+and again calls updated.</p>
 
 <pre>
 router.add("PUT", talkPath,
@@ -7036,9 +7038,9 @@ return {status: 204};
 });
 </pre>
 
-Adding a comment to a talk works similarly. We use readStream to get the
+<p>Adding a comment to a talk works similarly. We use readStream to get the
 content of the request, validate the resulting data, and store it as a comment
-when it looks valid.
+when it looks valid.</p>
 
 <pre>
 router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
@@ -7061,16 +7063,16 @@ return {status: 404, body: `No talk '${title}' found`};
 });
 </pre>
 
-Trying to add a comment to a nonexistent talk returns a 404 error.
+<p>Trying to add a comment to a nonexistent talk returns a 404 error.</p>
 
 <h2>Long polling support</h2>
 
-The most interesting aspect of the server is the part that handles long polling.
+<p>The most interesting aspect of the server is the part that handles long polling.
 When a GET request comes in for /talks, it may be either a regular request or
 a long polling request.
 There will be multiple places in which we have to send an array of talks to
 the client, so we first define a helper method that builds up such an array and
-includes an ETag header in the response.
+includes an ETag header in the response.</p>
 
 <pre>
 SkillShareServer.prototype.talkResponse = function() {
@@ -7086,9 +7088,9 @@ headers: {"Content-Type": "application/json",
 };
 </pre>
 
-The handler itself needs to look at the request headers to see whether If-
+<p>The handler itself needs to look at the request headers to see whether If-
 None-Match and Prefer headers are present. Node stores headers, whose names
-are specified to be case insensitive, under their lowercase names.
+are specified to be case insensitive, under their lowercase names.</p>
 
 <pre>
 router.add("GET", /^\/talks$/, async (server, request) => {
@@ -7104,14 +7106,15 @@ router.add("GET", /^\/talks$/, async (server, request) => {
 });
 </pre>
 
-If no tag was given or a tag was given that doesn’t match the server’s current
+<p>If no tag was given or a tag was given that doesn’t match the server’s current
 version, the handler responds with the list of talks. If the request is conditional
 and the talks did not change, we consult the Prefer header to see whether we
-should delay the response or respond right away.
-Callback functions for delayed requests are stored in the server’s waiting ar-
+should delay the response or respond right away.</p>
+
+<p>Callback functions for delayed requests are stored in the server’s waiting ar-
 ray so that they can be notified when something happens. The waitForChanges
 method also immediately sets a timer to respond with a 304 status when the
-request has waited long enough.
+request has waited long enough.</p>
 
 <pre>
 SkillShareServer.prototype.waitForChanges = function(time) {
@@ -7136,30 +7139,34 @@ SkillShareServer.prototype.updated = function() {
 };
 </pre>
 
-That concludes the server code. If we create an instance of SkillShareServer
+<p>That concludes the server code. If we create an instance of SkillShareServer
 and start it on port 8000, the resulting HTTP server serves files from the public
-subdirectory alongside a talk-managing interface under the /talks URL.
-new SkillShareServer(Object.create(null)).start(8000);
+subdirectory alongside a talk-managing interface under the /talks URL.</p>
 
-The client
-The client-side part of the skill-sharing website consists of three files: a tiny
-HTML page, a style sheet, and a JavaScript file.
+<pre>new SkillShareServer(Object.create(null)).start(8000);</pre>
 
-HTML
-It is a widely used convention for web servers to try to serve a file named
+<p><b>The client</b></p>
+
+<p>The client-side part of the skill-sharing website consists of three files: a tiny
+HTML page, a style sheet, and a JavaScript file.</p>
+
+<p><b>HTML</b></p>
+<p>It is a widely used convention for web servers to try to serve a file named
 index.html when a request is made directly to a path that corresponds to a
-directory. The file server module we use, ecstatic, supports this convention.
-When a request is made to the path /, the server looks for the file ./public/
+directory. The file server module we use, ecstatic, supports this convention.</p>
+
+<p>When a request is made to the path /, the server looks for the file ./public/
 index.html (./public being the root we gave it) and returns that file if found.
 Thus, if we want a page to show up when a browser is pointed at our server,
-we should put it in public/index.html. This is our index file:
+we should put it in public/index.html. This is our index file:</p>
 
 <pre>
-<!doctype html>
-<meta charset="utf-8">
-<title>Skill Sharing</title>
-<link rel="stylesheet" href="skillsharing.css">
+&lt;!doctype html&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Skill Sharing&lt;/title&gt;
+&lt;link rel="stylesheet" href="skillsharing.css"&gt;
 </pre>
+
 <h1>Skill Sharing</h1>
 
 <script src="skillsharing_client.js"></script>
