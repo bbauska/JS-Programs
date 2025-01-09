@@ -748,6 +748,8 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 </ul>
 <h1>We begin here</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 50 javascript concepts we should know ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk0">50 JavaScript Concepts Every Developer Should Know</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This book is on essential guide for all JavaScript programmers since it has very 
@@ -2963,7 +2965,7 @@ the this value from the context they are in. This means they do not have
 their own this value, which can make them more predictable in situations
 where you work with objects and classes.</p>
 
-``` 
+<pre>
 const person = {
   name:  'John',
   greet: function() {
@@ -2974,7 +2976,7 @@ const person = {
 };
 
 person.greet(); // Prints "Hello, I am John" after 1 second
-```
+</pre>
 
 <p>In summary, arrow functions provide a more concise and convenient way
 to define functions in JavaScript, especially in situations where you aim to
@@ -2991,82 +2993,82 @@ description of some of the most common Array methods:</p>
 <p><b>Array.length:</b> The length property returns the number of elements in the
 array.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3, 4, 5];
 const elementcount = numbers.length; // Result: 5
-```
+</pre>
 
 <p><b>Array.push(elementl, element2, ...):</b> The push method adds one or
 more elements to the end of the array and returns the new Length of the
 array.</p>
 
-``` 
+<pre>
 const fruits = ['apple', 'pear'];
 fruits.push('orange', 'banana');
 // Result:  ['apple', 'pear', 'orange', 'banana']
-```
+</pre>
 
 <p><b>Array.pop():</b> The pop method removes the Last element from the array
 and returns it.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3, 4];
 const lastNumber = numbers.pop();
 // Result: 4 (numbers is now [1, 2, 3])
-```
+</pre>
 
 <p><b>Array.shift():</b> The shift method removes the first element from the array
 and returns it.</p>
 
-```
+<pre>
 const colors = ['red', 'green', 'blue'];
 const firstColor = colors.shift();
 // Result: 'red' (colors is now ['green', 'blue'])
-```
+</pre>
 
 <p><b>Array.unshift(elementl, element2,...):</b> The unshift method adds one or
 more elements to the beginning of the array and returns the new length
 of the array.</p>
 
-```
+<pre>
 const numbers = [2, 3, 4];
 numbers.unshift(l, 0); // Result: [1, 0, 2, 3, 4]
-```
+</pre>
 
 <p><b>Array.forEach(callback(currentValue, index, array)):</b> The forEach
 method iterates over each element of the array and executes the provided
 callback function for each one.</p>
 
-```
+<pre>
 const numbers = [1, 2, 3];
 numbers.forEach(number => console.log(number)); // Prints 1, 2, 3
-```
+</pre>
 
 <p><b>Array.some(callback(currentValue, index, array)):</b> The some method
 checks if at Least one element in the array satisfies the condition specified
 in the callbackfunction.</p>
 
-``` 
+<pre>
 const numbers - [2, 4, 6];
 const hasOdd = numbers.some(number => number % 2 !== 0);
 // Result: false
-```
+</pre>
 
 <p><b>Array.every(callback(currentValue, index, array)):</b> The every method
 checks if aLL elements in the array satisfy the condition specified in the
 callback function.</p>
 
-```
+<pre>
 const numbers = {2, 4, 6];
 const allEven - numbers.every(number => number % 2 --- 0);
 // Result: true
-```
+</pre>
 
 <p><b>Array.find(callback(currentValue, index, array)):</b> The find method
 returns the first element in the array that satisfies the condition specified
 in the callback function.</p>
 
-```
+<pre>
 const people = [
   { name: 'John', age: 25 },
   { name: 'Mary', age: 30 },
@@ -3075,7 +3077,7 @@ const people = [
 
 const person - people.find(person => person.age > 25); 
 // Result: { name: 'Mary', age: 30 }
-```
+</pre>
 
 <p><b>Array.findIndex(callback(currentValue, index, array)):</b> The findindex
 method returns the index of the first element in the array that satisfies the
@@ -3096,81 +3098,81 @@ of the most common String methods:</p>
 <p><b>String.length:</b> The length property returns the length (number of
 characters) of a text string.</p>
 
-```
+<pre>
 const text = 'Hello, world!';
 const length = text.length; // Result: 12
-```
+</pre>
 
 <p><b>String.charAt(index):</b> The charAt method returns the character at the
 specified position in the string.</p>
 
-```
+<pre>
 const text = 'Hello';
 const firstCharacter = text.charAt(0); // Result: 'H'
-```
+</pre>
 
 <p><b>String.concat(strl, str2,...):</b> The concat method combines two or more
 strings into a single string.</p>
 
-```
+<pre>
 const greeting = 'Hello';
 const name = 'John';
 const message = greeting.concat(', ', name);
 // Result: 'Hello, John'
-```
+</pre>
 
 <p><b>String.indexOf(substring, start):</b> The indexOf method returns the first
 position at which a substring is found within the string. If not found, it
 returns -1.</p>
 
-```
+<pre>
 const phrase = 'Hello, world!';
 const position - phrase.indexOf('world'); // Result: 7
-```
+</pre>
 
 <p><b>String.substring(start, end):</b> The substring method extracts a substring
 from start to end (exclusive) of the string.</p>
 
-```
+<pre>
 const text = 'Hello, world!';
 const substring = text.substring(6, 11); // Result: 'world'
-```
+</pre>
 
 <p><b>String.split(separator, limit):</b> The split method divides a string into an
 array of substrings using the separator as the splitting point.</p>
 
-```
+<pre>
 const text = 'Apple,Orange,Pear';
 const fruits - text.split(',');
 //Result: ['Apple', 'Orange', 'Pear']
-```
+</pre>
 
 <p><b>String.trim():</b> The trim method removes leading and trailing whitespaces
 from a string.</p>
 
-```
+<pre>
 const text = ' Hello, world! ';
 const cleanText = text.trim(); // Result: 'Hello, world!'
-```
+</pre>
 
 <p><b>String.replace(search, replacement):</b> The replace method replaces a
 search substring with another replacement string in the original string.</p>
 
-```
+<pre>
 const text = 'Hello, name!';
 const newText = text.replace('name', 'John');
 // Result: 'Hello, John!'
-```
+</pre>
 
 <p><b>String.toUpperCase() and String.toLowerCase():</b> The toUpperCase and
 toLowerCase methods convert a string to uppercase or lowercase,
 respectively.</p>
 
-```
+<pre>
 const text = 'Hello, World!';
 const uppercase = text.toUpperCaseO; // Result: 'HELLO, WORLD!'
 const lowercase = text.toLowerCaseO; // Result: 'hello, world!'
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk43">43. Object Methods (keys, values, entries, etc.)</h2>
@@ -3182,90 +3184,90 @@ of Object:</p>
 <p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys
 (properties) of an object.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2, c: 3 };
 const keys = Object.keys(object); // Result: ['a', 'b', 'c']
-```
+</pre>
 
 <p><b>Object, values(obj):</b> The values method returns an array of values of the
 enumerable properties of an object.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2, c: 3 };
 const values = Object.values(object); // Result: [1, 2, 3]
-``` 
+</pre> 
 
 <p><b>Object.entries(obj):</b> The entries method returns on array of arrays with
 key-value pairs ofthe enumerable properties of an object.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2, c: 3 };
 const entries = Object.entries(object);
 // Result: [['a', 1], ['b', 2], ['c', 3]]
-```
+</pre>
 
 <p><b>Object.assign(target, sourcel, source2,...):</b> The assign method copies the 
 enumerable properties of one or more source objects into a target object It returns the 
 target object.</p>
 
-```
+<pre>
 const target = { a: 1 };
 const source = { b: 2, c: 3 };
 Object.assign(target, source);
 console.log(target); // Result: { a: 1, b: 2, c: 3 }
-```
+</pre>
 
 <p><b>Object.hasOwnProperty(prop):</b> The hasOwnProperty method checks if an object has 
 an own property with the specified name.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2 };
 const hasPropertyA = object.hasOwnProperty('a'); // Result: true
 const hasPropertyC = object.hasOwnPropertyC'c'); // Result: false
-```
+</pre>
 
 <p><b>Object.freeze(obj):</b> The freeze method freezes an object, meaning that its
 existing properties cannot be added, deleted, or modified.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2 };
 Object.freeze(object);
 object.a - 10; // No effect
-```
+</pre>
 
 <p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys
 (properties) of an object.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2, c: 3 };
 const keys - Object.keys(object); // Result: ['a', 'b', 'c']
-```
+</pre>
 
 <p><b>Object, values(obj):</b> The values method returns an array of values of the
 enumerable properties of an object.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2, c: 3 };
 const values - Object.values(object); // Result: [1, 2, 3]
-```
+</pre>
 
 <p><b>Object.entries(obj):</b> The entries method returns an array of arrays with
 key-value pairs ofthe enumerable properties of an object.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2, c: 3 };
 const entries = Object.entries(object);
 // Result: [['a', 1], ['b', 2], ['c', 3]]
-```
+</pre>
 
 <p><b>Object.getOwnPropertyNames(obj):</b> The getOwnPropertyNames method returns an 
 array with all properties (enumerable or not) of an object.</p>
 
-```
+<pre>
 const object = { a: 1, b: 2 };
 const properties = Object.getOwnPropertyNames(object);
 // Result: ['a', 'b']
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk44">44. Math Methods (floor, ceil, random, etc.)</h2>
@@ -3278,56 +3280,56 @@ mathematical operations and numerical calculations.</p>
 <p><b>Math.floor(x):</b> The floor method rounds a number down to the nearest
 integer.</p>
 
-```
+<pre>
 const number = 5.7;
 const roundedNumber - Math.floor(number); // Result: 5
-```
+</pre>
 
 <p><b>Math.ceil(x):</b> The ceil method rounds a number up to the nearest integer.</p>
 
-```
+<pre>
 const number = 5.2;
 const roundedNumber = Math.ceil(number); // Result: 6
-```
+</pre>
 
 <p><b>Math.round(x):</b> The round method rounds a number to the nearest
 integer. If the decimal is 0.5 or greater, it will round to the next integer.</p>
 
-```
+<pre>
 const numberl = 5.2;
 const number2 = 5.8;
 const roundingl = Math.round(numberl); // Result: 5
 const rounding2 = Math.round(number2); // Result: 6
-```
+</pre>
 
 <p><b>Math.max(...args) and Math.min(...args):</b> The max and min methods
 return the maximum and minimum values, respectively, of a series of
 numeric arguments.</p>
 
-```
+<pre>
 const maximum = Math.max(5, 10, 3, 8); // Result: 10
 const minimum = Math.min(5, 10, 3, 8); // Result: 3
-```
+</pre>
 
 <p><b>Math.pow(base, exponent):</b> The pow method calculates the power of a
 given number.</p>
 
-```
+<pre>
 const result = Math.pow(2, 3); // Result: 8 (2 to the power of 3)
-```
+</pre>
 
 <p><b>Math.sqrt(x):</b> The sqrt method calculates the square root of a number.</p>
 
-```
+<pre>
 const squareRoot = Math.sqrt(25); // Result: 5 (square root of 25)
-```
+</pre>
 
 <p><b>Math.abs(x):</b> The abs method returns the absolute value of a number, i.e.,
 its value without a sign.</p>
 
-```
+<pre>
 const absoluteValue - Math.abs(-7); // Result: 7
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk45">45. JSON and Object Serialization/Deserialization</h2>
@@ -3344,7 +3346,7 @@ originalform.</p>
 into a JSON string. This is useful for sending data over a network or saving
 it in a file. The JSON.stringifyQ function is used for serialization.</p>
 
-``` 
+<pre> 
 const person = {
   name: 'Juan',
   age: 30,
@@ -3354,7 +3356,7 @@ const person = {
 const personJSON = JSON.stringify(person);
 console.log(personJSON); // Outputs
 '{"name":"Juan","age":30,"city":"Mexico"}'
-```
+</pre>
 
 <p><b>Deserialization:</b> Deserialization is the reverse process—converting a
 JSON string into a JavaScript object This is useful when receiving JSON
@@ -3364,18 +3366,18 @@ deserialization.</p>
 
 <p><b>Deserialization Example:</b></p>
 
-```
+<pre>
 const personJSON = '{"name":"Juan","age":30,"city":"Mexico"}';
 const person = JSON.parse(personJSON);
 console.log(person);
 // Outputs { name: 'Juan', age: 30, city: 'Mexico' }
-```
+</pre>
 
 <p><b>Serialization and Deserialization of Complex Objects:</b> JSON can
 represent more complex data structures, such as nested arrays and
 objects.</p>
 
-```
+<pre>
 const book = {
   title: 'The Shadow of the Wind',
   author: {
@@ -3390,7 +3392,7 @@ console.log(bookJSON);
 
 const bookParsed = JSON.parse(bookJSON);
 console.log(bookParsed);
-```
+</pre>
 
 <p>In summary, JSON is a key format in web data communication.
 Serialization and deserialization allow for the conversion of JavaScript
@@ -3421,12 +3423,12 @@ text, blobs, and more.</p>
 
 <p><b>Fetch API Example:</b></p>
 
-```
+<pre>
 fetch('https://api.example.com/data')
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error('Error:', error));
-```
+</pre>
 
 <p><b>AJAX: AJAX (Asynchronous JavaScript and XML)</b> is an older approach to making 
 asynchronous requests to the server using the XMLHttpRequest object. Although the name 
@@ -3442,7 +3444,7 @@ used in many projects.</p>
  
 <p><b>AJAX example:</b></p>
 
-```
+<pre>
 const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://api.example.com/data', true); 
 xhr.onreadystatechange = function() {
@@ -3452,7 +3454,7 @@ xhr.onreadystatechange = function() {
   }
 };
 xhr.send();
-```
+</pre>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk47">47. Localstorage and Sessionstorage</h2>
@@ -3462,9 +3464,9 @@ in the browser that allow web applications to save data in the browser for
 later retrieval Although they have similarities, they differ in terms of data
 duration and scope. Here is a description of each:
 
-LocalStorage: LocaLStorage is an object that provides a way to store key­
-value pairs persistently in the browser. Data stored in LocaLStorage
-persists even after closing the browser and reopening it This data is
+<p><b>LocalStorage: LocaLStorage is an object that provides a way to store key­
+value pairs persistently in the browser. Data stored in LocalStorage
+persists even after closing the browser and reopening it. This data is
 available to all open tabs and windows of the same domain.
 
 Features of Localstorage:
@@ -3474,15 +3476,15 @@ Features of Localstorage:
 • Capacity: Storage of several megabytes (depending on the browser).
 
 Example of Localstorage:
-```
+<pre>
 // Save data to Localstorage localstorage.setltem('name', 'John');
 // Retrieve data from Localstorage
 const name = localstorage.getltem('name');
 console.log(name); // Prints "John"
 // Remove data from Localstorage localstorage.removeltem('name');
-```
+</pre>
 
-SessionStorage: SessionStorage is similar to Localstorage, but the data
+<p><b>SessionStorage: SessionStorage is similar to Localstorage, but the data
 stored in SessionStorage is only available during the current browser
 session. If the browser or tab is closed, the data stored in SessionStorage
 will be automatically cleared.
@@ -3494,7 +3496,7 @@ Features of SessionStorage:
 • Capacity: Storage of several megabytes (depending on the browser).
 
 Example of SessionStorage:
-```
+<pre>
 // Save data to SessionStorage
 sessionstorage.setltem('language', 'Spanish');
 
@@ -3504,7 +3506,7 @@ console.log(language); // Prints "Spanish"
 
 // Remove data from Sessionstorage
 sessionstorage.removeltem('language');
-```
+</pre>
 
 In summary, both LocaLStorage and SessionStorage are useful ways to
 store data Locally in the browser. The choice between them will depend on
@@ -3580,7 +3582,7 @@ broadcasting, and automatic reconnection.</p>
 
 <p><b>Example of Socket.IO:</b></p>
 
-```
+<pre>
 // Client
 const socket = io('http://localhost:3000');
 socket.on('connect', () -> {
@@ -3600,7 +3602,7 @@ socket.emit('response', 'Message received: ' + message);
 });
 server.listen(3000);
 });
-```
+</pre>
 
 <p>Both WebSockets and Socket.IO allow real-time communication between
 the client and server in web applications. WebSockets are the underlying
@@ -3622,15 +3624,17 @@ graphics, visualizations, 2D games, and visual design elements on a web
 page. You can draw lines, shapes, text, and work with images on the
 canvas.</p>
  
-Features of Canvas:
+<p><b>Features of Canvas:</b></p>
+<ul>
+  <li>2D graphics: Focuses on two-dimensional graphics.</li>
+  <li>2D context: Uses the 2d context for drawing operations.</li>
+  <li>Easy to get started: Requires a basic Level of programming and graphics knowledge.</li>
+  <li>Ideal for: 2D graphics, visualizations, 2D games.</li>
+</ul>
 
-• 2D graphics: Focuses on two-dimensional graphics.
-• 2D context: Uses the 2d context for drawing operations.
-• Easy to get started: Requires a basic Level of programming and graphics knowledge.
-• Ideal for: 2D graphics, visualizations, 2D games.
+<p><b>Canvas Example:</b></p>
 
-Canvas Example:
-```
+<pre>
 <canvas id="myCanvas" width="400" height="300"x/canvas>
 <script>
   const canvas = document.getElementById('myCanvas'); 
@@ -3638,7 +3642,7 @@ Canvas Example:
   context.fiULStyle = 'blue';
   context.fiURect(50, 50, 100, 100);
 </script>
-```
+</pre>
 
 <p><b>WebGL:</b> WebGL (Web Graphics Library) is a more advanced technology
 that provides access to hardware acceleration for rendering 3D graphics
@@ -3647,37 +3651,37 @@ for creating immersive 3D experiences, complex visualizations, and 3D
 games.</p>
 
 <p><b>Features of WebGL:</b></p>
-
-• 3D graphics: Focuses on three-dimensional graphics.
-• Based on OpenGL Uses a specification similar to OpenGL
-• Higher complexity: Requires a deeper knowledge of graphics programming and mathematics.
-• Ideal for: 3D aranhics. 3D names, interactive simulations.
+<ul>
+  <li>3D graphics: Focuses on three-dimensional graphics.</li>
+  <li>Based on OpenGL Uses a specification similar to OpenGL.</li>
+  <li>Higher complexity: Requires a deeper knowledge of graphics programming and mathematics.</li>
+  <li>Ideal for: 3D aranhics. 3D names, interactive simulations.</li>
+</ul>
 
 <p><b>WebGL Example:</b></p>
 
-```
+<pre>
 <canvas id="myCanvas" width="800" height="600"x/canvas>
 <script>
   const canvas = document.getElementByld('myCanvas');
   const gl = canvas.getContext('webgl');
   // Here, you would write code to render 3D content with WebGL 
 </script>
-```
+</pre>
 
-In summary, if you need simple 2D graphics or visual elements on your
+<p>In summary, if you need simple 2D graphics or visual elements on your
 website, Canvas is an excellent choice. If you want to create complex 3D
 graphics, 3D games, or interactive visualizations, WebGL is the technology
 to use. Your choice will depend on the type of visual experience you want
-to provide in your web application.
-
+to provide in your web application.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk50">50. Testing with Jest or Mocha</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Jest and Mocha are two popular frameworks for unit and integration
+<p>Jest and Mocha are two popular frameworks for unit and integration
 testing in JavaScript Both allow for automated testing to ensure that the
 code functions correctly and behaves as expected. However, they have
 some differences in terms of their approach and features. Here's a
-description of each:
+description of each:</p>
 
 <p><b>Jest:</b> Jest is a testing framework developed by Facebook. It is designed to
 be easy to set up and use, especially in projects using React. Jest includes
@@ -3685,45 +3689,55 @@ many useful features, such as built-in assertions, automatic module
 mocking, and a simple structure for organizing tests. It also comes with its
 own test runner, meaning you don't need to set up an additional runner.</p>
  
-<p>Features of Jest:</p>
+<p><b>Features of Jest:</b></p>
 
 <ul>
-  <li><b>Simple Configuration:</b> Jest comes with a default configuration that is suitable for most projects.</li>
-  <li><b>Assertions and Matchers:</b> Provides built-in assertions and multiple matchers to verify results.</li>
-  <li><b>Automatic Mocking:</b> Allows for automatic creation of module mocks, making it easy to simulate dependencies.</li>
-  <li><b>Snapshot Testing:</b> Enables creating snapshots of components and verifying changes in them.</li>
-  <li><b>Parallel Testing:</b> Can run tests in parallel, improving speed in Large projects.</li>
-  <li><b>Integration with React:</b> Particularly good for React projects and has specific tools for component testing.</li>
+  <li><b>Simple Configuration:</b> Jest comes with a default configuration that is 
+    suitable for most projects.</li>
+  <li><b>Assertions and Matchers:</b> Provides built-in assertions and multiple matchers 
+    to verify results.</li>
+  <li><b>Automatic Mocking:</b> Allows for automatic creation of module mocks, making it 
+    easy to simulate dependencies.</li>
+  <li><b>Snapshot Testing:</b> Enables creating snapshots of components and verifying 
+    changes in them.</li>
+  <li><b>Parallel Testing:</b> Can run tests in parallel, improving speed in Large 
+    projects.</li>
+  <li><b>Integration with React:</b> Particularly good for React projects and has 
+    specific tools for component testing.</li>
 </ul>
 
 <p><b>Example with Jest:</b> Let's assume we want to test a simple function that adds two 
 numbers:</p>
 
-```
+<pre>
 // math.js
 function sum(a, b) {
-return a + b;
+  return a + b;
+}
 
-module.exports = { sum
-// math.test.js (tests with Jest) const { sum } = require('./math');
+module.exports = { sum };
+
+// math.test.js (tests with Jest)
+const { sum } = require('./math');
 
 test('Correctly adds two numbers', () => {
   expect(sum(2, 3)).toBe(5);
 });
-test ('Correctly adds negative numbers', () => { expect(sum(-2, -3)).toBe(-5);
-```
+
+test('Correctly adds negative numbers', () => {
+  expect(sum(-2, -3)).toBe(-5);
+});
+</pre>
 
 <p>In this example, we are using Jest for testing along with Jest's built-in
 assertions. In the second example, we use Mocha, Chai for assertions, and
 Sinon for HTTP request mocking.</p>
 
-<p><b>Mocha:</b> Mocha is a more flexible and extensible testing framework
-compared to Jest It focuses on providing a solid structure for writing tests
-and allows developers to choose assertion Libraries and mocking tools
-according to their preferences. Mocha itself does not include built-in
-assertions or mocking, so it is commonlg used in conjunction with libraries.</p>
-
-<p>Like Chai (for assertions) and Sinon (for mocking).</p>
+<p><b>Mocha:</b> Mocha is a more flexible and extensible testing framework compared to 
+Jest. It focuses on providing a solid structure for writing tests and allows developers 
+to choose assertion Libraries and mocking tools according to their preferences. Mocha 
+itself does not include built-in assertions or mocking, so it is commonlg used in 
+conjunction with libraries like Chai (for assertions) and Sinon (for mocking).</p>
 
 <p><b>Features of Mocha:</b></p>
 
@@ -3731,21 +3745,21 @@ assertions or mocking, so it is commonlg used in conjunction with libraries.</p>
   <li><b>Flexibility:</b> Mocha is more flexible and allows developers to choose 
     assertion and mocking tools that fit their needs.</li>
   <li><b>Clear Structure:</b> Provides a clear structure for organizing tests and suites.</li>
-  <li><b>Plugins and Extensions: Mocha can be extended with a variety of plugins to add 
+  <li><b>Plugins and Extensions:</b> Mocha can be extended with a variety of plugins to add 
     specific functionalities.</li>
-  <li><b>Independence: Unlike Jest, Mocha does not include test runners or assertion 
+  <li><b>Independence:</b> Unlike Jest, Mocha does not include test runners or assertion 
     libraries by default, providing more control but requiring more configuration.</li>
 </ul>
 
 <p><b>Example with Mocha, Chai, and Sinon:</b> Let's assume we want to test a
 function that makes a simulated HTTP request using Sinon:</p>
 
-```
+<pre>
 // http.js
 const request = require('request');
+
 function fetchData(callback) {
-  request('http://api.example.com/data',
-  (error, response, body) => {
+  request('http://api.example.com/data', (error, response, body) => {
     if (!error && response.statusCode === 200) { 
       callback(JSON.parse(body));
     } else { 
@@ -3753,18 +3767,22 @@ function fetchData(callback) {
     }
   });
 }
+
 module.exports = { fetchData };
 
-// http.test.js (tests with Mocha, Chai, and Sinon) const { expect } = require('chai');
+// http.test.js (tests with Mocha, Chai, and Sinon)
+const { expect } = require('chai');
 const sinon - require('sinon');
 const { fetchData } - require('./http');
+
 describe('fetchData', () => {
   it('Should retrieve valid data', () => {
     const stub = sinon.stub().yields(null, { 
       statusCode: 200
     },  '{"data": "value"}');
     sinon.replace(request, 'get', stub);
-    fetchData(data => {
+    
+	fetchData(data => {
       expect(data).to.deep.equal({ data: 'value' });
     });
     sinon.restore();
@@ -3772,38 +3790,46 @@ describe('fetchData', () => {
   it('Should handle request error', () => {
     const stub = sinon.stub().yields(new Error('Request error'));
     sinon.replace(request, 'get', stub);
+
     fetchData(data => {
       expect(data).to.be.null;
     });
     sinon.restore();
   });
 });
-```
+</pre>
 
-<p>The choice between Jest and Mocha depends on your needs and preferences. Jest is quicker to get started and offers useful built-in features, especially for React projects. 
-Mocha is a solid choice if you want more flexibility and prefer to choose your own assertion 
-libraries and mocking tools.</p>
+<p>The choice between Jest and Mocha depends on your needs and preferences. Jest is 
+quicker to get started and offers useful built-in features, especially for React projects. 
+Mocha is a solid choice if you want more flexibility and prefer to choose your own 
+assertion libraries and mocking tools.</p>
 
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 59 eloquent javascript examples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el0">59 Eloquent JS Examples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el01">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>You can start with a program that prints out the numbers 1 to 7, which you
-can derive by making a few modifications to the even number printing example
-given earlier in the chapter, where the for loop was introduced.</p>
+<p>You can start with a program that prints out the numbers 1 to 7, which you can derive 
+by making a few modifications to the even number printing example given earlier in the 
+chapter, where the for loop was introduced.</p>
+
 <p>Now consider the equivalence between numbers and strings of hash characters. 
-You can go from 1 to 2 by adding 1 (+= 1). You can go from "#" to
-"##" by adding a character (+= "#"). Thus, your solution can closely follow
-the number-printing program.</p>
+You can go from 1 to 2 by adding 1 (+= 1). You can go from "#" to "##" by adding a 
+character (+= "#"). Thus, your solution can closely follow the number-printing 
+program.</p>
+
 <pre>
-for (let line = "#"; line.length < 8; line += "#")
+for (let line = "#"; line.length &lt; 8; line += "#")
   console.log(line);
 </pre>
+
 <h5>Solution:</h5>
+
 <pre>
 #
 ##
@@ -3820,18 +3846,22 @@ for (let line = "#"; line.length < 8; line += "#")
 a matter of conditional execution. Remember the trick of using the remainder
 (%) operator for checking whether a number is divisible by another number (has
 a remainder of zero).</p>
+
 <p>In the first version, there are three possible outcomes for every number, so
 you’ll have to create an if/else if/else chain.</p>
+
 <p>The second version of the program has a straightforward solution and a clever
 one. The simple solution is to add another conditional “branch” to precisely
 test the given condition. For the clever solution, build up a string containing
 the word or words to output and print either this word or the number if there
 is no word, potentially by making good use of the || operator.</p>
+
 <p>Write a program that uses console.log to print all the numbers from 1 to 100, with two 
 exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for 
 numbers divisible by 5 (and not 3), print "Buzz" instead. When you have that working, 
 modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 
 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).</p>
+
 <p>(This is actually an interview question that has been claimed to weed out a significant 
 percentage of programmer candidates. So if you solved it, you’re now allowed to feel
 good about yourself.)</p>
@@ -3846,6 +3876,7 @@ for (let n = 1; n <= 100; n++) {
 </pre>
 
 <h5>Solution:</h5>
+
 <pre>
 1
 2
@@ -4230,6 +4261,7 @@ operator) to 1.</p>
 ing two separate loops—one for counting up and one for counting down—
 because the comparison that checks whether the loop is finished needs to be >=
 rather than &lt;= when counting downward.</p>
+
 <p>It might also be worthwhile to use a different default step, namely, -1, when
 the end of the range is smaller than the start. That way, range(5, 2) returns 
 something meaningful, rather than getting stuck in an infinite loop. It is possible 
@@ -4311,6 +4343,7 @@ ate over the array backwards (see the previous exercise) and, for each element,
 add an object to the list. You can use a local binding to hold the part of the
 list that was built so far and use an assignment like list = {value: X, rest:
 list} to add an element.</p>
+
 <p>To run over a list (in listToArray and nth), a for loop specification like this
 can be used:</p>
 
@@ -4408,6 +4441,7 @@ seen that functions are regular values, there is nothing particularly remarkable
 about the fact that such functions exist. The term comes from mathemat-
 ics, where the distinction between functions and other values is taken more
 seriously.</p>
+
 <p>Higher-order functions allow us to abstract over actions, not just values.
 They come in several forms. For example, we can have functions that create
 new functions.</p>
@@ -4532,6 +4566,7 @@ console.log(every([], n => n < 10)); // → true
 <p>Write a function that computes the dominant writing direction in a string of
 text. Remember that each script object has a direction property that can be
 "ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).</p>
+
 <p>The dominant direction is the direction of a majority of the characters that
 have a script associated with them. The characterScript and countBy func-
 tions defined earlier in the chapter are probably useful here.</p>
@@ -4570,7 +4605,6 @@ we are looking for is equal to the square of the x-coordinate plus the square of
 the y-coordinate. Thus, √ x2 + y2 is the number you want, and Math.sqrt is
 the way you compute a square root in JavaScript.</p>
 
-
 <p>Adding a getter property to the constructor can be done by putting the word
 get before the method name. To compute the distance from (0, 0) to (x, y), you
 can use the Pythagorean theorem, which says that the square of the distance
@@ -4604,13 +4638,16 @@ console.log(new Vec(3, 4).length); // → 5
 <p>The easiest way to do this is to store an array of group members in an instance
 property. The includes or indexOf methods can be used to check whether a
 given value is in the array.</p>
+
 <p>Your class’s constructor can set the member collection to an empty array.
 When add is called, it must check whether the given value is in the array or
 add it, for example with push, otherwise.</p>
+
 <p>Deleting an element from an array, in delete, is less straightforward, but
 you can use filter to create a new array without the value. Don’t forget to
 overwrite the property holding the members with the newly filtered version of
 the array.</p>
+
 <p>The from method can use a for/of loop to get the values out of the iterable
 object and call add to put them into a newly created group.</p>
 
@@ -4652,6 +4689,7 @@ console.log(group.has(10));
 stances should have a property that tracks the current position in the group.
 Every time next is called, it checks whether it is done and, if not, moves past
 the current value and returns it.</p>
+
 <p>The Group class itself gets a method named by Symbol.iterator that, when
 called, returns a new instance of the iterator class for that group.</p>
 
@@ -4709,6 +4747,7 @@ for (let value of Group.from(["a", "b", "c"])) {
 <h2 id="el19">19. Objects: Borrowing a method</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Remember that methods that exist on plain objects come from Object.prototype.</p>
+
 <p>Also remember that you can call a function with a specific this binding by
 using its call method.</p>
 
@@ -4716,8 +4755,10 @@ using its call method.</p>
 stances should have a property that tracks the current position in the group.
 Every time next is called, it checks whether it is done and, if not, moves past
 the current value and returns it.</p>
+
 <p>The Group class itself gets a method named by Symbol.iterator that, when
 called, returns a new instance of the iterator class for that group.</p>
+
 <pre>
 let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
@@ -4840,6 +4881,7 @@ function goalOrientedRobot({place, parcels}, route) {
 <p>You’ll have to write a variant of the runRobot function that, instead of log-
 ging the events to the console, returns the number of steps the robot took to
 complete the task.</p>
+
 <p>Your measurement function can then, in a loop, generate new states and
 count the steps each of the robots takes. When it has generated enough mea-
 surements, it can use console.log to output the average for each robot, which
@@ -4873,6 +4915,7 @@ compareRobots(routeRobot, [], goalOrientedRobot, []);
 at a time. It will often walk back and forth across the village because the parcel
 it happens to be looking at happens to be at the other side of the map, even if
 there are others much closer.</p>
+
 <p>One possible solution would be to compute routes for all packages and then
 take the shortest one. Even better results can be obtained, if there are multiple
 shortest routes, by preferring the ones that go to pick up a package instead of
@@ -4908,13 +4951,18 @@ runRobotAnimation(VillageState.random(), lazyRobot, &lbrack;&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The most convenient way to represent the set of member values is still as an
 array since arrays are easy to copy.</p>
+
 <p>When a value is added to the group, you can create a new group with a copy
 of the original array that has the value added (for example, using concat).</p>
+
 <p>When a value is deleted, you filter it from the array.</p>
+
 <p>The class’s constructor can take such an array as argument and store it as
 the instance’s (only) property. This array is never updated.</p>
+
 <p>To add a property (empty) to a constructor that is not a method, you have
 to add it to the constructor after the class definition, as a regular property.</p>
+
 <p>You need only one empty instance because all empty groups are the same
 and instances of the class don’t change. You can create many different groups
 from that single empty group without affecting it.</p>
@@ -4950,6 +4998,7 @@ console.log(b.has("a")); // → false
 <p>The call to primitiveMultiply should definitely happen in a try block. The
 corresponding catch block should rethrow the exception when it is not an
 instance of MultiplicatorUnitFailure and ensure the call is retried when it is.</p>
+
 <p>To do the retrying, you can either use a loop that stops only when a call
 succeeds—as in the look example earlier in this chapter—or use recursion and
 hope you don’t get a string of failures so long that it overflows the stack (which
@@ -4982,6 +5031,7 @@ console.log(reliableMultiply(8, 8)); // → 64
 <p>This exercise calls for a finally block. Your function should first unlock the
 box and then call the argument function from inside a try body. The finally
 block after it should lock the box again.</p>
+
 <p>To make sure we don’t lock the box when it wasn’t already locked, check its
 lock at the start of the function and unlock and lock it only when it started
 out locked.</p>
@@ -5089,17 +5139,20 @@ function verify(regexp, yes, no) {
 to mark pieces of dialogue. Now you want to replace all the dialogue quotes
 with double quotes, while keeping the single quotes used in contractions like
 aren’t.</p>
+
 <p>Think of a pattern that distinguishes these two kinds of quote usage and
 craft a call to the replace method that does the proper replacement.</p>
 
 <p>The most obvious solution is to replace only quotes with a nonword character
 on at least one side—something like /\W'|'\W/. But you also have to take the
 start and end of the line into account.</p>
+
 <p>In addition, you must ensure that the replacement also includes the charac-
 ters that were matched by the \W pattern so that those are not dropped. This
 can be done by wrapping them in parentheses and including their groups in
 the replacement string ($1, $2). Groups that are not matched will be replaced
 by nothing.</p>
+
 <pre>
 let text = "'I'm the cook,' he said, 'it's my job.'";<br>
 console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
@@ -5116,13 +5169,16 @@ of or after the dot, but the number cannot be a dot alone. That is, .5 and 5.
 are valid JavaScript numbers, but a lone dot isn’t.</p>
 
 <p>First, do not forget the backslash in front of the period.</p>
+
 <p>Matching the optional sign in front of the number, as well as in front of the
 exponent, can be done with [+\-]? or (\+|-|) (plus, minus, or nothing).</p>
+
 <p>The more complicated part of the exercise is the problem of matching both
 "5." and ".5" without also matching ".". For this, a good solution is to use
 the | operator to separate the two cases—either one or more digits optionally
 followed by a dot and zero or more digits or a dot followed by one or more
 digits.</p>
+
 <p>Finally, to make the e case insensitive, either add an i option to the regular
 expression or use [eE].</p>
 
@@ -5149,9 +5205,11 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
 <p>Since this is a CommonJS module, you have to use require to import the graph
 module. That was described as exporting a buildGraph function, which you
 can pick out of its interface object with a destructuring const declaration.</p>
+
 <p>To export roadGraph, you add a property to the exports object. Because
 buildGraph takes a data structure that doesn’t precisely match roads, the split-
 ting of the road strings must happen in your module.</p>
+
 <pre>
 const {buildGraph} = require("./graph");
 const roads = &lbrack;
@@ -5172,6 +5230,7 @@ exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 forward to the next when it finds a value that doesn’t match the current nest’s
 name and returning the name when it finds a matching value. In the async
 function, a regular for or while loop can be used.</p>
+
 <p>To do the same in a plain function, you will have to build your loop using
 a recursive function. The easiest way to do this is to have that function re-
 turn a promise by calling then on the promise that retrieves the storage value.
@@ -5270,8 +5329,10 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
 <h2 id="el31">31. A Programming Language: Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The easiest way to do this is to represent Egg arrays with JavaScript arrays.</p>
+
 <p>The values added to the top scope must be functions. By using a rest argu-
 ment (with triple-dot notation), the definition of array can be very simple.</p>
+
 <pre>
 topScope.array = (...values) => values;
 topScope.length = array => array.length;
@@ -5293,10 +5354,11 @@ do(define(sum, fun(array,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Make sure your solution handles multiple comments in a row, with potentially
 whitespace between or after them.</p>
+
 <p>A regular expression is probably the easiest way to solve this. Write some-
 thing that matches “whitespace or a comment, zero or more times”. Use the
 exec or match method and look at the length of the first element in the returned
-array (the whole match) to find out how many characters to slice off</p>
+array (the whole match) to find out how many characters to slice off.</p>
 
 <pre>
 function skipSpace(string) {
@@ -5321,6 +5383,7 @@ to go to the next outer scope. For each scope, use hasOwnProperty to find out
 whether the binding, indicated by the name property of the first argument to
 set, exists in that scope. If it does, set it to the result of evaluating the second
 argument to set and then return that value.</p>
+
 <p>If the outermost scope is reached (Object.getPrototypeOf returns null) and
 we haven’t found the binding yet, it doesn’t exist, and an error should be
 thrown.</p>
@@ -5355,9 +5418,11 @@ run(`set(quux, true)`); // → Some kind of ReferenceError
 <p>You can use document.createElement to create new element nodes, document.
 createTextNode to create text nodes, and the appendChild method to put nodes
 into other nodes.</p>
+
 <p>You’ll want to loop over the key names once to fill in the top row and then
 again for each object in the array to construct the data rows. To get an array
 of key names from the first object, Object.keys will be useful.</p>
+
 <p>To add the table to the correct parent node, you can use document.getElementById
 or document.querySelector to find the node with the proper id attribute.</p>
 
@@ -5409,15 +5474,18 @@ or document.querySelector to find the node with the proper id attribute.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The solution is most easily expressed with a recursive function, similar to the
 talksAbout function defined earlier in this chapter.</p>
+
 <p>You could call byTagname itself recursively, concatenating the resulting arrays
 to produce the output. Or you could create an inner function that calls itself
 recursively and that has access to an array binding defined in the outer function,
 to which it can add the matching elements it finds. Don’t forget to call the
 inner function once from the outer function to start the process.</p>
+
 <p>The recursive function must check the node type. Here we are interested only
 in node type 1 (Node.ELEMENT_NODE). For such nodes, we must loop over their
 children and, for each child, see whether the child matches the query while also
 doing a recursive call on it to inspect its own children.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;h1&gt;Heading with a &lt;span&gt;span&lt;/span&gt; element.&lt;/h1&gt;
@@ -5482,10 +5550,12 @@ orbit.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You’ll want to register a handler for the "keydown" event and look at event.key
 to figure out whether the up or down arrow key was pressed.</p>
+
 <p>The current size can be kept in a binding so that you can base the new size on
 it. It’ll be helpful to define a function that updates the size—both the binding
 and the style of the balloon in the DOM—so that you can call it from your
 event handler, and possibly also once when starting, to set the initial size.</p>
+
 <p>You can change the balloon to an explosion by replacing the text node with
 another one (using replaceChild) or by setting the textContent property of its
 parent node to a new string.</p>
@@ -5524,11 +5594,13 @@ parent node to a new string.</p>
 <p>Creating the elements is best done with a loop. Append them to the document
 to make them show up. To be able to access them later to change their position,
 you’ll want to store the elements in an array.</p>
+
 <p>Cycling through them can be done by keeping a counter variable and adding
 1 to it every time the "mousemove" event fires.
 The remainder operator (%
 elements.length) can then be used to get a valid array index to pick the
 element you want to position during a given event.</p>
+
 <p>Another interesting effect can be achieved by modeling a simple physics
 system. Use the "mousemove" event only to update a pair of bindings that
 track the mouse position. Then use requestAnimationFrame to simulate the
@@ -5578,13 +5650,16 @@ they will also become child nodes and end up in this object because it is a live
 data structure. For another, the text nodes created for the whitespace between
 the nodes are also in childNodes but should not get their own tabs. You can
 use children instead of childNodes to ignore text nodes.</p>
+
 <p>You could start by building up an array of tabs so that you have easy access
 to them. To implement the styling of the buttons, you could store objects that
 contain both the tab panel and its button.</p>
+
 <p>I recommend writing a separate function for changing tabs. You can either
 store the previously selected tab and change only the styles needed to hide that
 and show the new one, or you can just update the style of all tabs every time
 a new tab is selected.</p>
+
 <p>You might want to call this function immediately to make the interface start
 with the first tab visible.</p>
 
@@ -5654,16 +5729,20 @@ with the first tab visible.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An animation can be interrupted by returning false from the function given
 to runAnimation. It can be continued by calling runAnimation again.</p>
+
 <p>So we need to communicate the fact that we are pausing the game to the
 function given to runAnimation. For that, you can use a binding that both the
 event handler and that function have access to.</p>
+
 <p>When finding a way to unregister the handlers registered by trackKeys, re-
 member that the exact same function value that was passed to addEventListener
 must be passed to removeEventListener to successfully remove a handler.
 Thus, the handler function value created in trackKeys must be available to the
 code that unregisters the handlers.</p>
+
 <p>You can add a property to the object returned by trackKeys, containing
 either that function value or a method that handles the unregistering directly.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/game.js"&gt;&lt;/script&gt;
@@ -5760,6 +5839,7 @@ position to the monster’s position. To get the bottom of the player, you have
 to add its vertical size to its vertical position. The creation of an updated
 state will resemble either Coin’s collide method (removing the actor) or Lava
 ’s (changing the status to "lost"), depending on the player position.</p>
+
 <pre>
 &lt;!doctype html&gt;<br>
 &lt;script src="js/game.js"&gt;&lt;/script&gt;
@@ -5815,6 +5895,7 @@ state will resemble either Coin’s collide method (removing the actor) or Lava
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The trapezoid (1) is easiest to draw using a path. Pick suitable center coordi-
 nates and add each of the four corners around the center.</p>
+
 <p>The diamond (2) can be drawn the straightforward way, with a path, or the
 interesting way, with a rotate transformation. To use rotation, you will have to
 apply a trick similar to what we did in the flipHorizontally function. Because
@@ -5826,17 +5907,17 @@ each line segment. Instead, you should use a loop. You can have each iteration
 draw either two line segments (right and then left again) or one, in which case
 you must use the evenness (% 2) of the loop index to determine whether to go
 left or right.</p>
+
 <p>You’ll also need a loop for the spiral (4). If you draw a series of points, with
 each point moving further along a circle around the spiral’s center, you get a
 circle. If, during the loop, you vary the radius of the circle on which you are
 putting the current point and go around more than once, the result is a spiral.</p>
+
 <p>The star (5) depicted is built out of quadraticCurveTo lines.
-You could
-also draw one with straight lines.
+You could also draw one with straight lines.
 Divide a circle into eight pieces for a
 star with eight points, or however many pieces you want.
-Draw lines be-
-tween these points, making them curve toward the center of the star. With
+Draw lines between these points, making them curve toward the center of the star. With
 quadraticCurveTo, you can use the center as the control point.</p>
 
 <pre>
@@ -5908,21 +5989,26 @@ quadraticCurveTo, you can use the center as the control point.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You will need to call fillText and set the context’s textAlign and textBaseline
 properties in such a way that the text ends up where you want it.</p>
+
 <p>A sensible way to position the labels would be to put the text on the line
 going from the center of the pie through the middle of the slice. You don’t
 want to put the text directly against the side of the pie but rather move the
-text out to the side of the pie by a given number of pixels.
+text out to the side of the pie by a given number of pixels.</p>
+
 <p>The angle of this line is currentAngle + 0.5 &ast; sliceAngle. The following
 code finds a position on this line 120 pixels from the center:</p>
+
 <pre>
 let middleAngle = currentAngle + 0.5 &ast; sliceAngle;
 let textX = Math.cos(middleAngle) &ast; 120 + centerX;
 let textY = Math.sin(middleAngle) &ast; 120 + centerY;
 </pre>
+
 <p>For textBaseline, the value "middle" is probably appropriate when using
 this approach. What to use for textAlign depends on which side of the circle
 we are on. On the left, it should be "right", and on the right, it should be
 "left", so that the text is positioned away from the pie.</p>
+
 <p>If you are not sure how to find out which side of the circle a given angle is on,
 look to the explanation of Math.cos in Chapter 14. The cosine of an angle tells
 us which x-coordinate it corresponds to, which in turn tells us exactly which
@@ -5971,11 +6057,13 @@ side of the circle we are on.</p>
 define two bindings if your box’s width and height differ. To create a round
 ball, start a path and call arc(x, y, radius, 0, 7), which creates an arc going
 from zero to more than a whole circle. Then fill the path.</p>
+
 <p>To model the ball’s position and speed, you can use the Vec class from
 Chapter 16. Give it a starting speed, preferably one that is not purely vertical or
 horizontal, and for every frame multiply that speed by the amount of time that
 elapsed. When the ball gets too close to a vertical wall, invert the x component
-in its speed. Likewise, invert the y component when it hits a horizontal wall.
+in its speed. Likewise, invert the y component when it hits a horizontal wall.</p>
+
 <p>After finding the ball’s new position and speed, use clearRect to delete the
 scene and redraw it using the new position.</p>
 
@@ -6042,9 +6130,11 @@ showTypes();</pre>
 elements defined in your HTML. An event handler for "click" or "mousedown
 " events on the button can get the value property of the text field and call
 Function on it.</p>
+
 <p>Make sure you wrap both the call to Function and the call to its result in a
 try block so you can catch the exceptions it produces. In this case, we really
 don’t know what type of exception we are looking for, so catch everything.</p>
+
 <p>The textContent property of the output element can be used to fill it with
 a string message. Or, if you want to keep the old content around, create a
 new text node using document.createTextNode and append it to the element.
@@ -6075,17 +6165,21 @@ on a single line.</p>
 <p>To solve the problem of having the changes conceptually happen at the same
 time, try to see the computation of a generation as a pure function, which takes
 one grid and produces a new grid that represents the next turn.</p>
+
 <p>Representing the matrix can be done in the way shown in Chapter 6. You can
 count live neighbors with two nested loops, looping over adjacent coordinates
 in both dimensions. Take care not to count cells outside of the field and to
 ignore the cell in the center, whose neighbors we are counting.</p>
+
 <p>Ensuring that changes to checkboxes take effect on the next generation can
 be done in two ways. An event handler could notice these changes and update
 the current grid to reflect them, or you could generate a fresh grid from the
 values in the checkboxes before computing the next turn.</p>
+
 <p>If you choose to go with event handlers, you might want to attach attributes
 that identify the position that each checkbox corresponds to so that it is easy
 to find out which cell to change.</p>
+
 <p>To draw the grid of checkboxes, you can either use a <table> element (see
 Chapter 14) or simply put them all in the same element and put <br> (line
 break) elements between the rows.</p>
@@ -6175,11 +6269,14 @@ break) elements between the rows.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The key property of events for letter keys will be the lowercase letter itself, if
 shift isn’t being held. We’re not interested in key events with shift here.</p>
+
 <p>A "keydown" handler can inspect its event object to see whether it matches
 any of the shortcuts. You can automatically get the list of first letters from the
 tools object so that you don’t have to write them out.</p>
+
 <p>When the key event matches a shortcut, call preventDefault on it and dis-
 patch the appropriate action.</p>
+
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="code/chapter/19_paint.js"&gt;&lt;/script&gt;<br>
@@ -6235,10 +6332,12 @@ patch the appropriate action.</p>
 code faster. Because we have both the old and the new picture, we can compare
 them and redraw only the pixels that changed color, saving more than 99
 percent of the drawing work in most cases.</p>
+
 <p>You can either write a new function updatePicture or have drawPicture take
 an extra argument, which may be undefined or the previous picture. For each
 pixel, the function checks whether a previous picture was passed with the same
 color at this position and skips the pixel when that is the case.</p>
+
 <p>Because the canvas gets cleared when we change its size, you should also
 avoid touching its width and height properties when the old picture and the
 new picture have the same size. If they are different, which will happen when a
@@ -6284,6 +6383,7 @@ you’ve changed the canvas size.</p>
 <p>You can take some inspiration from the rectangle tool. Like that tool, you’ll
 want to keep drawing on the starting picture, rather than the current picture,
 when the pointer moves.</p>
+
 <p>To figure out which pixels to color, you can use the Pythagorean theorem.
 First figure out the distance between the current pointer position and the start
 position by taking the square root (Math.sqrt) of the sum of the square (Math
@@ -6292,6 +6392,7 @@ in y-coordinates. Then loop over a square of pixels around the start position,
 whose sides are at least twice the radius, and color those that are within the
 circle’s radius, again using the Pythagorean formula to figure out their distance
 from the center.</p>
+
 <p>Make sure you don’t try to color pixels that are outside of the picture’s
 boundaries.</p>
 
@@ -6334,7 +6435,8 @@ similar but slightly different problems. Drawing a horizontal line from the left
 to the right is easy—you loop over the x-coordinates and color a pixel at every
 step. If the line has a slight slope (less than 45 degrees or ¼π radians), you
 can interpolate the y-coordinate along the slope. You still need one pixel per
-x position, with the y position of those pixels determined by the slope.
+x position, with the y position of those pixels determined by the slope.</p>
+
 <p>But as soon as your slope goes across 45 degrees, you need to switch the way
 you treat the coordinates. You now need one pixel per y position since the line
 goes up more than it goes left. And then, when you cross 135 degrees, you
@@ -6342,17 +6444,22 @@ have to go back to looping over the x-coordinates, but from right to left.
 You don’t actually have to write four loops. Since drawing a line from A to
 B is the same as drawing a line from B to A, you can swap the start and end
 positions for lines going from right to left and treat them as going left to right.</p>
+
 <p>So you need two different loops. The first thing your line drawing function
 should do is check whether the difference between the x-coordinates is larger
 than the difference between the y-coordinates. If it is, this is a horizontal-ish
 line, and if not, a vertical-ish one.</p>
+
 <p>Make sure you compare the absolute values of the x and y difference, which
 you can get with Math.abs.</p>
+
 <p>Once you know along which axis you will be looping, you can check whether
 the start point has a higher coordinate along that axis than the endpoint and
 swap them if necessary. A succinct way to swap the values of two bindings in
 JavaScript uses destructuring assignment like this:</p>
+
 <pre>[start, end] = [end, start];</pre>
+
 <p>Then you can compute the slope of the line, which determines the amount
 the coordinate on the other axis changes for each step you take along your main
 axis. With that, you can run a loop along the main axis while also tracking
@@ -6410,12 +6517,15 @@ coordinates.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>On Unix systems, there is a command line tool called grep that can be used to
 quickly search files for a regular expression.</p>
+
 <p>Write a Node script that can be run from the command line and acts some-
 what like grep. It treats its first command line argument as a regular expression
 and treats any further arguments as files to search. It should output the names
 of any file whose content matches the regular expression.</p>
+
 <p>When that works, extend it so that when one of the arguments is a directory,
 it searches through all files in that directory and its subdirectories.</p>
+
 <p>Use asynchronous or synchronous file system functions as you see fit. Setting
 things up so that multiple asynchronous actions are requested at the same time
 might speed things up a little, but not a huge amount, since most file systems
@@ -6424,17 +6534,21 @@ can read only one thing at a time.</p>
 <p>Your first command line argument, the regular expression, can be found in
 process.argv[2]. The input files come after that. You can use the RegExp
 constructor to go from a string to a regular expression object.</p>
+
 <p>Doing this synchronously, with readFileSync, is more straightforward, but
 if you use fs.promises again to get promise-returning functions and write an
 async function, the code looks similar.</p>
+
 <p>To figure out whether something is a directory, you can again use stat (or
 statSync) and the stats object’s isDirectory method.</p>
+
 <p>Exploring a directory is a branching process. You can do it either by using
 a recursive function or by keeping an array of work (files that still need to be
 explored). To find the files in a directory, you can call readdir or readdirSync.
 The strange capitalization—Node’s file system function naming is loosely based
 on standard Unix functions, such as readdir, that are all lowercase, but then
 it adds Sync with a capital letter.</p>
+
 <p>To go from a filename read with readdir to a full path name, you have to
 combine it with the name of the directory, putting a slash character (/) between
 them.</p>
@@ -6498,29 +6612,36 @@ together and give small, informal presentations about things they know. At a
 gardening skill-sharing meeting, someone might explain how to cultivate celery.
 Or in a programming skill-sharing group, you could drop by and tell people
 about Node.js.</p>
+
 <p>Such meetups—also often called users’ groups when they are about computers—
 are a great way to broaden your horizon, learn about new developments, or
 simply meet people with similar interests. Many larger cities have JavaScript
 meetups. They are typically free to attend, and I’ve found the ones I’ve visited
 to be friendly and welcoming.</p>
+
 <p>In this final project chapter, our goal is to set up a website for managing
 talks given at a skill-sharing meeting. Imagine a small group of people meeting
 up regularly in the office of one of the members to talk about unicycling. The
 previous organizer of the meetings moved to another town, and nobody stepped
 forward to take over this task. We want a system that will let the participants
 propose and discuss talks among themselves, without a central organizer.</p>
+
 <p>The full code for the project can be downloaded from https://eloquentjavascript.net/
 code/skillsharing.zip.</p>
+
 <h2>Design</h2>
+
 <p>There is a server part to this project, written for Node.js, and a client part,
 written for the browser. The server stores the system’s data and provides it to
 the client. It also serves the files that implement the client-side system.</p>
+
 <p>The server keeps the list of talks proposed for the next meeting, and the
 client shows this list. Each talk has a presenter name, a title, a summary, and
 an array of comments associated with it. The client allows users to propose new
 talks (adding them to the list), delete talks, and comment on existing talks.
 Whenever the user makes such a change, the client makes an HTTP request to
 tell the server about it.</p>
+
 <!-- skill sharing image - page 370 -->
 <p>The application will be set up to show a live view of the current proposed
 talks and their comments. Whenever someone, somewhere, submits a new talk
@@ -6528,17 +6649,19 @@ or adds a comment, all people who have the page open in their browsers should
 immediately see the change. This poses a bit of a challenge—there is no way
 for a web server to open a connection to a client, nor is there a good way to
 know which clients are currently looking at a given website.</p>
+
 <p>A common solution to this problem is called long polling, which happens to
 be one of the motivations for Node’s design.</p>
-
 
 <p>The simplest solution I can come up with is to encode the whole talks object as
 JSON and dump it to a file with writeFile. There is already a method (updated
 ) that is called every time the server’s data changes. It can be extended to write
 the new data to disk.</p>
+
 <p>Pick a filename, for example ./talks.json. When the server starts, it can
 try to read that file with readFile, and if that succeeds, the server can use the
 file’s contents as its starting data.</p>
+
 <p>Beware, though. The talks object started as a prototype-less object so that
 the in operator could reliably be used. JSON.parse will return regular objects
 with Object.prototype as their prototype. If you use JSON as your file format,
@@ -6578,16 +6701,20 @@ new SkillShareServer(loadTalks()).start(8000);</pre>
 connection to that client. Since web browsers do not traditionally accept con-
 nections and clients are often behind routers that would block such connections
 anyway, having the server initiate this connection is not practical.</p>
+
 <p>We can arrange for the client to open the connection and keep it around so
 that the server can use it to send information when it needs to do so.</p>
+
 <p>But an HTTP request allows only a simple flow of information: the client
 sends a request, the server comes back with a single response, and that is it.
 There is a technology called WebSockets, supported by modern browsers, that
 makes it possible to open connections for arbitrary data exchange. But using
 them properly is somewhat tricky.</p>
+
 <p>In this chapter, we use a simpler technique—long polling—where clients con-
 tinuously ask the server for new information using regular HTTP requests, and
 the server stalls its answer when it has nothing new to report.</p>
+
 <p>As long as the client makes sure it constantly has a polling request open, it
 will receive information from the server quickly after it becomes available. For
 example, if Fatma has our skill-sharing application open in her browser, that
@@ -6596,6 +6723,7 @@ to that request. When Iman submits a talk on Extreme Downhill Unicycling,
 the server will notice that Fatma is waiting for updates and send a response
 containing the new talk to her pending request. Fatma’s browser will receive
 the data and update the screen to show the talk.</p>
+
 <p>To prevent connections from timing out (being aborted because of a lack of
 activity), long polling techniques usually set a maximum time for each request,
 after which the server will respond anyway, even though it has nothing to
@@ -6632,7 +6760,7 @@ Since talk titles may contain spaces and other characters that may not appear
 normally in a URL, title strings must be encoded with the encodeURIComponent
 function when building up such a URL.
 
-```
+<pre>
 console.log("/talks/" + encodeURIComponent("How to Idle"));
 // → /talks/How%20to%20Idle
 A request to create a talk about idling might look something like this:
@@ -6641,20 +6769,22 @@ Content-Type: application/json
 Content-Length: 92
 {"presenter": "Maureen",
 "summary": "Standing still on a unicycle"}
-```
+</pre>
 
 Such URLs also support GET requests to retrieve the JSON representation of
 a talk and DELETE requests to delete a talk.
 Adding a comment to a talk is done with a POST request to a URL like /
 talks/Unituning/comments, with a JSON body that has author and message
 properties.
-```
+
+<pre>
 POST /talks/Unituning/comments HTTP/1.1
 Content-Type: application/json
 Content-Length: 72
 {"author": "Iman",
 "message": "Will you talk about raising a cycle?"}
-```
+</pre>
+
 To support long polling, GET requests to /talks may include extra headers
 that inform the server to delay the response if no new information is available.
 We’ll use a pair of headers normally intended to manage caching: ETag and
@@ -6678,7 +6808,8 @@ response.
 The server will keep a version number that it updates every time the talks
 change and will use that as the ETag value. Clients can make requests like this
 to be notified when the talks change:
-```
+
+<pre>
 GET /talks HTTP/1.1
 If-None-Match: "4"
 Prefer: wait=90
@@ -6688,7 +6819,8 @@ Content-Type: application/json
 ETag: "5"
 Content-Length: 295
 [....]
-```
+</pre>
+
 The protocol described here does not do any access control. Everybody can
 comment, modify talks, and even delete them. (Since the Internet is full of
 hooligans, putting such a system online without further protection probably
@@ -6715,7 +6847,8 @@ function.
 There are a number of good router packages on NPM, but here we’ll write
 one ourselves to illustrate the principle.
 This is router.js, which we will later require from our server module:
-```
+
+<pre>
 const {parse} = require("url");
 module.exports = class Router {
 constructor() {
@@ -6735,7 +6868,8 @@ return handler(context, ...urlParts, request);
 return null;
 }
 };
-```
+</pre>
+
 The module exports the Router class. A router object allows new handlers
 to be registered with the add method and can resolve requests with its resolve
 method.
@@ -6746,7 +6880,9 @@ The handler functions are called with the context value (which will be the
 server instance in our case), match strings for any groups they defined in their
 regular expression, and the request object. The strings have to be URL-decoded
 since the raw URL may contain %20-style codes.
+
 <h2>Serving files</h2>
+
 When a request matches none of the request types defined in our router, the
 server must interpret it as a request for a file in the public directory. It would
 be possible to use the file server defined in Chapter 20 to serve such files, but
@@ -6761,7 +6897,8 @@ handler function accepts request and response parameters and can be passed
 directly to createServer to create a server that serves only files. We want to
 first check for requests that we should handle specially, though, so we wrap it
 in another function.
-```
+
+<pre>
 const {createServer} = require("http");
 const Router = require("./router");
 const ecstatic = require("ecstatic");
@@ -6797,7 +6934,8 @@ stop() {
 this.server.close();
 }
 }
-```
+</pre>
+
 This uses a similar convention as the file server from the previous chapter
 for responses—handlers return promises that resolve to objects describing the
 response. It wraps the server in an object that also holds its state.
@@ -6812,7 +6950,8 @@ to our router that implement the various methods that clients can use to work
 with them.
 The handler for requests that GET a single talk must look up the talk and
 respond either with the talk’s JSON data or with a 404 error response.
-```
+
+<pre>
 const talkPath = /^\/talks\/([^\/]+)$/;
 router.add("GET", talkPath, async (server, title) => {
 if (title in server.talks) {
@@ -6843,7 +6982,8 @@ stream.on("data", chunk => data += chunk.toString());
 stream.on("end", () => resolve(data));
 });
 }
-```
+</pre>
+
 One handler that needs to read request bodies is the PUT handler, which
 is used to create new talks. It has to check whether the data it was given
 has presenter and summary properties, which are strings. Any data coming
@@ -6852,7 +6992,8 @@ internal data model or crash when bad requests come in.
 If the data looks valid, the handler stores an object that represents the new
 talk in the talks object, possibly overwriting an existing talk with this title,
 and again calls updated.
-```
+
+<pre>
 router.add("PUT", talkPath,
 async (server, title, request) => {
 let requestBody = await readStream(request);
@@ -6871,11 +7012,13 @@ comments: []};
 server.updated();
 return {status: 204};
 });
-```
+</pre>
+
 Adding a comment to a talk works similarly. We use readStream to get the
 content of the request, validate the resulting data, and store it as a comment
 when it looks valid.
-```
+
+<pre>
 router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
 async (server, title, request) => {
 let requestBody = await readStream(request);
@@ -6894,7 +7037,8 @@ return {status: 204};
 return {status: 404, body: `No talk '${title}' found`};
 }
 });
-```
+</pre>
+
 Trying to add a comment to a nonexistent talk returns a 404 error.
 
 <h2>Long polling support</h2>
@@ -6905,7 +7049,8 @@ a long polling request.
 There will be multiple places in which we have to send an array of talks to
 the client, so we first define a helper method that builds up such an array and
 includes an ETag header in the response.
-```
+
+<pre>
 SkillShareServer.prototype.talkResponse = function() {
 let talks = [];
 for (let title of Object.keys(this.talks)) {
@@ -6917,11 +7062,13 @@ headers: {"Content-Type": "application/json",
 "ETag": `"${this.version}"`}
 };
 };
-```
+</pre>
+
 The handler itself needs to look at the request headers to see whether If-
 None-Match and Prefer headers are present. Node stores headers, whose names
 are specified to be case insensitive, under their lowercase names.
-```
+
+<pre>
 router.add("GET", /^\/talks$/, async (server, request) => {
   let tag = /"(.&ast;)"/.exec(request.headers["if-none-match"]);
   let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
@@ -6933,7 +7080,8 @@ router.add("GET", /^\/talks$/, async (server, request) => {
     return server.waitForChanges(Number(wait[1]));
   }
 });
-```
+</pre>
+
 If no tag was given or a tag was given that doesn’t match the server’s current
 version, the handler responds with the list of talks. If the request is conditional
 and the talks did not change, we consult the Prefer header to see whether we
@@ -6942,7 +7090,8 @@ Callback functions for delayed requests are stored in the server’s waiting ar-
 ray so that they can be notified when something happens. The waitForChanges
 method also immediately sets a timer to respond with a 304 status when the
 request has waited long enough.
-```
+
+<pre>
 SkillShareServer.prototype.waitForChanges = function(time) {
   return new Promise(resolve => {
     this.waiting.push(resolve);
@@ -6953,24 +7102,27 @@ SkillShareServer.prototype.waitForChanges = function(time) {
     }, time &ast; 1000);
   });
 };
-```
+</pre>
 Registering a change with updated increases the version property and wakes
 up all waiting requests.
-```
+<pre>
 SkillShareServer.prototype.updated = function() {
   this.version++;
   let response = this.talkResponse();
   this.waiting.forEach(resolve => resolve(response));
   this.waiting = [];
 };
-```
+</pre>
+
 That concludes the server code. If we create an instance of SkillShareServer
 and start it on port 8000, the resulting HTTP server serves files from the public
 subdirectory alongside a talk-managing interface under the /talks URL.
 new SkillShareServer(Object.create(null)).start(8000);
+
 The client
 The client-side part of the skill-sharing website consists of three files: a tiny
 HTML page, a style sheet, and a JavaScript file.
+
 HTML
 It is a widely used convention for web servers to try to serve a file named
 index.html when a request is made directly to a path that corresponds to a
@@ -6979,27 +7131,33 @@ When a request is made to the path /, the server looks for the file ./public/
 index.html (./public being the root we gave it) and returns that file if found.
 Thus, if we want a page to show up when a browser is pointed at our server,
 we should put it in public/index.html. This is our index file:
-```
+
+<pre>
 <!doctype html>
 <meta charset="utf-8">
 <title>Skill Sharing</title>
 <link rel="stylesheet" href="skillsharing.css">
-```
+</pre>
 <h1>Skill Sharing</h1>
+
 <script src="skillsharing_client.js"></script>
-It defines the document title and includes a style sheet, which defines a few
+
+<p>It defines the document title and includes a style sheet, which defines a few
 styles to, among other things, make sure there is some space between talks.
 At the bottom, it adds a heading at the top of the page and loads the script
-that contains the client-side application.
-Actions
-The application state consists of the list of talks and the name of the user, and
+that contains the client-side application.</p>
+
+<p><b>Actions</b></p>
+
+<p>The application state consists of the list of talks and the name of the user, and
 we’ll store it in a {talks, user} object. We don’t allow the user interface to
 directly manipulate the state or send off HTTP requests. Rather, it may emit
 actions that describe what the user is trying to do.
 The handleAction function takes such an action and makes it happen. Be-
 cause our state updates are so simple, state changes are handled in the same
-function.
-```
+function.</p>
+
+<pre>
 function handleAction(state, action) {
   if (action.type == "setUser") {
     localStorage.setItem("userName", action.user);
@@ -7030,41 +7188,50 @@ function handleAction(state, action) {
   }
   return state;
 }
-```
-We’ll store the user’s name in localStorage so that it can be restored when
+</pre>
+
+<p>We’ll store the user’s name in localStorage so that it can be restored when
 the page is loaded.
 The actions that need to involve the server make network requests, using
 fetch, to the HTTP interface described earlier. We use a wrapper function,
 fetchOK, which makes sure the returned promise is rejected when the server
-returns an error code.
-```
+returns an error code.</p>
+
+<pre>
 function fetchOK(url, options) {
   return fetch(url, options).then(response => {
     if (response.status < 400) return response;
     else throw new Error(response.statusText);
   });
 }
-```
-This helper function is used to build up a URL for a talk with a given title.
+</pre>
+
+<p>This helper function is used to build up a URL for a talk with a given title.</p>
+
 <pre>
 function talkURL(title) {
   return "talks/" + encodeURIComponent(title);
 }
 </pre>
-When the request fails, we don’t want to have our page just sit there, doing
+
+<p>When the request fails, we don’t want to have our page just sit there, doing
 nothing without explanation. So we define a function called reportError, which
-at least shows the user a dialog that tells them something went wrong.
+at least shows the user a dialog that tells them something went wrong.</p>
+
 <pre>
 function reportError(error) {
   alert(String(error));
 }
 </pre>
-Rendering components
-We’ll use an approach similar to the one we saw in Chapter 19, splitting the
+
+<p><b>Rendering components</b></p>
+
+<p>We’ll use an approach similar to the one we saw in Chapter 19, splitting the
 application into components. But since some of the components either never
 need to update or are always fully redrawn when updated, we’ll define those
 not as classes but as functions that directly return a DOM node. For example,
-here is a component that shows the field where the user can enter their name:
+here is a component that shows the field where the user can enter their name:</p>
+
 <pre>
 function renderUserField(name, dispatch) {
   return elt("label", {}, "Your name: ", elt("input", {
@@ -7076,10 +7243,12 @@ function renderUserField(name, dispatch) {
   }));
 }
 </pre>
-The elt function used to construct DOM elements is the one we used in
-Chapter 19.
-A similar function is used to render talks, which include a list of comments
-and a form for adding a new comment.
+
+<p>The elt function used to construct DOM elements is the one we used in Chapter 19.</p>
+
+<p>A similar function is used to render talks, which include a list of comments
+and a form for adding a new comment.</p>
+
 <pre>
 function renderTalk(talk, dispatch) {
   return elt(
@@ -7107,7 +7276,8 @@ function renderTalk(talk, dispatch) {
   elt("button", {type: "submit"}, "Add comment")));
 }
 </pre>
-The "submit" event handler calls form.reset to clear the form’s content after
+
+<p>The "submit" event handler calls form.reset to clear the form’s content after
 creating a "newComment" action.
 When creating moderately complex pieces of DOM, this style of program-
 ming starts to look rather messy. There’s a widely used (non-standard) JavaScript
@@ -7115,8 +7285,10 @@ extension called JSX that lets you write HTML directly in your scripts, which
 can make such code prettier (depending on what you consider pretty). Before
 you can actually run such code, you have to run a program on your script to
 convert the pseudo-HTML into JavaScript function calls much like the ones we
-use here.
+use here.</p>
+
 Comments are simpler to render.
+
 <pre>
 function renderComment(comment) {
   return elt("p", {className: "comment"},
@@ -7144,11 +7316,14 @@ function renderTalkForm(dispatch) {
   elt("button", {type: "submit"}, "Submit"));
 }
 </pre>
-Polling
-To start the app we need the current list of talks. Since the initial load is closely
+
+<p><b>Polling</b></p>
+
+<p>To start the app we need the current list of talks. Since the initial load is closely
 related to the long polling process—the ETag from the load must be used when
 polling—we’ll write a function that keeps polling the server for /talks and calls
-a callback function when a new set of talks is available.
+a callback function when a new set of talks is available.</p>
+
 <pre>
 async function pollTalks(update) {
   let tag = undefined;
@@ -7170,6 +7345,7 @@ async function pollTalks(update) {
   }
 }
 </pre>
+
 This is an async function so that looping and waiting for the request is easier.
 It runs an infinite loop that, on each iteration, retrieves the list of talks—either
 normally or, if this isn’t the first request, with the headers included that make
@@ -7184,70 +7360,74 @@ the response is a normal 200 response, its body is read as JSON and passed to
 the callback, and its ETag header value is stored for the next iteration.
 The application
 The following component ties the whole user interface together:
+
 <pre>
 class SkillShareApp {
-constructor(state, dispatch) {
-this.dispatch = dispatch;
-this.talkDOM = elt("div", {className: "talks"});
-this.dom = elt("div", null,
-renderUserField(state.user, dispatch),
-this.talkDOM,
-renderTalkForm(dispatch));
-this.syncState(state);
-}
-syncState(state) {
-if (state.talks != this.talks) {
-this.talkDOM.textContent = "";
-for (let talk of state.talks) {
-this.talkDOM.appendChild(
-renderTalk(talk, this.dispatch));
-}
-this.talks = state.talks;
-}
-}
+  constructor(state, dispatch) {
+    this.dispatch = dispatch;
+    this.talkDOM = elt("div", {className: "talks"});
+    this.dom = elt("div", null,
+      renderUserField(state.user, dispatch),
+      this.talkDOM,
+      renderTalkForm(dispatch));
+      this.syncState(state);
+  }
+  syncState(state) {
+    if (state.talks != this.talks) {
+      this.talkDOM.textContent = "";
+      for (let talk of state.talks) {
+        this.talkDOM.appendChild(
+          renderTalk(talk, this.dispatch));
+      }
+      this.talks = state.talks;
+    }
+  }
 }
 </pre>
-When the talks change, this component redraws all of them. This is simple
-but also wasteful. We’ll get back to that in the exercises.
-We can start the application like this:
+
+<p>When the talks change, this component redraws all of them. This is simple but also 
+wasteful. We’ll get back to that in the exercises. We can start the application like 
+this:</p>
+
 <pre>
 function runApp() {
-let user = localStorage.getItem("userName") || "Anon";
-let state, app;
-function dispatch(action) {
-state = handleAction(state, action);
-app.syncState(state);
-}
-pollTalks(talks => {
-if (!app) {
-state = {user, talks};
-app = new SkillShareApp(state, dispatch);
-document.body.appendChild(app.dom);
-} else {
-dispatch({type: "setTalks", talks});
-}
-}).catch(reportError);
+  let user = localStorage.getItem("userName") || "Anon";
+  let state, app;
+  function dispatch(action) {
+    state = handleAction(state, action);
+    app.syncState(state);
+  }
+  pollTalks(talks => {
+    if (!app) {
+      state = {user, talks};
+      app = new SkillShareApp(state, dispatch);
+      document.body.appendChild(app.dom);
+    } else {
+      dispatch({type: "setTalks", talks});
+    }
+  }).catch(reportError);
 }
 runApp();
 </pre>
-If you run the server and open two browser windows for http://localhost:8000
+
+<p>If you run the server and open two browser windows for http://localhost:8000
 next to each other, you can see that the actions you perform in one window
-are immediately visible in the other.
-Exercises
-The following exercises will involve modifying the system defined in this chap-
+are immediately visible in the other.</p>
+
+<p><b>Exercises</b></p>
+
+<p>The following exercises will involve modifying the system defined in this chap-
 ter. To work on them, make sure you download the code first (https://eloquentjavascript.net/
 code/skillsharing.zip), have Node installed https://nodejs.org, and have in-
-stalled the project’s dependency with npm install.
-Disk persistence
-The skill-sharing server keeps its data purely in memory. This means that when
+stalled the project’s dependency with npm install.</p>
+
+<p><b>Disk persistence</b></p>
+
+<p>The skill-sharing server keeps its data purely in memory. This means that when
 it crashes or is restarted for any reason, all talks and comments are lost.
 Extend the server so that it stores the talk data to disk and automatically
 reloads the data when it is restarted. Do not worry about efficiency—do the
-simplest thing that works.
-
-
-
-
+simplest thing that works.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7257,6 +7437,7 @@ there are exceptions. If you start typing something in the comment field for a
 talk in one browser window and then, in another, add a comment to that talk,
 the field in the first window will be redrawn, removing both its content and its
 focus.</p>
+
 <p>In a heated discussion, where multiple people are adding comments at the
 same time, this would be annoying. Can you come up with a way to solve it?</p>
 
@@ -7264,10 +7445,12 @@ same time, this would be annoying. Can you come up with a way to solve it?</p>
 syncState method, so that they can be updated to show a modified version of
 the talk. During normal operation, the only way a talk can be changed is by
 adding more comments, so the syncState method can be relatively simple.</p>
+
 <p>The difficult part is that, when a changed list of talks comes in, we have
 to reconcile the existing list of DOM components with the talks on the new
 list—deleting components whose talk was deleted and updating components
 whose talk changed.</p>
+
 <p>To do this, it might be helpful to keep a data structure that stores the talk
 components under the talk titles so that you can easily figure out whether a
 component exists for a given talk. You can then loop over the new array of
@@ -7436,9 +7619,12 @@ function findPath_list(a, b) {
 }<br>
 time(findPath_list);
 </pre>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex0">93 JavaScript Examples from Basics to Advanced</h2>
+<h2 id="ex0">94 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex1">1. JS Statements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13781,6 +13967,12 @@ JavaScript code within HTML I CSS files. For web-based development, you'd genera
 VS Code to manage the entire project structure. Additionally, for more advanced 
 development or working on larger projects, using a module bundler like Webpack or a
 task runner like Gulp might be beneficial to enhance your development environment further.</p>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 218 javascript sample scripts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js0">218 JavaScript Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -19871,10 +20063,14 @@ function generateAsciiTriangle(height) {
 const triangleHeight = 5;
 generateAsciiTriangle(triangleHeight);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js-0">266 More JavaScript Samples</h2>
+
+<div align="right">
+  <b><a href="#toc">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 266 more javascript samples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-0">266 More JavaScript Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-1">1. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
