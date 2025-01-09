@@ -3407,12 +3407,11 @@ receive responses from web servers, enabling interaction between a web applicati
 server. Although both serve the same purpose, they differ in terms of functionality and 
 approach.</p>
 
-<p><b>Fetch API:</b> The Fetch API is a modern API introduced in JavaScript that
-provides a more elegant and flexible way to make HTTP requests and
-handle responses. It uses promises to handle asynchronous responses,
-making it easier to manage the logic of request and response. The Fetch
-API supports a variety of data types and response formats, such as JSON,
-text, blobs, and more.</p>
+<p><b>Fetch API:</b> The Fetch API is a modern API introduced in JavaScript that provides 
+a more elegant and flexible way to make HTTP requests and handle responses. It uses 
+promises to handle asynchronous responses, making it easier to manage the logic of 
+request and response. The Fetch API supports a variety of data types and response 
+formats, such as JSON, text, blobs, and more.</p>
 
 <p><b>Features of the Fetch API:</b></p>
 
@@ -3440,7 +3439,8 @@ used in many projects.</p>
 <p><b>Features of AJAX:</b></p>
 <ul>
   <li>Uses the XMLHttpRequest object: It is older and uses a slightly more complex syntax.<li>
-  <li>Higher compatibility: It works in older browser versions that do not fully support the Fetch API.</li>
+  <li>Higher compatibility: It works in older browser versions that do not fully support 
+    the Fetch API.</li>
 </ul>
  
 <p><b>AJAX example:</b></p>
@@ -3456,65 +3456,71 @@ xhr.onreadystatechange = function() {
 };
 xhr.send();
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk47">47. Localstorage and Sessionstorage</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-Both LocalStorage and SessionStorage are mechanisms for Local storage
+<p>Both LocalStorage and SessionStorage are mechanisms for Local storage
 in the browser that allow web applications to save data in the browser for
 later retrieval Although they have similarities, they differ in terms of data
-duration and scope. Here is a description of each:
+duration and scope. Here is a description of each:</p>
 
-<p><b>LocalStorage: LocaLStorage is an object that provides a way to store key­
+<p><b>LocalStorage:</b> LocaLStorage is an object that provides a way to store key­
 value pairs persistently in the browser. Data stored in LocalStorage
 persists even after closing the browser and reopening it. This data is
-available to all open tabs and windows of the same domain.
+available to all open tabs and windows of the same domain.</p>
 
-Features of Localstorage:
+<p><b>Features of Localstorage:</b></p>
+<ul>
+  <li><b>Persistence:</b> Stored data remains even after closing the browser.</li>
+  <li><b>Domain scope:</b> Data is available to all tabs and windows of the same domain.</li>
+  <li><b>Capacity:</b> Storage of several megabytes (depending on the browser).</li>
+</ul>
 
-• Persistence: Stored data remains even after closing the browser.
-• Domain scope: Data is available to all tabs and windows of the same domain.
-• Capacity: Storage of several megabytes (depending on the browser).
+<p><b>Example of Localstorage:</b></p>
 
-Example of Localstorage:
 <pre>
-// Save data to Localstorage localstorage.setltem('name', 'John');
-// Retrieve data from Localstorage
-const name = localstorage.getltem('name');
+// Save data to LocalStorage
+localStorage.setItem('name', 'John');
+
+// Retrieve data from LocalStorage
+const name = localStorage.getItem('name');
 console.log(name); // Prints "John"
-// Remove data from Localstorage localstorage.removeltem('name');
+
+// Remove data from localStorage
+localStorage.removeItem('name');
 </pre>
 
-<p><b>SessionStorage: SessionStorage is similar to Localstorage, but the data
+<p><b>SessionStorage:</b> SessionStorage is similar to Localstorage, but the data
 stored in SessionStorage is only available during the current browser
 session. If the browser or tab is closed, the data stored in SessionStorage
-will be automatically cleared.
+will be automatically cleared.</p>
 
-Features of SessionStorage:
+<p><b>Features of SessionStorage:</b></p>
+<ul>
+  <li><b>Session duration:</b> Data is only available during the current browser session.</li>
+  <li><b>Domain scope:</b> Data is available to all tabs and windows of the same domain in the same session.</li>
+  <li><b>Capacity:</b> Storage of several megabytes (depending on the browser).</li>
+</ul>
 
-• Session duration: Data is only available during the current browser session.
-• Domain scope: Data is available to all tabs and windows of the same domain in the same session.
-• Capacity: Storage of several megabytes (depending on the browser).
+<p><b>Example of SessionStorage:</b></p>
 
-Example of SessionStorage:
 <pre>
 // Save data to SessionStorage
-sessionstorage.setltem('language', 'Spanish');
+sessionStorage.setItem('language', 'Spanish');
 
 // Retrieve data from SessionStorage
-const language - sessionstorage.getltem('language');
+const language - sessionStorage.getItem('language');
 console.log(language); // Prints "Spanish"
 
 // Remove data from Sessionstorage
-sessionstorage.removeltem('language');
+sessionStorage.removeItem('language');
 </pre>
 
-In summary, both LocaLStorage and SessionStorage are useful ways to
+<p>In summary, both LocalStorage and SessionStorage are useful ways to
 store data Locally in the browser. The choice between them will depend on
 whether you want the data to persist beyond the current browser session
-(Locals to rage) or if you only need it to be available during the current
-session (SessionStorage).
-
+(LocalStorage) or if you only need it to be available during the current
+session (SessionStorage).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk48">48. WebSockets and Socket.IO</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3524,11 +3530,12 @@ applications. Although they have similar purposes, they differ in terms of
 functionality and use.</p>
 
 <p><b>WebSockets:</b></p>
+
 <p>WebSockets are a real-time communication protocol that provides a persistent 
 bi-directional communication channel between the client and server. Unlike HTTP, 
 which follows a request-response approach, WebSockets allow continuous and 
 low-latency communication. They are ideal for applications that require real-time 
-updates, such as online chats.</p>
+updates, such as online chats, real-time notifications and multiplayer games.</p>
 
 <p>Websockets are ideal for applications that require real-time updates, such as online 
 chats, because they enable a persistent, two-way communication channel between a 
@@ -3536,6 +3543,7 @@ client and server, allowing for immediate data exchange without the need for con
 polling or refreshing, making them perfect for live messaging features.</p>
 
 <p><b>Features of WebSockets:</b></p>
+
 <ul>
   <li><b>Bi-directional communication:</b> Both the client and server can send and 
     receive data at any time.</li>
@@ -3550,20 +3558,26 @@ polling or refreshing, making them perfect for live messaging features.</p>
 <pre>
 // Client
 const socket = new WebSocket('ws://localhost:3000');
+
 socket.addEventListener('open', () -> {
-socket.send('Hello, server!');
+  socket.send('Hello, server!');
 });
-socket.addEventListener('message', event => { console.log('Message from the server:', event.data);
+
+socket.addEventListener('message', event => { 
+  console.log('Message from the server:', event.data);
 });
+
 // Server (Node.js)
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ port: 3000 });
-wss.onC connection', ws -> {
-ws.send('Welcome to the WebSocket server!');
-ws.on(' message', message => {
-console.log('Message from the client:', message);
-ws.send('Message received: ' + message);
-});
+
+wss.on('connection', ws -> {
+  ws.send('Welcome to the WebSocket server!');
+  
+  ws.on(' message', message => {
+    console.log('Message from the client:', message);
+    ws.send('Message received: ' + message);
+  });
 });
 </pre>
 
@@ -3587,21 +3601,25 @@ broadcasting, and automatic reconnection.</p>
 // Client
 const socket = io('http://localhost:3000');
 socket.on('connect', () -> {
-socket.emit('message', 'Hello, server!');
+  socket.emit('message', 'Hello, server!');
 });
+
 socket.on('response', data => {
-console.log('Server response:', data);
+  console.log('Server response:', data);
+});
+
 // Server (Node.js)
 const http = require('http');
-const server = http.createServerO;
+const server = http.createServer();
 const io = require('socket.io')(server);
 io.on('connection', socket -> {
-socket.emit('response', 'Welcome to the Socket.10 server!');
-socket.on('message', message => {
-console.log('Client message:', message);
-socket.emit('response', 'Message received: ' + message);
-});
-server.listen(3000);
+  socket.emit('response', 'Welcome to the Socket.IO server!');
+  
+  socket.on('message', message => {
+    console.log('Client message:', message);
+    socket.emit('response', 'Message received: ' + message);
+  });
+  server.listen(3000);
 });
 </pre>
 
@@ -3627,21 +3645,22 @@ canvas.</p>
  
 <p><b>Features of Canvas:</b></p>
 <ul>
-  <li>2D graphics: Focuses on two-dimensional graphics.</li>
-  <li>2D context: Uses the 2d context for drawing operations.</li>
-  <li>Easy to get started: Requires a basic Level of programming and graphics knowledge.</li>
-  <li>Ideal for: 2D graphics, visualizations, 2D games.</li>
+  <li><b>2D graphics:</b> Focuses on two-dimensional graphics.</li>
+  <li><b>2D context:</b> Uses the 2d context for drawing operations.</li>
+  <li><b>Easy to get started:</b> Requires a basic Level of programming and graphics knowledge.</li>
+  <li><b>Ideal for:</b> 2D graphics, visualizations, 2D games.</li>
 </ul>
 
 <p><b>Canvas Example:</b></p>
 
 <pre>
-<canvas id="myCanvas" width="400" height="300"x/canvas>
+<canvas id="myCanvas" width="400" height="300"></canvas>
 <script>
   const canvas = document.getElementById('myCanvas'); 
   const context = canvas.getContext('2d');
-  context.fiULStyle = 'blue';
-  context.fiURect(50, 50, 100, 100);
+  
+  context.fillStyle = 'blue';
+  context.fillRect(50, 50, 100, 100);
 </script>
 </pre>
 
@@ -3653,20 +3672,21 @@ games.</p>
 
 <p><b>Features of WebGL:</b></p>
 <ul>
-  <li>3D graphics: Focuses on three-dimensional graphics.</li>
-  <li>Based on OpenGL Uses a specification similar to OpenGL.</li>
-  <li>Higher complexity: Requires a deeper knowledge of graphics programming and mathematics.</li>
-  <li>Ideal for: 3D aranhics. 3D names, interactive simulations.</li>
+  <li><b>3D graphics:</b> Focuses on three-dimensional graphics.</li>
+  <li><b>Based on OpenGL:</b> Uses a specification similar to OpenGL.</li>
+  <li><b>Higher complexity:</b> Requires a deeper knowledge of graphics programming and mathematics.</li>
+  <li><b>Ideal for 3D graphics:</b> 3D names, interactive simulations.</li>
 </ul>
 
 <p><b>WebGL Example:</b></p>
 
 <pre>
-<canvas id="myCanvas" width="800" height="600"x/canvas>
+<canvas id="myCanvas" width="800" height="600"></canvas>
 <script>
-  const canvas = document.getElementByld('myCanvas');
+  const canvas = document.getElementById('myCanvas');
   const gl = canvas.getContext('webgl');
-  // Here, you would write code to render 3D content with WebGL 
+  
+  // Here, you would write code to render 3D content with WebGL
 </script>
 </pre>
 
@@ -3788,6 +3808,7 @@ describe('fetchData', () => {
     });
     sinon.restore();
   });
+  
   it('Should handle request error', () => {
     const stub = sinon.stub().yields(new Error('Request error'));
     sinon.replace(request, 'get', stub);
