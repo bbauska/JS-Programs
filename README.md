@@ -14509,7 +14509,7 @@ const kilometersToMilesConversionFactor = 0.621371;
 if (!isNaN(kilometers)) {
 
   // Convert kilometers to miles
-  let miles = kilometers &ast; kilometersToMilesConversionFactor;
+  let miles = kilometers * kilometersToMilesConversionFactor;
   console.log(`${kilometers} kilometers is approximately ${miles} miles.`);
 } else {
   console.log("Please enter a valid number for the distance in kilometers.");
@@ -14529,7 +14529,7 @@ let celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
 if (!isNaN(celsius)) {
 
   // Convert Celsius to Fahrenheit
-  let fahrenheit = (celsius &ast; 9) / 5 + 32;
+  let fahrenheit = (celsius * 9) / 5 + 32;
   console.log(
   `${celsius} degrees Celsius is equal to ${fahrenheit} degrees Fahrenheit.`
   );
@@ -14549,9 +14549,9 @@ let minRange = parseFloat(prompt("Enter the minimum value of the range:"));
 let maxRange = parseFloat(prompt("Enter the maximum value of the range:"));
 
 // Check if input is a valid number
-if (!isNaN(minRange) && !isNaN(maxRange) && minRange &lt; maxRange) {
+if (!isNaN(minRange) && !isNaN(maxRange) && minRange < maxRange) {
   // Generate a random number within the specified range
-  let randomNumber = Math.random() &ast; (maxRange - minRange) + minRange;
+  let randomNumber = Math.random() * (maxRange - minRange) + minRange;
   console.log(
     `A random number between ${minRange} and ${maxRange} is: ${randomNumber}`
   );
@@ -14622,9 +14622,7 @@ if (!isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
 
   // Find the largest among the three numbers
   let largestNumber = Math.max(numl, num2, num3);
-  console.log(
-    `The largest number among ${numl}, ${num2}, and ${num3} is: ${largestNumber}`
-  );
+  console.log(`The largest number among ${numl}, ${num2}, and ${num3} is: ${largestNumber}`);
 } else {
   console.log("Please enter valid numbers for all three inputs.");
 }</pre>
@@ -14639,11 +14637,11 @@ number or not. It then displays the result.</p>
 let number = parseInt(prompt("Enter a number:"));
 
 // Check if input is a valid integer greater than 1
-if (!isNaN(number) && Number.isInteger(number) && number &gt; 1) {
+if (!isNaN(number) && Number.isInteger(number) && number > 1) {
   let isPrime = true;
   
   // Check for factors from 2 to the square root of the number
-  for (let i = 2; i &lt;= Math.sqrt(number); i++) {
+  for (let i = 2; i <= Math.sqrt(number); i++) {
     if (number % i === 0) {
       isPrime = false;
       break;
@@ -14677,10 +14675,10 @@ if(
   !isNaN(endNumber) &&
   Number.isInteger(startNumber) &&
   Number.isInteger(endNumber) &&
-  startNumber &lt; endNumber &&
-  startNumber &gt; 1
+  startNumber < endNumber &&
+  startNumber > 1
 ){
-  console.log(`Prime numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:`);
+  console.log(`Prime numbers in the interval [${startNumber}, ${endNumber}]:`);
 
 // Check for prime numbers in the interval
 for (let i = startNumber; i <= endNumber; i++) {
@@ -14696,10 +14694,7 @@ for (let i = startNumber; i <= endNumber; i++) {
   }
 }
 } else {
-  console.log(
-    "Please enter valid integers, ensuring that the starting number is less than the 
-    ending number and greater than 1."
-  );
+  console.log("Please enter valid integers, ensuring that the starting number is less than the ending number and greater than 1.");
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js15">15. Find the Factorial of a Number</h2>
@@ -14717,8 +14712,8 @@ if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
 
   // Calculate the factorial
   let factorial = 1;
-  for (let i = 1; i < = number; i++) {
-    factorial &ast;= i;
+  for (let i = 1; i <= number; i++) {
+    factorial *= i;
   }
   console.log(`The factorial of ${number} is: ${factorial}`);
 } else {
@@ -14742,8 +14737,8 @@ if (!isNaN(number) && Number.isInteger(number)) {
   console.log(`Multiplication table for ${number} (up to ${range}):`);
 
   // Display the multiplication table
-  for (let i = l;i <= range; i++) {
-    let result = number &ast; i;
+  for (let i = 1;i <= range; i++) {
+    let result = number * i;
     console.log(`${number} x ${i} = ${result}`);
   }
 } else {
@@ -14766,7 +14761,7 @@ let numTerms = parseInt(
 // Check if input is a valid integer
 if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
   console.log(`Fibonacci sequence of ${numTerms} terms:`);
-  let fib Array = &lbrack;0,1&rbrack;;
+  let fibArray = &lbrack;0,1&rbrack;;
   
   // Generate the Fibonacci sequence
   for (let i = 2; i < numTerms; i++) {
