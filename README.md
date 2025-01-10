@@ -1,13 +1,13 @@
 <!-- readme.md - 637 = 59 + 94 examples & 484 (218+266) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1><a id="toc">Table of Contents</a></h1>
-<h2>687 JS Examples:</h2>
+<h1><a id="toc">JS-Programs: Table of Contents</a></h1>
+<h2>687 JavaScript Examples:</h2>
 <ul>
-  <li><a href="#sk0">50 JS Concepts Every Developer Should Know</a></li>
+  <li><a href="#sk0">50 JS Concepts Every Developer Should Know</a>,</li>
   <li><a href="#el0">59 Eloquent JS Examples</a>,</li>
   <li><a href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,</li>
-  <li><a href="#js0">218 Simple JavaScript Example Scripts,</a></li>
-  <li><a href="#js-0">266 JS Example Scripts</a></li>
+  <li><a href="#js0">218 Simple JavaScript Example Scripts</a>,</li>
+  <li><a href="#js-0">266 More Simple JavaScript Example Scripts</a>.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
@@ -24,8 +24,6 @@ code, make great decisions, and much more.
 you have solved a certain number of programs, you will be able to develop yourself and 
 turn your own ideas into a reality without even having to think about it.</p>
 <p>I've always considered JavaScript a 4th generation language. Perhaps even 5th.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="#toc">Table of Contents</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a href="#sk0">50 JS Concepts Every Developer Should Know</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7941,7 +7939,7 @@ time(findPath_list);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex0">94 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex1">1. JS Statements</h2>
+<h2 id="ex01">1. JS Statements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS statements are individual commands or instructions that the browser executes. They 
 form the logic of a program and can be simple or complex.</p>
@@ -7969,7 +7967,7 @@ form the logic of a program and can be simple or complex.</p>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex2">2. JS Syntax</h2>
+<h2 id="ex02">2. JS Syntax</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS syntax refers to the rules that define the structure of valid JavaScript code. It 
 includes rules for writing statements, variables, and functions in a way that the 
@@ -7995,7 +7993,7 @@ interpreter or browser can understand.</p>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex3">3. JS Comments</h2>
+<h2 id="ex03">3. JS Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>They are ignored by the interpreter and are only meant for human readers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8017,7 +8015,7 @@ multi-line comment
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex4">4. JS Variables</h2>
+<h2 id="ex04">4. JS Variables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Variable in JS are used to store data values. They can hold various types of data such
 as numbers, strings, objects, arrays, methods, and more.</p>
@@ -8036,7 +8034,7 @@ as numbers, strings, objects, arrays, methods, and more.</p>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex5">5. JS let</h2>
+<h2 id="ex05">5. JS let</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The let keyword is used to declare variables in JS. It allows the declared variable to be 
 reassigned a new value if needed.</p>
@@ -8046,7 +8044,7 @@ reassigned a new value if needed.</p>
 <pre>let x = 5;
 x = 10; // Reassigning 'x' to a new Value</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex6">6. JS const</h2>
+<h2 id="ex06">6. JS const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The <span class="consolas">const keyword</span> is used to declare constants in JS. 
 Once assigned, the value of a const <span class="consolas">cannot be changed</span>.</p>
@@ -8056,7 +8054,7 @@ Once assigned, the value of a const <span class="consolas">cannot be changed</sp
 <pre>const PI = 3.14159;  // Declaring a constant PI
 PI = 3; // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex7">7. JS Operators</h2>
+<h2 id="ex07">7. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS <span class="consolas">operators</span> are symbols used to <span class="consolas">perform 
 operations</span> on operands, such as arithmetic operations, assignment, comparison, logical 
@@ -8090,7 +8088,7 @@ console.log(!p); / Logical NOT</pre>
   </li>
 </ol>  
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex8">8. JS Arithmetic</h2>
+<h2 id="ex08">8. JS Arithmetic</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS provides <span class="consolas">arithmetic operators</span> to perform mathematical 
 operations on numbers.</p>
@@ -8115,7 +8113,7 @@ operations on numbers.</p>
   </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex9">9. JS Assignment</h2>
+<h2 id="ex09">9. JS Assignment</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In JS, the <span class="consolas">assignment operator (=)</span> is used to assign 
 values to variables.</p>
