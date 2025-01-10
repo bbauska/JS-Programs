@@ -1,11 +1,14 @@
 <!-- readme.md - 637 = 59 + 94 examples & 484 (218+266) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h1><a id="toc">687 JS Examples:</a><br>
-  <a href="#sk0">50 JS Concepts Every Developer Should Know<br>
-  <a href="#el0">59 Eloquent JS Examples</a>,<br>
-  <a href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,<br>
-  <a href="#js0">218 Simple JavaScript Example Scripts,<br>
-  <a href="#js-0">266 JS Example Scripts</h1>
+<h1><a id="toc">Table of Contents</a></h1>
+<h2>687 JS Examples:</h2>
+<ul>
+  <li><a href="#sk0">50 JS Concepts Every Developer Should Know</a></li>
+  <li><a href="#el0">59 Eloquent JS Examples</a>,</li>
+  <li><a href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,</li>
+  <li><a href="#js0">218 Simple JavaScript Example Scripts,</a></li>
+  <li><a href="#js-0">266 JS Example Scripts</a></li>
+</ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4337,8 +4340,6 @@ function findSolution(target) {
 }
 
 console.log(findSolution(24)); // ▷ (((1 &ast; 3) + 5) &ast; 3)
-console.log(findSolution(24)); // ▷ (((1 &ast; 3) &ast; 3) &ast; 3)
-
 </pre>
 
 <pre>
@@ -4836,8 +4837,8 @@ text. Remember that each script object has a direction property that can be
 "ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).</p>
 
 <p>The dominant direction is the direction of a majority of the characters that
-have a script associated with them. The characterScript and countBy func-
-tions defined earlier in the chapter are probably useful here.</p>
+have a script associated with them. The characterScript and countBy functions defined 
+earlier in the chapter are probably useful here.</p>
 
 <p>Your solution might look a lot like the first half of the textScripts example.
 You again have to count characters by a criterion based on characterScript
@@ -4847,7 +4848,22 @@ characters.</p>
 <p>Finding the direction with the highest character count can be done with
 reduce. If it’s not clear how, refer to the example earlier in the chapter, where
 reduce was used to find the script with the most characters.</p>
-
+<pre>
+function countBy(items, groupName) {
+  let counts = [];
+  for (let item of items) {
+    let name = groupName(item);
+    let known = counts.findIndex(c => c.name == name);
+    if (known == -1) {
+      counts.push({name, count: 1});
+    } else {
+      counts[known].count++;
+    }
+  }
+  return counts;
+}
+console.log(countBy([1, 2, 3, 4, 5], n => n > 2)); // → [{name: false, count: 2}, {name: true, count: 3}]
+</pre>
 <pre>
 function dominantDirection(text) {
   let counted = countBy(text, char => {
@@ -14589,6 +14605,7 @@ task runner like Gulp might be beneficial to enhance your development environmen
 <p>The "Hello World" program is a classic in programming and is often the first program 
 written when learning a new programming language. In this case, the goal is to print the 
 text string "Hello, World!" to the browser console.</p>
+
 <pre>console.log("Hello, World!");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js2">2. Add Two Numbers</h2>
