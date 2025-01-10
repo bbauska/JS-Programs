@@ -10669,6 +10669,7 @@ function displayTime() {
 echo date ('h: i: s A'); // Return current time
 ?&gt;
 </pre>
+
 <p>This example demonstrates dynamically displaying the current time on a webpage using 
 AJAX. The displayTime function fetches the current time from the server - side PHP script 
 (getTime.php) at intervals of one second and updates the time display on the webpage.</p>
@@ -10687,6 +10688,7 @@ commonly used to transmit data between a server and a web application.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON serves as a language - independent data format derived from JavaScript object 
 literals. It's widely used for data exchange between web servers and web clients.</p>
+
 <h4>Example of JSON Data:</h4>
 <h5>json code</h5>
 <pre>
@@ -10708,6 +10710,7 @@ literals. It's widely used for data exchange between web servers and web clients
 <p>JSON syntax is derived from JavaScript object notation, consisting of key-value 
 pairs enclosed in curly braces {}, and values can be strings, numbers, objects, arrays, 
 booleans, or null.</p>
+
 <h4>Example of JSON Syntax:</h4>
 <h5>json code</h5>
 <pre>
@@ -10727,6 +10730,7 @@ booleans, or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more 
 lightweight and easier to read and parse than XML.</p>
+
 <h4>Example Comparison between JSON and XML:</h4>
 <h5>json code</h5>
 <pre>
@@ -10737,6 +10741,7 @@ lightweight and easier to read and parse than XML.</p>
   "city": "New York"
 }
 </pre>
+
 <h5>xml code</h5>
 <pre>
 &lt;!-- XML --&gt;
@@ -10750,6 +10755,7 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Data Types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
+
 <h4>Example of Different Data Types in JSON:</h4>
 <h5>json code</h5>
 <pre>
@@ -10766,6 +10772,7 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Parse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
+
 <h4>Example of JSON Parsing:</h4>
 <pre>
 let jsonString = '{"name": "Alice", "age": 28}';
@@ -10777,6 +10784,7 @@ console.log(jsonObj.name); // Output: Alice
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a 
 JSON string.</p>
+
 <h4>Example of JSON Stringification:</h4>
 <pre>
 let obj = {name: "Bob ", age: 30};
@@ -10788,6 +10796,7 @@ console.log(jsonString); // Output: {"name": "Bob", "age": 30}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON objects contain key - value pairs enclosed in curly braces {}. Keys must be 
 strings, and values can be of any JSON data type.</p>
+
 <h4>Example of a JSON Object:</h4>
 <h5>json code</h5>
 <pre>
@@ -10802,6 +10811,7 @@ strings, and values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
 be of any JSON data type.</p>
+
 <h4>Example of a JSON Array:</h4>
 <h5>json code</h5>
 <pre>
@@ -10812,6 +10822,7 @@ be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON is commonly used to transfer data between a server and a web client in web 
 development. Servers often provide data in JSON format through APIs.</p>
+
 <h4>Example of JSON Data from a Server:</h4>
 <h5>json code</h5>
 <pre>
@@ -10827,9 +10838,9 @@ development. Servers often provide data in JSON format through APIs.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode() and json.decode() 
 functions respectively, to convert data to and from JSON format.</p>
+
 <h4>Example of Encoding and Decoding JSON in PHP:</h4>
 <h5>php code</h5>
-
 <pre>
 // Encoding PHP array to JSON
 $data = array("name " => " Peter ", " age " => 28 );
@@ -10867,6 +10878,7 @@ users.forEach(user =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different 
 domain in web development to bypass the same - origin policy limitations.</p>
+
 <h4>Example of JSONP Request:</h4>
 <pre>
 function handleData(data) {
@@ -10876,6 +10888,7 @@ let script = document.createElement('script');
 script.src = 'https://example.com/data?callback=handleData';
 document.head.appendChild(script);
 </pre>
+
 <p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including 
 an introduction, syntax, comparison with XML, data types, parsing, stringifying, JSON 
 objects and arrays, working with JSON in server-side technologies like PHP, HTML, and 
@@ -11131,15 +11144,14 @@ or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-{
-"keyl valuel",
-" key2123,
-" key3 true,
-" key4null,
-" key5 {
-" nestedKey" nestedValue "
-" key6 [" arrayValuel " >" arrayValue2 "]
+<pre>{
+  "keyl valuel",
+  " key2123,
+  " key3 true,
+  " key4null,
+  " key5 {
+  " nestedKey" nestedValue "
+  " key6 [" arrayValuel " >" arrayValue2 "]
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11147,6 +11159,7 @@ or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more 
 lightweight and easier to read and parse than XML.</p>
+
 <h4>Example Comparison between JSON and XML:</h4>
 <h5>json code</h5>
 <pre>
@@ -11172,6 +11185,7 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Data Types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
+
 <h4>Example of Different Data Types in JSON:</h4>
 <h5>json code</h5>
 <pre>
@@ -11188,6 +11202,7 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Parse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
+
 <h4>Example of JSON Parsing:</h4>
 <pre>
 let jsonString = '{"name":"Alice", "age": 28}';
@@ -11199,6 +11214,7 @@ console.log(jsonObj.name); // Output: Alice
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a 
 JSON string.</p>
+
 <h4>Example of JSON Stringification:</h4>
 <pre>
 letobj = {name Bob ", age : 30};
@@ -11210,6 +11226,7 @@ console.log(jsonString); // Output: {" name Bob "," age 30}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON objects contain key - value pairs enclosed in curly braces{}. Keys must be 
 strings, and values can be of any JSON data type.</p>
+
 <h4>Example of a JSON Object:</h4>
 <h5>json code</h5>
 <pre>
@@ -11224,6 +11241,7 @@ strings, and values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
 be of any JSON data type.</p>
+
 <h4>Example of a JSON Array:</h4>
 <h5>json code</h5>
 <pre>
@@ -11251,6 +11269,7 @@ development. Servers often provide data in JSON format through APIs.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode() and json.decode() 
 functions respectively, to convert data to and from JSON format.</p>
+
 <h4>Example of Encoding and Decoding JSON in PHP:</h4>
 <h5>php code</h5>
 <pre>
@@ -11265,6 +11284,7 @@ $decodedData = json.decode($jsonString, true);
 <h3>JSON HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
+
 <h4>Example of Using JSON Data in HTML:</h4>
 <h5>html code</h5>
 <pre>
@@ -11288,6 +11308,7 @@ users.forEach(user =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different 
 domain in web development to bypass the same - origin policy limitations.</p>
+
 <h4>Example of JSONP Request:</h4>
 <pre>
 function handleData(data) {
@@ -11511,6 +11532,7 @@ let data = [
   {"id": 3, "name":" "Item3"}
 ];<br>
 let mappedData = data.map(item => ({itemId: item.id, itemName: item.name}));
+
 console.log(mappedData);
 // Output: [{"itemId": 1, "itemName":"Item1"}, 
   {"itemId": 2, "itemName":"Item2"}, 
@@ -11526,9 +11548,6 @@ creating, manipulating, parsing, and working with JSON data in various scenarios
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex94">JavaScript vs jQuery: A Comprehensive Comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
-
 <p>JavaScript and jQuery are both powerful tools used in web development. JavaScript is a 
 programming language, while jQuery is a library built with JavaScript. Understanding their 
 differences, capabilities, and usage scenarios is crucial for developers.</p>
@@ -11538,6 +11557,7 @@ differences, capabilities, and usage scenarios is crucial for developers.</p>
 <p>JavaScript is a versatile programming language primarily used for enhancing 
 interactivity on web pages. It's a core technology in web development, enabling dynamic 
 content updates, user interactions, and handling client-side functionalities.</p>
+
 <h4>Example of JavaScript Functionality:</h4>
 <pre>
 // JavaScript code to change text color on button click
@@ -11545,6 +11565,7 @@ function changeColor() {
   document.getElementByld("text").style.color = "blue";
 }
 </pre>
+
 <p>JavaScript offers native methods and APIs to interact with the Document Object Model 
 (DOM) and manipulate HTML elements, enabling developers to create dynamic web applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11553,11 +11574,13 @@ function changeColor() {
 <p>jQuery, on the other hand, is a fast, lightweight JavaScript library designed to 
 simplify the process of client-side scripting and DOM manipulation. It abstracts many 
 complexities of JavaScript and provides a concise syntax for common tasks.</p>
+
 <h4>Example of jQuery Functionality:</h4>
 <pre>
 // jQuery code to change text color on button click
 $("#text").css("color", "blue");
 </pre>
+
 <p>jQuery simplifies common JavaScript tasks, such as event handling, animations, AJAX 
 requests, and DOM manipulation, offering a more concise syntax compared to native 
 JavaScript.</p>
@@ -11578,7 +11601,7 @@ JavaScript.</p>
 <ul>
   <li>JavaScript: Provides direct DOM manipulation using methods like getElementByld and 
     querySelector.</li>
-  <li>jQuery : Simplifies DOM traversal and manipulation with methods like $ (), allowing 
+  <li>jQuery: Simplifies DOM traversal and manipulation with methods like $ (), allowing 
     easier element selection and modification.</li>
 </ul>
 <h4>3. Browser Compatibility:</h4>
@@ -11600,6 +11623,7 @@ JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>jQuery provides powerful selectors that allow developers to efficiently target and 
 manipulate HTML elements.</p>
+
 <h4>Example of jQuery Selectors:</h4>
 <pre>
 // Selecting elements with class 'example'
@@ -11615,28 +11639,34 @@ on IDs, classes, attributes, element types, and more.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>jQuery simplifies HTML content manipulation by providing methods to insert, remove, 
 and modify HTML elements and their content.</p>
+
 <h4>Example of jQuery HTML Manipulation:</h4>
 <pre>
 // Appending a new &lt;li&gt; element to an unordered list
 $("ul").append("&lt;li&gt;New Item&lt;/li&gt;");
+
 // Changing text content inside a &lt;div&gt; element
 $("#content").text("Updated content");
 </pre>
+
 <p>With jQuery's methods like append, html, text, and remove, developers can efficiently
 modify HTML content on the fly.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>jQuery CSS Manipulation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>jQuery facilitates CSS manipulation, allowing changes to element styles dynamically.</p>
+
 <h4>Example of jQuery CSS Manipulation:</h4>
 <pre>
 // Changing the background color of an element
 $("#box").css("background-color", "#f2f2f2");
+
 // Toggling a CSS class on an element
 $("#toggleBtn").click(function() {
   $("#content").toggleclass("active");
 });
 </pre>
+
 <p>jQuery's css, addClass, removeclass, and toggleClass methods simplify applying, 
 removing, and toggling CSS styles.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11650,9 +11680,11 @@ relationships within the DOM.</p>
 <pre>
 // Finding the next sibling element
 $("#current").next().addClass("highlight");
+
 // Traversing up the DOM to find parent elements
 $("a").closest("div").addClass("parent-div");
 </pre>
+
 <p>Using methods like next, prev, find, closest, and siblings, jQuery provides efficient 
 ways to navigate and manipulate elements within the DOM.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11739,20 +11771,16 @@ document.body.appendChild(newElement);
 <h4>6. Removing an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let elementToRemove = document.getElementByld (" toBeRemoved ");
-elementToRemove.parentNode.removechild ( elementToRemove );
+let elementToRemove = document.getElementByld(" toBeRemoved ");
+elementToRemove.parentNode.removechild( elementToRemove );
 </pre>
 
 <h5>jQuery:</h5>
-<pre>
-$ (" #toBeRemoved").remove ();
-</pre>
+<pre>$ (" #toBeRemoved").remove();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Manipulating CSS Class:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-document.getElementByld (" myDiv").classList.add (" active ");
-</pre>
+<pre>document.getElementByld (" myDiv").classList.add (" active ");</pre>
 
 <h5>jQuery:</h5>
 <pre>
@@ -11761,25 +11789,17 @@ $ (" #myDiv").addClass (" active ");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Changing Text Content:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-document.getElementById("mySpan").textContent = "Updated Text";
-</pre>
+<pre>document.getElementById("mySpan").textContent = "Updated Text";</pre>
 
 <h5>jQuery:</h5>
-<pre>
-$("#mySpan").text("Updated Text");
-</pre>
+<pre>$("#mySpan").text("Updated Text");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Hiding an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-document.getElementById("toHide").style.display = "none";
-</pre>
+<pre>document.getElementById("toHide").style.display = "none";</pre>
 
 <h5>jQuery:</h5>
-<pre>
-$("#toHide").hide();
-</pre>
+<pre>$("#toHide").hide();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Fading In an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11791,9 +11811,7 @@ elementToFade.style.opacity = 1;
 </pre>
 
 <h5>jQuery:</h5>
-<pre>
-$ (" #toFade ").fadein ( 1000 );
-</pre>
+<pre>$ (" #toFade ").fadein ( 1000 );</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. AJAX GET Request:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11831,57 +11849,42 @@ xhr.send(JSON.stringify({name:"John", age: 30}));
 <pre>
 $ . ajax ({
 url:" saveData",
-method:" POST ",
-contentType :" application I json ",
-data : JSON . stringify ({name :" John ", age : 30}),
-success : function (response ) {
-console.log(response );
+  method:" POST ",
+  contentType:" application I json ",
+  data: JSON.stringify({name: "John", age: 30}),
+  success: function(response) {
+    console.log(response);
+  }
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Getting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-let linkHref = document. getElementById (" myLink "). getAttribute (" href");
-</pre>
+<pre>let linkHref = document.getElementById("myLink").getAttribute("href");</pre>
 
 <h5>jQuery:</h5>
-<pre>
-let linkHref = $("#myLink").attr("href");
-</pre>
+<pre>let linkHref = $("#myLink").attr("href");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Setting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-document.getElementById("myImage").setAttribute("src", "new_image.jpg");
-</pre>
+<pre>document.getElementById("myImage").setAttribute("src", "new_image.jpg");</pre>
 
 <h5>jQuery:</h5>
-<pre>
-$ ("#myImage").attr("src", "newjmage.jpg");
-</pre>
+<pre>$ ("#myImage").attr("src", "newimage.jpg");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-let inputValue = document.getElementById("mylnput").value;
-</pre>
+<pre>let inputValue = document.getElementById("myInput").value;</pre>
 
 <h5>jQuery:</h5>
-<pre>
-let inputValue = $("#mylnput").val();
-</pre>
+<pre>let inputValue = $("#myInput").val();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Checking Checkbox State:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-let isChecked = document.getElementById("myCheckbox").checked;
-</pre>
+<pre>let isChecked = document.getElementById("myCheckbox").checked;</pre>
 
 <h5>jQuery:</h5>
-<pre>
-let isChecked = $("#myCheckbox").prop("checked");
-</pre>
+<pre>let isChecked = $("#myCheckbox").prop("checked");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Iterating Over NodeList:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11908,6 +11911,7 @@ document.getElementById("myForm").addEventListener("submit"  function(event) {
   // Process form data
 });
 </pre>
+
 <h5>jQuery:</h5>
 <pre>
 $("#myForm").submit(function(event) {
@@ -11920,15 +11924,13 @@ $("#myForm").submit(function(event) {
 <h4>19. Animating Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let element = document. getElementById (" myElement");
-element. style . transition = " transform 2 s 11;
-element. style . transform = " rotate ( 360deg)";
+let element = document. getElementById("myElement");
+element.style.transition = " transform 2 s 11;
+element.style.transform = " rotate (360deg)";
 </pre>
 
 <h5>jQuery:</h5>
-<pre>
-$ (" #myElement"). animate ({rotate :" 360deg "}, 2000 );
-</pre>
+<pre>$ (" #myElement").animate({rotate :" 360deg "}, 2000);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Changing Background Color on Click:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11949,7 +11951,6 @@ $("#myDiv").click (function() {
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These examples demonstrate how JavaScript and jQuery can achieve similar tasks, 
 showcasing the differences in syntax and complexity between the two when performing 
@@ -12004,27 +12005,27 @@ can create responsive and visually appealing charts.</p>
 <pre>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-type: 'bar',
-data: {
-labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-datasets: [{
-  label: '# of Votes',
-  data: [12, 19, 3, 5, 2, 3],
-  backgroundcolor: [
-    'rgba(255, 99, 132, 0.2)',
-    'rgba(54, 162, 235, 0.2)',
-    'rgba(255, 206, 86, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)'
-  ],
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundcolor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
 borderColor: [
-'rgba(255, 99, 132, 1)',
-'rgba(54, 162, 235, 1)',
-'rgba(255, 206, 86, 1)',
-'rgba(75, 192, 192, 1)',
-'rgba(153, 102, 255, 1)',
-'rgba(255, 159, 64, 1)'
+  'rgba(255, 99, 132, 1)',
+  'rgba(54, 162, 235, 1)',
+  'rgba(255, 206, 86, 1)',
+  'rgba(75, 192, 192, 1)',
+  'rgba(153, 102, 255, 1)',
+  'rgba(255, 159, 64, 1)'
 ],
 border Width: 1
 </pre>
@@ -12173,7 +12174,6 @@ const myChart = new Chart (ctx, {
 <h4>Google Charts Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Pie Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load ('current', {packages: ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
@@ -12194,20 +12194,18 @@ function drawChart () {
 const chart = new google.visualization.PieChart(document.getElementById('donutchart'));
 chart.draw(data, options);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Area Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google . charts . load ('current', {packages : [ 'corechart' ] });
-google . charts . setOnLoadCallback ( drawChart);
+google.charts.load('current', {packages : ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 function drawChart () {
-const data = google . visualization . arrayToDataTable ([
-[ 'Year1, 'Sales', 'Expenses' ],
-[’2013', 1000,400],
-['2014', 1170,460],
-['2015', 660, 1120],
-['2016', 1030,540]
-]);
+  const data = google.visualization.arrayToDataTable ([
+    ['Year1, 'Sales', 'Expenses'],
+    [’2013', 1000,400],
+    ['2014', 1170,460],
+    ['2015', 660, 1120],
+    ['2016', 1030,540]
+  ]);
 const options = {
   title: 'Company Performance',
   curveType: 'function',
@@ -12220,7 +12218,6 @@ chart.draw(data, options);
 <h4>D3.js Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Create SVG Circle:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
 .append ('svg')
@@ -12232,6 +12229,7 @@ svg.append('circle')
 .attr ('r', 40)
 .attr ('fill; 'blue');
 </pre>
+
 <h4>10. Create SVG Rectangle:</h4>
 <pre>
 const svg = d3.select('body')
@@ -12249,16 +12247,13 @@ svg.append('rect&ast;)
 <h4>Canvas Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Draw a Rectangle:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 ctx.fillstyle = 'blue';
 ctx.fillRect(10,10,100,50);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Draw a Circle:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
@@ -12271,14 +12266,11 @@ ctx.fill();
 <h4>Plotly Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Create a Line Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [{x: [1, 2, 3, 4], y: [10, 15, 13, 18], type: 'scatter'}];
 Plotly.newPlot('myDiv', data);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a Bar Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [{x: ['A', 'B', 'C'], y: [10, 20, 15], type: 'bar'}];
 Plotly.newPlot('myDiv', data);
@@ -12287,7 +12279,6 @@ Plotly.newPlot('myDiv', data);
 <h4>Chart.js Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Create a Bar Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document. getElementById ('myChart'). getContext ('2d');
 const myChart = new Chart (ctx, {
@@ -12307,11 +12298,9 @@ const myChart = new Chart (ctx, {
 }
 });
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Create a Line Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const ctx = document. getElementById ('myChart'). getContext ('2d');
+const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
   type: 'line1,
   data: {
@@ -12322,14 +12311,12 @@ const myChart = new Chart(ctx, {
     borderColor: 'rgb (75, 192, 192)',
     borderwidth: 
   }]
-}
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Google Charts Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Create a Pie Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -12350,9 +12337,7 @@ function drawChart() {
   chart.draw(data, options);
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Create an Area Chart:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load('current', {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -12377,7 +12362,6 @@ chart.draw(data, options);
 <h4>D3.js Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Create an SVG Circle:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
   .append('svg')
@@ -12390,9 +12374,7 @@ svg.append('circle')
   .attr('r', 40)
   .attr('fill', 'blue');
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Create an SVG Rectangle:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
   .append('svg')
@@ -12419,16 +12401,13 @@ representations in web applications.</p>
 <h3>Basic Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Convert Celsius to Fahrenheit:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function celsiusToFahrenheit(Celsius) {
   return(Celsius &ast; 9 / 5) + 32;
 }
 let tempInFahrenheit = celsiusToFahrenheit(25); // Output: 77
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Calculate Area of a Circle:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateCircleArea (radius ) {
   return Math.PI &ast; radius &ast; radius;
@@ -12439,16 +12418,13 @@ let area = calculateCircleArea(5); // Output: ~78.54
 <h4>String Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Reverse a String:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
 let reversed = reverseString('hello'); // Output: 'olleh'
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Check for Palindrome:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function isPalindrome(str) {
   return str === str.split('').reverse().join('');
@@ -12459,14 +12435,11 @@ function isPalindrome(str) {
 <h4>Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Find Maximum Number in Array:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [ 5, 8, 3,12, 6 ];
 letmaxNumber = Math.max(... numbers ); // Output: 12
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Sort Array of Objects by Property:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let products = [
   {name: 'Laptop', price: 800},
@@ -12479,14 +12452,11 @@ products.sort((a, b) => a.price - b.price);
 <h4>Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Higher - Order Function - Map:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3];
 let doubled = numbers.map(num => num &ast; 2); // Output: [2, 4, 6]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (function() {
   console.log('IIFE executed.');
@@ -12496,14 +12466,11 @@ let doubled = numbers.map(num => num &ast; 2); // Output: [2, 4, 6]
 <h4>Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Object Destructuring:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {name: 'Alice', age: 30};
 let {name, age} = person;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Merge Objects:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobjl = {a: l,b: 2};
 letobj2 = {c: 3,d: 4};
@@ -12520,9 +12487,7 @@ for (let color of colors) {
   console.log(color);
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. While Loop to Generate Random Numbers:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let randomNums = [];
 while (randomNums.length &lt; 5) {
@@ -12533,7 +12498,6 @@ while (randomNums.length &lt; 5) {
 <h4>Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Try... Catch for Error Handling:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 try {
   // Code that may throw an error
@@ -12542,9 +12506,7 @@ try {
   console.error(’Error occurred:', error.message)
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Custom Error Handling:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function throwError() {
   throw new Error('Custom error message’);
@@ -12559,7 +12521,6 @@ try {
 <h4>Asynchronous JavaScript:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Promise Example:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
   return new Promise ((resolve, reject) => {
@@ -12571,9 +12532,7 @@ function fetchData() {
 };
 fetchData().then(data => console.log(data));
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Async / Await Example:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   let data = await fetch('https://api.example.com/data');
@@ -12586,15 +12545,12 @@ fetchData().then(data => console.log(data));
 <h4>DOM Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Create Element and Append to DOM:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let newElement = document.createElement('div');
 newElement.textContent = 'New Element';
 document.body.appendchild(newElement);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Add Event Listener to Button Click:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let button = document.getElementById('myButton');
 button.addEventListener('click', () => {
@@ -12605,14 +12561,11 @@ button.addEventListener('click', () => {
 <h4>Regular Expressions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Regular Expression Test:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let pattern =/\d+/;
 let isMatch = pattern.test('Hello 123'); // Output: true
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Replacing String with Regex:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let str = 'Hello 123';
 let replaced = str.replace (/\d+/,'456'); // Output: 'Hello 456'
@@ -12629,7 +12582,6 @@ operations, DOM manipulations, and regular expressions.</p>
 <h4>Advanced Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Closure Example:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function outerFunction(outerValue) {
   return function(innerValue) {
@@ -12639,9 +12591,7 @@ function outerFunction(outerValue) {
   let result = addFive(3); // Output: 8
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Currying Example:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function multiply(a) {
   return function(b) {
@@ -12659,9 +12609,7 @@ let product = multiplyByTwo(5); // Output: 10
 let numbers = [1, 2, 3, 4, 5];
 let sum = numbers.reduce((acc, curr) => acc + curr, 0); // Output: 15
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Filter and Map Together:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3, 4, 5];
 let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num &ast; 2); 
@@ -12675,9 +12623,7 @@ let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num &as
 let person = {name: 'Alice'};
 let {name, age = 30} = person;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Computed Property Names:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let key = 'dynamicKey';
 let obj = {[key]: 'value'}; // {dynamicKey: 'value'}
@@ -12686,16 +12632,13 @@ let obj = {[key]: 'value'}; // {dynamicKey: 'value'}
 <h4>Advanced Loops and Iterations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. For... In Loop for Objects:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let obj = {a: 1,b: 2,c: 3};
 for (let key in obj) {
   console.log(key, obj [key]);
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using For... Of with Iterables:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let iterable = [’a', 'b', 'c'];
 for (let value of iterable ) {
@@ -12706,7 +12649,6 @@ for (let value of iterable ) {
 <h4>Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Promise Chaining:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function asyncFunction() {
   return new Promise((resolve, reject) => {
@@ -12722,9 +12664,7 @@ asyncFunction ()
   })
   .then (result => console.log(result));
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Async / Await with Error Handling</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
   return new Promise((resolve, reject) => {
@@ -12746,7 +12686,6 @@ getData ();
 <h4>Advanced DOM Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. Creating and Appending Multiple Elements:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let fragment = document.createDocumentFragment();
 for (let i = 0; i < 5; i ++) {
@@ -12756,9 +12695,7 @@ for (let i = 0; i < 5; i ++) {
   document.body.appendchild(fragment);
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Event Delegation:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document.addEventListener('click', function(event) {
   if (event. target.matches ('button')) {
@@ -12770,14 +12707,11 @@ document.addEventListener('click', function(event) {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Template Literals:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let name = 'Alice';
 let message = 'Hello, ${name}! &ast;;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Spread Operator:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let arr = [1, 2, 3];
 let newArr = [... arr, 4,5]; // [1, 2, 3, 4, 5]
@@ -12786,7 +12720,6 @@ let newArr = [... arr, 4,5]; // [1, 2, 3, 4, 5]
 <h4>Error Handling and Regular Expressions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Throwing Custom Errors:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function validateNumber(num) {
   if(typeofnum !== 'number') {
@@ -12798,9 +12731,7 @@ function validateNumber(num) {
   console.error(error. message);
   }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Regular Expression to Validate Email:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let emailPattern = / A [ A\s@ ]+ @ [ A\s@ ]+ \ .[ A\s@ ]+ $ /;
 let isValidEmail = emailPattern.test('test@example.com'); // Output: true
@@ -12813,17 +12744,15 @@ let isValidEmail = emailPattern.test('test@example.com'); // Output: true
 <p>These examples delve deeper into JavaScript's functionalities, including advanced 
 functions, array and object manipulation, iteration methods, async operations, DOM 
 manipulation, and newer ES6 + features.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Functions and Functionality:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Higher - Order Function - Filter:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3, 4, 5];
 let evenNumbers = numbers.filter(num => num % 2 === 0); // Output: [2,4]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Invoked Arrow Function Expression (IIAFE):</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (()=>{
   console.log('IIAFE executed.');
@@ -12833,14 +12762,11 @@ let evenNumbers = numbers.filter(num => num % 2 === 0); // Output: [2,4]
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using FlatMap:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letarr =[[1,2], [3,4], [5,6]];
 let flatArray = arr.flatMap(innerArr => innerArr.map(item => item &ast; 2)); // Output: [2,4,6,8,10,12]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let nestedArrays =[[1,2], [3,4], [5,6]];
 let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []); // Output: [1, 2, 3, 4, 5, 6]
@@ -12849,7 +12775,6 @@ let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []); /
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object Sealing and Freezing:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let obj = {name: 'Alice'};
 Object.seal(obj);
@@ -12858,9 +12783,7 @@ let frozenObj = {name: 'Bob'};
 Object.freeze(frozenObj);
 frozenObj.age = 25; // This change won't affect a frozen object
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Optional Chaining:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let user = {
   name: 'Alice',
@@ -12875,7 +12798,6 @@ let city = user?.address?.city; // Output: 'New York'
 <h4>Advanced Loops and Iterations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. For ... Await Loop for Asynchronous Operations:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function asyncOperation(value) {
   return new Promise(resolve => {
@@ -12891,17 +12813,12 @@ async function executeAsyncOperations() {
 }
 executeAsyncOperations();
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using Array. from with Mapping:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-let newArray = Array.from ({length: 5}, (index) => index &ast; 2 ); // Output: [ 0, 2, 4, 6, 8 ]
-</pre>
+<pre>let newArray = Array.from ({length: 5}, (index) => index &ast; 2 ); // Output: [ 0, 2, 4, 6, 8 ]</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Using Finally Block:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function tryCatchFinally () {
   try {
@@ -12915,9 +12832,7 @@ function tryCatchFinally () {
 }
 tryCatchFinally ();
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Custom Error Class:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class CustomError extends Error {
 constructor (message ) {
@@ -12937,7 +12852,6 @@ new features like optional chaining and async / await.</p>
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Object. define Property for Property Definition</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {};
 Object.defineProperty(obj, 'fullName', {
@@ -12946,9 +12860,7 @@ Object.defineProperty(obj, 'fullName', {
   configurable: true
 });
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Object. set PrototypeOf for Setting Prototype:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let animal = {
   makeSound () {
@@ -12963,14 +12875,11 @@ dog.makeSound(); // Output: 'Animal sound'
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Set to Get Unique Values:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers =[1, 2, 2, 3, 4, 4, 5];
 let uniqueNumbers = [... new Set(numbers)]; // Output: [ 1, 2, 3, 4, 5 ]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array. find to Get First Matching Element:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let users = [
   {id: l, name: 'Alice'},
@@ -12983,7 +12892,6 @@ let user = users.find(user => user.id === 2); // Output: {id: 2, name: 'Bob'}
 <h4>Advanced Functionality:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Generator Function:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function &ast; generatorFunction() {
   yield 1;
@@ -12994,9 +12902,7 @@ let generator = generatorFunction();
 console.log(generator.next().value); // Output: 1
 console.log(generator.next().value); // Output: 2
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Async Generator Function:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function &ast; asyncGenerator() {
   yield 'First';
@@ -13031,7 +12937,6 @@ Promise.all([promise1, promise2])
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Destructuring Nested Objects:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let user = {
   id: 1,
@@ -13042,9 +12947,7 @@ let user = {
 };
 let {details : {name, age}} = user;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. BigInt Data Type:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const bigNumber = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1);
 // BigInt:
@@ -13062,7 +12965,6 @@ and ES6 + features like destructuring and BigInt datatype.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Memoization using Closure:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function memoize (fn) {
   const cache = {};
@@ -13084,9 +12986,7 @@ function factorial(n) {
 }<br>
 const memoizedFactorial = memoize(factorial);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Composition:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const add = x => x + 5;
 const multiply = x => x &ast; 2;
@@ -13097,14 +12997,11 @@ const addAndMultiply = compose(multiply, add);
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Flat to Flatten Nested Arrays:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let nestedArr = [1, [2, [3, 4], 5], 6];
 let flattenedArr = nestedArr.flat(Infinity); // Output: [1, 2, 3, 4, 5, 6]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Some and Every Methods:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [2, 4, 6, 7, 8];
 let allEven = numbers.every(num => num % 2 === 0); // Output: false
@@ -13114,14 +13011,11 @@ let hasOdd = numbers.some(num => num % 2 !== 0); // Output: true
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. fromEntries Method:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let entries = [['name', 'Alice'], ['age', 30]];
 letobj = Object.fromEntries(entries); // Output: {name: 'Alice', age: 30}
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. getOwnPropertyDescriptors:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {name : ’Alice'};
 const descriptors = Object. getOwnPropertyDescriptors (obj);
@@ -13130,7 +13024,6 @@ const descriptors = Object. getOwnPropertyDescriptors (obj);
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.race for Fastest Response:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData(url, timeout) {
   return Promise.race([
@@ -13139,9 +13032,7 @@ function fetchData(url, timeout) {
   ]);
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async / Await with Promise.allSettled:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   const promises = [
@@ -13156,7 +13047,6 @@ async function fetchData() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining with Nullish Coalescing:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = {
   user: {
@@ -13167,9 +13057,7 @@ const data = {
 const userName = data?.user?.name ?? 'Unknown'; // Output: Alice'
 const userAge = data?.user?.age ?? 25; // Output: 25
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Array Buffer and Typed Arrays:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const buffer = new ArrayBuffer(16);
 const intArray = new Int32Array(buffer);
@@ -13187,7 +13075,6 @@ features like optional chaining and array buffer with typed arrays.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Bind Method:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {
   x: 42,
@@ -13199,9 +13086,7 @@ const unboundGetX = obj.getX;
 const boundGetX = unboundGetX.bind(obj);
 console.log(boundGetX()); // Output: 42
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Resolved Promises:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const immediatePromise = Promise.resolve('Immediate resolution');
 immediatePromise.then(result => console.log(result)); // Output: 'Immediate resolution'
@@ -13210,14 +13095,11 @@ immediatePromise.then(result => console.log(result)); // Output: 'Immediate reso
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.findIndex:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [5,12,8,130,44];
 const index = array.findIndex(element => element > 10); // Output: 1 (index of first element > 10)
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.fill:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [1, 2, 3, 4, 5];
 array.fill(0, 2, 4); // Fills array from index 2 to index 4 with value 0
@@ -13226,14 +13108,11 @@ array.fill(0, 2, 4); // Fills array from index 2 to index 4 with value 0
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.entries:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {foo: 'bar', baz: 42};
 const entries = Object.entries(obj); // Output: [['foo', 'bar'], ['baz', 42]]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. preventExtensions:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {prop: 'value'};
 Object.preventExtensions(obj);
@@ -13243,7 +13122,6 @@ obj.newProp = 10; // Cannot add new properties to obj
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.allSettled for All Promise States:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = &lbrack;
   Promise.resolve('Resolved'),
@@ -13253,9 +13131,7 @@ const promises = &lbrack;
 Promise.allSettled(promises)
   .then(results => console.log(results));
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Rejected Promise:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function throwError () {
   throw new Error('Error thrown from async function');
@@ -13266,20 +13142,16 @@ throwError().catch(error => console.error(error.message)); // Output: 'Error thr
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Numeric Separators for Readability:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const billion = 1_000_000_000;
 const binary = Ob1010_0001;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Promise.finally Method:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 Promise.resolve('Success')
   .finally(() => console.log('Finally block executed'))
   .then(result => console.log(result)); // Output: 'Success'
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
@@ -13292,7 +13164,6 @@ features like numeric separators and Promise.finally method.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Caching using Memoization:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const memoize = (fn) => {
   const cache = {};
@@ -13309,9 +13180,8 @@ const memoizedSum = memoize(sum);<br>
 console.log(memoizedSum(2, 3 )); // Output: Calculating sum ... 5
 console.log(memoizedSum(2, 3 )); // Output: 5 ( Retrieved from cache )
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>2. Function Throttling:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const throttle = (func, limit) => {
   let inThrottle;
@@ -13334,14 +13204,12 @@ const throttled = throttle(throttledFunc, 3000);
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array. from with Mapping and Filtering:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [1, 2, 3, 4, 5, 6];
 const new Array = Array.from(numbers, x => x &ast; 2 ).filter (x => x > 5); // Output: [6, 8, 10, 12]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>4. Using Array. reduceRight:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [1, 2, 3, 4];
 const sum = array.reduceRight((acc, curr) => acc + curr, 0); // Output: 10
@@ -13350,7 +13218,6 @@ const sum = array.reduceRight((acc, curr) => acc + curr, 0); // Output: 10
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. fromEntries with Map:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const entries = new Map([
   ['name', 'Alice'],
@@ -13358,9 +13225,8 @@ const entries = new Map([
 ]);
 const obj = Object.fromEntries(entries); // Output: {name: 'Alice', age: 30}
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>6. Object. seal and Object. isSealed:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {name: 'Alice'};
 Object.seal(obj);
@@ -13370,7 +13236,6 @@ console.log(Object.isSealed(obj)); // Output: true
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.any for the First Fulfilled Promise:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
   Promise.reject('Rejected1'),
@@ -13380,9 +13245,8 @@ const promises = [
 Promise.any(promises)
   .then(result => console.log(result)); // Output: 'Resolved2'
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>8. Async Function Using for ... await... of:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function processitems(items) {
   for await(let item of items) {
@@ -13394,21 +13258,19 @@ async function processitems(items) {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Dynamic Import for Modules:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function loadModule() {
   const module = await import('./module.js&ast;);
   module.doSomething();
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>10. Nullish Coalescing Operator:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const x = null;
 const y = x??'default value'; // Output: 'default value'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -13420,15 +13282,13 @@ features like dynamic import and nullish coalescing operator.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Partial Application of Functions:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const multiply = (a, b) => a &ast; b;
 const partialMultiplyByTwo = multiply.bind(null, 2);
 console.log(partialMultiplyByTwo(5)); // Output: 10
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>2. Debouncing Function:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const debounce = (func, delay) => {
   let timeout;
@@ -13448,14 +13308,12 @@ const debouncedInputHandler = debounce(handleInput, 300);
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.flat to Flatten Arrays:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const nestedArray = [1, [2, [3]], 4, [5]];
 const flatArray = nestedArray.flat(Infinity); // Output: [ 1, 2, 3, 4, 5 ]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>4. Using Array.slice to Clone Arrays:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const originalArray = [1, 2, 3, 4];
 const clonedArray = originalArray.slice(); // Clones the originalArray
@@ -13464,14 +13322,12 @@ const clonedArray = originalArray.slice(); // Clones the originalArray
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.keys with Mapping:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 constobj = {a: l,b: 2,c: 3};
 const mappedObj = Object.fromEntries(Object.keys(obj).map(key => [key, obj[key] &ast; 2]));
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>6. Object.is for Strict Equality Comparison:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(Object.is(5, 5)); // Output: true
 console.log(Object.is(5, '5')); // Output: false
@@ -13480,7 +13336,6 @@ console.log(Object.is(5, '5')); // Output: false
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.allSettled with Optional Chaining:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
   Promise.resolve({name: 'Alice', age: 30}),
@@ -13489,9 +13344,8 @@ const promises = [
 ];
 const results = await Promise.allSettled(promises);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>8. Async Generator Function:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function &ast; asyncGenerator() {
   yield 'First';
@@ -13508,15 +13362,13 @@ async function &ast; asyncGenerator() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining for Nested Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const user = {address: {city: 'New York'}};
 const city = user.address?.city; // Output: 'New York'
 const zipCode = user.address?.zipCode?? 'Not available'; // Output: 'Not available'
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>10. BigInt for Large Integer Values:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const bigNumber = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1); // BigInt: 9007199254740992n + 1n
 </pre>
@@ -13528,7 +13380,6 @@ features like optional chaining and BigInt.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Currying Function:</h4>
-
 <pre>
 const multiply = (a) => (b) => a &ast; b;
 const multiplyByTwo = multiply(2);
@@ -13536,7 +13387,6 @@ console.log(multiplyByTwo(5)); // Output: 10
 </pre>
 
 <h4>2. Function Memoization Using Closures:</h4>
-
 <pre>
 const memoize = (func) => {
   const cache = {};
@@ -13557,14 +13407,12 @@ console.log(memoizedSum(2, 3)); // Output: 5 (Retrieved from cache)
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.reduce with Initial Value:</h4>
-
 <pre>
 const array = [1, 2, 3, 4, 5];
 const sum = array.reduce((acc, curr) => acc + curr, 0); // Output: 15
 </pre>
 
 <h4>4. Array.findIndex with Custom Predicate:</h4>
-
 <pre>
 const numbers = [10, 20, 30, 40, 50];
 const index = numbers.findIndex(num => num > 25); // Output: 2 (Index of first element > 25)
@@ -13573,7 +13421,6 @@ const index = numbers.findIndex(num => num > 25); // Output: 2 (Index of first e
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object.entries with Object.fromEntries:</h4>
-
 <pre>
 const obj = {name: 'Alice', age: 30};
 const entries = Object.entries(obj); // Output: [['name', 'Alice'], ['age', 30]]
@@ -13581,7 +13428,6 @@ const reconstructedObj = Object.fromEntries(entries);
 </pre>
 
 <h4>6. Object.freeze for Immutable Objects:</h4>
-
 <pre>
 const obj = {prop: 'value'};
 Object.freeze(obj);
@@ -13591,7 +13437,6 @@ obj.prop = 'newValue'; // Assignment not allowed in a frozen object
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.resolve and Promise.reject:</h4>
-
 <pre>
 const resolvedPromise = Promise.resolve('Resolved');
 const rejectedPromise = Promise.reject('Rejected');
@@ -13600,7 +13445,6 @@ rejectedPromise.catch(error => console.error(error)); // Output: 'Rejected'
 </pre>
 
 <h4>8. Async Function Returning Resolved Promise:</h4>
-
 <pre>
 async function returnResolved() {
   return 'Resolved from async function';
@@ -13617,7 +13461,6 @@ console.log(first, second, rest); // Output: 12 [ 3,4, 5 ]
 </pre>
 
 <h4>10. Rest Parameters in Functions:</h4>
-
 <pre>
 const sum = (... args) => args.reduce((acc, curr) => acc + curr, 0);
 console.log(sum(1, 2, 3, 4, 5)); // Output: 15
@@ -13628,7 +13471,6 @@ manipulations, object methods, promises and async / await functionalities.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Composition with Multiple Functions:</h4>
-
 <pre>
 const add = (x, y) => x + y;
 const multiply = (x, y) => x &ast; y;
@@ -13638,7 +13480,6 @@ console.log(addAndMultiply(3, 4)); // Output :21(3+4&ast;3)
 </pre>
 
 <h4>2. Using Function.toString() to Get Function Source Code:</h4>
-
 <pre>
 function greet() {
   console.log('Hello!');
@@ -13650,7 +13491,6 @@ console.log(functionsource); // Output:" function greet() {console.log('Hello!')
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Array.flatMap for Flattening and Mapping:</h4>
-
 <pre>
 const arr = [1, 2, 3];
 const mappedAndFlattened = arr.flatMap(x => [x &ast; 2, x &ast; 3]);
@@ -13658,7 +13498,6 @@ console.log(mappedAndFlattened); // Output: [2, 3, 4, 6, 6, 9]
 </pre>
 
 <h4>4. Using Array.some with Custom Predicate:</h4>
-
 <pre>
 const numbers = [5, 10, 15, 20];
 const isEvenPresent = numbers.some(num => num % 2 === 0); // Output: true
@@ -13667,14 +13506,12 @@ const isEvenPresent = numbers.some(num => num % 2 === 0); // Output: true
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.keys to Get Object's Own Properties:</h4>
-
 <pre>
 const obj = {a: 1,b: 2,c: 3);
 const keys = Object.keys(obj); // Output: ['a', 'b', 'c']
 </pre>
 
 <h4>6. Object.setPrototypeOf for Dynamic Prototype Setting:</h4>
-
 <pre>
 const protoObj = {
   greet() {
@@ -13689,7 +13526,6 @@ newObj.greet(); // Output: 'Greetings!'
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.race to Get Fastest Resolved Promise:</h4>
-
 <pre>
 const promise1 = new Promise((resolve) => setTimeout(resolve, 1000, 'First'));
 const promise2 = new Promise((resolve) => setTimeout(resolve, 500, 'Second'));<br>
@@ -13699,7 +13535,6 @@ Promise.race([promise1, promise2]).then((value) => {
 </pre>
 
 <h4>8. Async Function Using try... catch for Error Handling:</h4>
-
 <pre>
 async function fetchData() {
   try {
@@ -13715,7 +13550,6 @@ async function fetchData() {
 <h4>ES6 + Features:<//h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Template Literals for Dynamic Strings:</h4>
-
 <pre>
 const name = 'Alice';
 const age = 30;
@@ -13723,7 +13557,6 @@ console.log(`My name is ${name} and I'm ${age} years old.`);
 </pre>
 
 <h4>10. Array Spread Operator for Concatenation:</h4>
-
 <pre>
 const arrl = [1, 2, 3];
 const arr2 = [4, 5, 6];
@@ -13741,7 +13574,6 @@ features like template literals and array spread operator.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Returning Functions - Higher-Order Functions:</h4>
-
 <pre>
 const add = (x) => (y) => x + y;
 const addTwo = add(2);
@@ -13749,7 +13581,6 @@ console.log(addTwo(3)); // Output: 5
 </pre>
 
 <h4>2. Function That Delays Execution:</h4>
-
 <pre>
 const delayExecution = (time) => {
   return new Promise ((resolve) => {
@@ -13762,14 +13593,12 @@ delayExecution(2000).then(() => console.log('Delayed execution')); // Output aft
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Array.every with Custom Predicate:</h4>
-
 <pre>
 const numbers = [10, 20, 30];
 const allGreaterThanFive = numbers.every(num => num > 5); // Output: true
 </pre>
 
 <h4>4. Using Array.reverse to Reverse an Array:</h4>
-
 <pre>
 const array = [1, 2, 3, 4, 5];
 const reversedArray = array.slice().reverse(); // Output: [5, 4, 3, 2, 1]
@@ -13778,14 +13607,12 @@ const reversedArray = array.slice().reverse(); // Output: [5, 4, 3, 2, 1]
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.fromEntries to Convert Array to Object:</h4>
-
 <pre>
 const entries = [[’a',1],['b',2],['c',3]];
 const obj = Object.fromEntries(entries); // Output: {a: 1, b: 2, c: 3}
 </pre>
 
 <h4>6. Object.assign for Merging Objects:</h4>
-
 <pre>
 constobjl = {a: l,b: 2};
 constobj2 = {b: 3,c: 4};
@@ -13795,13 +13622,11 @@ const mergedObj = Object.assign({}, objl, obj2); // Output: {a: l,b: 3,c: 4}
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.resolve with Then Method:</h4>
-
 <pre>
 Promise.resolve('Resolved value').then(value => console.log(value)); // Output: 'Resolved value'
 </pre>
 
 <h4>8. Async Function with Promise.all for Parallel Execution:</h4>
-
 <pre>
 async function fetchData() {
   const [datal, data2] = await Promise.all([
@@ -13815,7 +13640,6 @@ async function fetchData() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Computed Property Names in Objects:</h4>
-
 <pre>
 const key = 'dynamicKey';
 const obj = {
@@ -13825,7 +13649,6 @@ console.log(obj, dynamicKey); // Output: 'Value based on dynamic key'
 </pre>
 
 <h4>10. Array.find for Finding Elements in an Array:</h4>
-
 <pre>
 const users = [
   {id: l, name: 'Alice'},
@@ -13846,7 +13669,6 @@ features like computed property names and array. find method.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Returning Another Function - Closure Example:</h4>
-
 <pre>
 function outerFunction(x) {
   function innerFunction(y) {
@@ -13859,7 +13681,6 @@ console.log(addFive(3)); // Output: 8
 </pre>
 
 <h4>2. Recursive Function for Factorial Calculation:</h4>
-
 <pre>
 function factorial (n) {
   if(n === 0 || n === 1) {
@@ -13873,14 +13694,12 @@ console.log(factorial(5)); // Output: 120
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.slice() for Subarray Creation:</h4>
-
 <pre>
 const arr = [1, 2, 3, 4, 5];
 const subArray = arr.slice(2, 4); // Output: [3, 4]
 </pre>
 
 <h4>4. Using Array.includes() for Checking Array Elements:</h4>
-
 <pre>
 const fruits = ['apple', 'banana', 'orange'];
 const hasBanana = fruits.includes('banana'); // Output: true
@@ -13889,14 +13708,12 @@ const hasBanana = fruits.includes('banana'); // Output: true
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. keys () to Get Object Keys:</h4>
-
 <pre>
 const obj = {a: 1, b: 2, c: 3};
 const keys = Object.keys(obj); // Output: ['a', 'b', 'c']
 </pre>
 
 <h4>6. Object.defineProperty() for Object Property Definition:</h4>
-
 <pre>
 const obj = {};
 Object.defineProperty(obj, 'prop', {
@@ -13908,7 +13725,6 @@ Object.defineProperty(obj, 'prop', {
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.all() for Multiple Promises Handling:</h4>
-
 <pre>
 const promise1 = Promise.resolve('Resolved1');
 const promise2 = Promise.resolve('Resolved2');
@@ -13918,7 +13734,6 @@ Promise.all([promise1, promise2]).then (values => {
 </pre>
 
 <h4>8. Async / Await with Promise.catch() for Error Handling:</h4>
-
 <pre>
 async function fetchUserData() {
   try {
@@ -13934,7 +13749,6 @@ async function fetchUserData() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Object Destructuring for Variable Assignment:</h4>
-
 <pre>
 const user = {name: 'Alice', age: 30};
 const {name, age} = user;
@@ -13942,7 +13756,6 @@ console.log(name, age); // Output: 'Alice' 30
 </pre>
 
 <h4>10. Arrow Functions for Concise Function Definitions:</h4>
-
 <pre>
 const sum = (a, b) => a + b;
 console.log(sum(2,3)); // Output: 5
@@ -13959,7 +13772,6 @@ ES6 + features like object destructuring and arrow functions.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. IIFE (Immediately Invoked Function Expression):</h4>
-
 <pre>
 (function() {
   const localVar = 'Local variable';
@@ -13968,7 +13780,6 @@ ES6 + features like object destructuring and arrow functions.</p>
 </pre>
 
 <h4>2. Function that Returns Multiple Values:</h4>
-
 <pre>
 function calculateValues(x, y) {
   return [x + y, x &ast; y, x / y];
@@ -13980,14 +13791,12 @@ console.log(sum, product, division); // Output: 15 50 2
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.map() for Transformation:</h4>
-
 <pre>
 const numbers = [1, 2, 3, 4, 5];
 const doubledNumbers = numbers.map(num => num &ast; 2); // Output: [2, 4, 6, 8, 10]
 </pre>
 
 <h4>4. Array. find () to Get First Matching Element:</h4>
-
 <pre>
 const users = [
   {id: 1, name: 'Alice'},
@@ -14001,7 +13810,6 @@ console.log(user); // Output: {id: 2, name: 'Bob'}
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object.freeze() to Prevent Object Modification:</h4>
-
 <pre>
 const obj = {prop: 'value'};
 Object.freeze(obj);
@@ -14009,7 +13817,6 @@ obj.prop = 'new value'; // This change won't take effect due to object freezing
 </pre>
 
 <h4>6. Using Object.values() to Get Object Values:</h4>
-
 <pre>
 const obj = {a: 1,b: 2,c: 3};
 const values = Object.values(obj); // Output: [1, 2, 3]
@@ -14042,14 +13849,12 @@ async function fetchData() {
 <h4>ES6 (MS POS) + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining for Object Properties:</h4>
-
 <pre>
 const user = {profile: {email: 'user@example.com'}};
 const userEmail = user?.profile?.email; // Output: 'user@example.com'
 </pre>
 
 <h4>10. Promise.finally () for Cleanup Tasks:</h4>
-
 <pre>
 fetch ('https://api.example.com/data')
   .then(response => response.json())
@@ -14063,7 +13868,6 @@ features like optional chaining and promise finally.</p>
 <h4>Advanced DOM Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating and Appending DOM Elements:</h4>
-
 <pre>
 // Create a new paragraph element
 const paragraph = document.createElement('p');
@@ -14075,7 +13879,6 @@ container.appendchild(paragraph);
 </pre>
 
 <h4>2. Adding Event Listeners:</h4>
-
 <pre>
 const button = document.getElementById('myButton');
 button.addEventListener('click', () => {
@@ -14086,7 +13889,6 @@ button.addEventListener('click', () => {
 <h4>DOM Traversal and Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Querying Elements and Modifying Styles:</h4>
-
 <pre>
 // Select all elements with class 'box' and change their background color
 const boxes = document.querySelectorAll('.box');
@@ -14097,7 +13899,6 @@ const boxes = document.querySelectorAll('.box');
 
 <h4>4. Removing Elements from the DOM:</h4>
 <pre>
-
 const elementToRemove = document.getElementById('elementToRemove');
 if (elementToRemove) {
   elementToRemove.remove();
@@ -14106,7 +13907,6 @@ if (elementToRemove) {
 <h4>Advanced Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Delegating Events using Event Bubbling:</h4>
-
 <pre>
 const list = document.getElementById('myList');
 list.addEventListener('click', (event) => {
@@ -14117,7 +13917,6 @@ list.addEventListener('click', (event) => {
 </pre>
 
 <h4>6. Creating and Dispatching Custom Events:</h4>
-
 <pre>
 const customEvent = new CustomEvent('customEventName', {detail: 'Some data'});
 document.dispatchEvent(customEvent);
@@ -14130,14 +13929,12 @@ console.log(`Custom event triggered with data: ${event.detail}`);
 <h4>DOM Content Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Changing Inner HTML of Elements:</h4>
-
 <pre>
 const element = document.getElementById('myElement');
 element.innerHTML = '&lt;strong&gt;New HTML content&lt;/strong&gt;';
 </pre>
 
 <h4>8. Working with Forms and Input Elements:</h4>
-
 <pre>
 const form = document.getElementById('myForm');
 form.addEventListener('submit', (event) => {
@@ -14155,7 +13952,6 @@ interactions, and custom event creation.</p>
 <h4>Input Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Input Event for Live Character Count:</h4>
-
 <pre>
 const inputField = document.getElementById('textInput');
 const charCount = document.getElementById('charCount');
@@ -14166,7 +13962,6 @@ inputField.addEventListener ('input', () => {
 </pre>
 
 <h4>2. Detecting Changes in Input Fields:</h4>
-
 <pre>
 const inputField = document. getElementById ('textinput');
 
@@ -14192,7 +13987,6 @@ passwordField.addEventListener ('input', () => {
 </pre>
 
 <h4>4. Form Submission with Validation:</h4>
-
 <pre>
 //nope
 const form = document.getElementById('myForm');
@@ -14218,7 +14012,6 @@ function validateEmail(email) {
 <h4>Advanced Input Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Range Input for Dynamic UI Updates:</h4>
-
 <pre>
 const rangeInput = document.getElementById('rangeSlider');
 const valueDisplay = document.getElementById('rangeValue');<br>
@@ -14229,7 +14022,6 @@ rangeinput.addEventListener('input', () => {
 </pre>
 
 <h4>6. Input Masking for Phone Number Input:</h4>
-
 <pre>
 //const phoneInput = document.getElementById('phoneNumber');
 const phoneInput = document.getElementById('4253192332');
@@ -14248,7 +14040,6 @@ masking and range input handling in HTML forms.</p>
 <h4>DOM Object Creation and Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating and Appending a New Image Element:</h4>
-
 <pre>
 const image = document.createElement('img');
 image.src = 'path/to/image.jpg';
@@ -14258,7 +14049,6 @@ container.appendChild(image);
 </pre>
 
 <h4>2. Adding a New Option to Select Element:</h4>
-
 <pre>
 const select = document.getElementById('mySelect');
 const option = document.createElement('option');
@@ -14271,14 +14061,12 @@ select.appendChild(option);
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Setting Custom Attributes to HTML Elements:</h4>
-
 <pre>
 const element = document.getElementById('myElement');
 element.setAttribute('data-custom', 'customValue');
 </pre>
 
 <h4>4. Removing Specific Attribute from an Element:</h4>
-
 <pre>
 const element = document.getElementById('myElement');
 element.removeAttribute('data-custom');
@@ -14295,7 +14083,6 @@ element.style.color = 'white';
 </pre>
 
 <h4>6. Adding and Removing CSS Classes:</h4>
-
 <pre>
 const element = document.getElementById('myElement');
 element.classList.add('newClass');
@@ -14305,7 +14092,6 @@ element.classList.remove('oldClass');
 <h4>Event Handling and Interaction:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Creating and Handling Mouse Hover Effects:</h4>
-
 <pre>
 const element = document.getElementById('myElement');
 element.addEventListener('mouseenter', () => {
@@ -14318,7 +14104,6 @@ element.addEventListener('mouseleave', () => {
 </pre>
 
 <h4>8. Triggering Click Event Programmatically:</h4>
-
 <pre>
 const button = document.getElementById('myButton');
 button.click(); // Triggering click event on the button element
@@ -14327,14 +14112,12 @@ button.click(); // Triggering click event on the button element
 <h4>Advanced Content Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Setting HTML Content Using InnerHTML:</h4>
-
 <pre>
 const element = document.getElementById('myElement');
 element.innerHTML = '&lt;strong&gt;New HTML Content&lt;/strong&gt;';
 </pre>
 
 <h4>10. Appending Text Node to an Element:</h4>
-
 <pre>
 const element = document.getElementById('myElement');
 const textNode = document.createTextNode('Text Content');
@@ -14348,7 +14131,6 @@ event handling, and content manipulation.</p>
 <h4>Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Keyboard Event Handling - Key Press:</h4>
-
 <pre>
 document.addEventListener('keypress', (event) => {
   console.log(`Key pressed: ${event.key}`);
@@ -14356,7 +14138,6 @@ document.addEventListener('keypress', (event) => {
 </pre>
 
 <h4>2. Handling Focus Events - Input Focus and Blur:</h4>
-
 <pre>
 const inputField = document.getElementById('mylnput');
 
@@ -14372,7 +14153,6 @@ inputField.addEventListener('blur', () => {
 <h4>Event Delegation and Bubbling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Event Delegation with Click Events:</h4>
-
 <pre>
 const list = document.getElementById('myList');<br>
 list.addEventListener('click', (event) => {
@@ -14382,7 +14162,6 @@ list.addEventListener('click', (event) => {
 </pre>
 
 <h4>4. Event Bubbling - Click Event on Parent Element:</h4>
-
 <pre>
 const parent = document.getElementById('parentElement');
 
@@ -14394,7 +14173,6 @@ parent.addEventListener('click', (event) => {
 <h4>Window and Document Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Window Load Event:</h4>
-
 <pre>
 window.addEventListener ('load', () => {
   console.log('Page fully loaded');
@@ -14402,7 +14180,6 @@ window.addEventListener ('load', () => {
 </pre>
 
 <h4>6. Document Ready Event ( DOMContentLoaded):</h4>
-
 <pre>
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded and parsed');
@@ -14412,7 +14189,6 @@ document.addEventListener('DOMContentLoaded', () => {
 <h4>Form Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Form Submission and Preventing Default Behavior:</h4>
-
 <pre>
 const form = document.getElementById('myForm');<br>
 form.addEventListener('submit', (event) => {
@@ -14423,7 +14199,6 @@ form.addEventListener('submit', (event) => {
 </pre>
 
 <h4>8. Input Event for Real - time Validation:</h4>
-
 <pre>
 const emailField = document.getElementById('email');<br>
 emailField.addEventListener('input', () => {
@@ -14446,7 +14221,6 @@ form - related events for submission and input validation.</p>
 <h4>Browser Object Model (BOM) Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Opening a New Browser Window:</h4>
-
 <pre>
 const openWindowButton = document.getElementById('openWindowButton');
 
@@ -14456,7 +14230,6 @@ openWindowButton.addEventListener('click', () => {
 </pre>
 
 <h4>2. Closing a Browser Window:</h4>
-
 <pre>
 const closeWindowButton = document.getElementById('closeWindowButton');
 
@@ -14468,7 +14241,6 @@ closeWindowButton.addEventListener('click', () => {
 <h4>Navigator Object Exploration:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Accessing Browser Information:</h4>
-
 <pre>
 console.log(`Browser name: ${navigator.appName}`);
 console.log(`Browser version: ${navigator.appVersion}`);
@@ -14477,7 +14249,6 @@ console.log(`Language: ${navigator.language}`);
 </pre>
 
 <h4>4. Checking Geolocation Availability:</h4>
-
 <pre>
 if ('geolocation' in navigator) {
   console.log('Geolocation is supported');
@@ -14489,7 +14260,6 @@ if ('geolocation' in navigator) {
 <h4>Location Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Redirecting to Another Page:</h4>
-
 <pre>
 function redirectToPage() {
   window.location.href = 'https://sayhello.bauska.org';
@@ -14497,7 +14267,6 @@ function redirectToPage() {
 </pre>
 
 <h4>6. Accessing Current URL Information:</h4>
-
 <pre>
 console.log(`Current URL: ${window.location.href}`);
 console.log(`Hostname: ${window.location.hostname}`);
@@ -14508,14 +14277,12 @@ console.log(`Pathname: ${window.location.pathname}`);
 <h4>Screen Object Attributes:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Retrieving Screen Dimensions:</h4>
-
 <pre>
 console.log(`Screen width: ${window.screen.width}`);
 console.log(`Screen height: ${window.screen.height}`);
 </pre>
 
 <h4>8. Opening in Full Screen Mode:</h4>
-
 <pre>
 const fullScreenButton = document.getElementById('fullScreenButton');
 
@@ -14580,9 +14347,10 @@ in the Explorer panel New File > script.js.</p>
 &gt; New Terminal), navigate to your project directory, and run the JavaScript file using 
 Node.js.</p>
 <h4>For example:</h4>
-<h5>bash code</h5>
 
+<h5>bash code</h5>
 <pre>node script.js</pre>
+
 <p>To execute JavaScript code in a browser, create an HTML file (index.html) and link 
 your JavaScript file in it using the &lt;script&gt; tag. Open the HTML file in your 
 preferred web browser.</p>
@@ -15811,6 +15579,7 @@ console.log(`Trimmed String: '${trimmedString}'`);
 <p>This program checks whether a string contains a substring in JavaScript using the 
 <span class="consolas">includes()</span> method or the
 <span class="consolas">indexOf()</span> method.</p>
+
 <pre>
 // Example string
 let mainString = "Hello, World!";
@@ -15848,6 +15617,7 @@ console.log(`Case-insensitive comparison: ${caselnsensitiveComparison}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program encode a string to Base64 in JavaScript, you can use the 
 <span class="consolas">btoa()</span> function.</p>
+
 <pre>
 let originalstring = "Hello, !";
 // Encode the string to Base64 (for non-ASCII characters)
@@ -15935,6 +15705,7 @@ if (isLeapYear(yearToCheck)) {
 formatted string manually. The <span class="consolas">toLocaleDateString()</span> method 
 provides a way to format a date based on the user's locale, including options for 
 formatting the date, such as specifying the date style and time zone.</p>
+
 <pre>
 // Example date
 let currentDate = new Date();
@@ -15955,6 +15726,7 @@ console.log(`Formatted Date: ${formattedDate}`);
 <p>Display the current date in JavaScript, you can use the 
 <span class="consolas">Date</span> object to get the current date and time and then
 format it as needed.</p>
+
 <pre>
 // Get the current date
 let currentDate = new Date();
@@ -15969,17 +15741,18 @@ console.log(' Current Date: ${formattedDate}');
 <p>Compare the values of two dates using standard comparison operators ( 
 <span class="consolas">&lt; , &lt;= , &gt; , &gt;=</span> ).
 
-// Example dates
 <pre>
-letdatel = new Date('2022-01-0r);
+// Example dates
+let datel = new Date('2022-01-0r);
 let date2 = new Date('2023-01-0r);
+
 // Compare dates
 if (date 1 < date2) {
-console.log(' $ {datel} is earlier than ${date2}');
+  console.log(` $ {datel} is earlier than ${date2}`);
 } else if (datel > date2) {
-console.log(' ${datel} is later than ${date2}');
+  console.log(` ${datel} is later than ${date2}`);
 } else {
-console.log(' ${datel} is equal to ${date2}');
+  console.log(` ${datel} is equal to ${date2}`);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15988,6 +15761,7 @@ console.log(' ${datel} is equal to ${date2}');
 <p>Create a countdown timer in JavaScript, you can use the 
 <span class="consolas">setlnterval()</span> function to update the timer at regular 
 intervals and calculate the remaining time.</p>
+
 <pre>
 // Set the target date for the countdown
 consttargetDate = new Date('2O23-Ol-Ol OO:OO:OO').getTime();
@@ -16018,6 +15792,7 @@ function updateCountdown() {
 <p>Remove a specific item from an array in JavaScript, you can use the 
 <span class="consolas">filter()</span> method or the 
 <span class="consolas">splice()</span> method:</p>
+
 <pre>
 // Example array
 let original Array = &lbrack;1, 2, 3,4, 5&rbrack;;
@@ -16037,6 +15812,7 @@ console.log("Original Array:", originalArray);
 <p>Check if an array contains a specified value in JavaScript, you can use the 
 <span class="consolas">includes()</span> method or the
 <span class="consolas">indexOf()</span> method.</p>
+
 <pre>
 // Example array
 let my Array = &lbrack;1, 2, 3,4, 5&rbrack;;
@@ -16052,6 +15828,7 @@ console.log(' Does the array include ${valueToCheck}? ${containsValue}');
 <p>Insert an item into an array in JavaScript, you can use the 
 <span class="consolas">push()</span> method to add the item at the end of the array, or 
 the <span class="consolas">splice()</span> method to insert the item at a specific index.</p>
+
 <pre>
 // Example array
 let myArray = &lbrack;1, 2, 3,4, 5&rbrack;;
@@ -16067,6 +15844,7 @@ console.log("Array after inserting:", myArray);
 <p>To get a random item from an array in JavaScript, you can use the 
 <span class="consolas">Math.random()</span> function to generate a random index within 
 the array length.</p>
+
 <pre>
 // Example array
 letmyArray = &lbrack;1, 2, 3,4, 5, 6, 7, 8, 9,10&rbrack;;
@@ -16082,6 +15860,7 @@ console.log("Random Item:", randomitem);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the intersection (common elements) between two arrays in JavaScript, you can 
 use various methods.</p>
+
 <pre>
 // Example arrays
 let arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
@@ -16098,6 +15877,7 @@ console.log("Intersection:", intersection);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To split an array into smaller chunks in JavaScript, you can use a loop and the 
 <span class="consolas">slice()</span> method.</p>
+
 <pre>
 function chunkArray(array, chunksize) {
   let result = &lbrack;&rbrack;;
@@ -16121,6 +15901,7 @@ console.log("Chunks:", chunks);
 can use various methods. One common approach is to use the <span class="consolas">split()
 </span> method to split the file name based on the dot <span class="consolas">(.)</span>
 and then extract the last part of the resulting array.</p>
+
 <pre>
 function getFileExtension(fileName) {
 
@@ -16143,6 +15924,7 @@ console.log('File Extension: ${fileExtension}');
 <p>To check if a variable is <span class="consolas">undefined</span> or 
 <span class="consolas">null</span> in JavaScript, you can use a simple 
 conditional statement.</p>
+
 <pre>
 // Example variable
 let my Variable = null;
@@ -16159,6 +15941,7 @@ if (myVariable === undefined || myVariable === null) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random number between two specific numbers in JavaScript, you can use 
 the <span class="consolas">Math.random()</span> function along with some arithmetic.</p>
+
 <pre>
 function getRandomNumber(min, max) {
   // Generate a random decimal between 0 (inclusive) and 1 (exclusive)
@@ -16178,6 +15961,7 @@ console.log("Random Number:", randomNum);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To get the current URL in a web browser using JavaScript, you can use the 
 <span class="consolas">window.location</span> object.</p>
+
 <pre>
 // Get the domain
 const domain = window.location.hostname;
@@ -16197,6 +15981,7 @@ console.log("Query Parameters:", queryParams);
 <h2 id="js67">67. Validate An Email Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To validate an email address in JavaScript, you can use a regular expression.</p>
+
 <pre>
 function validateEmail(email) {
   // Regular expression for a basic email validation
@@ -16217,6 +16002,7 @@ console.log("Email is not valid");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if a variable is of the function type in JavaScript, you can use the 
 <span class="consolas">typeof</span> operator.</p>
+
 <pre>
 // Example variable
 let myFunction = function() {
@@ -16234,6 +16020,7 @@ if (typeof myFunction === 'function') {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can work with constants using the <span class="consolas">const</span> keyword to declare variables whose values 
 should not be reassigned.</p>
+
 <pre>
 // Define a constant
 const PI = 3.14159;
@@ -16249,6 +16036,7 @@ console.log("The value of PI is:", PI);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To pass parameters to a function inside <span class="consolas">setTimeout()</span>, you can use an anonymous 
 function or an arrow function.</p>
+
 <pre>
 function myFunction(parameter) {
   console.log('Parameter received:", parameter);
@@ -16264,6 +16052,7 @@ setTimeout(function() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a range of numbers or characters in JavaScript, you can use a loop or 
 other methods depending on your specific requirements.</p>
+
 <pre>
 function generateNumberRange(start, end) {
   let result = &lbrack;&rbrack;;
@@ -16283,6 +16072,7 @@ console.log("Number Range:", numberRange);
 programming languages do, where you can define multiple functions with the same name but 
 different parameter types or counts. However, you can achieve similar behavior in 
 JavaScript by checking the number or types of arguments within a function.</p>
+
 <pre>
 function exampleFunction() {
   if (arguments.length === 0) {
@@ -16310,6 +16100,7 @@ exampleFunction(true, "world"); // Invalid arguments
 <h2 id="js73">73. Implement a Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can implement a basic stack data structure in JavaScript using an array.</p>
+
 <pre>
 class Stack {
   constructor) {
@@ -16365,6 +16156,7 @@ console.log("Is the stack empty?", stack.isEmpty()); // Outputs: false
 <h2 id="js74">74. Implement a Queue</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can implement a basic queue data structure in JavaScript using an array.</p>
+
 <pre>
 class Queue {
   constructor) {
@@ -16418,6 +16210,7 @@ console.log("Is the queue empty?", queue.isEmpty()); // Outputs: false
 <h2 id="js75">75. Check if a Number is Float or Integer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can check if a number is a float or an integer by examining its fractional part.</p>
+
 <pre>
 function checkNumberType(number) {
   // Check if the number has a fractional part
@@ -16441,6 +16234,7 @@ checkNumberType("abc"); // Outputs: abc is not a valid number.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can pass a function as a parameter to another function. This allows you to create 
 higher-order functions, which are functions that can accept other functions as arguments.</p>
+
 <pre>
 // Function that takes another function as a parameter
 function operateOnNumbers(a, b, operation) {
@@ -16466,6 +16260,7 @@ console.log("Result of multiplication:", result2); // Outputs: 15
 <p>To get the dimensions (width and height) of an image in JavaScript, you can create an 
 <span class="consolas">Image></span> object, load the image, and then access the 
 <span class="consolas">width</span> and <span class="consolas">height</span> properties.</p>
+
 <pre>
 function getlmageDimensions(imageSrc) {
   // Create an Image object
@@ -16496,6 +16291,7 @@ getlmageDimensions(imageUrl);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To remove all whitespaces from a text in JavaScript, you can use a regular expression 
 and the <span class="consolas">replace</span> method.</p>
+
 <pre>
 function removeWhitespaces(inputText) {
   // Use a regular expression to replace all whitespaces with an empty string
@@ -16513,6 +16309,7 @@ console.log("Text without Whitespaces:", textWithoutWhitespaces);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Writing to the console in JavaScript is typically done using the 
 <span class="consolas">console.log()</span> method.</p>
+
 <pre>
 // Write a message to the console
 console.log("Hello, world!");
@@ -16532,6 +16329,7 @@ console.log("Full Name:", firstName, lastName);
 <p>To convert a JavaScript <span class="consolas">Date</span> object to a numeric value 
 representing the number of milliseconds since the Unix Epoch (January 1,1970), you can use 
 the <span class="consolas">getTime()</span> method.</p>
+
 <pre>
 // Create a Date object
 const currentDate = new Date();
@@ -16546,6 +16344,7 @@ console.log("Numeric Representation:", numericDate);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the average of two numbers in JavaScript, you can add the two numbers together 
 and then divide the sum by 2.</p>
+
 <pre>
 function findAverage(numl, num2) {
   // Calculate the sum of the two numbers
@@ -16566,6 +16365,7 @@ console.log(`The average of ${number1} and ${number2} is: ${result}`);
 <h2 id="js82">82. Calculate the Area of a Circle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculate the area of a circle in JavaScript:</p>
+
 <pre>
 function calculateCircleArea(radius) {
   // Check if the radius is a valid number
@@ -16587,6 +16387,7 @@ console.log(`The area of a circle with radius ${radius} is: ${area}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random color in JavaScript, you can create a function that generates 
 random values for the red, green, and blue components of the color.</p>
+
 <pre>
 function generateRandomColor() {
   // Generate random values for red, green, and blue components
@@ -16609,6 +16410,7 @@ console.log("Random Color:", randomColor);
 <p>To check if a string is empty in JavaScript, you can use the 
 <span class="consolas">length</span> property of the string. If the length is zero,
 it means the string is empty.</p>
+
 <pre>
 function isEmptyString(str) {
   return str.length === 0;
@@ -16626,6 +16428,7 @@ console.log("Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outpu
 <p>To capitalize the first letter of a string in JavaScript, you can use a combination of the 
 <span class="consolas">charAt()</span>,
 <span class="consolas">toUpperCase()</span>, and <span class="consolas">slice()</span> methods.</p>
+
 <pre>
 function capitalizeFirstLetter(str) {
   // Check if the string is not empty
@@ -16649,6 +16452,7 @@ console.log("Capitalized String:", capitalizedString);
 <span class="consolas">Math.max()</span> function along with
 the spread operator (<span class="consolas">...</span>) to pass the array elements as 
 individual arguments.</p>
+
 <pre>
 function findMaxElement(arr) {
   // Check if the array is not empty
@@ -16673,6 +16477,7 @@ console.log("Maximum Element:", maxNumber);
 <p>To reverse an array in JavaScript, you can use the 
 <span class="consolas">reverse()</span> method, which is available for arrays. This
 method reverses the elements of an array in place.</p>
+
 <pre>
 function reverseArray(arr) {
   // Use the reverse() method to reverse the array in place
@@ -16691,6 +16496,7 @@ console.log("Reversed Array:", reversedArray);
 <p>To calculate the power of a number in JavaScript, you can use the 
 <span class="consolas">Math.pow()</span> method or the exponentiation
 operator (<span class="consolas">&ast;&ast;</span>).</p>
+
 <pre>
 // Using Math.pow()
 function calculatePowerWithMathPow(base, exponent) {
@@ -16716,6 +16522,7 @@ console.log(`${baseNumber} to the power of ${exponentNumber} using the exponenti
 <span class="consolas">Math.min()</span> function along with the
 spread operator (<span class="consolas">...</span>) to pass the array elements as 
 individual arguments.</p>
+
 <pre>
 function findMinElement(arr) {
   // Check if the array is not empty
@@ -16738,6 +16545,7 @@ console.log("Minimum Element:", minNumber);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a total number of minutes to hours and remaining minutes in JavaScript, you 
 can use simple mathematical operations.</p>
+
 <pre>
 function convertMinutesToHoursAndMinutes(totalMinutes) {
 // Check if the input is a valid positive number
@@ -16762,6 +16570,7 @@ console.log(`${totalMinutes} minutes is equivalent to: ${convertedTime}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the sum of digits in a number using JavaScript, you can use a loop to iterate 
 through each digit and add them together.</p>
+
 <pre>
 function sumOfDigits(number) {
   // Check if the input is a valid number
@@ -16785,6 +16594,7 @@ console.log(' The sum of digits in $ {inputNumber} is: $ {result}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if a string is a palindromic phrase in JavaScript, you can create a function 
 that removes non­ alphanumeric characters and compares the string with its reversed version.</p>
+
 <pre>
 function isPalindromicPhrase(str) {
   // Check if the input is a valid string
@@ -16807,6 +16617,7 @@ console.log(`Is "${phrase2}" a palindromic phrase? ${isPalindromicPhrase(phrase2
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random password in JavaScript, you can create a function that combines 
 random characters from various character sets.</p>
+
 <pre>
 function generateRandomPassword(length) {
   // Define character sets
@@ -16837,6 +16648,7 @@ console.log(`Generated Password: ${randomPassword}`);
 <h2 id="js94">94. Calculate Simple Interest</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Program To calculate simple interest in JavaScript:</p>
+
 <pre>
 function calculateSimpleInterest(principal, rate, time) {
   // Check if the inputs are valid positive numbers
@@ -16865,6 +16677,7 @@ console.log(`Simple Interest: $${interestAmount}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To implement a basic stopwatch in JavaScript, you can use the 
 <span class="consolas">Date</span> object to measure the elapsed time.</p>
+
 <pre>
 let startTime;
 let stopwatchinterval;
@@ -16893,6 +16706,7 @@ function updateDisplay() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A perfect number is a positive integer that is equal to the sum of its proper divisors 
 (excluding itself).</p>
+
 <pre>
 function isPerfectNumber(number) {
   // Check if the input is a positive integer
@@ -16918,6 +16732,7 @@ console.log(`Is ${testNumber} a perfect number? ${result}`);
 <h2 id="js97">97. This program calculates the Volume of a Cylinder</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the Volume of a Cylinder:</p>
+
 <pre>
 function calculateCylinderVolume(radius, height) {
   // Check if the inputs are valid positive numbers
@@ -16940,6 +16755,7 @@ console.log(`Cylinder Volume: ${cylinderVolume.toFixed(2)} cubic units`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random quote in JavaScript, you can create an array of quotes and use a function to pick a
 random quote from that array.</p>
+
 <pre>
 function generateRandomQuote() {
   const quotes = &lbrack;
@@ -16967,6 +16783,7 @@ console.log("Random Quote:", randomQuote);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the intersection of two arrays in JavaScript, you can create a function 
 that iterates through both arrays and identifies the common elements.</p>
+
 <pre>
 function findIntersection(arrl, arr2) {
 
@@ -16993,8 +16810,8 @@ console.log("Intersection of Arrays:", result);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert feet to meters in JavaScript, you can use the following conversion formula:
 <span class="consolas">Meters=Feet&ast;0.3048</span>.</p>
-
 <p>Here's a simple function that performs the conversion:</p>
+
 <pre>
 function feetToMeters(feet) {
   // Check if the input is a valid number
@@ -17016,6 +16833,7 @@ console.log(`${feetValue} feet is equal to ${metersValue.toFixed(2)} meters`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a given number of days into years, months, and remaining days in JavaScript, 
 you can use the following function:</p>
+
 <pre>
 function convertDaysToYearsMonthsDays(days) {
   // Check if the input is a valid positive number
@@ -17046,6 +16864,7 @@ console.log(`${totalDays} days is approximately ${result.years} years, ${result.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the median of an array in JavaScript, you can create a function that sorts the 
 array and then determines the median based on its length.</p>
+
 <pre>
 function findMedian(arr) {
   // Check if the input is a valid array
@@ -17074,6 +16893,7 @@ function findMedian(arr) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To calculate the distance between two points (xl, yl) and (x2, y2) in a 
 two-dimensional plane:</p>
+
 <pre>
 function calculateDistance(xl, yl, x2, y2) {
   // Check if the inputs are valid numbers
@@ -17098,6 +16918,7 @@ console.log(`The distance between (${xl}, ${y1}) and (${x2}, ${y2}) is ${result.
 <p>To check if a number is a perfect square in JavaScript, you can calculate the square 
 root of the number and then check if the square of the integer part of the square root 
 is equal to the original number.</p>
+
 <pre>
 function isPerfectSquare(number) {
   // Check if the input is a valid positive number
@@ -17120,6 +16941,7 @@ console.log(`Is ${testNumber} a perfect square? ${result}`);
 <p>To find the area of a rectangle in JavaScript, you can create a function that takes 
 the length and width as parameters and applies the formula:</p>
 <p>Area=Length x Width</p>
+
 <pre>
 function calculateRectangleArea(length, width) {
   // Check if the inputs are valid positive numbers
@@ -17141,6 +16963,7 @@ console.log(`The area of the rectangle with length ${rectangleLength} and width 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a binary number to a decimal number in JavaScript, you can create a 
 function that takes a binary string as input and calculates the decimal equivalent.</p>
+
 <pre>
 function binaryToDecimal(binaryString) {
   // Check if the input is a valid binary string
@@ -17162,6 +16985,7 @@ console.log(`The decimal equivalent of binary ${binaryNumber} is ${decimalResult
 <p>To count the number of words in a sentence in JavaScript, you can create a function 
 that splits the sentence into words and then counts the number of resulting elements in 
 the array.</p>
+
 <pre>
 function countWords(sentence) {
   // Check if the input is a valid string
@@ -17186,6 +17010,7 @@ console.log(`The sentence "${sentence}" has ${result} words.`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the union of two arrays in JavaScript, you can create a function that 
 concatenates the arrays and removes duplicate elements.</p>
+
 <pre>
 function findUnion(arrl, arr2) {
   // Check if the inputs are valid arrays
@@ -17209,6 +17034,7 @@ console.log("Union of Arrays:", result);
 and JavaScript has limitations in terms of precision. To handle large factorials, you 
 can use libraries that support arbitrary-precision arithmetic. One such library is the 
 "BigInt" type in JavaScript, which is available in modern environments.</p>
+
 <pre>
 function calculateFactorial(n) {
   // Check if the input is a valid non-negative integer
@@ -17234,6 +17060,7 @@ console.log(`The factorial of ${number} is:\n$ {result}`);
 digits, each factorialized, is equal to the number itself. To check if a number is a 
 strong number in JavaScript, you can create a function that calculates the factorial of 
 each digit and checks if their sum equals the original number.</p>
+
 <pre>
 function calculateFactorial(number) {
   let result = 1;
@@ -17265,6 +17092,7 @@ console.log(`${testNumber} is a strong number: ${result}`);
 <p>A Narcissistic Number (or Armstrong Number) is a number that is the sum of its own 
 digits each raised to the power of the number of digits. For example, 153 is a 
 narcissistic number because 1^3 + 5^3 + 3^3 equals 153.</p>
+
 <pre>
 function isNarcissisticNumber(num) {
   // Check if the input is a non-negative integer
@@ -17289,6 +17117,7 @@ console.log(`${testNumber} is a Narcissistic Number: ${result}`);
 <h2 id="js112">112. Count the Number of Consonants in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can create a JavaScript function to count the number of consonants in a given string.</p>
+
 <pre>
 function countConsonants(str) {
   // Check if the input is a valid string
@@ -17314,6 +17143,7 @@ console.log(`The number of consonants in "${testString}" is: ${result}`);
 number is a number that can be represented in the form of a triangle with dots. 
 Mathematically, a triangular number <span class="consolas">T_ n</span> is given by the 
 formula: <span class="consolas">T_n = n&ast;(n+l)/2</span>.</p>
+
 <pre>
 function isTriangularNumber(num) {
   // Check if the input is a non-negative integer
@@ -17342,6 +17172,7 @@ console.log(`${testNumber} is a triangular number: ${result}`);
 <span class="consolas">a and b</span> ) and its height ( 
 <span class="consolas">h</span> ). The formula for the area of a trapezoid is:
 <span class="consolas">Area = (a + b) &ast; h / 2</span>.</p>
+
 <pre>
 function trapezoidArea(basel, base2, height) {
   // Check if the inputs are valid numbers
@@ -17366,6 +17197,7 @@ console.log(`The area of the trapezoid is: ${result}`);
 Highest Common Factor (HCF), is the largest positive integer that divides both numbers 
 without leaving a remainder. There are different algorithms to calculate the GCD of two 
 numbers, and one commonly used algorithm is the Euclidean Algorithm.</p>
+
 <pre>
 function calculateGCD(a, b) {
   // Check if the inputs are valid numbers
@@ -17392,6 +17224,7 @@ console.log(`The GCD of ${numberl} and ${number2} is: ${gcdResult}`);
 <p>A Fibonacci number is a number in the Fibonacci sequence, which is a series of 
 numbers where each number is the sum of the two preceding ones. The sequence starts 
 with 0 and 1.</p>
+
 <pre>
 function isFibonacciNumber(num) {
   // Check if the input is a non-negative integer
@@ -17416,6 +17249,7 @@ console.log(' $ {testNumber} is a Fibonacci number: $ {result}');
 <span class="consolas">length and width</span> ). The
 formula for the perimeter of a rectangle is: 
 <span class="consolas">Perimeter = 2 &ast; (length + width)</span>.</p>
+
 <pre>
 function rectanglePerimeter(length, width) {
 // Check if the inputs are valid numbers
@@ -17435,6 +17269,7 @@ console.log(' The perimeter of the rectangle is: $ {perimeterResult}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Converting Roman numerals to numbers involves understanding the Roman numeral system 
 and its rules.</p>
+
 <pre>
 function romanToNumber(roman) {
   // Define a mapping of Roman numeral symbols to their numeric values
@@ -17476,6 +17311,7 @@ function romanToNumber(roman) {
 <p>An anagram is a word or phrase formed by rearranging the letters of another. To check 
 if two strings are anagrams, you can compare whether the characters in both strings have 
 the same frequency.</p>
+
 <pre>
 function areAnagrams(strl, str2) {
   // Check if the inputs are valid strings
@@ -17515,6 +17351,7 @@ function areAnagrams(strl, str2) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Pascal's Triangle is a triangular array of binomial coefficients. Each number in the 
 triangle is the sum of the two directly above it.</p>
+
 <pre>
 function generatePascalsTriangle(numRows) {
   // Check if the input is a positive integer
@@ -17551,6 +17388,7 @@ console.log(triangle);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Converting a decimal number to Roman numerals involves finding the combination of 
 Roman numeral symbols that represent the given decimal value.</p>
+
 <pre>
 function decimalToRoman(num) {
 
@@ -17578,10 +17416,10 @@ const romanSymbols = &lbrack;
 // Convert the decimal number to Roman numerals
 let result =
 for (const symbol of romanSymbols) {
-while (num > = symbol.value) {
-result += symbol.symbol;
-num -= symbol.value;
-}
+  while (num > = symbol.value) {
+    result += symbol.symbol;
+    num -= symbol.value;
+  }
 }
 return result;
 }
@@ -17589,13 +17427,14 @@ return result;
 // Example usage:
 const decimalNumber = 1984;
 const romanNumeral = decimalToRoman(decimalNumber);
-console.log(' The Roman numeral representation of ${decimalNumber} is: ${romanNumeral}');
+console.log(` The Roman numeral representation of ${decimalNumber} is: ${romanNumeral}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js122">122. Find the Area of a Parallelogram</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a parallelogram given the length of its base and 
 the corresponding perpendicular height.</p>
+
 <pre>
 function parallelogramArea(base, height) {
 // Check if the inputs are valid numbers
@@ -17616,6 +17455,7 @@ console.log(' The area of the parallelogram is: $ {areaResult}');
 <h2 id="js123">123. Basic Rock, Paper, Scissors Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Here's a basic implementation of a Rock, Paper, Scissors game using JavaScript.</p>
+
 <pre>
 function computerPlayO {
   const options = &lbrack;'rock', ‘paper1, 'scissors'&rbrack;;
@@ -17673,6 +17513,7 @@ function game() {
 <p>This program simulates a basic slot machine game in which three symbols are randomly 
 selected. If all three symbols are the same, the player wins; otherwise, they are 
 encouraged to try again.</p>
+
 <pre>
 // Array of symbols for the slot machine
 const symbols = &lbrack;''&rbrack;;
@@ -17706,6 +17547,7 @@ spin();
 a composite number for which the sum of its digits is equal to the sum of the prime 
 factors' digits. The sum of the prime factors' digits is computed recursively until prime 
 factors are obtained.</p>
+
 <pre>
 function isPrime(num) {
   if (num < 2) return false;
@@ -17744,6 +17586,7 @@ console.log(isSmithNumber(728)); // Output: true
 <p>This program generates a basic representation of a chessboard using characters. It 
 creates an 8x8 grid with alternating black and white squares, providing a simple visual 
 representation of a chessboard.</p>
+
 <pre>
 // Function to generate a basic chessboard
 function generateChessboard() {
@@ -17771,6 +17614,7 @@ console.log(chessboard);
 <p>This program generates a random password based on specified criteria, including the 
 length and the types of characters (uppercase letters, lowercase letters, numbers, and 
 special characters).</p>
+
 <pre>
 // Function to generate a random password
 function generateRandomPassword(length, includeUppercase, includeLowercase, includeNumbers,
@@ -17813,6 +17657,7 @@ if (randomPassword) {
 <p>This program simulates a basic maze solver that navigates through a maze represented by 
 a 2D array. The solver uses a simple depth-first search algorithm to find a path from 
 the starting point to the exit.</p>
+
 <pre>
 // Function to solve a maze using depth-first search
 function solveMaze(maze) {
@@ -17872,6 +17717,7 @@ solveMaze(maze);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a given string is a pangram or not. A pangram is a sentence 
 that contains every letter of the alphabet at least once.</p>
+
 <pre>
 // Function to check if a string is a pangram
 function isPangram(str) {
@@ -17898,6 +17744,7 @@ if (isPangram(inputString)) {
 <p>This program solves a basic 9x9 Sudoku puzzle using a backtracking algorithm. The 
 solver fills in the empty cells of the Sudoku grid by recursively trying numbers until 
 a solution is found.</p>
+
 <pre>
 // Function to check if a number can be placed in a particular cell
 function isSafe(board, row, col, num) {
@@ -17983,6 +17830,7 @@ if (solveSudoku(sudokuBoard)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program convert JavaScript objects to strings, you can use the 
 <span class="consolas">JSON.stringify()</span> method.</p>
+
 <pre>
 // Example object
 let person = {
@@ -18024,6 +17872,7 @@ console.log(' The area of the ellipse is: ${ellipseArea.toFixed(2)}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a given number is a palindrome in binary representation. 
 A palindrome in binary reads the same backward as forward.</p>
+
 <pre>
 // Function to check if a number is a palindrome in binary
 function isBinaryPalindrome(number) {
@@ -18044,6 +17893,7 @@ if (isBinaryPalindrome(numberToCheck)) {
 ( <span class="consolas">d1</span> and <span class="consolas">d2</span> ). The formula
 for the area of a rhombus is <span class="consolas">Area = (dl &ast; d2) / 2</span>, where 
 <span class="consolas">d1 and d2</span> are the lengths of the diagonals.</p>
+
 <pre>
 // Function to calculate the area of a rhombus
 function calculateRhombusArea(diagonal1, diagonal2) {
@@ -18063,6 +17913,7 @@ console.log(`The area of the rhombus is: ${rhombus Area.toFixed(2)`);
 numbers are a sequence of natural numbers that occur in various counting problems, 
 often involving recursive structures. The nth Catalan number is given by the formula:
 <span class="consolas">Cn = (2n)!/((n + l)! &ast; n!)</span>.</p>
+
 <pre>
 // Function to calculate binomial coefficient (n choose k)
 function binomialCoefficient(n, k) {
@@ -18100,6 +17951,7 @@ if (isCatalanNumber(numberToCheck)) {
 <p>The Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, is a simple 
 checksum formula used to validate various identification numbers, such as credit card 
 numbers. The algorithm is used to detect accidental errors in these numbers.</p>
+
 <pre>
 function calculateLuhnCheckDigit(input) {
   // Convert the input string to an array of digits
@@ -18134,6 +17986,7 @@ console.log(`Full Number with Check Digit: ${fullNumber}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic maze generator involves using an algorithm to generate a random maze 
 layout. One common algorithm for maze generation is the recursive backtracking algorithm.</p>
+
 <pre>
 class MazeGenerator {
   constructor(rows, cols) {
@@ -18191,6 +18044,7 @@ mazeGenerator.printMazeO;
 <p>A magic year is a year in which the product of the month and day (in two-digit form) 
 equals the last two digits of the year. For example, in the year 1978, the product of 
 the month (7) and the day (8) is 56, which matches the last two digits of the year.</p>
+
 <pre>
 function isMagicYear(year) {
 const yearStr = year.toStringO;
@@ -18213,6 +18067,7 @@ if (isMagicYear(yearToCheck)) {
 ensuring that they intersect correctly. Below is a simple JavaScript program that 
 generates a crossword puzzle with a few words. The generated puzzle is displayed in the 
 console:</p>
+
 <pre>
 class CrosswordPuzzle {
   constructor(rows, cols) {
@@ -18258,6 +18113,7 @@ crossword.printPuzzle();
 <span class="consolas">n</span> is the number of
 sides, <span class="consolas">s</span> is the side length, and 
 <span class="consolas">tan</span> is the tangent function.</p>
+
 <pre>
 function calculateRegularPolygonArea(n, s) {
   const numerator = 1 / 4 &ast; n &ast; Math.pow(s, 2);
@@ -18277,6 +18133,7 @@ console.log(`The area of the regular polygon is: ${polygonArea.toFixed(2)}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An abundant number (or excessive number) is a positive integer that is smaller than the sum of its proper
 divisors, excluding itself. The sum of proper divisors is greater than the number itself.</p>
+
 <pre>
 function getProperDivisorsSum(number) {
   let sum = 0;
@@ -18306,6 +18163,7 @@ if (isAbundantNumber(numberToCheck)) {
 <p>Creating a basic word guessing game in a console environment involves generating a 
 random word, allowing the player to make guesses, and providing feedback on correct and 
 incorrect guesses.</p>
+
 <pre>
 class WordGuessingGame {
   constructorwordList) {
@@ -18370,6 +18228,7 @@ which counts the positive integers up to a given integer
 <span class="consolas">&#934;(n) = n &ast; (1 - 1/pl) &ast; (1 - l/p2) &ast; ... &ast; 
 (1 - 1/pk)</span>, where pl, p2,..., pk are the distinct prime factors of 
 <span class="consolas">n</span>.</p>
+
 <pre>
 function eulerTotientFunction(n) {
   if(n <= 0) {
@@ -18402,6 +18261,7 @@ console.log(' Euler's Totient Function for ${n} is: $ {result}');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic memory matching game involves displaying a grid of face-down cards, 
 allowing the player to flip two cards at a time, and checking for matches.</p>
+
 <pre>
 class MemoryMatchingGame {
   constructor(cards) {
@@ -18493,6 +18353,7 @@ original number, and where the digits of the original number can be rearranged t
 the digits of the two smaller numbers. For example, 1260 is a vampire number because it 
 can be factored into 21 and 60, and the digits of 1260 can be rearranged to form the 
 digits of 21 and 60.</p>
+
 <pre>
 function isVampireNumber(number) {
   const strNumber = number.toString();
@@ -18541,6 +18402,7 @@ if (isVampireNumber(vampireNumber)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic Simon Says game involves generating and displaying a sequence of 
 colors, then challenging the player to repeat the sequence.</p>
+
 <pre>
 class SimonSaysGame {
   constructor(colors) {
@@ -18608,6 +18470,7 @@ simonSaysGame.playO;
 (<span class="consolas">s</span>). The formula for the area of a regular hexagon is 
 <span class="consolas">Area = (3 &ast; &radic; 3 &ast; s^2) / 2</span>, where 
 <span class="consolas">s</span> is the side length.</p>
+
 <pre>
 function calculateHexagonArea(sideLength) {
   const area = (3 &ast; Math.sqrt(3) / 2) &ast; Math.pow(sideLength, 2);
@@ -18625,6 +18488,7 @@ console.log(`The area of the hexagon is: ${hexagonArea.toFixed(2)}`);
 <p>This program checks if a given non-negative integer is a pronic number, also known as a 
 rectangular number or oblong number. A pronic number is a product of two consecutive 
 integers. The nth pronic number is given by the formula: <span class="consolas">n &ast; (n + 1)</span>.</p>
+
 <pre>
 function isPronicNumber(number) {
   for (let i = O; i&ast;(i + 1) <= number; i++) {
@@ -18648,6 +18512,7 @@ if (isPronicNumber(pronicNumber)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic Minesweeper game involves generating a grid with mines and numbers, 
 allowing the player to uncover cells, and providing feedback on the presence of mines.</p>
+
 <pre>
 class MinesweeperGame {
   constructor(rows, cols, numMines) {
@@ -18751,6 +18616,7 @@ minesweeperGame.uncoverCell(4, 4);
 (<span class="consolas">s</span>). The formula for the area of a regular pentagon is 
 <span class="consolas">Area = (1/4) &ast; &radic;(5 &ast; (5 + 2 &ast; &radic;5)) &ast; s^2<span>, 
 where <span class="consolas">s</span> is the side length.</p>
+
 <pre>
 function calculatePentagonArea(sideLength) {
   const area = (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2 &ast; Math.sqrt(5))) &ast; Math.pow(sideLength, 2);
@@ -18768,6 +18634,7 @@ console.log(`The area of the pentagon is: ${pentagonArea.toFixed(2)}`);
 <p>This program checks if a given non-negative integer is a cube number. A cube number is 
 a number that can be expressed as the cube of an integer. The nth cube number is given by 
 the formula: <span class="consolas">n^3</span>.</p>
+
 <pre>
 function isCubeNumber(number) {
   const cubeRoot = Math.round(Math.pow(number, 1/3));
@@ -18787,6 +18654,7 @@ if (isCubeNumber(numberToCheck)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic typing speed test involves generating a random string, measuring the 
 time it takes for the user to type the string, and calculating the typing speed.</p>
+
 <pre>
 class TypingSpeedTest {
   constructor) {
@@ -18839,6 +18707,7 @@ typingTest.getUserlnput(userlnput);
 <span class="consolas">s</span>). The formula for the surface area of a cube is 
 <span class="consolas">Surface Area = 6 &ast; s&ast; 2</span>, where <span class="consolas">s</span> 
 is the length of a side.</p>
+
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
   const surface Area = 6 &ast; Math.pow(sideLength, 2);
@@ -18857,6 +18726,7 @@ console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 (<span class="consolas">r</span>) and the slant height (l). The formula for the surface 
 area of a cone is <span class="consolas">Surface Area = pi &ast; r &ast; (r +1)</span>, where 
 <span class="consolas">pi</span> is the mathematical constant Pi.</p>
+
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
   const surface Area = 6 &ast; Math.pow(sideLength, 2);
@@ -18874,6 +18744,7 @@ console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 <p>A happy number is a positive integer that, when repeatedly replaced by the sum of the 
 squares of its digits, eventually reaches the number 1. If a number becomes 1, it is a 
 happy number; otherwise, it falls into a cycle that does not include 1.</p>
+
 <pre>
 function isHappyNumber(number) {
   const seenNumbers = new Set();
@@ -18911,21 +18782,22 @@ const baseArea = 0.25 &ast; Math.sqrt((-a + b + c)&ast;(a-b + c)&ast;(a + b-c)&a
 const perimeter = a + b + c;
 const surfaceArea = baseArea + perimeter &ast; height;
 return surfaceArea;
+
 // Example usage
 const side A = 3; // Replace with the length of side A of the triangular base
 const sideB = 4; // Replace with the length of side B of the triangular base
 const sideC = 5; // Replace with the length of side C of the triangular base
 const prismHeight = 6; // Replace with the height of the triangular prism
 const triangularPrismSurfaceArea = calculateTriangularPrismSurfaceArea(sideA, sideB, sideC, prismHeight);
-console.log(' The surface area of the triangular prism is: ${triangularPrismSurfaceArea.toFixed(2)}');
+console.log(` The surface area of the triangular prism is: ${triangularPrismSurfaceArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js157">157. Check if a Number is a Fibonacci Prime</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is both a Fibonacci number and a prime 
 number. A Fibonacci prime is a number that is both a Fibonacci number and a prime number.</p>
-<pre>
 
+<pre>
 function isPrime(number) {
   if (number <= 1) {
     return false;
@@ -20588,6 +20460,7 @@ reverseBits 16BitUnsignedShort(5678);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program tests whether a given integer is greater than 15. If the integer is 
 greater than 15, it returns the given number; otherwise, it returns 15.</p>
+
 <pre>
 function greaterThanl5Checker(number) {
   const result = number > 15 ? number: 15;
@@ -20688,6 +20561,7 @@ reverseOrderOfBits(234);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a triangle pattern using ASCII characters and displays it in the 
 console.</p>
+
 <pre>
 function generateAsciiTriangle(height) {
   for (let i = 1; i <= height; i++) {
@@ -21547,6 +21421,7 @@ console.log(isPerfectSquare(10)); // Output: false
 <h2 id="js-74">74. Check if a String contains only Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if a given string contains only numeric characters.</p>
+
 <pre>
 const containsOnlyNumbers = (str) => /^&lbrack;0-9&rbrack;+$/.test(str);
 console.log(containsOnlyNumbers("12345"));
@@ -24311,7 +24186,6 @@ console.log(sectorArea(5, 60)); // Output: 5.235987755982989
 </pre>
 
 <p>CSS:</p>
-
 <pre>
 /* CSS */
 body {
@@ -24400,7 +24274,6 @@ canvas#confetti {
 </pre>
 
 <p>JS:</p>
-
 <pre>
 /&ast; JavaScript - confetti &ast;/
 const button = document.querySelector('#button');
@@ -24443,7 +24316,6 @@ button.addEventListener('click', () => {
 </pre>
 
 <h5>CSS</h5>
-
 <pre>
   #myBtn {
     display: none;
