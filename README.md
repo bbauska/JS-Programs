@@ -1,7 +1,9 @@
 <!-- readme.md - 637 = 59 + 94 examples & 484 (218+266) JS Programs for Beginners -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h1><a id="toc">JS-Programs: Table of Contents</a></h1>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>687 JavaScript Examples:</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
   <li><a href="#sk0">50 JS Concepts Every Developer Should Know</a>,</li>
   <li><a href="#el0">59 Eloquent JS Examples</a>,</li>
@@ -79,7 +81,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#sk49">sk49. Canvas and WebGL</a></li>
   <li><a href="#sk50">sk50. Testing with Jest or Mocha</a></li>
 </ul>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -147,7 +149,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#el58">El58. JS and Performance: Timing</a></li>
   <li><a href="#el59">El59. JS and Performance: Optimizing</a></li>
 </ul>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -261,7 +263,7 @@ turn your own ideas into a reality without even having to think about it.</p>
 Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#ex94">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
 </ol>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -488,12 +490,12 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js217">217. Reverse Order of Bits</a></li>
   <li><a href="#js218">218. Pyramid</a></li>
 </ul>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#js-0">266 JavaScript Example Scripts</a></h2>
+<h2><a href="#js-0">266 More JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul type="disc">
   <li><a href="#js-01">js-01. Convert Celsius to Fahrenheit</a></li>
@@ -763,7 +765,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-265">js-265. Display Confetti on Button Click</a></li>
   <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
 </ul>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -818,7 +820,7 @@ washDish();
 stack. Inside washDish, dryDish() called, which, in turn, gets added
 to the call stack. Finally, storeDish() is called from dryDish(), and it
 also gets added to the call stack.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -846,7 +848,7 @@ values.</p>
 <p>These are examples of primitive types because they represent the most basic forms of 
 data in the language and are not composed of other types. They serve as the building 
 blocks for more complex data structures.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -904,7 +906,7 @@ lies in how they are stored and manipulated in memory. Value types are immutable
 meaning that modifying them creates a new instance in memory. In contrast, reference 
 types are passed by reference, so modifying them also modifies the original object in 
 memory.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -973,7 +975,7 @@ const canary = {
 };
 entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1014,7 +1016,7 @@ typeof true; // "boolean"
 unexpected comparison issues due to automatic type conversion. The use of <b>===</b> 
 is generally safer and recommended as it provides more accurate comparisons and avoids 
 surprises in your program's behavior.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1076,7 +1078,7 @@ nestedFunction(); // Prints "Outer"
 <p>Function scope, block scope, and lexical scope are essential concepts to understand 
 how variables behave in different contexts. These concepts play a key role in 
 understanding JavaScript execution and preventing errors related to variable scope.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1127,7 +1129,7 @@ for (let i = 0; i < 5; i++) {
 can change the program's execution flow or perform operations without necessarily 
 returning a value. Both concepts are essential for writing coherent and effective code in 
 any programming language.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1189,7 +1191,7 @@ is not necessary.</p>
 
 <p>In modern projects, it is recommended to use modules to effectively organize code and 
 maintain cleaner control over scope and code reuse.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1243,7 +1245,7 @@ In this example, the code executes in the following order:</p>
 <p>Understanding how the message queue and event loop work is crucial for
 writing asynchronous JavaScript code and avoiding blocking and
 bottlenecks in program execution.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1309,7 +1311,7 @@ requestAnimationFrame(animate);
 setinterval are useful for controlling time and executing code after certain
 intervals, while requestAnimationFrame is specific for creating smooth
 and efficient animations in the browser.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1356,7 +1358,7 @@ Nashorn was removed from the JDK in favor of other technologies.</p>
 Each engine has its own features and approaches to optimizing and
 executing JavaScript code, contributing to the browsing experience and
 performance of online applications.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1410,7 +1412,7 @@ const intArray = new Int32Array(buffer);
 manipulation and low-level operations are required. They are especially
 useful in applications dealing with network protocols, binary data, and
 performance optimization.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1476,7 +1478,7 @@ understanding how browsers represent and manipulate HTML and XML
 documents. The ability to interact with the DOM through JavaScript
 enables the creation of dynamic interactions and rich experiences on web
 pages.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1538,7 +1540,7 @@ person2.greet();  // Prints "Hello, I'm Jane and I'm 25 years old."
 preferences. Factories are more flexible and versatile, while classes
 provide a more object-oriented structure and are especially useful when
 working with inheritance and similar objects.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1604,7 +1606,7 @@ greetPerson('Maria'); // Prints: "Hello, Maria! My name is John"
 <p>These methods ore useful for controlling the context of this in different
 situations, especially when working with functions that are part of objects
 or when you need to manipulate how a function is invoked.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1654,7 +1656,7 @@ created with its own properties and methods.</p>
 
 <p>Constructors and instances are essential for object-oriented programming in JavaScript, 
 allowing the creation of objects with shared properties and behaviors.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1723,7 +1725,7 @@ myDog.bark(); // Prints "Woof woof!"
  
 <p>Prototypal inheritance and the prototype chain are crucial for understanding how objects 
 work and code reuse in JavaScript.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1783,7 +1785,7 @@ console.log(target);
 <p>Object.create is useful for establishing prototypal inheritance relationships, while 
 Object.assign is useful for combining properties from multiple objects or for cloning 
 objects.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1826,7 +1828,7 @@ const numbers = [1, 2, 3, 4, 5];
 const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 // sum is 15
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1872,7 +1874,7 @@ scalable code. The focus on pure functions and avoiding side effects contributes
 functional programming, while understanding state mutation is crucial for working 
 with changing data. Event propagation is essential for managing interaction in web 
 applications.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -1948,7 +1950,7 @@ console.log(counter()); // 2
 <p>Closures ore particularly useful for creating functions with private states,
 maintaining encapsulation in JavaScript. They are also used in patterns
 like modules and callback functions in events.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2026,7 +2028,7 @@ const numbers = [1, 2, 3, 4];
 const totalSum = numbers.reduce((accumulator, number) => 
   accumulator + number, 0); // Result: 10
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2065,7 +2067,7 @@ calculations (factorials, Fibonacci numbers), tree and graph traversal, and
 divide and conquer in algorithms. However, it's crucial to use recursion
 carefully, as improper use can lead to performance issues and stack
 overflow errors.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2139,7 +2141,7 @@ structures.</p>
 
 <p>Both collections and generators are powerful tools in JavaScript that
 allow you to handle and manipulate data more efficiently and flexibly.</p> 
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2209,7 +2211,7 @@ Promise.all([promisel, promise2])
 <p>Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
 However, as JavaScript evolved, more advanced readable syntax for working with 
 asynchronous operations.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2275,7 +2277,7 @@ popularity due to its simpler and easier-to-understand syntax. However,
 it's essential to remember that async/await still relies on underlying
 promises, so understanding how promises work is crucial to make the
 most out of asy nc/await.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2346,7 +2348,7 @@ const lastElement = stack.pop(); // 'y'
 <p>These are just some of the basic data structures in JavaScript The choice
 of the right data structure depends on the specific requirements of your
 program and the operations you need to perform on the stored data.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2388,7 +2390,7 @@ costly operations. In many cases, algorithms with lower Big 0 notations
 are sought to improve performance. However, it's essential to consider
 context and other factors that may influence the choice of the right
 algorithm.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2447,7 +2449,7 @@ artificial intelligence systems.</p>
 contexts to solve problems effectively and efficiently. Each algorithm has
 advantages and disadvantages depending on the problem and available
 resources, so choosing the right approach for each situation is crucial.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2537,7 +2539,7 @@ types of objects.</p>
 
 <p>Together, inheritance, polymorphism, and code reusability are key concepts for 
 building more efficient, maintainable, and scalable object-oriented applications.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2616,7 +2618,7 @@ and scalability of your applications.<br>
 However, it's important to note that not all patterns are applicable in every situation, 
 and evaluating the suitability of a pattern for the specific problem you're facing is 
 crucial.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2703,7 +2705,7 @@ function that executes each one in sequence.</p>
 <p>ALL of these techniques (partial application, currying, composition, and pipe) are 
 fundamental in functional programming and enable building more modular, readable, and 
 maintainable programs by breaking operations into smaller, reusable units.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2748,7 +2750,7 @@ practices to achieve clean code:</p>
 understandable for other developers and yourself in the future. By following these 
 practices, you can improve the quality and maintainability of your code, ultimately 
 making problem-solving and project evolution more straightforward.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2789,7 +2791,7 @@ zero, the catch block will capture the error and display an error message.</p>
 
 <p>It's important to note that you shouldn't use try...catch to control normal program 
 flows but to handle exceptional situations.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2864,7 +2866,7 @@ console.log(person.name); // Prints: Peter
 maintainable applications. However, keep in mind that ES6 module support may vary across 
 different runtime environments (browsers, Node.js, etc.), so you might need transpilers 
 or additional configurations in certain cases.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2908,7 +2910,7 @@ const finalPrice = hasDiscount ? originalPrice &ast; 0.8 :
 originalPrice;
 console.log(finalPrice); // Prints: 80
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -2970,7 +2972,7 @@ into a new array named rest.</p>
 <p>Both the spread and rest operators are powerful tools that make manipulation and 
 handling of arrays and objects in JavaScript more readable and concise, leading to 
 cleaner code.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3040,7 +3042,7 @@ console.log(age); // Prints: 25
 
 <p>Destructuring assignment can save time and reduce the need for writing repetitive 
 codewhen accessing values from arrays and objects.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3090,7 +3092,7 @@ console.log(multilineMessage);
 include dynamic values and formatted elements. Moreover, by using
 template Literals, the code becomes more readable and avoids manual
 string concatenation, which can be error-prone and confusing.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3167,7 +3169,7 @@ to define functions in JavaScript, especially in situations where you aim to
 simplify syntax and maintain predictable this behavior. However, it's
 essential to understand their differences from regular functions, especially
 when dealing with more complex this contexts.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3276,7 +3278,7 @@ const numbers = [10, 20, 30, 40];
 const index = numbers.findIndex(number => number > 25);
 // Result: 2 (30 is the first number greater than 25)
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3362,10 +3364,10 @@ respectively.</p>
 
 <pre>
 const text = 'Hello, World!';
-const uppercase = text.toUpperCaseO; // Result: 'HELLO, WORLD!'
-const lowercase = text.toLowerCaseO; // Result: 'hello, world!'
+const uppercase = text.toUpperCase(); // Result: 'HELLO, WORLD!'
+const lowercase = text.toLowerCase(); // Result: 'hello, world!'
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3463,7 +3465,7 @@ const object = { a: 1, b: 2 };
 const properties = Object.getOwnPropertyNames(object);
 // Result: ['a', 'b']
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3528,7 +3530,7 @@ its value without a sign.</p>
 <pre>
 const absoluteValue - Math.abs(-7); // Result: 7
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3599,7 +3601,7 @@ console.log(bookParsed);
 Serialization and deserialization allow for the conversion of JavaScript
 objects into JSON strings and vice versa, facilitating the transfer of data
 between different systems and the persistence of information.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3660,7 +3662,7 @@ xhr.onreadystatechange = function() {
 };
 xhr.send();
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3729,7 +3731,7 @@ store data Locally in the browser. The choice between them will depend on
 whether you want the data to persist beyond the current browser session
 (LocalStorage) or if you only need it to be available during the current
 session (SessionStorage).</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3842,7 +3844,7 @@ additional functionality and fallback handling to improve compatibility
 and the developer experience. The choice between them depends on the
 specific needs of your application and the level of abstraction you prefer
 to use.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -3911,7 +3913,7 @@ website, Canvas is an excellent choice. If you want to create complex 3D
 graphics, 3D games, or interactive visualizations, WebGL is the technology
 to use. Your choice will depend on the type of visual experience you want
 to provide in your web application.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4045,14 +4047,14 @@ describe('fetchData', () => {
 quicker to get started and offers useful built-in features, especially for React projects. 
 Mocha is a solid choice if you want more flexibility and prefer to choose your own 
 assertion libraries and mocking tools.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 59 eloquent javascript examples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el0">59 Eloquent JS Examples</h2>
+<h2 id="el0">59 Eloquent JavaScript Examples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el01">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4221,7 +4223,7 @@ Fizz
 Fizz
 Buzz
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4274,7 +4276,7 @@ console.log(board);
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4377,7 +4379,7 @@ console.log(isEven(50)); // → true
 console.log(isEven(75)); // → false
 console.log(isEven(-1)); // → false
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4496,7 +4498,7 @@ var list = {
   }
 };
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4590,7 +4592,7 @@ let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue); // → [5, 4, 3, 2, 1]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4687,7 +4689,7 @@ console.log(deepEqual(obj, obj)); // → true
 console.log(deepEqual(obj, {here: 1, object: 2})); // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4823,7 +4825,7 @@ console.log(every([1, 3, 5], n => n < 10)); // → true
 console.log(every([2, 4, 16], n => n < 10)); // → false
 console.log(every([], n => n < 10)); // → true
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -4914,7 +4916,7 @@ console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
 console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
 console.log(new Vec(3, 4).length); // → 5
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -5029,7 +5031,7 @@ for (let value of Group.from(["a", "b", "c"])) {
 // → b
 // → c
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -5053,9 +5055,9 @@ called, returns a new instance of the iterator class for that group.</p>
 let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>robot.js</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 var roads = [
   "Alice's House-Bob's House",   "Alice's House-Cabin",
@@ -6934,9 +6936,9 @@ propose and discuss talks among themselves, without a central organizer.</p>
 
 <p>The full code for the project can be downloaded from https://eloquentjavascript.net/
 code/skillsharing.zip.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Design</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>There is a server part to this project, written for Node.js, and a client part,
 written for the browser. The server stores the system’s data and provides it to
 the client. It also serves the files that implement the client-side system.</p>
@@ -7040,8 +7042,9 @@ from temporary connection failures or server problems.
 requests, and thus TCP connections, open. Node, which makes it easy to
 manage many connections without creating a separate thread of control for
 each one, is a good fit for such a system.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>HTTP Interface</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Before we start designing either the server or the client, let’s think about the
 point where they touch: the HTTP interface over which they communicate.</p>
 <p>We will use JSON as the format of our request and response body. Like in
@@ -7131,14 +7134,14 @@ Content-Length: 295
 comment, modify talks, and even delete them. (Since the Internet is full of
 hooligans, putting such a system online without further protection probably
 wouldn’t end well.)</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>The server</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Let’s start by building the server-side part of the program. The code in this
 section runs on Node.js.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Routing</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Our server will use createServer to start an HTTP server. In the function
 that handles a new request, we must distinguish between the various kinds of
 requests (as determined by the method and the path) that we support. This
@@ -7188,9 +7191,9 @@ until a matching one is found.</p>
 server instance in our case), match strings for any groups they defined in their
 regular expression, and the request object. The strings have to be URL-decoded
 since the raw URL may contain %20-style codes.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Serving files</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When a request matches none of the request types defined in our router, the
 server must interpret it as a request for a file in the public directory. It would
 be possible to use the file server defined in Chapter 20 to serve such files, but
@@ -7213,44 +7216,45 @@ const Router = require("./router");
 const ecstatic = require("ecstatic");
 const router = new Router();
 const defaultHeaders = {"Content-Type": "text/plain"};
+
 class SkillShareServer {
-constructor(talks) {
-this.talks = talks;
-this.version = 0;
-this.waiting = [];
-let fileServer = ecstatic({root: "./public"});
-this.server = createServer((request, response) => {
-let resolved = router.resolve(this, request);
-if (resolved) {
-resolved.catch(error => {
-if (error.status != null) return error;
-return {body: String(error), status: 500};
-}).then(({body,
-status = 200,
-headers = defaultHeaders}) => {
-response.writeHead(status, headers);
-response.end(body);
-});
-} else {
-fileServer(request, response);
-}
-});
-}
-start(port) {
-this.server.listen(port);
-}
-stop() {
-this.server.close();
-}
+  constructor(talks) {
+    this.talks = talks;
+    this.version = 0;
+    this.waiting = [];
+    let fileServer = ecstatic({root: "./public"});
+    this.server = createServer((request, response) => {
+      let resolved = router.resolve(this, request);
+      if (resolved) {
+        resolved.catch(error => {
+          if (error.status != null) return error;
+          return {body: String(error), status: 500};
+        }).then(({body,
+        status = 200,
+        headers = defaultHeaders}) => {
+          response.writeHead(status, headers);
+          response.end(body);
+        });
+      } else {
+        fileServer(request, response);
+      }
+    });
+  }
+  start(port) {
+    this.server.listen(port);
+  }
+  stop() {
+    this.server.close();
+  }
 }
 </pre>
 
 <p>This uses a similar convention as the file server from the previous chapter
 for responses—handlers return promises that resolve to objects describing the
 response. It wraps the server in an object that also holds its state.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Talks as resources</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The talks that have been proposed are stored in the talks property of the
 server, an object whose property names are the talk titles.</p>
 <p>These will be exposed as HTTP resources under /talks/[title], so we need to add handlers
@@ -7261,34 +7265,42 @@ respond either with the talk’s JSON data or with a 404 error response.</p>
 
 <pre>
 const talkPath = /^\/talks\/([^\/]+)$/;
+
 router.add("GET", talkPath, async (server, title) => {
-if (title in server.talks) {
-return {body: JSON.stringify(server.talks[title]),
-headers: {"Content-Type": "application/json"}};
-} else {
-return {status: 404, body: `No talk '${title}' found`};
-}
+  if (title in server.talks) {
+    return {body: JSON.stringify(server.talks[title]),
+    headers: {"Content-Type": "application/json"}};
+  } else {
+    return {status: 404, body: `No talk '${title}' found`};
+  }
 });
-Deleting a talk is done by removing it from the talks object.
+</pre>
+
+<p>Deleting a talk is done by removing it from the talks object.</p>
+
+<pre>
 router.add("DELETE", talkPath, async (server, title) => {
-if (title in server.talks) {
-delete server.talks[title];
-server.updated();
-}
-return {status: 204};
+  if (title in server.talks) {
+    delete server.talks[title];
+    server.updated();
+  }
+  return {status: 204};
 });
-The updated method, which we will define later, notifies waiting long polling
-requests about the change.
-To retrieve the content of a request body, we define a function called readStream
-, which reads all content from a readable stream and returns a promise that
-resolves to a string.
+</pre>
+
+<p>The updated method, which we will define later, notifies waiting long polling requests 
+about the change. To retrieve the content of a request body, we define a function called 
+readStream, which reads all content from a readable stream and returns a promise that
+resolves to a string.</p>
+
+<pre>
 function readStream(stream) {
-return new Promise((resolve, reject) => {
-let data = "";
-stream.on("error", reject);
-stream.on("data", chunk => data += chunk.toString());
-stream.on("end", () => resolve(data));
-});
+  return new Promise((resolve, reject) => {
+    let data = "";
+    stream.on("error", reject);
+    stream.on("data", chunk => data += chunk.toString());
+    stream.on("end", () => resolve(data));
+  });
 }
 </pre>
 
@@ -7304,21 +7316,21 @@ and again calls updated.</p>
 <pre>
 router.add("PUT", talkPath,
 async (server, title, request) => {
-let requestBody = await readStream(request);
-let talk;
-try { talk = JSON.parse(requestBody); }
-catch (_) { return {status: 400, body: "Invalid JSON"}; }
-if (!talk ||
-typeof talk.presenter != "string" ||
-typeof talk.summary != "string") {
-return {status: 400, body: "Bad talk data"};
-}
-server.talks[title] = {title,
-presenter: talk.presenter,
-summary: talk.summary,
-comments: []};
-server.updated();
-return {status: 204};
+  let requestBody = await readStream(request);
+  let talk;
+  try { talk = JSON.parse(requestBody); }
+  catch (_) { return {status: 400, body: "Invalid JSON"}; }
+  if (!talk ||
+    typeof talk.presenter != "string" ||
+    typeof talk.summary != "string") {
+      return {status: 400, body: "Bad talk data"};
+    }
+    server.talks[title] = {title,
+      presenter: talk.presenter,
+      summary: talk.summary,
+      comments: []};
+      server.updated();
+      return {status: 204};
 });
 </pre>
 
@@ -7328,29 +7340,29 @@ when it looks valid.</p>
 
 <pre>
 router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
-async (server, title, request) => {
-let requestBody = await readStream(request);
-let comment;
-try { comment = JSON.parse(requestBody); }
-catch (_) { return {status: 400, body: "Invalid JSON"}; }
-if (!comment ||
-typeof comment.author != "string" ||
-typeof comment.message != "string") {
-return {status: 400, body: "Bad comment data"};
-} else if (title in server.talks) {
-server.talks[title].comments.push(comment);
-server.updated();
-return {status: 204};
-} else {
-return {status: 404, body: `No talk '${title}' found`};
-}
+  async (server, title, request) => {
+  let requestBody = await readStream(request);
+  let comment;
+  try { comment = JSON.parse(requestBody); }
+  catch (_) { return {status: 400, body: "Invalid JSON"}; }
+  if (!comment ||
+  typeof comment.author != "string" ||
+  typeof comment.message != "string") {
+      return {status: 400, body: "Bad comment data"};
+  } else if (title in server.talks) {
+    server.talks[title].comments.push(comment);
+    server.updated();
+    return {status: 204};
+  } else {
+    return {status: 404, body: `No talk '${title}' found`};
+  }
 });
 </pre>
 
 <p>Trying to add a comment to a nonexistent talk returns a 404 error.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Long polling support</h2>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The most interesting aspect of the server is the part that handles long polling.
 When a GET request comes in for /talks, it may be either a regular request or
 a long polling request.
@@ -8135,16 +8147,16 @@ values it can work with.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Primitive Data Types:</h4>
 <ul>
-  <li><h4>Number:</h4> let num = 10;</li>
-  <li>String: let text = 'Hello';</li>
-  <li><h4>Boolean:</h4> let isTrue = true;</li>
-  <li><h4>Undefined:</h4> let value;</li>
-  <li><h4>Null:</h4> let emptyValue = null;
+  <li><b>Number:</b> let num = 10;</li>
+  <li><b>String:</b> let text = 'Hello';</li>
+  <li><b>Boolean:</b> let isTrue = true;</li>
+  <li><b>Undefined:</b> let value;</li>
+  <li><b>Null:</b> let emptyValue = null;
 </ul>
 <h4>Complex Data Types:</h4>
 <ul>
-  <li><h4>Object:</h4> let person = {name: 'Alice'; age: 25};</li>
-  <li><h4>Array:</h4> let numbers = &lbrack; 1,2,3,4,5 &rbrack;;</li>
+  <li><b>Object:</b> let person = {name: 'Alice'; age: 25};</li>
+  <li><b>Array:</b> let numbers = &lbrack; 1,2,3,4,5 &rbrack;;</li>
 </ul>  
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex11">11. JS Functions</h2>
@@ -8158,9 +8170,10 @@ blocks of code that perform a specific task when called</span>.</p>
 <pre>function greet(name) {
   return 'Hello, ' + name + '!';
 }</pre>
-<h4>Function Call:</h4>
 
+<h4>Function Call:</h4>
 <pre>let message = greet('John'); // message = 'Hello, John!'</pre>
+
 <h4>Arrow Function:</h4>
 <pre>const multiply = (a,b) => a &ast; b;
 let result = multiply(5,3); // result = 15</pre>
@@ -8173,7 +8186,6 @@ let result = multiply(5,3); // result = 15</pre>
 <h3>Examples of JS Objects:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Object Declaration:</h4>
-
 <pre>let person = {
   name: 'Alice',
   age: 30,
@@ -8181,8 +8193,10 @@ let result = multiply(5,3); // result = 15</pre>
     return 'Hello, my name is ' + this.name + '!';
   }
 };</pre>
+
 <h4>Accessing Object Properties:</h4>
 <pre>console.log(person.name); // Output: Alice</pre>
+
 <h4>Calling Object Method:</h4>
 <pre>console.log(person.greet()); // Output: Hello, my name is Alice!</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8198,8 +8212,8 @@ field</span>.</p>
 <pre>document.getElementById('myButton').addEventListener('click', function() {
   console.log('Button clicked!');
 });</pre>
-<h4>Input Event:</h4>
 
+<h4>Input Event:</h4>
 <pre>document.getElementById('myInput').addEventListener('input', function() {
   console.log('Input changed!');
 });</pre>
@@ -8212,8 +8226,8 @@ enclosed in single or double quotes.</p>
 <h3>Examples of JS Strings:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaring a String Variable:</h4>
-
 <pre>let message = 'Hello, World!';</pre>
+
 <h4>Concatenating Strings:</h4>
 <pre>let greeting = 'Hello, ';
 let name = 'Alice';
@@ -8226,9 +8240,9 @@ let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 <h3>Examples of JS String Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>toUpperCase() Methods:</h4>
-
 <pre>let text = 'hello';
 let upperCaseText = text.toUpperCase(); // upperCaseText = 'HELLO'</pre>
+
 <h4>substring() Method:</h4>
 <pre>let sentence = 'This is a sentence';
 let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
@@ -8243,8 +8257,8 @@ a string</span>.</p>
 <h4>indexOf() Method:</h4>
 <pre>let text = 'Hello, World!';
 let position = text.indexOf('World'); // position = 7</pre>
-<h4>includes() Method:</h4>
 
+<h4>includes() Method:</h4>
 <pre>let sentence = 'This is a sentence';
 let containsWord = sentence.includes('sentence'); // containsWord = true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
