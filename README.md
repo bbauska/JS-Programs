@@ -14395,10 +14395,10 @@ prompts the user to enter two numbers, adds them together, and prints the result
 
 <pre>
 let num1 = parseFloat(prompt("Enter the first number:"));
-letnum2 = parseFloat(prompt("Enter the second number:"));
-if (!isNaN(numl) && !isNaN(num2)) {
-  let sum = numl + num2;
-  console.log(`The sum of ${numl} and ${num2} is: ${sum}`);
+let num2 = parseFloat(prompt("Enter the second number:"));
+if (!isNaN(num1) && !isNaN(num2)) {
+  let sum = num1 + num2;
+  console.log(`The sum of ${num1} and ${num2} is: ${sum}`);
 } else {
   console.log("Please enter valid numbers.");
 }
