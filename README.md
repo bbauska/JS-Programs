@@ -39,7 +39,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#sk07">sk07. Expression vs Statement</a></li>
   <li><a href="#sk08">sk08. IIFE, Modules, and Namespaces</a></li>
   <li><a href="#sk09">sk09. Message Queue and Event Loop</a></li>
-  <li><a href="#sk10">sk10. setTimeout, setinterval, and requestAnimationFrame</a></li>
+  <li><a href="#sk10">sk10. setTimeout, setInterval, and requestAnimationFrame</a></li>
   <li><a href="#sk11">sk11. JavaScript Engines</a></li>
   <li><a href="#sk12">sk12. Bitwise Operators, Typed Arrays, and Array Buffers</a></li>
   <li><a href="#sk13">sk13. DOM and Document Trees</a></li>
@@ -1270,7 +1270,7 @@ setTimeout(function() {
 console.log("End");
 </pre>
 
-<p><b>setinterval:</b> setinterval is used to repeatedly execute a function at regular
+<p><b>setInterval:</b> setInterval is used to repeatedly execute a function at regular
 time intervals. Unlike setTimeout, setlnterval will keep running the function
 in a loop until explicitly stopped.</p>
 
@@ -1303,12 +1303,12 @@ requestAnimationFrame(animate);
 
 <ul>
   <li><b>setTimeout:</b> Executes a function after a certain time.</li>
-  <li><b>setinterval:</b> Executes a function at regular intervals.</li>
+  <li><b>setInterval:</b> Executes a function at regular intervals.</li>
   <li><b>requestAnimationFrame:</b> Used for creating smooth and efficient animations.</li>
 </ul>
 
 <p>Choose the appropriate function based on your needs. setTimeout and
-setinterval are useful for controlling time and executing code after certain
+setInterval are useful for controlling time and executing code after certain
 intervals, while requestAnimationFrame is specific for creating smooth
 and efficient animations in the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10268,9 +10268,9 @@ setTimeout(() =&gt; {
   console.log("Delayed message");
 }, 2000); // Execute after 2 seconds
 </pre>
-<h4>Using setinterval():</h4>
+<h4>Using setInterval():</h4>
 <pre>
-setinterval(() => {
+setInterval(() => {
   console.log("Repeated message");
 }, 3000); // Execute every 3 seconds
 </pre>
@@ -10541,7 +10541,7 @@ xhttp.send();
 <h4>Real-time Chat Application:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-setinterval(() => {
+setInterval(() => {
   // Fetch new messages and update chat interface
 },5000);
 </pre>
@@ -10797,7 +10797,7 @@ asynchronous data fetching and manipulation on a webpage.</p>
   &lt;title&gt;Live Data Update&lt;/title&gt;
   &lt;script&gt;
     function updateData() {
-      setinterval(() =&gt; {
+      setInterval(() =&gt; {
       fetch('live_data.php')
         .then(response =&gt; response.json())
         .then(data =&gt; {
@@ -10826,7 +10826,7 @@ echo json_encode($data); // Return live data as JSON
 ?&gt;
 </pre>
 <p>This example demonstrates updating live data on a webpage at regular intervals using 
-AJAX. The JavaScript function updateData uses setinterval to fetch updated data from the 
+AJAX. The JavaScript function updateData uses setInterval to fetch updated data from the 
 server - side PHP script (live_data. php ) every 5 seconds and displays it on the webpage.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 9: Infinite Scroll</h4>
@@ -10975,7 +10975,7 @@ the upload progress.</p>
 &lt;script&gt;
 function displayTime() {
   let timeDisplay = document.getElementById('timeDisplay');
-  setinterval(() =&gt; {
+  setInterval(() =&gt; {
     fetch('getTime.php')
       .then(response =&gt; response.text())
       .then(data =&gt; {
