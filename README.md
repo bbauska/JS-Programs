@@ -1049,10 +1049,10 @@ while, etc.</p>
 
 <pre>
 if (true) {
-  let blockvariable = "Hello";
+  let blockVariable = "Hello";
   const anotherBlockVariable = "World";
 }
-console.log(blockvariable); // Error, outside block scope 
+console.log(blockVariable); // Error, outside block scope 
 console.log(anotherBlockVariable); // Error, outside block scope
 </pre>
 
