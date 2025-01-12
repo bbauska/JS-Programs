@@ -822,7 +822,7 @@ to the call stack. Finally, storeDish() is called from dryDish(), and it
 also gets added to the call stack.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk02">02. Primitive Types</h2>
@@ -850,7 +850,7 @@ data in the language and are not composed of other types. They serve as the buil
 blocks for more complex data structures.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk03">03. Value Types and Reference Types</h2>
@@ -908,7 +908,7 @@ types are passed by reference, so modifying them also modifies the original obje
 memory.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk04">04. Implicit, Explicit, Nominal, Structural, and Duck Typing</h2>
@@ -977,7 +977,7 @@ entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk05">05. == vs === vs typeof</h2>
@@ -1018,7 +1018,7 @@ is generally safer and recommended as it provides more accurate comparisons and 
 surprises in your program's behavior.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk06">06. Function Scope, Block Scope, and Lexical Scope</h2>
@@ -1080,7 +1080,7 @@ how variables behave in different contexts. These concepts play a key role in
 understanding JavaScript execution and preventing errors related to variable scope.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk07">07. Expression vs Statement</h2>
@@ -1131,7 +1131,7 @@ returning a value. Both concepts are essential for writing coherent and effectiv
 any programming language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk08">08. IIFE, Modules, and Namespaces</h2>
@@ -1193,7 +1193,7 @@ is not necessary.</p>
 maintain cleaner control over scope and code reuse.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk09">09. Message Queue and Event Loop</h2>
@@ -1247,7 +1247,7 @@ writing asynchronous JavaScript code and avoiding blocking and
 bottlenecks in program execution.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk10">10. setTimeout, setInterval, and requestAnimationFrame</h2>
@@ -1313,7 +1313,7 @@ intervals, while requestAnimationFrame is specific for creating smooth
 and efficient animations in the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk11">11. JavaScript Engines</h2>
@@ -1360,7 +1360,7 @@ executing JavaScript code, contributing to the browsing experience and
 performance of online applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk12">12. Bitwise Operators, Typed Arrays, and Array Buffers</h2>
@@ -1414,7 +1414,7 @@ useful in applications dealing with network protocols, binary data, and
 performance optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk13">13. DOM and Document Trees</h2>
@@ -1480,7 +1480,7 @@ enables the creation of dynamic interactions and rich experiences on web
 pages.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk14">14. Factories and Classes</h2>
@@ -1542,7 +1542,7 @@ provide a more object-oriented structure and are especially useful when
 working with inheritance and similar objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk15">15. this, call, apply, and bind</h2>
@@ -1608,7 +1608,7 @@ situations, especially when working with functions that are part of objects
 or when you need to manipulate how a function is invoked.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk16">16. new, Constructor, instanceof, and Instances</h2>
@@ -1658,7 +1658,7 @@ created with its own properties and methods.</p>
 allowing the creation of objects with shared properties and behaviors.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk17">17. Prototypal Inheritance and Prototype Chain</h2>
@@ -1727,7 +1727,7 @@ myDog.bark(); // Prints "Woof woof!"
 work and code reuse in JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk18">18. Object.create and Object.assign</h2>
@@ -1787,7 +1787,7 @@ Object.assign is useful for combining properties from multiple objects or for cl
 objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk19">19. map, reduce, and filter</h2>
@@ -1830,7 +1830,7 @@ const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk20">20. Pure Functions, Side Effects, State Mutation, and Event Propagation</h2>
@@ -1876,7 +1876,7 @@ with changing data. Event propagation is essential for managing interaction in w
 applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">21. Closures</h2>
@@ -1952,7 +1952,7 @@ maintaining encapsulation in JavaScript. They are also used in patterns
 like modules and callback functions in events.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk22">22. High Order Functions</h2>
@@ -2030,7 +2030,7 @@ const totalSum = numbers.reduce((accumulator, number) =>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk23">23. Recursion</h2>
@@ -2069,7 +2069,7 @@ carefully, as improper use can lead to performance issues and stack
 overflow errors.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk24">24. Collections and Generators</h2>
@@ -2143,7 +2143,7 @@ structures.</p>
 allow you to handle and manipulate data more efficiently and flexibly.</p> 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk25">25. Promises</h2>
@@ -2213,7 +2213,7 @@ However, as JavaScript evolved, more advanced readable syntax for working with
 asynchronous operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk26">26. async/await</h2>
@@ -2279,7 +2279,7 @@ promises, so understanding how promises work is crucial to make the
 most out of asy nc/await.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk27">27. Data Structures</h2>
@@ -2350,7 +2350,7 @@ of the right data structure depends on the specific requirements of your
 program and the operations you need to perform on the stored data.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk28">28. Costly Operations and Big 0 Notation</h2>
@@ -2392,7 +2392,7 @@ context and other factors that may influence the choice of the right
 algorithm.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk29">29. Algorithms</h2>
@@ -2451,7 +2451,7 @@ advantages and disadvantages depending on the problem and available
 resources, so choosing the right approach for each situation is crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk30">30. Inheritance, Polymorphism, and Code Reusability</h2>
@@ -2541,7 +2541,7 @@ types of objects.</p>
 building more efficient, maintainable, and scalable object-oriented applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk31">31. Design Patterns</h2>
@@ -2620,7 +2620,7 @@ and evaluating the suitability of a pattern for the specific problem you're faci
 crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk32">32. Partial Application, Currying, Composition, and Pipe</h2>
@@ -2707,7 +2707,7 @@ fundamental in functional programming and enable building more modular, readable
 maintainable programs by breaking operations into smaller, reusable units.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk33">33. Clean Code</h2>
@@ -2752,7 +2752,7 @@ practices, you can improve the quality and maintainability of your code, ultimat
 making problem-solving and project evolution more straightforward.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk34">34. Error Handling (try...catch)</h2>
@@ -2793,7 +2793,7 @@ zero, the catch block will capture the error and display an error message.</p>
 flows but to handle exceptional situations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk35">35. ES6 Modules</h2>
@@ -2868,7 +2868,7 @@ different runtime environments (browsers, Node.js, etc.), so you might need tran
 or additional configurations in certain cases.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk36">36. Ternary Operator</h2>
@@ -2912,7 +2912,7 @@ console.log(finalPrice); // Prints: 80
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk37">37. Spread and Rest Operators</h2>
@@ -2974,7 +2974,7 @@ handling of arrays and objects in JavaScript more readable and concise, leading 
 cleaner code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk38">38. Destructuring</h2>
@@ -3044,7 +3044,7 @@ console.log(age); // Prints: 25
 codewhen accessing values from arrays and objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk39">39. Template Literals</h2>
@@ -3094,7 +3094,7 @@ template Literals, the code becomes more readable and avoids manual
 string concatenation, which can be error-prone and confusing.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk40">40. Arrow Functions</h2>
@@ -3171,7 +3171,7 @@ essential to understand their differences from regular functions, especially
 when dealing with more complex this contexts.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk41">41. Array Methods (forEach, some, every, find, findindex, etc.)</h2>
@@ -3280,7 +3280,7 @@ const index = numbers.findIndex(number => number > 25);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk42">42. String Methods (split, trim, replace, etc.)</h2>
@@ -3369,7 +3369,7 @@ const lowercase = text.toLowerCase(); // Result: 'hello, world!'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk43">43. Object Methods (keys, values, entries, etc.)</h2>
@@ -3467,7 +3467,7 @@ const properties = Object.getOwnPropertyNames(object);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk44">44. Math Methods (floor, ceil, random, etc.)</h2>
@@ -3532,7 +3532,7 @@ const absoluteValue - Math.abs(-7); // Result: 7
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk45">45. JSON and Object Serialization/Deserialization</h2>
@@ -3603,7 +3603,7 @@ objects into JSON strings and vice versa, facilitating the transfer of data
 between different systems and the persistence of information.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk46">46. Fetch API and AJAX</h2>
@@ -3664,7 +3664,7 @@ xhr.send();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk47">47. Localstorage and Sessionstorage</h2>
@@ -3733,7 +3733,7 @@ whether you want the data to persist beyond the current browser session
 session (SessionStorage).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk48">48. WebSockets and Socket.IO</h2>
@@ -3846,7 +3846,7 @@ specific needs of your application and the level of abstraction you prefer
 to use.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk49">49. Canvas and WebGL</h2>
@@ -3915,7 +3915,7 @@ to use. Your choice will depend on the type of visual experience you want
 to provide in your web application.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk50">50. Testing with Jest or Mocha</h2>
@@ -4049,7 +4049,7 @@ Mocha is a solid choice if you want more flexibility and prefer to choose your o
 assertion libraries and mocking tools.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#sk0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 59 eloquent javascript examples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4225,7 +4225,7 @@ Buzz
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el03">03. Program Structure: Chessboard</h2>
@@ -4278,7 +4278,7 @@ console.log(board);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el04">04. Functions: Minimum</h2>
@@ -4381,7 +4381,7 @@ console.log(isEven(-1)); // → false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el06">06. Functions: Bean counting</h2>
@@ -4500,7 +4500,7 @@ var list = {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el08">08. Data Structures: The sum of a range</h2>
@@ -4594,7 +4594,7 @@ console.log(arrayValue); // → [5, 4, 3, 2, 1]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el10">10. Data-Structures: A list</h2>
@@ -4691,7 +4691,7 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el12">12. Higher-Order Functions: Flattening</h2>
@@ -4827,7 +4827,7 @@ console.log(every([], n => n < 10)); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el15">15. Higher-Order Functions: Dominant writing direction</h2>
@@ -4918,7 +4918,7 @@ console.log(new Vec(3, 4).length); // → 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el17">17. Objects: Groups</h2>
@@ -5033,7 +5033,7 @@ for (let value of Group.from(["a", "b", "c"])) {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el19">19. Objects: Borrowing a method</h2>
@@ -5202,7 +5202,7 @@ compareRobots(routeRobot, [], goalOrientedRobot, []);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el21">21. A Robot: Robot efficiency</h2>
@@ -5290,7 +5290,7 @@ console.log(b.has("a")); // → false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el23">23. Bugs and Errors: Retry</h2>
@@ -5434,7 +5434,7 @@ function verify(regexp, yes, no) {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el26">26. Regular Expressions: Quoting style</h2>
@@ -5505,7 +5505,7 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el28">28. Modules: Roads module</h2>
@@ -7946,7 +7946,7 @@ time(findPath_list);
 </pre>
 
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex0">94 JavaScript Examples from Basics to Advanced</h2>
@@ -11320,7 +11320,7 @@ document.head.appendChild(script);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#toc">↥ back to top</a></b>
+  <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including 
