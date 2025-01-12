@@ -2553,7 +2553,7 @@ types of design patterns, each serving a specific purpose. Here are some of the 
 well-known design patterns:</p>
 
 <ol type="1">
-  <li>Creational Patterns: These patterns focus on how object instances are created.
+  <li><b>Creational Patterns:</b> These patterns focus on how object instances are created.
     <ul>
     <li><b>Factory Method:</b> Defines an interface for creating objects in a superclass, 
       allowing subclasses to decide which class to instantiate.</li>
@@ -2565,7 +2565,7 @@ well-known design patterns:</p>
       be constructed step by step.</li>
     </ul>
   </li>
-  <li>Structural Patterns: These patterns deal with how classes and objects are composed.
+  <li><b>Structural Patterns:</b> These patterns deal with how classes and objects are composed.
     <ul>
     <li><b>Adapter:</b> Allows objects with incompatible interfaces to work together 
       through an adapter class.</li>
@@ -2612,10 +2612,10 @@ well-known design patterns:</p>
   </li>
 </ol>
 
-<p>Each of these patterns ha its own purpose and context of use. By understanding and 
+<p>Each of these patterns has its own purpose and context of use. By understanding and 
 applying the appropriate design patterns, you can enhance the quality, maintainability, 
-and scalability of your applications.<br>
-However, it's important to note that not all patterns are applicable in every situation, 
+and scalability of your applications.</p>
+<p>However, it's important to note that not all patterns are applicable in every situation, 
 and evaluating the suitability of a pattern for the specific problem you're facing is 
 crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2682,7 +2682,7 @@ console.log(doubleIncrement(3)); // Prints: 7
 adds 1.</p>
 
 <p><b>Pipe:</b> Pipe is a technique that combines functions in a sequence, passing the 
-output of one function as the input to the next This allows you to create chains of 
+output of one function as the input to the next. This allows you to create chains of 
 transformations in a more readable syntax.</p>
 
 <pre>
@@ -2696,7 +2696,7 @@ const result = pipe(
   double
 )(3);
 
-console.log(result); // Prints: 16 (3 * 2 + 1) * 2
+console.log(result); // Prints: 14 (3 * 2 + 1) * 2
 </pre>
 
 <p>In this example, the pipe function takes a series of functions and returns a new 
