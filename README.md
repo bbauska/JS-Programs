@@ -4084,6 +4084,10 @@ for (let line = "#"; line.length &lt; 8; line += "#")
 #######
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el02">02. Program Structure: FizzBuzz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Going over the numbers is clearly a looping job, and selecting what to print is
@@ -4109,7 +4113,11 @@ modify your program to print "FizzBuzz", for numbers that are divisible by both 
 <p>(This is actually an interview question that has been claimed to weed out a significant 
 percentage of programmer candidates. So if you solved it, you’re now allowed to feel
 good about yourself.)</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 for (let n = 1; n <= 100; n++) {
   let output = "";
@@ -4247,7 +4255,11 @@ has been built up, so do this after the inner loop but inside the outer loop.</p
 characters to separate lines. At each position of the grid there is either a space or 
 a "#" character. The characters should form a chess board. Passing this string to 
 console.log should show something like Solution (below):</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let size = 8;
 let board = "";
@@ -4306,6 +4318,10 @@ the current function and gives the returned value to the code that called the fu
 The return keyword without an expression after it will cause the function to return 
 undefined. Parameters and scopes</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el05">05. Functions: Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your function will likely look somewhat similar to the inner find function in the
@@ -4341,7 +4357,11 @@ function findSolution(target) {
 
 console.log(findSolution(24)); // ▷ (((1 * 3) + 5) * 3)
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function power(base, exponent) {
   if (exponent == 0) {
@@ -4424,6 +4444,10 @@ console.log(countBs("BBC")); // → 2
 console.log(countChar("kakkerlak", "k")); // → 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el07">07. Data Structures: Objects and Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -4446,7 +4470,11 @@ spaghetti: 0.242535625036333
 reading: 0.11068280537595927
 peanuts: 0.59026798116852
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 var journal = [];<br>
 function addEntry(events, squirrel) {
@@ -4547,6 +4575,10 @@ console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
 console.log(sum(range(1, 10))); // → 55
 console.log(sum(range(1, 77))); // → 3003
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el09">09. Data-Structures: Reversing an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4650,6 +4682,10 @@ console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20
 console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el11">11. Data-Structures: Deep comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your test for whether you are dealing with a real object will look something like;</p>
@@ -4735,7 +4771,11 @@ noisy(Math.min)(3, 2, 1); // → calling with [3, 2, 1]
 </pre>
 
 <p>We can even write functions that provide new types of control flow.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function unless(test, then) {
   if (!test) then();
@@ -4787,6 +4827,10 @@ loop(3, n => n > 0, n => n - 1, console.log);
 // → 2
 // → 1
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el14">14. Higher-Order Functions: Everything</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4864,6 +4908,11 @@ function countBy(items, groupName) {
 }
 console.log(countBy([1, 2, 3, 4, 5], n => n > 2)); // → [{name: false, count: 2}, {name: true, count: 3}]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function dominantDirection(text) {
   let counted = countBy(text, char => {
@@ -4971,6 +5020,10 @@ group.delete(10);
 console.log(group.has(10));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el18">18. Objects: Iterable groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>It is probably worthwhile to define a new class GroupIterator. Iterator in-
@@ -5056,7 +5109,7 @@ let map = {one: true, two: true, hasOwnProperty: true};<br>
 console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>robot.js</h2>
+<h3>robot.js</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 var roads = [
@@ -5168,6 +5221,10 @@ function goalOrientedRobot({place, parcels}, route) {
   return {direction: route[0], memory: route.slice(1)};
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el20">20. A Robot: Measuring a robot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You’ll have to write a variant of the runRobot function that, instead of log-
@@ -5243,6 +5300,10 @@ function lazyRobot({place, parcels}, route) {
 runRobotAnimation(VillageState.random(), lazyRobot, &lbrack;&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el22">22. A Robot: Persistent group</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The most convenient way to represent the set of member values is still as an
@@ -5288,7 +5349,7 @@ console.log(b.has("b")); // → true
 console.log(a.has("b")); // → false
 console.log(b.has("a")); // → false
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#el0">↥ back to top</a></b>
 </div>
@@ -5325,6 +5386,10 @@ function reliableMultiply(a, b) {
 }<br>
 console.log(reliableMultiply(8, 8)); // → 64
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el24">24. Bugs and Errors: The locked box</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5371,6 +5436,10 @@ try {
 }<br>
 console.log(box.locked); // → true
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el25">25. Regular Expressions: Regexp golf</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5432,7 +5501,7 @@ function verify(regexp, yes, no) {
   }
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#el0">↥ back to top</a></b>
 </div>
@@ -5532,6 +5601,10 @@ const roads = &lbrack;
 exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el29">29. Asynchronous Programming: Tracking the scalpel</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This can be done with a single loop that searches through the nests, moving
@@ -5579,6 +5652,10 @@ function locateScalpel2(nest) {
 locateScalpel(bigOak).then(console.log); // → Butcher's Shop
 locateScalpel2(bigOak).then(console.log); // → Butcher's Shop
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el30">30. Asynchronous Programming: Building Promise.all</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5634,6 +5711,10 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el31">31. A Programming Language: Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The easiest way to do this is to represent Egg arrays with JavaScript arrays.</p>
@@ -5657,6 +5738,10 @@ do(define(sum, fun(array,
 &#96;);<br>
 // → 6
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el32">32. A Programming Language: Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5683,6 +5768,10 @@ console.log(parse("a # one\n   # two\n()"));
 {type: "word", name: "x"}
 {type: "apply", operator: {type: "word", name: "a"}, …}
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el33">33. A Programming Language: Fixing scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5720,6 +5809,10 @@ do(define(x, 4),
 // → 50<br>
 run(`set(quux, true)`); // → Some kind of ReferenceError
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el34">34. The Document Object Model: Build a table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5778,6 +5871,10 @@ or document.querySelector to find the node with the proper id attribute.</p>
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el35">35. The Document Object Model: Elements by tag name</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The solution is most easily expressed with a recursive function, similar to the
@@ -5822,6 +5919,10 @@ doing a recursive call on it to inspect its own children.</p>
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el36">36. The Document Object Model: The cat's hat</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Math.cos and Math.sin measure angles in radians, where a full circle is 2π. For
@@ -5853,6 +5954,10 @@ orbit.</p>
   requestAnimationFrame(animate);
 &lt;/script&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el37">37. Handling Events: Balloon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5896,6 +6001,10 @@ parent node to a new string.</p>
   document.body.addEventListener("keydown", handleArrow);
 &lt;/script&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el38">38. Handling Events: Mouse trail</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -5950,6 +6059,10 @@ out a good way to do this is up to you.</p>
 &lt;/body&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el39">39. Handling Events: Tabs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>One pitfall you might run into is that you can’t directly use the node’s childNodes
@@ -6003,6 +6116,10 @@ with the first tab visible.</p>
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el40">40. A Platform Game: Game over</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -6032,6 +6149,10 @@ with the first tab visible.</p>
 &lt;/script&gt;
 &lt;/body&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el41">41. A Platform Game: Pausing the game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6136,6 +6257,10 @@ either that function value or a method that handles the unregistering directly.<
 &lt;/script&gt;
 &lt;/body&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el42">42. A Platform Game: A monster</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>If you want to implement a type of motion that is stateful, such as bounc-
@@ -6198,6 +6323,10 @@ state will resemble either Coin’s collide method (removing the actor) or Lava
 `), DOMDisplay);
   &lt;/script&gt;
 &lt;/body&gt;</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el43">43. Drawing on Canvas: Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6293,6 +6422,10 @@ quadraticCurveTo, you can use the center as the control point.</p>
   star(440, 20);
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el44">44. Drawing on Canvas: The pie chart</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You will need to call fillText and set the context’s textAlign and textBaseline
@@ -6359,6 +6492,10 @@ side of the circle we are on.</p>
   });
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el45">45. Drawing on Canvas: A bouncing ball</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A box is easy to draw with strokeRect. Define a binding that holds its size or
@@ -6411,6 +6548,10 @@ scene and redraw it using the new position.</p>
   }
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el46">46. HTTP and Forms: Content negotiation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Base your code on the fetch examples earlier in the chapter.
@@ -6431,6 +6572,10 @@ async function showTypes() {
   }
 }<br>
 showTypes();</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el47">47. HTTP and Forms: A JavaScript workbench</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6467,6 +6612,10 @@ on a single line.</p>
     }
   });
 &lt;/script&gt;</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el48">48. HTTP and Forms: Conway's Game of Life</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6573,6 +6722,10 @@ break) elements between the rows.</p>
   });
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el49">49. A Pixel Art Editor: Keyboard bindings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The key property of events for letter keys will be the lowercase letter itself, if
@@ -6634,6 +6787,10 @@ patch the appropriate action.</p>
     .appendChild(startPixelEditor({}));
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el50">50. A Pixel Art Editor: Efficient drawing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This exercise is a good example of how immutable data structures can make
@@ -6686,6 +6843,10 @@ you’ve changed the canvas size.</p>
     .appendChild(startPixelEditor({}));
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el51">51. A Pixel Art Editor: Circles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can take some inspiration from the rectangle tool. Like that tool, you’ll
@@ -6735,6 +6896,10 @@ boundaries.</p>
   });
   document.querySelector("div").appendChild(dom);
 &lt;/script&gt;</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el52">52. A Pixel Art Editor: Proper lines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -6821,6 +6986,10 @@ coordinates.</p>
   document.querySelector("div").appendChild(dom);
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el53">53. Node.js: Search tool</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>On Unix systems, there is a command line tool called grep that can be used to
@@ -6878,6 +7047,10 @@ function search(file) {
   }
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el54">54. Node.js: Directory creation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Though the DELETE method in our file server is able to delete directories (using
@@ -6913,6 +7086,10 @@ methods.MKCOL = async function(request) {
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el55">55. Skill-Sharing Website: Disk persistence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A skill-sharing meeting is an event where people with a shared interest come
@@ -6937,7 +7114,7 @@ propose and discuss talks among themselves, without a central organizer.</p>
 <p>The full code for the project can be downloaded from https://eloquentjavascript.net/
 code/skillsharing.zip.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>Design</h2>
+<h3>Design</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>There is a server part to this project, written for Node.js, and a client part,
 written for the browser. The server stores the system’s data and provides it to
@@ -6960,7 +7137,11 @@ know which clients are currently looking at a given website.</p>
 
 <p>A common solution to this problem is called long polling, which happens to
 be one of the motivations for Node’s design.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The simplest solution I can come up with is to encode the whole talks object as
 JSON and dump it to a file with writeFile. There is already a method (updated
 ) that is called every time the server’s data changes. It can be extended to write
@@ -7003,7 +7184,11 @@ SkillShareServer.prototype.updated = function() {
 new SkillShareServer(loadTalks()).start(8000);</pre>
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>Long Polling</h2>
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Long Polling</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To be able to immediately notify a client that something changed, we need a
 connection to that client. Since web browsers do not traditionally accept con-
@@ -7043,7 +7228,11 @@ requests, and thus TCP connections, open. Node, which makes it easy to
 manage many connections without creating a separate thread of control for
 each one, is a good fit for such a system.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>HTTP Interface</h2>
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>HTTP Interface</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Before we start designing either the server or the client, let’s think about the
 point where they touch: the HTTP interface over which they communicate.</p>
@@ -7079,7 +7268,11 @@ Content-Length: 92
 {"presenter": "Maureen",
 "summary": "Standing still on a unicycle"}
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Such URLs also support GET requests to retrieve the JSON representation of
 a talk and DELETE requests to delete a talk.
 Adding a comment to a talk is done with a POST request to a URL like /
@@ -7135,12 +7328,16 @@ comment, modify talks, and even delete them. (Since the Internet is full of
 hooligans, putting such a system online without further protection probably
 wouldn’t end well.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>The server</h2>
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>The server</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Let’s start by building the server-side part of the program. The code in this
 section runs on Node.js.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>Routing</h2>
+<h3>Routing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Our server will use createServer to start an HTTP server. In the function
 that handles a new request, we must distinguish between the various kinds of
@@ -7180,7 +7377,11 @@ resolve(context, request) {
 }
 };
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The module exports the Router class. A router object allows new handlers
 to be registered with the add method and can resolve requests with its resolve
 method.</p>
@@ -7192,7 +7393,7 @@ server instance in our case), match strings for any groups they defined in their
 regular expression, and the request object. The strings have to be URL-decoded
 since the raw URL may contain %20-style codes.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>Serving files</h2>
+<h3>Serving files</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When a request matches none of the request types defined in our router, the
 server must interpret it as a request for a file in the public directory. It would
@@ -7253,7 +7454,11 @@ class SkillShareServer {
 for responses—handlers return promises that resolve to objects describing the
 response. It wraps the server in an object that also holds its state.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>Talks as resources</h2>
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Talks as resources</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The talks that have been proposed are stored in the talks property of the
 server, an object whose property names are the talk titles.</p>
@@ -7287,7 +7492,11 @@ router.add("DELETE", talkPath, async (server, title) => {
   return {status: 204};
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The updated method, which we will define later, notifies waiting long polling requests 
 about the change. To retrieve the content of a request body, we define a function called 
 readStream, which reads all content from a readable stream and returns a promise that
@@ -7333,7 +7542,11 @@ async (server, title, request) => {
       return {status: 204};
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Adding a comment to a talk works similarly. We use readStream to get the
 content of the request, validate the resulting data, and store it as a comment
 when it looks valid.</p>
@@ -7361,7 +7574,11 @@ router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
 
 <p>Trying to add a comment to a nonexistent talk returns a 404 error.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2>Long polling support</h2>
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Long polling support</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The most interesting aspect of the server is the part that handles long polling.
 When a GET request comes in for /talks, it may be either a regular request or
@@ -7401,7 +7618,11 @@ router.add("GET", /^\/talks$/, async (server, request) => {
   }
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>If no tag was given or a tag was given that doesn’t match the server’s current
 version, the handler responds with the list of talks. If the request is conditional
 and the talks did not change, we consult the Prefer header to see whether we
@@ -7441,12 +7662,12 @@ subdirectory alongside a talk-managing interface under the /talks URL.</p>
 
 <pre>new SkillShareServer(Object.create(null)).start(8000);</pre>
 
-<p><b>The client</b></p>
+<h3>The client</h3>
 
 <p>The client-side part of the skill-sharing website consists of three files: a tiny
 HTML page, a style sheet, and a JavaScript file.</p>
 
-<p><b>HTML</b></p>
+<h3>HTML</h3>
 <p>It is a widely used convention for web servers to try to serve a file named
 index.html when a request is made directly to a path that corresponds to a
 directory. The file server module we use, ecstatic, supports this convention.</p>
@@ -7463,16 +7684,15 @@ we should put it in public/index.html. This is our index file:</p>
 &lt;link rel="stylesheet" href="skillsharing.css"&gt;
 </pre>
 
-<h1>Skill Sharing</h1>
-
-<script src="skillsharing_client.js"></script>
+<h2>Skill Sharing</h2>
+<pre>&lt;script src="skillsharing_client.js"&gt;&lt;/script&gt;</pre>
 
 <p>It defines the document title and includes a style sheet, which defines a few
 styles to, among other things, make sure there is some space between talks.
 At the bottom, it adds a heading at the top of the page and loads the script
 that contains the client-side application.</p>
 
-<p><b>Actions</b></p>
+<h3>Actions</h3>
 
 <p>The application state consists of the list of talks and the name of the user, and
 we’ll store it in a {talks, user} object. We don’t allow the user interface to
@@ -7514,7 +7734,11 @@ function handleAction(state, action) {
   return state;
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>We’ll store the user’s name in localStorage so that it can be restored when
 the page is loaded.
 The actions that need to involve the server make network requests, using
@@ -7548,8 +7772,12 @@ function reportError(error) {
   alert(String(error));
 }
 </pre>
-
-<p><b>Rendering components</b></p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Rendering components</h3>
 
 <p>We’ll use an approach similar to the one we saw in Chapter 19, splitting the
 application into components. But since some of the components either never
@@ -7601,7 +7829,11 @@ function renderTalk(talk, dispatch) {
   elt("button", {type: "submit"}, "Add comment")));
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The "submit" event handler calls form.reset to clear the form’s content after
 creating a "newComment" action.
 When creating moderately complex pieces of DOM, this style of program-
@@ -7641,8 +7873,12 @@ function renderTalkForm(dispatch) {
   elt("button", {type: "submit"}, "Submit"));
 }
 </pre>
-
-<p><b>Polling</b></p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Polling</h3>
 
 <p>To start the app we need the current list of talks. Since the initial load is closely
 related to the long polling process—the ETag from the load must be used when
@@ -7671,20 +7907,21 @@ async function pollTalks(update) {
 }
 </pre>
 
-This is an async function so that looping and waiting for the request is easier.
+<p>This is an async function so that looping and waiting for the request is easier.
 It runs an infinite loop that, on each iteration, retrieves the list of talks—either
 normally or, if this isn’t the first request, with the headers included that make
-it a long polling request.
-When a request fails, the function waits a moment and then tries again. This
+it a long polling request.</p>
+<p>When a request fails, the function waits a moment and then tries again. This
 way, if your network connection goes away for a while and then comes back,
 the application can recover and continue updating. The promise resolved via
-setTimeout is a way to force the async function to wait.
-When the server gives back a 304 response, that means a long polling request
+setTimeout is a way to force the async function to wait.</p>
+<p>When the server gives back a 304 response, that means a long polling request
 timed out, so the function should just immediately start the next request. If
 the response is a normal 200 response, its body is read as JSON and passed to
-the callback, and its ETag header value is stored for the next iteration.
-The application
-The following component ties the whole user interface together:
+the callback, and its ETag header value is stored for the next iteration.</p>
+
+<h3>The application</h3>
+<p>The following component ties the whole user interface together:</p>
 
 <pre>
 class SkillShareApp {
@@ -7709,7 +7946,11 @@ class SkillShareApp {
   }
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When the talks change, this component redraws all of them. This is simple but also 
 wasteful. We’ll get back to that in the exercises. We can start the application like 
 this:</p>
@@ -7738,21 +7979,29 @@ runApp();
 <p>If you run the server and open two browser windows for http://localhost:8000
 next to each other, you can see that the actions you perform in one window
 are immediately visible in the other.</p>
-
-<p><b>Exercises</b></p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Exercises</h3>
 
 <p>The following exercises will involve modifying the system defined in this chap-
 ter. To work on them, make sure you download the code first (https://eloquentjavascript.net/
 code/skillsharing.zip), have Node installed https://nodejs.org, and have in-
 stalled the project’s dependency with npm install.</p>
 
-<p><b>Disk persistence</b></p>
+<h3>Disk persistence</h3>
 
 <p>The skill-sharing server keeps its data purely in memory. This means that when
 it crashes or is restarted for any reason, all talks and comments are lost.
 Extend the server so that it stores the talk data to disk and automatically
 reloads the data when it is restarted. Do not worry about efficiency—do the
 simplest thing that works.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7782,7 +8031,11 @@ component exists for a given talk. You can then loop over the new array of
 talks, and for each of them, either synchronize an existing component or create
 a new one. To delete components for deleted talks, you’ll have to also loop over
 the components and check whether the corresponding talks still exist.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 / This isn't a stand-alone file, only a redefinition of the main
 // component from skillsharing/public/skillsharing_client.js<br>
@@ -7856,6 +8109,10 @@ class SkillShareApp {
   }
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el57">57. JS and Performance: Pathfinding</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -7899,6 +8156,10 @@ function time(findPath) {
   console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
 }<br>
 time(findPath);</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#el0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el59">59. JS and Performance: Optimizing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7944,10 +8205,11 @@ function findPath_list(a, b) {
 }<br>
 time(findPath_list);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#el0">↥ back to top</a></b>
 </div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex0">94 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7978,6 +8240,11 @@ form the logic of a program and can be simple or complex.</p>
 }</pre>
   </li>
 </ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex02">02. JS Syntax</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8004,7 +8271,11 @@ interpreter or browser can understand.</p>
     <pre>const numbers = &lbrack;1,2,3,4,5&rbrack;;</pre>
   </li>
 </ol>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex03">03. JS Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>They are ignored by the interpreter and are only meant for human readers.</p>
@@ -8026,6 +8297,11 @@ multi-line comment
 // const x = 10;</pre>
   </li>
 </ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex04">04. JS Variables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8045,6 +8321,11 @@ as numbers, strings, objects, arrays, methods, and more.</p>
     <pre>let person = {name: 'Bob', age: 30}; // A variable holding a object</pre>
   </li>
 </ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex05">05. JS let</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8065,6 +8346,11 @@ Once assigned, the value of a const <span class="consolas">cannot be changed</sp
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>const PI = 3.14159;  // Declaring a constant PI
 PI = 3; // This will throw an error as reassignment is not Allowed</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex07">07. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8098,7 +8384,12 @@ console.log(p && q); // Logical AND
 console.log(p || q); // Logical OR
 console.log(!p); / Logical NOT</pre>
   </li>
-</ol>  
+</ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex08">08. JS Arithmetic</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8124,6 +8415,11 @@ operations on numbers.</p>
     <pre>let remainder = 15 % 4 // remainer = 3</pre>
   </li>
 </ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex09">09. JS Assignment</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8157,7 +8453,12 @@ values it can work with.</p>
 <ul>
   <li><b>Object:</b> let person = {name: 'Alice'; age: 25};</li>
   <li><b>Array:</b> let numbers = &lbrack; 1,2,3,4,5 &rbrack;;</li>
-</ul>  
+</ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex11">11. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8199,6 +8500,11 @@ let result = multiply(5,3); // result = 15</pre>
 
 <h4>Calling Object Method:</h4>
 <pre>console.log(person.greet()); // Output: Hello, my name is Alice!</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex13">13. JS Events</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8232,6 +8538,11 @@ enclosed in single or double quotes.</p>
 <pre>let greeting = 'Hello, ';
 let name = 'Alice';
 let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex15">15. JS String Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8246,6 +8557,11 @@ let upperCaseText = text.toUpperCase(); // upperCaseText = 'HELLO'</pre>
 <h4>substring() Method:</h4>
 <pre>let sentence = 'This is a sentence';
 let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex16">16. JS String Search</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8278,6 +8594,11 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
   This is a
   multi-line
   message.`;</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex18">18. JS Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8306,6 +8627,11 @@ represent integers with arbitrary precision.</p>
 
 <h4>Performing Operations with a BigInt:</h4>
 <pre>let bigSum = bigNumber + 1n;</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex20">20. JS Number Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8339,10 +8665,15 @@ numbers.</p>
 <h4>Number.MIN_VALUE Property:</h4>
 <pre>console.log(Number.MIN_VALUE);  // Output: 5e-324</pre>
 
-<p>This comprehensive guide covers various aspects of JavaScript, including arithmetic operations,
-assignnment, data types, fuctions, objects, events, strings, string methods, string search, string
-templates, numbers, BigInt, number methods, and number properties, providing examples and 
-explanations for each topic.</p>
+<p>This comprehensive guide covers various aspects of JavaScript, including arithmetic 
+operations, assignnment, data types, fuctions, objects, events, strings, string methods, 
+string search, string templates, numbers, BigInt, number methods, and number properties, 
+providing examples and explanations for each topic.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex22">22. JS Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
