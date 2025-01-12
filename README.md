@@ -86,7 +86,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <b><a href="#toc">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#el0">59 Eloquent JS Examples</a></h2>
+<h2><a id="el0">59 Eloquent JS Examples</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
   <li><a href="#el01">El01. Program Structure: Looping a Triangle</a></li>
@@ -154,7 +154,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <b><a href="#toc">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#ex0">94 JavaScript Examples From Basics to Advanced</a></h2>
+<h2><a id="ex0">94 JavaScript Examples From Basics to Advanced</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol>
   <li><a href="#ex01">JS Statements</a></li>
@@ -268,7 +268,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <b><a href="#toc">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#js0">218 Simple JavaScript Example Scripts</a></h2>
+<h2><a id="js0">218 Simple JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul type="square">
   <li><a href="#js01">01. Print Hello World</a></li>
@@ -495,7 +495,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <b><a href="#toc">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2><a href="#js-0">266 More JavaScript Example Scripts</a></h2>
+<h2><a id="js-0">266 More JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul type="disc">
   <li><a href="#js-01">js-01. Convert Celsius to Fahrenheit</a></li>
@@ -4054,7 +4054,7 @@ assertion libraries and mocking tools.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 59 eloquent javascript examples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el0">59 Eloquent JavaScript Examples</h2>
+<h2>59 Eloquent JavaScript Examples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el01">01. Program Structure: Looping a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7250,13 +7250,13 @@ JavaScript code for the client-side system.</p>
 "comments": &lbrack;&rbrack;}&rbrack;
 </pre>
 
-Creating a new talk is done by making a PUT request to a URL like /talks/
+<p>Creating a new talk is done by making a PUT request to a URL like /talks/
 Unituning, where the part after the second slash is the title of the talk. The PUT
 request’s body should contain a JSON object that has presenter and summary
-properties.
-Since talk titles may contain spaces and other characters that may not appear
+properties.</p>
+<p>Since talk titles may contain spaces and other characters that may not appear
 normally in a URL, title strings must be encoded with the encodeURIComponent
-function when building up such a URL.
+function when building up such a URL.</p>
 
 <pre>
 console.log("/talks/" + encodeURIComponent("How to Idle"));
@@ -7694,12 +7694,11 @@ that contains the client-side application.</p>
 
 <h3>Actions</h3>
 
-<p>The application state consists of the list of talks and the name of the user, and
-we’ll store it in a {talks, user} object. We don’t allow the user interface to
-directly manipulate the state or send off HTTP requests. Rather, it may emit
-actions that describe what the user is trying to do.
-The handleAction function takes such an action and makes it happen. Be-
-cause our state updates are so simple, state changes are handled in the same
+<p>The application state consists of the list of talks and the name of the user, and 
+we’ll store it in a {talks, user} object. We don’t allow the user interface to directly 
+manipulate the state or send off HTTP requests. Rather, it may emit actions that describe 
+what the user is trying to do. The handleAction function takes such an action and makes 
+it happen. Because our state updates are so simple, state changes are handled in the same
 function.</p>
 
 <pre>
@@ -7739,12 +7738,10 @@ function handleAction(state, action) {
   <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>We’ll store the user’s name in localStorage so that it can be restored when
-the page is loaded.
-The actions that need to involve the server make network requests, using
-fetch, to the HTTP interface described earlier. We use a wrapper function,
-fetchOK, which makes sure the returned promise is rejected when the server
-returns an error code.</p>
+<p>We’ll store the user’s name in localStorage so that it can be restored when the page 
+is loaded. The actions that need to involve the server make network requests, using 
+fetch, to the HTTP interface described earlier. We use a wrapper function, fetchOK, which 
+makes sure the returned promise is rejected when the server returns an error code.</p>
 
 <pre>
 function fetchOK(url, options) {
@@ -7763,9 +7760,9 @@ function talkURL(title) {
 }
 </pre>
 
-<p>When the request fails, we don’t want to have our page just sit there, doing
-nothing without explanation. So we define a function called reportError, which
-at least shows the user a dialog that tells them something went wrong.</p>
+<p>When the request fails, we don’t want to have our page just sit there, doing nothing 
+without explanation. So we define a function called reportError, which at least shows the 
+user a dialog that tells them something went wrong.</p>
 
 <pre>
 function reportError(error) {
@@ -7779,11 +7776,11 @@ function reportError(error) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Rendering components</h3>
 
-<p>We’ll use an approach similar to the one we saw in Chapter 19, splitting the
-application into components. But since some of the components either never
-need to update or are always fully redrawn when updated, we’ll define those
-not as classes but as functions that directly return a DOM node. For example,
-here is a component that shows the field where the user can enter their name:</p>
+<p>We’ll use an approach similar to the one we saw in Chapter 19, splitting the 
+application into components. But since some of the components either never need to 
+update or are always fully redrawn when updated, we’ll define those not as classes but 
+as functions that directly return a DOM node. For example, here is a component that 
+shows the field where the user can enter their name:</p>
 
 <pre>
 function renderUserField(name, dispatch) {
@@ -7799,8 +7796,8 @@ function renderUserField(name, dispatch) {
 
 <p>The elt function used to construct DOM elements is the one we used in Chapter 19.</p>
 
-<p>A similar function is used to render talks, which include a list of comments
-and a form for adding a new comment.</p>
+<p>A similar function is used to render talks, which include a list of comments and a 
+form for adding a new comment.</p>
 
 <pre>
 function renderTalk(talk, dispatch) {
@@ -7834,17 +7831,15 @@ function renderTalk(talk, dispatch) {
   <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The "submit" event handler calls form.reset to clear the form’s content after
-creating a "newComment" action.
-When creating moderately complex pieces of DOM, this style of program-
-ming starts to look rather messy. There’s a widely used (non-standard) JavaScript
-extension called JSX that lets you write HTML directly in your scripts, which
-can make such code prettier (depending on what you consider pretty). Before
-you can actually run such code, you have to run a program on your script to
-convert the pseudo-HTML into JavaScript function calls much like the ones we
-use here.</p>
+<p>The "submit" event handler calls form.reset to clear the form’s content after creating 
+a "newComment" action. When creating moderately complex pieces of DOM, this style of 
+programming starts to look rather messy. There’s a widely used (non-standard) JavaScript
+extension called JSX that lets you write HTML directly in your scripts, which can make 
+such code prettier (depending on what you consider pretty). Before you can actually run 
+such code, you have to run a program on your script to convert the pseudo-HTML into 
+JavaScript function calls much like the ones we use here.</p>
 
-Comments are simpler to render.
+<p>Comments are simpler to render.</p>
 
 <pre>
 function renderComment(comment) {
@@ -7853,8 +7848,9 @@ function renderComment(comment) {
   ": ", comment.message);
 }
 </pre>
-Finally, the form that the user can use to create a new talk is rendered like
-this:
+
+<p>Finally, the form that the user can use to create a new talk is rendered like this:</p>
+
 <pre>
 function renderTalkForm(dispatch) {
   let title = elt("input", {type: "text"});
@@ -7921,6 +7917,7 @@ the response is a normal 200 response, its body is read as JSON and passed to
 the callback, and its ETag header value is stored for the next iteration.</p>
 
 <h3>The application</h3>
+
 <p>The following component ties the whole user interface together:</p>
 
 <pre>
@@ -7976,9 +7973,9 @@ function runApp() {
 runApp();
 </pre>
 
-<p>If you run the server and open two browser windows for http://localhost:8000
-next to each other, you can see that the actions you perform in one window
-are immediately visible in the other.</p>
+<p>If you run the server and open two browser windows for http://localhost:8000 next to 
+each other, you can see that the actions you perform in one window are immediately 
+visible in the other.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#el0">↥ back to top</a></b>
@@ -7986,18 +7983,17 @@ are immediately visible in the other.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Exercises</h3>
 
-<p>The following exercises will involve modifying the system defined in this chap-
-ter. To work on them, make sure you download the code first (https://eloquentjavascript.net/
-code/skillsharing.zip), have Node installed https://nodejs.org, and have in-
-stalled the project’s dependency with npm install.</p>
+<p>The following exercises will involve modifying the system defined in this chapter. To 
+work on them, make sure you download the code first (https://eloquentjavascript.net/code/
+skillsharing.zip), have Node installed https://nodejs.org, and have installed the 
+project’s dependency with npm install.</p>
 
 <h3>Disk persistence</h3>
 
-<p>The skill-sharing server keeps its data purely in memory. This means that when
-it crashes or is restarted for any reason, all talks and comments are lost.
-Extend the server so that it stores the talk data to disk and automatically
-reloads the data when it is restarted. Do not worry about efficiency—do the
-simplest thing that works.</p>
+<p>The skill-sharing server keeps its data purely in memory. This means that when it 
+crashes or is restarted for any reason, all talks and comments are lost. Extend the 
+server so that it stores the talk data to disk and automatically reloads the data when 
+it is restarted. Do not worry about efficiency—do the simplest thing that works.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#el0">↥ back to top</a></b>
@@ -8005,39 +8001,37 @@ simplest thing that works.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The wholesale redrawing of talks works pretty well because you usually can’t
-tell the difference between a DOM node and its identical replacement. But
-there are exceptions. If you start typing something in the comment field for a
-talk in one browser window and then, in another, add a comment to that talk,
-the field in the first window will be redrawn, removing both its content and its
-focus.</p>
+<p>The wholesale redrawing of talks works pretty well because you usually can’t tell the 
+difference between a DOM node and its identical replacement. But there are exceptions. If 
+you start typing something in the comment field for a talk in one browser window and 
+then, in another, add a comment to that talk, the field in the first window will be 
+redrawn, removing both its content and its focus.</p>
 
-<p>In a heated discussion, where multiple people are adding comments at the
-same time, this would be annoying. Can you come up with a way to solve it?</p>
+<p>In a heated discussion, where multiple people are adding comments at the same time, 
+this would be annoying. Can you come up with a way to solve it?</p>
 
-<p>The best way to do this is probably to make talks component objects, with a
-syncState method, so that they can be updated to show a modified version of
-the talk. During normal operation, the only way a talk can be changed is by
-adding more comments, so the syncState method can be relatively simple.</p>
+<p>The best way to do this is probably to make talks component objects, with a syncState 
+method, so that they can be updated to show a modified version of the talk. During normal 
+operation, the only way a talk can be changed is by adding more comments, so the 
+syncState method can be relatively simple.</p>
 
-<p>The difficult part is that, when a changed list of talks comes in, we have
-to reconcile the existing list of DOM components with the talks on the new
-list—deleting components whose talk was deleted and updating components
-whose talk changed.</p>
+<p>The difficult part is that, when a changed list of talks comes in, we have to 
+reconcile the existing list of DOM components with the talks on the new list—deleting 
+components whose talk was deleted and updating components whose talk changed.</p>
 
-<p>To do this, it might be helpful to keep a data structure that stores the talk
-components under the talk titles so that you can easily figure out whether a
-component exists for a given talk. You can then loop over the new array of
-talks, and for each of them, either synchronize an existing component or create
-a new one. To delete components for deleted talks, you’ll have to also loop over
-the components and check whether the corresponding talks still exist.</p>
+<p>To do this, it might be helpful to keep a data structure that stores the talk 
+components under the talk titles so that you can easily figure out whether a component 
+exists for a given talk. You can then loop over the new array of talks, and for each of 
+them, either synchronize an existing component or create a new one. To delete components 
+for deleted talks, you’ll have to also loop over the components and check whether the 
+corresponding talks still exist.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#el0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-/ This isn't a stand-alone file, only a redefinition of the main
+// This isn't a stand-alone file, only a redefinition of the main
 // component from skillsharing/public/skillsharing_client.js<br>
 class Talk {
   constructor(talk, dispatch) {
@@ -8211,7 +8205,7 @@ time(findPath_list);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="ex0">94 JavaScript Examples from Basics to Advanced</h2>
+<h2 id="ex00">94 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex01">01. JS Statements</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8693,6 +8687,11 @@ let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
 
 <h4>Modifying Elements:</h4>
 <pre>fruits&lbrack;1&rbrack; = 'grapes'; // Changing 'banana' to 'grapes'</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex23">23. JS Array Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8738,6 +8737,11 @@ numbers.forEach(number => {
 
 <h4>map() Method:</h4>
 <pre>let doubledNumbers = numbers.map(number => number * 2);</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex26">26. JS Array Const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8764,6 +8768,11 @@ and times.</p>
 
 <h4>Creating a Specific Date:</h4>
 <pre>let specificDate = new Date('2024-12-25'); // December 25, 2024</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex28">28. JS Date Formats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8790,6 +8799,11 @@ to different formats.</p>
 
 <h4>getMonth() Method:</h4>
 <pre>let month = specificDate.getMonth(); // Get the month (11 for December)</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex30">30. JS Date Set Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8816,6 +8830,11 @@ and functions.</p>
 
 <h4>Math.sqrt() Method:</h4>
 <pre>let squareRoot = Math.sqrt(25); // Square root of 25 (5)</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex32">32. JS Random</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8846,6 +8865,11 @@ let isFalse = false;
 let greaterThan = 5 &gt; 3; // true
 let equalTo = 5 === 5; // true
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex34">34. JS Comparisons</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8893,6 +8917,11 @@ if (x &gt; 0) {
   console.log('x is zero');
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex36">36. JS Switch</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8938,6 +8967,11 @@ for (let i = 0; i < arr.length; i++) {
   console.log(arr[i])
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex38">38. JS Loop For In</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8972,6 +9006,11 @@ for (let num of numbers) {
   console.log(num);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex40">40. JS Loop While</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9005,6 +9044,11 @@ for (let i = 0; i < 10; i++) {
   console.log(i);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex42">42. JS Iterables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9041,6 +9085,11 @@ for (let item of mySet) {
   console.log(item);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex44">44. JS Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9076,6 +9125,11 @@ console.log(typeof 5); // Output: 'number'
 console.log(typeof 'Hello'); // Output: 'string'
 console.log(typeof true); // Output: 'boolean'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex46">46. JS Type Conversion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9113,6 +9167,10 @@ of either but not both operands are 1.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Bitwise:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Bitwise AND Operator (&):</h4>
 <pre>
 const a = 5; // 00000000000000000000000000000101
@@ -9147,6 +9205,11 @@ const b = 3; // 00000000000000000000000000000011
 console.log(a ^ b); // 00000000000000000000000000000110
 let result = 5 ^ 3; // Output: 6
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex48">48. JS RegExp</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9171,7 +9234,12 @@ console.log(pattern.test(str)); // Output: true
 <h3>Examples of JS Precedence:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arithmetic Precedence:</h4>
-<pre>let result = 5 + 3 * 2; // Output: 11 (Multiplication has higher precedence )</pre>
+<pre>let result = 5 + 3 * 2; // Output: 11 (Multiplication has higher precedence)</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex50">50. JS Errors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9203,6 +9271,11 @@ function test() {
 }
 console.log(globalVar); // Accessible outside function
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex52">52. JS Hoisting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9237,6 +9310,11 @@ function myFunction() {
   // Strict mode only applies inside this function
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex54">54. JS this Keyword</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9270,6 +9348,11 @@ let greet = (name ) => {
   return 'Hello, ' + name + '!'
 };
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex56">56. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9312,6 +9395,11 @@ export function greet(name) {
 import {greet} from './Module.js';
 greet('Alice'); // Outputs : 'Hello, Alice !'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex58">58. JS JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9346,6 +9434,11 @@ console.log(x);
 </pre>
 <h4>Using Browser Developer Tools:</h4>
 <p>Inspect elements, view console logs, set breakpoints, etc.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex60">60. JS Style Guide</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9370,6 +9463,11 @@ and maintainable code.</p>
 
 <h4>Avoid Global Variables:</h4>
 <p>Encapsulate code to avoid polluting the global scope.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex62">62. JS Mistakes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9398,6 +9496,11 @@ console.log(y); // Outputs : undefined
 <p>Combine multiple DOM updates into one to reduce reflows.</p>
 <h4>Use Efficient Algorithms:</h4>
 <p>Choose algorithms that have better time complexity for operations.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex64">64. JS Reserved Words</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9435,6 +9538,11 @@ let car = new Object();
 car. brand = 'Toyota';
 car. model = 'Camry';
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex66">66. JS Object Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9466,6 +9574,11 @@ car. start = function() {
   return 'Car started';
 };
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex68">68. JS Object Display</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9506,6 +9619,11 @@ console.log(user.fullName ); // Output: 'John Doe'
 user.fullName = 'Alice Smith'; // Setting fullName using setter
 console.log(user.firstName); // Output: 'Alice'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex70">70. JS Object Constructors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9539,6 +9657,11 @@ Person.prototype.info = function() {
 };
 console.log(newPerson.info()); // Output: 'Name : Bob, Age : 25'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex72">72. JS Object Iterables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9572,6 +9695,11 @@ mySet.add(3);
 
 <h4>Checking Set Membership:</h4>
 <pre>console.log(mySet.has(2)); // Output: true</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex74">74. JS Object Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9610,6 +9738,11 @@ console.log(objectl.name); // Output: Alice'
 definitions, properties, methods, display, accessors, constructors, prototypes, 
 iterables, sets, maps, and object references, with examples and explanations for each 
 concept.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex76">76. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9658,6 +9791,11 @@ function sum(a, b) {
   return a + b;
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex78">78. JS Function Invocation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9688,6 +9826,11 @@ function greet() {
 let person = {name: 'Alice'};
 let message = greet.call(person);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex80">80. JS Function Apply</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9724,6 +9867,11 @@ let person = {name: 'Charlie'};
 let newGreet = greet.bind(person);
 let message = newGreet();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex82">82. JS Function Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9776,6 +9924,11 @@ class Animal {
 let dog = new Animal('Buddy', 3);
 console.log(dog.sound()); // Output: 'Animal sound'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex84">84. JS Class Inheritance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9822,6 +9975,11 @@ class Calculator {
 let result = Calculator.add(5,3);
 console.log(result); // Output: 8
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex86">86. JS Async</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9860,6 +10018,11 @@ setTimeout(() => {
 console.log('End');
 // Output: 'Start', 'End', 'Inside setTimeout' (After 2 seconds)
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex87">87. JS Promises</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9908,6 +10071,11 @@ processData();
 classes, inheritance, and static methods, as well as asynchronous programming concepts 
 such as callbacks, asynchronous operations, promises, and async I await, with examples 
 and explanations for each concept.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex89">89. JS HTML DOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9949,6 +10117,11 @@ representing the document as a tree structure.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Document</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9987,6 +10160,11 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10028,6 +10206,11 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM CSS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10075,6 +10258,11 @@ console.log(document.URL);   // Output: Document URL
 &lt;/html&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Events in the DOM represent interactions by users or by the browser.</p>
@@ -10114,6 +10302,11 @@ console.log(document.URL);   // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Navigation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10160,6 +10353,11 @@ console.log(document.URL);   // Output: Document URL
 &lt;/html&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Collections</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Collections in the DOM are arrays of HTML elements.</p>
@@ -10202,6 +10400,11 @@ console.log(document.URL);   // Output: Document URL
 the DOM, methods, document, elements, HTML, forms, CSS, animations, events, event 
 listeners, navigation, nodes, collections, and node lists, with examples and explanations 
 for each topic.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex90">90. JS Browser BOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10235,6 +10438,11 @@ console.log(location.href); // Output: Full URL of the current page
 console.log(location.hostname); // Output: Hostname of the current URL
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS History</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The history object contains the browsing history of the window.</p>
@@ -10258,6 +10466,11 @@ console.log(navigator.platform); // Output: Platform of the browser
 <p>Popup alerts in JavaScript display messages to users.</p>
 <h4>Displaying an Alert:</h4>
 <pre>alert("This is an alert message");</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Timing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10290,6 +10503,11 @@ console.log(username); // Output: 'John Doe'
 <p>This comprehensive guide covers JavaScript's Browser Object Model (BOM), including 
 the window object, screen, location, history, navigator, popup alerts, timing functions, 
 and cookies, with examples and explanations for each concept.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex91">91. JS Web APIs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10337,6 +10555,11 @@ localstorage.setItem("key", "value");
 let data = localstorage.getItem("key");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Worker API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Worker API enables running scripts in the background to handle time - 
@@ -10381,6 +10604,11 @@ navigator.geolocation.getCurrentPosition ((position) => {
 introduction to Web APIs, Web Forms API, Web History API, Web Storage API, Web Worker 
 API, Web Fetch API, and Web Geolocation API, with examples and explanations for each 
 concept.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex92">92. JS AJAX</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10417,6 +10645,11 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "data.txt", true);
 xhttp.send();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Request</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10466,6 +10699,11 @@ xhttp.open("GET", "data.xml", true);
 xhttp.send();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX PHP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can interact with server - side technologies like PHP to exchange data.</p>
@@ -10512,6 +10750,10 @@ Response.Write("Hello from ASP!")
 %&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Database</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can be used to interact with databases on the server.</p>
@@ -10545,6 +10787,10 @@ setInterval(() => {
   // Fetch new messages and update chat interface
 },5000);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10588,6 +10834,11 @@ function loadContent() {
 &lt;/html&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.html (Sample Content):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>html code</h5>
@@ -10630,6 +10881,10 @@ function submitForm() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>processForm.php (Server-side Processing):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10677,6 +10932,11 @@ code.</p>
 <p>These additional examples showcase various use cases of AJAX, such as loading dynamic 
 content, form submission without page refresh, and fetching and using JSON data asynchronously.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 6: Image Gallery with AJAX</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
@@ -10711,7 +10971,12 @@ function loadimages () {
 &lt;/html&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>images.json(Sample Image Data in JSON Format):</h4>
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>images.json (Sample Image Data in JSON Format):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>json code</h5>
 <pre>
@@ -10764,8 +11029,14 @@ function search() {
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>search.php (Server-side Script Handling Search):</h4>
 <h5>php code</h5>
+
 <pre>
 &lt;?php
 $searchTerm = $_GET['q']; // Get search query
@@ -10814,6 +11085,10 @@ asynchronous data fetching and manipulation on a webpage.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>live_data.php (Server - side Script Providing Live Data):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10871,6 +11146,10 @@ window.onscroll = loadMoreContent;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.php (Server-side Script Providing Content):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10942,6 +11221,10 @@ function uploadFile () {
 &lt;/html&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>upload.php (Server-side Script for File Upload):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
@@ -10992,6 +11275,10 @@ function displayTime() {
 &lt;/html&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>getTime.php (Server-side Script to Get Current Time):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>php code</h5>
@@ -11035,6 +11322,10 @@ literals. It's widely used for data exchange between web servers and web clients
   "hobbies":["reading","coding","traveling"]
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Syntax</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11083,6 +11374,10 @@ lightweight and easier to read and parse than XML.</p>
 &lt;/user>&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Data Types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
@@ -11122,6 +11417,10 @@ let obj = {name: "Bob ", age: 30};
 let jsonString = JSON.stringify(obj);
 console.log(jsonString); // Output: {"name": "Bob", "age": 30}
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Objects</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11165,6 +11464,10 @@ development. Servers often provide data in JSON format through APIs.</p>
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON PHP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode() and json.decode() 
@@ -11205,6 +11508,10 @@ users.forEach(user =&gt; {
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON JSONP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different 
@@ -11243,6 +11550,10 @@ console.log(person.name); // Output: John
 console.log(person.age); // Output: 30
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>03. Nested JSON Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -11280,6 +11591,10 @@ let jsonObject = JSON.parse('{"name": "Alice", "age": 25, "city": "London"}');
 console.log(jsonObject.name); // Output: Alice
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>07. Fetching JSON Data from URL (using Fetch API):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -11311,6 +11626,10 @@ form.addEventListener('submit', function(event) {
   console.log(jsonObject);
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Stringifying and Parsing a More Complex Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11356,6 +11675,10 @@ let data = {"name":"Kate", "age": 25};
 delete data.age;
 console.log(data); // Output: {"name":"Kate"}
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Using JSON with Local Storage:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11403,6 +11726,10 @@ let jsonString = obj.toJson();
 console.log(jsonString); // Output: {"name":"Joe", "birthday":"1990-01-15T00:00:00.000Z"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Handling JSON Data from an API (Using Axios):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -11434,11 +11761,14 @@ console.log(mappedData);
 </pre>
 <p>These examples showcase different aspects of using JSON in JavaScript, including 
 creating, manipulating, parsing, and working with JSON data in various scenarios.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex94">94. JavaScript vs jQuery: A Comprehensive Comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-
 <p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is 
 easy for humans to read and write and easy for machines to parse and generate. It is 
 commonly used to transmit data between a server and a web application.</p>
@@ -11486,6 +11816,10 @@ or null.</p>
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON vs XML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more 
@@ -11530,6 +11864,10 @@ lightweight and easier to read and parse than XML.</p>
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Parse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
@@ -11567,6 +11905,10 @@ strings, and values can be of any JSON data type.</p>
   "city":"London"
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11612,6 +11954,10 @@ $jsonString = `{"name": "Alice", "age": 30}`;
 $decodedData = json.decode($jsonString, true);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div align="right">
+  <b><a href="#ex0">↥ back to top</a></b>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
@@ -11651,7 +11997,7 @@ document.head.appendChild(script);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#el0">↥ back to top</a></b>
+  <b><a href="#ex0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including 
@@ -11729,7 +12075,7 @@ fetch('data.json')
 let jsonData = {"name": "Bob", "age": 28};
 
 let display Div = document.getElementById('jsonDataDisplay');
-displayDiv.innerHTML = '<p>Name: ${jsonData.name}</p><p>Age: ${jsonData.age}</p>
+displayDiv.innerHTML = `<p>Name: ${jsonData.name}</p><p>Age: ${jsonData.age}</p>`
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>09. Handling JSON Data in Forms:</h4>
