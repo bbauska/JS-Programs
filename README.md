@@ -2118,7 +2118,7 @@ set.add('red'); // Not added, as 'red' is already in the set
 <p><b>Generators:</b> Generators are special functions that allow pausing and
 resuming their execution at a specific point. They enable creating a
 custom lazy and iterative control flow. They are defined using the
-function&ast; keyword and use the yield statement to pause the function and
+function* keyword and use the yield statement to pause the function and
 return values.</p>
 
 <pre>
@@ -2506,7 +2506,7 @@ class Square extends Shape {
     this.side = side;
   }
   area() {
-    return this.side &ast; this.side;
+    return this.side * this.side;
   }
   class Circle extends Shape {
     constructor(radius) {
@@ -2514,7 +2514,7 @@ class Square extends Shape {
       this.radius = radius;
     }
     area() {
-      return Math.PI &ast; this.radius &ast; this.radius;
+      return Math.PI * this.radius * this.radius;
     }
   }
 }
@@ -2906,7 +2906,7 @@ console.log(greeting); // Prints: Good afternoon
 <pre>
 const originalPrice = 100;
 const hasDiscount = true;
-const finalPrice = hasDiscount ? originalPrice &ast; 0.8 :
+const finalPrice = hasDiscount ? originalPrice * 0.8 :
 originalPrice;
 console.log(finalPrice); // Prints: 80
 </pre>
@@ -4334,12 +4334,12 @@ function findSolution(target) {
       return null;
     else
       return find(start + 5, "(" + history + " + 5)") ||
-      find(start &ast; 3, "(" + history + " &ast; 3)");
+      find(start * 3, "(" + history + " * 3)");
   }
   return find(1, "1");
 }
 
-console.log(findSolution(24)); // ▷ (((1 &ast; 3) + 5) &ast; 3)
+console.log(findSolution(24)); // ▷ (((1 * 3) + 5) * 3)
 </pre>
 
 <pre>
@@ -4347,7 +4347,7 @@ function power(base, exponent) {
   if (exponent == 0) {
     return 1;
   } else {
-    return base &ast; power(base, exponent - 1);
+    return base * power(base, exponent - 1);
   }
 }
 console.log(power(2, 3)); // → 8
@@ -4362,7 +4362,7 @@ makeNoise(); // → Pling!
 var power = function(base, exponent) {
   var result = 1;
   for (var count = 0; count < exponent; count++)
-  result &ast;= base;
+  result *= base;
   return result;
 };
 console.log(power(2, 10)); // → 1024
@@ -4453,10 +4453,10 @@ function addEntry(events, squirrel) {
   journal.push({events, squirrel});
 }<br>
 function phi(table) {
-  return (table[3] &ast; table[0] - table[2] &ast; table[1]) /
-    Math.sqrt((table[2] + table[3]) &ast;
-              (table[0] + table[1]) &ast;
-              (table[1] + table[3]) &ast;
+  return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
               (table[0] + table[2]));
 }<br>
 function tableFor(event, journal) {
@@ -4909,7 +4909,7 @@ class Vec {
     return new Vec(this.x - other.x, this.y - other.y);
   }
   get length() {
-    return Math.sqrt(this.x &ast; this.x + this.y &ast; this.y);
+    return Math.sqrt(this.x * this.x + this.y * this.y);
   }
 }<br>
 console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
@@ -5114,7 +5114,7 @@ function runRobot(state, robot, memory) {
   }
 }<br>
 function randomPick(array) {
-  let choice = Math.floor(Math.random() &ast; array.length);
+  let choice = Math.floor(Math.random() * array.length);
   return array[choice];
 }<br>
 function randomRobot(state) {
@@ -5308,7 +5308,7 @@ is a pretty safe bet).</p>
 class MultiplicatorUnitFailure extends Error {}
 function primitiveMultiply(a, b) {
   if (Math.random() < 0.2) {
-    return a &ast; b;
+    return a * b;
   } else {
     throw new MultiplicatorUnitFailure("Klunk");
   }
@@ -5619,7 +5619,7 @@ Promise_all([]).then(array => {
 });<br>
 function soon(val) {
   return new Promise(resolve => {
-    setTimeout(() => resolve(val), Math.random() &ast; 500);
+    setTimeout(() => resolve(val), Math.random() * 500);
   });
 }<br>
 Promise_all([soon(1), soon(2), soon(3)]).then(array => {
@@ -5842,12 +5842,12 @@ orbit.</p>
   let angle = 0;
   let lastTime = null;
   function animate(time) {
-    if (lastTime != null) angle += (time - lastTime) &ast; 0.001;
+    if (lastTime != null) angle += (time - lastTime) * 0.001;
     lastTime = time;
-    cat.style.top = (Math.sin(angle) &ast; 40 + 40) + "px";
-    cat.style.left = (Math.cos(angle) &ast; 200 + 230) + "px";
-    hat.style.top = (Math.sin(angle + Math.PI) &ast; 40 + 40) + "px";
-    hat.style.left = (Math.cos(angle + Math.PI) &ast; 200 + 230) + "px";<br>
+    cat.style.top = (Math.sin(angle) * 40 + 40) + "px";
+    cat.style.left = (Math.cos(angle) * 200 + 230) + "px";
+    hat.style.top = (Math.sin(angle + Math.PI) * 40 + 40) + "px";
+    hat.style.left = (Math.cos(angle + Math.PI) * 200 + 230) + "px";<br>
     requestAnimationFrame(animate);
   }
   requestAnimationFrame(animate);
@@ -5885,11 +5885,11 @@ parent node to a new string.</p>
         p.textContent = "💥";
         document.body.removeEventListener("keydown", handleArrow);
       } else {
-        setSize(size &ast; 1.1);
+        setSize(size * 1.1);
         event.preventDefault();
       }
     } else if (event.key == "ArrowDown") {
-      setSize(size &ast; 0.9);
+      setSize(size * 0.9);
       event.preventDefault();
     }
   }
@@ -6061,9 +6061,9 @@ either that function value or a method that handles the unregistering directly.<
   // To know when to stop and restart the animation, a level that is
   // being displayed may be in three `running` states:
   //
-  // &ast; "yes":     Running normally.
-  // &ast; "no":      Paused, animation isn't running
-  // &ast; "pausing": Must pause, but animation is still running
+  // * "yes":     Running normally.
+  // * "no":      Paused, animation isn't running
+  // * "pausing": Must pause, but animation is still running
   //
   // The key handler, when it notices escape being pressed, will do a
   // different thing depending on the current state. When running is
@@ -6165,7 +6165,7 @@ state will resemble either Coin’s collide method (removing the actor) or Lava
       static create(pos) { return new Monster(pos.plus(new Vec(0, -1))); }<br>
       update(time, state) {
         let player = state.player;
-        let speed = (player.pos.x &lt; this.pos.x ? -1 : 1) &ast; time &ast; monsterSpeed;
+        let speed = (player.pos.x &lt; this.pos.x ? -1 : 1) * time * monsterSpeed;
         let newPos = new Vec(this.pos.x + speed, this.pos.y);
         if (state.level.touches(newPos, this.size, "wall")) return this;
         else return new Monster(newPos);
@@ -6258,8 +6258,8 @@ quadraticCurveTo, you can use the center as the control point.</p>
     cx.beginPath();
     cx.moveTo(x, y);
     for (let i = 0; i &lt; 8; i++) {
-      cx.lineTo(x + 80, y + i &ast; 8 + 4);
-      cx.lineTo(x, y + i &ast; 8 + 8);
+      cx.lineTo(x + 80, y + i * 8 + 4);
+      cx.lineTo(x, y + i * 8 + 8);
     }
     cx.stroke();
   }
@@ -6269,10 +6269,10 @@ quadraticCurveTo, you can use the center as the control point.</p>
     cx.beginPath();
     cx.moveTo(xCenter, yCenter);
     for (let i = 0; i &lt; 300; i++) {
-      let angle = i &ast; Math.PI / 30;
-      let dist = radius &ast; i / 300;
-      cx.lineTo(xCenter + Math.cos(angle) &ast; dist,
-                yCenter + Math.sin(angle) &ast; dist);
+      let angle = i * Math.PI / 30;
+      let dist = radius * i / 300;
+      cx.lineTo(xCenter + Math.cos(angle) * dist,
+                yCenter + Math.sin(angle) * dist);
     }
     cx.stroke();
   }
@@ -6282,10 +6282,10 @@ quadraticCurveTo, you can use the center as the control point.</p>
     cx.beginPath();
     cx.moveTo(xCenter + radius, yCenter);
     for (let i = 1; i &lt;= 8; i++) {
-      let angle = i &ast; Math.PI / 4;
+      let angle = i * Math.PI / 4;
       cx.quadraticCurveTo(xCenter, yCenter,
-                          xCenter + Math.cos(angle) &ast; radius,
-                          yCenter + Math.sin(angle) &ast; radius);
+                          xCenter + Math.cos(angle) * radius,
+                          yCenter + Math.sin(angle) * radius);
     }
     cx.fillStyle = "gold";
     cx.fill();
@@ -6303,13 +6303,13 @@ going from the center of the pie through the middle of the slice. You don’t
 want to put the text directly against the side of the pie but rather move the
 text out to the side of the pie by a given number of pixels.</p>
 
-<p>The angle of this line is currentAngle + 0.5 &ast; sliceAngle. The following
+<p>The angle of this line is currentAngle + 0.5 * sliceAngle. The following
 code finds a position on this line 120 pixels from the center:</p>
 
 <pre>
-let middleAngle = currentAngle + 0.5 &ast; sliceAngle;
-let textX = Math.cos(middleAngle) &ast; 120 + centerX;
-let textY = Math.sin(middleAngle) &ast; 120 + centerY;
+let middleAngle = currentAngle + 0.5 * sliceAngle;
+let textX = Math.cos(middleAngle) * 120 + centerX;
+let textY = Math.sin(middleAngle) * 120 + centerY;
 </pre>
 
 <p>For textBaseline, the value "middle" is probably appropriate when using
@@ -6333,16 +6333,16 @@ side of the circle we are on.</p>
   let total = results.reduce(function(sum, choice) {
     return sum + choice.count;
   }, 0);<br>
-  let currentAngle = -0.5 &ast; Math.PI;
+  let currentAngle = -0.5 * Math.PI;
   let centerX = 300, centerY = 150;<br>
   results.forEach(function(result) {
-    let sliceAngle = (result.count / total) &ast; 2 &ast; Math.PI;
+    let sliceAngle = (result.count / total) * 2 * Math.PI;
     cx.beginPath();
     cx.arc(centerX, centerY, 100,
            currentAngle, currentAngle + sliceAngle);<br>
-    let middleAngle = currentAngle + 0.5 &ast; sliceAngle;
-    let textX = Math.cos(middleAngle) &ast; 120 + centerX;
-    let textY = Math.sin(middleAngle) &ast; 120 + centerY;
+    let middleAngle = currentAngle + 0.5 * sliceAngle;
+    let textX = Math.cos(middleAngle) * 120 + centerX;
+    let textY = Math.sin(middleAngle) * 120 + centerY;
     cx.textBaseLine = "middle";
     if (Math.cos(middleAngle) &gt; 0) {
       cx.textAlign = "left";
@@ -6400,8 +6400,8 @@ scene and redraw it using the new position.</p>
     cx.strokeStyle = "blue";
     cx.lineWidth = 4;
     cx.strokeRect(25, 25, 350, 350);<br>
-    x += step &ast; speedX;
-    y += step &ast; speedY;
+    x += step * speedX;
+    y += step * speedY;
     if (x &lt; 25 + radius || x &gt; 375 - radius) speedX = -speedX;
     if (y &lt; 25 + radius || y &gt; 375 - radius) speedY = -speedY;
     cx.fillStyle = "red";
@@ -6521,7 +6521,7 @@ break) elements between the rows.</p>
   }
   function randomGrid() {
     let result = [];
-    for (let i = 0; i &lt; width &ast; height; i++) {
+    for (let i = 0; i &lt; width * height; i++) {
       result.push(Math.random() &lt; 0.3);
     }
     return result;
@@ -6534,7 +6534,7 @@ break) elements between the rows.</p>
     let count = 0;
     for (let y1 = Math.max(0, y - 1); y1 &lt;= Math.min(height - 1, y + 1); y1++) {
       for (let x1 = Math.max(0, x - 1); x1 &lt;= Math.min(width - 1, x + 1); x1++) {
-        if ((x1 != x || y1 != y) && grid[x1 + y1 &ast; width]) {
+        if ((x1 != x || y1 != y) && grid[x1 + y1 * width]) {
           count++;
         }
       }
@@ -6542,11 +6542,11 @@ break) elements between the rows.</p>
     return count;
   }<br>
   function nextGeneration(grid) {
-    let newGrid = new Array(width &ast; height);
+    let newGrid = new Array(width * height);
     for (let y = 0; y &lt; height; y++) {
       for (let x = 0; x &lt; width; x++) {
         let neighbors = countNeighbors(grid, x, y);
-        let offset = x + y &ast; width;
+        let offset = x + y * width;
         if (neighbors &lt; 2 || neighbors &gt; 3) {
           newGrid[offset] = false;
         } else if (neighbors == 2) {
@@ -6667,8 +6667,8 @@ you’ve changed the canvas size.</p>
     if (previous == null ||
         previous.width != picture.width ||
         previous.height != picture.height) {
-      canvas.width = picture.width &ast; scale;
-      canvas.height = picture.height &ast; scale;
+      canvas.width = picture.width * scale;
+      canvas.height = picture.height * scale;
       previous = null;
     }<br>
     let cx = canvas.getContext("2d");
@@ -6677,7 +6677,7 @@ you’ve changed the canvas size.</p>
         let color = picture.pixel(x, y);
         if (previous == null || previous.pixel(x, y) != color) {
           cx.fillStyle = color;
-          cx.fillRect(x &ast; scale, y &ast; scale, scale, scale);
+          cx.fillRect(x * scale, y * scale, scale, scale);
         }
       }
     }
@@ -7390,7 +7390,7 @@ are specified to be case insensitive, under their lowercase names.</p>
 
 <pre>
 router.add("GET", /^\/talks$/, async (server, request) => {
-  let tag = /"(.&ast;)"/.exec(request.headers["if-none-match"]);
+  let tag = /"(.*)"/.exec(request.headers["if-none-match"]);
   let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
   if (!tag || tag[1] != server.version) {
     return server.talkResponse();
@@ -7420,7 +7420,7 @@ SkillShareServer.prototype.waitForChanges = function(time) {
       if (!this.waiting.includes(resolve)) return;
       this.waiting = this.waiting.filter(r => r != resolve);
       resolve({status: 304});
-    }, time &ast; 1000);
+    }, time * 1000);
   });
 };
 </pre>
@@ -8080,7 +8080,7 @@ operations, and more.</p>
 let b = 5;
 let sum = a + b; // Addition
 let difference = a - b; // Subtraction
-let product = a &ast; b; // Multiplication
+let product = a * b; // Multiplication
 let quotient = a / b; // Division</pre>
   </li>
   <li><h4>Comparison Operators:</h4>
@@ -8115,7 +8115,7 @@ operations on numbers.</p>
     <pre>let difference = 10 - 4; // difference = 6</pre>
   </li>
   <li><h4>Multiplication:</h4>
-    <pre>let product = 6 &ast; 7; // product = 42</pre>
+    <pre>let product = 6 * 7; // product = 42</pre>
   </li>
   <li><h4>Division:</h4>
     <pre>let quotient = 20 / 5; // quotient = 4</pre>
@@ -8175,7 +8175,7 @@ blocks of code that perform a specific task when called</span>.</p>
 <pre>let message = greet('John'); // message = 'Hello, John!'</pre>
 
 <h4>Arrow Function:</h4>
-<pre>const multiply = (a,b) => a &ast; b;
+<pre>const multiply = (a,b) => a * b;
 let result = multiply(5,3); // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex12">12. JS Objects</h2>
@@ -8406,7 +8406,7 @@ numbers.forEach(number => {
 </pre>
 
 <h4>map() Method:</h4>
-<pre>let doubledNumbers = numbers.map(number => number &ast; 2);</pre>
+<pre>let doubledNumbers = numbers.map(number => number * 2);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex26">26. JS Array Const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8496,7 +8496,7 @@ and functions.</p>
 <pre>let randomNumber = Math.random(); // Random number between 0 and 1</pre>
 
 <h4>Generating Random Integer:</h4>
-<pre>let randomInteger = Math.floor(Math.random() &ast; 10); // Random integer between 0 and 9</pre>
+<pre>let randomInteger = Math.floor(Math.random() * 10); // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex33">33. JS Booleans</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8840,7 +8840,7 @@ console.log(pattern.test(str)); // Output: true
 <h3>Examples of JS Precedence:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arithmetic Precedence:</h4>
-<pre>let result = 5 + 3 &ast; 2; // Output: 11 (Multiplication has higher precedence )</pre>
+<pre>let result = 5 + 3 * 2; // Output: 11 (Multiplication has higher precedence )</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex50">50. JS Errors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8931,7 +8931,7 @@ person.greet(); // Outputs : 'Hello, my name is Alice'
 <h3>Examples of JS Arrow Function:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic Arrow Function:</h4>
-<pre>let multiply = (a, b) => a &ast; b;</pre>
+<pre>let multiply = (a, b) => a * b;</pre>
 
 <h4>Arrow Function with Multiple Lines:</h4>
 <pre>
@@ -10548,7 +10548,7 @@ window.onscroll = loadMoreContent;
 &lt;?php
 $page = $_GET['page']; // Get page number
 $limit = 10; // Number of items per page
-$start = ($page - 1) &ast; $limit; // Calculate starting index
+$start = ($page - 1) * $limit; // Calculate starting index
 // Fetch content based on page number and limit
 // Example :$results = fetchDataFromDatabase($start, $limit);
 // Generate sample content for demonstration
@@ -10586,7 +10586,7 @@ function uploadFile () {
   xhr.open('POST1, 'upload.php', true);
   xhr.upload.onprogress = function(e) {
     if (e.lengthComputable) {
-      let percentComplete = (e.loaded / e.total) &ast; 100;
+      let percentComplete = (e.loaded / e.total) * 100;
       document.getElementById('progressBar').style.width = percentComplete + '%';
     }
   };
@@ -11498,7 +11498,7 @@ letobj = {
   "name": "Joe",
   "birthday": new Date('1990-01-15T00:00:00Z'),
   "tojson function() {
-    return &ast; {"name" ${this.name}", "birthday" ${this.birthday.toISOString()}"}';
+    return * {"name" ${this.name}", "birthday" ${this.birthday.toISOString()}"}';
   };
   let jsonString = obj.tojson();
 }
@@ -11976,7 +11976,7 @@ to create animations, render shapes, images, and complex visualizations.</p>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 ctx.beginPath();
-ctx.arc(100, 100, 50, 0, 2 &ast; Math.PI);
+ctx.arc(100, 100, 50, 0, 2 * Math.PI);
 ctx.stroke();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12109,7 +12109,7 @@ ctx.fillRect(10,10,100,50);
 const canvas = document. getElementById ('myCanvas');
 const ctx = canvas . getContext ('2d');
 ctx.beginPath();
-ctx.arc(100, 100, 50, 0, Math.PI &ast; 2);
+ctx.arc(100, 100, 50, 0, Math.PI * 2);
 ctx.fillstyle = 'red';
 ctx.fill();
 </pre>
@@ -12236,12 +12236,12 @@ const svg = d3.select('body')
 .append('svg')
 .attr('width; 100 )
 .attr('height; 100 );
-svg.append('rect&ast;)
+svg.append('rect*)
 .attr('x; 10 )
 .attr('y; 10)
 .attr('width; 80 )
 .attr('height; 50 )
-.attr('fill; 'green&ast;);
+.attr('fill; 'green*);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Canvas Examples:</h4>
@@ -12258,7 +12258,7 @@ ctx.fillRect(10,10,100,50);
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 ctx.beginPath();
-ctx.arc(100,100,50,0,Math.PI &ast; 2);
+ctx.arc(100,100,50,0,Math.PI * 2);
 ctx.fillstyle = 'red';
 ctx.fill();
 </pre>
@@ -12403,14 +12403,14 @@ representations in web applications.</p>
 <h4>1. Convert Celsius to Fahrenheit:</h4>
 <pre>
 function celsiusToFahrenheit(Celsius) {
-  return(Celsius &ast; 9 / 5) + 32;
+  return(Celsius * 9 / 5) + 32;
 }
 let tempInFahrenheit = celsiusToFahrenheit(25); // Output: 77
 </pre>
 <h4>2. Calculate Area of a Circle:</h4>
 <pre>
 function calculateCircleArea (radius ) {
-  return Math.PI &ast; radius &ast; radius;
+  return Math.PI * radius * radius;
 }
 let area = calculateCircleArea(5); // Output: ~78.54
 </pre>
@@ -12454,7 +12454,7 @@ products.sort((a, b) => a.price - b.price);
 <h4>7. Higher - Order Function - Map:</h4>
 <pre>
 let numbers = [1, 2, 3];
-let doubled = numbers.map(num => num &ast; 2); // Output: [2, 4, 6]
+let doubled = numbers.map(num => num * 2); // Output: [2, 4, 6]
 </pre>
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
 <pre>
@@ -12491,7 +12491,7 @@ for (let color of colors) {
 <pre>
 let randomNums = [];
 while (randomNums.length &lt; 5) {
-  randomNums.push(Math.floor(Math.random() &ast; 10) + 1);
+  randomNums.push(Math.floor(Math.random() * 10) + 1);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12595,7 +12595,7 @@ function outerFunction(outerValue) {
 <pre>
 function multiply(a) {
   return function(b) {
-    return a &ast; b;
+    return a * b;
   };
 }
 let multiplyByTwo = multiply(2);
@@ -12612,7 +12612,7 @@ let sum = numbers.reduce((acc, curr) => acc + curr, 0); // Output: 15
 <h4>4. Using Filter and Map Together:</h4>
 <pre>
 let numbers = [1, 2, 3, 4, 5];
-let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num &ast; 2); 
+let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); 
 // Output: [4, 8]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12709,7 +12709,7 @@ document.addEventListener('click', function(event) {
 <h4>13. Template Literals:</h4>
 <pre>
 let name = 'Alice';
-let message = 'Hello, ${name}! &ast;;
+let message = 'Hello, ${name}! *;
 </pre>
 <h4>14. Spread Operator:</h4>
 <pre>
@@ -12764,7 +12764,7 @@ let evenNumbers = numbers.filter(num => num % 2 === 0); // Output: [2,4]
 <h4>3. Using FlatMap:</h4>
 <pre>
 letarr =[[1,2], [3,4], [5,6]];
-let flatArray = arr.flatMap(innerArr => innerArr.map(item => item &ast; 2)); // Output: [2,4,6,8,10,12]
+let flatArray = arr.flatMap(innerArr => innerArr.map(item => item * 2)); // Output: [2,4,6,8,10,12]
 </pre>
 <h4>4. Using Reduce to Flatten Arrays:</h4>
 <pre>
@@ -12814,7 +12814,7 @@ async function executeAsyncOperations() {
 executeAsyncOperations();
 </pre>
 <h4>8. Using Array. from with Mapping:</h4>
-<pre>let newArray = Array.from ({length: 5}, (index) => index &ast; 2 ); // Output: [ 0, 2, 4, 6, 8 ]</pre>
+<pre>let newArray = Array.from ({length: 5}, (index) => index * 2 ); // Output: [ 0, 2, 4, 6, 8 ]</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12893,7 +12893,7 @@ let user = users.find(user => user.id === 2); // Output: {id: 2, name: 'Bob'}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Generator Function:</h4>
 <pre>
-function &ast; generatorFunction() {
+function * generatorFunction() {
   yield 1;
   yield 2;
   yield 3;
@@ -12904,7 +12904,7 @@ console.log(generator.next().value); // Output: 2
 </pre>
 <h4>6. Async Generator Function:</h4>
 <pre>
-async function &ast; asyncGenerator() {
+async function * asyncGenerator() {
   yield 'First';
   await new Promise (resolve => setTimeout(resolve, 1000));
   yield ’Second';
@@ -12982,14 +12982,14 @@ function factorial(n) {
   if(n === 0||n === 1) {
     return 1;
   }
-  return n &ast; factorial(n - 1);
+  return n * factorial(n - 1);
 }<br>
 const memoizedFactorial = memoize(factorial);
 </pre>
 <h4>2. Function Composition:</h4>
 <pre>
 const add = x => x + 5;
-const multiply = x => x &ast; 2;
+const multiply = x => x * 2;
 const compose = (... fns) => x => fns . reduceRight((acc, fn) => fn (acc), x);
 const addAndMultiply = compose(multiply, add);
 </pre>
@@ -13206,7 +13206,7 @@ const throttled = throttle(throttledFunc, 3000);
 <h4>3. Using Array. from with Mapping and Filtering:</h4>
 <pre>
 const numbers = [1, 2, 3, 4, 5, 6];
-const new Array = Array.from(numbers, x => x &ast; 2 ).filter (x => x > 5); // Output: [6, 8, 10, 12]
+const new Array = Array.from(numbers, x => x * 2 ).filter (x => x > 5); // Output: [6, 8, 10, 12]
 </pre>
 
 <h4>4. Using Array. reduceRight:</h4>
@@ -13260,7 +13260,7 @@ async function processitems(items) {
 <h4>9. Dynamic Import for Modules:</h4>
 <pre>
 async function loadModule() {
-  const module = await import('./module.js&ast;);
+  const module = await import('./module.js*);
   module.doSomething();
 }
 </pre>
@@ -13283,7 +13283,7 @@ features like dynamic import and nullish coalescing operator.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Partial Application of Functions:</h4>
 <pre>
-const multiply = (a, b) => a &ast; b;
+const multiply = (a, b) => a * b;
 const partialMultiplyByTwo = multiply.bind(null, 2);
 console.log(partialMultiplyByTwo(5)); // Output: 10
 </pre>
@@ -13324,7 +13324,7 @@ const clonedArray = originalArray.slice(); // Clones the originalArray
 <h4>5. Using Object.keys with Mapping:</h4>
 <pre>
 constobj = {a: l,b: 2,c: 3};
-const mappedObj = Object.fromEntries(Object.keys(obj).map(key => [key, obj[key] &ast; 2]));
+const mappedObj = Object.fromEntries(Object.keys(obj).map(key => [key, obj[key] * 2]));
 </pre>
 
 <h4>6. Object.is for Strict Equality Comparison:</h4>
@@ -13347,7 +13347,7 @@ const results = await Promise.allSettled(promises);
 
 <h4>8. Async Generator Function:</h4>
 <pre>
-async function &ast; asyncGenerator() {
+async function * asyncGenerator() {
   yield 'First';
   await new Promise(resolve => setTimeout(resolve, 1000));
   yield 'Second';
@@ -13381,7 +13381,7 @@ features like optional chaining and BigInt.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Currying Function:</h4>
 <pre>
-const multiply = (a) => (b) => a &ast; b;
+const multiply = (a) => (b) => a * b;
 const multiplyByTwo = multiply(2);
 console.log(multiplyByTwo(5)); // Output: 10
 </pre>
@@ -13473,10 +13473,10 @@ manipulations, object methods, promises and async / await functionalities.</p>
 <h4>1. Function Composition with Multiple Functions:</h4>
 <pre>
 const add = (x, y) => x + y;
-const multiply = (x, y) => x &ast; y;
+const multiply = (x, y) => x * y;
 const compose = (... funcs) => funcs.reduce((f, g) => (... args) => f(g(... args)));
 const addAndMultiply = compose(multiply, add);
-console.log(addAndMultiply(3, 4)); // Output :21(3+4&ast;3)
+console.log(addAndMultiply(3, 4)); // Output :21(3+4*3)
 </pre>
 
 <h4>2. Using Function.toString() to Get Function Source Code:</h4>
@@ -13493,7 +13493,7 @@ console.log(functionsource); // Output:" function greet() {console.log('Hello!')
 <h4>3. Array.flatMap for Flattening and Mapping:</h4>
 <pre>
 const arr = [1, 2, 3];
-const mappedAndFlattened = arr.flatMap(x => [x &ast; 2, x &ast; 3]);
+const mappedAndFlattened = arr.flatMap(x => [x * 2, x * 3]);
 console.log(mappedAndFlattened); // Output: [2, 3, 4, 6, 6, 9]
 </pre>
 
@@ -13686,7 +13686,7 @@ function factorial (n) {
   if(n === 0 || n === 1) {
     return 1;
   }
-    return n &ast; factorial(n - 1);
+    return n * factorial(n - 1);
 }<br>
 console.log(factorial(5)); // Output: 120
 </pre>
@@ -13782,7 +13782,7 @@ ES6 + features like object destructuring and arrow functions.</p>
 <h4>2. Function that Returns Multiple Values:</h4>
 <pre>
 function calculateValues(x, y) {
-  return [x + y, x &ast; y, x / y];
+  return [x + y, x * y, x / y];
 }
 const[sum, product, division] = calculateValues(10, 5);
 console.log(sum, product, division); // Output: 15 50 2
@@ -13793,7 +13793,7 @@ console.log(sum, product, division); // Output: 15 50 2
 <h4>3. Using Array.map() for Transformation:</h4>
 <pre>
 const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map(num => num &ast; 2); // Output: [2, 4, 6, 8, 10]
+const doubledNumbers = numbers.map(num => num * 2); // Output: [2, 4, 6, 8, 10]
 </pre>
 
 <h4>4. Array. find () to Get First Matching Element:</h4>
@@ -14430,7 +14430,7 @@ displays the calculated area.</p>
 let base = parseFloat(prompt("Enter the base of the triangle: "));
 let height = parseFloat(prompt("Enter the height of the triangle: "));
 if (!isNaN(base) && !isNaN(height) && base > 0 && height > 0) {
-  let area = 0.5 &ast; base &ast; height;
+  let area = 0.5 * base * height;
   console.log(
   `The area of the triangle with base ${base} and height ${height} is: ${area}`
   );
@@ -14472,18 +14472,18 @@ let b = parseFloat(prompt("Enter the coefficient b:"));
 let c = parseFloat(prompt("Enter the coefficient c:"));
 
 // Calculate the discriminant
-let discriminant = b &ast;&ast; 2 - 4 &ast; a &ast; c;
+let discriminant = b ** 2 - 4 * a * c;
 
 // Check if roots are real
 if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
   if (discriminant > 0) {
-    let rootl = (-b + Math.sqrt(discriminant)) / (2 &ast; a);
-    let root2 = (-b - Math.sqrt(discriminant)) / (2 &ast; a);
+    let rootl = (-b + Math.sqrt(discriminant)) / (2 * a);
+    let root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
     console.log(
       `The roots of the quadratic equation are: ${rootl} and ${root2}`
     );
   } else if (discriminant === 0) {
-    let root = -b / (2 &ast; a);
+    let root = -b / (2 * a);
     console.log(`The quadratic equation has a repeated root: ${root}`);
   } else {
     console.log("The quadratic equation has complex roots.");
@@ -14518,7 +14518,7 @@ if (!isNaN(kilometers)) {
 <h2 id="js8">8. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program converts a temperature from Celsius to Fahrenheit using the formula: 
-<span class="consolas">F = (C &ast; 9/5) + 32</span>, where F is the temperature in 
+<span class="consolas">F = (C * 9/5) + 32</span>, where F is the temperature in 
 Fahrenheit and C is the temperature in Celsius.</p>
 
 <pre>
@@ -14907,7 +14907,7 @@ if (!isNaN(numl) && !isNaN(num2)) {
 <p>This program calculates the sum of natural numbers up to a given positive integer 
 <span class="consolas">n</span>. 
 The sum is calculated using the formula: 
-<span class="consolas">sum = n&ast;(n + l) / 2</span>.</p>
+<span class="consolas">sum = n*(n + l) / 2</span>.</p>
 
 <pre>
 // Prompt user for a positive integer
@@ -15075,7 +15075,7 @@ low, or correct. The user continues guessing until they correctly identify the r
 
 <pre>
 // Generate a random number between 1 and 100 (you can adjust the range)
-const randomNumber = Math.floor(Math.random() &ast; 100) + 1;
+const randomNumber = Math.floor(Math.random() * 100) + 1;
 
 // Initialize variables
 let userGuess;
@@ -15122,7 +15122,7 @@ function createDeck() {
 // Function to shuffle the deck of cards
 function shuffleDeck(deck) {
   for (let i = deck.length -1; i > 0; i—) {
-    const j = Math.floor(Math.random() &ast; (i + 1));
+    const j = Math.floor(Math.random() * (i + 1));
     &lbrack;deck&lbrack;i&rbrack;, deck&lbrack;j&rbrack;&rbrack; = &lbrack;deckfj&rbrack;, deck&lbrack;i&rbrack;&rbrack;; // Swap elements to shuffle
   }
 }
@@ -15182,7 +15182,7 @@ function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
   } else {
-    return n &ast; factorial(n -1);
+    return n * factorial(n -1);
   }
 }
 
@@ -15516,7 +15516,7 @@ function generateRandomString(length) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let randomstring = '';
   for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() &ast; characters.length);
+    const randomIndex = Math.floor(Math.random() * characters.length);
     randomstring += characters.charAt(randomIndex);
   }
   return randomstring;
@@ -15761,10 +15761,10 @@ function updateCountdown() {
   // Calculate the remaining time
   const timeDifference = targetDate - currentDate;
   // Calculate days, hours, minutes, and seconds
-  const days = Math.floor(timeDifference / (1000 &ast; 60 &ast; 60 &ast; 24));
-  const hours = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60 &ast; 24)) / (1000 &ast; 60 &ast; 60));
-  const minutes = Math.floor((timeDifference % (1000 &ast; 60 &ast; 60)) || (1000 &ast; 60));
-  const seconds = Math.floor((timeDifference % (1000 &ast; 60)) / 1000);
+  const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) || (1000 * 60));
+  const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
   // Display the countdown
   document.getElementById('countdown').innerHTML = ' ${days}d ${hours}h ${minutes}m ${seconds}s';
   // Check if the countdown has reached zero
@@ -15837,7 +15837,7 @@ the array length.</p>
 // Example array
 letmyArray = &lbrack;1, 2, 3,4, 5, 6, 7, 8, 9,10&rbrack;;
 // Get a random index
-let randomindex = Math.floor(Math.random() &ast; myArray.length);
+let randomindex = Math.floor(Math.random() * myArray.length);
 // Get the random item from the array
 let randomitem = myArray&lbrack;randomIndex&rbrack;;
 // Display the result
@@ -15936,7 +15936,7 @@ function getRandomNumber(min, max) {
   const randomDecimal = Math.random();
 
   // Scale the random decimal to the desired range
-  const randomNumber = Math.floor(randomDecimal &ast; (max - min + 1)) + min;
+  const randomNumber = Math.floor(randomDecimal * (max - min + 1)) + min;
   return randomNumber;
 }
 
@@ -16233,7 +16233,7 @@ function add(x, y) {
   return x + y;
 }
 function multiply(x, y) {
-  return x &ast; y;
+  return x * y;
 }
 
 // Example usage
@@ -16361,7 +16361,7 @@ function calculateCircleArea(radius) {
     return "Invalid radius. Please provide a positive number.";
   }
   // Calculate the area
-  const area = Math.PI &ast; Math.pow(radius, 2);
+  const area = Math.PI * Math.pow(radius, 2);
   return area;
 }
 
@@ -16379,9 +16379,9 @@ random values for the red, green, and blue components of the color.</p>
 <pre>
 function generateRandomColor() {
   // Generate random values for red, green, and blue components
-  const red = Math.floor(Math.random() &ast; 256);
-  const green = Math.floor(Math.random() &ast; 256);
-  const blue = Math.floor(Math.random() &ast; 256);
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
 
   // Create the RGB color string
   const color = ' rgb(${red}, ${green}, ${blue})';
@@ -16483,16 +16483,16 @@ console.log("Reversed Array:", reversedArray);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To calculate the power of a number in JavaScript, you can use the 
 <span class="consolas">Math.pow()</span> method or the exponentiation
-operator (<span class="consolas">&ast;&ast;</span>).</p>
+operator (<span class="consolas">**</span>).</p>
 
 <pre>
 // Using Math.pow()
 function calculatePowerWithMathPow(base, exponent) {
   return Math.pow(base, exponent);
 }
-// Using the exponentiation operator (&ast;&ast;)
+// Using the exponentiation operator (**)
 function calculatePowerWithExponentiationOperator(base, exponent) {
-  return base&ast;&ast;exponent;
+  return base**exponent;
 }
 
 // Example usage:
@@ -16501,7 +16501,7 @@ const exponentNumber = 3;
 const resultWithMathPow = calculatePowerWithMathPow(baseNumber, exponentNumber);
 const resultWithExponentiationOperator = calculatePowerWithExponentiationOperator(baseNumber, exponentNumber);
 console.log(`${baseNumber} to the power of ${exponentNumber} using Math.pow(): ${resultWithMathPow}`);
-console.log(`${baseNumber} to the power of ${exponentNumber} using the exponentiation operator (&ast;&ast;): ${resultWithExponentiationOperator}`);
+console.log(`${baseNumber} to the power of ${exponentNumber} using the exponentiation operator (**): ${resultWithExponentiationOperator}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js89">89. Find the Minimum Element in an Array</h2>
@@ -16612,7 +16612,7 @@ function generateRandomPassword(length) {
   const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const numericChars = '0123456789';
-  const specialchars = '!©#$%A&&ast;()-_+=';
+  const specialchars = '!©#$%A&*()-_+=';
   // Combine character sets
   const allChars = uppercaseChars + lowercaseChars + numericChars + specialchars;
   // Check if the input length is a valid positive number
@@ -16622,7 +16622,7 @@ function generateRandomPassword(length) {
   // Generate the random password
   let password =";
   for (let i = 0; i < length; i++) {
-    const randomindex = Math.floor(Math.random() &ast; allChars.length);
+    const randomindex = Math.floor(Math.random() * allChars.length);
     password += allChars.charAt(randomlndex);
   }
   return password;
@@ -16644,7 +16644,7 @@ function calculateSimpleInterest(principal, rate, time) {
     return "Invalid inputs. Please provide valid positive numbers.";
   }
   // Calculate simple interest
-  const simpleInterest = (principal &ast; rate &ast; time) / 100;
+  const simpleInterest = (principal * rate * time) / 100;
   return simpleInterest;
 }
 
@@ -16729,7 +16729,7 @@ function calculateCylinderVolume(radius, height) {
   }
 
   // Calculate the volume of the cylinder
-  const volume = Math.PI &ast; Math.pow(radius, 2) &ast; height;
+  const volume = Math.PI * Math.pow(radius, 2) * height;
   return volume;
 }
 // Example usage:
@@ -16757,7 +16757,7 @@ function generateRandomQuote() {
   &rbrack;;
 
   // Generate a random index to pick a quote from the array
-  const randomIndex = Math.floor(Math.random() &ast; quotes.length);
+  const randomIndex = Math.floor(Math.random() * quotes.length);
 
   // Return the randomly selected quote
   return quotes&lbrack;randomIndex&rbrack;;
@@ -16797,7 +16797,7 @@ console.log("Intersection of Arrays:", result);
 <h2 id="js100">100. Convert Feet to Meters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert feet to meters in JavaScript, you can use the following conversion formula:
-<span class="consolas">Meters=Feet&ast;0.3048</span>.</p>
+<span class="consolas">Meters=Feet*0.3048</span>.</p>
 <p>Here's a simple function that performs the conversion:</p>
 
 <pre>
@@ -16807,7 +16807,7 @@ function feetToMeters(feet) {
     return "Invalid input. Please provide a valid number of feet.";
   }
   // Perform the conversion
-  const meters = feet &ast; 0.3048;
+  const meters = feet * 0.3048;
   return meters;
 }
 
@@ -16937,7 +16937,7 @@ function calculateRectangleArea(length, width) {
     return "Invalid inputs. Please provide valid positive numbers for length and width.";
   }
     // Calculate the area of the rectangle
-    const area = length &ast; width;
+    const area = length * width;
     return area;
 }
 // Example usage:
@@ -17032,7 +17032,7 @@ function calculateFactorial(n) {
   // Use BigInt to handle large factorials
   let result = BigInt(l);
   for (let i = 2;i<=n;i++){
-    result &ast;= BigInt(i);
+    result *= BigInt(i);
   }
   return result.toStringO;
 }
@@ -17053,7 +17053,7 @@ each digit and checks if their sum equals the original number.</p>
 function calculateFactorial(number) {
   let result = 1;
   for (let i = 2; i < = number; i++) {
-    result &ast;= i;
+    result *= i;
   }
   return result;
 }
@@ -17130,7 +17130,7 @@ console.log(`The number of consonants in "${testString}" is: ${result}`);
 <p>This program checks if a given positive integer is a triangular number. A triangular 
 number is a number that can be represented in the form of a triangle with dots. 
 Mathematically, a triangular number <span class="consolas">T_ n</span> is given by the 
-formula: <span class="consolas">T_n = n&ast;(n+l)/2</span>.</p>
+formula: <span class="consolas">T_n = n*(n+l)/2</span>.</p>
 
 <pre>
 function isTriangularNumber(num) {
@@ -17159,7 +17159,7 @@ console.log(`${testNumber} is a triangular number: ${result}`);
 <p>This program calculates the area of a trapezoid given the lengths of its bases ( 
 <span class="consolas">a and b</span> ) and its height ( 
 <span class="consolas">h</span> ). The formula for the area of a trapezoid is:
-<span class="consolas">Area = (a + b) &ast; h / 2</span>.</p>
+<span class="consolas">Area = (a + b) * h / 2</span>.</p>
 
 <pre>
 function trapezoidArea(basel, base2, height) {
@@ -17168,7 +17168,7 @@ function trapezoidArea(basel, base2, height) {
     return "Invalid input. Please provide valid numbers.";
   }
   // Calculate the area of the trapezoid
-  const area = 0.5 &ast; height &ast; (basel + base2);
+  const area = 0.5 * height * (basel + base2);
   return area;
 }
 // Example usage:
@@ -17223,8 +17223,8 @@ const isPerfectSquare = (n) => {
 const sqrt = Math.sqrt(n);
 return sqrt === Math.floor(sqrt);
 };
-// A number is a Fibonacci number if and only if one of (5 &ast; numA2 + 4) or (5 &ast; numA2 - 4) is a perfect square
-return isPerfectSquare(5 &ast; num &ast; num + 4) || isPerfectSquare(5 &ast; num &ast; num - 4);
+// A number is a Fibonacci number if and only if one of (5 * numA2 + 4) or (5 * numA2 - 4) is a perfect square
+return isPerfectSquare(5 * num * num + 4) || isPerfectSquare(5 * num * num - 4);
 // Example usage:
 const testNumber = 8;
 const result = isFibonacciNumber(testNumber);
@@ -17236,7 +17236,7 @@ console.log(' $ {testNumber} is a Fibonacci number: $ {result}');
 <p>This program calculates the perimeter of a rectangle given the lengths of its sides ( 
 <span class="consolas">length and width</span> ). The
 formula for the perimeter of a rectangle is: 
-<span class="consolas">Perimeter = 2 &ast; (length + width)</span>.</p>
+<span class="consolas">Perimeter = 2 * (length + width)</span>.</p>
 
 <pre>
 function rectanglePerimeter(length, width) {
@@ -17244,7 +17244,7 @@ function rectanglePerimeter(length, width) {
 if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
 return "Invalid input. Please provide valid positive numbers.";
 // Calculate the perimeter of the rectangle
-const perimeter = 2 &ast; length + 2 &ast; width;
+const perimeter = 2 * length + 2 * width;
 return perimeter;
 // Example usage:
 const rectangleLength = 5;
@@ -17351,7 +17351,7 @@ function generatePascalsTriangle(numRows) {
     const row = &lbrack;&rbrack;;
     for (let j = 0; j <= i; j++) {
       // Calculate the binomial coefficient using nCr formula
-      const coefficient = factorial(i) / (factorial(j) &ast; factorial^ - j));
+      const coefficient = factorial(i) / (factorial(j) * factorial^ - j));
       row.push(coefficient);
     }
     pascalsTriangle.push(row);
@@ -17363,7 +17363,7 @@ function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
   }
-  return n &ast; factorial(n -1);
+  return n * factorial(n -1);
 }
 // Example usage:
 const numberOfRows = 5;
@@ -17430,7 +17430,7 @@ if (isNaN(base) 11 isNaN(height) 11 base <= 0 11 height <= 0) {
 return "Invalid input. Please provide valid positive numbers.";
 }
 // Calculate the area of the parallelogram
-const area = base &ast; height;
+const area = base * height;
 return area;
 }
 // Example usage:
@@ -17447,7 +17447,7 @@ console.log(' The area of the parallelogram is: $ {areaResult}');
 <pre>
 function computerPlayO {
   const options = &lbrack;'rock', ‘paper1, 'scissors'&rbrack;;
-  const randomindex = Math.floor(Math.random() &ast; options.length);
+  const randomindex = Math.floor(Math.random() * options.length);
   return options&lbrack;randomlndex&rbrack;;
 }
 function playRound(playerSelection, computerselection) {
@@ -17507,7 +17507,7 @@ encouraged to try again.</p>
 const symbols = &lbrack;''&rbrack;;
 // Function to get a random symbol from the array
 function getRandomSymbol() {
-  const randomindex = Math.floor(Math.random() &ast; symbols.length);
+  const randomindex = Math.floor(Math.random() * symbols.length);
   return symbols&lbrack;randomlndex&rbrack;;
 }
 // Function to simulate a spin of the slot machine
@@ -17610,7 +17610,7 @@ includeSpecialChars) {
   const uppercaseChars = ABCDEFGHIJKLMNOPQRSTUV WXYZ';
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const numberChars = '0123456789';
-  const specialchars = ,!@#$%A&&ast;()-=_+&lbrack;&rbrack;{}l;:,.<>?';
+  const specialchars = ,!@#$%A&*()-=_+&lbrack;&rbrack;{}l;:,.<>?';
   let validChars = '';
   let password = '';
   if (includeUppercase) validChars += uppercaseChars;
@@ -17622,7 +17622,7 @@ includeSpecialChars) {
     return null;
   }
   for (let i = 0; i < length; i++) {
-    const randomindex = Math.floor(Math.random() &ast; validChars.length);
+    const randomindex = Math.floor(Math.random() * validChars.length);
   }
   password += validChars.charAt(randomlndex);
   return password;
@@ -17743,8 +17743,8 @@ function isSafe(board, row, col, num) {
     }
   }
   // Check if'num' is not present in the 3x3 subgrid
-  const startRow = Math.floor(row / 3) &ast; 3;
-  const startCol = Math.floor(col / 3) &ast; 3;
+  const startRow = Math.floor(row / 3) * 3;
+  const startCol = Math.floor(col / 3) * 3;
   for (leti = 0;i < 3;i++){
     for (let j = 0; j < 3;j++){
       if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; === num) {
@@ -17839,14 +17839,14 @@ console.log(jsonString);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of an ellipse given its semi-major axis (&alpha;) and 
 semi-minor axis (&beta;). The formula for the area of an ellipse is;
-<span class="consolas">&pi; &ast; &alpha; &ast; &beta;</span>.</p>
+<span class="consolas">&pi; * &alpha; * &beta;</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function to calculate the area of an ellipse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateEllipseArea(semiMajorAxis, semiMinorAxis) {
   const pi = Math.PI;
-  const area = pi &ast; semiMajorAxis &ast; semiMinorAxis;
+  const area = pi * semiMajorAxis * semiMinorAxis;
   return area;
 }
 // Example usage
@@ -17879,13 +17879,13 @@ if (isBinaryPalindrome(numberToCheck)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a rhombus given the lengths of its diagonals 
 ( <span class="consolas">d1</span> and <span class="consolas">d2</span> ). The formula
-for the area of a rhombus is <span class="consolas">Area = (dl &ast; d2) / 2</span>, where 
+for the area of a rhombus is <span class="consolas">Area = (dl * d2) / 2</span>, where 
 <span class="consolas">d1 and d2</span> are the lengths of the diagonals.</p>
 
 <pre>
 // Function to calculate the area of a rhombus
 function calculateRhombusArea(diagonal1, diagonal2) {
-  const area = (diagonal1 &ast; diagona2) / 2;
+  const area = (diagonal1 * diagona2) / 2;
   return area;
 }
 // Example usage
@@ -17900,7 +17900,7 @@ console.log(`The area of the rhombus is: ${rhombus Area.toFixed(2)`);
 <p>This program checks if a given non-negative integer is a Catalan number. Catalan 
 numbers are a sequence of natural numbers that occur in various counting problems, 
 often involving recursive structures. The nth Catalan number is given by the formula:
-<span class="consolas">Cn = (2n)!/((n + l)! &ast; n!)</span>.</p>
+<span class="consolas">Cn = (2n)!/((n + l)! * n!)</span>.</p>
 
 <pre>
 // Function to calculate binomial coefficient (n choose k)
@@ -17910,7 +17910,7 @@ function binomialCoefficient(n, k) {
   }
   let result = 1;
   for (let i = 0; i < k; i++) {
-    result &ast;= (n - i);
+    result *= (n - i);
     result /= (i + 1);
   }
   return result;
@@ -17918,7 +17918,7 @@ function binomialCoefficient(n, k) {
 // Function to check if a number is a Catalan number
 function isCatalanNumber(num) {
   for (let i = 0; i < = num; i++) {
-    if (binomialCoefficient(2 &ast; i, i) === num / (i + 1)) {
+    if (binomialCoefficient(2 * i, i) === num / (i + 1)) {
       return true;
     }
   }
@@ -17947,7 +17947,7 @@ function calculateLuhnCheckDigit(input) {
   
   // Double every second digit from the right
   for (let i = digits.length - 2; i > = 0; i -= 2) {
-    let doubledDigit = digits&lbrack;i&rbrack; &ast; 2;
+    let doubledDigit = digits&lbrack;i&rbrack; * 2;
     // If doubling results in a number greater than 9, subtract 9
     if (doubledDigit > 9) {
       doubledDigit-= 9;
@@ -18038,7 +18038,7 @@ function isMagicYear(year) {
 const yearStr = year.toStringO;
 const month = parse!nt(yearStr.substring(0, 2), 10);
 const day = parse!nt(yearStr.substring(2, 4), 10);
-return month &ast; day === parse!nt(yearStr.substring(4), 10);
+return month * day === parse!nt(yearStr.substring(4), 10);
 
 // Example usage
 const yearToCheck = 1978; // Replace with the year you want to check
@@ -18097,14 +18097,14 @@ crossword.printPuzzle();
 <p>This program calculates the area of a regular polygon given the number of sides ( 
 <span class="consolas">n</span> ) and the side length ( 
 <span class="consolas">s</span> ). The formula for the area of a regular polygon is 
-<span class="consolas">Area = (n &ast; s^2) / (4 &ast; tan(&pi;/n))</span>, where 
+<span class="consolas">Area = (n * s^2) / (4 * tan(&pi;/n))</span>, where 
 <span class="consolas">n</span> is the number of
 sides, <span class="consolas">s</span> is the side length, and 
 <span class="consolas">tan</span> is the tangent function.</p>
 
 <pre>
 function calculateRegularPolygonArea(n, s) {
-  const numerator = 1 / 4 &ast; n &ast; Math.pow(s, 2);
+  const numerator = 1 / 4 * n * Math.pow(s, 2);
   const denominator = Math.tan(Math.PI / n);
   const area = numerator / denominator;
   return area;
@@ -18161,7 +18161,7 @@ class WordGuessingGame {
     this.maxAttempts = 6;
   }
   getRandomWord() {
-    const randomindex = Math.floor(Math.random() &ast; this.wordList.length);
+    const randomindex = Math.floor(Math.random() * this.wordList.length);
     return this.wordList&lbrack;randomIndex&rbrack;.toUpperCase();
   }
   displayWord() {
@@ -18213,7 +18213,7 @@ game.makeGuess('s');
 which counts the positive integers up to a given integer 
 <span class="consolas">n</span> that are relatively prime to 
 <span class="consolas">n</span>. The formula for Euler's Totient Function is: 
-<span class="consolas">&#934;(n) = n &ast; (1 - 1/pl) &ast; (1 - l/p2) &ast; ... &ast; 
+<span class="consolas">&#934;(n) = n * (1 - 1/pl) * (1 - l/p2) * ... * 
 (1 - 1/pk)</span>, where pl, p2,..., pk are the distinct prime factors of 
 <span class="consolas">n</span>.</p>
 
@@ -18224,7 +18224,7 @@ function eulerTotientFunction(n) {
   }
   let result = n; // Initialize result as n
   // Iterate through all prime factors of n
-  for (letp = 2; p &ast; p <= n; p++) {
+  for (letp = 2; p * p <= n; p++) {
     if (n % p === 0) {
       while (n % p === 0) {
         n/=p;
@@ -18262,7 +18262,7 @@ class MemoryMatchingGame {
   }
   shuffleCards() {
     for (let i = this.cards.length -1; i > 0; i--) {
-      constj = Math.floor(Math.random() &ast; (i + 1));
+      constj = Math.floor(Math.random() * (i + 1));
       &lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; 
       = &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
     }
@@ -18272,7 +18272,7 @@ class MemoryMatchingGame {
     for (let i = 0; i < 4; i++) {
       const row = &lbrack;&rbrack;;
       for (let j = 0; j <4;j++){
-        row.push(this.cards&lbrack;i &ast; 4 + j&rbrack;);
+        row.push(this.cards&lbrack;i * 4 + j&rbrack;);
       }
       board.push(row);
     }
@@ -18356,7 +18356,7 @@ function isVampireNumber(number) {
       // Exclude cases where one of the pairs has a leading zero
       continue;
     }
-    if (number === pairl &ast; pair2) {
+    if (number === pairl * pair2) {
       return true;
     }
   }
@@ -18402,7 +18402,7 @@ class SimonSaysGame {
   }
   generateSequence() {
     for (let i = 0; i < this.round; i++) {
-      const randomindex = Math.floor(Math.random() &ast;this.colors.length);
+      const randomindex = Math.floor(Math.random() *this.colors.length);
       this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
     }
   }
@@ -18456,12 +18456,12 @@ simonSaysGame.playO;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a regular hexagon given the side length 
 (<span class="consolas">s</span>). The formula for the area of a regular hexagon is 
-<span class="consolas">Area = (3 &ast; &radic; 3 &ast; s^2) / 2</span>, where 
+<span class="consolas">Area = (3 * &radic; 3 * s^2) / 2</span>, where 
 <span class="consolas">s</span> is the side length.</p>
 
 <pre>
 function calculateHexagonArea(sideLength) {
-  const area = (3 &ast; Math.sqrt(3) / 2) &ast; Math.pow(sideLength, 2);
+  const area = (3 * Math.sqrt(3) / 2) * Math.pow(sideLength, 2);
   return area;
 }
   
@@ -18475,12 +18475,12 @@ console.log(`The area of the hexagon is: ${hexagonArea.toFixed(2)}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a pronic number, also known as a 
 rectangular number or oblong number. A pronic number is a product of two consecutive 
-integers. The nth pronic number is given by the formula: <span class="consolas">n &ast; (n + 1)</span>.</p>
+integers. The nth pronic number is given by the formula: <span class="consolas">n * (n + 1)</span>.</p>
 
 <pre>
 function isPronicNumber(number) {
-  for (let i = O; i&ast;(i + 1) <= number; i++) {
-    if (i &ast; (i + 1) === number) {
+  for (let i = O; i*(i + 1) <= number; i++) {
+    if (i * (i + 1) === number) {
       return true;
     }
   }
@@ -18516,8 +18516,8 @@ class MinesweeperGame {
     for (let i = 0; i < this.numMines; i++) {
       let row, col;
       do {
-        row = Math.floor(Math.random() &ast; this.rows);
-        col = Math.floor(Math.random() &ast; this.cols);
+        row = Math.floor(Math.random() * this.rows);
+        col = Math.floor(Math.random() * this.cols);
       } while (board&lbrack;row&rbrack;&lbrack;col&rbrack; === 'X');
         board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
     }
@@ -18579,7 +18579,7 @@ class MinesweeperGame {
     for (const row of this.board) {
       uncoveredCount += row.filter(cell => cell !== 'X').length;
     }
-    if (uncoveredCount === this.rows &ast; this.cols - this.numMines) {
+    if (uncoveredCount === this.rows * this.cols - this.numMines) {
       console.log('Congratulations! You win!');
       this.gameOver = true;
     }
@@ -18602,12 +18602,12 @@ minesweeperGame.uncoverCell(4, 4);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a regular pentagon given the side length 
 (<span class="consolas">s</span>). The formula for the area of a regular pentagon is 
-<span class="consolas">Area = (1/4) &ast; &radic;(5 &ast; (5 + 2 &ast; &radic;5)) &ast; s^2<span>, 
+<span class="consolas">Area = (1/4) * &radic;(5 * (5 + 2 * &radic;5)) * s^2<span>, 
 where <span class="consolas">s</span> is the side length.</p>
 
 <pre>
 function calculatePentagonArea(sideLength) {
-  const area = (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2 &ast; Math.sqrt(5))) &ast; Math.pow(sideLength, 2);
+  const area = (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * Math.pow(sideLength, 2);
   return area;
 }
 
@@ -18656,7 +18656,7 @@ class TypingSpeedTest {
     this.userlnput = '';
   }
   generateRandomText() {
-    const randomindex = Math.floor(Math.random() &ast; this.words.length);
+    const randomindex = Math.floor(Math.random() * this.words.length);
     return this.words&lbrack;randomlndex&rbrack;;
   }
   startTest() {
@@ -18667,7 +18667,7 @@ class TypingSpeedTest {
   endTest() {
     this.endTime = Date.now();
     const elapsedTime = (this.endTime - this.startTime) / 1000; // Convert to seconds
-    const wordsPerMinute = (this.text.splitf ').length / elapsedTime) &ast; 60;
+    const wordsPerMinute = (this.text.splitf ').length / elapsedTime) * 60;
     console.log(`You typed at a speed of ${wordsPerMinute.toFixed(2)} words per minute.`);
   }
   getUserlnput(input) {
@@ -18693,12 +18693,12 @@ typingTest.getUserlnput(userlnput);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a cube given the length of its side (
 <span class="consolas">s</span>). The formula for the surface area of a cube is 
-<span class="consolas">Surface Area = 6 &ast; s&ast; 2</span>, where <span class="consolas">s</span> 
+<span class="consolas">Surface Area = 6 * s* 2</span>, where <span class="consolas">s</span> 
 is the length of a side.</p>
 
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
-  const surface Area = 6 &ast; Math.pow(sideLength, 2);
+  const surface Area = 6 * Math.pow(sideLength, 2);
   return surfaceArea;
 }
 
@@ -18712,12 +18712,12 @@ console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a cone given the radius of its base 
 (<span class="consolas">r</span>) and the slant height (l). The formula for the surface 
-area of a cone is <span class="consolas">Surface Area = pi &ast; r &ast; (r +1)</span>, where 
+area of a cone is <span class="consolas">Surface Area = pi * r * (r +1)</span>, where 
 <span class="consolas">pi</span> is the mathematical constant Pi.</p>
 
 <pre>
 function calculateCubeSurfaceArea(sideLength) {
-  const surface Area = 6 &ast; Math.pow(sideLength, 2);
+  const surface Area = 6 * Math.pow(sideLength, 2);
   return surfaceArea;
 }
 
@@ -18759,16 +18759,16 @@ if (isHappyNumber(happyNumber)) {
 <p>This program calculates the surface area of a triangular prism given the lengths of 
 its base sides (<span class="consolas">a , b , and c</span>) and the height of the prism 
 (<span class="consolas">h</span>). The formula for the surface area of a triangular prism 
-is <span class="consolas">Surface Area = (Perimeter of the base &ast; Height) + 
-(2 &ast; Area of the base)</span>, where the perimeter of the base is 
+is <span class="consolas">Surface Area = (Perimeter of the base * Height) + 
+(2 * Area of the base)</span>, where the perimeter of the base is 
 <span class="consolas">Perimeter = a + b + c</span> and the area of the base is calculated using 
 Heron's formula.</p>
 
 <pre>
 function calculateTriangularPrismSurfaceArea(a, b, c, height) {
-const baseArea = 0.25 &ast; Math.sqrt((-a + b + c)&ast;(a-b + c)&ast;(a + b-c)&ast;(a + b + c));
+const baseArea = 0.25 * Math.sqrt((-a + b + c)*(a-b + c)*(a + b-c)*(a + b + c));
 const perimeter = a + b + c;
-const surfaceArea = baseArea + perimeter &ast; height;
+const surfaceArea = baseArea + perimeter * height;
 return surfaceArea;
 
 // Example usage
@@ -18804,8 +18804,8 @@ function isPerfectSquare(number) {
 }
 
 function isFibonacciPrime(number) {
-return isPrime(number) && isPerfectSquare(5 &ast; Math.pow(number, 2) + 4) 
-  || isPerfectSquare(5 &ast; Math.pow(number, 2) - 4);
+return isPrime(number) && isPerfectSquare(5 * Math.pow(number, 2) + 4) 
+  || isPerfectSquare(5 * Math.pow(number, 2) - 4);
 }
 
 // Example usage
@@ -18862,12 +18862,12 @@ if (isSquarefulNumber(squarefulNumber)) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a regular tetrahedron given the length of its 
 edges ( <span class="consolas">a</span> ). The formula for the surface area of a regular 
-tetrahedron is <span class="consolas">Surface Area = &radic;3 &ast; a^2</span>, where 
+tetrahedron is <span class="consolas">Surface Area = &radic;3 * a^2</span>, where 
 <span class="consolas">a</span> is the length of an edge.</p>
 
 <pre>
 function calculateTetrahedronSurfaceArea(edgeLength) {
-  const surfaceArea = Math.sqrt(3) &ast; Math.pow(edgeLength, 2);
+  const surfaceArea = Math.sqrt(3) * Math.pow(edgeLength, 2);
   return surfaceArea;
 }
 
@@ -18885,7 +18885,7 @@ number whose square ends with the number itself. For example, 5 is an automorphi
 
 <pre>
 function isAutomorphicNumber(number) {
-  const square = number &ast; number;
+  const square = number * number;
   const numberDigits = String(number);
   const squareDigits = String(square);
   
@@ -18906,14 +18906,14 @@ if (isAutomorphicNumber(automorphicNumber)) {
 <p>This program calculates the surface area of a square pyramid given the length of the 
 base side ( <span class="consolas">s</span> ) and the slant height (
 <span class="consolas">l</span>). The formula for the surface area of a square pyramid is 
-<span class="consolas">Surface Area = s^2 + 2 &ast; s &ast; l</span>, where
+<span class="consolas">Surface Area = s^2 + 2 * s * l</span>, where
 <span class="consolas">s</span> is the length of a base side and 
 <span class="consolas">l</span> is the slant height.</p>
 
 <pre>
 function calculatePyramidSurfaceArea(sideLength, slantHeight) {
   const baseArea = Math.pow(sideLength, 2);
-  const lateralArea = 2 &ast; sideLength &ast; slantHeight;
+  const lateralArea = 2 * sideLength * slantHeight;
   const surfaceArea = baseArea + lateralArea;
   return surfaceArea;
 }
@@ -19037,13 +19037,13 @@ towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 top and bottom bases (<span class="consolas">r1</span> and 
 <span class="consolas">r2</span>) and the slant height 
 (<span class="consolas">l</span>). The formula for the surface area of a frustum of a cone 
-is <span class="consolas">Surface Area = &pi; &ast; (rl + r2) &ast; l + &pi; &ast; rl^2 
-+ &pi; &ast; r2^2</span>, where <span class="consolas">&pi;</span> is the mathematical 
+is <span class="consolas">Surface Area = &pi; * (rl + r2) * l + &pi; * rl^2 
++ &pi; * r2^2</span>, where <span class="consolas">&pi;</span> is the mathematical 
 constant Pi.</p>
 
 <pre>
 function surfaceAreaOfFrustum(rl, r2, l) {
-  const surfaceArea = Math.PI &ast; (rl + r2) &ast; l + Math.PI &ast; rl &ast;&ast; 2 + Math.PI &ast; r2 &ast;&ast; 2;
+  const surfaceArea = Math.PI * (rl + r2) * l + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
   console.log(`Surface Area of the frustum is: ${surfaceArea}`);
 }
 
@@ -19066,8 +19066,8 @@ function isMotzkinNumber(number) {
   // Use dynamic programming to calculate Motzkin numbers
   const motzkinNumbers = &lbrack;1, 1&rbrack;;
   for (let n = 2; n <= number; n++) {
-    const nextMotzkin = ((2 &ast;n + 1) &ast; <i>motzkinNumbers&lbrack;n-l&rbrack; 
-      + (3 &ast; n - 3) &ast; </i>motzkinNumbers&lbrack;n - 2&rbrack;) / (n + 2);
+    const nextMotzkin = ((2 *n + 1) * <i>motzkinNumbers&lbrack;n-l&rbrack; 
+      + (3 * n - 3) * </i>motzkinNumbers&lbrack;n - 2&rbrack;) / (n + 2);
     motzkinNumbers.push(nextMotzkin);
   }
 
@@ -19122,8 +19122,8 @@ triangles to each side of the existing triangles.</p>
 <pre>
 function calculateKochSnowflakeArea(sideLength, iterations) {
   const sqrt3 = Math.sqrt(3);
-  const area = (4 &ast; sqrt3 / 5) &ast; 
-    Math.pow((sideLength / 3), 2) &ast; Math.pow(3 / 2, iterations);
+  const area = (4 * sqrt3 / 5) * 
+    Math.pow((sideLength / 3), 2) * Math.pow(3 / 2, iterations);
   return area;
 }
 
@@ -19238,7 +19238,7 @@ function startBomb() {
   bombTimer = setTimeout(() =&gt; {
     console.log("BOOM! The bomb exploded. Game over!");
     clearInterval(countdownInterval);
-  }, timeLeft &ast; 1000);
+  }, timeLeft * 1000);
 }
 
 function defuseBomb() {
@@ -19274,7 +19274,7 @@ IP addresses for educational purposes and should not be used for any malicious a
 
 <pre>
 function generateRandomIp() {
-  const octet = () =&gt; Math.floor(Math.random() &ast; 256);
+  const octet = () =&gt; Math.floor(Math.random() * 256);
   return `${octet()}.${octet()}.${octet()}.${octet()}`;
 }
 function generateMultipleRandomIps(count) {
@@ -19317,7 +19317,7 @@ setInterval(updateClock, 1000);
 
 <pre>
 function generateRandomNumber(min, max) {
-  return Math.floor(Math.random() &ast; (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // Example usage
@@ -19416,7 +19416,7 @@ textRPGAdventure();
 
 <pre>
 function rollDice() {
-  const result = Math.floor(Math.random() &ast; 6) + 1;
+  const result = Math.floor(Math.random() * 6) + 1;
   console.log(`You rolled a ${result}`);
 }<br>
 
@@ -19452,7 +19452,7 @@ chart in the console.</p>
 function generateBarChart(data) {
   const maxValue = Math.max(...data);
   for (let value of data) {
-    const barLength = Math.round((value / maxValue) &ast; 20);
+    const barLength = Math.round((value / maxValue) * 20);
     const bar = '■'.repeat(barLength).padEnd(20,'');
     
     console.log(`${value} | ${bar}`);
@@ -19472,7 +19472,7 @@ it in the console.</p>
 <pre>
 function generateRightAngledTriangle(height) {
   for (let i = 1; i &lt;= height; i++) {
-    const stars = '&ast;'.repeat(i);
+    const stars = '*'.repeat(i);
     console.log(stars);
   }
 }<br>
@@ -19484,7 +19484,7 @@ generateRightAngledTriangle(triangleHeight);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js182">182. Text-Based Calculator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program allows the user to input mathematical expressions (e.g., "2 + 3 &ast; 4") 
+<p>This program allows the user to input mathematical expressions (e.g., "2 + 3 * 4") 
 and evaluates and displays the result in the console.</p>
 
 <pre>
@@ -19530,7 +19530,7 @@ function generateDiamondPattern(height) {
   
   for (let i = l;i &lt;= height; i++) {
     const spaces = Math.abs(midpoint - i);
-    const stars = '&ast;'.repeat(height - 2 &ast; spaces);
+    const stars = '*'.repeat(height - 2 * spaces);
     console.log(''.repeat(spaces) + stars);
   }
 }<br>
@@ -19548,7 +19548,7 @@ suggesting letters, and the program displays the progress and remaining attempts
 <pre>
 function hangmanGame() {
   const words = &lbrack;"javascript", "hangman", "programming", "developer", "challenge"&rbrack;;
-  const selectedWord = words&lbrack;Math.floor(Math.random() &ast; words.length)&rbrack;;
+  const selectedWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
   let guessedWord = "_".repeat(selectedWord.length);
   let remainingAttempts = 6;
   const guessedLetters = &lbrack;&rbrack;;
@@ -19679,7 +19679,7 @@ high, too low, or correct.</p>
 function guessTheNumberGame() {
   const maxNumber = 100;
   const maxAttempts =10;
-  const secretNumber = Math.floor(Math.random() &ast; maxNumber) + 1;
+  const secretNumber = Math.floor(Math.random() * maxNumber) + 1;
   
   console.log("Welcome to the Guess the Number Game!");
   console.log(`I've picked a number between 1 and ${maxNumber}. Try to guess it!`);
@@ -19729,7 +19729,7 @@ function whackAMoleGame() {
   
   while (remainingAttempts > 0 && molesToWhack &gt; 0) {
     const holes = Array.from({ length: totalHoles },()=&gt; emptyHoleSymbol);
-    const randomMolelndex = Math.floor(Math.random() &ast; totalHoles);
+    const randomMolelndex = Math.floor(Math.random() * totalHoles);
     holes&lbrack;randomMoleIndex&rbrack; = moleSymbol;
     
     console.log(`\nHoles: ${holes.join("")}`);
@@ -19784,7 +19784,7 @@ function coinTossingGame() {
       continue;
     }
 
-    const coinResult = coinSides&lbrack;Math.floor(Math.random() &ast; 2)&rbrack;;
+    const coinResult = coinSides&lbrack;Math.floor(Math.random() * 2)&rbrack;;
 
     console.log(`Coin toss result: ${coinResult}`);
 
@@ -19848,8 +19848,8 @@ function mathQuizGame() {
   console.log("Welcome to the Math Quiz Game!");
   console.log("Answer the following addition questions:");
   for (let i = 0; i &lt; maxQuestions; i++) {
-    const numl = Math.floor(Math.random() &ast; 10) + 1;
-    const num2 = Math.floor(Math.random() &ast; 10) + 1;
+    const numl = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
     const correctAnswer = numl + num2;
     const userAnswer = parseInt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
     if (’isNaN(userAnswer) && userAnswer === correctAnswer) {
@@ -19878,7 +19878,7 @@ function colorGuessingGame() {
   console.log("Welcome to the Color Guessing Game!");
   console.log("Guess the color based on the RGB values.");
   for (let attempts = 1; attempts <= maxAttempts; attempts++) {
-    const randomColor = colors&lbrack;Math.floor(Math.random() &ast; colors.length)&rbrack;;
+    const randomColor = colors&lbrack;Math.floor(Math.random() * colors.length)&rbrack;;
     const rgb Values = generateRandomRGBValues();
     console.log(`RGB:${rgbValues.join(",")}`);
     const userGuess = prompt("Enter your color guess:").toLowerCase();
@@ -19897,7 +19897,7 @@ function colorGuessingGame() {
   console.log("Sorry, you've run out of attempts. The correct color was revealed above.");
 }
 function generateRandomRGBValues() {
-  return Array.from({length: 3}, () => Math.floor(Math.random() &ast; 256));
+  return Array.from({length: 3}, () => Math.floor(Math.random() * 256));
 }
 
 // Example: Start the Color Guessing Game
@@ -19916,7 +19916,7 @@ function wordScrambleGame() {
   console.log("Welcome to the Word Scramble Game!");
   console.log("Unscramble the word and enter your guess.");
   for (let attempts = 1; attempts <= maxAttempts; attempts++) {
-    const randomWord = words&lbrack;Math.floor(Math.random() &ast; words.length)&rbrack;;
+    const randomWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
     const scrambledWord = scrambleWord(randomWord);
     console.log(`Scrambled word: ${scrambledWord}`);
     const userGuess = prompt("Enter your unscrambled word guess:").toLowerCase();
@@ -20019,7 +20019,7 @@ and tells a joke from that category.</p>
 <pre>
 function jokeTellerProgram() {
   const jokeCategories = &lbrack;"knock-knock", "dad", "animal", "puns"&rbrack;;
-  const selectedCategory = jokeCategories&lbrack;Math.floor(Math.random() &ast; jokeCategories.length)&rbrack;;
+  const selectedCategory = jokeCategories&lbrack;Math.floor(Math.random() * jokeCategories.length)&rbrack;;
   console.log("Welcome to the Joke Teller Program!");
   console.log(`Category: ${selectedCategory.toUpperCase()}`);
   console.log("Get ready for a good laugh!");
@@ -20270,7 +20270,7 @@ sumOfCubes(5);
 <p>This program finds the maximum integer n such that the sum of integers from 1 to 
 <span class="consolas">n</span> (inclusive) does not exceed a given target sum 
 <span class="consolas">targetSum</span>. It calculates the sum using 
-the formula <span class="consolas">Sum = n &ast; (n + 1) / 2</span>.</p>
+the formula <span class="consolas">Sum = n * (n + 1) / 2</span>.</p>
 
 <pre>
 function findMaxIntegerForSum(targetSum) {
@@ -20297,7 +20297,7 @@ structure considered is
 <pre>
 function breakURL(url) {
   const urlParts = {};
-  const urlRegex = /^(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.&ast;)?$/;
+  const urlRegex = /^(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.*)?$/;
   const matches = url.match(urlRegex);
   if (’matches) {
     console.log("Invalid URL format.");
@@ -20554,7 +20554,7 @@ console.</p>
 function generateAsciiTriangle(height) {
   for (let i = 1; i <= height; i++) {
     const spaces = ' '.repeat(height - i);
-    const stars = '&ast;'.repeat(i &ast; 2 -1);
+    const stars = '*'.repeat(i * 2 -1);
     console.log(spaces + stars);
   }
 }<br>
@@ -20575,11 +20575,11 @@ generateAsciiTriangle(triangleHeight);
 <h2 id="js-1">1. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>celsiusToFahrenheit allows you to convert a temperature from Celsius to Fahrenheit. It 
-takes a value in Celsius as input and uses the formula (Celsius &ast; 9/5) + 32 to perform 
+takes a value in Celsius as input and uses the formula (Celsius * 9/5) + 32 to perform 
 the conversion.exadecimal representation.</p>
 
 <pre>
-const celsiusToFahrenheit = (celsius) => (celsius &ast; 9/5) + 32;
+const celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32;
 
 // Example usage:
 celsiusToFahrenheit(25); // Result: 77
@@ -20670,7 +20670,7 @@ cookie using document.cookie and clearing it.</p>
 
 <pre>
 const clearCookies = document.cookie.split(';').forEach(cookie =>
-  document.cookie = cookie.replace(/^ +/, '').replace(/=.&ast;/, `=;expires=${new
+  document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new
   Date(0).toUTCString()};path=/`));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20679,7 +20679,7 @@ const clearCookies = document.cookie.split(';').forEach(cookie =>
 <p>You can generate random hex colors with Math.random and padEnd properties.</p>
 
 <pre>
-const randomHex = () => `#${Math.floor(Math.random() &ast;
+const randomHex = () => `#${Math.floor(Math.random() *
 0xffffff).toString(16).padEnd(6, "0")}`;
 console.log(randomHex()); // Result: #92b008
 </pre>
@@ -20806,7 +20806,7 @@ getLength("Hello, world!"); // Result: 13
 <p>Calculate the area of a circle given its radius.</p>
 
 <pre>
-const calculateCircleArea = (radius) => Math.PI &ast; Math.pow(radius, 2);
+const calculateCircleArea = (radius) => Math.PI * Math.pow(radius, 2);
 calculateCircleArea(5); // Result: 78.53981633974483
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20849,7 +20849,7 @@ removeWhitespaces(" Hello, world! "); // Result: "Hello, world!"
 <p>Generate a random integer within a specified range.</p>
 
 <pre>
-const randomInRange = (min, max) => Math.floor(Math.random() &ast; (max - min + 1)) + min;
+const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 randomInRange(1, 10); // Result: Random number between 1 and 10 (inclusive)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20903,7 +20903,7 @@ isPalindrome("level"); // Result: true
 <pre>
 const factorial = (num) => {
   if (num === 0 || num === 1) return 1;
-  return num &ast; factorial(num - 1);
+  return num * factorial(num - 1);
 };
 
 factorial(5); // Result: 120
@@ -21023,7 +21023,7 @@ console.log(currentYear()); // Output: 2023 (depending on the current year)
 <p>Generate a random integer between 1 and 10 (inclusive).</p>
 
 <pre>
-const random1To10 = () => Math.floor(Math.random() &ast; 10) + 1;
+const random1To10 = () => Math.floor(Math.random() * 10) + 1;
 
 // Example usage
 console.log(random1To10()); // Output: Random number between 1 and 10 (inclusive)
@@ -21082,7 +21082,7 @@ console.log(isMultipleOf5(7));  // Output: false
 <p>Convert minutes to seconds.</p>
 
 <pre>
-const minsToSecs = (mins) => mins &ast; 60;
+const minsToSecs = (mins) => mins * 60;
 
 // Example usage
 console.log(minsToSecs(5)); // Output: 300
@@ -21244,7 +21244,7 @@ console.log(exponentiate(2, 3));  // Output: 8
 
 <pre>
 const dateDifferenceInDays = (date1, date2) => 
-  Math.abs(Math.floor((date2 - date1) / (1000 &ast; 60 &ast; 60 &ast; 24)));
+  Math.abs(Math.floor((date2 - date1) / (1000 * 60 * 60 * 24)));
 const startDate = new Date("2023-08-01");
 const endDate = new Date("2023-08-10");
 
@@ -21391,7 +21391,7 @@ console.log(isPalindromeCaseInsensitive("Hello")); // Output: false
 <p>Convert a given length in feet to meters.</p>
 
 <pre>
-const feetToMeters = (feet) => feet &ast; 0.3048;
+const feetToMeters = (feet) => feet * 0.3048;
 
 console.log(feetToMeters(10)); // Output: 3.048
 </pre>
@@ -21471,7 +21471,7 @@ console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: &lbrack
 <p>Convert a given angle from degrees to radians.</p>
 
 <pre>
-const degToRad = (degrees) => degrees &ast; (Math.PI / 180);
+const degToRad = (degrees) => degrees * (Math.PI / 180);
 
 console.log(degToRad(90)); // Output: 1.5707963267948966
 </pre>
@@ -21539,7 +21539,7 @@ console.log(isEmptyObject({ name: "John", age: 30 })); // Output: false
 <pre>
 const factorial = (num) => {
 if (num === 0 || num === 1) return 1;
-  return num &ast; factorial(num - 1);
+  return num * factorial(num - 1);
 };
 
 console.log(factorial(5)); // Output: 120
@@ -21570,8 +21570,8 @@ console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;)); // Ou
 <p>Check if a given number is a Fibonacci number.</p>
 
 <pre>
-const isFibonacci = (num) => isPerfectSquare(5 &ast; num &ast; num + 4) ||
-  isPerfectSquare(5 &ast; num &ast; num - 4);
+const isFibonacci = (num) => isPerfectSquare(5 * num * num + 4) ||
+  isPerfectSquare(5 * num * num - 4);
 
 console.log(isFibonacci(5)); // Output: true
 console.log(isFibonacci(6)); // Output: false
@@ -21582,7 +21582,7 @@ console.log(isFibonacci(6)); // Output: false
 <p>Convert a given number of hours to minutes.</p>
 
 <pre>
-const hoursToMinutes = (hours) => hours &ast; 60;
+const hoursToMinutes = (hours) => hours * 60;
 
 console.log(hoursToMinutes(2)); // Output: 120
 </pre>
@@ -21639,7 +21639,7 @@ console.log(endsWithSubstring("Hello, world!", "Hello")); // Output: false
 <p>Calculate the sum of squares of an array of numbers.</p>
 
 <pre>
-const sumOfSquares = (arr) => arr.reduce((acc, val) => acc + val &ast;&ast; 2, 0);
+const sumOfSquares = (arr) => arr.reduce((acc, val) => acc + val ** 2, 0);
 
 console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
 </pre>
@@ -21662,7 +21662,7 @@ console.log(isPalindromeCaseSensitive("Hello")); // Output: false
 
 <pre>
 const randomArray = (length) => Array.from({ length }, () =>
-  Math.floor(Math.random() &ast; 100));
+  Math.floor(Math.random() * 100));
 
 console.log(randomArray(5)); // Output: Array with 5 random numbers, e.g., &lbrack;23, 45, 67, 11, 88&rbrack;
 </pre>
@@ -21705,7 +21705,7 @@ console.log(secsToHoursMinsSecs(7320)); // Output: "2 hours, 2 minutes, and 0 se
 <p>Calculate the Least Common Multiple (LCM) of two numbers.</p>
 
 <pre>
-const lcm = (num1, num2) => (num1 &ast; num2) / gcd(num1, num2);
+const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
 
 console.log(lcm(6, 8)); // Output: 24
 </pre>
@@ -21801,7 +21801,7 @@ digit's position and value.</p>
 
 <pre>
 const binaryToDecimalWithoutParseInt = (binary) =>
-binary.split('').reverse().reduce((dec, bit, index) => dec + bit &ast; (2 &ast;&ast; index), 0);
+binary.split('').reverse().reduce((dec, bit, index) => dec + bit * (2 ** index), 0);
 
 console.log(binaryToDecimalWithoutParseInt("1101")); // Output: 13
 </pre>
@@ -21934,7 +21934,7 @@ accumulating the sum of cubes by raising each value to the power of 3 and
 adding it to the accumulator.</p>
 
 <pre>
-const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val &ast;&ast; 3, 0);
+const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val ** 3, 0);
 
 console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 225
 </pre>
@@ -22008,7 +22008,7 @@ console.log(isTriangularNumber(7)); // Output: false
 summing twice the width and twice the height of the rectangle.</p>
 
 <pre>
-const rectanglePerimeter = (width, height) => 2 &ast; (width + height);
+const rectanglePerimeter = (width, height) => 2 * (width + height);
   
 // Example usage
 console.log(rectanglePerimeter(5, 10)); // Output: 30
@@ -22093,10 +22093,10 @@ console.log(sortByProperty(people, 'age'));
 <h2 id="js-124">124. Calculate the Exponential of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The exponential function calculates the result of raising a given base to a
-specified exponent using the exponentiation operator (&ast;&ast;).</p>
+specified exponent using the exponentiation operator (**).</p>
 
 <pre>
-const exponential = (base, exponent) => base &ast;&ast; exponent;
+const exponential = (base, exponent) => base ** exponent;
   
 // Example usage
 console.log(exponential(2, 3)); // Output: 8
@@ -22142,7 +22142,7 @@ number is a number where the sum of the digits of its square is equal to the num
 
 <pre>
 const isNeonNumber = (num) => {
-  const squared = num &ast;&ast; 2;
+  const squared = num ** 2;
   const digitSum = &lbrack;...String(squared)&rbrack;.map(Number).reduce((sum, digit) =>
     sum + digit, 0);
   return squared === digitSum;
@@ -22178,7 +22178,7 @@ console.log(powerSet(&lbrack;1, 2, 3&rbrack;));
 <pre>
 const isDisariumNumber = (num) => {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
-  const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit &ast;&ast;
+  const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit **
   (index + 1), 0);
   return sumOfPowers === num;
 };
@@ -22222,7 +22222,7 @@ console.log(consecutiveNumbers(1, 5));  // Output: &lbrack;1, 2, 3, 4, 5&rbrack;
 <pre>
 const isPronicNumber = (num) => {
   const n = Math.floor(Math.sqrt(num));
-  return n &ast; (n + 1) === num;
+  return n * (n + 1) === num;
 };
 console.log(isPronicNumber(6));  // Output: true
 console.log(isPronicNumber(20));  // Output: true
@@ -22421,7 +22421,7 @@ const isHappyNumber = (num) => {
   const seen = new Set();
   while (num !== 1 && !seen.has(num)) {
     seen.add(num);
-    num = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum + digit &ast;&ast; 2, 0);
+    num = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum + digit ** 2, 0);
   }
   return num === 1;
 };
@@ -22460,10 +22460,10 @@ console.log(firstNPrimes(5)); // Output: &lbrack;2, 3, 5, 7, 11&rbrack;
 <h2 id="js-147">147. Calculate the Volume of a Sphere</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The sphereVolume function calculates the volume of a sphere given its radius. It uses 
-the formula (4/3) &ast; π &ast; r^3, where r is the radius of the sphere.</p>
+the formula (4/3) * π * r^3, where r is the radius of the sphere.</p>
 
 <pre>
-const sphereVolume = (radius) => (4 / 3) &ast; Math.PI &ast; radius &ast;&ast; 3;
+const sphereVolume = (radius) => (4 / 3) * Math.PI * radius ** 3;
 
 // Example usage
 console.log(sphereVolume(5)); // Output: 523.5987755982989
@@ -22493,7 +22493,7 @@ as a narcissistic number.</p>
 const isArmstrongNumber = (num) => {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
   const numDigits = digits.length;
-  const sumOfPowers = digits.reduce((sum, digit) => sum + digit &ast;&ast;
+  const sumOfPowers = digits.reduce((sum, digit) => sum + digit **
   numDigits, 0);
   return sumOfPowers === num;
 };
@@ -22526,7 +22526,7 @@ strong number is a number whose sum of factorials of its digits is equal to
 the number itself.</p>
 
 <pre>
-const factorial = (num) => (num === 0 ? 1 : num &ast; factorial(num - 1));
+const factorial = (num) => (num === 0 ? 1 : num * factorial(num - 1));
 const isStrongNumber = (num) => {
   const sumOfFactorials = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum +
   factorial(Number(digit)), 0);
@@ -22552,10 +22552,10 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5,
 <h2 id="js-153">153. Find the Area of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The rectangleArea function calculates the area of a rectangle given its
-length and width using the formula: length &ast; width.</p>
+length and width using the formula: length * width.</p>
 
 <pre>
-const rectangleArea = (length, width) => length &ast; width;
+const rectangleArea = (length, width) => length * width;
 
 // Example usage
 console.log(rectangleArea(5, 10));  // Output: 50
@@ -22598,10 +22598,10 @@ console.log(gcdIterative(48, 18)); // Output: 6
 <h2 id="js-156">156. Calculate the Volume of a Cylinder</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The cylinderVolume function calculates the volume of a cylinder using the formula: π 
-&ast; radius^2 &ast; height.</p>
+* radius^2 * height.</p>
 
 <pre>
-const cylinderVolume = (radius, height) => Math.PI &ast; radius &ast;&ast; 2 &ast; height;
+const cylinderVolume = (radius, height) => Math.PI * radius ** 2 * height;
 
 // Example usage
 console.log(cylinderVolume(5, 10)); // Output: 785.3981633974483
@@ -22650,10 +22650,10 @@ console.log(decimalToOctal(27)); // Output: "33"
 <h2 id="js-159">159. Find the LCM of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The lcm function calculates the least common multiple (LCM) of two given numbers 
-using the formula: (num1 &ast; num2) / gcd(num1, num2).</p>
+using the formula: (num1 * num2) / gcd(num1, num2).</p>
 
 <pre>
-const lcm = (num1, num2) => (num1 &ast; num2) / gcd(num1, num2);
+const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
 
 // Example usage
 console.log(lcm(24, 36)); // Output: 72
@@ -22675,10 +22675,10 @@ console.log(isValidPhoneNumber("123-4567")); // Output: false
 <h2 id="js-161">161. Find the Sum of the First N Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The sumOfNaturals function calculates the sum of the first N natural
-numbers using the formula: (n &ast; (n + 1)) / 2.</p>
+numbers using the formula: (n * (n + 1)) / 2.</p>
 
 <pre>
-const sumOfNaturals = (n) => (n &ast; (n + 1)) / 2;
+const sumOfNaturals = (n) => (n * (n + 1)) / 2;
 
 // Example usage
 console.log(sumOfNaturals(10)); // Output: 55
@@ -22727,10 +22727,10 @@ console.log(factors(12)); // Output: &lbrack;2, 3, 4, 6&rbrack;
 <h2 id="js-164">164. Calculate the Area of a Triangle given the Base and Height</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The triangleArea function calculates the area of a triangle using the formula: 
-0.5 &ast; base &ast; height.</p>
+0.5 * base * height.</p>
 
 <pre>
-const triangleArea = (base, height) => 0.5 &ast; base &ast; height;
+const triangleArea = (base, height) => 0.5 * base * height;
 
 // Example usage
 console.log(triangleArea(5, 10)); // Output: 25
@@ -22759,7 +22759,7 @@ function to create the desired array.</p>
 <pre>
 const randomArrayInRange = (min, max, length) => 
   Array.from({ length }, () => 
-  Math.floor(Math.random() &ast; (max - min + 1)) + min);
+  Math.floor(Math.random() * (max - min + 1)) + min);
 
 // Example usage
 console.log(randomArrayInRange(1, 100, 5)); // Output: &lbrack;34, 87, 19, 56, 72&rbrack;
@@ -22830,10 +22830,10 @@ console.log(isValidDate("02-08-2023")); // Output: false
 <p>In this code, the gcd function calculates the greatest common divisor using
 the Euclidean algorithm. The lcmArray function then calculates the least
 common multiple (LCM) of an array of numbers by reducing the array and
-applying the formula (lcm &ast; num) / gcd(lcm, num).</p>
+applying the formula (lcm * num) / gcd(lcm, num).</p>
 
 <pre>
-const lcmArray = (arr) => arr.reduce((lcm, num) => (lcm &ast; num) / gcd(lcm, num));
+const lcmArray = (arr) => arr.reduce((lcm, num) => (lcm * num) / gcd(lcm, num));
 
 // Example usage
 console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;)); // Output: 60
@@ -22844,11 +22844,11 @@ console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;)); // Output: 60
 <p>(At least 8 characters, with a digit and special character). The isValidPassword 
 function uses a regular expression to validate a password. The regular expression 
 requires that the password contains at least one letter (&lbrack;A-Za-z&rbrack;), 
-one digit (\d), and one special character (&lbrack;@$!%&ast;?&&rbrack;).</p>
+one digit (\d), and one special character (&lbrack;@$!%*?&&rbrack;).</p>
 
 <pre>
-const isValidPassword = (password) => /^(?=.&ast;&lbrack;A-Za-z&rbrack;)(?=.&ast;\d)(?=.&ast;
-  &lbrack;@$!%&ast;?&&rbrack;)&lbrack;A-Za-z\d@$!%&ast;?&&rbrack;{8,}$/.test(password);
+const isValidPassword = (password) => /^(?=.*&lbrack;A-Za-z&rbrack;)(?=.*\d)(?=.*
+  &lbrack;@$!%*?&&rbrack;)&lbrack;A-Za-z\d@$!%*?&&rbrack;{8,}$/.test(password);
 
 // Example usage
 console.log(isValidPassword("P@ssw0rd"));    // Output: true
@@ -22898,7 +22898,7 @@ uses the formula sqrt((x2 - x1)^2 + (y2 - y1)^2) to compute the distance between
 
 <pre>
 const distanceBetweenPoints = (x1, y1, x2, y2) => 
-  Math.sqrt((x2 - x1) &ast;&ast; 2 + (y2 - y1) &ast;&ast; 2);
+  Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 
 // Example usage
 console.log(distanceBetweenPoints(0, 0, 3, 4));  // Output: 5
@@ -22923,7 +22923,7 @@ formula for the volume of a cube is side^3, where side is the length of one side
 cube.</p>
 
 <pre>
-const cubeVolume = (side) => side &ast;&ast; 3;
+const cubeVolume = (side) => side ** 3;
 
 // Example usage
 console.log(cubeVolume(5)); // Output: 125
@@ -22990,7 +22990,7 @@ respective positions.</p>
 <pre>
 const sumOfDigitsRaisedToPower = (num) => {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
-  return digits.reduce((sum, digit, index) => sum + digit &ast;&ast; (index + 1), 0);
+  return digits.reduce((sum, digit, index) => sum + digit ** (index + 1), 0);
 };
 
 // Example usage
@@ -23027,11 +23027,11 @@ console.log(randomPassword(8)); // Output: "3klS0p9x"
 <h2 id="js-184">184. Calculate the Area of a Trapezoid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The trapezoidArea function calculates the area of a trapezoid using the formula: 
-0.5 &ast; (base1 + base2) &ast; height.</p>
+0.5 * (base1 + base2) * height.</p>
 
 <pre>
 const trapezoidArea = (base1, base2, height) => 
-  0.5 &ast; (base1 + base2) &ast; height;
+  0.5 * (base1 + base2) * height;
 
 // Example usage
 console.log(trapezoidArea(4, 8, 6)); // Output: 36
@@ -23043,7 +23043,7 @@ console.log(trapezoidArea(4, 8, 6)); // Output: 36
 
 <pre>
 const isKaprekarNumber = (num) => {
-  const square = num &ast;&ast; 2;
+  const square = num ** 2;
   const squareStr = String(square);
   const numStr = String(num);
   const left = Number(squareStr.slice(0, numStr.length));
@@ -23061,11 +23061,11 @@ console.log(isKaprekarNumber(45));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The coneVolume function calculates the volume of a cone using its base
 radius and height. It applies the formula for the volume of a cone: <br>
-V = (1/3) &ast; π &ast; r² &ast; h, <br>
+V = (1/3) * π * r² * h, <br>
 where r is the radius of the base and h is the height of the cone.</p>
 
 <pre>
-const coneVolume = (radius, height) => (1 / 3) &ast; Math.PI &ast; radius &ast;&ast; 2;
+const coneVolume = (radius, height) => (1 / 3) * Math.PI * radius ** 2;
 
 // Example usage
 console.log(coneVolume(5, 10)); // Output: 261.79938779914943
@@ -23111,7 +23111,7 @@ console.log(sumOfDigitsRaisedToPowerUpToThousand()); // Output: 443839
 
 <pre>
 const isCarolNumber = (num) => {
-  const carolPrime = (2 &ast;&ast; num) - 1;
+  const carolPrime = (2 ** num) - 1;
   return isPrime(num) && isPerfectSquare(carolPrime);
 };
 
@@ -23128,7 +23128,7 @@ ensures that the input number is a non-negative integer.</p>
 
 <pre>
 const isCatalanNumber = (num) => num >= 0 && Number.isInteger(num)
-  && num === ((factorial(2 &ast; num)) / (factorial(num + 1) &ast; factorial(num)));
+  && num === ((factorial(2 * num)) / (factorial(num + 1) * factorial(num)));
 
 // Example usage
 console.log(isCatalanNumber(5));  // Output: true
@@ -23141,7 +23141,7 @@ console.log(isCatalanNumber(10)); // Output: false
 and height.</p>
 
 <pre>
-const cuboidVolume = (length, width, height) => length &ast; width &ast; height;
+const cuboidVolume = (length, width, height) => length * width * height;
 
 // Example usage
 console.log(cuboidVolume(5, 10, 8)); // Output: 400
@@ -23164,7 +23164,7 @@ console.log(isDudeneyNumber(64));  // Output: false
 <p>Generate a random color in hexadecimal format (#RRGGBB).</p>
 
 <pre>
-const randomColorHex = () => `#${Math.floor(Math.random() &ast;
+const randomColorHex = () => `#${Math.floor(Math.random() *
 16777215).toString(16)}`;
 console.log(randomColorHex());
 // Output: "#92b008"
@@ -23175,7 +23175,7 @@ console.log(randomColorHex());
 <p>Calculate the area of a circle sector given the radius and the central angle in degrees.</p>
 
 <pre>
-const circleSectorArea = (radius, angle) => (angle / 360) &ast; Math.PI &ast; radius &ast;&ast; 2;
+const circleSectorArea = (radius, angle) => (angle / 360) * Math.PI * radius ** 2;
 
 // Example usage
 console.log(circleSectorArea(5, 90));
@@ -23188,7 +23188,7 @@ console.log(circleSectorArea(5, 90));
 
 <pre>
 const regularPolygonArea = (sideLength, numOfSides) => 
-  (numOfSides &ast; sideLength &ast;&ast; 2) / (4 &ast; Math.tan(Math.PI / numOfSides));
+  (numOfSides * sideLength ** 2) / (4 * Math.tan(Math.PI / numOfSides));
 
 // Example usage
 console.log(regularPolygonArea(5, 6));
@@ -23211,7 +23211,7 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Out
 axis length (b).</p>
 
 <pre>
-const ellipseArea = (a, b) => Math.PI &ast; a &ast; b;
+const ellipseArea = (a, b) => Math.PI * a * b;
 
 // Example usage
 console.log(ellipseArea(5, 10)); // Output: 157.07963267948966
@@ -23225,7 +23225,7 @@ console.log(ellipseArea(5, 10)); // Output: 157.07963267948966
 const isLeylandNumber = (num) => {
   let found = false;
   for (let x = 2; x <= Math.floor(Math.pow(num, 1 / 3)) && !found; x++) {
-    for (let y = x + 1; x &ast; y <= num && !found; y++) {
+    for (let y = x + 1; x * y <= num && !found; y++) {
       if (Math.pow(x, y) + Math.pow(y, x) === num) {
         found = true;
       }
@@ -23248,7 +23248,7 @@ console.log(isLeylandNumber(100)); // Output: false
 const randomUUID = () => {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/&lbrack;xy&rbrack;/g,
   function(c) {
-    const r = Math.random() &ast; 16 | 0;
+    const r = Math.random() * 16 | 0;
     const v = c === "x" ? r : (r & 0x3 | 0x8);
     return v.toString(16);
   });
@@ -23277,7 +23277,7 @@ console.log(isValidIPv6("256.0.0.0")); // Output: false
 <p>Calculate the area of a parallelogram using the given base and height.</p>
 
 <pre>
-const parallelogramArea = (base, height) => base &ast; height;
+const parallelogramArea = (base, height) => base * height;
 
 // Example usage
 console.log(parallelogramArea(5, 10)); // Output: 50
@@ -23309,9 +23309,9 @@ const rgbToHSL = (r, g, b) => {
   (max - min) + (max === g ? 2 : (max === b ? 4 : 0))) / 6 : 0;
   let s = (max !== min) ? (l => l > 0.5 ? (max - min) / (2 - max - min) : (max - min) / (max + min))(l) : 0;
   let l = (max + min) / 2;
-  return { h: Math.round(h &ast; 360), 
-    s: Math.round(s &ast; 100), 
-    l: Math.round(l &ast; 100) };
+  return { h: Math.round(h * 360), 
+    s: Math.round(s * 100), 
+    l: Math.round(l * 100) };
 };
 
 // Example usage
@@ -23367,7 +23367,7 @@ console.log(sumOfProperDivisors(12)); // Output: 16
 
 <pre>
 const lcmArray = (arr) => arr.reduce((lcm, num) => 
-  lcm &ast; num / gcdArray(arr), 1);
+  lcm * num / gcdArray(arr), 1);
 
 // Example usage
 console.log(lcmArray(&lbrack;2, 3, 4&rbrack;)); // Output: 12
@@ -23378,7 +23378,7 @@ console.log(lcmArray(&lbrack;2, 3, 4&rbrack;)); // Output: 12
 <p>Calculate the sum of the squares of the first n natural numbers.</p>
 
 <pre>
-const sumOfSquares = (n) => (n &ast; (n + 1) &ast; (2 &ast; n + 1)) / 6;
+const sumOfSquares = (n) => (n * (n + 1) * (2 * n + 1)) / 6;
 
 // Example usage
 console.log(sumOfSquares(5)); // Output: 55
@@ -23406,7 +23406,7 @@ console.log(isPowerfulNumber(36)); // Output: false
 <pre>
 const productOfDigits = (num) => 
   &lbrack;...String(num)&rbrack;.reduce((product, digit) => 
-    product &ast; Number(digit), 1);
+    product * Number(digit), 1);
 
 // Example usage
 console.log(productOfDigits(12345)); // Output: 120
@@ -23438,7 +23438,7 @@ console.log(isPracticalNumber(14)); // Output: false
 <p>Calculate the sum of the cubes of the first n natural numbers.</p>
 
 <pre>
-const sumOfCubes = (n) => Math.pow((n &ast; (n + 1)) / 2, 2);
+const sumOfCubes = (n) => Math.pow((n * (n + 1)) / 2, 2);
 
 // Example usage
 console.log(sumOfCubes(5)); // Output: 225
@@ -23488,7 +23488,7 @@ const randomAlphanumericString = (length) => {
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
   for (let i = 0; i < length; i++) {
-    result += characters.charAt(Math.floor(Math.random() &ast;
+    result += characters.charAt(Math.floor(Math.random() *
     characters.length));
   }
   return result;
@@ -23504,7 +23504,7 @@ console.log(randomAlphanumericString(8)); // Output: "Yw83XmLb"
 
 <pre>
 const regularHexagonArea = (sideLength) => 
-  (3 &ast; Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 2;
+  (3 * Math.sqrt(3) * sideLength ** 2) / 2;
 
 // Example usage
 console.log(regularHexagonArea(5)); // Output: 64.9519052838329
@@ -23559,7 +23559,7 @@ console.log(isReversibleNumber(10)); // Output: false
 
 <pre>
 const circleCircumference = (radius) => 
-  2 &ast; Math.PI &ast; radius;
+  2 * Math.PI * radius;
 
 // Example usage
 console.log(circleCircumference(5)); // Output: 31.41592653589793
@@ -23621,7 +23621,7 @@ number of sides.</p>
 
 <pre>
 const regularPolygonPerimeter = (sideLength, numSides) => 
-  sideLength &ast; numSides;
+  sideLength * numSides;
 
 // Example usage
 console.log(regularPolygonPerimeter(5, 6)); // Output: 30
@@ -23633,7 +23633,7 @@ console.log(regularPolygonPerimeter(5, 6)); // Output: 30
 
 <pre>
 const equilateralTriangleArea = (sideLength) => 
-  (Math.sqrt(3) &ast; sideLength &ast;&ast; 2) / 4;
+  (Math.sqrt(3) * sideLength ** 2) / 4;
 
 // Example usage
 console.log(equilateralTriangleArea(5)); // Output: 10.825317547305486
@@ -23657,14 +23657,14 @@ console.log(isHarshadSmithNumber(10)); // Output: false
 
 <pre>
 const isPerfectPower = (num) => {
-  for (let i = 2; i &ast; i <= num; i++) {
+  for (let i = 2; i * i <= num; i++) {
     let power = 2;
-    let result = i &ast; i;
+    let result = i * i;
     while (result <= num) {
       if (result === num) {
         return true;
       }
-      result &ast;= i;
+      result *= i;
       power++;
     }
   }
@@ -23707,7 +23707,7 @@ console.log(isDudeneyNumber(27));  // Output: false
 
 <pre>
 const regularPentagonArea = (sideLength) => 
-  (1 / 4) &ast; Math.sqrt(5 &ast; (5 + 2 &ast; Math.sqrt(5))) &ast; sideLength &ast;&ast; 2;
+  (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * sideLength ** 2;
 
 // Example usage
 console.log(regularPentagonArea(5)); // Output: 43.01193501472417
@@ -23718,7 +23718,7 @@ console.log(regularPentagonArea(5)); // Output: 43.01193501472417
 <p>Calculate the volume of a pyramid using its base area and height.</p>
 
 <pre>
-const pyramidVolume = (baseArea, height) => (1 / 3) &ast; baseArea &ast; height;
+const pyramidVolume = (baseArea, height) => (1 / 3) * baseArea * height;
 
 // Example usage
 console.log(pyramidVolume(25, 10)); // Output: 83.33333333333333
@@ -23733,7 +23733,7 @@ const isWedderburnEtheringtonNumber = (num) => {
   const primes = primeFactors(num);
   const factorials = primes.map((prime) => factorial(prime - 1));
   return factorials.reduce((product, factorial) => 
-    product &ast; factorial, 1) === factorial(num);
+    product * factorial, 1) === factorial(num);
 };
 
 // Example usage
@@ -23746,7 +23746,7 @@ console.log(isWedderburnEtheringtonNumber(12)); // Output: false
 <p>Calculate the surface area of a cube using its side length.</p>
 
 <pre>
-const cubeSurfaceArea = (sideLength) => 6 &ast; sideLength &ast;&ast; 2;
+const cubeSurfaceArea = (sideLength) => 6 * sideLength ** 2;
 
 // Example usage
 console.log(cubeSurfaceArea(5)); // Output: 150
@@ -23770,7 +23770,7 @@ console.log(isPluperfectNumber(20)); // Output: false
 <p>Calculate the area of a regular octagon using its side length.</p>
 
 <pre>
-const regularOctagonArea = (sideLength) => 2 &ast; (1 + Math.sqrt(2)) &ast; sideLength &ast;&ast; 2;
+const regularOctagonArea = (sideLength) => 2 * (1 + Math.sqrt(2)) * sideLength ** 2;
 
 // Example usage - <b>different for some reason</b>
 console.log(regularOctagonArea(5)); // Output: 86.60254037844387
@@ -23793,7 +23793,7 @@ console.log(isRepunitNumber(11)); // Output: false
 <p>Calculate the volume of an ellipsoid using its semi-axes lengths.</p>
 
 <pre>
-const ellipsoidVolume = (a, b, c) => (4 / 3) &ast; Math.PI &ast; a &ast; b &ast; c;
+const ellipsoidVolume = (a, b, c) => (4 / 3) * Math.PI * a * b * c;
 <br>
 // Example usage
 console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
@@ -23926,7 +23926,7 @@ console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 <p>Calculate the sum of the squares of numbers in a given array.</p>
 
 <pre>
-const sumSquares = arr => arr.reduce((sum, num) => sum + num &ast;&ast; 2, 0);
+const sumSquares = arr => arr.reduce((sum, num) => sum + num ** 2, 0);
 
 // Example usage
 console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 55
@@ -23954,7 +23954,7 @@ console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a canal, Panama!
 <pre>
 const shuffleArrayFisherYates = arr => {
   for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() &ast; (i + 1));
+    const j = Math.floor(Math.random() * (i + 1));
     &lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; 
     = &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
   }
@@ -24104,7 +24104,7 @@ Pythagorean theorem.</p>
 
 <pre>
 const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) => 
-  Math.sqrt((x2 - x1) &ast;&ast; 2 + (y2 - y1) &ast;&ast; 2);
+  Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
 
 // Example usage
 console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));
@@ -24140,7 +24140,7 @@ console.log(findFirstNonRepeating('hello')); // Output: 'h'
 <p>Calculate the area of a kite using the lengths of its diagonals.</p>
 
 <pre>
-const areaOfKite = (d1, d2) => 0.5 &ast; d1 &ast; d2;
+const areaOfKite = (d1, d2) => 0.5 * d1 * d2;
 
 // Example usage: length 10 by 6.
 console.log("Area of the kite:", areaOfKite(10, 6)); // Output: 30
@@ -24152,7 +24152,7 @@ console.log("Area of the kite:", areaOfKite(10, 6)); // Output: 30
 
 <pre>
 const sectorArea = (radius, angle) => 
-  (Math.PI &ast; radius &ast;&ast; 2 &ast; angle) / 360;
+  (Math.PI * radius ** 2 * angle) / 360;
 
 // Example usage: radius=5, angle=60.
 console.log(sectorArea(5, 60)); // Output: 5.235987755982989
@@ -24194,7 +24194,7 @@ body {
     #5d26c1,
     #a17fe0,
     #59c173
-  ); /&ast; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ &ast;/
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 canvas#confetti {
@@ -24264,7 +24264,7 @@ canvas#confetti {
 
 <p>JS:</p>
 <pre>
-/&ast; JavaScript - confetti &ast;/
+/* JavaScript - confetti */
 const button = document.querySelector('#button');
 const canvas = document.querySelector('#confetti');
  
