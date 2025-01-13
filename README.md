@@ -18291,21 +18291,21 @@ function romanToNumber(roman) {
   // Convert the Roman numeral string to a numeric value
   let result = 0;
   for (let i = 0; i < roman.length; i++) {
-    const currentsymbol = roman&lbrack;i&rbrack;;
-    const currentvalue = romanNumerals&lbrack;currentSymbol&rbrack;;
-    const nextSymbol = roman&lbrack;i +1&rbrack;;
+    const currentSymbol = roman&lbrack;i&rbrack;;
+    const currentValue = romanNumerals&lbrack;currentSymbol&rbrack;;
+    const nextSymbol = roman&lbrack;i + 1&rbrack;;
     const nextValue = romanNumerals&lbrack;nextSymbol&rbrack;;
     // If the current value is less than the next value, subtract it; otherwise, add it
-    if (nextValue > currentvalue) {
-      result -= current Value;
+    if (nextValue > currentValue) {
+      result -= currentValue;
     } else {
-      result += current Value;
+      result += currentValue;
       return result;
     }
     // Example usage:
     const romanNumeral = 'XIV';
     const numericValue = romanToNumber(romanNumeral);
-    console.log(' The numeric value of $ {romanNumeral} is: ${numericValue}');
+    console.log(`The numeric value of ${romanNumeral} is: ${numericValue}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -18320,38 +18320,48 @@ if two strings are anagrams, you can compare whether the characters in both stri
 the same frequency.</p>
 
 <pre>
-function areAnagrams(strl, str2) {
+function areAnagrams(str1, str2) {
   // Check if the inputs are valid strings
-  if (typeof strl !== 'string11| typeof str2 !== 'string') {
+  if (typeof str1 !== 'string' || typeof str2 !== 'string') {
     return "Invalid input. Please provide valid strings.";
-    // Remove non-alphabetic characters and convert to lowercase for case-insensitive comparison
-    const cleanStrl = strl.replace(/&lbrack;Aa-zA-Z&rbrack;/g, ").toLowerCase();
-    const cleanStr2 = str2.replace(/&lbrack;Aa-zA-Z&rbrack;/g, ").toLowerCase();
-    // Check if the lengths are equal after removing non-alphabetic characters
-    if (cleanStrl.length !== cleanStr2.length) {
+  }
+
+  // Remove non-alphabetic characters and convert to lowercase for case-insensitive comparison
+  const cleanStr1 = str1.replace(/&lbrack;^a-zA-Z&rbrack;/g,").toLowerCase();
+  const cleanStr2 = str2.replace(/&lbrack;^a-zA-Z&rbrack;/g,").toLowerCase();
+  // Check if the lengths are equal after removing non-alphabetic characters
+  if (cleanStr1.length !== cleanStr2.length) {
+    return false;
+  }
+
+  // Create character frequency maps for both strings
+  const charFrequencyMapl = {};
+  const charFrequencyMap2 = {};
+
+  // Update frequency maps for strl
+  for (const char of cleanStrl) {
+    charFrequencyMapl&lbrack;char&rbrack; = (charFrequencyMapl&lbrack;char&rbrack; || 0) + 1;
+  }
+
+  // Update frequency maps for str2
+  for (const char of cleanStr2) {
+    charFrequencyMap2&lbrack;char&rbrack; = (charFrequencyMap2&lbrack;char&rbrack; || 0) + 1;
+  }
+  // Check if the frequency maps are equal
+  for (const char in charFrequencyMap1) {
+    if (charFrequencyMap1&lbrack;char&rbrack; !== charFrequencyMap2&lbrack;char&rbrack;) {
       return false;
-      // Create character frequency maps for both strings
-      const charFrequencyMapl = {};
-      const charFrequencyMap2 = {};
-      // Update frequency maps for strl
-      for (const char of cleanStrl) {
-        charFrequencyMapl&lbrack;char&rbrack; = (charFrequencyMapl&lbrack;char&rbrack; || 0) + 1;
-        // Update frequency maps for str2
-        for (const char of cleanStr2) {
-          charFrequencyMap2&lbrack;char&rbrack; = (charFrequencyMap2&lbrack;char&rbrack; || 0) + 1;
-          // Check if the frequency maps are equal
-          for (const char in charFrequencyMapl) {
-            if (charFrequencyMapl&lbrack;char&rbrack; !== charFrequencyMap2&lbrack;char&rbrack;) {
-              return false;
-            }
-          }
-          return true;
-          // Example usage:
-          const string 1 = 'listen';
-          const string2 = 'silent';
-          const result = areAnagrams(stringl, string2);
-          console.log(' ${stringl} and ${string2} are anagrams: ${result&rbrack;');
-      }
+    }
+  }
+  return true;
+}
+
+// Example usage:
+const string1 = 'listen';
+const string2 = 'silent';
+
+const result = areAnagrams(string1, string2);
+console.log(`${string1} and ${string2} are anagrams: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -18367,17 +18377,19 @@ triangle is the sum of the two directly above it.</p>
 <pre>
 function generatePascalsTriangle(numRows) {
   // Check if the input is a positive integer
-  if (’Number.isInteger(numRows) 11 numRows <= 0) {
+  if (!Number.isInteger(numRows) || numRows <= 0) {
     return "Invalid input. Please provide a valid positive integer.";
   }
   const pascalsTriangle = &lbrack;&rbrack;;
   for (let i = 0; i < numRows; i++) {
     const row = &lbrack;&rbrack;;
+	
     for (let j = 0; j <= i; j++) {
       // Calculate the binomial coefficient using nCr formula
-      const coefficient = factorial(i) / (factorial(j) * factorial^ - j));
+      const coefficient = factorial(i) / (factorial(j) * factorial(i - j));
       row.push(coefficient);
     }
+
     pascalsTriangle.push(row);
   }
   return pascalsTriangle;
@@ -18387,12 +18399,15 @@ function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
   }
+
   return n * factorial(n -1);
 }
+
 // Example usage:
 const numberOfRows = 5;
 const triangle = generatePascalsTriangle(numberOfRows);
-console.log(' Pascal’s Triangle with ${numberOfRows} rows:');
+
+console.log(`Pascal’s Triangle with ${numberOfRows} rows:`);
 console.log(triangle);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -18408,43 +18423,43 @@ Roman numeral symbols that represent the given decimal value.</p>
 
 <pre>
 function decimalToRoman(num) {
-
-// Check if the input is a positive integer within the valid Roman numeral range
-if (’Number.isInteger(num) 11 num < = 0 || num > 3999) {
-return "Invalid input. Please provide a valid positive integer within the range 1 to 3999.";
-
-// Define the Roman numeral symbols and their corresponding values
-const romanSymbols = &lbrack;
-{value: 1000, symbol: 'M'},
-{value: 900, symbol: 'CM'},
-{value: 500, symbol: 'D'},
-{value: 400, symbol: 'CD'},
-{value: 100, symbol: 'C},
-{value: 90, symbol: 'XC},
-{value: 50, symbol: 'L'},
-{value: 40, symbol: 'XL'},
-{value: 10, symbol: 'X'},
-{value: 9, symbol: 'IX'},
-{value: 5, symbol: 'V'},
-{value: 4, symbol: 'IV},
-{value: 1, symbol: 'I' },
-&rbrack;;
-
-// Convert the decimal number to Roman numerals
-let result =
-for (const symbol of romanSymbols) {
-  while (num > = symbol.value) {
-    result += symbol.symbol;
-    num -= symbol.value;
+  // Check if the input is a positive integer within the valid Roman numeral range
+  if (’Number.isInteger(num) 11 num < = 0 || num > 3999) {
+    return "Invalid input. Please provide a valid positive integer within the range 1 to 3999.";
   }
-}
-return result;
+
+  // Define the Roman numeral symbols and their corresponding values
+  const romanSymbols = &lbrack;
+  {value: 1000, symbol: 'M'},
+  {value: 900, symbol: 'CM'},
+  {value: 500, symbol: 'D'},
+  {value: 400, symbol: 'CD'},
+  {value: 100, symbol: 'C},
+  {value: 90, symbol: 'XC},
+  {value: 50, symbol: 'L'},
+  {value: 40, symbol: 'XL'},
+  {value: 10, symbol: 'X'},
+  {value: 9, symbol: 'IX'},
+  {value: 5, symbol: 'V'},
+  {value: 4, symbol: 'IV},
+  {value: 1, symbol: 'I' },
+  &rbrack;;
+
+  // Convert the decimal number to Roman numerals
+  let result = '';
+  for (const symbol of romanSymbols) {
+    while (num >= symbol.value) {
+      result += symbol.symbol;
+      num -= symbol.value;
+    }
+  }
+  return result;
 }
 
 // Example usage:
 const decimalNumber = 1984;
 const romanNumeral = decimalToRoman(decimalNumber);
-console.log(` The Roman numeral representation of ${decimalNumber} is: ${romanNumeral}`);
+console.log(`The Roman numeral representation of ${decimalNumber} is: ${romanNumeral}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -18459,19 +18474,22 @@ the corresponding perpendicular height.</p>
 
 <pre>
 function parallelogramArea(base, height) {
-// Check if the inputs are valid numbers
-if (isNaN(base) 11 isNaN(height) 11 base <= 0 11 height <= 0) {
-return "Invalid input. Please provide valid positive numbers.";
+  // Check if the inputs are valid numbers
+  if (isNaN(base) || isNaN(height) || base <= 0 11 height <= 0) {
+    return "Invalid input. Please provide valid positive numbers.";
+  }
+
+  // Calculate the area of the parallelogram
+  const area = base * height;
+  return area;
 }
-// Calculate the area of the parallelogram
-const area = base * height;
-return area;
-}
+
 // Example usage:
 const parallelogramBase = 6;
 const parallelogramHeight = 8;
+
 const areaResult = parallelogramArea(parallelogramBase, parallelogramHeight);
-console.log(' The area of the parallelogram is: $ {areaResult}');
+console.log(`The area of the parallelogram is: ${areaResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js123">123. Basic Rock, Paper, Scissors Game</h2>
@@ -18480,43 +18498,51 @@ console.log(' The area of the parallelogram is: $ {areaResult}');
 
 <pre>
 function computerPlayO {
-  const options = &lbrack;'rock', ‘paper1, 'scissors'&rbrack;;
-  const randomindex = Math.floor(Math.random() * options.length);
-  return options&lbrack;randomlndex&rbrack;;
+  const options = &lbrack;'rock', 'paper', 'scissors'&rbrack;;
+  const randomIndex = Math.floor(Math.random() * options.length);
+  return options&lbrack;randomIndex&rbrack;;
 }
+
 function playRound(playerSelection, computerselection) {
   playerSelection = playerSelection.toLowerCase();
-  if ((&lbrack;'rock', 'paper', ’scissors'&rbrack;.includes(playerSelection)) {
+  
+  if (!&lbrack;'rock', 'paper', 'scissors'&rbrack;.includes(playerSelection)) {
     return 'Invalid choice. Please choose rock, paper, or scissors.';
   }
-  console.log(' Player chooses $ {playerSelection}');
-  console.log(' Computer chooses $ {computerselection}');
-  if (playerSelection === computerselection) {
-    return ’ItVs a tie!';
+  
+  console.log(`Player chooses ${playerSelection}`);
+  console.log(`Computer chooses ${computerSelection}`);
+  
+  if (playerSelection === computerSelection) {
+    return ’It\'s a tie!';
   } else if (
-   (playerSelection === 'rock' && computerselection === 'scissors') ||
-   (playerSelection === 'paper' && computerselection === 'rock') ||
-   (playerSelection === 'scissors' && computerselection === 'paper')
-){
-  return 'You win!';
-} else {
-return 'You lose!';
+   (playerSelection === 'rock' && computerSelection === 'scissors') ||
+   (playerSelection === 'paper' && computerSelection === 'rock') ||
+   (playerSelection === 'scissors' && computerSelection === 'paper')
+  ){
+    return 'You win!';
+  } else {
+    return 'You lose!';
+  }
 }
-}
+
 function game() {
   let playerScore = 0;
   let computerScore = 0;
+  
   for (let i = 0; i < 5; i++) {
     const playerSelection = prompt('Enter your choice (rock, paper, or scissors):');
-    const computerselection = computerPlay();
-    const result = playRound(playerSelection, computerselection);
+    const computerSelection = computerPlay();
+    const result = playRound(playerSelection, computerSelection);
+	
     console.log(result);
-    if (resultancludes('win')) {
+    if (result.includes('win')) {
       playerScore++;
     } else if (result.includes('lose')) {
       computerScore++;
     }
   }
+
   console.log(`Final Score: Player ${playerScore} - ${computerScore} Computer`);
   if (playerScore > computerScore) {
     console.log('You win the game!');
@@ -18544,21 +18570,25 @@ encouraged to try again.</p>
 <pre>
 // Array of symbols for the slot machine
 const symbols = &lbrack;''&rbrack;;
+
 // Function to get a random symbol from the array
 function getRandomSymbol() {
-  const randomindex = Math.floor(Math.random() * symbols.length);
-  return symbols&lbrack;randomlndex&rbrack;;
+  const randomIndex = Math.floor(Math.random() * symbols.length);
+  return symbols&lbrack;randomIndex&rbrack;;
 }
+
 // Function to simulate a spin of the slot machine
 function spin() {
   // Get three random symbols
-  const result 1 = getRandomSymbol();
+  const result1 = getRandomSymbol();
   const result2 = getRandomSymbol();
   const results = getRandomSymbol();
+
   // Display the results
-  console.log(`Result: ${result 1} - ${result2} - ${results}`);
+  console.log(`Result: ${result1} - ${result2} - ${result3}`);
+
   // Check for a win
-  if (result1 === result2 && result2 === results) {
+  if (result1 === result2 && result2 === result3) {
     console.log('Congratulations! You won!');
   } else {
     console.log('Try again. Better luck next time!');
@@ -18595,7 +18625,7 @@ function sumOfDigits(number) {
 
 function primeFactors(number) {
   const factors = &lbrack;&rbrack;;
-  for (let i = 2; i < = number; i++) {
+  for (let i = 2; i <= number; i++) {
     while (isPrime(i) && number % i === 0) {
       factors.push(i);
       number/= i;
@@ -18607,8 +18637,10 @@ function primeFactors(number) {
 function isSmithNumber(number) {
   const originalSum = sumOfDigits(number);
   const primeFactorSum = primeFactors(number).reduce((sum, factor) => sum + sumOfDigits(factor), 0);
+
   return originalSum === primeFactorSum;
 }
+
 // Example: Check if 728 is a Smith number
 console.log(isSmithNumber(728)); // Output: true
 </pre>
@@ -18629,18 +18661,20 @@ representation of a chessboard.</p>
 function generateChessboard() {
   const size = 8; // Size of the chessboard (8x8)
   const chessboard = &lbrack;&rbrack;;
-  for (let row = 0; row < size; row+ +) {
+  for (let row = 0; row < size; row++) {
     const currentRow = &lbrack;&rbrack;;
     for (let col = 0; col < size; col++) {
       // Use 'X' for black squares and'' for white squares
       const isBlack = (row + col) % 2 === 1;
-      const square = isBlack ? 'X':'
+      const square = isBlack ? 'X':'';
       currentRow.push(square);
     }
+	
     chessboard.push(currentRow.join(''));
   }
   return chessboard.join('\n');
 }
+
 // Example usage
 const chessboard = generateChessboard();
 console.log(chessboard);
@@ -18656,26 +18690,30 @@ special characters).</p>
 // Function to generate a random password
 function generateRandomPassword(length, includeUppercase, includeLowercase, includeNumbers,
 includeSpecialChars) {
-  const uppercaseChars = ABCDEFGHIJKLMNOPQRSTUV WXYZ';
+  const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUV WXYZ';
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const numberChars = '0123456789';
-  const specialchars = ,!@#$%A&*()-=_+&lbrack;&rbrack;{}l;:,.<>?';
+  const specialchars = '!@#$%^&*()-=_+&lbrack;&rbrack;{}|;:,.<>?';
+
   let validChars = '';
   let password = '';
+
   if (includeUppercase) validChars += uppercaseChars;
   if (includeLowercase) validChars += lowercaseChars;
   if (includeNumbers) validChars += numberChars;
-  if (includeSpecialChars) validChars += specialchars;
+  if (includeSpecialChars) validChars += specialChars;
+  
   if (validChars.length === 0) {
     console.error('Error: At least one character type must be selected.');
     return null;
   }
   for (let i = 0; i < length; i++) {
     const randomindex = Math.floor(Math.random() * validChars.length);
+    password += validChars.charAt(randomlndex);
   }
-  password += validChars.charAt(randomlndex);
   return password;
 }
+
 // Example usage
 const passwordLength = 12;
 const includeUppercase = true;
@@ -18685,7 +18723,7 @@ const includeSpecialChars = true;
 const randomPassword = generateRandomPassword(passwordLength, includeUppercase, includeLowercase,
 includeNumbers, includeSpecialChars);
 if (randomPassword) {
-  console.log(' Random Password: ${randomPassword}');
+  console.log(`Random Password: ${randomPassword}`);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -18705,19 +18743,20 @@ the starting point to the exit.</p>
 function solveMaze(maze) {
   const rows = maze.length;
   const cols = maze&lbrack;O&rbrack;.length;
-  const visited = Array.from({ length: rows}, () => Array(cols).fill(false));
+  const visited = Array.from({length: rows}, () => Array(cols).fill(false));
 
   function isSafe(row, col) {
-    return row > = 0 && row < rows &.& col > = 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
+    return row >= 0 && row < rows && col >= 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
   }
   
   function dfs(row, col) {
-    if (ro w === ro ws -1 && col === cols -1){
+    if (row === rows - 1 && col === cols -1) {
       // Reached the exit
       return true;
     }
     if (isSafe(row, col)) {
       visited&lbrack;row&rbrack;&lbrack;col&rbrack; = true;
+	  
       // Move in all possible directions (up, down, left, right)
       const directions = &lbrack;
       &lbrack;-1,0&rbrack;, // Up
@@ -18725,17 +18764,19 @@ function solveMaze(maze) {
       &lbrack;0,-1&rbrack;,// Left
       &lbrack;0,1&rbrack; //Right
       &rbrack;;
-      for (const &lbrack;dr, de&rbrack; of directions) {
+      for (const&lbrack;dr, dc&rbrack; of directions) {
         const newRow = row + dr;
-        const newCol = col + de;
+        const newCol = col + dc;
         if (dfs(newRow, newCol)) {
           return true;
         }
       }
       visited&lbrack;row&rbrack;&lbrack;col&rbrack; = false; // Backtrack
     }
+	
     return false;
   }
+  
   // Start the depth-first search from the top-left corner
   if (dfs(0,0)) {
     console.log('Path found!');
@@ -18743,6 +18784,7 @@ function solveMaze(maze) {
     console.log('No path found.');
   }
 }
+
 // Example usage
 const maze = &lbrack;
 &lbrack;1,0,1,1,1&rbrack;,
@@ -18770,15 +18812,17 @@ that contains every letter of the alphabet at least once.</p>
 function isPangram(str) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
   const lowercasedStr = str.toLowerCase();
+  
   for (const char of alphabet) {
-    if (llowercasedStr.includes(char)) {
+    if (!lowercasedStr.includes(char)) {
       return false;
     }
   }
   return true;
 }
+
 // Example usage
-const inputstring = "The quick brown fox jumps over the lazy dog";
+const inputString = "The quick brown fox jumps over the lazy dog";
 if (isPangram(inputString)) {
   console.log('The given string is a pangram!');
 } else {
@@ -18796,15 +18840,16 @@ a solution is found.</p>
 // Function to check if a number can be placed in a particular cell
 function isSafe(board, row, col, num) {
   // Check if ’num' is not present in the current row and column
-  for (leti = 0;i < 9;i++) {
+  for (let i = 0;i < 9;i++) {
     if (board&lbrack;row&rbrack;&lbrack;i&rbrack; === num || board&lbrack;i&rbrack;&lbrack;col&rbrack; === num) {
       return false;
     }
   }
-  // Check if'num' is not present in the 3x3 subgrid
+  
+  // Check if 'num' is not present in the 3x3 subgrid
   const startRow = Math.floor(row / 3) * 3;
   const startCol = Math.floor(col / 3) * 3;
-  for (leti = 0;i < 3;i++){
+  for (let i = 0;i < 3;i++){
     for (let j = 0; j < 3;j++){
       if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; === num) {
         return false;
@@ -18813,6 +18858,7 @@ function isSafe(board, row, col, num) {
   }
   return true;
 }
+
 // Function to find an empty cell in the Sudoku grid
 function findEmptyCell(board) {
   for (let row = 0; row < 9; row++) {
@@ -18824,19 +18870,20 @@ function findEmptyCell(board) {
   }
   return null;
 }
+
 // Function to solve the Sudoku puzzle using backtracking
 function solveSudoku(board) {
   const emptyCell = findEmptyCell(board);
-  if (’emptyCell) {
+  if (!emptyCell) {
     // No empty cell found, the puzzle is solved
-      return true;
+    return true;
   }
+
   const &lbrack;row, col&rbrack; = emptyCell;
 
   // Try filling the empty cell with numbers 1 to 9
-  for (let num = l;num <= 9;num++) {
+  for (let num = l; num <= 9; num++) {
     if (isSafe(board, row, col, num)) {
-
       // If placing 'num' in the current cell is safe, try the next step
       board&lbrack;row&rbrack;&lbrack;col&rbrack; = num;
 
@@ -18855,19 +18902,20 @@ function solveSudoku(board) {
 
 // Example usage
 const sudokuBoard = &lbrack;
-&lbrack;5,3,0, 0, 7,0,0, 0, 0&rbrack;,
-&lbrack;6,0, 0,1, 9, 5,0, 0, 0&rbrack;,
+&lbrack;5, 3, 0, 0, 7, 0, 0, 0, 0&rbrack;,
+&lbrack;6, 0, 0, 1, 9, 5, 0, 0, 0&rbrack;,
 &lbrack;0, 9, 8, 0, 0, 0, 0, 6, 0&rbrack;,
 &lbrack;8, 0, 0, 0, 6, 0, 0, 0, 3&rbrack;,
-&lbrack;4, 0, 0,8, 0,3,0, 0,1&rbrack;,
+&lbrack;4, 0, 0, 8, 0, 3, 0, 0, 1&rbrack;,
 &lbrack;7, 0, 0, 0, 2, 0, 0, 0, 6&rbrack;,
 &lbrack;0, 6, 0, 0, 0, 0, 2, 8, 0&rbrack;,
-&lbrack;0, 0, 0, 4, 1,9,0, 0,5&rbrack;,
+&lbrack;0, 0, 0, 4, 1, 9, 0, 0, 5&rbrack;,
 &lbrack;0, 0, 0, 0, 8, 0, 0, 7, 9&rbrack;
 &rbrack;;
+
 if (solveSudoku(sudokuBoard)) {
   console.log('Sudoku solved successfully:');
-  console.log(sudokuBoard.map(row => row.join(' ')).join('\n'));
+  console.log(sudokuBoard.map(row => row.join('')).join('\n'));
 } else {
   console.log('No solution exists for the given Sudoku puzzle.');
 }
@@ -18890,11 +18938,14 @@ let person = {
   lastName: "Doe",
   age: 30
 };
+
 // Convert object to a JSON-formatted string
 let jsonString = JSON.stringify(person);
+
 // Display the result
 console.log("Original Object:");
 console.log(person);
+
 console.log("\nJSON-formatted String:");
 console.log(jsonString);
 </pre>
@@ -18913,11 +18964,13 @@ function calculateEllipseArea(semiMajorAxis, semiMinorAxis) {
   const area = pi * semiMajorAxis * semiMinorAxis;
   return area;
 }
+
 // Example usage
 const semiMajorAxis = 5;
 const semiMinorAxis = 3;
+
 const ellipseArea = calculateEllipseArea(semiMajorAxis, semiMinorAxis);
-console.log(' The area of the ellipse is: ${ellipseArea.toFixed(2)}');
+console.log(`The area of the ellipse is: ${ellipseArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -22354,6 +22407,8 @@ const power = (base, exponent) => Math.pow(base, exponent);
 
 // Example usage
 power(2, 5); // Result: 32
+// Example usage
+power(17, 5); // Result: 1419857
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-37">37. Convert String to Number</h2>
