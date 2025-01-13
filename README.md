@@ -15115,12 +15115,13 @@ if (!isNaN(inputNumber) && inputNumber >= 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter the base and height of a triangle and 
 calculates its area using the formula: 
-<span class="consolas">Area=12xBasexHeightArea=21xBasexHeight</span>. It then 
+<span class="consolas">Area = 12 x Base x HeightArea = 21 x Base x Height</span>. It then 
 displays the calculated area.</p>
 
 <pre>
 let base = parseFloat(prompt("Enter the base of the triangle: "));
 let height = parseFloat(prompt("Enter the height of the triangle: "));
+
 if (!isNaN(base) && !isNaN(height) && base > 0 && height > 0) {
   let area = 0.5 * base * height;
   console.log(
@@ -15140,15 +15141,15 @@ displays the variables before and after the swap.</p>
 let variable1 = prompt("Enter the first variable:");
 let variable2 = prompt("Enter the second variable:");
 console.log(
-  `Before swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
+  `Before swapping: Variable1 = ${variable1}, Variable2 = ${variable2}`
 );
 
 // Swapping the variables
 let temp = variablel;
-variablel = variable2;
+variable1 = variable2;
 variable2 = temp;
 console.log(
-  `After swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
+  `After swapping: Variable1 = ${variable1}, Variable2 = ${variable2}`
 );
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15209,7 +15210,6 @@ const kilometersToMilesConversionFactor = 0.621371;
 
 // Check if input is a valid number
 if (!isNaN(kilometers)) {
-
   // Convert kilometers to miles
   let miles = kilometers * kilometersToMilesConversionFactor;
   console.log(`${kilometers} kilometers is approximately ${miles} miles.`);
@@ -15229,7 +15229,6 @@ let celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
 
 // Check if input is a valid number
 if (!isNaN(celsius)) {
-
   // Convert Celsius to Fahrenheit
   let fahrenheit = (celsius * 9) / 5 + 32;
   console.log(
@@ -18963,6 +18962,12 @@ function calculateEllipseArea(semiMajorAxis, semiMinorAxis) {
   const pi = Math.PI;
   const area = pi * semiMajorAxis * semiMinorAxis;
   return area;
+}let inputNumber = parseFloat(prompt("Enter a non-negative number: "));
+if (!isNaN(inputNumber) && inputNumber >= 0) {
+  let squareRoot = Math.sqrt(inputNumber);
+  console.log(`The square root of ${inputNumber} is: ${squareRoot}`);
+} else {
+  console.log("Please enter a valid non-negative number.");
 }
 
 // Example usage
