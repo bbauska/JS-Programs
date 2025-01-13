@@ -17451,7 +17451,7 @@ function findMinElement(arr) {
 }
 
 // Example usage:
-const numbers = &lbrack;5, 2, 9,1, 7&rbrack;;
+const numbers = &lbrack;5, 2, 9, 1, 7&rbrack;;
 const minNumber = findMinElement(numbers);
 console.log("Array:", numbers);
 console.log("Minimum Element:", minNumber);
@@ -17495,20 +17495,23 @@ through each digit and add them together.</p>
 <pre>
 function sumOfDigits(number) {
   // Check if the input is a valid number
-  if (isNaN(number) 11 ’Number.isInteger(number) 11 number < 0) {
+  if (isNaN(number) || !Number.isInteger(number) || number < 0) {
     return "Invalid input. Please provide a non-negative integer.";
   }
+  
   // Convert the number to a string to iterate through its digits
-  const digitsArray = String(number).split(").map(Number);
+  const digitsArray = String(number).split('').map(Number);
 
   // Calculate the sum of digits
   const sum = digitsArray.reduce((acc, digit) => acc + digit, 0);
+
   return sum;
 }
+
 // Example usage:
 const inputNumber = 12345;
 const result = sumOfDigits(inputNumber);
-console.log(' The sum of digits in $ {inputNumber} is: $ {result}');
+console.log(`The sum of digits in ${inputNumber} is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js92">92. Check if a String is a Palindromic Phrase</h2>
@@ -17522,16 +17525,18 @@ function isPalindromicPhrase(str) {
   if (typeof str !== 'string') {
     return "Invalid input. Please provide a string.";
   }
+  
   // Remove non-alphanumeric characters and convert to lowercase
-  const cleanedStr = str.replace(/&lbrack;Aa-zA-ZO-9&rbrack;/g, ").toLowerCase();
+  const cleanedStr = str.replace(/&lbrack;^a-zA-ZO-9&rbrack;/g,'').toLowerCase();
+  
   // Compare the cleaned string with its reversed version
-  return cleanedStr === cleanedStr.split(").reverse().join(");
+  return cleanedStr === cleanedStr.split('').reverse().join('');
 }
 // Example usage:
-const phrase 1 = "A man, a plan, a canal, Panama!";
+const phrase1 = "A man, a plan, a canal, Panama!";
 const phrase2 = "Hello, world!";
-console.log(`Is "${phrasel}" a palindromic phrase? ${isPalindromicPhrase(phrasel)}`);
-console.log(`Is "${phrase2}" a palindromic phrase? ${isPalindromicPhrase(phrase2)}`);
+console.log(`Is ${phrase1} a palindromic phrase? ${isPalindromicPhrase(phrase1)}`);
+console.log(`Is ${phrase2} a palindromic phrase? ${isPalindromicPhrase(phrase2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -17550,23 +17555,26 @@ function generateRandomPassword(length) {
   const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const numericChars = '0123456789';
-  const specialchars = '!©#$%A&*()-_+=';
+  const specialChars = '!©#$%A&*()-_+=';
+  
   // Combine character sets
-  const allChars = uppercaseChars + lowercaseChars + numericChars + specialchars;
+  const allChars = uppercaseChars + lowercaseChars + numericChars + specialChars;
+
   // Check if the input length is a valid positive number
-  if (!Number.isInteger(length) 11 length <= 0) {
+  if (!Number.isInteger(length) || length <= 0) {
     return "Invalid input. Please provide a positive integer for the password length.";
   }
+  
   // Generate the random password
-  let password =";
+  let password = '';
   for (let i = 0; i < length; i++) {
-    const randomindex = Math.floor(Math.random() * allChars.length);
-    password += allChars.charAt(randomlndex);
+    const randomIndex = Math.floor(Math.random() * allChars.length);
+    password += allChars.charAt(randomIndex);
   }
   return password;
 }
 // Example usage:
-const passwordLength =12;
+const passwordLength = 12;
 const randomPassword = generateRandomPassword(passwordLength);
 console.log(`Generated Password: ${randomPassword}`);
 </pre>
@@ -17583,7 +17591,7 @@ console.log(`Generated Password: ${randomPassword}`);
 <pre>
 function calculateSimpleInterest(principal, rate, time) {
   // Check if the inputs are valid positive numbers
-  if (isNaN(principal) || isNaN(rate) || isNaN(time) || principal <= 0 || rate < = 0 || time <= 0) {
+  if (isNaN(principal) || isNaN(rate) || isNaN(time) || principal <= 0 || rate <= 0 || time <= 0) {
     return "Invalid inputs. Please provide valid positive numbers.";
   }
   // Calculate simple interest
@@ -17611,13 +17619,15 @@ console.log(`Simple Interest: $${interestAmount}`);
 
 <pre>
 let startTime;
-let stopwatchinterval;
+let stopwatchInterval;
+
 function startStopwatch() {
   startTime = new Date().getTime();
-  stopwatchinterval = setInterval(updateDisplay, 1000);
+
+  stopwatchInterval = setInterval(updateDisplay, 1000);
 }
 function stopStopwatch() {
-  clearlnterval(stopwatchlnterval);
+  clearInterval(stopwatchInterval);
 }
 function resetStopwatch() {
   stopStopwatch();
@@ -17626,9 +17636,10 @@ function resetStopwatch() {
 function updateDisplay() {
   const currentTime = new Date().getTime();
   const elapsedTime = Math.floor((currentTime - startTime) / 1000);
+  
   const minutes = Math.floor(elapsedTime / 60);
   const seconds = elapsedTime % 60;
-  const formattedTime = ' ${minutes}:${seconds < 10 ? "0": ""}${seconds}';
+  const formattedTime = `${minutes}:${seconds < 10 ? "0": ""}${seconds}`;
   document.getElementById("display").textContent = formattedTime;
 }
 </pre>
@@ -18692,7 +18703,7 @@ includeSpecialChars) {
   const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUV WXYZ';
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const numberChars = '0123456789';
-  const specialchars = '!@#$%^&*()-=_+&lbrack;&rbrack;{}|;:,.<>?';
+  const specialChars = '!@#$%^&*()-=_+&lbrack;&rbrack;{}|;:,.<>?';
 
   let validChars = '';
   let password = '';
