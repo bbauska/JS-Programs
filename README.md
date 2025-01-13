@@ -22000,7 +22000,7 @@ the conversion.exadecimal representation.</p>
 const celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32;
 
 // Example usage:
-celsiusToFahrenheit(25); // Result: 77
+celsiusToFahrenheit(25);  // Result: 77
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-02">2. Get Value of a browser Cookie</h2>
@@ -22023,9 +22023,9 @@ corresponding hexadecimal representation.</p>
 <pre>
 const rgbToHex = (r, g, b) =>
 "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-rgbToHex(0, 51, 255);
 
-// Result: #0033ff
+rgbToHex(0, 51, 255);  // Result: #0033ff = pure blue
+rgbToHex(255, 0, 17);  // Result: #ff0011 = pure red
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -22049,9 +22049,8 @@ copyToClipboard("Hello World");
 
 <pre>
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
-isDateValid("December 17, 1995 03:24:00");
 
-// Result: true
+isDateValid("January 12, 2025 08:24:00");  // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-06">6. Find the day of year</h2>
@@ -22062,7 +22061,7 @@ isDateValid("December 17, 1995 03:24:00");
 const dayOfYear = (date) =>
   Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
-dayOfYear(new Date()); // Result: 272
+dayOfYear(new Date());  // Result: 12
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -22076,8 +22075,9 @@ dayOfYear(new Date()); // Result: 272
 following code for the purpose.</p>
 
 <pre>
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)
-capitalize("follow for more") // Result: 'Follow for more'
+const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+
+capitalize("follow for more")  // Result: 'Follow for more'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-08">8. Find the number of days between two days</h2>
@@ -22086,9 +22086,9 @@ capitalize("follow for more") // Result: 'Follow for more'
 
 <pre>
 const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() -
-date2.getTime()) / 86400000)
-dayDif(new Date("2020-10-21"), new Date("2021-10-22"))
-// Result: 366
+  date2.getTime()) / 86400000)
+
+dayDif(new Date("2025-10-21"), new Date("2025-11-22"))  // Result: 32
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-09">9. Clear All Cookies</h2>
@@ -22098,8 +22098,7 @@ cookie using document.cookie and clearing it.</p>
 
 <pre>
 const clearCookies = document.cookie.split(';').forEach(cookie =>
-  document.cookie = cookie.replace(/^ +/, '').replace(/=.*/, `=;expires=${new
-  Date(0).toUTCString()};path=/`));
+  document.cookie = cookie.replace(/^ +/,'').replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-10">10. Generate Random Hex</h2>
@@ -22107,8 +22106,7 @@ const clearCookies = document.cookie.split(';').forEach(cookie =>
 <p>You can generate random hex colors with Math.random and padEnd properties.</p>
 
 <pre>
-const randomHex = () => `#${Math.floor(Math.random() *
-0xffffff).toString(16).padEnd(6, "0")}`;
+const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
 console.log(randomHex()); // Result: #92b008
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22129,7 +22127,7 @@ const getParameters = (URL) => {
   return JSON.stringify(URL);
 };
 
-getParameters(window.location) // Result: {search : "easy", page : 3}
+getParameters(window.location)  // Result: {search : "easy", page: 3}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-12">12. Log Time from Date</h2>
@@ -22138,7 +22136,7 @@ getParameters(window.location) // Result: {search : "easy", page : 3}
 
 <pre>
 const timeFromDate = date => date.toTimeString().slice(0, 8);
-console.log(timeFromDate(new Date(2021, 0, 10, 17, 30, 0))); // Result: "17:30:00"
+console.log(timeFromDate(new Date(2025, 0, 10, 17, 30, 0)));  // Result: "17:30:00"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-13">13. Check if a number is even or odd</h2>
@@ -22148,7 +22146,7 @@ takes a "num" as input and returns true if even, false if odd.</p>
 
 <pre>
 const isEven = num => num % 2 === 0;
-console.log(isEven(2)); // Result: True
+console.log(isEven(2));  // Result: True
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -22162,7 +22160,7 @@ console.log(isEven(2)); // Result: True
 
 <pre>
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
-average(1, 2, 3, 4); // Result: 2.5
+average(1, 2, 3, 4);  // Result: 2.5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-15">15. Scroll to Top</h2>
@@ -22190,7 +22188,7 @@ reverse('hello world'); // Result: 'dlrow olleh'
 
 <pre>
 const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
-isNotEmpty(&lbrack;1, 2, 3&rbrack;); // Result: true
+isNotEmpty(&lbrack;1, 2, 3&rbrack;);  // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -22213,7 +22211,7 @@ getSelectedText();
 
 <pre>
 const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
-console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;)); // Result: &lbrack; 1, 4, 3, 2 &rbrack;
+console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;));  // Result: &lbrack; 1, 4, 3, 2 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-20">20. Detect Dark Mode</h2>
@@ -22223,7 +22221,7 @@ console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;)); // Result: &lbrack; 1, 4,
 <pre>
 const isDarkMode = window.matchMedia &&
 window.matchMedia('(prefers-color-scheme: dark)').matches
-console.log(isDarkMode) // Result: True or False
+console.log(isDarkMode)  // Result: True or False
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-21">21. Remove Duplicated from Array</h2>
@@ -22246,7 +22244,7 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Res
 
 <pre>
 const getLength = (str) => str.length;
-getLength("Hello, world!"); // Result: 13
+getLength("Hello, world!");  // Result: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-23">23. Calculate the Area of a Circle</h2>
@@ -22255,7 +22253,7 @@ getLength("Hello, world!"); // Result: 13
 
 <pre>
 const calculateCircleArea = (radius) => Math.PI * Math.pow(radius, 2);
-calculateCircleArea(5); // Result: 78.53981633974483
+calculateCircleArea(5);  // Result: 78.53981633974483
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-24">24. Check if a Number is Prime</h2>
@@ -22285,7 +22283,8 @@ isPrime(13); // Result: true
 
 <pre>
 const countOccurrences = (str, char) => str.split(char).length - 1;
-countOccurrences("banana", "a"); // Result: 3
+
+countOccurrences("banana", "a");  // Result: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-26">26. Remove Leading and Trailing Whitespaces</h2>
@@ -22294,7 +22293,8 @@ countOccurrences("banana", "a"); // Result: 3
 
 <pre>
 const removeWhitespaces = (str) => str.trim();
-removeWhitespaces(" Hello, world! "); // Result: "Hello, world!"
+
+removeWhitespaces(" Hello, world! ");  // Result: "Hello, world!"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-27">27. Generate a Random Number within a Range</h2>
@@ -22303,6 +22303,7 @@ removeWhitespaces(" Hello, world! "); // Result: "Hello, world!"
 
 <pre>
 const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 randomInRange(1, 10); // Result: Random number between 1 and 10 (inclusive)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22318,6 +22319,7 @@ const minutes = Math.floor((seconds % 3600) / 60);
 const secs = seconds % 60;
 return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 };
+
 secondsToHHMMSS(3660); // Result: "01:01:00"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22332,6 +22334,7 @@ secondsToHHMMSS(3660); // Result: "01:01:00"
 
 <pre>
 const getLastElement = (arr) => arr&lbrack;arr.length - 1&rbrack;;
+
 getLastElement(&lbrack;1, 2, 3, 4&rbrack;); // Result: 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22341,6 +22344,7 @@ getLastElement(&lbrack;1, 2, 3, 4&rbrack;); // Result: 4
 
 <pre>
 const sortAscending = (arr) => arr.slice().sort((a, b) => a - b);
+
 sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;); 
 // Result: &lbrack;1, 1, 2, 3, 3, 4, 5, 5, 6, 9&rbrack;
 </pre>
@@ -22351,6 +22355,7 @@ sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;);
 
 <pre>
 const isPalindrome = (str) => str === str.split('').reverse().join('');
+
 isPalindrome("level"); // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22378,6 +22383,7 @@ factorial(5); // Result: 120
 
 <pre>
 const sumArray = (arr) => arr.reduce((acc, val) => acc + val, 0);
+
 sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;); // Result: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22406,7 +22412,7 @@ const getCurrentDate = () => {
 };
 
 // Example usage
-getCurrentDate(); // Result: "23/12/2024"
+getCurrentDate(); // Result: "12/01/2025"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
