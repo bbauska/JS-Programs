@@ -15330,11 +15330,11 @@ let num2 = parseFloat(prompt("Enter the second number:"));
 let num3 = parseFloat(prompt("Enter the third number:"));
 
 // Check if inputs are valid numbers
-if (!isNaN(numl) && !isNaN(num2) && !isNaN(num3)) {
+if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
 
   // Find the largest among the three numbers
-  let largestNumber = Math.max(numl, num2, num3);
-  console.log(`The largest number among ${numl}, ${num2}, and ${num3} is: ${largestNumber}`);
+  let largestNumber = Math.max(num1, num2, num3);
+  console.log(`The largest number among ${num1}, ${num2}, and ${num3} is: ${largestNumber}`);
 } else {
   console.log("Please enter valid numbers for all three inputs.");
 }</pre>
@@ -15526,14 +15526,12 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
   let originalNumber = number;
   let numberOfDigits = originalNumber.toString().length;
   let sum = 0;
-
   // Calculate the sum of digits each raised to the power of the number of digits
   while (originalNumber > 0) {
     let digit = originalNumber % 10;
     sum += Math.pow(digit, numberOfDigits);
     originalNumber = Math.floor(originalNumber / 10);
   }
-
   // Check if the number is an Armstrong number
   if (sum === number) {
     console.log(`${number} is an Armstrong number.`);
@@ -15541,7 +15539,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
     console.log(`${number} is not an Armstrong number.`);
   }
 } else {
-  console.log("Please enter a valid positive integer.");
+    console.log("Please enter a valid positive integer.");
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -15687,23 +15685,23 @@ let num2 = parseInt(prompt("Enter the second number:"));
 
 // Check if inputs are valid integers
 if (
-  !isNaN(numl) &&
+  !isNaN(num1) &&
   !isNaN(num2) &&
   Number.isInteger(numl) &&
   Number.isInteger(num2)
 ){
   // Extract the last digit of each number
-  let lastDigitl = Math.abs(numl % 10);
+  let lastDigit1 = Math.abs(num1 % 10);
   let lastDigit2 = Math.abs(num2 % 10);
 
   // Check if the last digits are the same
-  if (lastDigitl === lastDigit2) {
+  if (lastDigit1 === lastDigit2) {
     console.log(
-      `The last digit of ${numl} is the same as the last digit of ${num2}.`
+      `The last digit of ${num1} is the same as the last digit of ${num2}.`
     );
   } else {
     console.log(
-      `The last digit of ${numl} is different from the last digit of ${num2}.`
+      `The last digit of ${num1} is different from the last digit of ${num2}.`
     );
   }
 } else {
