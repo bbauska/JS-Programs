@@ -22429,6 +22429,7 @@ const power = (base, exponent) => Math.pow(base, exponent);
 
 // Example usage
 power(2, 5); // Result: 32
+
 // Example usage
 power(17, 5); // Result: 1419857
 </pre>
