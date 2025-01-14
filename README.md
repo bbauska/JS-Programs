@@ -272,16 +272,16 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- <ul type="square"> -->
 <ol>
-  <li><a href="#js01">01. Print Hello World</a></li>
-  <li><a href="#js02">02. Add Two Numbers</a></li>
-  <li><a href="#js03">03. Find the Square Root</a></li>
-  <li><a href="#js04">04. Calculate the Area of a Triangle</a></li>
-  <li><a href="#js05">05. Swap Two Variables</a></li>
-  <li><a href="#js06">06. Solve Quadratic Equation</a></li>
-  <li><a href="#js07">07. Convert Kilometers to Miles</a></li>
-  <li><a href="#js08">08. Convert Celsius to Fahrenheit</a></li>
-  <li><a href="#js09">09. Generate a Random Number</a></li>
-  <li><a href="#js10">10. Check if a number is Positive, Negative, or Zero</a></li>
+  <li><a href="#js01">Print Hello World</a></li>
+  <li><a href="#js02">Add Two Numbers</a></li>
+  <li><a href="#js03">Find the Square Root</a></li>
+  <li><a href="#js04">Calculate the Area of a Triangle</a></li>
+  <li><a href="#js05">Swap Two Variables</a></li>
+  <li><a href="#js06">Solve Quadratic Equation</a></li>
+  <li><a href="#js07">Convert Kilometers to Miles</a></li>
+  <li><a href="#js08">Convert Celsius to Fahrenheit</a></li>
+  <li><a href="#js09">Generate a Random Number</a></li>
+  <li><a href="#js10">Check if a number is Positive, Negative, or Zero</a></li>
   <li><a href="#js11">11. Check if a Number is Odd or Even</a></li>
   <li><a href="#js12">12. Find the Largest Among Three Numbers</a></li>
   <li><a href="#js13">13. Check Prime Number</a></li>
@@ -359,7 +359,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js85">85. Capitalize the First Letter of a String</a></li>
   <li><a href="#js86">86. Find the Maximum Element in an Array</a></li>
   <li><a href="#js87">87. Reverse an Array</a></li>
-  <li><a href="#js88">88. Calculate the Power of a Number</a></li>
+  <li><a href="#js88">Calculate the Power of a Number</a></li>
   <li><a href="#js89">89. Find the Minimum Element in an Array</a></li>
   <li><a href="#js90">90. Convert Minutes to Hours and Minutes</a></li>
   <li><a href="#js91">91. Find the Sum of Digits in a Number</a></li>
@@ -412,10 +412,10 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js138">138. Check if a Year is a Magic Year</a></li>
   <li><a href="#js139">139. Basic Crossword Puzzle</a></li>
   <li><a href="#js140">140. Find the Area of a Regular Polygon</a></li>
-  <li><a href="#js141">141. Check if a Number is an Abundant Number</a></li>
-  <li><a href="#js142">142. Basic Word Guessing Game</a></li>
-  <li><a href="#js143">143. Calculate the Euler's Totient Function</a></li>
-  <li><a href="#js144">144. Basic Memory Matching Game</a></li>
+  <li><a href="#js141">Check if a Number is an Abundant Number</a></li>
+  <li><a href="#js142">Basic Word Guessing Game</a></li>
+  <li><a href="#js143">Calculate the Euler's Totient Function</a></li>
+  <li><a href="#js144">Basic Memory Matching Game</a></li>
   <li><a href="#js145">145. Check if a Number is a Vampire Number</a></li>
   <li><a href="#js146">146. Basic Simon Says Game</a></li>
   <li><a href="#js147">147. Calculate the Area of a Hexagon</a></li>
@@ -441,7 +441,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js167">167. Check if a Number is a Padovan Number</a></li>
   <li><a href="#js168">168. Calculate the Area of a Koch Snowflake</a></li>
   <li><a href="#js169">169. Basic Chatbot</a></li>
-  <li><a href="#js170">170. RGB to HEX Converter</a></li>
+  <li><a href="#js170">RGB to HEX Converter</a></li>
   <li><a href="#js171">171. Counter</a></li>
   <li><a href="#js172">172. Stop The Bomb</a></li>
   <li><a href="#js173">173. IP Address Generator</a></li>
@@ -467,7 +467,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js193">193. Color Guessing Game</a></li>
   <li><a href="#js194">194. Word Scramble Game</a></li>
   <li><a href="#js195">195. Country Capital Quiz Game</a></li>
-  <li><a href="#js196">196. Guess the Animal</a></li>
+  <li><a href="#js196">Guess the Animal</a></li>
   <li><a href="#js197">197. Joke Teller</a></li>
   <li><a href="#js198">198. Shopping List</a></li>
   <li><a href="#js199">199. FizzBuzzGame</a></li>
@@ -488,7 +488,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js214">214. Replace First Digit with $</a></li>
   <li><a href="#js215">215. Prefix Sums</a></li>
   <li><a href="#js216">216. Next Prime Number</a></li>
-  <li><a href="#js217">217. Reverse Order of Bits</a></li>
+  <li><a href="#js217">Reverse Order of Bits</a></li>
   <li><a href="#js218">218. Pyramid</a></li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -511,10 +511,10 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-09">js-09. Clear All Cookies</a></li>
   <li><a href="#js-10">js-10. Generate Random Hex</a></li>
   <li><a href="#js-11">js-11. Get Query Params from URL</a></li>
-  <li><a href="#js-12">js-12. Log Time from Date</a></li>
-  <li><a href="#js-13">js-13. Check if a Number is Even or Odd</a></li>
-  <li><a href="#js-14">js-14. Find Average of Numbers</a></li>
-  <li><a href="#js-15">js-15. Scroll to Top</a></li>
+  <li><a href="#js-12">Log Time from Date</a></li>
+  <li><a href="#js-13">Check if a Number is Even or Odd</a></li>
+  <li><a href="#js-14">Find Average of Numbers</a></li>
+  <li><a href="#js-15">Scroll to Top</a></li>
   <li><a href="#js-16">js-16. Reverse a String</a></li>
   <li><a href="#js-17">js-17. Check if Array is Empty</a></li>
   <li><a href="#js-18">js-18. Get Selected Text</a></li>
@@ -537,11 +537,11 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-35">js-35. Get the Current Date in DD/MM/YYYY Format</a></li>
   <li><a href="#js-36">js-36. Calculate the Power of a Number</a></li>
   <li><a href="#js-37">js-37. Convert String to Number</a></li>
-  <li><a href="#js-38">js-38. Find the First N Fibonacci Numbers</a></li>
+  <li><a href="#js-38">Find the First N Fibonacci Numbers</a></li>
   <li><a href="#js-39">js-39. Count the Number of Words in a String</a></li>
   <li><a href="#js-40">js-40. Reverse an Array</a></li>
   <li><a href="#js-41">js-41. Get the Current Year</a></li>
-  <li><a href="#js-42">js-42. Generate a Random Number between 1 and 10</a></li>
+  <li><a href="#js-42">Generate a Random Number between 1 and 10</a></li>
   <li><a href="#js-43">js-43. Check if a String is Empty</a></li>
   <li><a href="#js-44">js-44. Check if an Object has a Specific Property</a></li>
   <li><a href="#js-45">js-45. Calculate the Average of Numbers in an Array</a></li>
@@ -567,7 +567,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-65">js-65. Check if an Array Contains Only Unique Value</a></li>
   <li><a href="#js-66">js-66. Get the Day of the Week from a Date</a></li>
   <li><a href="#js-67">js-67. Check if a Number is a Power of Two</a></li>
-  <li><a href="#js-68">js-68. Convert Object to Query Parameters String</a></li>
+  <li><a href="#js-68">Convert Object to Query Parameters String</a></li>
   <li><a href="#js-69">js-69. Check if an Array Contains an Even Number</a></li>
   <li><a href="#js-70">js-70. Get the Month Name from a Date</a></li>
   <li><a href="#js-71">js-71. Check if a String is a Palindrome (case-insensitive)</a></li>
@@ -645,11 +645,11 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-143">js-143. Calculate the Median of an Array of Numbers</a></li>
   <li><a href="#js-144">js-144. Find the Greatest Common Divisor (GCD) of Two Numbers (Recursive)</a></li>
   <li><a href="#js-145">js-145. Check if a Number is a Happy Number</a></li>
-  <li><a href="#js-146">js-146. Find the First N Prime Numbers</a></li>
-  <li><a href="#js-147">js-147. Calculate the Volume of a Sphere</a></li>
-  <li><a href="#js-148">js-148. Find the Longest Word in a Sentence</a></li>
-  <li><a href="#js-149">js-149. Check if a Number is an Armstrong Number (Narcissistic Number)</a></li>
-  <li><a href="#js-150">js-150. Find the Length of the Longest Word in a Sentence</a></li>
+  <li><a href="#js-146">Find the First N Prime Numbers</a></li>
+  <li><a href="#js-147">Calculate the Volume of a Sphere</a></li>
+  <li><a href="#js-148">Find the Longest Word in a Sentence</a></li>
+  <li><a href="#js-149">Check if a Number is an Armstrong Number (Narcissistic Number)</a></li>
+  <li><a href="#js-150">Find the Length of the Longest Word in a Sentence</a></li>
   <li><a href="#js-151">js-151. Check if a Number is a Strong Number</a></li>
   <li><a href="#js-152">js-152. Reverse the Order of an Array</a></li>
   <li><a href="#js-154">js-153. Find the Area of a Rectangle</a></li>
@@ -701,8 +701,8 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-199">js-199. Generate a Random UUID</a></li>
   <li><a href="#js-200">js-200. Check if a String is a Valid IPv6 Address</a></li>
   <li><a href="#js-201">js-201. Calculate the Area of a Parallelogram</a></li>
-  <li><a href="#js-202">js-202. Check if a String is a Valid MAC Address</a></li>
-  <li><a href="#js-203">js-203. Convert RGB to HSL (Hue, Saturation, Lightness)</a></li>
+  <li><a href="#js-202">Check if a String is a Valid MAC Address</a></li>
+  <li><a href="#js-203">Convert RGB to HSL (Hue, Saturation, Lightness)</a></li>
   <li><a href="#js-204">js-204. Check if a Number is a Pandigital Number</a></li>
   <li><a href="#js-205">js-205. Calculate the Sum of Proper Divisors of a Number</a></li>
   <li><a href="#js-206">js-206. Find the Least Common Multiple (LCM) of an Array of Numbers</a></li>
@@ -754,7 +754,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-252">js-252. Reverse Words in a Sentence</a></li>
   <li><a href="#js-253">js-253. Find the Median of Numbers in an Array</a></li>
   <li><a href="#js-254">js-254. Count the Vowels in a String</a></li>
-  <li><a href="#js-255">js-255. Check if a Number is a Tribonacci Number (Alternative Approach)</a></li>
+  <li><a href="#js-255">Check if a Number is a Tribonacci Number (Alternative Approach)</a></li>
   <li><a href="#js-256">js-256. Calculate the Fibonacci Sequence (Up to N Terms)</a></li>
   <li><a href="#js-257">js-257. Find the ASCII Value of a Character</a></li>
   <li><a href="#js-258">js-258. Check if a String is an Isogram (No Repeating Characters)</a></li>
@@ -764,7 +764,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-262">js-262. Find the First Non-Repeating Character in a String</a></li>
   <li><a href="#js-263">js-263. Calculate the Area of a Kite</a></li>
   <li><a href="#js-264">js-264. Calculate the Area of a Sector</a></li>
-  <li><a href="#js-265">js-265. Display Confetti on Button Click</a></li>
+  <li><a href="#js-265">Display Confetti on Button Click</a></li>
   <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
