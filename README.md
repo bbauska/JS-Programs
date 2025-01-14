@@ -9537,8 +9537,8 @@ let person = {
 <h4>Using the Object Constructor:</h4>
 <pre>
 let car = new Object();
-car. brand = 'Toyota';
-car. model = 'Camry';
+car.brand = 'Toyota';
+car.model = 'Camry';
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9572,7 +9572,7 @@ car.model = 'Corolla'; // Modifying property 'model'
 
 <h4>Adding Methods to an Object:</h4>
 <pre>
-car. start = function() {
+car.start = function() {
   return 'Car started';
 };
 </pre>
