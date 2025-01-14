@@ -700,23 +700,23 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-198">js-198. Check if a Number is a Leyland Number</a></li>
   <li><a href="#js-199">js-199. Generate a Random UUID</a></li>
   <li><a href="#js-200">js-200. Check if a String is a Valid IPv6 Address</a></li>
-  <li><a href="#js-201">js-201. Calculate the Area of a Parallelogram</a></li>
+  <li><a href="#js-201">Calculate the Area of a Parallelogram</a></li>
   <li><a href="#js-202">Check if a String is a Valid MAC Address</a></li>
   <li><a href="#js-203">Convert RGB to HSL (Hue, Saturation, Lightness)</a></li>
-  <li><a href="#js-204">js-204. Check if a Number is a Pandigital Number</a></li>
-  <li><a href="#js-205">js-205. Calculate the Sum of Proper Divisors of a Number</a></li>
-  <li><a href="#js-206">js-206. Find the Least Common Multiple (LCM) of an Array of Numbers</a></li>
-  <li><a href="#js-207">js-207. Calculate the Sum of Squares of First n Natural Numbers</a></li>
-  <li><a href="#js-208">js-208. Check if a Number is a Powerful Number</a></li>
-  <li><a href="#js-209">js-209. Find the Product of Digits of a Number</a></li>
-  <li><a href="#js-210">js-210. Check if a Number is a Practical Number</a></li>
-  <li><a href="#js-211">js-211. Calculate the Sum of Cubes of First n Natural Numbers</a></li>
-  <li><a href="#js-212">js-212. Check if a Number is a Strange Number</a></li>
-  <li><a href="#js-213">js-213. Check if a Number is a Tau Number</a></li>
-  <li><a href="#js-214">js-214. Generate a Random Alphanumeric String</a></li>
-  <li><a href="#js-215">js-215. Calculate the Area of a Regular Hexagon</a></li>
-  <li><a href="#js-216">js-216. Calculate the Sum of Divisors of a Number</a></li>
-  <li><a href="#js-217">js-217. Check if a Number is a Zeisel Number</a></li>
+  <li><a href="#js-204">Check if a Number is a Pandigital Number</a></li>
+  <li><a href="#js-205">Calculate the Sum of Proper Divisors of a Number</a></li>
+  <li><a href="#js-206">Find the Least Common Multiple (LCM) of an Array of Numbers</a></li>
+  <li><a href="#js-207">Calculate the Sum of Squares of First n Natural Numbers</a></li>
+  <li><a href="#js-208">Check if a Number is a Powerful Number</a></li>
+  <li><a href="#js-209">Find the Product of Digits of a Number</a></li>
+  <li><a href="#js-210">Check if a Number is a Practical Number</a></li>
+  <li><a href="#js-211">Calculate the Sum of Cubes of First n Natural Numbers</a></li>
+  <li><a href="#js-212">Check if a Number is a Strange Number</a></li>
+  <li><a href="#js-213">Check if a Number is a Tau Number</a></li>
+  <li><a href="#js-214">Generate a Random Alphanumeric String</a></li>
+  <li><a href="#js-215">Calculate the Area of a Regular Hexagon</a></li>
+  <li><a href="#js-216">Calculate the Sum of Divisors of a Number</a></li>
+  <li><a href="#js-217">Check if a Number is a Zeisel Number</a></li>
   <li><a href="#js-218">js-218. Check if a Number is a Reversible Number</a></li>
   <li><a href="#js-219">js-219. Calculate the Circumference of a Circle</a></li>
   <li><a href="#js-220">js-220. Find the Shortest Word in a String</a></li>
@@ -735,7 +735,7 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-233">js-233. Calculate the Surface Area of a Cube</a></li>
   <li><a href="#js-234">js-234. Check if a Number is a Pluperfect Number</a></li>
   <li><a href="#js-235">js-235. Calculate the Area of a Regular Octagon</a></li>
-  <li><a href="#js-236">js-236. Check if a Number is a Repunit Number</a></li>
+  <li><a href="#js-236">Check if a Number is a Repunit Number</a></li>
   <li><a href="#js-237">js-237. Calculate the Volume of a Ellipsoid</a></li>
   <li><a href="#js-238">js-238. Check if a String is a Valid URL (Alternative Approach)</a></li>
   <li><a href="#js-239">js-239. Check if a String is a Valid Tax Identification Number (TIN)</a></li>
@@ -761,11 +761,11 @@ Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#js-259">js-259. Calculate the Hamming Distance of Two Strings (Equal Length)</a></li>
   <li><a href="#js-260">js-260. Calculate the Distance between Two Points in a 2D Plane</a></li>
   <li><a href="#js-261">js-261. Check if a String is a Positive Number (No Sign or Decimal Allowed</a></li>
-  <li><a href="#js-262">js-262. Find the First Non-Repeating Character in a String</a></li>
-  <li><a href="#js-263">js-263. Calculate the Area of a Kite</a></li>
-  <li><a href="#js-264">js-264. Calculate the Area of a Sector</a></li>
+  <li><a href="#js-262">Find the First Non-Repeating Character in a String</a></li>
+  <li><a href="#js-263">Calculate the Area of a Kite</a></li>
+  <li><a href="#js-264">Calculate the Area of a Sector</a></li>
   <li><a href="#js-265">Display Confetti on Button Click</a></li>
-  <li><a href="#js-266">js-266. GoTo table-of-contents</a></li>
+  <li><a href="#js-266">GoTo table-of-contents</a></li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -818,8 +818,8 @@ function storeDish() {
 washDish();
 </pre>
 
-<p>In this example, when washDish is called, it gets added to the call
-stack. Inside washDish, dryDish() called, which, in turn, gets added
+<p>In this example, when washDish() is called, it gets added to the call
+stack. Inside washDish(), dryDish() called, which, in turn, gets added
 to the call stack. Finally, storeDish() is called from dryDish(), and it
 also gets added to the call stack.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -26231,6 +26231,9 @@ button.addEventListener('click', () => {
   }
 </pre>
 <!-- end of goto table of contents -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="js-266">266. GoTo toc (table-of-contents)</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
