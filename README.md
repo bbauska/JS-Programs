@@ -8042,7 +8042,7 @@ class Talk {
       "section", {className: "talk"},
       elt("h2", null, talk.title, " ", elt("button", {
         type: "button",
-        onclick: () => dispatch({type: "deleteTalk",
+        onclick:() => dispatch({type: "deleteTalk",
                                  talk: talk.title})
       }, "Delete")),
       elt("div", null, "by ",
@@ -8814,7 +8814,7 @@ to different formats.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Date Set Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>setFullYear () Method:</h4>
+<h4>setFullYear() Method:</h4>
 <pre>specificDate.setFullYear(2024); // Set the year to 2024</pre>
 
 <h4>setMonth() Method:</h4>
@@ -9328,7 +9328,7 @@ function myFunction() {
 <pre>
 let person = {
   name: 'Alice',
-  greet: function () {
+  greet: function() {
     console.log('Hello, my name is ' + this.name);
   }
 };
@@ -9528,7 +9528,7 @@ optimization.</p>
 let person = {
   name: 'Alice',
   age: 30,
-  greet: function () {
+  greet: function() {
     return 'Hello, my name is ' + this.name;
   }
 };
@@ -10616,8 +10616,8 @@ asynchronously between a web browser and a server.</p>
 <p>AJAX allows web pages to update content without reloading the entire page.</p>
 <h4>Simple AJAX Request:</h4>
 <pre>
-let xhttp = new XMLHttpRequest ();
-xhttp.onreadystatechange = function () {
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200 ) {
     document.getElementById("demo").innerHTML = this.responseText;
   }
@@ -10939,7 +10939,7 @@ content, form submission without page refresh, and fetching and using JSON data 
 &lt;head&gt;
 &lt;title&gt;AJAX Image Gallery&lt;/title&gt;
 &lt;script&gt;
-function loadimages () {
+function loadimages() {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -11124,7 +11124,7 @@ function loadMoreContent() {
         content.innerHTML += data;
         page++;
       })
-      .catch(error =&gt; console.error('Error :error));
+      .catch(error =&gt; console.error('Error :error'));
   }
 }
 window.onscroll = loadMoreContent;
@@ -11178,7 +11178,7 @@ AJAX can be used to fetch and display data dynamically without page reloads.</p>
 &lt;head&gt;
 &lt;title&gt;File Upload with Progress&lt;/title&gt;
 &lt;script&gt;
-function uploadFile () {
+function uploadFile() {
   let fileinput = document.getElementById('fileinput');
   let file = fileinput.files[0];
   let formData = new FormData();
@@ -12168,15 +12168,15 @@ console.log(date.toDateString());  // Output: Fri Dec 31 2023
 <h4>16. Using JSON in Asynchronous Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-async function fetchData () {
+async function fetchData() {
   try {
     let response = await fetch('data.json');
-    let data = await response.json ();
+    let data = await response.json();
     console.log(data);
   } catch(error) {
   console.error('Error :error');
 }
-fetchData ();
+fetchData();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. JSON Serialization with Custom Functions:</h4>
@@ -12250,7 +12250,7 @@ content updates, user interactions, and handling client-side functionalities.</p
 <pre>
 // JavaScript code to change text color on button click
 function changeColor() {
-  document.getElementByld("text").style.color = "blue";
+  document.getElementById("text").style.color = "blue";
 }
 </pre>
 
@@ -12287,7 +12287,7 @@ JavaScript.</p>
 </ul>
 <h4>2. DOM Manipulation:</h4>
 <ul>
-  <li>JavaScript: Provides direct DOM manipulation using methods like getElementByld and 
+  <li>JavaScript: Provides direct DOM manipulation using methods like getElementById and 
     querySelector.</li>
   <li>jQuery: Simplifies DOM traversal and manipulation with methods like $ (), allowing 
     easier element selection and modification.</li>
@@ -12396,7 +12396,7 @@ to choose the right tool for the job and build robust, interactive web applicati
 <h4>1. Selecting an Element by ID:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let element = document.getElementByld("myElement");
+let element = document.getElementById("myElement");
 element.style.color = "blue";
 </pre>
 
@@ -12418,7 +12418,7 @@ for (let i = 0; i < elements.length; i ++) {
 <h4>3. Adding Event Listeners:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document.getElementByld("myButton").addEventListener("click", function() {
+document.getElementById("myButton").addEventListener("click", function() {
   alert("Button clicked!");
 });
 </pre>
@@ -12459,20 +12459,20 @@ document.body.appendChild(newElement);
 <h4>6. Removing an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let elementToRemove = document.getElementByld(" toBeRemoved ");
-elementToRemove.parentNode.removechild( elementToRemove );
+let elementToRemove = document.getElementById("toBeRemoved");
+elementToRemove.parentNode.removechild(elementToRemove);
 </pre>
 
 <h5>jQuery:</h5>
-<pre>$ (" #toBeRemoved").remove();</pre>
+<pre>$("#toBeRemoved").remove();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Manipulating CSS Class:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>document.getElementByld (" myDiv").classList.add (" active ");</pre>
+<pre>document.getElementById("myDiv").classList.add("active");</pre>
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #myDiv").addClass (" active ");
+$("#myDiv").addClass("active");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Changing Text Content:</h4>
@@ -12504,8 +12504,8 @@ elementToFade.style.opacity = 1;
 <h4>11. AJAX GET Request:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let xhr = new XMLHttpRequest ();
-xhr.onreadystatechange = function () {
+let xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
   if (this.readyState === 4 && this.status === 200) {
     console.log(this.responseText);
   };
@@ -12535,7 +12535,7 @@ xhr.send(JSON.stringify({name:"John", age: 30}));
 
 <h5>jQuery:</h5>
 <pre>
-$ . ajax ({
+$ .ajax ({
 url:" saveData",
   method:" POST ",
   contentType:" application I json ",
@@ -12612,9 +12612,9 @@ $("#myForm").submit(function(event) {
 <h4>19. Animating Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let element = document. getElementById("myElement");
-element.style.transition = " transform 2 s 11;
-element.style.transform = " rotate (360deg)";
+let element = document.getElementById("myElement");
+element.style.transition = " transform 2s 11";
+element.style.transform = " rotate(360deg)";
 </pre>
 
 <h5>jQuery:</h5>
@@ -12729,7 +12729,7 @@ using declarative JavaScript syntax.</p>
 <pre>
 google.charts.load ('current', {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-function drawChart () {
+function drawChart() {
   const data = google.visualization.arrayToDataTable([
   ['Task', 'Hours per Day'],
   ['Work1, 11],
@@ -12749,7 +12749,7 @@ const options = {
 <h4>6. D3.js</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>D3.js (Data - Driven Documents) is a powerful JavaScript library used for creating data visualizations in SVG, HTML,
-and CSS . It provides comprehensive functionalities to manipulate documents based on data, enabling the creation of
+and CSS. It provides comprehensive functionalities to manipulate documents based on data, enabling the creation of
 interactive and dynamic visualizations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example - Creating a Basic SVG Circle with D3.js:</h4>
@@ -12794,8 +12794,8 @@ ctx.fillRect(10,10,100,50);
 <h4>2. Draw Circle:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const canvas = document. getElementById ('myCanvas');
-const ctx = canvas . getContext ('2d');
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.arc(100, 100, 50, 0, Math.PI * 2);
 ctx.fillstyle = 'red';
@@ -12823,7 +12823,7 @@ Plotly.newPlot('myDiv', data);
 <h4>5. Bar Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const ctx = document. getElementById ('myChart'). getContext ('2d');
+const ctx = document.getElementById ('myChart').getContext ('2d');
 const myChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -12845,12 +12845,12 @@ const myChart = new Chart(ctx, {
 <h4>6. Line Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const ctx = document. getElementById ('myChart'). getContext ('2d');
-const myChart = new Chart (ctx, {
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [ {
+    datasets: [{
     label: 'My First Dataset',
     data: [65, 59, 80, 81, 56, 55, 40],
     bordercolor: 'rgb (75,192,192)',
@@ -12865,7 +12865,7 @@ const myChart = new Chart (ctx, {
 <pre>
 google.charts.load ('current', {packages: ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
-function drawChart () {
+function drawChart() {
   const data = google.visualization.arrayToDataTable ([
     ['Task', ‘Hours per Day'],
     ['Work', 11],
@@ -12886,7 +12886,7 @@ chart.draw(data, options);
 <pre>
 google.charts.load('current', {packages : ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-function drawChart () {
+function drawChart() {
   const data = google.visualization.arrayToDataTable ([
     ['Year1, 'Sales', 'Expenses'],
     [’2013', 1000,400],
@@ -12968,7 +12968,7 @@ Plotly.newPlot('myDiv', data);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Create a Bar Chart:</h4>
 <pre>
-const ctx = document. getElementById ('myChart'). getContext ('2d');
+const ctx = document.getElementById ('myChart').getContext ('2d');
 const myChart = new Chart (ctx, {
   type: 'bar',
   data: {
@@ -13200,7 +13200,7 @@ function throwError() {
   throw new Error('Custom error message’);
 }
 try {
-  throwError ();
+  throwError();
 } catch(error) {
   console.error(error.message);
 }
@@ -13345,7 +13345,7 @@ function asyncFunction() {
     },1000);
   });
 }
-asyncFunction ()
+asyncFunction()
   .then (result => {
     console.log(result);
     return 'Second part done';
@@ -13368,7 +13368,7 @@ function fetchData() {
     console.error(error);
     }
 
-getData ();
+getData();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced DOM Manipulation:</h4>
@@ -13386,7 +13386,7 @@ for (let i = 0; i < 5; i ++) {
 <h4>12. Event Delegation:</h4>
 <pre>
 document.addEventListener('click', function(event) {
-  if (event. target.matches ('button')) {
+  if (event.target.matches('button')) {
     console.log('Button clicked');
   });
 }
@@ -13416,7 +13416,7 @@ function validateNumber(num) {
   try {
   validateNumber('abc');
   } catch(error) {
-  console.error(error. message);
+  console.error(error.message);
   }
 </pre>
 <h4>16. Regular Expression to Validate Email:</h4>
@@ -13501,32 +13501,34 @@ async function executeAsyncOperations() {
 }
 executeAsyncOperations();
 </pre>
-<h4>8. Using Array. from with Mapping:</h4>
+<h4>8. Using Array.from with Mapping:</h4>
 <pre>let newArray = Array.from ({length: 5}, (index) => index * 2 );  // Output: &lbrack; 0, 2, 4, 6, 8 &rbrack;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Using Finally Block:</h4>
 <pre>
-function tryCatchFinally () {
+function tryCatchFinally() {
   try {
     console.log('Try block');
     throw new Error ('Error occurred');
-  } catch ( error) {
-    console. error ( error. message );
+  } catch(error) {
+    console.error(error.message);
   } finally {
     console.log('Finally block');
   }
 }
-tryCatchFinally ();
+tryCatchFinally();
 </pre>
 <h4>10. Custom Error Class:</h4>
 <pre>
 class CustomError extends Error {
-constructor (message ) {
-super (message );
-this . name = this . constructor. name;
-throw new CustomError ('Custom error message1);
+  constructor(message) {
+    super (message);
+    this.name = this.constructor.name;
+    throw new CustomError('Custom error message');
+  }
+}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -13539,7 +13541,7 @@ new features like optional chaining and async / await.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>1. Object. define Property for Property Definition</h4>
+<h4>1. Object.define Property for Property Definition</h4>
 <pre>
 letobj = {};
 Object.defineProperty(obj, 'fullName', {
@@ -13548,10 +13550,10 @@ Object.defineProperty(obj, 'fullName', {
   configurable: true
 });
 </pre>
-<h4>2. Object. set PrototypeOf for Setting Prototype:</h4>
+<h4>2. Object.set PrototypeOf for Setting Prototype:</h4>
 <pre>
 let animal = {
-  makeSound () {
+  makeSound() {
     console.log('Animal sound');
   }
 };
@@ -13567,7 +13569,7 @@ dog.makeSound();  // Output: 'Animal sound'
 let numbers =[1, 2, 2, 3, 4, 4, 5];
 let uniqueNumbers = [... new Set(numbers)];  // Output: [ 1, 2, 3, 4, 5 ]
 </pre>
-<h4>4. Array. find to Get First Matching Element:</h4>
+<h4>4. Array.find to Get First Matching Element:</h4>
 <pre>
 let users = [
   {id: l, name: 'Alice'},
@@ -13678,7 +13680,7 @@ const memoizedFactorial = memoize(factorial);
 <pre>
 const add = x => x + 5;
 const multiply = x => x * 2;
-const compose = (... fns) => x => fns . reduceRight((acc, fn) => fn (acc), x);
+const compose = (... fns) => x => fns.reduceRight((acc, fn) => fn (acc), x);
 const addAndMultiply = compose(multiply, add);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13698,15 +13700,15 @@ let hasOdd = numbers.some(num => num % 2 !== 0);  // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>5. Object. fromEntries Method:</h4>
+<h4>5. Object.fromEntries Method:</h4>
 <pre>
 let entries = [['name', 'Alice'], ['age', 30]];
 letobj = Object.fromEntries(entries);  // Output: {name: 'Alice', age: 30}
 </pre>
-<h4>6. Object. getOwnPropertyDescriptors:</h4>
+<h4>6. Object.getOwnPropertyDescriptors:</h4>
 <pre>
 const obj = {name : ’Alice'};
-const descriptors = Object. getOwnPropertyDescriptors (obj);
+const descriptors = Object.getOwnPropertyDescriptors (obj);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Promises and Async / Await:</h4>
@@ -13800,7 +13802,7 @@ array.fill(0, 2, 4);  // Fills array from index 2 to index 4 with value 0
 const obj = {foo: 'bar', baz: 42};
 const entries = Object.entries(obj);  // Output: [['foo', 'bar'], ['baz', 42]]
 </pre>
-<h4>6. Object. preventExtensions:</h4>
+<h4>6. Object.preventExtensions:</h4>
 <pre>
 const obj = {prop: 'value'};
 Object.preventExtensions(obj);
@@ -13821,7 +13823,7 @@ Promise.allSettled(promises)
 </pre>
 <h4>8. Async Function Returning Rejected Promise:</h4>
 <pre>
-async function throwError () {
+async function throwError() {
   throw new Error('Error thrown from async function');
 }
 throwError().catch(error => console.error(error.message));  // Output: 'Error thrown from async function'
@@ -13873,7 +13875,7 @@ console.log(memoizedSum(2, 3 ));  // Output: 5 ( Retrieved from cache )
 <pre>
 const throttle = (func, limit) => {
   let inThrottle;
-  return function () {
+  return function() {
     const args = arguments;
     const context = this;
     if (!inThrottle) {
@@ -13891,13 +13893,13 @@ const throttled = throttle(throttledFunc, 3000);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>3. Using Array. from with Mapping and Filtering:</h4>
+<h4>3. Using Array.from with Mapping and Filtering:</h4>
 <pre>
 const numbers = [1, 2, 3, 4, 5, 6];
 const new Array = Array.from(numbers, x => x * 2 ).filter (x => x > 5);  // Output: [6, 8, 10, 12]
 </pre>
 
-<h4>4. Using Array. reduceRight:</h4>
+<h4>4. Using Array.reduceRight:</h4>
 <pre>
 const array = [1, 2, 3, 4];
 const sum = array.reduceRight((acc, curr) => acc + curr, 0);  // Output: 10
@@ -13905,7 +13907,7 @@ const sum = array.reduceRight((acc, curr) => acc + curr, 0);  // Output: 10
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>5. Object. fromEntries with Map:</h4>
+<h4>5. Object.fromEntries with Map:</h4>
 <pre>
 const entries = new Map([
   ['name', 'Alice'],
@@ -14395,7 +14397,7 @@ const hasBanana = fruits.includes('banana');  // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>5. Object. keys () to Get Object Keys:</h4>
+<h4>5. Object. keys() to Get Object Keys:</h4>
 <pre>
 const obj = {a: 1, b: 2, c: 3};
 const keys = Object.keys(obj);  // Output: ['a', 'b', 'c']
@@ -14484,7 +14486,7 @@ const numbers = [1, 2, 3, 4, 5];
 const doubledNumbers = numbers.map(num => num * 2);  // Output: [2, 4, 6, 8, 10]
 </pre>
 
-<h4>4. Array. find () to Get First Matching Element:</h4>
+<h4>4. Array. find() to Get First Matching Element:</h4>
 <pre>
 const users = [
   {id: 1, name: 'Alice'},
@@ -14542,7 +14544,7 @@ const user = {profile: {email: 'user@example.com'}};
 const userEmail = user?.profile?.email;  // Output: 'user@example.com'
 </pre>
 
-<h4>10. Promise.finally () for Cleanup Tasks:</h4>
+<h4>10. Promise.finally() for Cleanup Tasks:</h4>
 <pre>
 fetch ('https://api.example.com/data')
   .then(response => response.json())
