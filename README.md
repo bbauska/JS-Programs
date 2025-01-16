@@ -15648,6 +15648,12 @@ if (!isNaN(numl) && !isNaN(num2)) {
 } else {
   console.log("Please enter valid numbers.");
 }
+
+// Examples:
+Result of 407 &ast; 3345 is: 1361415
+Result of 997 + 2231 is: 3228
+Result of 999 / 30 is: 33.3
+Result of 705 - 45 is: 660
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -15674,6 +15680,9 @@ if (!isNaN(n) && Number.isInteger(n) && n > 0) {
 } else {
   console.log("Please enter a valid positive integer.");
 }
+
+// Example
+The sum of natural numbers from 1 to 76 is: 2926
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js22">22. Check if the Numbers Have the Same Last Digit</h2>
@@ -15710,6 +15719,12 @@ if (
 } else {
     console.log("Please enter valid integers.");
 }
+
+// Example:
+The last digit of 201 is different from the last digit of 202.
+
+// Another example:
+The last digit of 297 is the same as the last digit of 4047.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -15743,6 +15758,9 @@ if (!isNaN(numl) && !isNaN(num2) && Number.isInteger(numl) && Number.isInteger(n
 } else {
   console.log("Please enter valid positive integers.");
 }
+
+// Example:
+The HCF (GCD) of 108 and 208 is: 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js24">24. Find LCM</h2>
@@ -15771,6 +15789,9 @@ if (!isNaN(numl) && !isNaN(num2) && Number.isInteger(numl) && Number.isInteger(n
 } else {
   console.log("Please enter valid positive integers.");
 }
+
+// Example:
+The LCM of 77 and 234 is: 18018
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -15788,11 +15809,11 @@ its factors.</p>
 let number = parseInt(prompt("Enter a positive integer:"));
 
 // Check if input is a valid positive integer
-if (’isNaN(number) && Number.isInteger(number) && number > 0) {
-  console.log(`Factors of $ {number}:`);
+if (!isNaN(number) && Number.isInteger(number) && number > 0) {
+  console.log(`Factors of ${number}:`);
 
   // Find and display the factors
-  for (let i = 1; i < = number; i++) {
+  for (let i = 1; i <= number; i++) {
     if (number % i === 0) {
       console.log(i);
     }
@@ -15800,6 +15821,21 @@ if (’isNaN(number) && Number.isInteger(number) && number > 0) {
 } else {
   console.log("Please enter a valid positive integer.");
 }
+
+// Example:
+Factors of 27:
+1
+3
+9
+27
+// Another example:
+Factors of 28:
+1
+2
+4
+7
+14
+28
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js26">26. Find Sum of Natural Numbers Using Recursion</h2>
@@ -22064,9 +22100,41 @@ rgbToHex(255, 0, 17);  // Result: #ff0011 = pure red
 <p>Easily copy any text to clipboard using navigator.clipboard.writeText.</p>
 
 <pre>
-const copyToClipboard = (text) => navigator.clipboard.writeText(text);
+async function copyToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text); 
+    console.log("Text copied to clipboard!"); 
+  } catch (err) {
+    console.error("Failed to copy to clipboard:", err);
+  }
+} 
 
-copyToClipboard("Hello World");
+// Example usage:
+copyToClipboard("Hello World!");
+</pre>
+<p>Another example of <span class="consolas">navigator.clipboard.writeText</span>.</p>
+<pre>
+&lt;textarea id="content"&gt;&lt;/textarea&gt;
+&lt;button onclick="copyToClipboard()"&gt;Copy&lt;/button&gt;
+
+&lt;script&gt;
+  function copyToClipboard() {
+    var copyText = document.getElementById("content").value;
+    navigator.clipboard.writeText(copyText).then(() =&gt; {
+        // Alert the user that the action took place.
+        // Nobody likes hidden stuff being done under the hood!
+        alert("Copied to clipboard");
+    });
+  }
+&lt;/script&gt;
+</pre>
+<p>Finally, check if clipboard api is available.</p>
+<pre>
+const copyToClipboard = str => {
+  if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+    return navigator.clipboard.writeText(str);
+  return Promise.reject('The Clipboard API is not available.');
+};
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-05">5. Check if Date is Valid</h2>
@@ -22077,6 +22145,7 @@ copyToClipboard("Hello World");
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 
 isDateValid("January 12, 2025 08:24:00");  // Result: true
+isDateValid("January 32, 2025 08:24:00");  // Result: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-06">6. Find the day of year</h2>
@@ -22087,7 +22156,7 @@ isDateValid("January 12, 2025 08:24:00");  // Result: true
 const dayOfYear = (date) =>
   Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
-dayOfYear(new Date());  // Result: 12
+dayOfYear(new Date());  // Result: Current day of year
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
