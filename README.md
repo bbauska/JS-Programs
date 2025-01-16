@@ -21922,7 +21922,7 @@ checks numbers one by one starting from the given number until it finds the next
 <pre>
 function isPrime(num) {
   if (num < 2) return false;
-  for (let i = 2; i < = Math.sqrt(num); i++) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
@@ -21932,12 +21932,15 @@ function nextPrimeNumber(givenNumber) {
   while (!isPrime(nextNumber)) {
     nextNumber++;
   }
-  console.log(`Given Number: $ {givenNumber}`);
+  console.log(`Given Number: ${givenNumber}`);
   console.log(`Next Prime Number: ${nextNumber}`);
-}<br>
+}
 
 // Example: Find the next prime number greater than 10
 nextPrimeNumber(10);
+
+// Given Number: 10
+// Next Prime Number: 11
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js217">217. Reverse Order of Bits</h2>
@@ -21947,19 +21950,33 @@ binary representation, reverses the bits, and converts it back to an integer.</p
 
 <pre>
 function reverseOrderOfBits(integer) {
-  const binaryRepresentation = integer.toString(2).padStart(8, ’0'); // Assuming 8 bits for simplicity
-  const reversedBinary = binaryRepresentation.split(").reverse().join(");
+  const binaryRepresentation = integer.toString(2).padStart(8, '0'); // Assuming 8 bits for simplicity
+  const reversedBinary = binaryRepresentation.split('').reverse().join('');
   const reversedInteger = parseInt(reversedBinary, 2);
   console.log(`Original Integer: ${integer}`);
   console.log(`Binary Representation: ${binaryRepresentation}`);
   console.log(`Reversed Binary: ${reversedBinary}`);
   console.log(`Reversed Integer: ${reversedInteger}`);
-}<br>
+}
 
 // Examples: Reverse order of bits for given integers
 reverseOrderOfBits(14);
+// Original Integer: 14
+// Binary Representation: 00001110
+// Reversed Binary: 01110000
+// Reversed Integer: 112
+//
 reverseOrderOfBits(56);
+// Original Integer: 56
+// Binary Representation: 00111000
+// Reversed Binary: 00011100
+// Reversed Integer: 28
+//
 reverseOrderOfBits(234);
+// Original Integer: 234
+// Binary Representation: 11101010
+// Reversed Binary: 01010111
+// Reversed Integer: 87
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -21984,6 +22001,11 @@ function generateAsciiTriangle(height) {
 // Example usage:
 const triangleHeight = 5;
 generateAsciiTriangle(triangleHeight);
+//     *
+//    ***
+//   *****
+//  *******
+// *********
 </pre>
 
 <div align="right">
@@ -22026,7 +22048,7 @@ corresponding hexadecimal representation.</p>
 
 <pre>
 const rgbToHex = (r, g, b) =>
-"#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 
 rgbToHex(0, 51, 255);  // Result: #0033ff = pure blue
 rgbToHex(255, 0, 17);  // Result: #ff0011 = pure red
@@ -22111,7 +22133,8 @@ const clearCookies = document.cookie.split(';').forEach(cookie =>
 
 <pre>
 const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
-console.log(randomHex()); // Result: #92b008
+
+console.log(randomHex()); // Result: #92b008, different each time.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
