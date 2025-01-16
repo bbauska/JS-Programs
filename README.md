@@ -8622,7 +8622,7 @@ represent integers with arbitrary precision.</p>
 <pre>let bigNumber = 12345678912345678901234567890n;</pre>
 
 <h4>Performing Operations with a BigInt:</h4>
-<pre>let bigSum = bigNumber + 1n;</pre>
+<pre>let bigSum = bigNumber + 1n;  // Answer: 12345678912345678901234567891n</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
