@@ -24202,12 +24202,15 @@ console.log(longestWord("The quick brown fox jumped over the lazy dog"));  // Ou
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-149">149. Check if a Number is an Armstrong Number (Narcissistic Number)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>An Armstrong number of three digits is an integer such that the sum of the cubes of 
+its digits is equal to the number itself. For example, 153 and 371 are Armstrong numbers.</p>
+<p>(3&ast;3&ast;3) + (7&ast;7&ast;7) + (1&ast;1&ast;1) = 371</p>
 <p>The isArmstrongNumber function checks if a number is an Armstrong number, also known 
 as a narcissistic number.</p>
 
 <pre>
 const isArmstrongNumber = (num) => {
-  const digits = &lbrack;...String(num)&rbrack;.map(Number);
+  const digits = [...String(num)].map(Number);
   const numDigits = digits.length;
   const sumOfPowers = digits.reduce((sum, digit) => sum + digit **
   numDigits, 0);
@@ -24218,6 +24221,7 @@ const isArmstrongNumber = (num) => {
 console.log(isArmstrongNumber(153));  // Output: true
 console.log(isArmstrongNumber(370));  // Output: true
 console.log(isArmstrongNumber(123));  // Output: false
+console.log(isArmstrongNumber(155));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-150">150. Find the Length of the Longest Word in a Sentence</h2>
