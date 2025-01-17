@@ -26332,7 +26332,13 @@ button.addEventListener('click', () => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-266">266. GoTo toc (table-of-contents)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
+<pre>window.scrollTo(x-coordinate, y-coordinate)</pre>
+<p>Another example:</p>
+<pre>
+function scrollToTop() {
+  window.scrollTo(0, 0);
+}
+</pre>
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
