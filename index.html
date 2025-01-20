@@ -65,7 +65,7 @@
 <h1 align="center">JS 200+ for Beginners</h1>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p align="center"><small><small>(by brianbauska@gmail.com, systems analyst<span class='citation'
-data-cites="https://goalkicker.com">@https://js-programs.bauska.org</span>)</small></small></p>
+data-cites="https://js-programs.bauska.org">@https://js-programs.bauska.org</span>)</small></small></p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JS 200+ For Beginners - Intermediate level JS learning course.<br/>
 All on-line. No money, unless you’d like to donate. I’m an old programmer from 
@@ -3565,9 +3565,9 @@ formats, such as JSON, text, blobs, and more.</p>
 
 <pre>
 fetch('https://api.example.com/data')
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error('Error:', error));
 </pre>
 
 <p><b>AJAX: AJAX (Asynchronous JavaScript and XML)</b> is an older approach to making 
@@ -3577,6 +3577,7 @@ JSON or plain text AJAX was very popular before the arrival of the Fetch API and
 used in many projects.</p>
 
 <p><b>Features of AJAX:</b></p>
+
 <ul>
   <li>Uses the XMLHttpRequest object: It is older and uses a slightly more complex syntax.<li>
   <li>Higher compatibility: It works in older browser versions that do not fully support 
@@ -3590,7 +3591,7 @@ const xhr = new XMLHttpRequest();
 xhr.open('GET', 'https://api.example.com/data', true); 
 xhr.onreadystatechange = function() {
   if (xhr.readyState === 4 && xhr.status === 200) {
-    const data = JS0N.parse(xhr.responseText); 
+    const data = JSON.parse(xhr.responseText); 
 	console.log(data);
   }
 };
@@ -3699,11 +3700,11 @@ polling or refreshing, making them perfect for live messaging features.</p>
 // Client
 const socket = new WebSocket('ws://localhost:3000');
 
-socket.addEventListener('open', () -> {
+socket.addEventListener('open', () -&gt; {
   socket.send('Hello, server!');
 });
 
-socket.addEventListener('message', event => { 
+socket.addEventListener('message', event =&gt; {
   console.log('Message from the server:', event.data);
 });
 
@@ -3714,7 +3715,7 @@ const wss = new WebSocket.Server({ port: 3000 });
 wss.on('connection', ws -> {
   ws.send('Welcome to the WebSocket server!');
   
-  ws.on(' message', message => {
+  ws.on(' message', message =&gt; {
     console.log('Message from the client:', message);
     ws.send('Message received: ' + message);
   });
@@ -3740,11 +3741,11 @@ broadcasting, and automatic reconnection.</p>
 <pre>
 // Client
 const socket = io('http://localhost:3000');
-socket.on('connect', () -> {
+socket.on('connect', () -&gt; {
   socket.emit('message', 'Hello, server!');
 });
 
-socket.on('response', data => {
+socket.on('response', data =&gt; {
   console.log('Server response:', data);
 });
 
@@ -3752,7 +3753,7 @@ socket.on('response', data => {
 const http = require('http');
 const server = http.createServer();
 const io = require('socket.io')(server);
-io.on('connection', socket -> {
+io.on('connection', socket -&gt; {
   socket.emit('response', 'Welcome to the Socket.IO server!');
   
   socket.on('message', message => {
@@ -3794,14 +3795,14 @@ canvas.</p>
 <p><b>Canvas Example:</b></p>
 
 <pre>
-<canvas id="myCanvas" width="400" height="300"></canvas>
-<script>
+&lt;canvas id="myCanvas" width="400" height="300"&gt;&lt;/canvas&gt;
+&lt;script&gt;
   const canvas = document.getElementById('myCanvas'); 
   const context = canvas.getContext('2d');
   
   context.fillStyle = 'blue';
   context.fillRect(50, 50, 100, 100);
-</script>
+&lt;/script&gt;
 </pre>
 
 <p><b>WebGL:</b> WebGL (Web Graphics Library) is a more advanced technology
@@ -3821,13 +3822,13 @@ games.</p>
 <p><b>WebGL Example:</b></p>
 
 <pre>
-<canvas id="myCanvas" width="800" height="600"></canvas>
-<script>
+&lt;canvas id="myCanvas" width="800" height="600"&gt;&lt;/canvas&gt;
+&lt;script&gt;
   const canvas = document.getElementById('myCanvas');
   const gl = canvas.getContext('webgl');
   
   // Here, you would write code to render 3D content with WebGL
-</script>
+&lt;/script&gt;
 </pre>
 
 <p>In summary, if you need simple 2D graphics or visual elements on your
@@ -4025,7 +4026,7 @@ percentage of programmer candidates. So if you solved it, you’re now allowed t
 good about yourself.)</p>
 
 <pre>
-for (let n = 1; n <= 100; n++) {
+for (let n = 1; n &lt;= 100; n++) {
   let output = "";
   if (n % 3 == 0) output += "Fizz";
   if (n % 5 == 0) output += "Buzz";
@@ -4161,7 +4162,7 @@ console.log should show something like Solution (below):</p>
 <pre>
 let size = 8;
 let board = "";
-for (let y = 0; y < size; y++) {
+for (let y = 0; y &lt; size; y++) {
   for (let x = 0; x < size; x++) {
     if ((x + y) % 2 == 0) {
       board += " ";
@@ -4196,7 +4197,7 @@ and modifying it.</p>
 
 <pre>
 function min(a, b) {
-  if (a < b) return a;
+  if (a &lt; b) return a;
   else return b;
 }<br>
 console.log(min(0, 10)); // → 0
@@ -4236,7 +4237,7 @@ function findSolution(target) {
   function find(start, history) {
     if (start == target)
       return history;
-    else if (start > target)
+    else if (start &gt; target)
       return null;
     else
       return find(start + 5, "(" + history + " + 5)") ||
@@ -11250,6 +11251,7 @@ let complexObj = {
 };
 let complexstring = JSON.stringify(complexObj);
 let parsedObj = JSON.parse(complexstring);
+
 console.log(parsedObj.addresses[0].address); // Output: 123 Main St
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11270,6 +11272,7 @@ console.log(hrEmployees); // Output: [{"name": "John", "department": "HR" }, {"n
 <pre>
 let product = {"name": "Chair", "price": 50};
 product.price = 60;
+
 console.log(product); // Output:{"name": "Chair", "price": 60}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11278,6 +11281,7 @@ console.log(product); // Output:{"name": "Chair", "price": 60}
 <pre>
 let data = {"name": "Kate", "age": 25};
 delete data.age;
+
 console.log(data); // Output: {"name": "Kate"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11287,6 +11291,7 @@ console.log(data); // Output: {"name": "Kate"}
 let userData = {"username": "user123", "email": "user@example.com"};
 localstorage.setItem('userData', JSON.stringify(userData));
 let storedData = JSON.parse(localstorage.getItem('userData'));
+
 console.log(storedData.email); // Output: user@example.com
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11309,6 +11314,7 @@ async function fetchData () {
   } catch(error) {
   console.error('Error :error');
 }
+
 fetchData ();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11323,6 +11329,7 @@ letobj = {
   };
   let jsonString = obj.tojson();
 }
+
 console.log(jsonString); // Output: {"name" "Joe", "birthday"1990-01-15T00:00:00.000Z"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11340,6 +11347,7 @@ axios.get('https://api.example.com/data')
 let objl = {"name":"Tom", "age": 30};
 let obj2 = {"city":"Paris", "country":"France"};
 let mergedObj = { ... objl, ...obj2};
+
 console.log(mergedObj); // Output: {name: 'Tom', age: 30, city: 'Paris', country: 'France'}
 </pre>
 <!-- image019.jpg 500px width, 167px height -->
@@ -11353,6 +11361,7 @@ let data = [
   {"id": 3, "name":" "Item3"}
 ];<br>
 let mappedData = data.map(item => ({itemId: item.id, itemName: item.name}));
+
 console.log(mappedData);
 // Output: [{"itemId": 1, "itemName":"Item1"}, 
   {"itemId": 2, "itemName":"Item2"}, 
@@ -11435,6 +11444,7 @@ manipulate HTML elements.</p>
 <pre>
 // Selecting elements with class 'example'
 $(".example").css("font-size","16px");
+
 // Selecting all &lt;p&gt; elements inside &lt;div&gt; with ID 'content'
 $("#content p").addClass("highlight");
 </pre>
@@ -11450,6 +11460,7 @@ and modify HTML elements and their content.</p>
 <pre>
 // Appending a new &lt;li&gt; element to an unordered list
 $("ul").append("&lt;li&gt;New Item&lt;/li&gt;");
+
 // Changing text content inside a &lt;div&gt; element
 $("#content").text("Updated content");
 </pre>
@@ -11463,6 +11474,7 @@ modify HTML content on the fly.</p>
 <pre>
 // Changing the background color of an element
 $("#box").css("background-color", "#f2f2f2");
+
 // Toggling a CSS class on an element
 $("#toggleBtn").click(function() {
   $("#content").toggleclass("active");
@@ -11481,6 +11493,7 @@ relationships within the DOM.</p>
 <pre>
 // Finding the next sibling element
 $("#current").next().addClass("highlight");
+
 // Traversing up the DOM to find parent elements
 $("a").closest("div").addClass("parent-div");
 </pre>
@@ -11566,24 +11579,24 @@ document.body.appendChild(newElement);
 <h4>6. Removing an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let elementToRemove = document.getElementByld (" toBeRemoved ");
-elementToRemove.parentNode.removechild ( elementToRemove );
+let elementToRemove = document.getElementById("toBeRemoved");
+elementToRemove.parentNode.removechild(elementToRemove);
 </pre>
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #toBeRemoved").remove ();
+$ ("#toBeRemoved").remove();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Manipulating CSS Class:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document.getElementByld (" myDiv").classList.add (" active ");
+document.getElementById("myDiv").classList.add("active");
 </pre>
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #myDiv").addClass (" active ");
+$("#myDiv").addClass("active");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Changing Text Content:</h4>
@@ -11619,7 +11632,7 @@ elementToFade.style.opacity = 1;
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #toFade ").fadein ( 1000 );
+$("#toFade").fadein(1000);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. AJAX GET Request:</h4>
@@ -11656,13 +11669,13 @@ xhr.send(JSON.stringify({name:"John", age: 30}));
 
 <h5>jQuery:</h5>
 <pre>
-$ . ajax ({
-url:" saveData",
-method:" POST ",
-contentType :" application I json ",
-data : JSON . stringify ({name :" John ", age : 30}),
-success : function (response ) {
-console.log(response );
+$.ajax ({
+  url: " saveData",
+  method: "POST",
+  contentType: " application I json ",
+  data: JSON.stringify({name: " John ", age: 30}),
+  success: function(response) {
+    console.log(response);
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11673,31 +11686,23 @@ let linkHref = document. getElementById (" myLink "). getAttribute (" href");
 </pre>
 
 <h5>jQuery:</h5>
-<pre>
-let linkHref = $("#myLink").attr("href");
-</pre>
+<pre>let linkHref = $("#myLink").attr("href");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Setting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-document.getElementById("myImage").setAttribute("src", "new_image.jpg");
-</pre>
+<pre>document.getElementById("myImage").setAttribute("src", "new_image.jpg");</pre>
 
 <h5>jQuery:</h5>
-<pre>
-$ ("#myImage").attr("src", "newjmage.jpg");
-</pre>
+<pre>$ ("#myImage").attr("src", "newjmage.jpg");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let inputValue = document.getElementById("mylnput").value;
+let inputValue = document.getElementById("myInput").value;
 </pre>
 
 <h5>jQuery:</h5>
-<pre>
-let inputValue = $("#mylnput").val();
-</pre>
+<pre>let inputValue = $("#myInput").val();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Checking Checkbox State:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11706,9 +11711,7 @@ let isChecked = document.getElementById("myCheckbox").checked;
 </pre>
 
 <h5>jQuery:</h5>
-<pre>
-let isChecked = $("#myCheckbox").prop("checked");
-</pre>
+<pre>let isChecked = $("#myCheckbox").prop("checked");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Iterating Over NodeList:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11747,14 +11750,14 @@ $("#myForm").submit(function(event) {
 <h4>19. Animating Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let element = document. getElementById (" myElement");
-element. style . transition = " transform 2 s 11;
-element. style . transform = " rotate ( 360deg)";
+let element = document.getElementById ("myElement");
+element.style.transition = " transform 2 s 11";
+element.style.transform = " rotate(360deg)";
 </pre>
 
 <h5>jQuery:</h5>
 <pre>
-$ (" #myElement"). animate ({rotate :" 360deg "}, 2000 );
+$ ("#myElement").animate({rotate: " 360deg "}, 2000);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Changing Background Color on Click:</h4>
@@ -11826,22 +11829,22 @@ can create responsive and visually appealing charts.</p>
 <pre>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-type: 'bar',
-data: {
-labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-datasets: [{
-  label: '# of Votes',
-  data: [12, 19, 3, 5, 2, 3],
-  backgroundcolor: [
-    'rgba(255, 99, 132, 0.2)',
-    'rgba(54, 162, 235, 0.2)',
-    'rgba(255, 206, 86, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)'
-  ],
-borderColor: [
-'rgba(255, 99, 132, 1)',
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundcolor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+    borderColor: [
+    'rgba(255, 99, 132, 1)',
 'rgba(54, 162, 235, 1)',
 'rgba(255, 206, 86, 1)',
 'rgba(75, 192, 192, 1)',
