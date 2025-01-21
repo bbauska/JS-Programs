@@ -4069,9 +4069,9 @@ program.</p>
 for (let line = "#"; line.length &lt; 8; line += "#")
   console.log(line);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Solution:</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 #
 ##
@@ -4124,9 +4124,9 @@ for (let n = 1; n <= 100; n++) {
   console.log(output || n);
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Solution:</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 1
 2
@@ -4274,8 +4274,9 @@ for (let y = 0; y < size; y++) {
 
 console.log(board);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Solution:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
@@ -9446,8 +9447,11 @@ and maintainable code.</p>
 <h3>Examples of JS Style Guide:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Naming Conventions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use camelCase for variable and function names.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Indentation:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use consistent spaces or tabs for indentation.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex61">61. JS Best Practices</h2>
@@ -9457,9 +9461,11 @@ and maintainable code.</p>
 <h3>Examples of JS Best Practices:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Use Meaningful Variable Names:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let d = new Date(); // Instead, use let currentDate = new Date();</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Avoid Global Variables:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Encapsulate code to avoid polluting the global scope.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9474,11 +9480,13 @@ and maintainable code.</p>
 <h3>Examples of JS Mistakes:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Missing Semicolon:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let x = 5</pre>
 
 <p>Remember to add a semicolon at the end of the statement.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Uninitialized Variables:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let y;
 console.log(y); // Outputs : undefined
@@ -9491,8 +9499,11 @@ console.log(y); // Outputs : undefined
 <h3>Examples of JS Performance:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Reduce DOM Manipulations:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Combine multiple DOM updates into one to reduce reflows.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Use Efficient Algorithms:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Choose algorithms that have better time complexity for operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9549,12 +9560,12 @@ car.model = 'Camry';
 <h3>Object Properties Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Properties:</h4>
-<pre>console.log(person.name ); // Accessing property 'name'</pre>
+<pre>console.log(person.name);  // Accessing property 'name'</pre>
 
 <h4>Adding or Modifying Properties:</h4>
 <pre>
-car.color = 'blue'; // Adding property 'color'
-car.model = 'Corolla'; // Modifying property 'model'
+car.color = 'blue';  // Adding property 'color'
+car.model = 'Corolla';  // Modifying property 'model'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex67">67. JS Object Methods</h2>
@@ -9564,7 +9575,7 @@ car.model = 'Corolla'; // Modifying property 'model'
 <h3>Object Methods Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Methods:</h4>
-<pre>console.log(person.greet()); // Accessing method 'greet'</pre>
+<pre>console.log(person.greet());  // Accessing method 'greet'</pre>
 
 <h4>Adding Methods to an Object:</h4>
 <pre>
@@ -9585,12 +9596,12 @@ car.start = function() {
 <h3>Object Display Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using console.log():</h4>
-<pre>console.log(person); // Output the entire object</pre>
+<pre>console.log(person);  // Output the entire object</pre>
 
 <h4>Stringify with JSON:</h4>
 <pre>
 let carString = JSON.stringify(car);
-console.log(carString); // Output the string representation of the object
+console.log(carString);  // Output the string representation of the object
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex69">69. JS Object Accessors</h2>
@@ -9613,9 +9624,9 @@ let user = {
     this.lastName = parts[1];
   }
 };
-console.log(user.fullName ); // Output: 'John Doe'
-user.fullName = 'Alice Smith'; // Setting fullName using setter
-console.log(user.firstName); // Output: 'Alice'
+console.log(user.fullName );  // Output: 'John Doe'
+user.fullName = 'Alice Smith';  // Setting fullName using setter
+console.log(user.firstName);  // Output: 'Alice'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9630,6 +9641,7 @@ console.log(user.firstName); // Output: 'Alice'
 <h3>Object Constructors Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Constructor Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function Person(name, age) {
   this.name = name;
@@ -9639,7 +9651,7 @@ function Person(name, age) {
   };
 }
 let newPerson = new Person('Bob', 25);
-console.log(newPerson.greet()); // Output: ’Hello, my name is Bob'
+console.log(newPerson.greet());  // Output: 'Hello, my name is Bob'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex71">71. JS Object Prototypes</h2>
@@ -9649,11 +9661,12 @@ console.log(newPerson.greet()); // Output: ’Hello, my name is Bob'
 <h3>Object Prototypes Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding Methods to the Prototype:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 Person.prototype.info = function() {
   return 'Name: ' + this.name + ', Age: ' + this.age;
 };
-console.log(newPerson.info()); // Output: 'Name : Bob, Age : 25'
+console.log(newPerson.info());  // Output: 'Name : Bob, Age : 25'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9668,6 +9681,7 @@ console.log(newPerson.info()); // Output: 'Name : Bob, Age : 25'
 <h3>Object Iterables Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using for ... in Loop:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 for (let key in person) {
   console.log(key + ': ' + person[key]);
@@ -9684,6 +9698,7 @@ for (let key in person) {
 <h3>Object Sets Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Set:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let mySet = new Set();
 mySet.add(1);
@@ -9706,6 +9721,7 @@ mySet.add(3);
 <h3>Object Maps Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Map:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let myMap = new Map();
 myMap.set('keyl', 'valuel');
@@ -9721,6 +9737,7 @@ myMap.set('key2', 'value2');
 <h3>Object Reference Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Referencing an Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let object1 = {name: 'John'};
 let object2 = objectl; // object2 points to the same object as object 1
@@ -9749,20 +9766,23 @@ concept.</p>
 <h3>Function Definitions:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Declaration:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello!';
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Expression:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let greet = function() {
   return 'Hello!';
 };
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arrow Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let greet = () => {
   return 'Hello!';
@@ -9776,14 +9796,15 @@ let greet = () => {
 <h3>Function Parameters Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Single Parameter:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet(name) {
   return 'Hello,' + name + '!';
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Multiple Parameters:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function sum(a, b) {
   return a + b;
@@ -9802,10 +9823,10 @@ function sum(a, b) {
 <h3>Function Invocation Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Calling a Function:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-greet(); // Function call
-let result = sum(5,3); // Function call with arguments
+greet();  // Function call
+let result = sum(5,3);  // Function call with arguments
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex79">79. JS Function Call</h2>
@@ -9816,7 +9837,7 @@ value and arguments provided individually.</p>
 <h3>Function Call Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using call():</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9838,7 +9859,7 @@ value and arguments provided as an array.</p>
 <h3>Function Apply Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using apply():</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9856,7 +9877,7 @@ keyword set to a specified value.</p>
 <h3>Function Bind Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using bind():</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9879,7 +9900,7 @@ where they were defined.</p>
 <h3>Function Closures Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Closure Example:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function outerFunction() {
   let outerVariable = 'I am from the outer function';
@@ -9903,7 +9924,7 @@ and explanations for each concept.</p>
 <h3>Class Intro:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Class Declaration:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class Animal {
   constructor(name, age) {
@@ -9915,9 +9936,9 @@ class Animal {
   }
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating Instances:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let dog = new Animal('Buddy', 3);
 console.log(dog.sound()); // Output: 'Animal sound'
@@ -9936,7 +9957,7 @@ from a superclass.</p>
 <h3>Class Inheritance Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Extending a Class:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class Dog extends Animal {
   constructor(name, age, breed) {
@@ -9948,8 +9969,9 @@ class Dog extends Animal {
   }
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Inherited Methods:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let puppy = new Dog('Max', 1, 'Labrador');
 console.log(puppy.sound()); // Output: 'Woof!'
@@ -9963,7 +9985,7 @@ instances of the class.</p>
 <h3>Class Static Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding a Static Method:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class Calculator {
   static add(a, b) {
@@ -9988,8 +10010,9 @@ immediately.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Callbacks in JavaScript are functions passed as arguments to another function to be 
 executed later.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Callbacks Example:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData(callback) {
   setTimeout(() => {
@@ -10006,8 +10029,9 @@ fetchData(processData); // Output after 2 seconds : 'Data received : Some data'
 <h3>JS Asynchronous</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Asynchronous operations in JavaScript allow non - blocking execution of code.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Asynchronous Example:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log('Start');
 setTimeout(() => {
@@ -10030,7 +10054,7 @@ resolve or reject in the future.</p>
 <h3>Promises Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Promise:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let myPromise = new Promise((resolve, reject) => {
   setTimeout (() => {
@@ -10050,7 +10074,7 @@ using promises.</p>
 <h3>Async / Await Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Async / Await:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   return new Promise((resolve) => {
@@ -10083,8 +10107,9 @@ representing the document as a tree structure.</p>
 <h3>DOM Intro:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing an Element by ID:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10101,9 +10126,11 @@ representing the document as a tree structure.</p>
 <h3>DOM Methods</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>DOM methods provide various ways to manipulate HTML elements.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Element Content:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10124,9 +10151,11 @@ representing the document as a tree structure.</p>
 <h3>DOM Document</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The document object represents the entire HTML document.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Document Properties:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10142,9 +10171,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Elements in the DOM represent HTML tags.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Element Styles:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10166,9 +10197,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM HTML includes properties that deal with the HTML content.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing HTML Attributes:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10185,9 +10218,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Forms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows manipulation of HTML forms.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10212,9 +10247,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM CSS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM CSS allows manipulation of CSS styles.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing CSS Classes:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10231,9 +10268,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Animations</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM supports creating simple animations.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Animating an Element:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10259,13 +10298,14 @@ console.log(document.URL);   // Output: Document URL
   <b><a href="#ex0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Events in the DOM represent interactions by users or by the browser.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Click Event Handling:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10283,9 +10323,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Event Listener</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The addEventListener method is used to attach an event to an element.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Mouseover Event Handling:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10307,9 +10349,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Navigation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows navigation between elements.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Traversing Child Elements:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10331,9 +10375,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Nodes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Nodes are the fundamental building blocks in the DOM.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a New Node:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10356,9 +10402,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Collections</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Collections in the DOM are arrays of HTML elements.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Collection Elements:</h4>
-<h5>html code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10377,8 +10425,11 @@ console.log(document.URL);   // Output: Document URL
 <h3>DOM Node Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Node List Elements:</h4>
-<h5>html code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10409,7 +10460,9 @@ components.</p>
 <h3>JS Window</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The window object is the global object in a browser's JavaScript environment.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Window Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(window.innerHeight);  // Output: Inner height of the window
 console.log(window.innerWidth);  // Output: Inner width of the window
@@ -10418,16 +10471,20 @@ console.log(window.innerWidth);  // Output: Inner width of the window
 <h3>JS Screen</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The screen object represents the screen of a device.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Screen Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-console.log(screen.width );  // Output: Screen width in pixels
+console.log(screen.width);  // Output: Screen width in pixels
 console.log(screen.height);  // Output: Screen height in pixels
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Location</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The location object contains information about the current URL.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Location Information:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(location.href);  // Output: Full URL of the current page
 console.log(location.hostname);  // Output: Hostname of the current URL
@@ -10440,7 +10497,9 @@ console.log(location.hostname);  // Output: Hostname of the current URL
 <h3>JS History</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The history object contains the browsing history of the window.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing History Methods:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 history.back();  // Go back to the previous page
 history.forward();  // Go forward to the next page
@@ -10449,7 +10508,9 @@ history.forward();  // Go forward to the next page
 <h3>JS Navigator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The navigator object contains information about the browser.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Navigator Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(navigator.userAgent);  // Output: User - Agent header of the browser
 console.log(navigator.platform);  // Output: Platform of the browser
@@ -10458,7 +10519,9 @@ console.log(navigator.platform);  // Output: Platform of the browser
 <h3>JS Popup Alert</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Popup alerts in JavaScript display messages to users.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Displaying an Alert:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>alert("This is an alert message");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -10468,13 +10531,17 @@ console.log(navigator.platform);  // Output: Platform of the browser
 <h3>JS Timing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript's timing functions allow scheduling of code execution.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using setTimeout():</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 setTimeout(() =&gt; {
   console.log("Delayed message");
 }, 2000);  // Execute after 2 seconds
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using setInterval():</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 setInterval(() => {
   console.log("Repeated message");
@@ -10484,11 +10551,13 @@ setInterval(() => {
 <h3>JS Cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Cookies in JavaScript store small pieces of information on the client's machine.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Setting a Cookie:</h4>
-<pre>
-document.cookie="username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path=/";
-</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>document.cookie="username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path=/";</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing a Cookie:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let username = document.cookie.split(';')[0].split('=')[1];
 console.log(username);  // Output: 'John Doe'
@@ -10510,9 +10579,11 @@ various functionalities of the browser or device.</p>
 <h3>Web API Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Web APIs enable web developers to access various browser features and functionalities.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing the Web API:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-// Example : Using the Geolocation API
+// Example: Using the Geolocation API
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition((position) => {
     console.log("Latitude:", position.coords.latitude);
@@ -10524,25 +10595,30 @@ if ("geolocation" in navigator) {
 <h3>Web Forms API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Forms API provides methods and properties to manipulate HTML form elements.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document.getElementById("myForm");
 let inputField = form.elements&lbrack;"username"&rbrack;;
+
 console.log(inputField.value);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web History API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web History API allows manipulation of the browser's history.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Browser History:</h4>
-<pre>
-window.history.pushState({page: 1}, "Title", "?page = 1");
-</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>window.history.pushState({page: 1}, "Title", "?page = 1");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Storage API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Storage API provides methods to store data in the browser.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using localstorage:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 localstorage.setItem("key", "value");
 let data = localstorage.getItem("key");
@@ -10556,13 +10632,16 @@ let data = localstorage.getItem("key");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Worker API enables running scripts in the background to handle time - 
 consuming tasks without blocking the UI.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Web Worker:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // worker.js
 self, onmessage = function(event) {
   console.log("Message received from the main script, event.data);
   self.postMessage("Message from worker");
 };
+
 // main.js
 let worker = new Worker("worker.js");
 worker.onmessage = function(event) {
@@ -10574,7 +10653,9 @@ worker.postMessage("Message from main");
 <h3>Web Fetch API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Fetch API provides a way to make HTTP requests.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Making a GET Request:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch("https://api.example.com/data")
   .then((response) => response.json())
@@ -10585,7 +10666,9 @@ fetch("https://api.example.com/data")
 <h3>Web Geolocation API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Geolocation API retrieves geographical information about the user's device.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Getting User's Location:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 navigator.geolocation.getCurrentPosition ((position) => {
   console.log("Latitude:", position.coords.latitude);
@@ -10610,7 +10693,9 @@ asynchronously between a web browser and a server.</p>
 <h3>AJAX Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX allows web pages to update content without reloading the entire page.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Simple AJAX Request:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -10626,7 +10711,9 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data 
 between a web browser and a server.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using XMLHttpRequest:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -10645,7 +10732,9 @@ xhttp.send();
 <h3>AJAX Request</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX requests enable communication between the browser and the server.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sending POST Request:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -10661,7 +10750,9 @@ xhttp.send("name = John&age = 30");
 <h3>AJAX Response</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Handling AJAX responses involves processing data received from the server.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Handling JSON Response:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -10677,7 +10768,9 @@ xhttp.send();
 <h3>AJAX XML File</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can be used to fetch and handle XML files.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Fetching XML File:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -10697,7 +10790,9 @@ xhttp.send();
 <h3>AJAX PHP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can interact with server - side technologies like PHP to exchange data.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Handling AJAX in PHP:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -10708,9 +10803,11 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "process.php", true);
 xhttp.send();
 </pre>
-<h5>php code</h5>
-// process. php
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
+// process. php
 &lt;?php
 echo "Hello from PHP!";
 ?&gt;
@@ -10732,7 +10829,9 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "process.asp", true);
 xhttp.send();
 </pre>
-<h5>asp code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>ASP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!— process.asp --&gt;
 &lt;%
@@ -10747,7 +10846,9 @@ Response.Write("Hello from ASP!")
 <h3>AJAX Database</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>AJAX can be used to interact with databases on the server.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Database Interaction with AJAX:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -10758,7 +10859,9 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "fetch_data.php", true);
 xhttp.send();
 </pre>
-<h5>php code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // fetch-data. php
 &lt;?php
@@ -10785,9 +10888,13 @@ setInterval(() => {
 <h3>AJAX Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Here are more examples demonstrating various AJAX functionalities.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 1:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>// Fetch weather data from an API and display on a webpage</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 2:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>// Fetch user - specific data and update profile information dynamically</pre>
 <p>This comprehensive guide covers AJAX (Asynchronous JavaScript and XML), including an 
 introduction to AJAX, using XMLHttp, making AJAX requests and handling responses, 
@@ -10797,8 +10904,8 @@ each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 3: Dynamic Content Loading</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10830,7 +10937,8 @@ function loadContent() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.html (Sample Content):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;h2&gt;Welcome to Dynamic Content&lt;/h2&gt;
 &lt;p&gt;This content was loaded dynamically using AJAX.&lt;/p&gt;
@@ -10838,9 +10946,11 @@ function loadContent() {
 <p>This example demonstrates a simple 
 button that triggers an AJAX request to load content from an external HTML file and 
 displays it on the webpage without refreshing the entire page.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 4: Form Submission with AJAX</h4>
-<h5>HTML:</h5>
-<h5>html code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10877,7 +10987,8 @@ function submitForm() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>processForm.php (Server-side Processing):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>php code</h5>
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
 if ($_SERVER["REQUEST-METHOD"] == "POST") {
@@ -10906,8 +11017,11 @@ fetch('data.json')
   })
   .catch(error =&gt; console.error('Error:', error));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>data.json(Sample JSON Data):</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "name": "John Doe",
@@ -10927,8 +11041,8 @@ content, form submission without page refresh, and fetching and using JSON data 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 6: Image Gallery with AJAX</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -10965,7 +11079,8 @@ function loadimages() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>images.json (Sample Image Data in JSON Format):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>json code</h5>
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lbrack;
   {
@@ -10985,8 +11100,8 @@ which is fetched asynchronously, and the images are displayed in the gallery.</p
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 7: Autocomplete Search</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -11022,8 +11137,9 @@ function search() {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>search.php (Server-side Script Handling Search):</h4>
-<h5>php code</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
 $searchTerm = $_GET['q'];  // Get search query
@@ -11046,8 +11162,8 @@ asynchronous data fetching and manipulation on a webpage.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 8: Live Data Update</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -11079,7 +11195,8 @@ asynchronous data fetching and manipulation on a webpage.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>live_data.php (Server - side Script Providing Live Data):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>php code</h5>
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
 // Simulate live data update
@@ -11093,8 +11210,8 @@ server - side PHP script (live_data. php ) every 5 seconds and displays it on th
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 9: Infinite Scroll</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -11140,7 +11257,8 @@ window.onscroll = loadMoreContent;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>content.php (Server-side Script Providing Content):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>php code</h5>
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
 $page = $_GET&lbrack;'page'&rbrack;;  // Get page number
@@ -11166,8 +11284,8 @@ AJAX can be used to fetch and display data dynamically without page reloads.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 10: File Upload with Progress Bar</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -11214,7 +11332,8 @@ function uploadFile() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>upload.php (Server-side Script for File Upload):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>php code</h5>
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
 if ($_SERVER['REQUEST-METHOD'] === 'POST' && isset($_FILES['file'])) {
@@ -11235,8 +11354,8 @@ the upload progress.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 11: Displaying Time Dynamically</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<h5>html code</h5>
+<h5>HTML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -11268,7 +11387,8 @@ function displayTime() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>getTime.php (Server-side Script to Get Current Time):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>php code</h5>
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
 echo date ('h: i: s A');  // Return current time
@@ -11293,9 +11413,11 @@ commonly used to transmit data between a server and a web application.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON serves as a language - independent data format derived from JavaScript object 
 literals. It's widely used for data exchange between web servers and web clients.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Data:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "name": "John Doe",
@@ -11319,9 +11441,11 @@ literals. It's widely used for data exchange between web servers and web clients
 <p>JSON syntax is derived from JavaScript object notation, consisting of key-value 
 pairs enclosed in curly braces {}, and values can be strings, numbers, objects, arrays, 
 booleans, or null.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Syntax:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "keyl": "valuel",
@@ -11339,9 +11463,11 @@ booleans, or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more 
 lightweight and easier to read and parse than XML.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example Comparison between JSON and XML:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // JSON
 {
@@ -11350,8 +11476,9 @@ lightweight and easier to read and parse than XML.</p>
   "city": "New York"
 }
 </pre>
-
-<h5>xml code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>XML code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!-- XML --&gt;
 &lt;user&gt;
@@ -11368,9 +11495,11 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Data Types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Different Data Types in JSON:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "string": "Hello, World!",
@@ -11385,8 +11514,9 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Parse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Parsing:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonString = '{"name": "Alice", "age": 28}';
 let jsonObj = JSON.parse(jsonString);
@@ -11397,8 +11527,9 @@ console.log(jsonObj.name);  // Output: Alice
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a 
 JSON string.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Stringification:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let obj = {name: "Bob ", age: 30};
 let jsonString = JSON.stringify(obj);
@@ -11413,9 +11544,11 @@ console.log(jsonString);  // Output: {"name": "Bob", "age": 30}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON objects contain key - value pairs enclosed in curly braces {}. Keys must be 
 strings, and values can be of any JSON data type.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Object:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "name": "Sarah",
@@ -11428,9 +11561,11 @@ strings, and values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
 be of any JSON data type.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Array:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 ["apple", "banana", "orange"]
 </pre>
@@ -11439,9 +11574,11 @@ be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON is commonly used to transfer data between a server and a web client in web 
 development. Servers often provide data in JSON format through APIs.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Data from a Server:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Received from a server API endpoint
 {
@@ -11459,9 +11596,11 @@ development. Servers often provide data in JSON format through APIs.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode() and json.decode() 
 functions respectively, to convert data to and from JSON format.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Encoding and Decoding JSON in PHP:</h4>
-<h5>php code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>PHP code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Encoding PHP array to JSON
 $data = array("name " => " Peter ", " age " => 28 );
@@ -11475,8 +11614,10 @@ $decodedData = json.decode($jsonString, true);
 <h3>JSON HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Using JSON Data in HTML:</h4>
-<h5>html code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
@@ -11503,8 +11644,9 @@ users.forEach(user =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different 
 domain in web development to bypass the same - origin policy limitations.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSONP Request:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function handleData(data) {
   console.log(data);
@@ -11655,8 +11797,7 @@ let employees = [
   {"name": "Bob", "department":" HR"}
 ];
 let hrEmployees = employees.filter(employee => employee.department === "HR");
-  console.log(hrEmployees);  // Output: [{"name": "John", "department": "HR"}, {"name": "Bob",
-"department": "HR"}]
+  console.log(hrEmployees);  // Output: [{"name": "John", "department": "HR"}, {"name": "Bob", "department": "HR"}]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
@@ -11787,7 +11928,8 @@ literals. It's widely used for data exchange between web servers and web clients
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Example of JSON Data:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>json code</h5>
+<h5>JSON code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "name": "John Doe",
@@ -11810,7 +11952,7 @@ or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Syntax:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>json code</h5>
+<h5>JSON code</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>{
   "keyl valuel",
@@ -11831,9 +11973,11 @@ or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON and XML are both used for data interchange, but JSON is generally more 
 lightweight and easier to read and parse than XML.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example Comparison between JSON and XML:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // JSON
 {
@@ -11843,7 +11987,7 @@ lightweight and easier to read and parse than XML.</p>
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>xml code</h5>
+<h5>XML code:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!-- XML --&gt;
@@ -11857,9 +12001,11 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Data Types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Different Data Types in JSON:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "string":"Hello, World !",
@@ -11878,8 +12024,9 @@ lightweight and easier to read and parse than XML.</p>
 <h3>JSON Parse</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.parse() is a method in JavaScript used to parse JSON data into a JavaScript object.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Parsing:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonString = '{"name":"Alice", "age": 28}';
 let jsonObj = JSON.parse(jsonString);
@@ -11890,11 +12037,12 @@ console.log(jsonObj.name);  // Output: Alice
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON.stringify() is a method in JavaScript used to convert a JavaScript object into a 
 JSON string.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Stringification:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {name Bob ", age : 30};
-let jsonString = JSON.stringify ( obj);
+let jsonString = JSON.stringify(obj);
 console.log(jsonString);  // Output: {" name Bob "," age 30}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11902,9 +12050,11 @@ console.log(jsonString);  // Output: {" name Bob "," age 30}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON objects contain key - value pairs enclosed in curly braces{}. Keys must be 
 strings, and values can be of any JSON data type.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Object:</h4>
-<h5>json code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 {
   "name":"Sarah",
@@ -11921,12 +12071,12 @@ strings, and values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
 be of any JSON data type.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Array:</h4>
-<h5>json code</h5>
-<pre>
-&lbrack;"apple","banana","orange"&rbrack;
-</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>JSON code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<pre>&lbrack;"apple","banana","orange"&rbrack;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Server</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11935,7 +12085,8 @@ development. Servers often provide data in JSON format through APIs.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Data from a Server:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>json code</h5>
+<h5>JSON code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Received from a server API endpoint
 {
@@ -11949,9 +12100,11 @@ development. Servers often provide data in JSON format through APIs.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode() and json.decode() 
 functions respectively, to convert data to and from JSON format.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Encoding and Decoding JSON in PHP:</h4>
-<h5>php code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>PHP code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Encoding PHP array to JSON
 $data = array("name" => "Peter", "age" => 28 );
@@ -11968,9 +12121,11 @@ $decodedData = json.decode($jsonString, true);
 <h3>JSON HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Using JSON Data in HTML:</h4>
-<h5>html code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>HTML code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
 &lt;script&gt;
@@ -11992,8 +12147,9 @@ users.forEach(user =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different 
 domain in web development to bypass the same - origin policy limitations.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSONP Request:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function handleData(data) {
   console.log(data);
@@ -12393,8 +12549,9 @@ to choose the right tool for the job and build robust, interactive web applicati
 let element = document.getElementById("myElement");
 element.style.color = "blue";
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$("#myElement").css("color ", "blue");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Selecting Multiple Elements by Class:</h4>
@@ -12405,8 +12562,9 @@ for (let i = 0; i < elements.length; i ++) {
   elements[i].style.fontWeight = "bold";
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$(".myClass").css("font - weight", "bold");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Adding Event Listeners:</h4>
@@ -12416,8 +12574,9 @@ document.getElementById("myButton").addEventListener("click", function() {
   alert("Button clicked!");
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $("#myButton").on("click", function() {
   alert("Button clicked!");
@@ -12431,8 +12590,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // Code to execute when DOM is ready
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $(document).ready(function() {
   // Code to execute when DOM is ready
@@ -12446,8 +12606,9 @@ let newElement = document.createElement("div");
 newElement.textContent = "New Content";
 document.body.appendChild(newElement);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$("body").append("&lt;div&gt;New Content&lt;/div&gt;");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Removing an Element:</h4>
@@ -12456,15 +12617,17 @@ document.body.appendChild(newElement);
 let elementToRemove = document.getElementById("toBeRemoved");
 elementToRemove.parentNode.removechild(elementToRemove);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$("#toBeRemoved").remove();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Manipulating CSS Class:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("myDiv").classList.add("active");</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $("#myDiv").addClass("active");
 </pre>
@@ -12472,15 +12635,17 @@ $("#myDiv").addClass("active");
 <h4>8. Changing Text Content:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("mySpan").textContent = "Updated Text";</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$("#mySpan").text("Updated Text");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Hiding an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("toHide").style.display = "none";</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$("#toHide").hide();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Fading In an Element:</h4>
@@ -12491,8 +12656,9 @@ elementToFade.style.opacity = 0;
 elementToFade.style.transition = "opacity Is";
 elementToFade.style.opacity = 1;
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$ (" #toFade ").fadein ( 1000 );</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. AJAX GET Request:</h4>
@@ -12507,8 +12673,9 @@ xhr.onreadystatechange = function() {
 xhr.open("GET",
 xhr.send();
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $ .get("data.txt"
 "data.txt",true);
@@ -12526,8 +12693,9 @@ xhr.open("POST", "saveData", true);
 xhr.setRequestHeader("Content - Type", || application / json");
 xhr.send(JSON.stringify({name:"John", age: 30}));
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $ .ajax ({
 url:" saveData",
@@ -12543,29 +12711,33 @@ url:" saveData",
 <h4>13. Getting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let linkHref = document.getElementById("myLink").getAttribute("href");</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let linkHref = $("#myLink").attr("href");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Setting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("myImage").setAttribute("src", "new_image.jpg");</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$ ("#myImage").attr("src", "newimage.jpg");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let inputValue = document.getElementById("myInput").value;</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let inputValue = $("#myInput").val();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Checking Checkbox State:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let isChecked = document.getElementById("myCheckbox").checked;</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let isChecked = $("#myCheckbox").prop("checked");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Iterating Over NodeList:</h4>
@@ -12576,8 +12748,9 @@ elements.forEach(function(element) {
   console.log(element.textContent);
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $ (".myClass").each(function() {
   console.log($(this).text());
@@ -12593,8 +12766,9 @@ document.getElementById("myForm").addEventListener("submit"  function(event) {
   // Process form data
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $("#myForm").submit(function(event) {
   event.preventDefault();
@@ -12610,8 +12784,9 @@ let element = document.getElementById("myElement");
 element.style.transition = " transform 2s 11";
 element.style.transform = " rotate(360deg)";
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>$ (" #myElement").animate({rotate :" 360deg "}, 2000);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Changing Background Color on Click:</h4>
@@ -12622,8 +12797,9 @@ myDiv.addEventListener("click", function() {
   this.style.backgroundcolor = "red";
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>jQuery:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 $("#myDiv").click (function() {
   $(this).css("background-color ", "red");
@@ -12856,6 +13032,7 @@ const myChart = new Chart(ctx, {
 <h4>Google Charts Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Pie Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load ('current', {packages: ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
@@ -12876,7 +13053,9 @@ function drawChart() {
 const chart = new google.visualization.PieChart(document.getElementById('donutchart'));
 chart.draw(data, options);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Area Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load('current', {packages : ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -12900,6 +13079,7 @@ chart.draw(data, options);
 <h4>D3.js Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Create SVG Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
 .append ('svg')
@@ -12911,8 +13091,9 @@ svg.append('circle')
 .attr ('r', 40)
 .attr ('fill; 'blue');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Create SVG Rectangle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
 .append('svg')
@@ -12929,13 +13110,16 @@ svg.append('rect*)
 <h4>Canvas Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Draw a Rectangle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 ctx.fillstyle = 'blue';
 ctx.fillRect(10,10,100,50);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Draw a Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
@@ -12952,7 +13136,9 @@ ctx.fill();
 const data = [{x: [1, 2, 3, 4], y: [10, 15, 13, 18], type: 'scatter'}];
 Plotly.newPlot('myDiv', data);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a Bar Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = [{x: ['A', 'B', 'C'], y: [10, 20, 15], type: 'bar'}];
 Plotly.newPlot('myDiv', data);
@@ -12961,6 +13147,7 @@ Plotly.newPlot('myDiv', data);
 <h4>Chart.js Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Create a Bar Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document.getElementById ('myChart').getContext ('2d');
 const myChart = new Chart (ctx, {
@@ -12980,7 +13167,9 @@ const myChart = new Chart (ctx, {
 }
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Create a Line Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
@@ -12999,6 +13188,7 @@ const myChart = new Chart(ctx, {
 <h4>Google Charts Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Create a Pie Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load('current', {packages: ['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -13019,7 +13209,9 @@ function drawChart() {
   chart.draw(data, options);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Create an Area Chart:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 google.charts.load('current', {packages:['corechart']});
 google.charts.setOnLoadCallback(drawChart);
@@ -13044,6 +13236,7 @@ chart.draw(data, options);
 <h4>D3.js Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Create an SVG Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
   .append('svg')
@@ -13056,7 +13249,9 @@ svg.append('circle')
   .attr('r', 40)
   .attr('fill', 'blue');
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Create an SVG Rectangle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
   .append('svg')
@@ -13083,13 +13278,16 @@ representations in web applications.</p>
 <h3>Basic Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Convert Celsius to Fahrenheit:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function celsiusToFahrenheit(Celsius) {
   return(Celsius * 9 / 5) + 32;
 }
 let tempInFahrenheit = celsiusToFahrenheit(25);  // Output: 77
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Calculate Area of a Circle:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateCircleArea (radius ) {
   return Math.PI * radius * radius;
@@ -13100,13 +13298,16 @@ let area = calculateCircleArea(5);  // Output: ~78.54
 <h4>String Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Reverse a String:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
 let reversed = reverseString('hello'); // Output: 'olleh'
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Check for Palindrome:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function isPalindrome(str) {
   return str === str.split('').reverse().join('');
@@ -13117,11 +13318,14 @@ function isPalindrome(str) {
 <h4>Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Find Maximum Number in Array:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [ 5, 8, 3,12, 6 ];
 letmaxNumber = Math.max(... numbers );  // Output: 12
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Sort Array of Objects by Property:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let products = [
   {name: 'Laptop', price: 800},
@@ -13134,11 +13338,14 @@ products.sort((a, b) => a.price - b.price);
 <h4>Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Higher - Order Function - Map:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3];
 let doubled = numbers.map(num => num * 2);  // Output: [2, 4, 6]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (function() {
   console.log('IIFE executed.');
@@ -13148,11 +13355,14 @@ let doubled = numbers.map(num => num * 2);  // Output: [2, 4, 6]
 <h4>Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Object Destructuring:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {name: 'Alice', age: 30};
 let {name, age} = person;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Merge Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobjl = {a: l,b: 2};
 letobj2 = {c: 3,d: 4};
@@ -13169,7 +13379,9 @@ for (let color of colors) {
   console.log(color);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. While Loop to Generate Random Numbers:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let randomNums = [];
 while (randomNums.length &lt; 5) {
@@ -13180,6 +13392,7 @@ while (randomNums.length &lt; 5) {
 <h4>Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Try... Catch for Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 try {
   // Code that may throw an error
@@ -13188,7 +13401,9 @@ try {
   console.error(’Error occurred:', error.message)
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Custom Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function throwError() {
   throw new Error('Custom error message’);
@@ -13203,6 +13418,7 @@ try {
 <h4>Asynchronous JavaScript:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Promise Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
   return new Promise ((resolve, reject) => {
@@ -13214,7 +13430,9 @@ function fetchData() {
 };
 fetchData().then(data => console.log(data));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Async / Await Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   let data = await fetch('https://api.example.com/data');
@@ -13227,12 +13445,15 @@ fetchData().then(data => console.log(data));
 <h4>DOM Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Create Element and Append to DOM:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let newElement = document.createElement('div');
 newElement.textContent = 'New Element';
 document.body.appendchild(newElement);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>18. Add Event Listener to Button Click:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let button = document.getElementById('myButton');
 button.addEventListener('click', () => {
@@ -13243,6 +13464,7 @@ button.addEventListener('click', () => {
 <h4>Regular Expressions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Regular Expression Test:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let pattern =/\d+/;
 let isMatch = pattern.test('Hello 123');  // Output: true
@@ -13264,6 +13486,7 @@ operations, DOM manipulations, and regular expressions.</p>
 <h4>Advanced Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Closure Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function outerFunction(outerValue) {
   return function(innerValue) {
@@ -13273,7 +13496,9 @@ function outerFunction(outerValue) {
   let result = addFive(3);  // Output: 8
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Currying Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function multiply(a) {
   return function(b) {
@@ -13287,11 +13512,14 @@ let product = multiplyByTwo(5);  // Output: 10
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Reduce to Sum Array:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3, 4, 5];
 let sum = numbers.reduce((acc, curr) => acc + curr, 0);  // Output: 15
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Filter and Map Together:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3, 4, 5];
 let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); 
@@ -13301,11 +13529,14 @@ let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object Destructuring with Default Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let person = {name: 'Alice'};
 let {name, age = 30} = person;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Computed Property Names:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let key = 'dynamicKey';
 let obj = {[key]: 'value'};  // {dynamicKey: 'value'}
@@ -13314,13 +13545,16 @@ let obj = {[key]: 'value'};  // {dynamicKey: 'value'}
 <h4>Advanced Loops and Iterations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. For... In Loop for Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let obj = {a: 1,b: 2,c: 3};
 for (let key in obj) {
   console.log(key, obj [key]);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using For... Of with Iterables:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let iterable = [’a', 'b', 'c'];
 for (let value of iterable ) {
@@ -13331,6 +13565,7 @@ for (let value of iterable ) {
 <h4>Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Promise Chaining:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function asyncFunction() {
   return new Promise((resolve, reject) => {
@@ -13346,7 +13581,9 @@ asyncFunction()
   })
   .then (result => console.log(result));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Async / Await with Error Handling</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
   return new Promise((resolve, reject) => {
@@ -13368,6 +13605,7 @@ getData();
 <h4>Advanced DOM Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. Creating and Appending Multiple Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let fragment = document.createDocumentFragment();
 for (let i = 0; i < 5; i ++) {
@@ -13377,7 +13615,9 @@ for (let i = 0; i < 5; i ++) {
   document.body.appendchild(fragment);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Event Delegation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document.addEventListener('click', function(event) {
   if (event.target.matches('button')) {
@@ -13389,11 +13629,14 @@ document.addEventListener('click', function(event) {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>13. Template Literals:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let name = 'Alice';
 let message = 'Hello, ${name}! *;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Spread Operator:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let arr = [1, 2, 3];
 let newArr = [... arr, 4,5];  // &lbrack;1, 2, 3, 4, 5&rbrack;
@@ -13402,6 +13645,7 @@ let newArr = [... arr, 4,5];  // &lbrack;1, 2, 3, 4, 5&rbrack;
 <h4>Error Handling and Regular Expressions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Throwing Custom Errors:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function validateNumber(num) {
   if(typeofnum !== 'number') {
@@ -13413,7 +13657,9 @@ function validateNumber(num) {
   console.error(error.message);
   }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Regular Expression to Validate Email:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let emailPattern = / A [ A\s@ ]+ @ [ A\s@ ]+ \ .[ A\s@ ]+ $ /;
 let isValidEmail = emailPattern.test('test@example.com');  // Output: true
@@ -13430,11 +13676,14 @@ manipulation, and newer ES6 + features.</p>
 <h4>Advanced Functions and Functionality:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Higher - Order Function - Filter:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [1, 2, 3, 4, 5];
 let evenNumbers = numbers.filter(num => num % 2 === 0);  // Output: &lbrack;2,4&rbrack;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Invoked Arrow Function Expression (IIAFE):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (()=>{
   console.log('IIAFE executed.');
@@ -13444,11 +13693,14 @@ let evenNumbers = numbers.filter(num => num % 2 === 0);  // Output: &lbrack;2,4&
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using FlatMap:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letarr =[[1,2], [3,4], [5,6]];
 let flatArray = arr.flatMap(innerArr => innerArr.map(item => item * 2));  // Output: [2,4,6,8,10,12]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let nestedArrays =[[1,2], [3,4], [5,6]];
 let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []);  // Output: [1, 2, 3, 4, 5, 6]
@@ -13457,6 +13709,7 @@ let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []);  
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object Sealing and Freezing:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let obj = {name: 'Alice'};
 Object.seal(obj);
@@ -13465,7 +13718,9 @@ let frozenObj = {name: 'Bob'};
 Object.freeze(frozenObj);
 frozenObj.age = 25;  // This change won't affect a frozen object
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Optional Chaining:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let user = {
   name: 'Alice',
@@ -13480,6 +13735,7 @@ let city = user?.address?.city;  // Output: 'New York'
 <h4>Advanced Loops and Iterations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. For ... Await Loop for Asynchronous Operations:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function asyncOperation(value) {
   return new Promise(resolve => {
@@ -13495,12 +13751,15 @@ async function executeAsyncOperations() {
 }
 executeAsyncOperations();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using Array.from with Mapping:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let newArray = Array.from ({length: 5}, (index) => index * 2 );  // Output: &lbrack; 0, 2, 4, 6, 8 &rbrack;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Using Finally Block:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function tryCatchFinally() {
   try {
@@ -13514,7 +13773,9 @@ function tryCatchFinally() {
 }
 tryCatchFinally();
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Custom Error Class:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 class CustomError extends Error {
   constructor(message) {
@@ -13536,6 +13797,7 @@ new features like optional chaining and async / await.</p>
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Object.define Property for Property Definition</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letobj = {};
 Object.defineProperty(obj, 'fullName', {
@@ -13544,7 +13806,9 @@ Object.defineProperty(obj, 'fullName', {
   configurable: true
 });
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Object.set PrototypeOf for Setting Prototype:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let animal = {
   makeSound() {
@@ -13559,11 +13823,14 @@ dog.makeSound();  // Output: 'Animal sound'
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Set to Get Unique Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers =[1, 2, 2, 3, 4, 4, 5];
 let uniqueNumbers = [... new Set(numbers)];  // Output: [ 1, 2, 3, 4, 5 ]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array.find to Get First Matching Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let users = [
   {id: l, name: 'Alice'},
@@ -13576,6 +13843,7 @@ let user = users.find(user => user.id === 2);  // Output: {id: 2, name: 'Bob'}
 <h4>Advanced Functionality:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Generator Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function * generatorFunction() {
   yield 1;
@@ -13586,7 +13854,9 @@ let generator = generatorFunction();
 console.log(generator.next().value);  // Output: 1
 console.log(generator.next().value);  // Output: 2
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Async Generator Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function * asyncGenerator() {
   yield 'First';
@@ -13621,6 +13891,7 @@ Promise.all([promise1, promise2])
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Destructuring Nested Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let user = {
   id: 1,
@@ -13631,7 +13902,9 @@ let user = {
 };
 let {details : {name, age}} = user;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. BigInt Data Type:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const bigNumber = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1);
 // BigInt:
@@ -13649,6 +13922,7 @@ and ES6 + features like destructuring and BigInt datatype.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Memoization using Closure:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function memoize (fn) {
   const cache = {};
@@ -13670,7 +13944,9 @@ function factorial(n) {
 }<br>
 const memoizedFactorial = memoize(factorial);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Composition:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const add = x => x + 5;
 const multiply = x => x * 2;
@@ -13681,11 +13957,14 @@ const addAndMultiply = compose(multiply, add);
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Flat to Flatten Nested Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let nestedArr = [1, [2, [3, 4], 5], 6];
 let flattenedArr = nestedArr.flat(Infinity);  // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Some and Every Methods:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = [2, 4, 6, 7, 8];
 let allEven = numbers.every(num => num % 2 === 0);  // Output: false
@@ -13695,11 +13974,14 @@ let hasOdd = numbers.some(num => num % 2 !== 0);  // Output: true
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object.fromEntries Method:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let entries = [['name', 'Alice'], ['age', 30]];
 letobj = Object.fromEntries(entries);  // Output: {name: 'Alice', age: 30}
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.getOwnPropertyDescriptors:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {name : ’Alice'};
 const descriptors = Object.getOwnPropertyDescriptors (obj);
@@ -13708,6 +13990,7 @@ const descriptors = Object.getOwnPropertyDescriptors (obj);
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.race for Fastest Response:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData(url, timeout) {
   return Promise.race([
@@ -13716,7 +13999,9 @@ function fetchData(url, timeout) {
   ]);
 }
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async / Await with Promise.allSettled:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   const promises = [
@@ -13731,6 +14016,7 @@ async function fetchData() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining with Nullish Coalescing:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const data = {
   user: {
@@ -13741,7 +14027,9 @@ const data = {
 const userName = data?.user?.name ?? 'Unknown';  // Output: Alice'
 const userAge = data?.user?.age ?? 25;  // Output: 25
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Array Buffer and Typed Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const buffer = new ArrayBuffer(16);
 const intArray = new Int32Array(buffer);
@@ -13759,6 +14047,7 @@ features like optional chaining and array buffer with typed arrays.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Bind Method:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {
   x: 42,
@@ -13770,7 +14059,9 @@ const unboundGetX = obj.getX;
 const boundGetX = unboundGetX.bind(obj);
 console.log(boundGetX());  // Output: 42
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Resolved Promises:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const immediatePromise = Promise.resolve('Immediate resolution');
 immediatePromise.then(result => console.log(result));  // Output: 'Immediate resolution'
@@ -13779,11 +14070,14 @@ immediatePromise.then(result => console.log(result));  // Output: 'Immediate res
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.findIndex:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [5,12,8,130,44];
 const index = array.findIndex(element => element > 10);  // Output: 1 (index of first element > 10)
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.fill:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [1, 2, 3, 4, 5];
 array.fill(0, 2, 4);  // Fills array from index 2 to index 4 with value 0
@@ -13792,11 +14086,14 @@ array.fill(0, 2, 4);  // Fills array from index 2 to index 4 with value 0
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.entries:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {foo: 'bar', baz: 42};
 const entries = Object.entries(obj);  // Output: [['foo', 'bar'], ['baz', 42]]
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.preventExtensions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {prop: 'value'};
 Object.preventExtensions(obj);
@@ -13806,6 +14103,7 @@ obj.newProp = 10;  // Cannot add new properties to obj
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.allSettled for All Promise States:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = &lbrack;
   Promise.resolve('Resolved'),
@@ -13815,7 +14113,9 @@ const promises = &lbrack;
 Promise.allSettled(promises)
   .then(results => console.log(results));
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Rejected Promise:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function throwError() {
   throw new Error('Error thrown from async function');
@@ -13826,11 +14126,14 @@ throwError().catch(error => console.error(error.message));  // Output: 'Error th
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Numeric Separators for Readability:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const billion = 1_000_000_000;
 const binary = Ob1010_0001;
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Promise.finally Method:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 Promise.resolve('Success')
   .finally(() => console.log('Finally block executed'))
@@ -13848,6 +14151,7 @@ features like numeric separators and Promise.finally method.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Caching using Memoization:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const memoize = (fn) => {
   const cache = {};
@@ -13864,8 +14168,9 @@ const memoizedSum = memoize(sum);<br>
 console.log(memoizedSum(2, 3 ));  // Output: Calculating sum ... 5
 console.log(memoizedSum(2, 3 ));  // Output: 5 ( Retrieved from cache )
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Throttling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const throttle = (func, limit) => {
   let inThrottle;
@@ -13888,12 +14193,14 @@ const throttled = throttle(throttledFunc, 3000);
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.from with Mapping and Filtering:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [1, 2, 3, 4, 5, 6];
 const new Array = Array.from(numbers, x => x * 2 ).filter (x => x > 5);  // Output: [6, 8, 10, 12]
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.reduceRight:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [1, 2, 3, 4];
 const sum = array.reduceRight((acc, curr) => acc + curr, 0);  // Output: 10
@@ -13902,6 +14209,7 @@ const sum = array.reduceRight((acc, curr) => acc + curr, 0);  // Output: 10
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object.fromEntries with Map:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const entries = new Map([
   ['name', 'Alice'],
@@ -13909,8 +14217,9 @@ const entries = new Map([
 ]);
 const obj = Object.fromEntries(entries);  // Output: {name: 'Alice', age: 30}
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object. seal and Object. isSealed:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {name: 'Alice'};
 Object.seal(obj);
@@ -13920,6 +14229,7 @@ console.log(Object.isSealed(obj));  // Output: true
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.any for the First Fulfilled Promise:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
   Promise.reject('Rejected1'),
@@ -13929,8 +14239,9 @@ const promises = [
 Promise.any(promises)
   .then(result => console.log(result));  // Output: 'Resolved2'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Using for ... await... of:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function processitems(items) {
   for await(let item of items) {
@@ -13942,14 +14253,16 @@ async function processitems(items) {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Dynamic Import for Modules:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function loadModule() {
   const module = await import('./module.js*);
   module.doSomething();
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Nullish Coalescing Operator:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const x = null;
 const y = x??'default value';  // Output: 'default value'
@@ -13966,13 +14279,15 @@ features like dynamic import and nullish coalescing operator.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Partial Application of Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const multiply = (a, b) => a * b;
 const partialMultiplyByTwo = multiply.bind(null, 2);
 console.log(partialMultiplyByTwo(5));  // Output: 10
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Debouncing Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const debounce = (func, delay) => {
   let timeout;
@@ -13992,12 +14307,14 @@ const debouncedInputHandler = debounce(handleInput, 300);
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.flat to Flatten Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const nestedArray = [1, [2, [3]], 4, [5]];
 const flatArray = nestedArray.flat(Infinity);  // Output: [ 1, 2, 3, 4, 5 ]
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.slice to Clone Arrays:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const originalArray = [1, 2, 3, 4];
 const clonedArray = originalArray.slice();  // Clones the originalArray
@@ -14006,12 +14323,14 @@ const clonedArray = originalArray.slice();  // Clones the originalArray
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.keys with Mapping:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 constobj = {a: l,b: 2,c: 3};
 const mappedObj = Object.fromEntries(Object.keys(obj).map(key => [key, obj[key] * 2]));
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.is for Strict Equality Comparison:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(Object.is(5, 5));  // Output: true
 console.log(Object.is(5, '5'));  // Output: false
@@ -14020,6 +14339,7 @@ console.log(Object.is(5, '5'));  // Output: false
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.allSettled with Optional Chaining:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promises = [
   Promise.resolve({name: 'Alice', age: 30}),
@@ -14028,8 +14348,9 @@ const promises = [
 ];
 const results = await Promise.allSettled(promises);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Generator Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function * asyncGenerator() {
   yield 'First';
@@ -14046,13 +14367,15 @@ async function * asyncGenerator() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining for Nested Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const user = {address: {city: 'New York'}};
 const city = user.address?.city;  // Output: 'New York'
 const zipCode = user.address?.zipCode?? 'Not available';  // Output: 'Not available'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. BigInt for Large Integer Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const bigNumber = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1);  // BigInt: 9007199254740992n + 1n
 </pre>
@@ -14064,13 +14387,15 @@ features like optional chaining and BigInt.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Currying Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const multiply = (a) => (b) => a * b;
 const multiplyByTwo = multiply(2);
 console.log(multiplyByTwo(5));  // Output: 10
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function Memoization Using Closures:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const memoize = (func) => {
   const cache = {};
@@ -14091,12 +14416,14 @@ console.log(memoizedSum(2, 3));  // Output: 5 (Retrieved from cache)
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.reduce with Initial Value:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [1, 2, 3, 4, 5];
 const sum = array.reduce((acc, curr) => acc + curr, 0);  // Output: 15
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array.findIndex with Custom Predicate:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [10, 20, 30, 40, 50];
 const index = numbers.findIndex(num => num > 25);  // Output: 2 (Index of first element > 25)
@@ -14105,13 +14432,15 @@ const index = numbers.findIndex(num => num > 25);  // Output: 2 (Index of first 
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object.entries with Object.fromEntries:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {name: 'Alice', age: 30};
 const entries = Object.entries(obj);  // Output: [['name', 'Alice'], ['age', 30]]
 const reconstructedObj = Object.fromEntries(entries);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.freeze for Immutable Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {prop: 'value'};
 Object.freeze(obj);
@@ -14121,14 +14450,16 @@ obj.prop = 'newValue';  // Assignment not allowed in a frozen object
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.resolve and Promise.reject:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const resolvedPromise = Promise.resolve('Resolved');
 const rejectedPromise = Promise.reject('Rejected');
 resolvedPromise.then(result => console.log(result));  // Output: 'Resolved'
 rejectedPromise.catch(error => console.error(error));  // Output: 'Rejected'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Resolved Promise:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function returnResolved() {
   return 'Resolved from async function';
@@ -14138,13 +14469,14 @@ async function returnResolved() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Array Destructuring:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const [ first, second, ... rest ] = [ 1, 2, 3,4, 5 ];
 console.log(first, second, rest);  // Output: 12 [ 3,4, 5 ]
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Rest Parameters in Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const sum = (... args) => args.reduce((acc, curr) => acc + curr, 0);
 console.log(sum(1, 2, 3, 4, 5));  // Output: 15
@@ -14155,6 +14487,7 @@ manipulations, object methods, promises and async / await functionalities.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Composition with Multiple Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const add = (x, y) => x + y;
 const multiply = (x, y) => x * y;
@@ -14162,8 +14495,9 @@ const compose = (... funcs) => funcs.reduce((f, g) => (... args) => f(g(... args
 const addAndMultiply = compose(multiply, add);
 console.log(addAndMultiply(3, 4));  // Output :21(3+4*3)
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Using Function.toString() to Get Function Source Code:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   console.log('Hello!');
@@ -14175,13 +14509,15 @@ console.log(functionsource);  // Output:" function greet() {console.log('Hello!'
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Array.flatMap for Flattening and Mapping:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const arr = [1, 2, 3];
 const mappedAndFlattened = arr.flatMap(x => [x * 2, x * 3]);
 console.log(mappedAndFlattened);  // Output: [2, 3, 4, 6, 6, 9]
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.some with Custom Predicate:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [5, 10, 15, 20];
 const isEvenPresent = numbers.some(num => num % 2 === 0);  // Output: true
@@ -14190,12 +14526,14 @@ const isEvenPresent = numbers.some(num => num % 2 === 0);  // Output: true
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.keys to Get Object's Own Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {a: 1,b: 2,c: 3);
 const keys = Object.keys(obj);  // Output: ['a', 'b', 'c']
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.setPrototypeOf for Dynamic Prototype Setting:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const protoObj = {
   greet() {
@@ -14210,6 +14548,7 @@ newObj.greet();  // Output: 'Greetings!'
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.race to Get Fastest Resolved Promise:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promise1 = new Promise((resolve) => setTimeout(resolve, 1000, 'First'));
 const promise2 = new Promise((resolve) => setTimeout(resolve, 500, 'Second'));<br>
@@ -14217,8 +14556,9 @@ Promise.race([promise1, promise2]).then((value) => {
   console.log(value);  // Output: 'Second' (Resolved earlier)
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Using try... catch for Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   try {
@@ -14234,19 +14574,20 @@ async function fetchData() {
 <h4>ES6 + Features:<//h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Template Literals for Dynamic Strings:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const name = 'Alice';
 const age = 30;
 console.log(`My name is ${name} and I'm ${age} years old.`);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Array Spread Operator for Concatenation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const arrl = [1, 2, 3];
 const arr2 = [4, 5, 6];
 const combined = [...arrl, ...arr2];  // Output: [1, 2, 3, 4, 5, 6]
 </pre>
-
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
 </div>
@@ -14258,13 +14599,15 @@ features like template literals and array spread operator.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Returning Functions - Higher-Order Functions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const add = (x) => (y) => x + y;
 const addTwo = add(2);
 console.log(addTwo(3));  // Output: 5
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function That Delays Execution:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const delayExecution = (time) => {
   return new Promise ((resolve) => {
@@ -14277,12 +14620,14 @@ delayExecution(2000).then(() => console.log('Delayed execution'));  // Output af
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Array.every with Custom Predicate:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [10, 20, 30];
 const allGreaterThanFive = numbers.every(num => num > 5);  // Output: true
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.reverse to Reverse an Array:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = [1, 2, 3, 4, 5];
 const reversedArray = array.slice().reverse();  // Output: [5, 4, 3, 2, 1]
@@ -14291,12 +14636,14 @@ const reversedArray = array.slice().reverse();  // Output: [5, 4, 3, 2, 1]
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Object.fromEntries to Convert Array to Object:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const entries = [[’a',1],['b',2],['c',3]];
 const obj = Object.fromEntries(entries);  // Output: {a: 1, b: 2, c: 3}
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.assign for Merging Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 constobjl = {a: l,b: 2};
 constobj2 = {b: 3,c: 4};
@@ -14306,11 +14653,13 @@ const mergedObj = Object.assign({}, objl, obj2);  // Output: {a: l,b: 3,c: 4}
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.resolve with Then Method:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 Promise.resolve('Resolved value').then(value => console.log(value));  // Output: 'Resolved value'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function with Promise.all for Parallel Execution:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   const [datal, data2] = await Promise.all([
@@ -14324,6 +14673,7 @@ async function fetchData() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Computed Property Names in Objects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const key = 'dynamicKey';
 const obj = {
@@ -14331,8 +14681,9 @@ const obj = {
 };
 console.log(obj, dynamicKey);  // Output: 'Value based on dynamic key'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Array.find for Finding Elements in an Array:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const users = [
   {id: l, name: 'Alice'},
@@ -14353,6 +14704,7 @@ features like computed property names and array. find method.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Function Returning Another Function - Closure Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function outerFunction(x) {
   function innerFunction(y) {
@@ -14363,8 +14715,9 @@ function outerFunction(x) {
 const addFive = outerFunction(5);
 console.log(addFive(3));  // Output: 8
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Recursive Function for Factorial Calculation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function factorial (n) {
   if(n === 0 || n === 1) {
@@ -14378,12 +14731,14 @@ console.log(factorial(5));  // Output: 120
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.slice() for Subarray Creation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const arr = [1, 2, 3, 4, 5];
 const subArray = arr.slice(2, 4);  // Output: [3, 4]
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.includes() for Checking Array Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const fruits = ['apple', 'banana', 'orange'];
 const hasBanana = fruits.includes('banana');  // Output: true
@@ -14392,12 +14747,14 @@ const hasBanana = fruits.includes('banana');  // Output: true
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object. keys() to Get Object Keys:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {a: 1, b: 2, c: 3};
 const keys = Object.keys(obj);  // Output: ['a', 'b', 'c']
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.defineProperty() for Object Property Definition:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {};
 Object.defineProperty(obj, 'prop', {
@@ -14409,6 +14766,7 @@ Object.defineProperty(obj, 'prop', {
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise.all() for Multiple Promises Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const promise1 = Promise.resolve('Resolved1');
 const promise2 = Promise.resolve('Resolved2');
@@ -14416,8 +14774,9 @@ Promise.all([promise1, promise2]).then (values => {
   console.log(values);  // Output: ['Resolved1', 'Resolved2']
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async / Await with Promise.catch() for Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchUserData() {
   try {
@@ -14433,13 +14792,15 @@ async function fetchUserData() {
 <h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Object Destructuring for Variable Assignment:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const user = {name: 'Alice', age: 30};
 const {name, age} = user;
 console.log(name, age);  // Output: 'Alice' 30
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Arrow Functions for Concise Function Definitions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const sum = (a, b) => a + b;
 console.log(sum(2,3));  // Output: 5
@@ -14456,14 +14817,16 @@ ES6 + features like object destructuring and arrow functions.</p>
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. IIFE (Immediately Invoked Function Expression):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 (function() {
   const localVar = 'Local variable';
   console.log(localVar);
 })();
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Function that Returns Multiple Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateValues(x, y) {
   return [x + y, x * y, x / y];
@@ -14475,12 +14838,14 @@ console.log(sum, product, division);  // Output: 15 50 2
 <h4>Advanced Array Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Using Array.map() for Transformation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = [1, 2, 3, 4, 5];
 const doubledNumbers = numbers.map(num => num * 2);  // Output: [2, 4, 6, 8, 10]
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array. find() to Get First Matching Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const users = [
   {id: 1, name: 'Alice'},
@@ -14494,13 +14859,15 @@ console.log(user);  // Output: {id: 2, name: 'Bob'}
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Object.freeze() to Prevent Object Modification:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {prop: 'value'};
 Object.freeze(obj);
 obj.prop = 'new value';  // This change won't take effect due to object freezing
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Using Object.values() to Get Object Values:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {a: 1,b: 2,c: 3};
 const values = Object.values(obj);  // Output: [1, 2, 3]
@@ -14509,6 +14876,7 @@ const values = Object.values(obj);  // Output: [1, 2, 3]
 <h4>Advanced Promises and Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Promise chaining with .then() and .catch():</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   return fetch ('https://api.example.com/data')
@@ -14516,8 +14884,9 @@ async function fetchData() {
     .catch (error => console.error('Error fetching data:', error));
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function with Error Handling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
   try {
@@ -14533,12 +14902,14 @@ async function fetchData() {
 <h4>ES6 (MS POS) + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Optional Chaining for Object Properties:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const user = {profile: {email: 'user@example.com'}};
 const userEmail = user?.profile?.email;  // Output: 'user@example.com'
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Promise.finally() for Cleanup Tasks:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch ('https://api.example.com/data')
   .then(response => response.json())
@@ -14552,6 +14923,7 @@ features like optional chaining and promise finally.</p>
 <h4>Advanced DOM Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating and Appending DOM Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Create a new paragraph element
 const paragraph = document.createElement('p');
@@ -14561,8 +14933,9 @@ paragraph.textContent = 'This is a new paragraph';
 const container = document.getElementById('container');
 container.appendchild(paragraph);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Adding Event Listeners:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const button = document.getElementById('myButton');
 button.addEventListener('click', () => {
@@ -14573,6 +14946,7 @@ button.addEventListener('click', () => {
 <h4>DOM Traversal and Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Querying Elements and Modifying Styles:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Select all elements with class 'box' and change their background color
 const boxes = document.querySelectorAll('.box');
@@ -14580,8 +14954,9 @@ const boxes = document.querySelectorAll('.box');
     box.style.backgroundColor = 'lightblue';
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Removing Elements from the DOM:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const elementToRemove = document.getElementById('elementToRemove');
 if (elementToRemove) {
@@ -14591,6 +14966,7 @@ if (elementToRemove) {
 <h4>Advanced Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Delegating Events using Event Bubbling:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const list = document.getElementById('myList');
 list.addEventListener('click', (event) => {
@@ -14599,8 +14975,9 @@ list.addEventListener('click', (event) => {
   }
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Creating and Dispatching Custom Events:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const customEvent = new CustomEvent('customEventName', {detail: 'Some data'});
 document.dispatchEvent(customEvent);
@@ -14613,12 +14990,14 @@ console.log(`Custom event triggered with data: ${event.detail}`);
 <h4>DOM Content Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Changing Inner HTML of Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
 element.innerHTML = '&lt;strong&gt;New HTML content&lt;/strong&gt;';
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Working with Forms and Input Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const form = document.getElementById('myForm');
 form.addEventListener('submit', (event) => {
@@ -14628,7 +15007,6 @@ form.addEventListener('submit', (event) => {
   console.log(`Form submitted with value: ${value}`);
 });
 </pre>
-
 <p>These JavaScript snippets demonstrate advanced techniques for interacting with the 
 HTML DOM, including creating elements, event handling, manipulation, traversal, form 
 interactions, and custom event creation.</p>
@@ -14636,6 +15014,7 @@ interactions, and custom event creation.</p>
 <h4>Input Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Input Event for Live Character Count:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const inputField = document.getElementById('textInput');
 const charCount = document.getElementById('charCount');
@@ -14644,8 +15023,9 @@ inputField.addEventListener ('input', () => {
   charCount.textContent = `Character count: ${inputField.value.length}`;
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Detecting Changes in Input Fields:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const inputField = document. getElementById ('textinput');
 
@@ -14657,7 +15037,7 @@ inputField.addEventListener ('change', (event) => {
 <h4>Form Validation and Submission:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Real-time Password Strength Checker:</h4>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const passwordField = document.getElementById('password');
 const strengthIndicator = document.getElementById('passwordStrength');
@@ -14669,8 +15049,9 @@ passwordField.addEventListener ('input', () => {
   strengthIndicator.textContent = `Password Strength: ${strength}`;
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Form Submission with Validation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 //nope
 const form = document.getElementById('myForm');
@@ -14696,6 +15077,7 @@ function validateEmail(email) {
 <h4>Advanced Input Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Using Range Input for Dynamic UI Updates:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const rangeInput = document.getElementById('rangeSlider');
 const valueDisplay = document.getElementById('rangeValue');<br>
@@ -14704,8 +15086,9 @@ rangeinput.addEventListener('input', () => {
   // Update UI based on range input value changes
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Input Masking for Phone Number Input:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 //const phoneInput = document.getElementById('phoneNumber');
 const phoneInput = document.getElementById('4253192332');
@@ -14724,6 +15107,7 @@ masking and range input handling in HTML forms.</p>
 <h4>DOM Object Creation and Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Creating and Appending a New Image Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const image = document.createElement('img');
 image.src = 'path/to/image.jpg';
@@ -14731,8 +15115,9 @@ image.alt = 'Image Description';
 const container = document.getElementById('imageContainer');
 container.appendChild(image);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Adding a New Option to Select Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const select = document.getElementById('mySelect');
 const option = document.createElement('option');
@@ -14745,12 +15130,14 @@ select.appendChild(option);
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Setting Custom Attributes to HTML Elements:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
 element.setAttribute('data-custom', 'customValue');
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Removing Specific Attribute from an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
 element.removeAttribute('data-custom');
@@ -14765,8 +15152,9 @@ const element = document.getElementById('myElement');
 element.style.backgroundColor = 'blue';
 element.style.color = 'white';
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Adding and Removing CSS Classes:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
 element.classList.add('newClass');
@@ -14776,6 +15164,7 @@ element.classList.remove('oldClass');
 <h4>Event Handling and Interaction:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Creating and Handling Mouse Hover Effects:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
 element.addEventListener('mouseenter', () => {
@@ -14786,8 +15175,9 @@ element.addEventListener('mouseleave', () => {
   element.style.backgroundColor = 'blue';
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Triggering Click Event Programmatically:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const button = document.getElementById('myButton');
 button.click();  // Triggering click event on the button element
@@ -14796,12 +15186,14 @@ button.click();  // Triggering click event on the button element
 <h4>Advanced Content Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Setting HTML Content Using InnerHTML:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
 element.innerHTML = '&lt;strong&gt;New HTML Content&lt;/strong&gt;';
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Appending Text Node to an Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
 const textNode = document.createTextNode('Text Content');
@@ -14815,13 +15207,15 @@ event handling, and content manipulation.</p>
 <h4>Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Keyboard Event Handling - Key Press:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document.addEventListener('keypress', (event) => {
   console.log(`Key pressed: ${event.key}`);
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Handling Focus Events - Input Focus and Blur:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const inputField = document.getElementById('mylnput');
 
@@ -14837,6 +15231,7 @@ inputField.addEventListener('blur', () => {
 <h4>Event Delegation and Bubbling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Event Delegation with Click Events:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const list = document.getElementById('myList');<br>
 list.addEventListener('click', (event) => {
@@ -14844,8 +15239,9 @@ list.addEventListener('click', (event) => {
     console.log(`Clicked on list item: ${event.target.textContent}`);
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Event Bubbling - Click Event on Parent Element:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const parent = document.getElementById('parentElement');
 
@@ -14857,13 +15253,15 @@ parent.addEventListener('click', (event) => {
 <h4>Window and Document Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Window Load Event:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 window.addEventListener ('load', () => {
   console.log('Page fully loaded');
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Document Ready Event ( DOMContentLoaded):</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM fully loaded and parsed');
@@ -14873,6 +15271,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <h4>Form Events:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Form Submission and Preventing Default Behavior:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const form = document.getElementById('myForm');<br>
 form.addEventListener('submit', (event) => {
@@ -14881,8 +15280,9 @@ form.addEventListener('submit', (event) => {
   // Perform form data handling or validation
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Input Event for Real - time Validation:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const emailField = document.getElementById('email');<br>
 emailField.addEventListener('input', () => {
@@ -14905,6 +15305,7 @@ form - related events for submission and input validation.</p>
 <h4>Browser Object Model (BOM) Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Opening a New Browser Window:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const openWindowButton = document.getElementById('openWindowButton');
 
@@ -14912,8 +15313,9 @@ openWindowButton.addEventListener('click', () => {
   window.open('https://example.com', '_blank', 'width = 500,height = 500');
 });
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Closing a Browser Window:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const closeWindowButton = document.getElementById('closeWindowButton');
 
@@ -14925,14 +15327,16 @@ closeWindowButton.addEventListener('click', () => {
 <h4>Navigator Object Exploration:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Accessing Browser Information:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(`Browser name: ${navigator.appName}`);
 console.log(`Browser version: ${navigator.appVersion}`);
 console.log(`User Agent: ${navigator.userAgent}`);
 console.log(`Language: ${navigator.language}`);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Checking Geolocation Availability:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 if ('geolocation' in navigator) {
   console.log('Geolocation is supported');
@@ -14944,13 +15348,15 @@ if ('geolocation' in navigator) {
 <h4>Location Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Redirecting to Another Page:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function redirectToPage() {
   window.location.href = 'https://sayhello.bauska.org';
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Accessing Current URL Information:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(`Current URL: ${window.location.href}`);
 console.log(`Hostname: ${window.location.hostname}`);
@@ -14961,12 +15367,14 @@ console.log(`Pathname: ${window.location.pathname}`);
 <h4>Screen Object Attributes:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Retrieving Screen Dimensions:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(`Screen width: ${window.screen.width}`);
 console.log(`Screen height: ${window.screen.height}`);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Opening in Full Screen Mode:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const fullScreenButton = document.getElementById('fullScreenButton');
 
@@ -15030,9 +15438,11 @@ in the Explorer panel New File > script.js.</p>
 <p>To run JavaScript code, open the integrated terminal in Visual Studio Code (Terminal 
 &gt; New Terminal), navigate to your project directory, and run the JavaScript file using 
 Node.js.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>For example:</h4>
-
-<h5>bash code</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h5>BASH code:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>node script.js</pre>
 
 <p>To execute JavaScript code in a browser, create an HTML file (index.html) and link 
@@ -15922,6 +16332,7 @@ function createDeck() {
   }
   return deck;
 }
+
 // Function to shuffle the deck of cards
 function shuffledDeck(deck) {
   for (let i = deck.length -1; i > 0; i—) {
@@ -15956,7 +16367,7 @@ function to generate and display the Fibonacci sequence.</p>
 <pre>
 // Function to generate the Fibonacci sequence using recursion
 function fibonacci(n) {
-  if(n<=l){
+  if(n <= l){
     return n;
   } else {
     return fibonacci(n -1) + fibonacci(n - 2);
@@ -15967,8 +16378,9 @@ function fibonacci(n) {
 let numTerms = parseInt(prompt("Enter the number of terms in the Fibonacci sequence:"));
 
 // Check if input is a valid non-negative integer
-if (’isNaN(numTerms) && Number.isInteger(numTerms) && numTerms >= 0) {
-  console.log(`Fibonacci sequence of $ {numTerms} terms:`);
+if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms >= 0) {
+  console.log(`Fibonacci sequence of ${numTerms} terms:`);
+  
   // Display the Fibonacci sequence using recursion
   for (let i = 0; i < numTerms; i++) {
     console.log(fibonacci(i));
@@ -15995,7 +16407,7 @@ function factorial(n) {
   if (n === 0 || n === 1) {
     return 1;
   } else {
-    return n * factorial(n -1);
+    return n * factorial(n - 1);
   }
 }
 
@@ -16003,7 +16415,7 @@ function factorial(n) {
 let number = parseInt(prompt("Enter a non-negative integer:"));
 
 // Check if input is a valid non-negative integer
-if (lisNaN(number) && Number.islnteger(number) && number >= 0) {
+if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
   // Calculate and display the factorial using recursion
   let result = factorial(number);
   console.log(`The factorial of ${number} is: ${result}`);
@@ -16028,7 +16440,7 @@ function decimalToBinary(decimalNumber) {
   if (decimalNumber === 0){
     return "0";
   }
-  let binaryResult =
+  let binaryResult = "";
   while (decimalNumber > 0) {
     let remainder = decimalNumber % 2;
     binaryResult = remainder + binaryResult;
@@ -16038,7 +16450,7 @@ function decimalToBinary(decimalNumber) {
 }
 
 // Prompt user for a decimal number
-let decimalNumber = parse!nt(prompt("Enter a decimal number:"));
+let decimalNumber = parseInt(prompt("Enter a decimal number:"));
 
 // Check if input is a valid integer
 if (!isNaN(decimalNumber) && Number jsInteger(decimalNumber) && decimalNumber >= 0) {
@@ -16067,8 +16479,8 @@ let character = prompt("Enter a character:");
 // Check if input is a valid single character
 if (character.length === 1) {
   // Calculate and display the ASCII value
-  let asciiValue = character.charCodeAt(O);
-  console.log(`The ASCII value of ^{character}1 is: ${asciiValue}`);
+  let asciiValue = character.charCodeAt(0);
+  console.log(`The ASCII value of '${character}' is: ${asciiValue}`);
 } else {
   console.log("Please enter a valid single character.");
 }
@@ -16083,19 +16495,20 @@ string that reads the same forward as backward.</p>
 // Function to check if a string is a palindrome
 function isPalindrome(str) {
   // Remove non-alphanumeric characters and convert to lowercase
-  const cleanStr = str.replace(/&lbrack;Aa-zA-ZO-9&rbrack;/g, ").toLowerCase();
+  const cleanStr = str.replace(/&lbrack;^a-zA-ZO-9&rbrack;/g,").toLowerCase();
+  
   // Compare the original and reversed strings
-  return cleanStr === cleanStr.split(").reverse().join(");
+  return cleanStr === cleanStr.split('').reverse().join('');
 }
 
 // Prompt user for a string
-let inputstring = prompt("Enter a string:");
+let inputString = prompt("Enter a string:");
 
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Check and display if the string is a palindrome
   if (isPalindrome(inputString)) {
-    console.log(`"${input String}" is a palindrome.`);
+    console.log(`"${inputString}" is a palindrome.`);
   } else {
     console.log(`"${inputString}" is not a palindrome.`);
   }
@@ -16122,8 +16535,10 @@ let inputstring = prompt("Enter a sentence or a list of words:");
 if (inputString.length > 0) {
   // Split the input into an array of words
   let wordsArray = inputString.split(/\s+/);
+  
   // Sort the array of words in alphabetical order
   let sortedWords = wordsArray.sort();
+  
   // Display the sorted words
   console.log("Sorted Words:");
   console.log(sortedWords.join(','));
@@ -16140,17 +16555,19 @@ character and displays the modified string.</p>
 
 <pre>
 // Prompt user for a string
-let inputstring = prompt("Enter a string:");
+let inputString = prompt("Enter a string:");
 
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Prompt user for a target character and a replacement character
   let targetChar = prompt("Enter the target character:");
-  let replacementchar = prompt("Enter the replacement character:");
+  let replacementChar = prompt("Enter the replacement character:");
+  
   // Check if targetChar is a single character and input is not empty
   if (targetChar.length === 1) {
     // Replace all occurrences of targetChar with replacementchar
     let modifiedString = inputString.split(targetChar).join(replacementChar);
+
     // Display the modified string
     console.log(`Modified String: ${modifiedString}`);
   } else {
@@ -16173,12 +16590,13 @@ characters of the string.</p>
 
 <pre>
 // Prompt user for a string
-let inputstring = prompt("Enter a string:");
+let inputString = prompt("Enter a string:");
 
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Reverse the string
   let reversedString = inputString.split(").reverse().join(");
+  
   // Display the reversed string
   console.log(`Reversed String: ${reversedString}`);
 } else {
@@ -16193,7 +16611,7 @@ if (inputString.length > 0) {
 <pre>
 // Prompt user for a string and a character
 let inputstring = prompt("Enter a string:");
-let targetchar = promptf'Enter the character to count:");
+let targetchar = prompt("Enter the character to count:");
 
 // Check if input is valid
 if (inputString.length > 0 && targetChar.length === 1) {
@@ -16204,8 +16622,9 @@ if (inputString.length > 0 && targetChar.length === 1) {
       count++;
     }
   }
+
   // Display the result
-  console.log(`Number of occurrences of'${targetChar}' in '${inputstring}': ${count}`);
+  console.log(`Number of occurrences of'${targetChar}' in '${inputString}': ${count}`);
 } else {
   console.log("Please enter a valid string and a single character.");
 }
@@ -16222,16 +16641,16 @@ if (inputString.length > 0 && targetChar.length === 1) {
 
 <pre>
 // Prompt user for a string
-let inputstring = prompt("Enter a string:");
+let inputString = prompt("Enter a string:");
 
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Convert the first letter to uppercase
-  let resultstring = inputString.charAt(0).toUpperCase() + inputString.slice(l);
+  let resultString = inputString.charAt(0).toUpperCase() + inputString.slice(1);
   
   // Display the result
-  console.log(`Original String: ${inputstring}`);
-  console.log(`String with First Letter Uppercase: ${resultstring}`);
+  console.log(`Original String: ${inputString}`);
+  console.log(`String with First Letter Uppercase: ${resultString}`);
 } else {
   console.log("Please enter a valid string.");
 }
@@ -16243,13 +16662,15 @@ if (inputString.length > 0) {
 
 <pre>
 // Prompt user for a string
-let inputstring = prompt("Enter a string:");
+let inputString = prompt("Enter a string:");
+
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Function to count vowels in a string
   function countVowels(str) {
     const vowels = "aeiouAEIOU";
     let vowelCount = 0;
+	
     for (let char of str) {
       if (vowels.includes(char)) {
         vowelCount++;
@@ -16276,19 +16697,19 @@ the startsWith and endsWith methods in JavaScript:</p>
 
 <pre>
 // Prompt user for a string
-let inputstring = prompt("Enter a string:");
+let inputString = prompt("Enter a string:");
 
 // Check if input is a valid string
 if (inputString.length > 0) {
   // Prompt user for start and end characters
   let startChar = prompt("Enter the starting characters:");
-  let endChar = promptf'Enter the ending characters:");
+  let endChar = prompt("Enter the ending characters:");
 
   // Check if the string starts and ends with the specified characters
   if (inputString.startsWith(startChar) && inputString.endsWith(endChar)) {
-    console.log(`The string '${inputstring}' starts with '${startChar}' and ends with '${endChar}'.`);
+    console.log(`The string '${inputString}' starts with '${startChar}' and ends with '${endChar}'.`);
   } else {
-    console.log(`The string '${inputstring}' does not start with '${startChar}' or does not end with '${endChar}'.`);
+    console.log(`The string '${inputString}' does not start with '${startChar}' or does not end with '${endChar}'.`);
   }
 } else {
   console.log("Please enter a valid string.");
@@ -26155,10 +26576,11 @@ console.log(sectorArea(5, 60));  // Output: 5.235987755982989
 <h2 id="js-265">265. Display Confetti on Button Click</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When click button display confetti on screen; HTML, CSS & JS code.</p>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 /* HTML */
 &lt;canvas id="confetti"&gt;&lt;/canvas&gt;
@@ -26168,8 +26590,9 @@ console.log(sectorArea(5, 60));  // Output: 5.235987755982989
 &lt;script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"&gt;&lt;/script&gt;
 &lt;script src="script.js"&gt;&lt;/script&gt;
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>CSS:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 /* CSS */
 body {
@@ -26256,6 +26679,7 @@ canvas#confetti {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>JS:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 /* JavaScript - confetti */
 const button = document.querySelector('#button');
@@ -26301,7 +26725,8 @@ button.addEventListener('click', () => {
   <b><a href="#js-0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>CSS</h5>
+<h5>CSS:</h5>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
   #myBtn {
     display: none;
