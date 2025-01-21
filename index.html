@@ -14444,15 +14444,15 @@ displays the variables before and after the swap.</p>
 let variable1 = prompt("Enter the first variable:");
 let variable2 = prompt("Enter the second variable:");
 console.log(
-  `Before swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
+  `Before swapping: Variablel = ${variable1}, Variable2 = ${variable2}`
 );
 
 // Swapping the variables
-let temp = variablel;
-variablel = variable2;
+let temp = variable1;
+variable1 = variable2;
 variable2 = temp;
 console.log(
-  `After swapping: Variablel = ${variablel}, Variable2 = ${variable2}`
+  `After swapping: Variablel = ${variable1}, Variable2 = ${variable2}`
 );
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15083,7 +15083,7 @@ low, or correct. The user continues guessing until they correctly identify the r
 
 <pre>
 // Generate a random number between 1 and 100 (you can adjust the range)
-const randomNumber = Math.floor(Math.random() &ast; 100) + 1;
+const randomNumber = Math.floor(Math.random() * 100) + 1;
 
 // Initialize variables
 let userGuess;
@@ -15094,17 +15094,19 @@ do {
   // Prompt user for a guess
   userGuess = parseInt(prompt("Guess the random number (between 1 and 100):"));
   // Check if the input is a valid number
-  if (’isNaN(userGuess)) {
+  if (!isNaN(userGuess)) {
     attempts++;
     // Provide feedback to the user
     if (userGuess < randomNumber) {
       console.log("Too low! Try again.");
     } else if (userGuess > randomNumber) {
       console.log("Too high! Try again.");
-} else {
-  console.log(`Congratulations! You guessed the correct number ${randomNumber} in $ {attempts} attempts.`);
-} else {
-  console.log("Please enter a valid number.");
+    } else {
+      console.log(`Congratulations! You guessed the correct number ${randomNumber} in ${attempts} attempts.`);
+    } 
+  } else {
+    console.log("Please enter a valid number.");
+  }
 } while (userGuess !== randomNumber);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24237,3 +24239,4 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>With gratitude,</p>
 <p>Brian Bauska</p>
 </footer>
+</html>
