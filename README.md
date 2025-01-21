@@ -835,16 +835,16 @@ data categories such as integers, floating-point numbers, characters, and boolea
 values.</p>
 
 <p><b>Integer:</b></p>
-<pre>let age = 25; // Integer</pre>
+<pre>let age = 25;  // Integer</pre>
 
 <p><b>Floating-point:</b></p>
-<pre>let temperature = 26.5; // Float</pre>
+<pre>let temperature = 26.5;  // Float</pre>
 
 <p><b>Floating-point:</b></p>
-<pre>let grade = 'A'; // Character</pre>
+<pre>let grade = 'A';  // Character</pre>
 
 <p><b>Floating-point:</b></p>
-<pre>let isStudent = true; // Boolean</pre>
+<pre>let isStudent = true;  // Boolean</pre>
 
 <p>These are examples of primitive types because they represent the most basic forms of 
 data in the language and are not composed of other types. They serve as the building 
@@ -875,9 +875,9 @@ value is copied into the variable.</p>
 </ol>
 
 <pre>
-let numl = 42; // Value type (Number)
-let text = "Hello"; // Value type (String)
-let isTrue = true; // Value type (Boolean)
+let numl = 42;  // Value type (Number)
+let text = "Hello";  // Value type (String)
+let isTrue = true;  // Value type (Boolean)
 </pre>
 
 <p><b>Reference Types (Objects):</b> Reference types represent more complex objects and 
@@ -894,12 +894,9 @@ location where the object is stored.</p>
 <p><b>Example:</b></p>
 
 <pre>
-let person = { name: "Ana", age: 30 };
-// Reference type (Literal Object)
-let colors = ["red", "green", "blue"];
-// Reference type (Array)
-function greet() { console.log("Hello"); } 
-// Reference type (Function)
+let person = { name: "Ana", age: 30 };  // Reference type (Literal Object)
+let colors = ["red", "green", "blue"];  // Reference type (Array)
+function greet() { console.log("Hello"); }  // Reference type (Function)
 </pre>
 
 <p><b>Key Difference:</b> The main difference between value types and reference types 
@@ -921,12 +918,12 @@ Here is a description of the different types of typing:</p>
 automatically determined based on the assigned value. No explicit type declaration is 
 needed.</p>
 
-<pre>let number = 42; // Type is inferred as Number</pre>
+<pre>let number = 42;  // Type is inferred as Number</pre>
 
 <p><b>Explicit Typing:</b> In languages with explicit typing, the programmer must 
 explicitly declare the data type of a variable during its creation.</p>
 
-<pre>let name: string = "Juan"; // Type is declared as String</pre>
+<pre>let name: string = "Juan";  // Type is declared as String</pre>
 
 <p><b>Nominal Typing:</b> Nominal typing relies on type names and focuses on nominal 
 differences between types, even if their internal structure is identical.</p>
@@ -940,7 +937,7 @@ function greet(user: User) {
 }
 
 const employee: Employee = { name: "Ana" };
-greet(employee); // Nominal typing error, even though the structure is the same
+greet(employee);  // Nominal typing error, even though the structure is the same
 </pre>
 
 <p><b>Structural Typing:</b> Structuraltyping is based on the structure and shape of data 
@@ -956,7 +953,7 @@ function greet(person: Person) {
 }
 
 const citizen: Citizen = { name: "Carlos" };
-greet(citizen); // No structural typing error, the structure is the same
+greet(citizen);  // No structural typing error, the structure is the same
 </pre>
 
 <p><b>Duck Typing:</b> Duck typing is based on whether an object behaves Like a
@@ -974,7 +971,7 @@ function entertain(concert: CanSing) {
 const canary = {
   sing: () => console.log("Tweet tweet")
 };
-entertain(canary); // Type doesn't matter, as long as it has the 'sing' method
+entertain(canary);  // Type doesn't matter, as long as it has the 'sing' method
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -990,21 +987,21 @@ and retrieve information about data types. Here's an explanation of each:</p>
 performs type conversion if the values are of different types. This is called "weak 
 equality" or "type coercion."</p>
 
-<pre>5 == "5"; // true, type conversion is performed</pre>
+<pre>5 == "5";  // true, type conversion is performed</pre>
 
 <p><b>=== (Strict Equality):</b> The === operator compares two values for equality 
 without performing type conversion. This is known as "strict equality" and is 
 recommended for precise comparisons.</p>
 
-<pre>5 === "5"; // false, no type conversion is performed</pre>
+<pre>5 === "5";  // false, no type conversion is performed</pre>
 
 <p><b>typeof (typeof Operator):</b> The typeof operator is used to obtain the data
 type of an expression. It returns a string representing the data type.</p>
 
 <pre>
-typeof 42; // "number"
-typeof "Hello"; // "string"
-typeof true; // "boolean"
+typeof 42;  // "number"
+typeof "Hello";  // "string"
+typeof true;  // "boolean"
 </pre>
 
 <ul>
@@ -25974,7 +25971,7 @@ const originalSentence = "Hello world, how are you?";
 const reversedSentence = reverseWords(originalSentence);
 
 // Example usage
-console.log(reversedSentence); // Output: "you? are how world, Hello"
+console.log(reversedSentence);  // Output: "you? are how world, Hello"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-253">253. Find the Median of Numbers in an Array</h2>
@@ -26049,7 +26046,7 @@ console.log(fibonacciSequence(10));
 const getAsciiValue = char => char.charCodeAt(0);
 
 // Example usage
-console.log(getAsciiValue('A')); // Output: 65
+console.log(getAsciiValue('A'));  // Output: 65
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -26293,7 +26290,7 @@ button.addEventListener('click', () => {
   }
   &lt;!-- when the user clicks on the button, scroll to the top of the document. 0,0 or --&gt;
   &lt;!-- to table of contents (approx ###), if applicable was; 315 --&gt;
-  // when the user clicks on the button, scroll to the table of contents near top of document.
+  // When the user clicks on the button, scroll to the table of contents near top of document.
   function topFunction() {
     document.getElementById('ch1').scrollIntoView();
   }
