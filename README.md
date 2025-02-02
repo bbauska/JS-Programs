@@ -4929,21 +4929,94 @@ console.log(dominantDirection("Hey, مساء الخير")); // → rtl
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el16">16. Objects: A vector type</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Look back to the <a href="">Rabbit class example</a> if you’re unsure how class declarations
-look.</p>
+<pre>
+function makeRabbit(type) {
+  let rabbit = Object.create(protoRabbit);
+  rabbit.type = type;
+  return rabbit;
+}
+  class Rabbit {
+    constructor(type) {
+      this.type = type;
+    }
+    speak(line) {
+    console.log(`The ${this.type} rabbit says '${line}'`);
+  }
+}
+</pre>
+
+<p>The class keyword starts a class declaration, which allows us to define a constructor and a set 
+of methods together. Any number of methods may be written inside the declaration’s braces. This 
+code has the effect of defining a binding called Rabbit, which holds a function that runs the 
+code in constructor, and has a prototype property which holds the speak method.</p>
+<p>This function cannot be called normally. Constructors, in JavaScript, are called by putting the 
+keyword new in front of them. Doing so creates a fresh object with the object held in the function’s 
+prototype property as prototype, then runs the function with this bound to the new object, and 
+finally returns the object.</p>
+
+<pre>
+let killerRabbit = new Rabbit("killer");function ArchaicRabbit(type) {
+  this.type = type;
+}
+ArchaicRabbit.prototype.speak = function(line) {
+  console.log(`The ${this.type} rabbit says '${line}'`);
+};
+let oldSchoolRabbit = new ArchaicRabbit("old school");
+</pre>
+
+<p>For this reason, all non-arrow functions start with a prototype property holding
+an empty object.</p>
+<p>By convention, the names of constructors are capitalized so that they can
+easily be distinguished from other functions.</p>
+<p>It is important to understand the distinction between the way a prototype
+is associated with a constructor (through its prototype property) and the way
+objects have a prototype (which can be found with Object.getPrototypeOf).
+The actual prototype of a constructor is Function.prototype since constructors
+are functions. Its prototype property holds the prototype used for instances
+created through it.</p>
+
+<pre>
+console.log(Object.getPrototypeOf(Rabbit) ==
+  Function.prototype);  // → true
+
+console.log(Object.getPrototypeOf(killerRabbit) ==
+  Rabbit.prototype);  // → true
+</pre>
+
+<p>Constructors will typically add some per-instance properties to this. It is also
+possible to declare properties directly in the class declaration. Unlike methods,
+such properties are added to instance objects, not the prototype.</p>
+
+<pre>
+class Particle {
+  speed = 0;
+  constructor(position) {
+    this.position = position;
+  }
+}
+</pre>
+
+Like function, class can be used both in statements and in expressions. When
+used as an expression, it doesn’t define a binding but just produces the con-
+structor as a value. You are allowed to omit the class name in a class expression.
+
+<pre>
+let object = new class { getWord() { return "hello"; } };
+
+console.log(object.getWord());  // → hello
+</pre>
+
+<p>In fact, class was only introduce in the 2015 edition of JavaScript. Any func-
+tion can be used as a constructor, and before 2015 the way to define a class
+was to write a regular function and then manipulate its prototype property.</p>
+
+<p>Look above to the Rabbit class example if you’re unsure how class declarations look.</p>
 
 <p>Adding a getter property to the constructor can be done by putting the word
-get before the method name. To compute the distance from (0, 0) to (x, y), you
-can use the Pythagorean theorem, which says that the square of the distance
+<b>get</b> before the method name. To compute the distance from (0, 0) to (x, y), you
+can use the <b>Pythagorean</b> theorem, which says that the square of the distance
 we are looking for is equal to the square of the x-coordinate plus the square of
-the y-coordinate. Thus, √ x2 + y2 is the number you want, and Math.sqrt is
-the way you compute a square root in JavaScript.</p>
-
-<p>Adding a getter property to the constructor can be done by putting the word
-get before the method name. To compute the distance from (0, 0) to (x, y), you
-can use the Pythagorean theorem, which says that the square of the distance
-we are looking for is equal to the square of the x-coordinate plus the square of
-the y-coordinate. Thus, √x2 + y2 is the number you want, and Math.sqrt is
+the y-coordinate. Thus, √ x2 + y2 is the number you want, and <b>Math.sqrt</b> is 
 the way you compute a square root in JavaScript.</p>
 
 <pre>
