@@ -260,9 +260,6 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#ex91">JS Web APIs</a></li>
   <li><a href="#ex92">JS AJAX</a></li>
   <li><a href="#ex93">JS JSON</a></li>
-<!-- JavaScript libraries &amp; frameworks -->
-<!-- jQuery, React, Redux, D3, TensorFlow.js, Angular, Node.js, Vue.js, Svelte, Three, -->
-<!-- Lodash, Next.js, Nuxt.js, Gatsby, Ember.js, Meteor, Backbone.js -->
   <li><a href="#ex94">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -272,7 +269,7 @@ turn your own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a id="js0">218 Simple JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<ul type="square">
+<ol type="1">
   <li><a href="#js01">1. Print Hello World</a></li>
   <li><a href="#js02">2. Add Two Numbers</a></li>
   <li><a href="#js03">3. Find the Square Root</a></li>
@@ -491,7 +488,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#js216">216. Next Prime Number</a></li>
   <li><a href="#js217">217. Reverse Order of Bits</a></li>
   <li><a href="#js218">218. Pyramid</a></li>
-</ul>
+</ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
@@ -500,7 +497,7 @@ turn your own ideas into a reality without even having to think about it.</p>
 <h2><a id="js-0">266 More JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- <ul type="disc"> -->
-<ol>
+<ol type="1">
   <li><a href="#js-01">js-01. Convert Celsius to Fahrenheit</a></li>
   <li><a href="#js-02">js-02. Get Value of a browser Cookie</a></li>
   <li><a href="#js-03">js-03. Convert RGB to Hex</a></li>
