@@ -15547,7 +15547,7 @@ task runner like Gulp might be beneficial to enhance your development environmen
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>218 JavaScript Samples</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js01">1. Print Hello World</h2>
+<h2 name="js01">1. Print Hello World</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The "Hello World" program is a classic in programming and is often the first program 
 written when learning a new programming language. In this case, the goal is to print the 
@@ -15555,7 +15555,7 @@ text string "Hello, World!" to the browser console.</p>
 
 <pre>console.log("Hello, World!");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js02">2. Add Two Numbers</h2>
+<h2 name="js02">2. Add Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program focuses on taking two numbers as input and then displaying their sum. It 
 prompts the user to enter two numbers, adds them together, and prints the result.</p>
@@ -15571,7 +15571,7 @@ if (!isNaN(num1) && !isNaN(num2)) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js03">3. Find the Square Root</h2>
+<h2 name="js03">3. Find the Square Root</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and calculates its square root. It then 
 displays the result, ensuring that the entered number is non-negative.</p>
@@ -15591,7 +15591,7 @@ if (!isNaN(inputNumber) && inputNumber >= 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js04">4. Calculate the Area of a Triangle</h2>
+<h2 name="js04">4. Calculate the Area of a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter the base and height of a triangle and 
 calculates its area using the formula: 
@@ -15612,7 +15612,7 @@ if (!isNaN(base) && !isNaN(height) && base > 0 && height > 0) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js05">5. Swap Two Variables</h2>
+<h2 name="js05">5. Swap Two Variables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two variables and swaps their values. It then 
 displays the variables before and after the swap.</p>
@@ -15638,7 +15638,7 @@ console.log(
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js06">6. Solve Quadratic Equation</h2>
+<h2 name="js06">6. Solve Quadratic Equation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, 
 and c are coefficients. It uses the quadratic formula to find the roots of the equation.</p>
@@ -15675,7 +15675,7 @@ if (!isNaN(a) && !isNaN(b) && !isNaN(c)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js07">7. Convert Kilometers to Miles</h2>
+<h2 name="js07">7. Convert Kilometers to Miles</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a distance in kilometers and converts it to 
 miles using the conversion factor: 1 kilometer is approximately equal to 0.621371 miles. 
@@ -15697,7 +15697,7 @@ if (!isNaN(kilometers)) {
   console.log("Please enter a valid number for the distance in kilometers.");
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js08">8. Convert Celsius to Fahrenheit</h2>
+<h2 name="js08">8. Convert Celsius to Fahrenheit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program converts a temperature from Celsius to Fahrenheit using the formula: 
 <span class="consolas">F = (C * 9/5) + 32</span>, where F is the temperature in 
@@ -15723,7 +15723,7 @@ if (!isNaN(celsius)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js09">9. Generate a Random Number</h2>
+<h2 name="js09">9. Generate a Random Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random number between a user-defined range. It prompts the 
 user to enter the minimum and maximum values of the range, and then it displays the 
@@ -15747,7 +15747,7 @@ if (!isNaN(minRange) && !isNaN(maxRange) && minRange < maxRange) {
   );
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js10">10. Check if a number is Positive, Negative, or Zero</h2>
+<h2 name="js10">10. Check if a number is Positive, Negative, or Zero</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and checks whether it is positive, 
 negative, or zero. It then displays the result.</p>
@@ -15775,7 +15775,7 @@ if (!isNaN(number)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js11">11. Check if a Number is Odd or Even</h2>
+<h2 name="js11">11. Check if a Number is Odd or Even</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and checks whether it is odd or even. 
 It then displays the result.</p>
@@ -15797,7 +15797,7 @@ if (!isNaN(number) && Number.isInteger(number)) {
   console.log("Please enter a valid integer.");
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js12">12. Find the Largest Among Three Numbers</h2>
+<h2 name="js12">12. Find the Largest Among Three Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter three numbers and determines and displays the 
 largest among them.</p>
@@ -15823,7 +15823,7 @@ if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js13">13. Check Prime Number</h2>
+<h2 name="js13">13. Check Prime Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and checks whether it is a prime 
 number or not. It then displays the result.</p>
@@ -15858,7 +15858,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 1) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js14">14. Print All Prime Numbers in an Interval</h2>
+<h2 name="js14">14. Print All Prime Numbers in an Interval</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a starting and ending number for an interval 
 and then prints all the prime numbers within that interval.</p>
@@ -15903,7 +15903,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js15">15. Find the Factorial of a Number</h2>
+<h2 name="js15">15. Find the Factorial of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the factorial of a given number. The factorial of a non-
 negative integer <span class="consolas">n</span> , denoted as <span class="consolas">n!</span>, 
@@ -15926,7 +15926,7 @@ if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
   console.log("Please enter a valid non-negative integer.");
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js16">16. Display the Multiplication Table</h2>
+<h2 name="js16">16. Display the Multiplication Table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and displays its multiplication table up to a specified range
 (e.g., up to 10).</p>
@@ -15956,7 +15956,7 @@ if (!isNaN(number) && Number.isInteger(number)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js17">17. Print the Fibonacci Sequence</h2>
+<h2 name="js17">17. Print the Fibonacci Sequence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter the number of terms and then prints the 
 Fibonacci sequence up to that number of terms. The Fibonacci sequence is a series of 
@@ -15988,7 +15988,7 @@ if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js18">18. Check Armstrong Number</h2>
+<h2 name="js18">18. Check Armstrong Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a number and checks whether it is an Armstrong 
 number or not. An Armstrong number (also known as a narcissistic number or pluperfect 
@@ -16026,7 +16026,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js19">19. Find Armstrong Number in an Interval</h2>
+<h2 name="js19">19. Find Armstrong Number in an Interval</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a range (start and end) and then prints all 
 Armstrong numbers within that interval.</p>
@@ -16075,7 +16075,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js20">20. Make a Simple Calculator</h2>
+<h2 name="js20">20. Make a Simple Calculator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program implements a simple calculator that can perform basic arithmetic 
 operations. It prompts the user to enter two numbers and choose an operation (addition, 
@@ -16137,7 +16137,7 @@ Result of 705 - 45 is: 660
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js21">21. Find the Sum of Natural Numbers</h2>
+<h2 name="js21">21. Find the Sum of Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the sum of natural numbers up to a given positive integer 
 <span class="consolas">n</span>. 
@@ -16161,7 +16161,7 @@ if (!isNaN(n) && Number.isInteger(n) && n > 0) {
 The sum of natural numbers from 1 to 76 is: 2926
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js22">22. Check if the Numbers Have the Same Last Digit</h2>
+<h2 name="js22">22. Check if the Numbers Have the Same Last Digit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two numbers and checks if they have the same 
 last digit.</p>
@@ -16208,7 +16208,7 @@ The last digit of 297 is the same as the last digit of 4047.
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js23">23. Find HCF or GCD</h2>
+<h2 name="js23">23. Find HCF or GCD</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two positive integers and calculates their 
 Highest Common Factor (HCF) or Greatest Common Divisor (GCD).</p>
@@ -16239,7 +16239,7 @@ if (!isNaN(numl) && !isNaN(num2) && Number.isInteger(numl) && Number.isInteger(n
 The HCF (GCD) of 108 and 208 is: 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js24">24. Find LCM</h2>
+<h2 name="js24">24. Find LCM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter two positive integers and calculates their Least 
 Common Multiple (LCM).</p>
@@ -16275,7 +16275,7 @@ The LCM of 77 and 234 is: 18018
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js25">25. Find the Factors of a Number</h2>
+<h2 name="js25">25. Find the Factors of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a positive integer and calculates and displays 
 its factors.</p>
@@ -16314,7 +16314,7 @@ Factors of 28:
 28
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js26">26. Find Sum of Natural Numbers Using Recursion</h2>
+<h2 name="js26">26. Find Sum of Natural Numbers Using Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the sum of natural numbers up to a given positive integer using recursion. It
 prompts the user to enter a positive integer n and then calculates and displays the sum using a recursive
@@ -16347,7 +16347,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js27">27. Guess a Random Number</h2>
+<h2 name="js27">27. Guess a Random Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random number between a specified range and allows the user 
 to guess the number. It provides feedback on whether the guessed number is too high, too 
@@ -16385,7 +16385,7 @@ do {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js28">28. Shuffle Deck of Cards</h2>
+<h2 name="js28">28. Shuffle Deck of Cards</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates shuffling a standard deck of playing cards. It generates a 
 deck of cards, displays the initial order, shuffles the deck, and then displays the 
@@ -16430,7 +16430,7 @@ console.log(shuffledDeck);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js29">29. Display Fibonacci Sequence Using Recursion</h2>
+<h2 name="js29">29. Display Fibonacci Sequence Using Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program displays the Fibonacci sequence up to a specified number of terms using 
 recursion. It prompts the user to enter the number of terms and then uses a recursive 
@@ -16467,7 +16467,7 @@ if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms >= 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js30">30. Find Factorial of Number Using Recursion</h2>
+<h2 name="js30">30. Find Factorial of Number Using Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the factorial of a given non-negative integer using recursion. 
 It prompts the user to enter a non-negative integer and then uses a recursive function to 
@@ -16501,7 +16501,7 @@ if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js31">31. Convert Decimal to Binary</h2>
+<h2 name="js31">31. Convert Decimal to Binary</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program converts a decimal number to its binary equivalent. It prompts the user 
 to enter a decimal number and then calculates and displays its binary representation.</p>
@@ -16539,7 +16539,7 @@ if (!isNaN(decimalNumber) && Number jsInteger(decimalNumber) && decimalNumber >=
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js32">32. Find ASCII Value of Character</h2>
+<h2 name="js32">32. Find ASCII Value of Character</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a character and then calculates and displays 
 its ASCII value.</p>
@@ -16558,7 +16558,7 @@ if (character.length === 1) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js33">33. Check Whether a String is Palindrome or Not</h2>
+<h2 name="js33">33. Check Whether a String is Palindrome or Not</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a given string is a palindrome or not. A palindrome is a 
 string that reads the same forward as backward.</p>
@@ -16594,7 +16594,7 @@ if (inputString.length > 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js34">34. Sort Words in Alphabetical Order</h2>
+<h2 name="js34">34. Sort Words in Alphabetical Order</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a sentence or a list of words and then sorts 
 and displays the words in alphabetical order.</p>
@@ -16619,7 +16619,7 @@ if (inputString.length > 0) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js35">35. Replace Characters of a String</h2>
+<h2 name="js35">35. Replace Characters of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a string, a target character, and a replacement 
 character. It then replaces all occurrences of the target character with the replacement 
@@ -16655,7 +16655,7 @@ if (inputString.length > 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js36">36. Reverse a String</h2>
+<h2 name="js36">36. Reverse a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a string and then reverses and displays the 
 characters of the string.</p>
@@ -16676,7 +16676,7 @@ if (inputString.length > 0) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js37">37. Check the Number of Occurrences of a Character in the String</h2>
+<h2 name="js37">37. Check the Number of Occurrences of a Character in the String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks the number of occurrences of a character in a given string:</p>
 
@@ -16707,7 +16707,7 @@ if (inputString.length > 0 && targetChar.length === 1) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js38">38. Convert the First Letter of a String into Uppercase</h2>
+<h2 name="js38">38. Convert the First Letter of a String into Uppercase</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program converts the first letter of a string to uppercase:</p>
 
@@ -16728,7 +16728,7 @@ if (inputString.length > 0) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js39">39. Count the Number of Vowels in a String</h2>
+<h2 name="js39">39. Count the Number of Vowels in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program counts the number of vowels in a given string:</p>
 
@@ -16762,7 +16762,7 @@ if (inputString.length > 0) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js40">40. Check Whether a String Starts and Ends</h2>
+<h2 name="js40">40. Check Whether a String Starts and Ends</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a string starts and ends with certain characters using 
 the startsWith and endsWith methods in JavaScript:</p>
@@ -16788,7 +16788,7 @@ if (inputString.length > 0) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js41">41. Replace All Occurrences of a String</h2>
+<h2 name="js41">41. Replace All Occurrences of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Replace all occurrences of a substring in a string in JavaScript, you can use the 
 <span class="consolas">replace()</span> method along with a regular expression with 
@@ -16817,7 +16817,7 @@ console.log(`Modified String: ${modifiedString}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js42">42. Create Multiline Strings</h2>
+<h2 name="js42">42. Create Multiline Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program creates multiline strings using template literals (introduced in ECMAScript 6).</p>
 
@@ -16832,7 +16832,7 @@ let multilineString = `
 console.log(multilineString);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js43">43. Format Numbers as Currency Strings</h2>
+<h2 name="js43">43. Format Numbers as Currency Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program format numbers as currency strings:</p>
 
@@ -16847,7 +16847,7 @@ let formattedAmount = amount.toLocaleString('en-US', {style: 'currency', currenc
 console.log(`Formatted Amount: ${formattedAmount}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js44">44. Generate Random String</h2>
+<h2 name="js44">44. Generate Random String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random string in JavaScript, you can create a function that 
 generates a string with random characters.</p>
@@ -16870,7 +16870,7 @@ let randomstring = generateRandomString(8);
 console.log(`Random String: ${randomstring}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js45">45. Check if a String Starts with Another String</h2>
+<h2 name="js45">45. Check if a String Starts with Another String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a string starts with another string using the 
 <span class="consolas">startsWith</span> method.</p>
@@ -16890,7 +16890,7 @@ console.log(`Does the string start with '${searchString}'? ${startsWith}`);
   <b><a href="#js0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js46">46. Trim a String</h2>
+<h2 name="js46">46. Trim a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program trims leading and trailing whitespaces from a string using the 
 <span class="consolas">trim()</span> method.</p>
@@ -16907,7 +16907,7 @@ console.log(`Original String: '${stringWithSpaces}'`);
 console.log(`Trimmed String: '${trimmedString}'`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js47">47. Check Whether a String Contains a Substring</h2>
+<h2 name="js47">47. Check Whether a String Contains a Substring</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a string contains a substring in JavaScript using the 
 <span class="consolas">includes()</span> method or the
@@ -16930,7 +16930,7 @@ console.log(`Does the string contain '${substringToCheck}'? ${containsSubstring}
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js48">48. Compare Two Strings</h2>
+<h2 name="js48">48. Compare Two Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program compare two strings in JavaScript, you can use the standard comparison 
 operators ( <span class="consolas">=== , !== , &lt; , &gt; , &lt;= , &gt;=</span> ).</p>
@@ -16951,7 +16951,7 @@ console.log(`Case-sensitive comparison: ${caseSensitiveComparison}`);
 console.log(`Case-insensitive comparison: ${caselnsensitiveComparison}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js49">49. Encode a String to Base64</h2>
+<h2 name="js49">49. Encode a String to Base64</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program encode a string to Base64 in JavaScript, you can use the 
 <span class="consolas">btoa()</span> function.</p>
@@ -16971,7 +16971,7 @@ console.log(`Base64 Encoded String: ${base64EncodedString}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js50">50. Replace all Instances of a Character in a String</h2>
+<h2 name="js50">50. Replace all Instances of a Character in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program replace all instances of a character in a string in JavaScript, you can use 
 the <span class="consolas">replace()</span> method with a regular expression.</p>
@@ -16994,7 +16994,7 @@ console.log(`Original String: ${originalString}`);
 console.log(`Modified String: ${modifiedString}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js51">51. Replace All Line Breaks with</h2>
+<h2 name="js51">51. Replace All Line Breaks with</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program replace all line breaks (newline characters) in a string with a specific 
 string or character, you can use the <span class="consolas">replace()</span> method with 
@@ -17022,7 +17022,7 @@ console.log(stringWithoutLineBreaks);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js52">52. Check Leap Year</h2>
+<h2 name="js52">52. Check Leap Year</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a year is a leap year with a simple function. A leap year is a 
 year that is evenly divisible by 4, except for years that are divisible by 100. However, 
@@ -17046,7 +17046,7 @@ if (isLeapYear(yearToCheck)) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js53">53. Format the Date</h2>
+<h2 name="js53">53. Format the Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Formatting a date in JavaScript typically involves using the 
 <span class="consolas">toLocaleDateString()</span> method or constructing a
@@ -17074,7 +17074,7 @@ console.log(`Formatted Date: ${formattedDate}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js54">54. Display Current Date</h2>
+<h2 name="js54">54. Display Current Date</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Display the current date in JavaScript, you can use the 
 <span class="consolas">Date</span> object to get the current date and time and then
@@ -17089,7 +17089,7 @@ let formattedDate = currentDate.toLocaleDateString('en-US');
 console.log(' Current Date: ${formattedDate}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js55">55. Compare The Value of Two Dates</h2>
+<h2 name="js55">55. Compare The Value of Two Dates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Compare the values of two dates using standard comparison operators ( 
 <span class="consolas">&lt; , &lt;= , &gt; , &gt;=</span> ).
@@ -17114,7 +17114,7 @@ if (date 1 < date2) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js56">56. Create Countdown Timer</h2>
+<h2 name="js56">56. Create Countdown Timer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Create a countdown timer in JavaScript, you can use the 
 <span class="consolas">setlnterval()</span> function to update the timer at regular 
@@ -17145,7 +17145,7 @@ function updateCountdown() {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js57">57. Remove Specific Item From an Array</h2>
+<h2 name="js57">57. Remove Specific Item From an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Remove a specific item from an array in JavaScript, you can use the 
 <span class="consolas">filter()</span> method or the 
@@ -17170,7 +17170,7 @@ console.log("Original Array:", originalArray);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js58">58. Check if An Array Contains a Specified Value</h2>
+<h2 name="js58">58. Check if An Array Contains a Specified Value</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Check if an array contains a specified value in JavaScript, you can use the 
 <span class="consolas">includes()</span> method or the
@@ -17186,7 +17186,7 @@ let containsValue = myArray.includes(valueToCheck);
 console.log(' Does the array include ${valueToCheck}? ${containsValue}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js59">59. Insert Item in an Array</h2>
+<h2 name="js59">59. Insert Item in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Insert an item into an array in JavaScript, you can use the 
 <span class="consolas">push()</span> method to add the item at the end of the array, or 
@@ -17202,7 +17202,7 @@ myArray.push(itemToInsert);
 console.log("Array after inserting:", myArray);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js60">60. Get Random Item From an Array</h2>
+<h2 name="js60">60. Get Random Item From an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To get a random item from an array in JavaScript, you can use the 
 <span class="consolas">Math.random()</span> function to generate a random index within 
@@ -17224,7 +17224,7 @@ console.log("Random Item:", randomitem);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js61">61. Perform Intersection Between Two Arrays</h2>
+<h2 name="js61">61. Perform Intersection Between Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the intersection (common elements) between two arrays in JavaScript, you can 
 use various methods.</p>
@@ -17241,7 +17241,7 @@ let intersection = arrayl.filter(value => array2.includes(value));
 console.log("Intersection:", intersection);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js62">62. Split Array into Smaller Chunks</h2>
+<h2 name="js62">62. Split Array into Smaller Chunks</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To split an array into smaller chunks in JavaScript, you can use a loop and the 
 <span class="consolas">slice()</span> method.</p>
@@ -17268,7 +17268,7 @@ console.log("Chunks:", chunks);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js63">63. Get File Extension</h2>
+<h2 name="js63">63. Get File Extension</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To get the file extension from a string representing a file name in JavaScript, you 
 can use various methods. One common approach is to use the <span class="consolas">split()
@@ -17292,7 +17292,7 @@ let fileExtension = getFileExtension(fileName);
 console.log('File Extension: ${fileExtension}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js64">64. Check If a Variable Is undefined or null</h2>
+<h2 name="js64">64. Check If a Variable Is undefined or null</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if a variable is <span class="consolas">undefined</span> or 
 <span class="consolas">null</span> in JavaScript, you can use a simple 
@@ -17315,7 +17315,7 @@ if (myVariable === undefined || myVariable === null) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js65">65. Generate a Random Number Between Two Numbers</h2>
+<h2 name="js65">65. Generate a Random Number Between Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random number between two specific numbers in JavaScript, you can use 
 the <span class="consolas">Math.random()</span> function along with some arithmetic.</p>
@@ -17335,7 +17335,7 @@ letrandomNum = getRandomNumber(l, 100);
 console.log("Random Number:", randomNum);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js66">66. Get The Current URL</h2>
+<h2 name="js66">66. Get The Current URL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To get the current URL in a web browser using JavaScript, you can use the 
 <span class="consolas">window.location</span> object.</p>
@@ -17361,7 +17361,7 @@ console.log("Query Parameters:", queryParams);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js67">67. Validate An Email Address</h2>
+<h2 name="js67">67. Validate An Email Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To validate an email address in JavaScript, you can use a regular expression.</p>
 
@@ -17381,7 +17381,7 @@ console.log("Email is not valid");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js68">68. Check If a Variable is of Function Type</h2>
+<h2 name="js68">68. Check If a Variable is of Function Type</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if a variable is of the function type in JavaScript, you can use the 
 <span class="consolas">typeof</span> operator.</p>
@@ -17404,7 +17404,7 @@ if (typeof myFunction === 'function') {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js69">69. Work With Constants</h2>
+<h2 name="js69">69. Work With Constants</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can work with constants using the <span class="consolas">const</span> keyword to declare variables whose values 
 should not be reassigned.</p>
@@ -17420,7 +17420,7 @@ const PI = 3.14159;
 console.log("The value of PI is:", PI);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js70">70. Pass Parameter to a setTimeout() Function</h2>
+<h2 name="js70">70. Pass Parameter to a setTimeout() Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To pass parameters to a function inside <span class="consolas">setTimeout()</span>, you can use an anonymous 
 function or an arrow function.</p>
@@ -17441,7 +17441,7 @@ setTimeout(function() {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js71">71. Generate a Range of Numbers and Characters</h2>
+<h2 name="js71">71. Generate a Range of Numbers and Characters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a range of numbers or characters in JavaScript, you can use a loop or 
 other methods depending on your specific requirements.</p>
@@ -17459,7 +17459,7 @@ let numberRange = generateNumberRange(l, 5);
 console.log("Number Range:", numberRange);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js72">72. Perform Function Overloading</h2>
+<h2 name="js72">72. Perform Function Overloading</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript does not support traditional function overloading like some other 
 programming languages do, where you can define multiple functions with the same name but 
@@ -17495,7 +17495,7 @@ exampleFunction(true, "world"); // Invalid arguments
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js73">73. Implement a Stack</h2>
+<h2 name="js73">73. Implement a Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can implement a basic stack data structure in JavaScript using an array.</p>
 
@@ -17556,7 +17556,7 @@ console.log("Is the stack empty?", stack.isEmpty()); // Outputs: false
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js74">74. Implement a Queue</h2>
+<h2 name="js74">74. Implement a Queue</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can implement a basic queue data structure in JavaScript using an array.</p>
 
@@ -17615,7 +17615,7 @@ console.log("Is the queue empty?", queue.isEmpty()); // Outputs: false
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js75">75. Check if a Number is Float or Integer</h2>
+<h2 name="js75">75. Check if a Number is Float or Integer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can check if a number is a float or an integer by examining its fractional part.</p>
 
@@ -17638,7 +17638,7 @@ checkNumberType(NaN); // Outputs: NaN is not a valid number.
 checkNumberType("abc"); // Outputs: abc is not a valid number.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js76">76. Pass a Function as Parameter</h2>
+<h2 name="js76">76. Pass a Function as Parameter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can pass a function as a parameter to another function. This allows you to create 
 higher-order functions, which are functions that can accept other functions as arguments.</p>
@@ -17668,7 +17668,7 @@ console.log("Result of multiplication:", result2); // Outputs: 15
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js77">77. Get the Dimensions of an Image</h2>
+<h2 name="js77">77. Get the Dimensions of an Image</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To get the dimensions (width and height) of an image in JavaScript, you can create an 
 <span class="consolas">Image></span> object, load the image, and then access the 
@@ -17700,7 +17700,7 @@ var imageUrl = "path/to/your/image.jpg";
 getlmageDimensions(imageUrl);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js78">78. Remove All Whitespaces From a Text</h2>
+<h2 name="js78">78. Remove All Whitespaces From a Text</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To remove all whitespaces from a text in JavaScript, you can use a regular expression 
 and the <span class="consolas">replace</span> method.</p>
@@ -17723,7 +17723,7 @@ console.log("Text without Whitespaces:", textWithoutWhitespaces);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js79">79. Write to Console</h2>
+<h2 name="js79">79. Write to Console</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Writing to the console in JavaScript is typically done using the 
 <span class="consolas">console.log()</span> method.</p>
@@ -17742,7 +17742,7 @@ let lastName = "Doe";
 console.log("Full Name:", firstName, lastName);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js80">80. Convert Date to Number</h2>
+<h2 name="js80">80. Convert Date to Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a JavaScript <span class="consolas">Date</span> object to a numeric value 
 representing the number of milliseconds since the Unix Epoch (January 1,1970), you can use 
@@ -17763,7 +17763,7 @@ console.log("Numeric Representation:", numericDate);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js81">81. Find the Average of Two Numbers</h2>
+<h2 name="js81">81. Find the Average of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the average of two numbers in JavaScript, you can add the two numbers together 
 and then divide the sum by 2.</p>
@@ -17785,7 +17785,7 @@ let result = findAverage(numberl, number2);
 console.log(`The average of ${number1} and ${number2} is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js82">82. Calculate the Area of a Circle</h2>
+<h2 name="js82">82. Calculate the Area of a Circle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculate the area of a circle in JavaScript:</p>
 
@@ -17811,7 +17811,7 @@ console.log(`The area of a circle with radius ${radius} is: ${area}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js83">83. Random Color Generator</h2>
+<h2 name="js83">83. Random Color Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random color in JavaScript, you can create a function that generates 
 random values for the red, green, and blue components of the color.</p>
@@ -17833,7 +17833,7 @@ const randomColor = generateRandomColor();
 console.log("Random Color:", randomColor);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js84">84. Check if a String is Empty</h2>
+<h2 name="js84">84. Check if a String is Empty</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if a string is empty in JavaScript, you can use the 
 <span class="consolas">length</span> property of the string. If the length is zero,
@@ -17856,7 +17856,7 @@ console.log("Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outpu
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js85">85. Capitalize the First Letter of a String</h2>
+<h2 name="js85">85. Capitalize the First Letter of a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To capitalize the first letter of a string in JavaScript, you can use a combination of the 
 <span class="consolas">charAt()</span>,
@@ -17879,7 +17879,7 @@ console.log("Original String:", originalString);
 console.log("Capitalized String:", capitalizedString);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js86">86. Find the Maximum Element in an Array</h2>
+<h2 name="js86">86. Find the Maximum Element in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the maximum element in an array in JavaScript, you can use the 
 <span class="consolas">Math.max()</span> function along with
@@ -17910,7 +17910,7 @@ console.log("Maximum Element:", maxNumber);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js87">87. Reverse an Array</h2>
+<h2 name="js87">87. Reverse an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To reverse an array in JavaScript, you can use the 
 <span class="consolas">reverse()</span> method, which is available for arrays. This
@@ -17929,7 +17929,7 @@ console.log("Original Array:", originalArray);
 console.log("Reversed Array:", reversedArray);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js88">88. Calculate the Power of a Number</h2>
+<h2 name="js88">88. Calculate the Power of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To calculate the power of a number in JavaScript, you can use the 
 <span class="consolas">Math.pow()</span> method or the exponentiation
@@ -17959,7 +17959,7 @@ console.log(`${baseNumber} to the power of ${exponentNumber} using the exponenti
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js89">89. Find the Minimum Element in an Array</h2>
+<h2 name="js89">89. Find the Minimum Element in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the minimum element in an array in JavaScript, you can use the 
 <span class="consolas">Math.min()</span> function along with the
@@ -17984,7 +17984,7 @@ console.log("Array:", numbers);
 console.log("Minimum Element:", minNumber);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js90">90. Convert Minutes to Hours and Minutes</h2>
+<h2 name="js90">90. Convert Minutes to Hours and Minutes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a total number of minutes to hours and remaining minutes in JavaScript, you 
 can use simple mathematical operations.</p>
@@ -18014,7 +18014,7 @@ console.log(`${totalMinutes} minutes is equivalent to: ${convertedTime}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js91">91. Find the Sum of Digits in a Number</h2>
+<h2 name="js91">91. Find the Sum of Digits in a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the sum of digits in a number using JavaScript, you can use a loop to iterate 
 through each digit and add them together.</p>
@@ -18041,7 +18041,7 @@ const result = sumOfDigits(inputNumber);
 console.log(`The sum of digits in ${inputNumber} is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js92">92. Check if a String is a Palindromic Phrase</h2>
+<h2 name="js92">92. Check if a String is a Palindromic Phrase</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if a string is a palindromic phrase in JavaScript, you can create a function 
 that removes non­ alphanumeric characters and compares the string with its reversed version.</p>
@@ -18071,7 +18071,7 @@ console.log(`Is ${phrase2} a palindromic phrase? ${isPalindromicPhrase(phrase2)}
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js93">93. Generate a Random Password</h2>
+<h2 name="js93">93. Generate a Random Password</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random password in JavaScript, you can create a function that combines 
 random characters from various character sets.</p>
@@ -18111,7 +18111,7 @@ console.log(`Generated Password: ${randomPassword}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js94">94. Calculate Simple Interest</h2>
+<h2 name="js94">94. Calculate Simple Interest</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Program To calculate simple interest in JavaScript:</p>
 
@@ -18139,7 +18139,7 @@ console.log(`Investment Time: ${investmentTime} years`);
 console.log(`Simple Interest: $${interestAmount}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js95">95. Implement a Basic Stopwatch</h2>
+<h2 name="js95">95. Implement a Basic Stopwatch</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To implement a basic stopwatch in JavaScript, you can use the 
 <span class="consolas">Date</span> object to measure the elapsed time.</p>
@@ -18176,7 +18176,7 @@ function updateDisplay() {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js96">96. Check if a Number is a Perfect Number</h2>
+<h2 name="js96">96. Check if a Number is a Perfect Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A perfect number is a positive integer that is equal to the sum of its proper divisors 
 (excluding itself).</p>
@@ -18203,7 +18203,7 @@ const result = isPerfectNumber(testNumber);
 console.log(`Is ${testNumber} a perfect number? ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js97">97. This program calculates the Volume of a Cylinder</h2>
+<h2 name="js97">97. This program calculates the Volume of a Cylinder</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the Volume of a Cylinder:</p>
 
@@ -18230,7 +18230,7 @@ console.log(`Cylinder Volume: ${cylinderVolume.toFixed(2)} cubic units`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js98">98. Generate a Random Quote</h2>
+<h2 name="js98">98. Generate a Random Quote</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a random quote in JavaScript, you can create an array of quotes and use a function to pick a
 random quote from that array.</p>
@@ -18263,7 +18263,7 @@ console.log("Random Quote:", randomQuote);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js99">99. Find the Intersection of Two Arrays</h2>
+<h2 name="js99">99. Find the Intersection of Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the intersection of two arrays in JavaScript, you can create a function 
 that iterates through both arrays and identifies the common elements.</p>
@@ -18295,7 +18295,7 @@ console.log("Intersection of Arrays:", result);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js100">100. Convert Feet to Meters</h2>
+<h2 name="js100">100. Convert Feet to Meters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert feet to meters in JavaScript, you can use the following conversion formula:
 <span class="consolas">Meters=Feet*0.3048</span>.</p>
@@ -18323,7 +18323,7 @@ console.log(`${feetValue} feet is equal to ${metersValue.toFixed(2)} meters`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js101">101. Convert Days to Years, Months, and Days</h2>
+<h2 name="js101">101. Convert Days to Years, Months, and Days</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a given number of days into years, months, and remaining days in JavaScript, 
 you can use the following function:</p>
@@ -18359,7 +18359,7 @@ console.log(`${totalDays} days is approximately ${result.years} years, ${result.
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js102">102. Find the Median of an Array</h2>
+<h2 name="js102">102. Find the Median of an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the median of an array in JavaScript, you can create a function that sorts the 
 array and then determines the median based on its length.</p>
@@ -18393,7 +18393,7 @@ function findMedian(arr) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js103">103. Calculate the Distance Between Two Points</h2>
+<h2 name="js103">103. Calculate the Distance Between Two Points</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To calculate the distance between two points (xl, yl) and (x2, y2) in a 
 two-dimensional plane:</p>
@@ -18417,7 +18417,7 @@ const result = calculateDistance(xl, yl, x2, y2);
 console.log(`The distance between (${xl}, ${y1}) and (${x2}, ${y2}) is ${result.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js104">104. Check if a Number is a Perfect Square</h2>
+<h2 name="js104">104. Check if a Number is a Perfect Square</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To check if a number is a perfect square in JavaScript, you can calculate the square 
 root of the number and then check if the square of the integer part of the square root 
@@ -18445,7 +18445,7 @@ console.log(`Is ${testNumber} a perfect square? ${result}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js105">105. Find the Area of a Rectangle</h2>
+<h2 name="js105">105. Find the Area of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the area of a rectangle in JavaScript, you can create a function that takes 
 the length and width as parameters and applies the formula:</p>
@@ -18468,7 +18468,7 @@ const result = calculateRectangleArea(rectangleLength, rectangleWidth);
 console.log(`The area of the rectangle with length ${rectangleLength} and width ${rectangleWidth} is ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js106">106. Convert Binary to Decimal</h2>
+<h2 name="js106">106. Convert Binary to Decimal</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert a binary number to a decimal number in JavaScript, you can create a 
 function that takes a binary string as input and calculates the decimal equivalent.</p>
@@ -18494,7 +18494,7 @@ console.log(`The decimal equivalent of binary ${binaryNumber} is ${decimalResult
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js107">107. Count the Number of Words in a Sentence</h2>
+<h2 name="js107">107. Count the Number of Words in a Sentence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To count the number of words in a sentence in JavaScript, you can create a function 
 that splits the sentence into words and then counts the number of resulting elements in 
@@ -18520,7 +18520,7 @@ const result = countWords(sentence);
 console.log(`The sentence "${sentence}" has ${result} words.`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js108">108. Find the Union of Two Arrays</h2>
+<h2 name="js108">108. Find the Union of Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To find the union of two arrays in JavaScript, you can create a function that 
 concatenates the arrays and removes duplicate elements.</p>
@@ -18547,7 +18547,7 @@ console.log("Union of Arrays:", result);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js109">109. Calculate the Factorial of a Large Number</h2>
+<h2 name="js109">109. Calculate the Factorial of a Large Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculating the factorial of a large number can quickly lead to very large results, 
 and JavaScript has limitations in terms of precision. To handle large factorials, you 
@@ -18573,7 +18573,7 @@ const result = calculateFactorial(number);
 console.log(`The factorial of ${number} is:\n$ {result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js110">110. Check if a Number is a Strong Number</h2>
+<h2 name="js110">110. Check if a Number is a Strong Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A strong number (or digital factorial) is a number such that the sum of its individual 
 digits, each factorialized, is equal to the number itself. To check if a number is a 
@@ -18611,7 +18611,7 @@ console.log(`${testNumber} is a strong number: ${result}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js111">111. Check if a Number is a Narcissistic Number</h2>
+<h2 name="js111">111. Check if a Number is a Narcissistic Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A Narcissistic Number (or Armstrong Number) is a number that is the sum of its own 
 digits each raised to the power of the number of digits. For example, 153 is a 
@@ -18638,7 +18638,7 @@ const result = isNarcissisticNumber(testNumber);
 console.log(`${testNumber} is a Narcissistic Number: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js112">112. Count the Number of Consonants in a String</h2>
+<h2 name="js112">112. Count the Number of Consonants in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can create a JavaScript function to count the number of consonants in a given string.</p>
 
@@ -18666,7 +18666,7 @@ console.log(`The number of consonants in "${testString}" is: ${result}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js113">113. Check if a Number is a Triangular Number</h2>
+<h2 name="js113">113. Check if a Number is a Triangular Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is a triangular number. A triangular 
 number is a number that can be represented in the form of a triangle with dots. 
@@ -18695,7 +18695,7 @@ const result = isTriangularNumber(testNumber);
 console.log(`${testNumber} is a triangular number: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js114">114. Find the Area of a Trapezoid</h2>
+<h2 name="js114">114. Find the Area of a Trapezoid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a trapezoid given the lengths of its bases ( 
 <span class="consolas">a and b</span> ) and its height ( 
@@ -18725,7 +18725,7 @@ console.log(`The area of the trapezoid is: ${result}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js115">115. Calculate the Greatest Common Divisor (GCD) of Two Numbers</h2>
+<h2 name="js115">115. Calculate the Greatest Common Divisor (GCD) of Two Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Greatest Common Divisor (GCD), also known as the Greatest Common Factor (GCF) or 
 Highest Common Factor (HCF), is the largest positive integer that divides both numbers 
@@ -18753,7 +18753,7 @@ const gcdResult = calculateGCD(numberl, number 2);
 console.log(`The GCD of ${numberl} and ${number2} is: ${gcdResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js116">116. Check if a Number is a Fibonacci Number</h2>
+<h2 name="js116">116. Check if a Number is a Fibonacci Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A Fibonacci number is a number in the Fibonacci sequence, which is a series of 
 numbers where each number is the sum of the two preceding ones. The sequence starts 
@@ -18782,7 +18782,7 @@ console.log(' $ {testNumber} is a Fibonacci number: $ {result}');
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js117">117. Find the Perimeter of a Rectangle</h2>
+<h2 name="js117">117. Find the Perimeter of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the perimeter of a rectangle given the lengths of its sides ( 
 <span class="consolas">length and width</span> ). The
@@ -18804,7 +18804,7 @@ const perimeterResult = rectanglePerimeter(rectangleLength, rectangleWidth);
 console.log(' The perimeter of the rectangle is: $ {perimeterResult}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js118">118. Convert Roman Numerals to Numbers</h2>
+<h2 name="js118">118. Convert Roman Numerals to Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Converting Roman numerals to numbers involves understanding the Roman numeral system 
 and its rules.</p>
@@ -18850,7 +18850,7 @@ function romanToNumber(roman) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js119">119. Check if a String is Anagram of Another Strin</h2>
+<h2 name="js119">119. Check if a String is Anagram of Another Strin</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An anagram is a word or phrase formed by rearranging the letters of another. To check 
 if two strings are anagrams, you can compare whether the characters in both strings have 
@@ -18906,7 +18906,7 @@ console.log(`${string1} and ${string2} are anagrams: ${result}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js120">120. Generate Pascal's Triangle</h2>
+<h2 name="js120">120. Generate Pascal's Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Pascal's Triangle is a triangular array of binomial coefficients. Each number in the 
 triangle is the sum of the two directly above it.</p>
@@ -18953,7 +18953,7 @@ console.log(triangle);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js121">121. Convert Decimal to Roman Numerals</h2>
+<h2 name="js121">121. Convert Decimal to Roman Numerals</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Converting a decimal number to Roman numerals involves finding the combination of 
 Roman numeral symbols that represent the given decimal value.</p>
@@ -19004,7 +19004,7 @@ console.log(`The Roman numeral representation of ${decimalNumber} is: ${romanNum
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js122">122. Find the Area of a Parallelogram</h2>
+<h2 name="js122">122. Find the Area of a Parallelogram</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a parallelogram given the length of its base and 
 the corresponding perpendicular height.</p>
@@ -19029,7 +19029,7 @@ const areaResult = parallelogramArea(parallelogramBase, parallelogramHeight);
 console.log(`The area of the parallelogram is: ${areaResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js123">123. Basic Rock, Paper, Scissors Game</h2>
+<h2 name="js123">123. Basic Rock, Paper, Scissors Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Here's a basic implementation of a Rock, Paper, Scissors game using JavaScript.</p>
 
@@ -19098,7 +19098,7 @@ function game() {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js124">124. Basic Slot Machine Game</h2>
+<h2 name="js124">124. Basic Slot Machine Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a basic slot machine game in which three symbols are randomly 
 selected. If all three symbols are the same, the player wins; otherwise, they are 
@@ -19140,7 +19140,7 @@ spin();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js125">125. Check if a Number is a Smith Number</h2>
+<h2 name="js125">125. Check if a Number is a Smith Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is a Smith number. A Smith number is 
 a composite number for which the sum of its digits is equal to the sum of the prime 
@@ -19187,7 +19187,7 @@ console.log(isSmithNumber(728)); // Output: true
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js126">126. Basic Chessboard</h2>
+<h2 name="js126">126. Basic Chessboard</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a basic representation of a chessboard using characters. It 
 creates an 8x8 grid with alternating black and white squares, providing a simple visual 
@@ -19217,7 +19217,7 @@ const chessboard = generateChessboard();
 console.log(chessboard);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js127">127. Generate a Random Password with Specific Criteria</h2>
+<h2 name="js127">127. Generate a Random Password with Specific Criteria</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random password based on specified criteria, including the 
 length and the types of characters (uppercase letters, lowercase letters, numbers, and 
@@ -19269,7 +19269,7 @@ if (randomPassword) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js128">128. Basic Maze Solver</h2>
+<h2 name="js128">128. Basic Maze Solver</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a basic maze solver that navigates through a maze represented by 
 a 2D array. The solver uses a simple depth-first search algorithm to find a path from 
@@ -19339,7 +19339,7 @@ solveMaze(maze);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js129">129. Check if a String is Pangram or Not</h2>
+<h2 name="js129">129. Check if a String is Pangram or Not</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a given string is a pangram or not. A pangram is a sentence 
 that contains every letter of the alphabet at least once.</p>
@@ -19367,7 +19367,7 @@ if (isPangram(inputString)) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js130">130. Basic Sudoku Solver</h2>
+<h2 name="js130">130. Basic Sudoku Solver</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program solves a basic 9x9 Sudoku puzzle using a backtracking algorithm. The 
 solver fills in the empty cells of the Sudoku grid by recursively trying numbers until 
@@ -19463,7 +19463,7 @@ if (solveSudoku(sudokuBoard)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js131">131. Convert Objects to Strings</h2>
+<h2 name="js131">131. Convert Objects to Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program convert JavaScript objects to strings, you can use the 
 <span class="consolas">JSON.stringify()</span> method.</p>
@@ -19487,7 +19487,7 @@ console.log("\nJSON-formatted String:");
 console.log(jsonString);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js132">132. Find the Area of an Ellipse</h2>
+<h2 name="js132">132. Find the Area of an Ellipse</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of an ellipse given its semi-major axis (&alpha;) and 
 semi-minor axis (&beta;). The formula for the area of an ellipse is;
@@ -19521,7 +19521,7 @@ console.log(`The area of the ellipse is: ${ellipseArea.toFixed(2)}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js133">133. Check if a Number is a Palindrome in Binary</h2>
+<h2 name="js133">133. Check if a Number is a Palindrome in Binary</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether a given number is a palindrome in binary representation. 
 A palindrome in binary reads the same backward as forward.</p>
@@ -19540,7 +19540,7 @@ if (isBinaryPalindrome(numberToCheck)) {
   console.log(`$ {numberToCheck} is not a binary palindrome.`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js134">134. Find the Area of a Rhombus</h2>
+<h2 name="js134">134. Find the Area of a Rhombus</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a rhombus given the lengths of its diagonals 
 ( <span class="consolas">d1</span> and <span class="consolas">d2</span> ). The formula
@@ -19565,7 +19565,7 @@ console.log(`The area of the rhombus is: ${rhombus Area.toFixed(2)`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js135">135. Check if a Number is a Catalan Number</h2>
+<h2 name="js135">135. Check if a Number is a Catalan Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a Catalan number. Catalan 
 numbers are a sequence of natural numbers that occur in various counting problems, 
@@ -19609,7 +19609,7 @@ if (isCatalanNumber(numberToCheck)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js136">136. Find the Luhn Algorithm Check Digit</h2>
+<h2 name="js136">136. Find the Luhn Algorithm Check Digit</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Luhn algorithm, also known as the modulus 10 or mod 10 algorithm, is a simple 
 checksum formula used to validate various identification numbers, such as credit card 
@@ -19650,7 +19650,7 @@ console.log(`Full Number with Check Digit: ${fullNumber}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js137">137. Basic Maze Generator</h2>
+<h2 name="js137">137. Basic Maze Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic maze generator involves using an algorithm to generate a random maze 
 layout. One common algorithm for maze generation is the recursive backtracking algorithm.</p>
@@ -19712,7 +19712,7 @@ mazeGenerator.printMazeO;
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js138">138. Check if a Year is a Magic Year</h2>
+<h2 name="js138">138. Check if a Year is a Magic Year</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A magic year is a year in which the product of the month and day (in two-digit form) 
 equals the last two digits of the year. For example, in the year 1978, the product of 
@@ -19734,7 +19734,7 @@ if (isMagicYear(yearToCheck)) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js139">139. Basic Crossword Puzzle</h2>
+<h2 name="js139">139. Basic Crossword Puzzle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic crossword puzzle involves defining a grid and placing words into it, 
 ensuring that they intersect correctly. Below is a simple JavaScript program that 
@@ -19782,7 +19782,7 @@ crossword.printPuzzle();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js140">140. Find the Area of a Regular Polygon</h2>
+<h2 name="js140">140. Find the Area of a Regular Polygon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a regular polygon given the number of sides ( 
 <span class="consolas">n</span> ) and the side length ( 
@@ -19807,7 +19807,7 @@ const polygonArea = calculateRegularPolygonArea(numberOfSides, sideLength);
 console.log(`The area of the regular polygon is: ${polygonArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js141">141. Check if a Number is an Abundant Number</h2>
+<h2 name="js141">141. Check if a Number is an Abundant Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An abundant number (or excessive number) is a positive integer that is smaller than the sum of its proper
 divisors, excluding itself. The sum of proper divisors is greater than the number itself.</p>
@@ -19841,7 +19841,7 @@ if (isAbundantNumber(numberToCheck)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js142">142. Basic Word Guessing Game</h2>
+<h2 name="js142">142. Basic Word Guessing Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic word guessing game in a console environment involves generating a 
 random word, allowing the player to make guesses, and providing feedback on correct and 
@@ -19907,7 +19907,7 @@ game.makeGuess('s');
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js143">143. Calculate the Euler's Totient Function</h2>
+<h2 name="js143">143. Calculate the Euler's Totient Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates Euler's Totient Function, also known as Euler's Phi Function, 
 which counts the positive integers up to a given integer 
@@ -19950,7 +19950,7 @@ console.log(' Euler's Totient Function for ${n} is: $ {result}');
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js144">144. Basic Memory Matching Game</h2>
+<h2 name="js144">144. Basic Memory Matching Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic memory matching game involves displaying a grid of face-down cards, 
 allowing the player to flip two cards at a time, and checking for matches.</p>
@@ -20043,7 +20043,7 @@ game.flipCard(l, 0);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js145">145. Check if a Number is a Vampire Number</h2>
+<h2 name="js145">145. Check if a Number is a Vampire Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A vampire number is a composite (non-prime) natural number with an even number of 
 digits, which can be factored into two integers, both having half as many digits as the 
@@ -20101,7 +20101,7 @@ if (isVampireNumber(vampireNumber)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js146">146. Basic Simon Says Game</h2>
+<h2 name="js146">146. Basic Simon Says Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic Simon Says game involves generating and displaying a sequence of 
 colors, then challenging the player to repeat the sequence.</p>
@@ -20172,7 +20172,7 @@ simonSaysGame.playO;
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js147">147. Calculate the Area of a Hexagon</h2>
+<h2 name="js147">147. Calculate the Area of a Hexagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a regular hexagon given the side length 
 (<span class="consolas">s</span>). The formula for the area of a regular hexagon is 
@@ -20191,7 +20191,7 @@ const hexagonArea = calculateHexagonArea(sideLength);
 console.log(`The area of the hexagon is: ${hexagonArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js148">148. Check if a Number is a Pronic Number</h2>
+<h2 name="js148">148. Check if a Number is a Pronic Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a pronic number, also known as a 
 rectangular number or oblong number. A pronic number is a product of two consecutive 
@@ -20221,7 +20221,7 @@ if (isPronicNumber(pronicNumber)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js149">149. Basic Minesweeper Game</h2>
+<h2 name="js149">149. Basic Minesweeper Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic Minesweeper game involves generating a grid with mines and numbers, 
 allowing the player to uncover cells, and providing feedback on the presence of mines.</p>
@@ -20328,7 +20328,7 @@ minesweeperGame.uncoverCell(4, 4);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js150">150. Find the Area of a Pentagon</h2>
+<h2 name="js150">150. Find the Area of a Pentagon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a regular pentagon given the side length 
 (<span class="consolas">s</span>). The formula for the area of a regular pentagon is 
@@ -20347,7 +20347,7 @@ const pentagonArea = calculatePentagonArea(sideLength);
 console.log(`The area of the pentagon is: ${pentagonArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js151">151. Check if a Number is a Cube Number</h2>
+<h2 name="js151">151. Check if a Number is a Cube Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given non-negative integer is a cube number. A cube number is 
 a number that can be expressed as the cube of an integer. The nth cube number is given by 
@@ -20373,7 +20373,7 @@ if (isCubeNumber(numberToCheck)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js152">152. Basic Typing Speed Test</h2>
+<h2 name="js152">152. Basic Typing Speed Test</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating a basic typing speed test involves generating a random string, measuring the 
 time it takes for the user to type the string, and calculating the typing speed.</p>
@@ -20429,7 +20429,7 @@ typingTest.getUserlnput(userlnput);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js153">153. Find the Area of a Cube</h2>
+<h2 name="js153">153. Find the Area of a Cube</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a cube given the length of its side (
 <span class="consolas">s</span>). The formula for the surface area of a cube is 
@@ -20448,7 +20448,7 @@ const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
 console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js154">154. Find the Area of a Cone</h2>
+<h2 name="js154">154. Find the Area of a Cone</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a cone given the radius of its base 
 (<span class="consolas">r</span>) and the slant height (l). The formula for the surface 
@@ -20472,7 +20472,7 @@ console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js155">155. Check if a Number is a Happy Number</h2>
+<h2 name="js155">155. Check if a Number is a Happy Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A happy number is a positive integer that, when repeatedly replaced by the sum of the 
 squares of its digits, eventually reaches the number 1. If a number becomes 1, it is a 
@@ -20499,7 +20499,7 @@ if (isHappyNumber(happyNumber)) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js156">156. Calculate the Area of a Triangular Prism</h2>
+<h2 name="js156">156. Calculate the Area of a Triangular Prism</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a triangular prism given the lengths of 
 its base sides (<span class="consolas">a , b , and c</span>) and the height of the prism 
@@ -20530,7 +20530,7 @@ console.log(` The surface area of the triangular prism is: ${triangularPrismSurf
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js157">157. Check if a Number is a Fibonacci Prime</h2>
+<h2 name="js157">157. Check if a Number is a Fibonacci Prime</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is both a Fibonacci number and a prime 
 number. A Fibonacci prime is a number that is both a Fibonacci number and a prime number.</p>
@@ -20572,7 +20572,7 @@ if (isFibonacciPrime(fibonacciPrimeCandidate)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js158">158. Check if a Number is a Squareful Number</h2>
+<h2 name="js158">158. Check if a Number is a Squareful Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is a squareful number. A squareful 
 number is a positive integer where the square of each prime factor occurs in its prime 
@@ -20618,7 +20618,7 @@ if (isSquarefulNumber(squarefulNumber)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js159">159. Find the Area of a Tetrahedron</h2>
+<h2 name="js159">159. Find the Area of a Tetrahedron</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a regular tetrahedron given the length of its 
 edges ( <span class="consolas">a</span> ). The formula for the surface area of a regular 
@@ -20637,7 +20637,7 @@ const tetrahedronSurfaceArea = calculateTetrahedronSurfaceArea(edgeLength);
 console.log(`The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js160">160. Check if a Number is an Automorphic Number</h2>
+<h2 name="js160">160. Check if a Number is an Automorphic Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is an automorphic number. An automorphic number is a
 number whose square ends with the number itself. For example, 5 is an automorphic number because 5 A2 =
@@ -20666,7 +20666,7 @@ if (isAutomorphicNumber(automorphicNumber)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js161">161. Calculate the Area of a Pyramid</h2>
+<h2 name="js161">161. Calculate the Area of a Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a square pyramid given the length of the 
 base side ( <span class="consolas">s</span> ) and the slant height (
@@ -20690,7 +20690,7 @@ const pyramidSurfaceArea = calculatePyramidSurfaceArea(sideLength, slantHeight);
 console.log(`The surface area of the pyramid is: ${pyramidSurfaceArea.toFixed(2)}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js162">162. Check if a Number is a Smith-Morra Gambit Number</h2>
+<h2 name="js162">162. Check if a Number is a Smith-Morra Gambit Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is a Smith-Morra Gambit number. A 
 Smith-Morra Gambit number is a positive integer that can be expressed as the sum of the 
@@ -20731,7 +20731,7 @@ console.log(isSmithMorraGambitNumber(22)); // Output: true
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js163">163. Check if a Number is a Solitary Number</h2>
+<h2 name="js163">163. Check if a Number is a Solitary Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a number is a solitary number:</p>
 
@@ -20770,7 +20770,7 @@ if (isSolitaryNumber(solitaryNumber)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js164">164. Basic Tower of Hanoi Puzzle</h2>
+<h2 name="js164">164. Basic Tower of Hanoi Puzzle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Tower of Hanoi is a classic problem in computer science and mathematics. It 
 consists of three pegs and a number of disks of different sizes, which can slide onto 
@@ -20811,7 +20811,7 @@ towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js165">165. Calculate the Area of a Frustum</h2>
+<h2 name="js165">165. Calculate the Area of a Frustum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the surface area of a frustum of a cone given the radii of its 
 top and bottom bases (<span class="consolas">r1</span> and 
@@ -20831,7 +20831,7 @@ function surfaceAreaOfFrustum(rl, r2, l) {
 surfaceAreaOfFrustum(4, 8, 6);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js166">166. Check if a Number is a Motzkin Number</h2>
+<h2 name="js166">166. Check if a Number is a Motzkin Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is a Motzkin number. A Motzkin number is a number in
 the sequence of Motzkin numbers, which counts the number of different ways of drawing non-intersecting
@@ -20868,7 +20868,7 @@ if (isMotzkinNumber(motzkinNumber)) {
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js167">167. Check if a Number is a Padovan Number</h2>
+<h2 name="js167">167. Check if a Number is a Padovan Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks if a given positive integer is a Padovan number. A Padovan number 
 is a number in the Padovan sequence, which is similar to the Fibonacci sequence but uses 
@@ -20898,7 +20898,7 @@ if (isPadovanNumber(padovanNumber)) {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js168">168. Calculate the Area of a Koch Snowflake</h2>
+<h2 name="js168">168. Calculate the Area of a Koch Snowflake</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Koch snowflake is a mathematical curve and one of the earliest fractal curves to have been described.
 It can be constructed by starting with an equilateral triangle and repeatedly adding smaller equilateral
@@ -20924,7 +20924,7 @@ console.log(`The area of the Koch snowflake is: ${kochSnowflakeArea.toFixed(2)}`
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js169">169. Basic Chatbot</h2>
+<h2 name="js169">169. Basic Chatbot</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program is a simple and interactive script that allows users to engage in a text-based conversation with
 a virtual assistant.</p>
@@ -20963,7 +20963,7 @@ startChat();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js170">170. RGB to HEX Converter</h2>
+<h2 name="js170">170. RGB to HEX Converter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows you to convert RBG values to hexadecimal.</p>
 
@@ -20989,7 +20989,7 @@ const hexResult = convertToHex(redValue, greenValue, blueValue);
 console.log(`HEX: ${hexResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js171">171. Counter</h2>
+<h2 name="js171">171. Counter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows you to increment, decrement and reset a counter.</p>
 
@@ -21023,7 +21023,7 @@ resetCounter();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js172">172. Stop The Bomb</h2>
+<h2 name="js172">172. Stop The Bomb</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program to allow you stop an active bomb.</p>
 
@@ -21071,7 +21071,7 @@ startBomb();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js173">173. IP Address Generator</h2>
+<h2 name="js173">173. IP Address Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Generating IP addresses programmatically can be done using a programming language like JavaScript.
 Below is a simple example of an IP address generator in JavaScript. Note that this example generates random
@@ -21096,7 +21096,7 @@ const randomIps = generateMultipleRandomIps(numberOfIps);
 console.log('Random IP Addresses:’, randomIps);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js174">174. Digital clock</h2>
+<h2 name="js174">174. Digital clock</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Deploy a digital clock with this awesome program.</p>
 
@@ -21121,7 +21121,7 @@ setInterval(updateClock, 1000);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js175">175. Random Number Generator</h2>
+<h2 name="js175">175. Random Number Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random number between 1 and 10 and displays it in the console.</p>
 
@@ -21135,7 +21135,7 @@ const randomNumber = generateRandomNumber(l, 10);
 console.log("Random Number:", randomNumber);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js176">176. Simple JavaScript Quiz</h2>
+<h2 name="js176">176. Simple JavaScript Quiz</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program presents a simple JavaScript quiz with multiple-choice questions. It asks 
 the user for answers and provides feedback in the console.</p>
@@ -21188,7 +21188,7 @@ runQuiz();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js177">177. Text-based RPG Adventure</h2>
+<h2 name="js177">177. Text-based RPG Adventure</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes the user on a simple text-based RPG adventure where they make 
 choices to navigate through a story.</p>
@@ -21230,7 +21230,7 @@ textRPGAdventure();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js178">178. Dice Rolling Simulator</h2>
+<h2 name="js178">178. Dice Rolling Simulator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates rolling a six-sided die, providing a random result between 1 and 6.</p>
 
@@ -21244,7 +21244,7 @@ function rollDice() {
 rollDice();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js179">179. Seconds to Time Converter</h2>
+<h2 name="js179">179. Seconds to Time Converter</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes a number of seconds as input and converts it into hours, minutes, 
 and seconds, displaying the result in the console.</p>
@@ -21268,7 +21268,7 @@ convertSecondsToTime(inputSeconds);  / Time: 1 hours, 1 minutes, 5 seconds
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js180">180. Bar Chart Generator</h2>
+<h2 name="js180">180. Bar Chart Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes an array of numerical values and creates a simple horizontal bar 
 chart in the console.</p>
@@ -21289,7 +21289,7 @@ const chartData = &lbrack;5,8,12,4,6&rbrack;;
 generateBarChart(chartData);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js181">181. Right-Angled Triangle Pattern</h2>
+<h2 name="js181">181. Right-Angled Triangle Pattern</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a right-angled triangle pattern using asterisks and displays 
 it in the console.</p>
@@ -21312,7 +21312,7 @@ generateRightAngledTriangle(triangleHeight);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js182">182. Text-Based Calculator</h2>
+<h2 name="js182">182. Text-Based Calculator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows the user to input mathematical expressions (e.g., "2 + 3 * 4") 
 and evaluates and displays the result in the console.</p>
@@ -21332,7 +21332,7 @@ const userInput = prompt('Enter a mathematical expression:');
 textBasedCalculator(userInput);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js183">183. Number Pyramid Generator</h2>
+<h2 name="js183">183. Number Pyramid Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a number pyramid pattern and displays it in the console.</p>
 
@@ -21355,7 +21355,7 @@ generateNumberPyramid(pyramidHeight);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js184">184. Diamond Pattern Generator</h2>
+<h2 name="js184">184. Diamond Pattern Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a diamond pattern using characters and displays it in the console.</p>
 
@@ -21375,7 +21375,7 @@ const diamondHeight = 5;
 generateDiamondPattern(diamondHeight);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js185">185. Hangman Game</h2>
+<h2 name="js185">185. Hangman Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Hangman game. The player tries to guess a word by 
 suggesting letters, and the program displays the progress and remaining attempts.</p>
@@ -21441,7 +21441,7 @@ hangmanGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js186">186. Countdown Timer</h2>
+<h2 name="js186">186. Countdown Timer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program allows the user to set a countdown time in seconds. The timer counts 
 down, and the program displays the remaining time.</p>
@@ -21482,7 +21482,7 @@ countdownTimer();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js187">187. Mad Libs Game</h2>
+<h2 name="js187">187. Mad Libs Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user for various types of words (e.g., nouns, verbs) and 
 constructs a humorous story using those inputs.</p>
@@ -21519,7 +21519,7 @@ madLibsGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js188">188. Guess the Number Game</h2>
+<h2 name="js188">188. Guess the Number Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a random number, and the player has to guess it within a 
 certain number of attempts. The game provides feedback on whether the guess is too 
@@ -21564,7 +21564,7 @@ guessTheNumberGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js189">189. Whack-a-Mole Game</h2>
+<h2 name="js189">189. Whack-a-Mole Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Whack-a-Mole game. The player must "whack" the 
 mole as it randomly appears in different holes.</p>
@@ -21623,7 +21623,7 @@ whackAMoleGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js190">190. Coin Tossing Game</h2>
+<h2 name="js190">190. Coin Tossing Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a coin tossing game. The player guesses whether the next coin 
 toss will result in heads or tails.</p>
@@ -21674,7 +21674,7 @@ coinTossingGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js191">191. Fibonacci Number Generator</h2>
+<h2 name="js191">191. Fibonacci Number Generator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates and displays Fibonacci numbers up to a specified limit.</p>
 
@@ -21701,7 +21701,7 @@ function fibonacciNumberGenerator() {
 fibonacciNumberGenerator();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js192">192. Math Quiz Game</h2>
+<h2 name="js192">192. Math Quiz Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Math Quiz game. The player is asked random 
 addition questions and scores points for correct answers.</p>
@@ -21736,7 +21736,7 @@ mathQuizGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js193">193. Color Guessing Game</h2>
+<h2 name="js193">193. Color Guessing Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Color Guessing game. The player is given RGB 
 values, and they need to guess the correct color.</p>
@@ -21779,7 +21779,7 @@ colorGuessingGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js194">194. Word Scramble Game</h2>
+<h2 name="js194">194. Word Scramble Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Word Scramble game. The player is presented with a 
 scrambled word and needs to unscramble it.</p>
@@ -21822,7 +21822,7 @@ wordScrambleGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js195">195. Country Capital Quiz Game</h2>
+<h2 name="js195">195. Country Capital Quiz Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Country Capital Quiz game. The player is asked to 
 match countries with their respective capitals.</p>
@@ -21861,7 +21861,7 @@ countryCapitalQuizGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js196">196. Guess the Animal</h2>
+<h2 name="js196">196. Guess the Animal</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Guess the Animal game. The player is provided 
 with clues and needs to guess the correct animal.</p>
@@ -21901,7 +21901,7 @@ guessTheAnimalGame();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js197">197. Joke Teller</h2>
+<h2 name="js197">197. Joke Teller</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Joke Teller. It randomly selects a joke category 
 and tells a joke from that category.</p>
@@ -21948,7 +21948,7 @@ jokeTellerProgram();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js198">198. Shopping List</h2>
+<h2 name="js198">198. Shopping List</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simulates a text-based Shopping List. The user can add items, remove 
 items, and view the current shopping list.</p>
@@ -22010,7 +22010,7 @@ shoppingListProgram();
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js199">199. FizzBuzzGame</h2>
+<h2 name="js199">199. FizzBuzzGame</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The program prints numbers from 1 to 100, but for multiples of 3, it prints "Fizz," 
 for multiples of 5, it prints "Buzz," and for multiples of both 3 and 5, it prints 
@@ -22036,7 +22036,7 @@ function fizzBuzzGame() {
 fizzBuzzGameO;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js200">200. Swap Pairs of Adjacent Digits</h2>
+<h2 name="js200">200. Swap Pairs of Adjacent Digits</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes an even-length integer and swaps pairs of adjacent digits. For 
 example, for the number 123456, the program will swap pairs of adjacent digits to 
@@ -22072,7 +22072,7 @@ swapPairsOfAdjacentDigits(123456);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js201">201. Capitalization Changer</h2>
+<h2 name="js201">201. Capitalization Changer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes a string as input and changes the capitalization of all letters. 
 Uppercase letters are converted to lowercase, and lowercase letters are converted to 
@@ -22099,7 +22099,7 @@ function changeCapitalization(inputString) {
 changeCapitalization("Hello World");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js202">202. Array Halves Swapper</h2>
+<h2 name="js202">202. Array Halves Swapper</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program takes an array of integers with an even length and swaps its two halves.</p>
 
@@ -22132,7 +22132,7 @@ swapArrayHalves(&lbrack;l,2,3,4,5,6&rbrack;);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js203">203. Sum of Digits in String</h2>
+<h2 name="js203">203. Sum of Digits in String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program computes the sum of all the digits that occur in a given string. It 
 identifies digits in the string and adds them up to calculate the total sum.</p>
@@ -22155,7 +22155,7 @@ function sumOfDigitsInString(inputString) {
 sumOfDigitsInString("abc123xyz456");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js204">204. Sum of Cubes</h2>
+<h2 name="js204">204. Sum of Cubes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program computes the sum of cubes of all integers from 1 to a given integer. It 
 calculates the cube of each integer in the specified range and adds them up to find the 
@@ -22180,7 +22180,7 @@ sumOfCubes(5);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js205">205. Maximum Integer for Sum</h2>
+<h2 name="js205">205. Maximum Integer for Sum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program finds the maximum integer n such that the sum of integers from 1 to 
 <span class="consolas">n</span> (inclusive) does not exceed a given target sum 
@@ -22202,7 +22202,7 @@ function findMaxIntegerForSum(targetSum) {
 findMaxIntegerForSum(l 5);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js206">206. URL Breakdown</h2>
+<h2 name="js206">206. URL Breakdown</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program breaks a URL address into its parts and puts them into an array. The URL 
 structure considered is 
@@ -22234,7 +22234,7 @@ breakURL("https://www.example.org/page");
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js207">207. Sort Strings by Length</h2>
+<h2 name="js207">207. Sort Strings by Length</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program sorts the strings of a given array of strings in order of increasing 
 length. It uses the 
@@ -22253,7 +22253,7 @@ function sortStringsByLength(stringsArray) {
 sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js208">208. Simplify Absolute Path</h2>
+<h2 name="js208">208. Simplify Absolute Path</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program simplifies a given absolute path for a file in Unix-style. It takes a 
 string representing the absolute path and simplifies it by resolving any redundant 
@@ -22285,7 +22285,7 @@ simplifyAbsolutePath('/home/user/../documents/./file.txt');
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js209">209. Count Common Elements in Arrays</h2>
+<h2 name="js209">209. Count Common Elements in Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program finds the number of common elements between two arrays. It compares the 
 elements in both arrays and counts the occurrences of common elements.</p>
@@ -22304,7 +22304,7 @@ function countCommonElements(arrl, arr2) {
 countCommonElements(&lbrack;l,2,3,4,5&rbrack;, &lbrack;3,4,5,6,7&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js210">210. Check Same Digits in a Number</h2>
+<h2 name="js210">210. Check Same Digits in a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program checks whether all the digits in a given number are the same or not. It 
 converts the number to a string and compares each digit to the first digit.</p>
@@ -22331,7 +22331,7 @@ areAllDigitsSame(22222);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js211">211. Rightmost Round Number Position</h2>
+<h2 name="js211">211. Rightmost Round Number Position</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program finds the position of the rightmost round number in an array of integers. 
 A round number is informally considered to be an integer that ends with one or more zeros. 
@@ -22353,7 +22353,7 @@ function rightmostRoundNumberPosition(arr) {
 rightmostRoundNumberPosition(&lbrack;123,450,678,900&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js212">212. Reverse Bits of 16-Bit Unsigned Short Integer</h2>
+<h2 name="js212">212. Reverse Bits of 16-Bit Unsigned Short Integer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program reverses the bits of a given 16-bit unsigned short integer. It converts 
 the integer to its binary representation, reverses the bits, and converts it back to an 
@@ -22379,7 +22379,7 @@ reverseBits 16BitUnsignedShort(5678);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js213">213. Greater Than 15 Checker</h2>
+<h2 name="js213">213. Greater Than 15 Checker</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program tests whether a given integer is greater than 15. If the integer is 
 greater than 15, it returns the given number; otherwise, it returns 15.</p>
@@ -22394,7 +22394,7 @@ function greaterThanl5Checker(number) {
 greaterThanl5Checker(20);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js214">214. Replace First Digit with $</h2>
+<h2 name="js214">214. Replace First Digit with $</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program replaces the first digit in a string (assuming the string has at least one 
 digit) with the <span class="consolas">$</span> character.</p>
@@ -22410,7 +22410,7 @@ function replaceFirstDigitWithDollar(inputString) {
 replaceFirstDigitWithDollar("abc123xyz456");
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js215">215. Prefix Sums</h2>
+<h2 name="js215">215. Prefix Sums</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program creates an array of prefix sums for a given array. The prefix sum of a 
 sequence is a new sequence where each element is the sum of all preceding elements in 
@@ -22437,7 +22437,7 @@ prefixSums(&lbrack;l, 2, 3,4, 5&rbrack;);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js216">216. Next Prime Number</h2>
+<h2 name="js216">216. Next Prime Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program finds the smallest prime number strictly greater than a given number. It 
 checks numbers one by one starting from the given number until it finds the next prime.</p>
@@ -22466,7 +22466,7 @@ nextPrimeNumber(10);
 // Next Prime Number: 11
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js217">217. Reverse Order of Bits</h2>
+<h2 name="js217">217. Reverse Order of Bits</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program reverses the order of bits in an integer. It converts the integer to its 
 binary representation, reverses the bits, and converts it back to an integer.</p>
@@ -22507,7 +22507,7 @@ reverseOrderOfBits(234);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js218">218. Pyramid</h2>
+<h2 name="js218">218. Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a triangle pattern using ASCII characters and displays it in the 
 console.</p>
