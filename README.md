@@ -20932,29 +20932,30 @@ a virtual assistant.</p>
 <pre>
 function chatbot(message) {
   // Simple rule-based responses
-  if (message.toLowerCaseO.includesChello1)) {
-    return ‘Hello! How can I help you?';
+  if (message.toLowerCase().includes(hello)) {
+    return 'Hello! How can I help you?';
   } else if (message.toLowerCase().includes('how are you')) {
     return 'I am just a computer program, but thanks for asking!';
   } else if (message.toLowerCase().includes('bye')) {
     return 'Goodbye!';
   } else {
-    return 'I didn\'t understand that. Can you please rephrase?';
+    return 'I didn&apos;t understand that. Can you please rephrase?';
   }
 }
 
 function startChat() {
-  const userinput = prompt('You:');
-  if (userinput !== null) {
-    const response = chatbot(userlnput);
+  const userInput = prompt('You:');
+  if (userInput !== null) {
+    const response = chatbot(userInput);
     console.log('Chatbot:', response);
-    startChatO; // Continue the conversation
+    startChat(); // Continue the conversation
   } else {
     console.log('Goodbye!');
   }
 }
 
 console.log('Chatbot: Hello! How can I help you today?');
+
 startChat();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21093,7 +21094,7 @@ function generateMultipleRandomIps(count) {
 // Example: Generate and print 5 random IP addresses
 const numberOfIps = 5;
 const randomIps = generateMultipleRandomIps(numberOfIps);
-console.log('Random IP Addresses:’, randomIps);
+console.log('Random IP Addresses:', randomIps);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 name="js174">174. Digital clock</h2>
@@ -21102,14 +21103,14 @@ console.log('Random IP Addresses:’, randomIps);
 
 <pre>
 function updateClock() {
-const now = new Date();
-const hours = now.getHours();
-const minutes = now.getMinutes();
-const seconds = now.getSeconds();
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
 
-const formattedTime = `${hours}:${minutes}:${seconds}`;
-console.clear(); // Clears the console to update the time
-console.log("Current Time:" + formattedTime);
+  const formattedTime = `${hours}:${minutes}:${seconds}`;
+  console.clear(); // Clears the console to update the time
+  console.log("Current Time:" + formattedTime);
 }
 
 // Update the clock every second
