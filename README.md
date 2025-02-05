@@ -894,7 +894,7 @@ location where the object is stored.</p>
 
 <pre>
 let person = { name: "Ana", age: 30 };  // Reference type (Literal Object)
-let colors = ["red", "green", "blue"];  // Reference type (Array)
+let colors = &lbrack;"red", "green", "blue"&rbrack;;  // Reference type (Array)
 function greet() { console.log("Hello"); }  // Reference type (Function)
 </pre>
 
@@ -1391,7 +1391,7 @@ efficiently.</p>
   <li><b>Float32Array:</b> 32-bit floating-point number array.</li>
 </ul>
 
-<pre>const intArray = new Int8Array([10, 20, 30]);</pre>
+<pre>const intArray = new Int8Array(&lbrack;10, 20, 30&rbrack;);</pre>
 
 <p><b>Array Buffers:</b> Array Buffers are a data structure representing a raw
 memory area that can contain binary data. Array Buffers are used to
@@ -1575,7 +1575,7 @@ function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
 }
 const person - { name: 'John' };
-greet.apply(person, ['Maria']);
+greet.apply(person, &lbrack;'Maria'&rbrack;);
 // Prints: "Hello, Maria! My name is John"
 </pre>
 
@@ -1800,9 +1800,9 @@ array with the results of applying the function to each original element in
 the same order.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4];
+const numbers = &lbrack;1, 2, 3, 4&rbrack;;
 const doubles = numbers.map(number => number * 2);
-// doubles is now [2, 4, 6, 8]
+// doubles is now &lbrack;2, 4, 6, 8&rbrack;
 </pre>
 
 <p><b>filter:</b> The filter method is used to create a new array with all elements
@@ -1810,9 +1810,9 @@ that pass a test (meet a condition) provided by a function. It returns a new
 array with the elements that satisfy the condition.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4, 5, 6];
+const numbers = &lbrack;1, 2, 3, 4, 5, 6&rbrack;;
 const evens = numbers.filter(number => number % 2 === 0);
-// evens is now [2, 4, 6]
+// evens is now &lbrack;2, 4, 6&rbrack;
 </pre>
 
 <p><b>reduce:</b> The reduce method is used to reduce an array to a single
@@ -1821,7 +1821,7 @@ element in the array (from left to right), reducing the array to a single
 value.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4, 5];
+const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 // sum is 15
 </pre>
@@ -2005,23 +2005,23 @@ const resultTriple = triple(4); // Result: 12
 element of the array and returns a new array with the results.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4];
-const duplicates = numbers.map(number => number * 2); // Result: [2, 4, 6, 8]
+const numbers = &lbrack;1, 2, 3, 4&rbrack;;
+const duplicates = numbers.map(number => number * 2); // Result: &lbrack;2, 4, 6, 8&rbrack;
 </pre>
 
 <p><b>Filtering (Filter):</b> The filter method of an array creates a new array with
 elements that pass a specified condition.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4, 5];
-const odds = numbers.filter(number => number % 2 !== 0); // Result: [1, 3, 5]
+const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
+const odds = numbers.filter(number => number % 2 !== 0); // Result: &lbrack;1, 3, 5&rbrack;
 </pre>
 
 <p><b>reducing (reduce):</b> The reduce method or an array accumulates
 elements by applying a reducing function and returns a single result.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4];
+const numbers = &lbrack;1, 2, 3, 4&rbrack;;
 const totalSum = numbers.reduce((accumulator, number) => 
   accumulator + number, 0); // Result: 10
 </pre>
@@ -2083,8 +2083,8 @@ collections are:</p>
 have zero-based indices to access elements.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4];
-const fruits = ['apple', 'orange', 'banana'];
+const numbers = &lbrack;1, 2, 3, 4&rbrack;;
+const fruits = &lbrack;'apple', 'orange', 'banana'&rbrack;;
 </pre>
 
 <p><b>Objects:</b> Collections of key-value pairs where keys are strings (or symbols
@@ -2196,10 +2196,10 @@ when all promises in the array have been resolved.</p>
 const promisel = fetchDatal();
 const promise2 = fetchData2();
 
-Promise.all([promisel, promise2])
+Promise.all(&lbrack;promisel, promise2&rbrack;)
 .then(results => {
-  const resultl = results[0];
-  const result2 = results[l];
+  const resultl = results&lbrack;0&rbrack;;
+  const result2 = results&lbrack;l&rbrack;;
   // Do something with the results
 })
 .catch(error => console.error(error));
@@ -2291,7 +2291,7 @@ purposes.</p>
 array has a numeric index indicating its position. Arrays are used to store
 Lists of elements and are suitable for accessing elements by their index.</p>
 
-<pre>const fruits = ['apple', 'orange', 'banana'];</pre>
+<pre>const fruits = &lbrack;'apple', 'orange', 'banana'&rbrack;;</pre>
 
 <p><b>Objects:</b> Objects are collections of key-value pairs. Keys are strings, and
 values can be of any type. Objects are useful for representing entities with properties and methods.</p>
@@ -2330,13 +2330,13 @@ LIFO (Last In, First Out) principle.</p>
 
 <pre>
 // Example of a queue 
-const queue = [];
+const queue = &lbrack;&rbrack;;
 queue.push('a');
 queue.push('b');
 const firstElement = queue.shift(); // 'a'
 
 // Example of a stack
-const stack = [];
+const stack = &lbrack;&rbrack;;
 stack.push('x');
 stack.push('y');
 const lastElement = stack.pop(); // 'y'
@@ -2924,13 +2924,13 @@ which can be usefulto avoid unintended side effects when manipulating data.</p>
 
 <pre>
 // Use spread to copy an array
-const originalArray = [1, 2, 3];
-const copiedArray = [...originalArray];
+const originalArray = &lbrack;1, 2, 3&rbrack;;
+const copiedArray = &lbrack;...originalArray&rbrack;;
 
 // Combine arrays using spread
-const arrayl = [1, 2, 3];
-const array2 = [4, 5, 6];
-const combined = [...arrayl, ...array2]; // [1, 2, 3, 4, 5, 6]
+const arrayl = &lbrack;1, 2, 3&rbrack;;
+const array2 = &lbrack;4, 5, 6&rbrack;;
+const combined = &lbrack;...arrayl, ...array2&rbrack;; // &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
  
 <p>In objects, the spread operator is used to create shallow copies:</p>
@@ -2957,9 +2957,9 @@ function sum(...numbers) {
 console.log(sum(l, 2, 3, 4)); // Prints: 10
 
 // Use rest in destructuring
-const [first, ...rest] = [1, 2, 3, 4];
+const &lbrack;first, ...rest&rbrack; = &lbrack;1, 2, 3, 4&rbrack;;
 console.log(first); // Prints: 1
-console.log(rest); // Prints: [2, 3, 4]
+console.log(rest); // Prints: &lbrack;2, 3, 4&rbrack;
 </pre>
 
 <p>In the example of the sum function, the rest operator gathers all arguments into an 
@@ -2985,13 +2985,13 @@ elements.</p>
 <p><b>Destructuring with Arrays:</b></p>
 
 <pre>
-const numbers = [1, 2, 3, 5];
+const numbers = &lbrack;1, 2, 3, 5&rbrack;;
 
 // Extracting individual values
-const [first, second, ...rest] = numbers;
+const &lbrack;first, second, ...rest&rbrack; = numbers;
 console.log(first); // Prints: 1
 console.log(second); // Prints: 2
-console.log(rest); // Prints: [3, 4, 5]
+console.log(rest); // Prints: &lbrack;3, 4, 5&rbrack;
 </pre>
 
 <p><b>Destructuring with Objects:</b></p>
@@ -3013,14 +3013,14 @@ const product = {
   price: 20,
   details: {
     color: 'Red',
-    sizes: ['S', 'M', 'L']
+    sizes: &lbrack;'S', 'M', 'L'&rbrack;
   }
 };
 
 const { name, details: { color, sizes } } = product;
 console.log(name); // Prints: T-shirt
 console.log(color); // Prints: Red
-console.log(sizes); //Prints:  ['S', 'M', 'L']
+console.log(sizes); //Prints:  &lbrack;'S', 'M', 'L'&rbrack;
 </pre>
 
 <p>Destructuring assignment is especially handy when working with functions that return 
@@ -3181,7 +3181,7 @@ description of some of the most common Array methods:</p>
 array.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4, 5];
+const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const elementcount = numbers.length; // Result: 5
 </pre>
 
@@ -3190,27 +3190,27 @@ more elements to the end of the array and returns the new Length of the
 array.</p>
 
 <pre>
-const fruits = ['apple', 'pear'];
+const fruits = &lbrack;'apple', 'pear'&rbrack;;
 fruits.push('orange', 'banana');
-// Result:  ['apple', 'pear', 'orange', 'banana']
+// Result:  &lbrack;'apple', 'pear', 'orange', 'banana'&rbrack;
 </pre>
 
 <p><b>Array.pop():</b> The pop method removes the Last element from the array
 and returns it.</p>
 
 <pre>
-const numbers = [1, 2, 3, 4];
+const numbers = &lbrack;1, 2, 3, 4&rbrack;;
 const lastNumber = numbers.pop();
-// Result: 4 (numbers is now [1, 2, 3])
+// Result: 4 (numbers is now &lbrack;1, 2, 3&rbrack;)
 </pre>
 
 <p><b>Array.shift():</b> The shift method removes the first element from the array
 and returns it.</p>
 
 <pre>
-const colors = ['red', 'green', 'blue'];
+const colors = &lbrack;'red', 'green', 'blue'&rbrack;;
 const firstColor = colors.shift();
-// Result: 'red' (colors is now ['green', 'blue'])
+// Result: 'red' (colors is now &lbrack;'green', 'blue'&rbrack;)
 </pre>
 
 <p><b>Array.unshift(elementl, element2,...):</b> The unshift method adds one or
@@ -3218,8 +3218,8 @@ more elements to the beginning of the array and returns the new length
 of the array.</p>
 
 <pre>
-const numbers = [2, 3, 4];
-numbers.unshift(l, 0); // Result: [1, 0, 2, 3, 4]
+const numbers = &lbrack;2, 3, 4&rbrack;;
+numbers.unshift(l, 0); // Result: &lbrack;1, 0, 2, 3, 4&rbrack;
 </pre>
 
 <p><b>Array.forEach(callback(currentValue, index, array)):</b> The forEach
@@ -3227,7 +3227,7 @@ method iterates over each element of the array and executes the provided
 callback function for each one.</p>
 
 <pre>
-const numbers = [1, 2, 3];
+const numbers = &lbrack;1, 2, 3&rbrack;;
 numbers.forEach(number => console.log(number)); // Prints 1, 2, 3
 </pre>
 
@@ -3236,7 +3236,7 @@ checks if at Least one element in the array satisfies the condition specified
 in the callbackfunction.</p>
 
 <pre>
-const numbers - [2, 4, 6];
+const numbers - &lbrack;2, 4, 6&rbrack;;
 const hasOdd = numbers.some(number => number % 2 !== 0);
 // Result: false
 </pre>
@@ -3246,7 +3246,7 @@ checks if aLL elements in the array satisfy the condition specified in the
 callback function.</p>
 
 <pre>
-const numbers = {2, 4, 6];
+const numbers = {2, 4, 6&rbrack;;
 const allEven - numbers.every(number => number % 2 --- 0);
 // Result: true
 </pre>
@@ -3256,11 +3256,11 @@ returns the first element in the array that satisfies the condition specified
 in the callback function.</p>
 
 <pre>
-const people = [
+const people = &lbrack;
   { name: 'John', age: 25 },
   { name: 'Mary', age: 30 },
   { name: 'Peter', age: 22 }
-];
+&rbrack;;
 
 const person - people.find(person => person.age > 25); 
 // Result: { name: 'Mary', age: 30 }
@@ -3271,7 +3271,7 @@ method returns the index of the first element in the array that satisfies the
 condition specified in the callbackfunction.</p>
 
 <pre>
-const numbers = [10, 20, 30, 40];
+const numbers = &lbrack;10, 20, 30, 40&rbrack;;
 const index = numbers.findIndex(number => number > 25);
 // Result: 2 (30 is the first number greater than 25)
 </pre>
@@ -3335,7 +3335,7 @@ array of substrings using the separator as the splitting point.</p>
 <pre>
 const text = 'Apple,Orange,Pear';
 const fruits - text.split(',');
-//Result: ['Apple', 'Orange', 'Pear']
+//Result: &lbrack;'Apple', 'Orange', 'Pear'&rbrack;
 </pre>
 
 <p><b>String.trim():</b> The trim method removes leading and trailing whitespaces
@@ -3380,7 +3380,7 @@ of Object:</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const keys = Object.keys(object); // Result: ['a', 'b', 'c']
+const keys = Object.keys(object); // Result: &lbrack;'a', 'b', 'c'&rbrack;
 </pre>
 
 <p><b>Object, values(obj):</b> The values method returns an array of values of the
@@ -3388,7 +3388,7 @@ enumerable properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const values = Object.values(object); // Result: [1, 2, 3]
+const values = Object.values(object); // Result: &lbrack;1, 2, 3&rbrack;
 </pre> 
 
 <p><b>Object.entries(obj):</b> The entries method returns on array of arrays with
@@ -3397,7 +3397,7 @@ key-value pairs ofthe enumerable properties of an object.</p>
 <pre>
 const object = { a: 1, b: 2, c: 3 };
 const entries = Object.entries(object);
-// Result: [['a', 1], ['b', 2], ['c', 3]]
+// Result: &lbrack;&lbrack;'a', 1&rbrack;, &lbrack;'b', 2&rbrack;, &lbrack;'c', 3&rbrack;&rbrack;
 </pre>
 
 <p><b>Object.assign(target, sourcel, source2,...):</b> The assign method copies the 
@@ -3434,7 +3434,7 @@ object.a - 10; // No effect
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const keys - Object.keys(object); // Result: ['a', 'b', 'c']
+const keys - Object.keys(object); // Result: &lbrack;'a', 'b', 'c'&rbrack;
 </pre>
 
 <p><b>Object, values(obj):</b> The values method returns an array of values of the
@@ -3442,7 +3442,7 @@ enumerable properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const values - Object.values(object); // Result: [1, 2, 3]
+const values - Object.values(object); // Result: &lbrack;1, 2, 3&rbrack;
 </pre>
 
 <p><b>Object.entries(obj):</b> The entries method returns an array of arrays with
@@ -3451,7 +3451,7 @@ key-value pairs ofthe enumerable properties of an object.</p>
 <pre>
 const object = { a: 1, b: 2, c: 3 };
 const entries = Object.entries(object);
-// Result: [['a', 1], ['b', 2], ['c', 3]]
+// Result: &lbrack;&lbrack;'a', 1&rbrack;, &lbrack;'b', 2&rbrack;, &lbrack;'c', 3&rbrack;&rbrack;
 </pre>
 
 <p><b>Object.getOwnPropertyNames(obj):</b> The getOwnPropertyNames method returns an 
@@ -3460,7 +3460,7 @@ array with all properties (enumerable or not) of an object.</p>
 <pre>
 const object = { a: 1, b: 2 };
 const properties = Object.getOwnPropertyNames(object);
-// Result: ['a', 'b']
+// Result: &lbrack;'a', 'b'&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -3584,7 +3584,7 @@ const book = {
     name: 'Carlos Ruiz Zafon',
     nationality: 'Spanish'
   },
-  genres: ['Fiction', 'Mystery']
+  genres: &lbrack;'Fiction', 'Mystery'&rbrack;
 };
 
 const bookJSON = JSON.stringify(book);
@@ -4429,7 +4429,7 @@ characters). Rewrite countBs to make use of this new function.</p>
 function countChar(string, ch) {
   let counted = 0;
   for (let i = 0; i < string.length; i++) {
-    if (string[i] == ch) {
+    if (string&lbrack;i&rbrack; == ch) {
       counted += 1;
     }
   }
@@ -4474,29 +4474,29 @@ peanuts: 0.59026798116852
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-var journal = [];<br>
+var journal = &lbrack;&rbrack;;<br>
 function addEntry(events, squirrel) {
   journal.push({events, squirrel});
 }<br>
 function phi(table) {
-  return (table[3] * table[0] - table[2] * table[1]) /
-    Math.sqrt((table[2] + table[3]) *
-              (table[0] + table[1]) *
-              (table[1] + table[3]) *
-              (table[0] + table[2]));
+  return (table&lbrack;3&rbrack; * table&lbrack;0&rbrack; - table&lbrack;2&rbrack; * table&lbrack;1&rbrack;) /
+    Math.sqrt((table&lbrack;2&rbrack; + table&lbrack;3&rbrack;) *
+              (table&lbrack;0&rbrack; + table&lbrack;1&rbrack;) *
+              (table&lbrack;1&rbrack; + table&lbrack;3&rbrack;) *
+              (table&lbrack;0&rbrack; + table&lbrack;2&rbrack;));
 }<br>
 function tableFor(event, journal) {
-  let table = [0, 0, 0, 0];
+  let table = &lbrack;0, 0, 0, 0&rbrack;;
   for (let i = 0; i < journal.length; i++) {
-    let entry = journal[i], index = 0;
+    let entry = journal&lbrack;i&rbrack;, index = 0;
     if (entry.events.includes(event)) index += 1;
     if (entry.squirrel) index += 2;
-    table[index] += 1;
+    table&lbrack;index&rbrack; += 1;
   }
   return table;
 }<br>
 function journalEvents(journal) {
-  let events = [];
+  let events = &lbrack;&rbrack;;
   for (let entry of journal) {
     for (let event of entry.events) {
       if (!events.includes(event)) {
@@ -4531,7 +4531,7 @@ var list = {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el08">08. Data Structures: The sum of a range</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Building up an array is most easily done by first initializing a binding to []
+<p>Building up an array is most easily done by first initializing a binding to &lbrack;&rbrack;
 (a fresh, empty array) and repeatedly calling its push method to add a value.
 Don’t forget to return the array at the end of the function.
 
@@ -4553,7 +4553,7 @@ to refer to previous parameters in the default value of a parameter.</p>
 
 <pre>
 function range(start, end, step = start < end ? 1 : -1) {
-  let array = [];
+  let array = &lbrack;&rbrack;;
   if (step > 0) {
     for (let i = start; i <= end; i += step) array.push(i);
   } else {
@@ -4568,8 +4568,8 @@ function sum(array) {
   }
   return total;
 }<br>
-console.log(range(1, 10)) // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
+console.log(range(1, 10)) // → &lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;
+console.log(range(5, 2, -1)); // → &lbrack;5, 4, 3, 2&rbrack;
 console.log(sum(range(1, 10))); // → 55
 console.log(sum(range(1, 77))); // → 3003
 </pre>
@@ -4603,24 +4603,24 @@ the mirror image used to be.</p>
 
 <pre>
 function reverseArray(array) {
-  let output = [];
+  let output = &lbrack;&rbrack;;
   for (let i = array.length - 1; i >= 0; i--) {
-    output.push(array[i]);
+    output.push(array&lbrack;i&rbrack;);
   }
   return output;
 }<br>
 function reverseArrayInPlace(array) {
   for (let i = 0; i < Math.floor(array.length / 2); i++) {
-    let old = array[i];
-    array[i] = array[array.length - 1 - i];
-    array[array.length - 1 - i] = old;
+    let old = array&lbrack;i&rbrack;;
+    array&lbrack;i&rbrack; = array&lbrack;array.length - 1 - i&rbrack;;
+    array&lbrack;array.length - 1 - i&rbrack; = old;
   }
   return array;
 }<br>
-console.log(reverseArray(["A", "B", "C"])); // → ["C", "B", "A"];
-let arrayValue = [1, 2, 3, 4, 5];
+console.log(reverseArray(&lbrack;"A", "B", "C"&rbrack;)); // → &lbrack;"C", "B", "A"&rbrack;;
+let arrayValue = &lbrack;1, 2, 3, 4, 5&rbrack;;
 reverseArrayInPlace(arrayValue);
-console.log(arrayValue); // → [5, 4, 3, 2, 1]
+console.log(arrayValue); // → &lbrack;5, 4, 3, 2, 1&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -4655,12 +4655,12 @@ that’s in this list’s rest property.</p>
 function arrayToList(array) {
   let list = null;
   for (let i = array.length - 1; i >= 0; i--) {
-    list = {value: array[i], rest: list};
+    list = {value: array&lbrack;i&rbrack;, rest: list};
   }
   return list;
 }<br>
 function listToArray(list) {
-  let array = [];
+  let array = &lbrack;&rbrack;;
   for (let node = list; node; node = node.rest) {
     array.push(node.value);
   }
@@ -4674,10 +4674,10 @@ function nth(list, n) {
   else if (n == 0) return list.value;
   else return nth(list.rest, n - 1);
 }<br>
-console.log(arrayToList([10, 20])); // → {value: 10, rest: {value: 20, rest: null}}
-console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
+console.log(arrayToList(&lbrack;10, 20&rbrack;)); // → {value: 10, rest: {value: 20, rest: null}}
+console.log(listToArray(arrayToList(&lbrack;10, 20, 30&rbrack;))); // → &lbrack;10, 20, 30&rbrack;
 console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20, rest: null}}
-console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
+console.log(nth(arrayToList(&lbrack;10, 20, 30&rbrack;), 1)); // → 20
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -4714,7 +4714,7 @@ function deepEqual(a, b) {
   let keysA = Object.keys(a), keysB = Object.keys(b);
   if (keysA.length != keysB.length) return false;
   for (let key of keysA) {
-    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+    if (!keysB.includes(key) || !deepEqual(a&lbrack;key&rbrack;, b&lbrack;key&rbrack;)) return false;
   }
   return true;
 }<br>
@@ -4764,8 +4764,8 @@ function noisy(f) {
     return result;
   };
 }
-noisy(Math.min)(3, 2, 1); // → calling with [3, 2, 1]
-// → called with [3, 2, 1] , returned 1
+noisy(Math.min)(3, 2, 1); // → calling with &lbrack;3, 2, 1&rbrack;
+// → called with &lbrack;3, 2, 1&rbrack; , returned 1
 </pre>
 
 <p>We can even write functions that provide new types of control flow.</p>
@@ -4791,15 +4791,15 @@ repeat(3, n => {
 for/of loop as a higher-order function.</p>
 
 <pre>
-["A", "B"].forEach(l => console.log(l));
+&lbrack;"A", "B"&rbrack;.forEach(l => console.log(l));
 // → A
 // → B
 </pre>
 
 <pre>
-let arrays = [[1, 2, 3], [4, 5], [6]];<br>
-console.log(arrays.reduce((flat, current) => flat.concat(current), [])); 
-// → [1, 2, 3, 4, 5, 6]
+let arrays = &lbrack;&lbrack;1, 2, 3&rbrack;, &lbrack;4, 5&rbrack;, &lbrack;6&rbrack;&rbrack;;<br>
+console.log(arrays.reduce((flat, current) => flat.concat(current), &lbrack;&rbrack;)); 
+// → &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el13">13. Higher-Order Functions: Your own loop</h2>
@@ -4863,9 +4863,9 @@ function every(array, predicate) {
 function every2(array, predicate) {
   return !array.some(element => !predicate(element));
 }<br>
-console.log(every([1, 3, 5], n => n < 10)); // → true
-console.log(every([2, 4, 16], n => n < 10)); // → false
-console.log(every([], n => n < 10)); // → true
+console.log(every(&lbrack;1, 3, 5&rbrack;, n => n < 10)); // → true
+console.log(every(&lbrack;2, 4, 16&rbrack;, n => n < 10)); // → false
+console.log(every(&lbrack;&rbrack;, n => n < 10)); // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -4892,19 +4892,19 @@ reduce. If it’s not clear how, refer to the example earlier in the chapter, wh
 reduce was used to find the script with the most characters.</p>
 <pre>
 function countBy(items, groupName) {
-  let counts = [];
+  let counts = &lbrack;&rbrack;;
   for (let item of items) {
     let name = groupName(item);
     let known = counts.findIndex(c => c.name == name);
     if (known == -1) {
       counts.push({name, count: 1});
     } else {
-      counts[known].count++;
+      counts&lbrack;known&rbrack;.count++;
     }
   }
   return counts;
 }
-console.log(countBy([1, 2, 3, 4, 5], n => n > 2)); // → [{name: false, count: 2}, {name: true, count: 3}]
+console.log(countBy(&lbrack;1, 2, 3, 4, 5&rbrack;, n => n > 2)); // → &lbrack;{name: false, count: 2}, {name: true, count: 3}&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -5062,7 +5062,7 @@ object and call add to put them into a newly created group.</p>
 <pre>
 class Group {
   constructor() {
-    this.members = [];
+    this.members = &lbrack;&rbrack;;
   }
   add(value) {
     if (!this.has(value)) {
@@ -5083,7 +5083,7 @@ class Group {
     return group;
   }
 }<br>
-let group = Group.from([10, 20]);
+let group = Group.from(&lbrack;10, 20&rbrack;);
 console.log(group.has(10)); // → true
 console.log(group.has(30)); // → false
 group.add(10);
@@ -5108,7 +5108,7 @@ called, returns a new instance of the iterator class for that group.</p>
 <pre>
 class Group {
   constructor() {
-    this.members = [];
+    this.members = &lbrack;&rbrack;;
   }
   add(value) {
     if (!this.has(value)) {
@@ -5141,14 +5141,14 @@ class GroupIterator {
     if (this.position >= this.group.members.length) {
       return {done: true};
     } else {
-      let result = {value: this.group.members[this.position],
+      let result = {value: this.group.members&lbrack;this.position&rbrack;,
                     done: false};
       this.position++;
       return result;
     }
   }
 }<br>
-for (let value of Group.from(["a", "b", "c"])) {
+for (let value of Group.from(&lbrack;"a", "b", "c"&rbrack;)) {
   console.log(value);
 }
 // → a
@@ -5183,7 +5183,7 @@ console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
 <h3>robot.js</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-var roads = [
+var roads = &lbrack;
   "Alice's House-Bob's House",   "Alice's House-Cabin",
   "Alice's House-Post Office",   "Bob's House-Town Hall",
   "Daria's House-Ernie's House", "Daria's House-Town Hall",
@@ -5191,17 +5191,17 @@ var roads = [
   "Grete's House-Shop",          "Marketplace-Farm",
   "Marketplace-Post Office",     "Marketplace-Shop",
   "Marketplace-Town Hall",       "Shop-Town Hall"
-];<br>
+&rbrack;;<br>
 function buildGraph(edges) {
   let graph = Object.create(null);
   function addEdge(from, to) {
     if (from in graph) {
-      graph[from].push(to);
+      graph&lbrack;from&rbrack;.push(to);
     } else {
-      graph[from] = [to];
+      graph&lbrack;from&rbrack; = &lbrack;to&rbrack;;
     }
   }
-  for (let [from, to] of edges.map(r => r.split("-"))) {
+  for (let &lbrack;from, to&rbrack; of edges.map(r => r.split("-"))) {
     addEdge(from, to);
     addEdge(to, from);
   }
@@ -5214,7 +5214,7 @@ var VillageState = class VillageState {
     this.parcels = parcels;
   }<br>
   move(destination) {
-    if (!roadGraph[this.place].includes(destination)) {
+    if (!roadGraph&lbrack;this.place&rbrack;.includes(destination)) {
       return this;
     } else {
       let parcels = this.parcels.map(p => {
@@ -5239,13 +5239,13 @@ function runRobot(state, robot, memory) {
 }<br>
 function randomPick(array) {
   let choice = Math.floor(Math.random() * array.length);
-  return array[choice];
+  return array&lbrack;choice&rbrack;;
 }<br>
 function randomRobot(state) {
-  return {direction: randomPick(roadGraph[state.place])};
+  return {direction: randomPick(roadGraph&lbrack;state.place&rbrack;)};
 }<br>
 VillageState.random = function(parcelCount = 5) {
-  let parcels = [];
+  let parcels = &lbrack;&rbrack;;
   for (let i = 0; i < parcelCount; i++) {
     let address = randomPick(Object.keys(roadGraph));
     let place;
@@ -5256,23 +5256,23 @@ VillageState.random = function(parcelCount = 5) {
   }
   return new VillageState("Post Office", parcels);
 };<br>
-var mailRoute = [
+var mailRoute = &lbrack;
   "Alice's House", "Cabin", "Alice's House", "Bob's House",
   "Town Hall", "Daria's House", "Ernie's House",
   "Grete's House", "Shop", "Grete's House", "Farm",
   "Marketplace", "Post Office"
-];<br>
+&rbrack;;<br>
 function routeRobot(state, memory) {
   if (memory.length == 0) {
     memory = mailRoute;
   }
-  return {direction: memory[0], memory: memory.slice(1)};
+  return {direction: memory&lbrack;0&rbrack;, memory: memory.slice(1)};
 }<br>
 function findRoute(graph, from, to) {
-  let work = [{at: from, route: []}];
+  let work = &lbrack;{at: from, route: &lbrack;&rbrack;}&rbrack;;
   for (let i = 0; i < work.length; i++) {
-    let {at, route} = work[i];
-    for (let place of graph[at]) {
+    let {at, route} = work&lbrack;i&rbrack;;
+    for (let place of graph&lbrack;at&rbrack;) {
       if (place == to) return route.concat(place);
       if (!work.some(w => w.at == place)) {
         work.push({at: place, route: route.concat(place)});
@@ -5282,14 +5282,14 @@ function findRoute(graph, from, to) {
 }<br>
 function goalOrientedRobot({place, parcels}, route) {
   if (route.length == 0) {
-    let parcel = parcels[0];
+    let parcel = parcels&lbrack;0&rbrack;;
     if (parcel.place != place) {
       route = findRoute(roadGraph, place, parcel.place);
     } else {
       route = findRoute(roadGraph, place, parcel.address);
     }
   }
-  return {direction: route[0], memory: route.slice(1)};
+  return {direction: route&lbrack;0&rbrack;, memory: route.slice(1)};
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -5326,7 +5326,7 @@ function compareRobots(robot1, memory1, robot2, memory2) {
   console.log(`Robot 1 needed ${total1 / 100} steps per task`)
   console.log(`Robot 2 needed ${total2 / 100}`)
 }
-compareRobots(routeRobot, [], goalOrientedRobot, []);
+compareRobots(routeRobot, &lbrack;&rbrack;, goalOrientedRobot, &lbrack;&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -5402,7 +5402,7 @@ class PGroup {
   }
   add(value) {
     if (this.has(value)) return this;
-    return new PGroup(this.members.concat([value]));
+    return new PGroup(this.members.concat(&lbrack;value&rbrack;));
   }
   delete(value) {
     if (!this.has(value)) return this;
@@ -5412,7 +5412,7 @@ class PGroup {
     return this.members.includes(value);
   }
 }
-PGroup.empty = new PGroup([]);
+PGroup.empty = new PGroup(&lbrack;&rbrack;);
 let a = PGroup.empty.add("a");
 let ab = a.add("b");
 let b = ab.delete("a");<br>
@@ -5477,7 +5477,7 @@ const box = {
   locked: true,
   unlock() { this.locked = false; },
   lock() { this.locked = true;  },
-  _content: [],
+  _content: &lbrack;&rbrack;,
   get content() {
     if (this.locked) throw new Error("Locked!");
     return this._content;
@@ -5540,27 +5540,27 @@ a few test strings.</p>
 
 <pre>
 // Fill in the regular expressions<br>
-verify(/ca[rt]/,
-       ["my car", "bad cats"],
-       ["camper", "high art"]);<br>
+verify(/ca&lbrack;rt&rbrack;/,
+       &lbrack;"my car", "bad cats"&rbrack;,
+       &lbrack;"camper", "high art"&rbrack;);<br>
 verify(/pr?op/,
-       ["pop culture", "mad props"],
-       ["plop", "prrrop"]);<br>
+       &lbrack;"pop culture", "mad props"&rbrack;,
+       &lbrack;"plop", "prrrop"&rbrack;);<br>
 verify(/ferr(et|y|ari)/,
-       ["ferret", "ferry", "ferrari"],
-       ["ferrum", "transfer A"]);<br>
+       &lbrack;"ferret", "ferry", "ferrari"&rbrack;,
+       &lbrack;"ferrum", "transfer A"&rbrack;);<br>
 verify(/ious\b/,
-       ["how delicious", "spacious room"],
-       ["ruinous", "consciousness"]);<br>
-verify(/\s[.,:;]/,
-       ["bad punctuation ."],
-       ["escape the dot"]);<br>
+       &lbrack;"how delicious", "spacious room"&rbrack;,
+       &lbrack;"ruinous", "consciousness"&rbrack;);<br>
+verify(/\s&lbrack;.,:;&rbrack;/,
+       &lbrack;"bad punctuation ."&rbrack;,
+       &lbrack;"escape the dot"&rbrack;);<br>
 verify(/\w{7}/,
-       ["Siebentausenddreihundertzweiundzwanzig"],
-       ["no", "three small words"]);<br>
-verify(/\b[^\We]+\b/i,
-       ["red platypus", "wobbling nest"],
-       ["earth bed", "learning ape", "BEET"]);<br>
+       &lbrack;"Siebentausenddreihundertzweiundzwanzig"&rbrack;,
+       &lbrack;"no", "three small words"&rbrack;);<br>
+verify(/\b&lbrack;^\We&rbrack;+\b/i,
+       &lbrack;"red platypus", "wobbling nest"&rbrack;,
+       &lbrack;"earth bed", "learning ape", "BEET"&rbrack;);<br>
 function verify(regexp, yes, no) {
   // Ignore unfinished exercises
   if (regexp.source == "...") return;
@@ -5615,7 +5615,7 @@ are valid JavaScript numbers, but a lone dot isn’t.</p>
 <p>First, do not forget the backslash in front of the period.</p>
 
 <p>Matching the optional sign in front of the number, as well as in front of the
-exponent, can be done with [+\-]? or (\+|-|) (plus, minus, or nothing).</p>
+exponent, can be done with &lbrack;+\-&rbrack;? or (\+|-|) (plus, minus, or nothing).</p>
 
 <p>The more complicated part of the exercise is the problem of matching both
 "5." and ".5" without also matching ".". For this, a good solution is to use
@@ -5624,20 +5624,20 @@ followed by a dot and zero or more digits or a dot followed by one or more
 digits.</p>
 
 <p>Finally, to make the e case insensitive, either add an i option to the regular
-expression or use [eE].</p>
+expression or use &lbrack;eE&rbrack;.</p>
 
 <pre>
 // Fill in this regular expression.
-let number = /^[+\-]?(\d+(\.\d*)?|\.\d+)([eE][+\-]?\d+)?$/;
+let number = /^&lbrack;+\-&rbrack;?(\d+(\.\d*)?|\.\d+)(&lbrack;eE&rbrack;&lbrack;+\-&rbrack;?\d+)?$/;
 // Tests:
-for (let str of ["1", "-1", "+15", "1.55", ".5", "5.",
-                 "1.3e2", "1E-4", "1e+12"]) {
+for (let str of &lbrack;"1", "-1", "+15", "1.55", ".5", "5.",
+                 "1.3e2", "1E-4", "1e+12"&rbrack;) {
   if (!number.test(str)) {
     console.log(`Failed to match '${str}'`);
   }
 }<br>
-for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
-                 ".5.", "1f5", "."]) {
+for (let str of &lbrack;"1a", "+-1", "1.2.3", "1+1", "1e4.5",
+                 ".5.", "1f5", "."&rbrack;) {
   if (number.test(str)) {
     console.log(`Incorrectly accepted '${str}'`);
   }
@@ -5749,11 +5749,11 @@ in one of them triggers the rejection of the whole wrapper promise.</p>
 <pre>
 function Promise_all(promises) {
   return new Promise((resolve, reject) => {
-    let results = [];
+    let results = &lbrack;&rbrack;;
     let pending = promises.length;
     for (let i = 0; i < promises.length; i++) {
-      promises[i].then(result => {
-        results[i] = result;
+      promises&lbrack;i&rbrack;.then(result => {
+        results&lbrack;i&rbrack; = result;
         pending--;
         if (pending == 0) resolve(results);
       }).catch(reject);
@@ -5762,18 +5762,18 @@ function Promise_all(promises) {
   });
 }<br>
 // Test code.
-Promise_all([]).then(array => {
-  console.log("This should be []:", array);
+Promise_all(&lbrack;&rbrack;).then(array => {
+  console.log("This should be &lbrack;&rbrack;:", array);
 });<br>
 function soon(val) {
   return new Promise(resolve => {
     setTimeout(() => resolve(val), Math.random() * 500);
   });
 }<br>
-Promise_all([soon(1), soon(2), soon(3)]).then(array => {
-  console.log("This should be [1, 2, 3]:", array);
+Promise_all(&lbrack;soon(1), soon(2), soon(3)&rbrack;).then(array => {
+  console.log("This should be &lbrack;1, 2, 3&rbrack;:", array);
 });<br>
-Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
+Promise_all(&lbrack;soon(1), Promise.reject("X"), soon(3)&rbrack;).then(array => {
   console.log("We should not get here");
 }).catch(error => {
   if (error != "X") {
@@ -5796,7 +5796,7 @@ ment (with triple-dot notation), the definition of array can be very simple.</p>
 <pre>
 topScope.array = (...values) => values;
 topScope.length = array => array.length;
-topScope.element = (array, i) => array[i];<br>
+topScope.element = (array, i) => array&lbrack;i&rbrack;;<br>
 run(`
 do(define(sum, fun(array,
      do(define(i, 0),
@@ -5827,14 +5827,14 @@ array (the whole match) to find out how many characters to slice off.</p>
 <pre>
 function skipSpace(string) {
   let skippable = string.match(/^(\s|#.*)*/);
-  return string.slice(skippable[0].length);
+  return string.slice(skippable&lbrack;0&rbrack;.length);
 }<br>
 console.log(parse("# hello\nx"));
 // → {type: "word", name: "x"}<br>
 console.log(parse("a # one\n   # two\n()"));
 // → {type: "apply",
 //    operator: {type: "word", name: "a"},
-//    args: []}<br>
+//    args: &lbrack;&rbrack;}<br>
 //
 {type: "word", name: "x"}
 {type: "apply", operator: {type: "word", name: "a"}, …}
@@ -5858,14 +5858,14 @@ thrown.</p>
 
 <pre>
 specialForms.set = (args, env) => {
-  if (args.length != 2 || args[0].type != "word") {
+  if (args.length != 2 || args&lbrack;0&rbrack;.type != "word") {
     throw new SyntaxError("Bad use of set");
   }
-  let varName = args[0].name;
-  let value = evaluate(args[1], env);
+  let varName = args&lbrack;0&rbrack;.name;
+  let value = evaluate(args&lbrack;1&rbrack;, env);
   for (let scope = env; scope; scope = Object.getPrototypeOf(scope)) {
     if (Object.prototype.hasOwnProperty.call(scope, varName)) {
-      scope[varName] = value;
+      scope&lbrack;varName&rbrack; = value;
       return value;
     }
   }
@@ -5904,7 +5904,7 @@ or document.querySelector to find the node with the proper id attribute.</p>
 &lt;h1&gt;Mountains&lt;/h1&gt;
 &lt;div id="mountains"&gt;&lt;/div&gt;<br>
 &lt;script&gt;
-  const MOUNTAINS = [
+  const MOUNTAINS = &lbrack;
     {name: "Kilimanjaro", height: 5895, place: "Tanzania"},
     {name: "Everest", height: 8848, place: "Nepal"},
     {name: "Mount Fuji", height: 3776, place: "Japan"},
@@ -5912,10 +5912,10 @@ or document.querySelector to find the node with the proper id attribute.</p>
     {name: "Denali", height: 6168, place: "United States"},
     {name: "Popocatepetl", height: 5465, place: "Mexico"},
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
-  ];<br>
+  &rbrack;;<br>
   function buildTable(data) {
     let table = document.createElement("table");
-    let fields = Object.keys(data[0]);
+    let fields = Object.keys(data&lbrack;0&rbrack;);
     let headRow = document.createElement("tr");
     fields.forEach(function(field) {
       let headCell = document.createElement("th");
@@ -5927,8 +5927,8 @@ or document.querySelector to find the node with the proper id attribute.</p>
       let row = document.createElement("tr");
       fields.forEach(function(field) {
         let cell = document.createElement("td");
-        cell.appendChild(document.createTextNode(object[field]));
-        if (typeof object[field] == "number") {
+        cell.appendChild(document.createTextNode(object&lbrack;field&rbrack;));
+        if (typeof object&lbrack;field&rbrack; == "number") {
           cell.style.textAlign = "right";
         }
         row.appendChild(cell);
@@ -5969,11 +5969,11 @@ doing a recursive call on it to inspect its own children.</p>
   spans.&lt;/p&gt;<br>
 &lt;script&gt;
   function byTagName(node, tagName) {
-    let found = [];
+    let found = &lbrack;&rbrack;;
     tagName = tagName.toUpperCase();
     function explore(node) {
       for (let i = 0; i &lt; node.childNodes.length; i++) {
-        let child = node.childNodes[i];
+        let child = node.childNodes&lbrack;i&rbrack;;
         if (child.nodeType == document.ELEMENT_NODE) {
           if (child.nodeName == tagName) found.push(child);
           explore(child);
@@ -6112,7 +6112,7 @@ out a good way to do this is up to you.</p>
 &lt;/style&gt;<br>
 &lt;body&gt;
 &lt;script&gt;
-  let dots = [];
+  let dots = &lbrack;&rbrack;;
   for (let i = 0; i &lt; 12; i++) {
     let node = document.createElement("div");
     node.className = "trail";
@@ -6121,7 +6121,7 @@ out a good way to do this is up to you.</p>
   }
   let currentDot = 0;<br>  
   window.addEventListener("mousemove", event =&gt; {
-    let dot = dots[currentDot];
+    let dot = dots&lbrack;currentDot&rbrack;;
     dot.style.left = (event.pageX - 3) + "px";
     dot.style.top = (event.pageY - 3) + "px";
     currentDot = (currentDot + 1) % dots.length;
@@ -6181,7 +6181,7 @@ with the first tab visible.</p>
         tab.button.style.color = selected ? "red" : "";
       }
     }
-    selectTab(tabs[0]);
+    selectTab(tabs&lbrack;0&rbrack;);
   }<br>
   asTabs(document.querySelector("tab-panel"));
 &lt;/script&gt;
@@ -6205,7 +6205,7 @@ with the first tab visible.</p>
     let lives = 3;
     for (let level = 0; level &lt; plans.length && lives &gt; 0;) {
       console.log(`Level ${level + 1}, lives: ${lives}`);
-      let status = await runLevel(new Level(plans[level]),
+      let status = await runLevel(new Level(plans&lbrack;level&rbrack;),
                                   Display);
       if (status == "won") level++;
       else lives--;
@@ -6284,7 +6284,7 @@ either that function value or a method that handles the unregistering directly.<
         }
       }
       window.addEventListener("keydown", escHandler);
-      let arrowKeys = trackKeys(["ArrowLeft", "ArrowRight", "ArrowUp"]);<br>
+      let arrowKeys = trackKeys(&lbrack;"ArrowLeft", "ArrowRight", "ArrowUp"&rbrack;);<br>
       function frame(time) {
         if (running == "pausing") {
           running = "no";
@@ -6312,7 +6312,7 @@ either that function value or a method that handles the unregistering directly.<
     let down = Object.create(null);
     function track(event) {
       if (keys.includes(event.key)) {
-        down[event.key] = event.type == "keydown";
+        down&lbrack;event.key&rbrack; = event.type == "keydown";
         event.preventDefault();
       }
     }
@@ -6377,7 +6377,7 @@ state will resemble either Coin’s collide method (removing the actor) or Lava
       }
     }<br>
     Monster.prototype.size = new Vec(1.2, 2);<br>
-    levelChars["M"] = Monster;<br>
+    levelChars&lbrack;"M"&rbrack; = Monster;<br>
     runLevel(new Level(`
 ..................................
 .################################.
@@ -6632,10 +6632,10 @@ Accept header.</p>
 
 <pre>
 const url = "https://eloquentjavascript.net/author";
-const types = ["text/plain",
+const types = &lbrack;"text/plain",
                "text/html",
                "application/json",
-               "application/rainbows+unicorns"];<br>
+               "application/rainbows+unicorns"&rbrack;;<br>
 async function showTypes() {
   for (let type of types) {
     let resp = await fetch(url, {headers: {accept: type}});
@@ -6723,7 +6723,7 @@ break) elements between the rows.</p>
   // I will represent the grid as an array of booleans.<br>
   let gridNode = document.querySelector("#grid");
   // This holds the checkboxes that display the grid in the document.
-  let checkboxes = [];
+  let checkboxes = &lbrack;&rbrack;;
   for (let y = 0; y &lt; height; y++) {
     for (let x = 0; x &lt; width; x++) {
       let box = document.createElement("input");
@@ -6737,10 +6737,10 @@ break) elements between the rows.</p>
     return checkboxes.map(box =&gt; box.checked);
   }
   function checkboxesFromGrid(grid) {
-    grid.forEach((value, i) =&gt; checkboxes[i].checked = value);
+    grid.forEach((value, i) =&gt; checkboxes&lbrack;i&rbrack;.checked = value);
   }
   function randomGrid() {
-    let result = [];
+    let result = &lbrack;&rbrack;;
     for (let i = 0; i &lt; width * height; i++) {
       result.push(Math.random() &lt; 0.3);
     }
@@ -6754,7 +6754,7 @@ break) elements between the rows.</p>
     let count = 0;
     for (let y1 = Math.max(0, y - 1); y1 &lt;= Math.min(height - 1, y + 1); y1++) {
       for (let x1 = Math.max(0, x - 1); x1 &lt;= Math.min(width - 1, x + 1); x1++) {
-        if ((x1 != x || y1 != y) && grid[x1 + y1 * width]) {
+        if ((x1 != x || y1 != y) && grid&lbrack;x1 + y1 * width&rbrack;) {
           count++;
         }
       }
@@ -6768,11 +6768,11 @@ break) elements between the rows.</p>
         let neighbors = countNeighbors(grid, x, y);
         let offset = x + y * width;
         if (neighbors &lt; 2 || neighbors &gt; 3) {
-          newGrid[offset] = false;
+          newGrid&lbrack;offset&rbrack; = false;
         } else if (neighbors == 2) {
-          newGrid[offset] = grid[offset];
+          newGrid&lbrack;offset&rbrack; = grid&lbrack;offset&rbrack;;
         } else {
-          newGrid[offset] = true;
+          newGrid&lbrack;offset&rbrack; = true;
         }
       }
     }
@@ -6819,7 +6819,7 @@ patch the appropriate action.</p>
       let {tools, controls, dispatch} = config;
       this.state = state;<br>
       this.canvas = new PictureCanvas(state.picture, pos =&gt; {
-        let tool = tools[this.state.tool];
+        let tool = tools&lbrack;this.state.tool&rbrack;;
         let onMove = tool(pos, this.state, dispatch);
         if (onMove) {
           return pos =&gt; onMove(pos, this.state, dispatch);
@@ -6832,7 +6832,7 @@ patch the appropriate action.</p>
         onkeydown: event =&gt; this.keyDown(event, config)
       }, this.canvas.dom, elt("br"),
          ...this.controls.reduce(
-           (a, c) =&gt; a.concat(" ", c.dom), []));
+           (a, c) =&gt; a.concat(" ", c.dom), &lbrack;&rbrack;));
     }
     keyDown(event, config) {
       if (event.key == "z" && (event.ctrlKey || event.metaKey)) {
@@ -6840,7 +6840,7 @@ patch the appropriate action.</p>
         config.dispatch({undo: true});
       } else if (!event.ctrlKey && !event.metaKey && !event.altKey) {
         for (let tool of Object.keys(config.tools)) {
-          if (tool[0] == event.key) {
+          if (tool&lbrack;0&rbrack; == event.key) {
             event.preventDefault();
             config.dispatch({tool});
             return;
@@ -6946,7 +6946,7 @@ boundaries.</p>
       let radius = Math.sqrt(Math.pow(to.x - pos.x, 2) +
                              Math.pow(to.y - pos.y, 2));
       let radiusC = Math.ceil(radius);
-      let drawn = [];
+      let drawn = &lbrack;&rbrack;;
       for (let dy = -radiusC; dy &lt;= radiusC; dy++) {
         for (let dx = -radiusC; dx &lt;= radiusC; dx++) {
           let dist = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
@@ -7002,7 +7002,7 @@ the start point has a higher coordinate along that axis than the endpoint and
 swap them if necessary. A succinct way to swap the values of two bindings in
 JavaScript uses destructuring assignment like this:</p>
 
-<pre>[start, end] = [end, start];</pre>
+<pre>&lbrack;start, end&rbrack; = &lbrack;end, start&rbrack;;</pre>
 
 <p>Then you can compute the slope of the line, which determines the amount
 the coordinate on the other axis changes for each step you take along your main
@@ -7018,16 +7018,16 @@ coordinates.</p>
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;
   function drawLine(from, to, color) {
-    let points = [];
+    let points = &lbrack;&rbrack;;
     if (Math.abs(from.x - to.x) &gt; Math.abs(from.y - to.y)) {
-      if (from.x &gt; to.x) [from, to] = [to, from];
+      if (from.x &gt; to.x) &lbrack;from, to&rbrack; = &lbrack;to, from&rbrack;;
       let slope = (to.y - from.y) / (to.x - from.x);
       for (let {x, y} = from; x &lt;= to.x; x++) {
         points.push({x, y: Math.round(y), color});
         y += slope;
       }
     } else {
-      if (from.y &gt; to.y) [from, to] = [to, from];
+      if (from.y &gt; to.y) &lbrack;from, to&rbrack; = &lbrack;to, from&rbrack;;
       let slope = (to.x - from.x) / (to.y - from.y);
       for (let {x, y} = from; y &lt;= to.y; y++) {
         points.push({x: Math.round(x), y, color});
@@ -7080,7 +7080,7 @@ might speed things up a little, but not a huge amount, since most file systems
 can read only one thing at a time.</p>
 
 <p>Your first command line argument, the regular expression, can be found in
-process.argv[2]. The input files come after that. You can use the RegExp
+process.argv&lbrack;2&rbrack;. The input files come after that. You can use the RegExp
 constructor to go from a string to a regular expression object.</p>
 
 <p>Doing this synchronously, with readFileSync, is more straightforward, but
@@ -7103,7 +7103,7 @@ them.</p>
 
 <pre>
 const {statSync, readdirSync, readFileSync} = require("fs");<br>
-let searchTerm = new RegExp(process.argv[2]);<br>
+let searchTerm = new RegExp(process.argv&lbrack;2&rbrack;);<br>
 for (let arg of process.argv.slice(3)) {
   search(arg);
 }<br>
@@ -7246,7 +7246,7 @@ SkillShareServer.prototype.updated = function() {
   this.version++;
   let response = this.talkResponse();
   this.waiting.forEach(resolve => resolve(response));
-  this.waiting = [];<br>
+  this.waiting = &lbrack;&rbrack;;<br>
   writeFile(fileName, JSON.stringify(this.talks), e => {
     if (e) throw e;
   });
@@ -7391,7 +7391,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 ETag: "5"
 Content-Length: 295
-[....]
+&lbrack;....&rbrack;
 </pre>
 
 <p>The protocol described here does not do any access control. Everybody can
@@ -7416,7 +7416,7 @@ requests (as determined by the method and the path) that we support. This
 can be done with a long chain of if statements, but there is a nicer way.</p>
 <p>A router is a component that helps dispatch a request to the function that
 can handle it. You can tell the router, for example, that PUT requests with
-a path that matches the regular expression /^\/talks\/([^\/]+)$/ (/talks/
+a path that matches the regular expression /^\/talks\/(&lbrack;^\/&rbrack;+)$/ (/talks/
 followed by a talk title) can be handled by a given function. In addition, it
 can help extract the meaningful parts of the path (in this case the talk title),
 wrapped in parentheses in the regular expression, and pass them to the handler
@@ -7429,7 +7429,7 @@ This is router.js, which we will later require from our server module:</p>
 const {parse} = require("url");
 module.exports = class Router {
 constructor() {
-  this.routes = [];
+  this.routes = &lbrack;&rbrack;;
 }
 
 add(method, url, handler) {
@@ -7493,7 +7493,7 @@ class SkillShareServer {
   constructor(talks) {
     this.talks = talks;
     this.version = 0;
-    this.waiting = [];
+    this.waiting = &lbrack;&rbrack;;
     let fileServer = ecstatic({root: "./public"});
     this.server = createServer((request, response) => {
       let resolved = router.resolve(this, request);
@@ -7533,18 +7533,18 @@ response. It wraps the server in an object that also holds its state.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The talks that have been proposed are stored in the talks property of the
 server, an object whose property names are the talk titles.</p>
-<p>These will be exposed as HTTP resources under /talks/[title], so we need to add handlers
+<p>These will be exposed as HTTP resources under /talks/&lbrack;title&rbrack;, so we need to add handlers
 to our router that implement the various methods that clients can use to work
 with them.</p>
 <p>The handler for requests that GET a single talk must look up the talk and
 respond either with the talk’s JSON data or with a 404 error response.</p>
 
 <pre>
-const talkPath = /^\/talks\/([^\/]+)$/;
+const talkPath = /^\/talks\/(&lbrack;^\/&rbrack;+)$/;
 
 router.add("GET", talkPath, async (server, title) => {
   if (title in server.talks) {
-    return {body: JSON.stringify(server.talks[title]),
+    return {body: JSON.stringify(server.talks&lbrack;title&rbrack;),
     headers: {"Content-Type": "application/json"}};
   } else {
     return {status: 404, body: `No talk '${title}' found`};
@@ -7557,7 +7557,7 @@ router.add("GET", talkPath, async (server, title) => {
 <pre>
 router.add("DELETE", talkPath, async (server, title) => {
   if (title in server.talks) {
-    delete server.talks[title];
+    delete server.talks&lbrack;title&rbrack;;
     server.updated();
   }
   return {status: 204};
@@ -7605,10 +7605,10 @@ async (server, title, request) => {
     typeof talk.summary != "string") {
       return {status: 400, body: "Bad talk data"};
     }
-    server.talks[title] = {title,
+    server.talks&lbrack;title&rbrack; = {title,
       presenter: talk.presenter,
       summary: talk.summary,
-      comments: []};
+      comments: &lbrack;&rbrack;};
       server.updated();
       return {status: 204};
 });
@@ -7623,7 +7623,7 @@ content of the request, validate the resulting data, and store it as a comment
 when it looks valid.</p>
 
 <pre>
-router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
+router.add("POST", /^\/talks\/(&lbrack;^\/&rbrack;+)\/comments$/,
   async (server, title, request) => {
   let requestBody = await readStream(request);
   let comment;
@@ -7634,7 +7634,7 @@ router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
   typeof comment.message != "string") {
       return {status: 400, body: "Bad comment data"};
   } else if (title in server.talks) {
-    server.talks[title].comments.push(comment);
+    server.talks&lbrack;title&rbrack;.comments.push(comment);
     server.updated();
     return {status: 204};
   } else {
@@ -7660,9 +7660,9 @@ includes an ETag header in the response.</p>
 
 <pre>
 SkillShareServer.prototype.talkResponse = function() {
-let talks = [];
+let talks = &lbrack;&rbrack;;
 for (let title of Object.keys(this.talks)) {
-talks.push(this.talks[title]);
+talks.push(this.talks&lbrack;title&rbrack;);
 }
 return {
 body: JSON.stringify(talks),
@@ -7678,14 +7678,14 @@ are specified to be case insensitive, under their lowercase names.</p>
 
 <pre>
 router.add("GET", /^\/talks$/, async (server, request) => {
-  let tag = /"(.*)"/.exec(request.headers["if-none-match"]);
-  let wait = /\bwait=(\d+)/.exec(request.headers["prefer"]);
-  if (!tag || tag[1] != server.version) {
+  let tag = /"(.*)"/.exec(request.headers&lbrack;"if-none-match"&rbrack;);
+  let wait = /\bwait=(\d+)/.exec(request.headers&lbrack;"prefer"&rbrack;);
+  if (!tag || tag&lbrack;1&rbrack; != server.version) {
     return server.talkResponse();
   } else if (!wait) {
     return {status: 304};
   } else {
-    return server.waitForChanges(Number(wait[1]));
+    return server.waitForChanges(Number(wait&lbrack;1&rbrack;));
   }
 });
 </pre>
@@ -7723,7 +7723,7 @@ SkillShareServer.prototype.updated = function() {
   this.version++;
   let response = this.talkResponse();
   this.waiting.forEach(resolve => resolve(response));
-  this.waiting = [];
+  this.waiting = &lbrack;&rbrack;;
 };
 </pre>
 
@@ -8154,21 +8154,21 @@ class SkillShareApp {
     if (state.talks == this.talks) return;
     this.talks = state.talks;<br>
     for (let talk of state.talks) {
-      let cmp = this.talkMap[talk.title];
+      let cmp = this.talkMap&lbrack;talk.title&rbrack;;
       if (cmp && cmp.talk.presenter == talk.presenter &&
           cmp.talk.summary == talk.summary) {
         cmp.syncState(talk);
       } else {
         if (cmp) cmp.dom.remove();
         cmp = new Talk(talk, this.dispatch);
-        this.talkMap[talk.title] = cmp;
+        this.talkMap&lbrack;talk.title&rbrack; = cmp;
         this.talkDOM.appendChild(cmp.dom);
       }
     }
     for (let title of Object.keys(this.talkMap)) {
       if (!state.talks.some(talk => talk.title == title)) {
-        this.talkMap[title].dom.remove();
-        delete this.talkMap[title];
+        this.talkMap&lbrack;title&rbrack;.dom.remove();
+        delete this.talkMap&lbrack;title&rbrack;;
       }
     }
   }
@@ -8182,19 +8182,19 @@ class SkillShareApp {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function findPath(a, b) {
-  let work = [[a]];
+  let work = &lbrack;&lbrack;a&rbrack;&rbrack;;
   for (let path of work) {
-    let end = path[path.length - 1];
+    let end = path&lbrack;path.length - 1&rbrack;;
     if (end == b) return path;
     for (let next of end.edges) {
-      if (!work.some(path => path[path.length - 1] == next)) {
-        work.push(path.concat([next]));
+      if (!work.some(path => path&lbrack;path.length - 1&rbrack; == next)) {
+        work.push(path.concat(&lbrack;next&rbrack;));
       }
     }
   }
 }<br>
 let graph = treeGraph(4, 4);
-let root = graph[0], leaf = graph[graph.length - 1];
+let root = graph&lbrack;0&rbrack;, leaf = graph&lbrack;graph.length - 1&rbrack;;
 console.log(findPath(root, leaf).length); // → 4<br>
 leaf.connect(root);
 console.log(findPath(root, leaf).length); // → 2</pre>
@@ -8203,13 +8203,13 @@ console.log(findPath(root, leaf).length); // → 2</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function findPath(a, b) {
-  let work = [[a]];
+  let work = &lbrack;&lbrack;a&rbrack;&rbrack;;
   for (let path of work) {
-    let end = path[path.length - 1];
+    let end = path&lbrack;path.length - 1&rbrack;;
     if (end == b) return path;
     for (let next of end.edges) {
-      if (!work.some(path => path[path.length - 1] == next)) {
-        work.push(path.concat([next]));
+      if (!work.some(path => path&lbrack;path.length - 1&rbrack; == next)) {
+        work.push(path.concat(&lbrack;next&rbrack;));
       }
     }
   }
@@ -8217,7 +8217,7 @@ function findPath(a, b) {
 function time(findPath) {
   let graph = treeGraph(6, 6);
   let startTime = Date.now();
-  let result = findPath(graph[0], graph[graph.length - 1]);
+  let result = findPath(graph&lbrack;0&rbrack;, graph&lbrack;graph.length - 1&rbrack;);
   console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
 }<br>
 time(findPath);</pre>
@@ -8232,32 +8232,32 @@ time(findPath);</pre>
 function time(findPath) {
   let graph = treeGraph(6, 6);
   let startTime = Date.now();
-  let result = findPath(graph[0], graph[graph.length - 1]);
+  let result = findPath(graph&lbrack;0&rbrack;, graph&lbrack;graph.length - 1&rbrack;);
   console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
 }<br>
 function findPath_set(a, b) {
-  let work = [[a]];
-  let reached = new Set([a]);
+  let work = &lbrack;&lbrack;a&rbrack;&rbrack;;
+  let reached = new Set(&lbrack;a&rbrack;);
   for (let path of work) {
-    let end = path[path.length - 1];
+    let end = path&lbrack;path.length - 1&rbrack;;
     if (end == b) return path;
     for (let next of end.edges) {
       if (!reached.has(next)) {
         reached.add(next);
-        work.push(path.concat([next]));
+        work.push(path.concat(&lbrack;next&rbrack;));
       }
     }
   }
 }<br>
 time(findPath_set);<br>
 function pathToArray(path) {
-  let result = [];
+  let result = &lbrack;&rbrack;;
   for (; path; path = path.via) result.unshift(path.at);
   return result;
 }<br>
 function findPath_list(a, b) {
-  let work = [{at: a, via: null}];
-  let reached = new Set([a]);
+  let work = &lbrack;{at: a, via: null}&rbrack;;
+  let reached = new Set(&lbrack;a&rbrack;);
   for (let path of work) {
     if (path.at == b) return pathToArray(path);
     for (let next of path.at.edges) {
@@ -9011,9 +9011,9 @@ of code until a specified condition evaluates to false.</p>
 }</pre>
 
 <h4>Looping Array Elements:</h4>
-<pre>let arr = ['apple', 'banana', 'orange'];
+<pre>let arr = &lbrack;'apple', 'banana', 'orange'&rbrack;;
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i])
+  console.log(arr&lbrack;i&rbrack;)
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9035,7 +9035,7 @@ enumerable properties of an object.</p>
   gender: 'female'
 };
 for (let prop in person) {
-  console.log(prop + ': ' + person[prop]);
+  console.log(prop + ': ' + person&lbrack;prop&rbrack;);
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex39">39. JS Loop For Of</h2>
@@ -9046,7 +9046,7 @@ objects such as arrays, strings, etc.</p>
 <h3>Examples of JS Loop For Of:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Iterating Over Array Elements: <span class="consolas">num</span> is reserved word in JS.</h4>
-<pre>let numbers = [1, 2, 3, 4, 5];
+<pre>let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 for (let num of numbers) {
   console.log(num);
 }</pre>
@@ -9079,7 +9079,7 @@ loop or switch statement.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Break:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Using break in a Loop:</h4>
+<h4>Using <span class="consolas">break</span> in a Loop:</h4>
 <pre>
 for (let i = 0; i < 10; i++) {
   if (i === 5) {
@@ -9101,11 +9101,11 @@ iterated over using loops.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Iterables:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Using Iterables with for...of:</h4>
+<h4>Using Iterables with <span class="consolas">for...of</span>:</h4>
 <pre>
-let iterable = [10,20,30];
-  for (let value of iterable) {
-    console.log(value);
+let iterable = &lbrack;10,20,30&rbrack;;
+for (let value of iterable) {
+  console.log(value);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9151,7 +9151,7 @@ myMap.set('key2', 'value2');
 
 <h4>Iterating Over a Map:</h4>
 <pre>
-for (let [key, value] of myMap) {
+for (let &lbrack;key, value&rbrack; of myMap) {
   console.log(key + ' = ' + value);
 }
 </pre>
@@ -9165,9 +9165,9 @@ of its operand.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using typeof:</h4>
 <pre>
-console.log(typeof 5); // Output: 'number'
-console.log(typeof 'Hello'); // Output: 'string'
-console.log(typeof true); // Output: 'boolean'
+console.log(typeof 5);  // Output: 'number'
+console.log(typeof 'Hello');  // Output: 'string'
+console.log(typeof true);  // Output: 'boolean'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9191,7 +9191,7 @@ let num = parseInt(strNumber);
 <h4>Number to String:</h4>
 <pre>
 let number = 15;
-let str = number.toString(); // Output: '15'
+let str = number.toString();  // Output: '15'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex47">47. JS Bitwise</h2>
@@ -9217,37 +9217,37 @@ of either but not both operands are 1.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Bitwise AND Operator (&):</h4>
 <pre>
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
-console.log(a & b); // 00000000000000000000000000000001
-let result = 5 & 3; // Output: 1
+const a = 5;  // 00000000000000000000000000000101
+const b = 3;  // 00000000000000000000000000000011
+console.log(a & b);  // 00000000000000000000000000000001
+let result = 5 & 3;  // Output: 1
 </pre>
 
 <h4>Bitwise NOT Operator (~):</h4>
 <pre>
-const a = 5;  // 00000000000000000000000000000101
-const b = -3; // 11111111111111111111111111111101
-console.log(~a); // 11111111111111111111111111111010
+const a = 5;   // 00000000000000000000000000000101
+const b = -3;  // 11111111111111111111111111111101
+console.log(~a);  // 11111111111111111111111111111010
 // Expected output: -6
-console.log(~b); // 00000000000000000000000000000010
+console.log(~b);  // 00000000000000000000000000000010
 // Expected output: 2
 </pre>
 
 <h4>Bitwise OR Operator (|):</h4>
 <pre>
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
-console.log(a | b); // 00000000000000000000000000000111
-let result = 5 | 3; // Output: 7
+const a = 5;  // 00000000000000000000000000000101
+const b = 3;  // 00000000000000000000000000000011
+console.log(a | b);  // 00000000000000000000000000000111
+let result = 5 | 3;  // Output: 7
 </pre>
 
 <h4>Bitwise XOR Operator (^):</h4>
 <pre>
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
+const a = 5;  // 00000000000000000000000000000101
+const b = 3;  // 00000000000000000000000000000011
 
-console.log(a ^ b); // 00000000000000000000000000000110
-let result = 5 ^ 3; // Output: 6
+console.log(a ^ b);  // 00000000000000000000000000000110
+let result = 5 ^ 3;  // Output: 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9278,7 +9278,7 @@ console.log(pattern.test(str)); // Output: true
 <h3>Examples of JS Precedence:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arithmetic Precedence:</h4>
-<pre>let result = 5 + 3 * 2; // Output: 11 (Multiplication has higher precedence)</pre>
+<pre>let result = 5 + 3 &ast; 2;  // Output: 11 (Multiplication has higher precedence)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -9311,9 +9311,10 @@ console.log(pattern.test(str)); // Output: true
 <pre>
 let globalVar = 'I am global';
 function test() {
-  console.log(globalVar); // Accessible inside function
+  console.log(globalVar);  // Accessible inside function
 }
-console.log(globalVar); // Accessible outside function
+
+console.log(globalVar);  // Accessible outside function
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -9329,10 +9330,10 @@ console.log(globalVar); // Accessible outside function
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Variable Hoisting:</h4>
 <pre>
-console.log(myVar); // Outputs : undefined
+console.log(myVar);  // Outputs : undefined
 varmyVar = 10;
 Function Hoisting:
-sayHello(); // Outputs : 'Hello'
+sayHello();  // Outputs : 'Hello'
 function sayHello() {
   console.log('Hello');
 }
@@ -9374,7 +9375,7 @@ let person = {
     console.log('Hello, my name is ' + this.name);
   }
 };
-person.greet(); // Outputs : 'Hello, my name is Alice'
+person.greet();  // Outputs : 'Hello, my name is Alice'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex55">55. JS Arrow Function</h2>
@@ -9388,7 +9389,7 @@ person.greet(); // Outputs : 'Hello, my name is Alice'
 
 <h4>Arrow Function with Multiple Lines:</h4>
 <pre>
-let greet = (name ) => {
+let greet = (name) => {
   return 'Hello, ' + name + '!'
 };
 </pre>
@@ -9665,8 +9666,8 @@ let user = {
   },
   set fullName(name) {
     let parts = name.split(' ');
-    this.firstName = parts[0];
-    this.lastName = parts[1];
+    this.firstName = parts&lbrack;0&rbrack;;
+    this.lastName = parts&lbrack;1&rbrack;;
   }
 };
 console.log(user.fullName );  // Output: 'John Doe'
@@ -9729,7 +9730,7 @@ console.log(newPerson.info());  // Output: 'Name : Bob, Age : 25'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 for (let key in person) {
-  console.log(key + ': ' + person[key]);
+  console.log(key + ': ' + person&lbrack;key&rbrack;);
 }
 </pre>
 
@@ -9910,7 +9911,7 @@ function greet() {
   return 'Hello,' + this.name + '!';
 }
 let person = {name: 'Bob'};
-let args = [];
+let args = &lbrack;&rbrack;;
 let message = greet.apply(person, args);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10278,7 +10279,7 @@ console.log(document.URL);   // Output: Document URL
 &lt;/form&gt;
 &lt;script&gt;
   let form = document.getElementById("myForm");
-  let username = form.elements["username"].value;
+  let username = form.elements&lbrack;"username"&rbrack;.value;
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -10482,7 +10483,7 @@ console.log(document.URL);   // Output: Document URL
 &lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
 &lt;script&gt;
   let nodeList = document.querySelectorAll("#demo");
-  console.log(nodeList[0].innerHTML); // Output: 'This is a paragraph.'
+  console.log(nodeList&lbrack;0&rbrack;.innerHTML); // Output: 'This is a paragraph.'
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -10604,7 +10605,7 @@ setInterval(() => {
 <h4>Accessing a Cookie:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let username = document.cookie.split(';')[0].split('=')[1];
+let username = document.cookie.split(';')&lbrack;0&rbrack;.split('=')&lbrack;1&rbrack;;
 console.log(username);  // Output: 'John Doe'
 </pre>
 <p>This comprehensive guide covers JavaScript's Browser Object Model (BOM), including 
@@ -11036,9 +11037,9 @@ function submitForm() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
-if ($_SERVER["REQUEST-METHOD"] == "POST") {
-  $username = $_POST ["username"];
-  $password = $_POST ["password"];
+if ($_SERVER&lbrack;"REQUEST-METHOD"&rbrack; == "POST") {
+  $username = $_POST &lbrack;"username"&rbrack;;
+  $password = $_POST &lbrack;"password"&rbrack;;
   // Perform validation or database operations
   echo "Form submitted successfully by $username!";
 } else {
@@ -11187,13 +11188,13 @@ function search() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
-$searchTerm = $_GET['q'];  // Get search query
+$searchTerm = $_GET&lbrack;'q'&rbrack;;  // Get search query
 // Perform database or data search operations based on the query and return results
-$results = [
-  ["name" =&gt; "Result1"],
-  ["name" =&gt; "Result2"],
+$results = &lbrack;
+  &lbrack;"name" =&gt; "Result1"&rbrack;,
+  &lbrack;"name" =&gt; "Result2"&rbrack;,
   // Add more search results as needed
-];
+&rbrack;;
 echo json.encode($results);  // Return results as JSON
 ?&gt;
 </pre>
@@ -11245,7 +11246,7 @@ asynchronous data fetching and manipulation on a webpage.</p>
 <pre>
 &lt;?php
 // Simulate live data update
-Sdata = ['value' =&gt; rand (1,100)];  // Generate random value
+Sdata = &lbrack;'value' =&gt; rand (1,100)&rbrack;;  // Generate random value
 echo json_encode($data);  // Return live data as JSON
 ?&gt;
 </pre>
@@ -11339,7 +11340,7 @@ AJAX can be used to fetch and display data dynamically without page reloads.</p>
 &lt;script&gt;
 function uploadFile() {
   let fileinput = document.getElementById('fileinput');
-  let file = fileinput.files[0];
+  let file = fileinput.files&lbrack;0&rbrack;;
   let formData = new FormData();
   formData.append ('file', file);
   let xhr = new XMLHttpRequest();
@@ -11381,10 +11382,10 @@ function uploadFile() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;?php
-if ($_SERVER['REQUEST-METHOD'] === 'POST' && isset($_FILES['file'])) {
+if ($_SERVER&lbrack;'REQUEST-METHOD'&rbrack; === 'POST' && isset($_FILES&lbrack;'file'&rbrack;)) {
   $targetDir = 'uploads/';
-  $targetFile = $targetDir.basename($-FILES['file']['name']);
-  if (move_uploaded_file($.FILES['file']['tmp_name'], $targetFile)) {
+  $targetFile = $targetDir.basename($-FILES&lbrack;'file'&rbrack;&lbrack;'name'&rbrack;);
+  if (move_uploaded_file($.FILES&lbrack;'file'&rbrack;&lbrack;'tmp_name'&rbrack;, $targetFile)) {
     echo 'File uploaded successfully!';
   } else {
     echo 'Error uploading file.';
@@ -11473,7 +11474,7 @@ literals. It's widely used for data exchange between web servers and web clients
     "street": "123 Main St",
     "city": "Anytown"
   },
-  "hobbies":["reading","coding","traveling"]
+  "hobbies":&lbrack;"reading","coding","traveling"&rbrack;
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11500,7 +11501,7 @@ booleans, or null.</p>
   "key5": {
     "nestedKey": "nestedValue"
   },
-  "key6":["arrayValuel", "arrayValue2"]
+  "key6":&lbrack;"arrayValuel", "arrayValue2"&rbrack;
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11552,7 +11553,7 @@ lightweight and easier to read and parse than XML.</p>
   "booleantrue",
   "nullValuenull",
   "object" key value"},
-  "array":[1,2,3]
+  "array":&lbrack;1,2,3&rbrack;
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11604,7 +11605,7 @@ strings, and values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
+<p>JSON arrays are ordered lists of values enclosed in square brackets &lbrack;&rbrack;. The values can 
 be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Array:</h4>
@@ -11612,7 +11613,7 @@ be of any JSON data type.</p>
 <h5>JSON code</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-["apple", "banana", "orange"]
+&lbrack;"apple", "banana", "orange"&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Server</h3>
@@ -11667,11 +11668,11 @@ $decodedData = json.decode($jsonString, true);
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
 &lt;script&gt;
-const users = [
+const users = &lbrack;
   {"name":"John", "age": 25},
   {"name":"Alice", "age": 30},
   {"name":"Bob", "age": 28}
-];
+&rbrack;;
 const userList = document.getElementById("userList");
 users.forEach(user =&gt; {
   let listitem = document.createElement("li");
@@ -11748,11 +11749,11 @@ let employee = {
 <h4>04. JSON Array of Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let books = [
+let books = &lbrack;
   {"title": "Book1", "author": "Author1"},
   {"title": "Book2", "author": "Author2"},
   {"title": "Book3", "author": "Author3"}
-];
+&rbrack;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Converting JSON to String:</h4>
@@ -11803,7 +11804,7 @@ form.addEventListener('submit', function(event) {
   let formData = new FormData(form);
   let jsonObject = {};
   formData.forEach((value, key) => {
-    jsonObject[key] = value;
+    jsonObject&lbrack;key&rbrack; = value;
   });
   console.log(jsonObject);
 });
@@ -11819,14 +11820,14 @@ form.addEventListener('submit', function(event) {
 let complexObj = {
   "name":"Sam",
   "age": 35,
-  "addresses[
+  "addresses&lbrack;
     {"type ": "home", "address": "123 Main St"},
     {"type ": "work", "address": "456 Business Ave"}
-  ]
+  &rbrack;
 };
 let complexstring = JSON.stringify(complexObj);
 let parsedObj = JSON.parse(complexstring);
-console.log(parsedObj.addresses[0].address);  // Output: 123 Main St
+console.log(parsedObj.addresses&lbrack;0&rbrack;.address);  // Output: 123 Main St
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -11836,13 +11837,13 @@ console.log(parsedObj.addresses[0].address);  // Output: 123 Main St
 <h4>11. Filtering JSON Array Data:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let employees = [
+let employees = &lbrack;
   {"name": "John", "department":" HR"},
   {"name": "Alice", "department":" IT "},
   {"name": "Bob", "department":" HR"}
-];
+&rbrack;;
 let hrEmployees = employees.filter(employee => employee.department === "HR");
-  console.log(hrEmployees);  // Output: [{"name": "John", "department": "HR"}, {"name": "Bob", "department": "HR"}]
+  console.log(hrEmployees);  // Output: &lbrack;{"name": "John", "department": "HR"}, {"name": "Bob", "department": "HR"}&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
@@ -11943,14 +11944,14 @@ console.log(mergedObj);  // Output: {"name":"Tom", "age": 30, "city":"Paris", "c
 <h4>20. Mapping JSON Data to Another Structure:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let data = [
+let data = &lbrack;
   {"id": 1, "name":"Item1"},
   {"id": 2, "name":"Item2"},
   {"id": 3, "name":"Item3"}
-];
+&rbrack;;
 let mappedData = data.map(item => ({itemId: item.id, itemName: item.name}));
 console.log(mappedData);
-// Output: [{"itemId": 1, "itemName":" Item1"}, {"itemId": 2, "itemName":"Item2"}, {"itemId": 3, "itemName":"Item3"} ]
+// Output: &lbrack;{"itemId": 1, "itemName":" Item1"}, {"itemId": 2, "itemName":"Item2"}, {"itemId": 3, "itemName":"Item3"} &rbrack;
 </pre>
 <p>These examples showcase different aspects of using JSON in JavaScript, including 
 creating, manipulating, parsing, and working with JSON data in various scenarios.</p>
@@ -11985,7 +11986,7 @@ literals. It's widely used for data exchange between web servers and web clients
     "street" "123 Main St",
     "city" "Anytown"
   },
-  "hobbies ["reading","coding","traveling"]
+  "hobbies &lbrack;"reading","coding","traveling"&rbrack;
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12006,7 +12007,7 @@ or null.</p>
   " key4null,
   " key5 {
   " nestedKey" nestedValue "
-  " key6 [" arrayValuel " >" arrayValue2 "]
+  " key6 &lbrack;" arrayValuel " >" arrayValue2 "&rbrack;
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12058,7 +12059,7 @@ lightweight and easier to read and parse than XML.</p>
   "boolean": true,
   "nullValue": null,
   "object":{"key":"value"},
-  "array":[1,2,3]
+  "array":&lbrack;1,2,3&rbrack;
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12114,7 +12115,7 @@ strings, and values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
+<p>JSON arrays are ordered lists of values enclosed in square brackets &lbrack;&rbrack;. The values can 
 be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Array:</h4>
@@ -12247,11 +12248,11 @@ let employee = {
 <h4>04. JSON Array of Objects:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let books = [
+let books = &lbrack;
   {"title": "Book1", "author": "Author1"},
   {"title": "Book2", "author": "Author2"},
   {"title": "Book3", "author": "Author3"}
-];
+&rbrack;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>05. Converting JSON to String:</h4>
@@ -12295,7 +12296,7 @@ form.addEventListener('submit', function(event) {
   let formData = new FormData(form);
   let jsonObject = {};
   formData.forEach((value, key) => {
-    jsonObject[key] = value;
+    jsonObject&lbrack;key&rbrack; = value;
   });
   console.log(jsonObject);
 });
@@ -12307,26 +12308,26 @@ form.addEventListener('submit', function(event) {
 let complexObj = {
   "name": "Sam",
   "age": 35,
-  "addresses":[
+  "addresses":&lbrack;
     {"type": "home", "address": "123 Main St"},
     {"type": "work", "address": "456 Business Ave"}
-  ]
+  &rbrack;
 };
 let complexstring = JSON.stringify(complexObj);
 let parsedObj = JSON.parse(complexstring);
-console.log(parsedObj.addresses[0].address);  // Output: 123 Main St
+console.log(parsedObj.addresses&lbrack;0&rbrack;.address);  // Output: 123 Main St
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. Filtering JSON Array Data:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let employees = [
+let employees = &lbrack;
   {"name": "John", "department": "HR"},
   {"name": "Alice", "department": "IT"},
   {"name": "Bob", "department": "HR"}
-];
+&rbrack;;
 let hrEmployees = employees.filter(employee => employee.department === "HR");
-console.log(hrEmployees);  // Output: [{"name": "John", "department": "HR" }, {"name": "Bob", "department": "HR"}]
+console.log(hrEmployees);  // Output: &lbrack;{"name": "John", "department": "HR" }, {"name": "Bob", "department": "HR"}&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
@@ -12411,17 +12412,17 @@ console.log(mergedObj);  // Output: {name: 'Tom', age: 30, city: 'Paris', countr
 <h4>20. Mapping JSON Data to Another Structure:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let data = [
+let data = &lbrack;
   {"id": 1, "name":" "Item1"},
   {"id": 2, "name":" "Item2"},
   {"id": 3, "name":" "Item3"}
-];<br>
+&rbrack;;<br>
 let mappedData = data.map(item => ({itemId: item.id, itemName: item.name}));
 
 console.log(mappedData);
-// Output: [{"itemId": 1, "itemName":"Item1"}, 
+// Output: &lbrack;{"itemId": 1, "itemName":"Item1"}, 
   {"itemId": 2, "itemName":"Item2"}, 
-  {"itemId": 3, "itemName":"Item3"}]
+  {"itemId": 3, "itemName":"Item3"}&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -12604,7 +12605,7 @@ element.style.color = "blue";
 <pre>
 let elements = document.getElementsByClassName (" myClass ");
 for (let i = 0; i < elements.length; i ++) {
-  elements[i].style.fontWeight = "bold";
+  elements&lbrack;i&rbrack;.style.fontWeight = "bold";
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12893,7 +12894,7 @@ customization and interactivity.</p>
 <h4>Example - Creating a Line Chart with Plotly:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [{x: [1, 2, 3, 4], y:[10, 15, 13, 18], type: 'scatter'}];
+const data = &lbrack;{x: &lbrack;1, 2, 3, 4&rbrack;, y:&lbrack;10, 15, 13, 18&rbrack;, type: 'scatter'}&rbrack;;
 Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12910,26 +12911,26 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
+    labels: &lbrack;'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'&rbrack;,
+    datasets: &lbrack;{
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundcolor: [
+      data: &lbrack;12, 19, 3, 5, 2, 3&rbrack;,
+      backgroundcolor: &lbrack;
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
         'rgba(255, 206, 86, 0.2)',
         'rgba(75, 192, 192, 0.2)',
         'rgba(153, 102, 255, 0.2)',
         'rgba(255, 159, 64, 0.2)'
-      ],
-borderColor: [
+      &rbrack;,
+borderColor: &lbrack;
   'rgba(255, 99, 132, 1)',
   'rgba(54, 162, 235, 1)',
   'rgba(255, 206, 86, 1)',
   'rgba(75, 192, 192, 1)',
   'rgba(153, 102, 255, 1)',
   'rgba(255, 159, 64, 1)'
-],
+&rbrack;,
 border Width: 1
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12942,17 +12943,17 @@ using declarative JavaScript syntax.</p>
 <h4>Example - Creating a Pie Chart with Google Charts:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google.charts.load ('current', {packages:['corechart']});
+google.charts.load ('current', {packages:&lbrack;'corechart'&rbrack;});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
-  const data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['Work1, 11],
-  ['Eat', 2],
-  ['Commute', 2],
-  ['Watch TV', 2],
-  ['Sleep', 7]
-]);
+  const data = google.visualization.arrayToDataTable(&lbrack;
+  &lbrack;'Task', 'Hours per Day'&rbrack;,
+  &lbrack;'Work1, 11&rbrack;,
+  &lbrack;'Eat', 2&rbrack;,
+  &lbrack;'Commute', 2&rbrack;,
+  &lbrack;'Watch TV', 2&rbrack;,
+  &lbrack;'Sleep', 7&rbrack;
+&rbrack;);
 const options = {
   title: 'My Daily Activities',
   pieHole: 0.4,
@@ -13022,14 +13023,14 @@ ctx.fill();
 <h4>3. Create Line Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [{x: [1, 2, 3, 4], y: [10, 15, 13, 18], type: 'scatter'}];
+const data = &lbrack;{x: &lbrack;1, 2, 3, 4&rbrack;, y: &lbrack;10, 15, 13, 18&rbrack;, type: 'scatter'}&rbrack;;
 Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create Bar Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [{x: ['A', 'B', 'C'], y: [10, 20, 15], type: 'bar'}];
+const data = &lbrack;{x: &lbrack;'A', 'B', 'C'&rbrack;, y: &lbrack;10, 20, 15&rbrack;, type: 'bar'}&rbrack;;
 Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13042,17 +13043,17 @@ const ctx = document.getElementById ('myChart').getContext ('2d');
 const myChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [ {
+    labels: &lbrack;'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'&rbrack;,
+    datasets: &lbrack; {
       label: '# of Votes',
-      data:[12,19,3,5,2,3],
-      backgroundcolor: [
+      data:&lbrack;12,19,3,5,2,3&rbrack;,
+      backgroundcolor: &lbrack;
        'rgba(255,99,132,0.2)',
        'rgba(54,162,235,0.2)',
         //... more colors
-      ],
+      &rbrack;,
     borderwidth: 1
-  }]
+  }&rbrack;
 }
 });
 </pre>
@@ -13064,13 +13065,13 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [{
+    labels: &lbrack;'January', 'February', 'March', 'April', 'May', 'June', 'July'&rbrack;,
+    datasets: &lbrack;{
     label: 'My First Dataset',
-    data: [65, 59, 80, 81, 56, 55, 40],
+    data: &lbrack;65, 59, 80, 81, 56, 55, 40&rbrack;,
     bordercolor: 'rgb (75,192,192)',
     borderwidth: 1
-  }]
+  }&rbrack;
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13079,17 +13080,17 @@ const myChart = new Chart(ctx, {
 <h4>7. Pie Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google.charts.load ('current', {packages: ['corechart'] });
+google.charts.load ('current', {packages: &lbrack;'corechart'&rbrack; });
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
-  const data = google.visualization.arrayToDataTable ([
-    ['Task', ‘Hours per Day'],
-    ['Work', 11],
-    [’Eat’, 2 ],
-    ['Commute', 2 ],
-    ['Watch TV', 2 ],
-    ['Sleep', 7 ]
-  ]);
+  const data = google.visualization.arrayToDataTable (&lbrack;
+    &lbrack;'Task', ‘Hours per Day'&rbrack;,
+    &lbrack;'Work', 11&rbrack;,
+    &lbrack;’Eat’, 2 &rbrack;,
+    &lbrack;'Commute', 2 &rbrack;,
+    &lbrack;'Watch TV', 2 &rbrack;,
+    &lbrack;'Sleep', 7 &rbrack;
+  &rbrack;);
   const options = {
     title: 'My Daily Activities',
     pieHole: 0.4,
@@ -13102,16 +13103,16 @@ chart.draw(data, options);
 <h4>8. Area Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google.charts.load('current', {packages : ['corechart']});
+google.charts.load('current', {packages : &lbrack;'corechart'&rbrack;});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
-  const data = google.visualization.arrayToDataTable ([
-    ['Year1, 'Sales', 'Expenses'],
-    [’2013', 1000,400],
-    ['2014', 1170,460],
-    ['2015', 660, 1120],
-    ['2016', 1030,540]
-  ]);
+  const data = google.visualization.arrayToDataTable (&lbrack;
+    &lbrack;'Year1, 'Sales', 'Expenses'&rbrack;,
+    &lbrack;’2013', 1000,400&rbrack;,
+    &lbrack;'2014', 1170,460&rbrack;,
+    &lbrack;'2015', 660, 1120&rbrack;,
+    &lbrack;'2016', 1030,540&rbrack;
+  &rbrack;);
 const options = {
   title: 'Company Performance',
   curveType: 'function',
@@ -13178,14 +13179,14 @@ ctx.fill();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Create a Line Chart:</h4>
 <pre>
-const data = [{x: [1, 2, 3, 4], y: [10, 15, 13, 18], type: 'scatter'}];
+const data = &lbrack;{x: &lbrack;1, 2, 3, 4&rbrack;, y: &lbrack;10, 15, 13, 18&rbrack;, type: 'scatter'}&rbrack;;
 Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a Bar Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const data = [{x: ['A', 'B', 'C'], y: [10, 20, 15], type: 'bar'}];
+const data = &lbrack;{x: &lbrack;'A', 'B', 'C'&rbrack;, y: &lbrack;10, 20, 15&rbrack;, type: 'bar'}&rbrack;;
 Plotly.newPlot('myDiv', data);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13198,17 +13199,17 @@ const ctx = document.getElementById ('myChart').getContext ('2d');
 const myChart = new Chart (ctx, {
   type: 'bar',
   data: {
-    labels : [ 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' ],
-    datasets: [ {
+    labels : &lbrack; 'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange' &rbrack;,
+    datasets: &lbrack; {
     label: '# of Votes',
-    data:[ 12,19,3,5,2,3 ],
-    backgroundcolor: [
+    data:&lbrack; 12,19,3,5,2,3 &rbrack;,
+    backgroundcolor: &lbrack;
       'rgba( 255, 99, 132,0.2)',
       'rgba(54, 162, 235, 0.2 )',
       //... more colors
-    ],
+    &rbrack;,
     borderwidth: 1
-  }]
+  }&rbrack;
 }
 });
 </pre>
@@ -13220,13 +13221,13 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
   type: 'line1,
   data: {
-    labels: ['January', 'February1, 'March', 'April', 'May', 'June', 'July'],
-    datasets: [{
+    labels: &lbrack;'January', 'February1, 'March', 'April', 'May', 'June', 'July'&rbrack;,
+    datasets: &lbrack;{
     label: 'My First Dataset',
-    data: [65, 59, 80, 81, 56, 55, 40],
+    data: &lbrack;65, 59, 80, 81, 56, 55, 40&rbrack;,
     borderColor: 'rgb (75, 192, 192)',
     borderwidth: 
-  }]
+  }&rbrack;
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13235,17 +13236,17 @@ const myChart = new Chart(ctx, {
 <h4>7. Create a Pie Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google.charts.load('current', {packages: ['corechart']});
+google.charts.load('current', {packages: &lbrack;'corechart'&rbrack;});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
-  const data = google.visualization.arrayToDataTable([
-    ['Task', 'Hours per Day'],
-    ['Work', 11],
-    [’Eat', 2],
-    ['Commute', 2],
-    ['Watch TV', 2],
-    ['Sleep', 7]
-  ]);
+  const data = google.visualization.arrayToDataTable(&lbrack;
+    &lbrack;'Task', 'Hours per Day'&rbrack;,
+    &lbrack;'Work', 11&rbrack;,
+    &lbrack;’Eat', 2&rbrack;,
+    &lbrack;'Commute', 2&rbrack;,
+    &lbrack;'Watch TV', 2&rbrack;,
+    &lbrack;'Sleep', 7&rbrack;
+  &rbrack;);
   const options = {
     title: 'My Daily Activities',
     pieHole: 0.4,
@@ -13258,17 +13259,17 @@ function drawChart() {
 <h4>8. Create an Area Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-google.charts.load('current', {packages:['corechart']});
+google.charts.load('current', {packages:&lbrack;'corechart'&rbrack;});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-  const data = google.visualization.arrayToDataTable([
-  [‘Year1, 'Sales', 'Expenses'],
-  ['2013', 1000, 400],
-  ['2014', 1170, 460],
-  ['2015', 660, 1120],
-  ['2016', 1030, 540]
-]);
+  const data = google.visualization.arrayToDataTable(&lbrack;
+  &lbrack;‘Year1, 'Sales', 'Expenses'&rbrack;,
+  &lbrack;'2013', 1000, 400&rbrack;,
+  &lbrack;'2014', 1170, 460&rbrack;,
+  &lbrack;'2015', 660, 1120&rbrack;,
+  &lbrack;'2016', 1030, 540&rbrack;
+&rbrack;);
 const options = {
   title: 'Company Performance',
   curveType: 'function',
@@ -13365,18 +13366,18 @@ function isPalindrome(str) {
 <h4>5. Find Maximum Number in Array:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers = [ 5, 8, 3,12, 6 ];
+let numbers = &lbrack; 5, 8, 3,12, 6 &rbrack;;
 letmaxNumber = Math.max(... numbers );  // Output: 12
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Sort Array of Objects by Property:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let products = [
+let products = &lbrack;
   {name: 'Laptop', price: 800},
   {name: 'Phone', price: 600},
   {name: 'Tablet', price: 300}
-];
+&rbrack;;
 products.sort((a, b) => a.price - b.price);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13385,8 +13386,8 @@ products.sort((a, b) => a.price - b.price);
 <h4>7. Higher - Order Function - Map:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers = [1, 2, 3];
-let doubled = numbers.map(num => num * 2);  // Output: [2, 4, 6]
+let numbers = &lbrack;1, 2, 3&rbrack;;
+let doubled = numbers.map(num => num * 2);  // Output: &lbrack;2, 4, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
@@ -13419,7 +13420,7 @@ letmergedObj = { ... objl, ... obj2};
 <h4>11. For ... Of Loop for Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let colors = ['red', 'green', 'blue'];
+let colors = &lbrack;'red', 'green', 'blue'&rbrack;;
 for (let color of colors) {
   console.log(color);
 }
@@ -13428,7 +13429,7 @@ for (let color of colors) {
 <h4>12. While Loop to Generate Random Numbers:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let randomNums = [];
+let randomNums = &lbrack;&rbrack;;
 while (randomNums.length &lt; 5) {
   randomNums.push(Math.floor(Math.random() * 10) + 1);
 }
@@ -13559,16 +13560,16 @@ let product = multiplyByTwo(5);  // Output: 10
 <h4>3. Using Reduce to Sum Array:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers = [1, 2, 3, 4, 5];
+let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 let sum = numbers.reduce((acc, curr) => acc + curr, 0);  // Output: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Filter and Map Together:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers = [1, 2, 3, 4, 5];
+let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); 
-// Output: [4, 8]
+// Output: &lbrack;4, 8&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -13584,7 +13585,7 @@ let {name, age = 30} = person;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let key = 'dynamicKey';
-let obj = {[key]: 'value'};  // {dynamicKey: 'value'}
+let obj = {&lbrack;key&rbrack;: 'value'};  // {dynamicKey: 'value'}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Loops and Iterations:</h4>
@@ -13594,14 +13595,14 @@ let obj = {[key]: 'value'};  // {dynamicKey: 'value'}
 <pre>
 let obj = {a: 1,b: 2,c: 3};
 for (let key in obj) {
-  console.log(key, obj [key]);
+  console.log(key, obj &lbrack;key&rbrack;);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using For... Of with Iterables:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let iterable = [’a', 'b', 'c'];
+let iterable = &lbrack;’a', 'b', 'c'&rbrack;;
 for (let value of iterable ) {
   console.log(value);
 }
@@ -13683,8 +13684,8 @@ let message = 'Hello, ${name}! *;
 <h4>14. Spread Operator:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let arr = [1, 2, 3];
-let newArr = [... arr, 4,5];  // &lbrack;1, 2, 3, 4, 5&rbrack;
+let arr = &lbrack;1, 2, 3&rbrack;;
+let newArr = &lbrack;... arr, 4,5&rbrack;;  // &lbrack;1, 2, 3, 4, 5&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Error Handling and Regular Expressions:</h4>
@@ -13706,7 +13707,7 @@ function validateNumber(num) {
 <h4>16. Regular Expression to Validate Email:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let emailPattern = / A [ A\s@ ]+ @ [ A\s@ ]+ \ .[ A\s@ ]+ $ /;
+let emailPattern = / A &lbrack; A\s@ &rbrack;+ @ &lbrack; A\s@ &rbrack;+ \ .&lbrack; A\s@ &rbrack;+ $ /;
 let isValidEmail = emailPattern.test('test@example.com');  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13723,7 +13724,7 @@ manipulation, and newer ES6 + features.</p>
 <h4>1. Higher - Order Function - Filter:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers = [1, 2, 3, 4, 5];
+let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 let evenNumbers = numbers.filter(num => num % 2 === 0);  // Output: &lbrack;2,4&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13740,15 +13741,15 @@ let evenNumbers = numbers.filter(num => num % 2 === 0);  // Output: &lbrack;2,4&
 <h4>3. Using FlatMap:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-letarr =[[1,2], [3,4], [5,6]];
-let flatArray = arr.flatMap(innerArr => innerArr.map(item => item * 2));  // Output: [2,4,6,8,10,12]
+letarr =&lbrack;&lbrack;1,2&rbrack;, &lbrack;3,4&rbrack;, &lbrack;5,6&rbrack;&rbrack;;
+let flatArray = arr.flatMap(innerArr => innerArr.map(item => item * 2));  // Output: &lbrack;2,4,6,8,10,12&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let nestedArrays =[[1,2], [3,4], [5,6]];
-let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), []);  // Output: [1, 2, 3, 4, 5, 6]
+let nestedArrays =&lbrack;&lbrack;1,2&rbrack;, &lbrack;3,4&rbrack;, &lbrack;5,6&rbrack;&rbrack;;
+let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), &lbrack;&rbrack;);  // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -13790,7 +13791,7 @@ async function asyncOperation(value) {
   1,1000);
 });
 async function executeAsyncOperations() {
-  let values = [1, 2, 3];
+  let values = &lbrack;1, 2, 3&rbrack;;
   for await (let value of values) {
   await asyncOperation(value);
 }
@@ -13870,18 +13871,18 @@ dog.makeSound();  // Output: 'Animal sound'
 <h4>3. Using Set to Get Unique Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers =[1, 2, 2, 3, 4, 4, 5];
-let uniqueNumbers = [... new Set(numbers)];  // Output: [ 1, 2, 3, 4, 5 ]
+let numbers =&lbrack;1, 2, 2, 3, 4, 4, 5&rbrack;;
+let uniqueNumbers = &lbrack;... new Set(numbers)&rbrack;;  // Output: &lbrack; 1, 2, 3, 4, 5 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array.find to Get First Matching Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let users = [
+let users = &lbrack;
   {id: l, name: 'Alice'},
   {id: 2, name: 'Bob'},
   {id: 3, name: 'Charlie'}
-];
+&rbrack;;
 let user = users.find(user => user.id === 2);  // Output: {id: 2, name: 'Bob'}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13929,8 +13930,8 @@ Promise.reject('Error message')
 <pre>
 let promise1 = Promise.resolve('First');
 let promise2 = Promise.resolve('Second');
-Promise.all([promise1, promise2])
-  .then(values => console.log(values)); || Output: ['First', 'Second']
+Promise.all(&lbrack;promise1, promise2&rbrack;)
+  .then(values => console.log(values)); || Output: &lbrack;'First', 'Second'&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -13973,11 +13974,11 @@ function memoize (fn) {
   const cache = {};
   return function(... args) {
     const key = JSON.stringify(args);
-   if (cache[key]) {
-    return cache [key];
+   if (cache&lbrack;key&rbrack;) {
+    return cache &lbrack;key&rbrack;;
   }
   const result = fn.apply(this, args);
-  cache [key] = result;
+  cache &lbrack;key&rbrack; = result;
   return result;
   };
 }<br>
@@ -14004,14 +14005,14 @@ const addAndMultiply = compose(multiply, add);
 <h4>3. Using Flat to Flatten Nested Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let nestedArr = [1, [2, [3, 4], 5], 6];
+let nestedArr = &lbrack;1, &lbrack;2, &lbrack;3, 4&rbrack;, 5&rbrack;, 6&rbrack;;
 let flattenedArr = nestedArr.flat(Infinity);  // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Some and Every Methods:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let numbers = [2, 4, 6, 7, 8];
+let numbers = &lbrack;2, 4, 6, 7, 8&rbrack;;
 let allEven = numbers.every(num => num % 2 === 0);  // Output: false
 let hasOdd = numbers.some(num => num % 2 !== 0);  // Output: true
 </pre>
@@ -14021,7 +14022,7 @@ let hasOdd = numbers.some(num => num % 2 !== 0);  // Output: true
 <h4>5. Object.fromEntries Method:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-let entries = [['name', 'Alice'], ['age', 30]];
+let entries = &lbrack;&lbrack;'name', 'Alice'&rbrack;, &lbrack;'age', 30&rbrack;&rbrack;;
 letobj = Object.fromEntries(entries);  // Output: {name: 'Alice', age: 30}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14038,10 +14039,10 @@ const descriptors = Object.getOwnPropertyDescriptors (obj);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData(url, timeout) {
-  return Promise.race([
+  return Promise.race(&lbrack;
     fetch(url),
     new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), timeout))
-  ]);
+  &rbrack;);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14049,10 +14050,10 @@ function fetchData(url, timeout) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
-  const promises = [
+  const promises = &lbrack;
     fetch('https://api.example.com/endpoint1'),
     fetch('https://api.example.com/endpoint2')
-  ];
+  &rbrack;;
   const results = await Promise.allSettled(promises);
   console.log(results);
 }
@@ -14078,7 +14079,7 @@ const userAge = data?.user?.age ?? 25;  // Output: 25
 <pre>
 const buffer = new ArrayBuffer(16);
 const intArray = new Int32Array(buffer);
-intArray[0] = 42;
+intArray&lbrack;0&rbrack; = 42;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -14117,14 +14118,14 @@ immediatePromise.then(result => console.log(result));  // Output: 'Immediate res
 <h4>3. Using Array.findIndex:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [5,12,8,130,44];
+const array = &lbrack;5,12,8,130,44&rbrack;;
 const index = array.findIndex(element => element > 10);  // Output: 1 (index of first element > 10)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.fill:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [1, 2, 3, 4, 5];
+const array = &lbrack;1, 2, 3, 4, 5&rbrack;;
 array.fill(0, 2, 4);  // Fills array from index 2 to index 4 with value 0
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14134,7 +14135,7 @@ array.fill(0, 2, 4);  // Fills array from index 2 to index 4 with value 0
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {foo: 'bar', baz: 42};
-const entries = Object.entries(obj);  // Output: [['foo', 'bar'], ['baz', 42]]
+const entries = Object.entries(obj);  // Output: &lbrack;&lbrack;'foo', 'bar'&rbrack;, &lbrack;'baz', 42&rbrack;&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.preventExtensions:</h4>
@@ -14202,7 +14203,7 @@ const memoize = (fn) => {
   const cache = {};
   return (... args) => {
     const stringifiedArgs = JSON.stringify(args);
-    return cache[stringifiedArgs] || (cache[stringifiedArgs] = fn(... args ));
+    return cache&lbrack;stringifiedArgs&rbrack; || (cache&lbrack;stringifiedArgs&rbrack; = fn(... args ));
   };
 };<br>
 const sum = (a, b) => {
@@ -14240,14 +14241,14 @@ const throttled = throttle(throttledFunc, 3000);
 <h4>3. Using Array.from with Mapping and Filtering:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers = [1, 2, 3, 4, 5, 6];
-const new Array = Array.from(numbers, x => x * 2 ).filter (x => x > 5);  // Output: [6, 8, 10, 12]
+const numbers = &lbrack;1, 2, 3, 4, 5, 6&rbrack;;
+const new Array = Array.from(numbers, x => x * 2 ).filter (x => x > 5);  // Output: &lbrack;6, 8, 10, 12&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.reduceRight:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [1, 2, 3, 4];
+const array = &lbrack;1, 2, 3, 4&rbrack;;
 const sum = array.reduceRight((acc, curr) => acc + curr, 0);  // Output: 10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14256,10 +14257,10 @@ const sum = array.reduceRight((acc, curr) => acc + curr, 0);  // Output: 10
 <h4>5. Object.fromEntries with Map:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const entries = new Map([
-  ['name', 'Alice'],
-  ['age', 30]
-]);
+const entries = new Map(&lbrack;
+  &lbrack;'name', 'Alice'&rbrack;,
+  &lbrack;'age', 30&rbrack;
+&rbrack;);
 const obj = Object.fromEntries(entries);  // Output: {name: 'Alice', age: 30}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14276,11 +14277,11 @@ console.log(Object.isSealed(obj));  // Output: true
 <h4>7. Promise.any for the First Fulfilled Promise:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const promises = [
+const promises = &lbrack;
   Promise.reject('Rejected1'),
   Promise.resolve('Resolved2'),
   Promise.resolve('Resolved3')
-];
+&rbrack;;
 Promise.any(promises)
   .then(result => console.log(result));  // Output: 'Resolved2'
 </pre>
@@ -14354,14 +14355,14 @@ const debouncedInputHandler = debounce(handleInput, 300);
 <h4>3. Using Array.flat to Flatten Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const nestedArray = [1, [2, [3]], 4, [5]];
-const flatArray = nestedArray.flat(Infinity);  // Output: [ 1, 2, 3, 4, 5 ]
+const nestedArray = &lbrack;1, &lbrack;2, &lbrack;3&rbrack;&rbrack;, 4, &lbrack;5&rbrack;&rbrack;;
+const flatArray = nestedArray.flat(Infinity);  // Output: &lbrack; 1, 2, 3, 4, 5 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.slice to Clone Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const originalArray = [1, 2, 3, 4];
+const originalArray = &lbrack;1, 2, 3, 4&rbrack;;
 const clonedArray = originalArray.slice();  // Clones the originalArray
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14371,7 +14372,7 @@ const clonedArray = originalArray.slice();  // Clones the originalArray
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 constobj = {a: l,b: 2,c: 3};
-const mappedObj = Object.fromEntries(Object.keys(obj).map(key => [key, obj[key] * 2]));
+const mappedObj = Object.fromEntries(Object.keys(obj).map(key => &lbrack;key, obj&lbrack;key&rbrack; * 2&rbrack;));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.is for Strict Equality Comparison:</h4>
@@ -14386,11 +14387,11 @@ console.log(Object.is(5, '5'));  // Output: false
 <h4>7. Promise.allSettled with Optional Chaining:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const promises = [
+const promises = &lbrack;
   Promise.resolve({name: 'Alice', age: 30}),
   Promise.reject(new Error('Something went wrong')),
   Promise.resolve(null)
-];
+&rbrack;;
 const results = await Promise.allSettled(promises);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14446,7 +14447,7 @@ const memoize = (func) => {
   const cache = {};
   return(... args) => {
     const stringifiedArgs = JSON.stringify(args);
-    return cache[stringifiedArgs] || (cache[stringifiedArgs] = func(... args));
+    return cache&lbrack;stringifiedArgs&rbrack; || (cache&lbrack;stringifiedArgs&rbrack; = func(... args));
   };
 };<br>
 const sum = (a, b) => {
@@ -14463,14 +14464,14 @@ console.log(memoizedSum(2, 3));  // Output: 5 (Retrieved from cache)
 <h4>3. Using Array.reduce with Initial Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [1, 2, 3, 4, 5];
+const array = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const sum = array.reduce((acc, curr) => acc + curr, 0);  // Output: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array.findIndex with Custom Predicate:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers = [10, 20, 30, 40, 50];
+const numbers = &lbrack;10, 20, 30, 40, 50&rbrack;;
 const index = numbers.findIndex(num => num > 25);  // Output: 2 (Index of first element > 25)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14480,7 +14481,7 @@ const index = numbers.findIndex(num => num > 25);  // Output: 2 (Index of first 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {name: 'Alice', age: 30};
-const entries = Object.entries(obj);  // Output: [['name', 'Alice'], ['age', 30]]
+const entries = Object.entries(obj);  // Output: &lbrack;&lbrack;'name', 'Alice'&rbrack;, &lbrack;'age', 30&rbrack;&rbrack;
 const reconstructedObj = Object.fromEntries(entries);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14516,8 +14517,8 @@ async function returnResolved() {
 <h4>9. Array Destructuring:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const [ first, second, ... rest ] = [ 1, 2, 3,4, 5 ];
-console.log(first, second, rest);  // Output: 12 [ 3,4, 5 ]
+const &lbrack; first, second, ... rest &rbrack; = &lbrack; 1, 2, 3,4, 5 &rbrack;;
+console.log(first, second, rest);  // Output: 12 &lbrack; 3,4, 5 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Rest Parameters in Functions:</h4>
@@ -14556,15 +14557,15 @@ console.log(functionsource);  // Output:" function greet() {console.log('Hello!'
 <h4>3. Array.flatMap for Flattening and Mapping:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const arr = [1, 2, 3];
-const mappedAndFlattened = arr.flatMap(x => [x * 2, x * 3]);
-console.log(mappedAndFlattened);  // Output: [2, 3, 4, 6, 6, 9]
+const arr = &lbrack;1, 2, 3&rbrack;;
+const mappedAndFlattened = arr.flatMap(x => &lbrack;x * 2, x * 3&rbrack;);
+console.log(mappedAndFlattened);  // Output: &lbrack;2, 3, 4, 6, 6, 9&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.some with Custom Predicate:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers = [5, 10, 15, 20];
+const numbers = &lbrack;5, 10, 15, 20&rbrack;;
 const isEvenPresent = numbers.some(num => num % 2 === 0);  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14574,7 +14575,7 @@ const isEvenPresent = numbers.some(num => num % 2 === 0);  // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {a: 1,b: 2,c: 3);
-const keys = Object.keys(obj);  // Output: ['a', 'b', 'c']
+const keys = Object.keys(obj);  // Output: &lbrack;'a', 'b', 'c'&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.setPrototypeOf for Dynamic Prototype Setting:</h4>
@@ -14597,7 +14598,7 @@ newObj.greet();  // Output: 'Greetings!'
 <pre>
 const promise1 = new Promise((resolve) => setTimeout(resolve, 1000, 'First'));
 const promise2 = new Promise((resolve) => setTimeout(resolve, 500, 'Second'));<br>
-Promise.race([promise1, promise2]).then((value) => {
+Promise.race(&lbrack;promise1, promise2&rbrack;).then((value) => {
   console.log(value);  // Output: 'Second' (Resolved earlier)
 });
 </pre>
@@ -14629,9 +14630,9 @@ console.log(`My name is ${name} and I'm ${age} years old.`);
 <h4>10. Array Spread Operator for Concatenation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const arrl = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const combined = [...arrl, ...arr2];  // Output: [1, 2, 3, 4, 5, 6]
+const arrl = &lbrack;1, 2, 3&rbrack;;
+const arr2 = &lbrack;4, 5, 6&rbrack;;
+const combined = &lbrack;...arrl, ...arr2&rbrack;;  // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 <div align="right">
   <b><a href="#toc">↥ back to top</a></b>
@@ -14667,15 +14668,15 @@ delayExecution(2000).then(() => console.log('Delayed execution'));  // Output af
 <h4>3. Array.every with Custom Predicate:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers = [10, 20, 30];
+const numbers = &lbrack;10, 20, 30&rbrack;;
 const allGreaterThanFive = numbers.every(num => num > 5);  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.reverse to Reverse an Array:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const array = [1, 2, 3, 4, 5];
-const reversedArray = array.slice().reverse();  // Output: [5, 4, 3, 2, 1]
+const array = &lbrack;1, 2, 3, 4, 5&rbrack;;
+const reversedArray = array.slice().reverse();  // Output: &lbrack;5, 4, 3, 2, 1&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -14683,7 +14684,7 @@ const reversedArray = array.slice().reverse();  // Output: [5, 4, 3, 2, 1]
 <h4>5. Using Object.fromEntries to Convert Array to Object:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const entries = [[’a',1],['b',2],['c',3]];
+const entries = &lbrack;&lbrack;’a',1&rbrack;,&lbrack;'b',2&rbrack;,&lbrack;'c',3&rbrack;&rbrack;;
 const obj = Object.fromEntries(entries);  // Output: {a: 1, b: 2, c: 3}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14707,10 +14708,10 @@ Promise.resolve('Resolved value').then(value => console.log(value));  // Output:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
-  const [datal, data2] = await Promise.all([
+  const &lbrack;datal, data2&rbrack; = await Promise.all(&lbrack;
     fetch('https://api.example.com/datal').then(res => res.json()),
     fetch('https://api.example.com/data2').then(res => res.json())
-  ]);
+  &rbrack;);
   console.log(data1, data2);
 }
 </pre>
@@ -14722,7 +14723,7 @@ async function fetchData() {
 <pre>
 const key = 'dynamicKey';
 const obj = {
-  [key]: 'Value based on dynamic key'
+  &lbrack;key&rbrack;: 'Value based on dynamic key'
 };
 console.log(obj, dynamicKey);  // Output: 'Value based on dynamic key'
 </pre>
@@ -14730,11 +14731,11 @@ console.log(obj, dynamicKey);  // Output: 'Value based on dynamic key'
 <h4>10. Array.find for Finding Elements in an Array:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const users = [
+const users = &lbrack;
   {id: l, name: 'Alice'},
   {id: 2, name: 'Bob'},
   {id: 3, name: 'Charlie'}
-];
+&rbrack;;
 const user = users.find(user => user.id === 2);  // Output: {id: 2, name: 'Bob'}
 </pre>
 
@@ -14778,14 +14779,14 @@ console.log(factorial(5));  // Output: 120
 <h4>3. Using Array.slice() for Subarray Creation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const arr = [1, 2, 3, 4, 5];
-const subArray = arr.slice(2, 4);  // Output: [3, 4]
+const arr = &lbrack;1, 2, 3, 4, 5&rbrack;;
+const subArray = arr.slice(2, 4);  // Output: &lbrack;3, 4&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.includes() for Checking Array Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const fruits = ['apple', 'banana', 'orange'];
+const fruits = &lbrack;'apple', 'banana', 'orange'&rbrack;;
 const hasBanana = fruits.includes('banana');  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14795,7 +14796,7 @@ const hasBanana = fruits.includes('banana');  // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {a: 1, b: 2, c: 3};
-const keys = Object.keys(obj);  // Output: ['a', 'b', 'c']
+const keys = Object.keys(obj);  // Output: &lbrack;'a', 'b', 'c'&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.defineProperty() for Object Property Definition:</h4>
@@ -14815,8 +14816,8 @@ Object.defineProperty(obj, 'prop', {
 <pre>
 const promise1 = Promise.resolve('Resolved1');
 const promise2 = Promise.resolve('Resolved2');
-Promise.all([promise1, promise2]).then (values => {
-  console.log(values);  // Output: ['Resolved1', 'Resolved2']
+Promise.all(&lbrack;promise1, promise2&rbrack;).then (values => {
+  console.log(values);  // Output: &lbrack;'Resolved1', 'Resolved2'&rbrack;
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14874,9 +14875,9 @@ ES6 + features like object destructuring and arrow functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function calculateValues(x, y) {
-  return [x + y, x * y, x / y];
+  return &lbrack;x + y, x * y, x / y&rbrack;;
 }
-const[sum, product, division] = calculateValues(10, 5);
+const&lbrack;sum, product, division&rbrack; = calculateValues(10, 5);
 console.log(sum, product, division);  // Output: 15 50 2
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14885,18 +14886,18 @@ console.log(sum, product, division);  // Output: 15 50 2
 <h4>3. Using Array.map() for Transformation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const numbers = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map(num => num * 2);  // Output: [2, 4, 6, 8, 10]
+const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
+const doubledNumbers = numbers.map(num => num * 2);  // Output: &lbrack;2, 4, 6, 8, 10&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array. find() to Get First Matching Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const users = [
+const users = &lbrack;
   {id: 1, name: 'Alice'},
   {id: 2, name: 'Bob'},
   {id: 3, name: 'Charlie'}
-];
+&rbrack;;
 const user = users.find(user => user.id === 2);
 console.log(user);  // Output: {id: 2, name: 'Bob'}
 </pre>
@@ -14915,7 +14916,7 @@ obj.prop = 'new value';  // This change won't take effect due to object freezing
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {a: 1,b: 2,c: 3};
-const values = Object.values(obj);  // Output: [1, 2, 3]
+const values = Object.values(obj);  // Output: &lbrack;1, 2, 3&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Promises and Async / Await:</h4>
@@ -15852,7 +15853,7 @@ if(
   startNumber < endNumber &&
   startNumber > 1
 ){
-  console.log(`Prime numbers in the interval [${startNumber}, ${endNumber}]:`);
+  console.log(`Prime numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:`);
 
 // Check for prime numbers in the interval
 for (let i = startNumber; i <= endNumber; i++) {
@@ -22412,7 +22413,7 @@ prefixSums(&lbrack;l, 2, 3,4, 5&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js215">↥ back to top</a></b>
+  <b><a href="#js0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22482,7 +22483,7 @@ reverseOrderOfBits(234);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js217">↥ back to top</a></b>
+  <b><a href="#js0">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24745,7 +24746,7 @@ as a narcissistic number.</p>
 
 <pre>
 const isArmstrongNumber = (num) => {
-  const digits = [...String(num)].map(Number);
+  const digits = &lbrack;...String(num)&rbrack;.map(Number);
   const numDigits = digits.length;
   const sumOfPowers = digits.reduce((sum, digit) => sum + digit **
   numDigits, 0);
@@ -26740,7 +26741,7 @@ const jsConfetti = new JSConfetti();
  
 button.addEventListener('click', () => {
   jsConfetti.addConfetti({
-    emojis: ['🥩'],
+    emojis: &lbrack;'🥩'&rbrack;,
   }).then(() => jsConfetti.addConfetti())
 })
 </pre>
