@@ -8652,7 +8652,7 @@ variables into strings.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic Template Literal:</h4>
 <pre>let name = 'Alice';
-let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
+let message = `Hello, ${name}!`;  // message = 'Hello, Alice!'</pre>
 
 <h4>Multi-line Template Literal:</h4>
 <pre>let multiLineMessage = `
@@ -8678,7 +8678,7 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <pre>let decimalNumber = 3.14;</pre>
 
 <h4>Scientific Notation:</h4>
-<pre>let scientificNumber = 2e3; // scientificNumber = 2000</pre>
+<pre>let scientificNumber = 2e3;  // scientificNumber = 2000</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex19">19. JS BigInt</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8706,16 +8706,12 @@ manipulations</span> with numbers.</p>
 <h3>Examples of JS Number Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>toFixed() Method:</h4>
-<pre>
-let number = 3.14159;
-let roundedNumber = number.toFixed(2); // roundedNumber = '3.14'
-</pre>
+<pre>let number = 3.14159;
+let roundedNumber = number.toFixed(2);  // roundedNumber = '3.14'</pre>
 
 <h4>parseInt() Method:</h4>
-<pre>
-let stringNumber = '42';
-let parsedNumber = parseInt(stringNumber); // parsedNumber = 42
-</pre>
+<pre>let stringNumber = '42';
+let parsedNumber = parseInt(stringNumber);  // parsedNumber = 42</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex21">21. JS Number Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8748,16 +8744,14 @@ in a single variable.</p>
 <h3>Examples of JS Arrays:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaration:</h4>
-<pre>
-let numbers = &lbrack;1,2,3,4,5&rbrack;; // Array of numbers
-let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
-</pre>
+<pre>let numbers = &lbrack;1,2,3,4,5&rbrack;;  // Array of numbers
+let fruits = &lbrack;'apple','banana','orange'&rbrack;;  // Array of strings</pre>
 
 <h4>Accessging Elements:</h4>
-<pre>console.log(fruits&lbrack;0&rbrack;); // Output: 'apple'</pre>
+<pre>console.log(fruits&lbrack;0&rbrack;);  // Output: 'apple'</pre>
 
 <h4>Modifying Elements:</h4>
-<pre>fruits&lbrack;1&rbrack; = 'grapes'; // Changing 'banana' to 'grapes'</pre>
+<pre>fruits&lbrack;1&rbrack; = 'grapes';  // Changing 'banana' to 'grapes'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8772,13 +8766,13 @@ efficiently.</p>
 <h3>Examples of JS Array Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>push() Method:</h4>
-<pre>fruits.push('melon'); // Adds 'melon' to the end of the array</pre>
+<pre>fruits.push('melon');  // Adds 'melon' to the end of the array</pre>
 
 <h4>pop() Method:</h4>
-<pre>let removedFruit = fruits.pop(); // Removes and returns the last element ('melon')</pre>
+<pre>let removedFruit = fruits.pop();  // Removes and returns the last element ('melon')</pre>
 
 <h4>splice() Method:</h4>
-<pre>numbers.splice(2,1); // Removes 1 element at index 2 (removes '3')</pre>
+<pre>numbers.splice(2,1);  // Removes 1 element at index 2 (removes '3')</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex24">24. JS Array Sort </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8787,7 +8781,7 @@ efficiently.</p>
 <h3>Examples of JS Array Sort:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sorting Numbers:</h4>
-<pre>numbers.sort((a, b) => a - b); // Ascending order</pre>
+<pre>numbers.sort((a, b) => a - b);  // Ascending order</pre>
 
 <h4>Sorting Strings:</h4>
 <pre>fruits.sort(); // Alphabetic Order</pre>
@@ -8800,11 +8794,9 @@ perform operations on each element.</p>
 <h3>Examples of JS Array Iteration:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>forEach() Method:</h4>
-<pre>
-numbers.forEach(number => {
+<pre>numbers.forEach(number => {
   console.log(number);
-});
-</pre>
+});</pre>
 
 <h4>map() Method:</h4>
 <pre>let doubledNumbers = numbers.map(number => number * 2);</pre>
@@ -8823,7 +8815,7 @@ elements can be modified.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const weekdays = &lbrack;'Monday','Tuesday','Wednesday'&rbrack;;
-weekdays&lbrack;1&rbrack; = 'Thursday'; // Modifying an element is allowed
+weekdays&lbrack;1&rbrack; = 'Thursday';  // Modifying an element is allowed
 weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8838,7 +8830,7 @@ and times.</p>
 <pre>let specificDate = new Date();  // Current date and time</pre>
 
 <h4>Creating a Specific Date:</h4>
-<pre>let specificDate = new Date('2024-12-25'); // December 25, 2024</pre>
+<pre>let specificDate = new Date('2024-12-25');  // December 25, 2024</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8853,10 +8845,10 @@ to different formats.</p>
 <h3>Examples of JS Date Formats:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Formatting to String:</h4>
-<pre>let dateString = specificDate.toDateString(); // Convert to a human - readable string</pre>
+<pre>let dateString = specificDate.toDateString();  // Convert to a human - readable string</pre>
 
 <h4>Formatting to Locale String:</h4>
-<pre>let localeString = specificDate.toLocaleString('en-US'); // Convert to local date and time string</pre>
+<pre>let localeString = specificDate.toLocaleString('en-US');  // Convert to local date and time string</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex29">29. JS Date Get Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8866,10 +8858,10 @@ to different formats.</p>
 <h3>Examples of JS Date Get Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>getFullYear() Method:</h4>
-<pre>let year = specificDate.getFullYear(); // Get the year (2023)</pre>
+<pre>let year = specificDate.getFullYear();  // Get the year (2023)</pre>
 
 <h4>getMonth() Method:</h4>
-<pre>let month = specificDate.getMonth(); // Get the month (11 for December)</pre>
+<pre>let month = specificDate.getMonth();  // Get the month (11 for December)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8884,10 +8876,10 @@ to different formats.</p>
 <h3>Examples of JS Date Set Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>setFullYear() Method:</h4>
-<pre>specificDate.setFullYear(2024); // Set the year to 2024</pre>
+<pre>specificDate.setFullYear(2024);  // Set the year to 2024</pre>
 
 <h4>setMonth() Method:</h4>
-<pre>specificDate.setMonth(0); // Set the month to January (0 index)</pre>
+<pre>specificDate.setMonth(0);  // Set the month to January (0 index)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex31">31. JS Math</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8897,10 +8889,10 @@ and functions.</p>
 <h3>Examples of JS Math:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Math.PI Property:</h4>
-<pre>let piValue = Math.PI; // Value of PI & piValue (3.141592653589793)</pre>
+<pre>let piValue = Math.PI;  // Value of PI & piValue (3.141592653589793)</pre>
 
 <h4>Math.sqrt() Method:</h4>
-<pre>let squareRoot = Math.sqrt(25); // Square root of 25 (5)</pre>
+<pre>let squareRoot = Math.sqrt(25);  // Square root of 25 (5)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8914,10 +8906,10 @@ and functions.</p>
 <h3>Examples of JS Random:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Generating Random Number:</h4>
-<pre>let randomNumber = Math.random(); // Random number between 0 and 1</pre>
+<pre>let randomNumber = Math.random();  // Random number between 0 and 1</pre>
 
 <h4>Generating Random Integer:</h4>
-<pre>let randomInteger = Math.floor(Math.random() * 10); // Random integer between 0 and 9</pre>
+<pre>let randomInteger = Math.floor(Math.random() * 10);  // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex33">33. JS Booleans</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8926,16 +8918,12 @@ and functions.</p>
 <h3>Examples of JS Booleans:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaration:</h4>
-<pre>
-let isTrue = true;
-let isFalse = false;
-</pre>
+<pre>let isTrue = true;
+let isFalse = false;</pre>
 <h4>Comparison:</h4>
 
-<pre>
-let greaterThan = 5 &gt; 3; // true
-let equalTo = 5 === 5; // true
-</pre>
+<pre>let greaterThan = 5 &gt; 3; // true
+let equalTo = 5 === 5; // true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8950,7 +8938,7 @@ compare values.</p>
 <h3>Examples of JS Comparisons:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>== (Equality Operator):</h4>
-<pre>console.log(5 == '5'); // true (coerces types)</pre>
+<pre>console.log(5 == '5');  // true (coerces types)</pre>
 
 <h4> === (Strict Equality Operator):</h4>
 <pre>console.log(5 === '5'); // false (compares both value and type)</pre>
@@ -8968,26 +8956,22 @@ false.</p>
 <h3>Examples of JS If Else:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic if...else:</h4>
-<pre>
-let num = 10;
+<pre>let num = 10;
 if (num > 0) {
   console.log('Number is positive');
 } else {
   console.log('Number is not positive');
-}
-</pre>
+}</pre>
 
 <h4>Nested if...else:</h4>
-<pre>
-let x = 5;
+<pre>let x = 5;
 if (x &gt; 0) {
   console.log('x is positive');
 } else if (x &lt; 0 ) {
   console.log('x is negative');
 } else {
   console.log('x is zero');
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -9002,8 +8986,7 @@ actions based on different conditions.</p>
 <h3>Examples of JS Switch:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic switch:</h4>
-<pre>
-let day = 2;
+<pre>let day = 2;
 switch (day) {
   case 1:
     console.log('Monday');
@@ -9014,8 +8997,7 @@ switch (day) {
   default:
     console.log('Other day');
 }
-// Tuesday
-</pre>
+// Tuesday</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex37">37. JS Loop For</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9025,19 +9007,15 @@ of code until a specified condition evaluates to false.</p>
 <h3>Examples of JS Loop For:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic for Loop:</h4>
-<pre>
-for (let i = 0; i < 10; i++) {
+<pre>for (let i = 0; i < 10; i++) {
   console.log(i);
-}
-</pre>
+}</pre>
 
 <h4>Looping Array Elements:</h4>
-<pre>
-let arr = ['apple', 'banana', 'orange'];
+<pre>let arr = ['apple', 'banana', 'orange'];
 for (let i = 0; i < arr.length; i++) {
   console.log(arr[i])
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -9052,16 +9030,14 @@ enumerable properties of an object.</p>
 <h3>Examples of JS Loop For In:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Iterating Object Properties:</h4>
-<pre>
-let person = {
+<pre>let person = {
   name : 'Alice',
   age: 30,
   gender: 'female'
 };
 for (let prop in person) {
   console.log(prop + ': ' + person[prop]);
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex39">39. JS Loop For Of</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9070,13 +9046,11 @@ objects such as arrays, strings, etc.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Loop For Of:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Iterating Over Array Elements:</h4>
-<pre>
-let numbers = [1, 2, 3, 4, 5];
+<h4>Iterating Over Array Elements: <span class="consolas">num</span> is reserved word in JS.</h4>
+<pre>let numbers = [1, 2, 3, 4, 5];
 for (let num of numbers) {
   console.log(num);
-}
-</pre>
+}</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -9090,11 +9064,11 @@ while a specified condition is true.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Loop While:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Basic while Loop:</h4>
+<h4>Basic While Loop:</h4>
 <pre>
 let count = 0;
 while (count < 5 ) {
-console.log(count);
+  console.log(count);
   count++;
 }
 </pre>
