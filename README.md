@@ -15598,7 +15598,7 @@ console.log(
 );
 
 // Swapping the variables
-let temp = variablel;
+let temp = variable1;
 variable1 = variable2;
 variable2 = temp;
 console.log(
