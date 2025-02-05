@@ -8782,9 +8782,10 @@ efficiently.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sorting Numbers:</h4>
 <pre>numbers.sort((a, b) => a - b);  // Ascending order</pre>
+<pre>numbers.sort((a, b) => b - a);  // Descending order</pre>
 
 <h4>Sorting Strings:</h4>
-<pre>fruits.sort(); // Alphabetic Order</pre>
+<pre>fruits.sort();  // Alphabetic Order</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex25">25. JS Array Iteration</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
