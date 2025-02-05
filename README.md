@@ -486,8 +486,8 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#js214">214. Replace First Digit with $</a></li>
   <li><a href="#js215">215. Prefix Sums</a></li>
   <li><a href="#js216">216. Next Prime Number</a></li>
-  <li><a href="#js217">217. Reverse Order of Bits</a></li>
-  <li><a href="#js218">218. Pyramid</a></li>
+  <li><a href="#js217">js217. Reverse Order of Bits</a></li>
+  <li><a href="#js218">js218. Pyramid</a></li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -8814,11 +8814,9 @@ elements can be modified.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Array Const:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>
-const weekdays = &lbrack;'Monday','Tuesday','Wednesday'&rbrack;;
+<pre>const weekdays = &lbrack;'Monday','Tuesday','Wednesday'&rbrack;;
 weekdays&lbrack;1&rbrack; = 'Thursday';  // Modifying an element is allowed
-weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;;
-</pre>
+weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex27">27. JS Dates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17967,7 +17965,7 @@ can use simple mathematical operations.</p>
 <pre>
 function convertMinutesToHoursAndMinutes(totalMinutes) {
 // Check if the input is a valid positive number
-if (isNaN(totalMinutes) 11 totalMinutes < 0) {
+if (isNaN(totalMinutes) || totalMinutes < 0) {
   return "Invalid input. Please provide a non-negative number of minutes.";
 }
 // Calculate hours and remaining minutes
@@ -18306,7 +18304,7 @@ you can use the following function:</p>
 <pre>
 function convertDaysToYearsMonthsDays(days) {
   // Check if the input is a valid positive number
-  if (isNaN(days) 11 days <= 0) {
+  if (isNaN(days) || days <= 0) {
     return "Invalid input. Please provide a valid positive number of days.";
   }
   // Calculate years
@@ -18429,7 +18427,7 @@ the length and width as parameters and applies the formula:</p>
 <pre>
 function calculateRectangleArea(length, width) {
   // Check if the inputs are valid positive numbers
-  if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
+  if (isNaN(length) || isNaN( width) || length <= 0 || width <= 0) {
     return "Invalid inputs. Please provide valid positive numbers for length and width.";
   }
     // Calculate the area of the rectangle
@@ -18503,7 +18501,7 @@ concatenates the arrays and removes duplicate elements.</p>
 <pre>
 function findUnion(arrl, arr2) {
   // Check if the inputs are valid arrays
-  if (’Array.isArray(arrl) 11 !Array.isArray(arr2)) {
+  if (’Array.isArray(arrl) || !Array.isArray(arr2)) {
     return "Invalid inputs. Please provide valid arrays.";
   }
   // Concatenate the arrays and remove duplicates
@@ -18511,7 +18509,7 @@ function findUnion(arrl, arr2) {
   return unionArray;
 }
 // Example usage:
-const arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
+const arrayl = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
 const result = findUnion(arrayl, array2);
 console.log("Union of Arrays:", result);
@@ -18542,6 +18540,7 @@ function calculateFactorial(n) {
   }
   return result.toStringO;
 }
+
 // Example usage:
 const number = 50;
 const result = calculateFactorial(number);
@@ -18575,6 +18574,7 @@ function isStrongNumber(num) {
   // Check if the sum equals the original number
   return digitFactorialSum === num;
 }
+
 // Example usage:
 const testNumber = 145;
 const result = isStrongNumber(testNumber);
@@ -18607,6 +18607,7 @@ function isNarcissisticNumber(num) {
   }
   return sum === num;
 }
+
 // Example usage:
 const testNumber = 1634;
 const result = isNarcissisticNumber(testNumber);
@@ -18760,24 +18761,25 @@ console.log(' $ {testNumber} is a Fibonacci number: $ {result}');
 <h2 name="js117">117. Find the Perimeter of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the perimeter of a rectangle given the lengths of its sides ( 
-<span class="consolas">length and width</span> ). The
-formula for the perimeter of a rectangle is: 
-<span class="consolas">Perimeter = 2 * (length + width)</span>.</p>
+<span class="consolas">length and width</span> ). The formula for the perimeter of a 
+rectangle is: <span class="consolas">Perimeter = 2 &ast; (length + width)</span>.</p>
 
 <pre>
 function rectanglePerimeter(length, width) {
-// Check if the inputs are valid numbers
-if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
-return "Invalid input. Please provide valid positive numbers.";
-// Calculate the perimeter of the rectangle
-const perimeter = 2 * length + 2 * width;
-return perimeter;
+  // Check if the inputs are valid numbers
+  if (isNaN(length) || isNaN(width)|| length <= 0 || width <= 0) {
+    return "Invalid input. Please provide valid positive numbers.";
+    // Calculate the perimeter of the rectangle
+    const perimeter = 2 * length + 2 * width;
+    return perimeter;
+  }
+}
+
 // Example usage:
 const rectangleLength = 5;
-const rectangle Width = 8;
+const rectangleWidth = 8;
 const perimeterResult = rectanglePerimeter(rectangleLength, rectangleWidth);
-console.log(' The perimeter of the rectangle is: $ {perimeterResult}');
-</pre>
+console.log(`The perimeter of the rectangle is: ${perimeterResult}`);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 name="js118">118. Convert Roman Numerals to Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22442,7 +22444,7 @@ nextPrimeNumber(10);
 // Next Prime Number: 11
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 name="js217">217. Reverse Order of Bits</h2>
+<h2 name="js217">js217. Reverse Order of Bits</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program reverses the order of bits in an integer. It converts the integer to its 
 binary representation, reverses the bits, and converts it back to an integer.</p>
@@ -22483,7 +22485,7 @@ reverseOrderOfBits(234);
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 name="js218">218. Pyramid</h2>
+<h2 name="js218">js218. Pyramid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program generates a triangle pattern using ASCII characters and displays it in the 
 console.</p>
