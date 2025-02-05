@@ -17090,7 +17090,7 @@ if (date 1 < date2) {
 <h2 name="js56">56. Create Countdown Timer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Create a countdown timer in JavaScript, you can use the 
-<span class="consolas">setlnterval()</span> function to update the timer at regular 
+<span class="consolas">setInterval()</span> function to update the timer at regular 
 intervals and calculate the remaining time.</p>
 
 <pre>
@@ -17284,7 +17284,7 @@ if (myVariable === undefined || myVariable === null) {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js0">↥ back to top</a></b>
+  <b><a href="#js64">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17330,7 +17330,7 @@ console.log("Query Parameters:", queryParams);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js0">↥ back to top</a></b>
+  <b><a href="#js66">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17350,7 +17350,7 @@ const emailToValidate = "example@email.com";
 if (validateEmail(emailToValidate)) {
   console.log("Email is valid");
 } else {
-console.log("Email is not valid");
+  console.log("Email is not valid");
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17362,7 +17362,7 @@ console.log("Email is not valid");
 <pre>
 // Example variable
 let myFunction = function() {
-console.logf'Hello, world!");
+  console.logf'Hello, world!");
 };
 // Check if the variable is a function
 if (typeof myFunction === 'function') {
@@ -17373,7 +17373,7 @@ if (typeof myFunction === 'function') {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js0">↥ back to top</a></b>
+  <b><a href="#js68">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -17410,11 +17410,11 @@ setTimeout(function() {
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js0">↥ back to top</a></b>
+  <b><a href="#js70">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 name="js71">71. Generate a Range of Numbers and Characters</h2>
+<h2 name="js71">js71. Generate a Range of Numbers and Characters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To generate a range of numbers or characters in JavaScript, you can use a loop or 
 other methods depending on your specific requirements.</p>
@@ -17427,6 +17427,7 @@ function generateNumberRange(start, end) {
   }
   return result;
 }
+
 // Example usage: Generate numbers from 1 to 5
 let numberRange = generateNumberRange(l, 5);
 console.log("Number Range:", numberRange);
@@ -22411,7 +22412,7 @@ prefixSums(&lbrack;l, 2, 3,4, 5&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js0">↥ back to top</a></b>
+  <b><a href="#js215">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22481,7 +22482,7 @@ reverseOrderOfBits(234);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
-  <b><a href="#js0">↥ back to top</a></b>
+  <b><a href="#js217">↥ back to top</a></b>
 </div>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
