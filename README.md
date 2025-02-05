@@ -11,7 +11,7 @@
   <li><a href="#el0">59 Eloquent JS Examples</a>,</li>
   <li><a href="#ex0">94 JavaScript Examples From Basics to Advanced</a>,</li>
   <li><a href="#js0">218 Simple JavaScript Example Scripts</a>,</li>
-  <li><a href="#js-0">266 More Simple JavaScript Example Scripts</a>.</li>
+  <li><a href="#js-0">266 More JavaScript Example Scripts</a>.</li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Intro</h2>
@@ -7732,11 +7732,13 @@ subdirectory alongside a talk-managing interface under the /talks URL.</p>
 
 <pre>new SkillShareServer(Object.create(null)).start(8000);</pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The client</h3>
 
 <p>The client-side part of the skill-sharing website consists of three files: a tiny
 HTML page, a style sheet, and a JavaScript file.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>HTML</h3>
 <p>It is a widely used convention for web servers to try to serve a file named
 index.html when a request is made directly to a path that corresponds to a
@@ -7754,6 +7756,7 @@ we should put it in public/index.html. This is our index file:</p>
 &lt;link rel="stylesheet" href="skillsharing.css"&gt;
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>Skill Sharing</h2>
 <pre>&lt;script src="skillsharing_client.js"&gt;&lt;/script&gt;</pre>
 
@@ -7762,6 +7765,7 @@ styles to, among other things, make sure there is some space between talks.
 At the bottom, it adds a heading at the top of the page and loads the script
 that contains the client-side application.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Actions</h3>
 
 <p>The application state consists of the list of talks and the name of the user, and 
@@ -8058,6 +8062,7 @@ work on them, make sure you download the code first (https://eloquentjavascript.
 skillsharing.zip), have Node installed https://nodejs.org, and have installed the 
 project’s dependency with npm install.</p>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Disk persistence</h3>
 
 <p>The skill-sharing server keeps its data purely in memory. This means that when it 
@@ -8495,6 +8500,7 @@ values to variables.</p>
 <h4>Assigning a Value to a Variable:</h4>
 
 <pre>let x = 10; // Assigning the value 10 to variable 'x'</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Assigning the Result of an Expression:</h4>
 <pre>let y = x + 5; // Assigning the result of an expression to 'y'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8513,6 +8519,7 @@ values it can work with.</p>
   <li><b>Undefined:</b> let value;</li>
   <li><b>Null:</b> let emptyValue = null;
 </ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Complex Data Types:</h4>
 <ul>
   <li><b>Object:</b> let person = {name: 'Alice'; age: 25};</li>
@@ -8535,10 +8542,10 @@ blocks of code that perform a specific task when called</span>.</p>
 <pre>function greet(name) {
   return 'Hello, ' + name + '!';
 }</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Call:</h4>
 <pre>let message = greet('John'); // message = 'Hello, John!'</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arrow Function:</h4>
 <pre>const multiply = (a,b) => a * b;
 let result = multiply(5,3); // result = 15</pre>
@@ -8558,10 +8565,10 @@ let result = multiply(5,3); // result = 15</pre>
     return 'Hello, my name is ' + this.name + '!';
   }
 };</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Properties:</h4>
 <pre>console.log(person.name); // Output: Alice</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Calling Object Method:</h4>
 <pre>console.log(person.greet()); // Output: Hello, my name is Alice!</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8582,7 +8589,7 @@ field</span>.</p>
 <pre>document.getElementById('myButton').addEventListener('click', function() {
   console.log('Button clicked!');
 });</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Input Event:</h4>
 <pre>document.getElementById('myInput').addEventListener('input', function() {
   console.log('Input changed!');
@@ -8597,7 +8604,7 @@ enclosed in single or double quotes.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaring a String Variable:</h4>
 <pre>let message = 'Hello, World!';</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Concatenating Strings:</h4>
 <pre>let greeting = 'Hello, ';
 let name = 'Alice';
@@ -8617,7 +8624,7 @@ let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 <h4>toUpperCase() Methods:</h4>
 <pre>let text = 'hello';
 let upperCaseText = text.toUpperCase(); // upperCaseText = 'HELLO'</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>substring() Method:</h4>
 <pre>let sentence = 'This is a sentence';
 let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
@@ -8637,7 +8644,7 @@ a string</span>.</p>
 <h4>indexOf() Method:</h4>
 <pre>let text = 'Hello, World!';
 let position = text.indexOf('World'); // position = 7</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>includes() Method:</h4>
 <pre>let sentence = 'This is a sentence';
 let containsWord = sentence.includes('sentence'); // containsWord = true</pre>
@@ -8652,7 +8659,7 @@ variables into strings.</p>
 <h4>Basic Template Literal:</h4>
 <pre>let name = 'Alice';
 let message = `Hello, ${name}!`;  // message = 'Hello, Alice!'</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Multi-line Template Literal:</h4>
 <pre>let multiLineMessage = `
   This is a
@@ -8672,10 +8679,10 @@ let message = `Hello, ${name}!`;  // message = 'Hello, Alice!'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Whole Numbers:</h4>
 <pre>let integerNumber = 42;</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Decimal Numbers:</h4>
 <pre>let decimalNumber = 3.14;</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Scientific Notation:</h4>
 <pre>let scientificNumber = 2e3;  // scientificNumber = 2000</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8688,7 +8695,7 @@ represent integers with arbitrary precision.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a BigInt:</h4>
 <pre>let bigNumber = 12345678912345678901234567890n;</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Performing Operations with a BigInt:</h4>
 <pre>let bigSum = bigNumber + 1n;  // Answer: 12345678912345678901234567891n</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8707,7 +8714,7 @@ manipulations</span> with numbers.</p>
 <h4>toFixed() Method:</h4>
 <pre>let number = 3.14159;
 let roundedNumber = number.toFixed(2);  // roundedNumber = '3.14'</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>parseInt() Method:</h4>
 <pre>let stringNumber = '42';
 let parsedNumber = parseInt(stringNumber);  // parsedNumber = 42</pre>
@@ -8721,7 +8728,7 @@ numbers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Number.MAX_VALUE Property:</h4>
 <pre>console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e + 308</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Number.MIN_VALUE Property:</h4>
 <pre>console.log(Number.MIN_VALUE);  // Output: 5e-324</pre>
 
@@ -8745,10 +8752,10 @@ in a single variable.</p>
 <h4>Declaration:</h4>
 <pre>let numbers = &lbrack;1,2,3,4,5&rbrack;;  // Array of numbers
 let fruits = &lbrack;'apple','banana','orange'&rbrack;;  // Array of strings</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Elements:</h4>
 <pre>console.log(fruits&lbrack;0&rbrack;);  // Output: 'apple'</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Modifying Elements:</h4>
 <pre>fruits&lbrack;1&rbrack; = 'grapes';  // Changing 'banana' to 'grapes'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8766,10 +8773,10 @@ efficiently.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>push() Method:</h4>
 <pre>fruits.push('melon');  // Adds 'melon' to the end of the array</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>pop() Method:</h4>
 <pre>let removedFruit = fruits.pop();  // Removes and returns the last element ('melon')</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>splice() Method:</h4>
 <pre>numbers.splice(2,1);  // Removes 1 element at index 2 (removes '3')</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8826,7 +8833,7 @@ and times.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Date Object:</h4>
 <pre>let specificDate = new Date();  // Current date and time</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Specific Date:</h4>
 <pre>let specificDate = new Date('2024-12-25');  // December 25, 2024</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8875,7 +8882,7 @@ to different formats.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>setFullYear() Method:</h4>
 <pre>specificDate.setFullYear(2024);  // Set the year to 2024</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>setMonth() Method:</h4>
 <pre>specificDate.setMonth(0);  // Set the month to January (0 index)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8888,7 +8895,7 @@ and functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Math.PI Property:</h4>
 <pre>let piValue = Math.PI;  // Value of PI & piValue (3.141592653589793)</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Math.sqrt() Method:</h4>
 <pre>let squareRoot = Math.sqrt(25);  // Square root of 25 (5)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8905,7 +8912,7 @@ and functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Generating Random Number:</h4>
 <pre>let randomNumber = Math.random();  // Random number between 0 and 1</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Generating Random Integer:</h4>
 <pre>let randomInteger = Math.floor(Math.random() * 10);  // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8918,8 +8925,8 @@ and functions.</p>
 <h4>Declaration:</h4>
 <pre>let isTrue = true;
 let isFalse = false;</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Comparison:</h4>
-
 <pre>let greaterThan = 5 &gt; 3; // true
 let equalTo = 5 === 5; // true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8937,7 +8944,7 @@ compare values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>== (Equality Operator):</h4>
 <pre>console.log(5 == '5');  // true (coerces types)</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4> === (Strict Equality Operator):</h4>
 <pre>console.log(5 === '5'); // false (compares both value and type)</pre>
 <p>This comprehensive guide covers various aspects of JavaScript including arrays, array 
@@ -9332,7 +9339,8 @@ console.log(globalVar);  // Accessible outside function
 console.log(myVar);  // Outputs : undefined
 varmyVar = 10;
 </pre>
-<p>Function Hoisting:</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Function Hoisting:</h4>
 <pre>
 sayHello();  // Outputs : 'Hello'
 function sayHello() {
@@ -9349,6 +9357,7 @@ function sayHello() {
 <h4>Enabling Strict Mode:</h4>
 <pre>'use strict’;</pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Strict Mode Inside a Function:</h4>
 <pre>
 function myFunction() {
@@ -9388,6 +9397,7 @@ person.greet();  // Outputs : 'Hello, my name is Alice'
 <h4>Basic Arrow Function:</h4>
 <pre>let multiply = (a, b) => a * b;</pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arrow Function with Multiple Lines:</h4>
 <pre>
 let greet = (name) => {
@@ -9435,6 +9445,7 @@ export function greet(name) {
 }
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Importing a Module:</h4>
 <pre>
 // Main.js
@@ -9460,6 +9471,7 @@ let obj = JSON.parse (jsonStr);
 console.log(obj.name); // Output: 'Alice'
 </pre>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Stringify Object to JSON:</h4>
 <pre>
 let obj = {name: 'Alice',age: 30};
@@ -9529,7 +9541,6 @@ and maintainable code.</p>
 <h4>Missing Semicolon:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let x = 5</pre>
-
 <p>Remember to add a semicolon at the end of the statement.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Uninitialized Variables:</h4>
@@ -9587,7 +9598,7 @@ let person = {
   }
 };
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using the Object Constructor:</h4>
 <pre>
 let car = new Object();
@@ -9608,7 +9619,7 @@ car.model = 'Camry';
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Properties:</h4>
 <pre>console.log(person.name);  // Accessing property 'name'</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding or Modifying Properties:</h4>
 <pre>
 car.color = 'blue';  // Adding property 'color'
@@ -9623,7 +9634,7 @@ car.model = 'Corolla';  // Modifying property 'model'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Methods:</h4>
 <pre>console.log(person.greet());  // Accessing method 'greet'</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding Methods to an Object:</h4>
 <pre>
 car.start = function() {
@@ -9644,7 +9655,7 @@ car.start = function() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using console.log():</h4>
 <pre>console.log(person);  // Output the entire object</pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Stringify with JSON:</h4>
 <pre>
 let carString = JSON.stringify(car);
@@ -9734,7 +9745,7 @@ for (let key in person) {
   console.log(key + ': ' + person&lbrack;key&rbrack;);
 }
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Object.keys():</h4>
 <pre>let keys = Object.keys(person); // Get an array of object keys</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9752,7 +9763,7 @@ mySet.add(1);
 mySet.add(2);
 mySet.add(3);
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Checking Set Membership:</h4>
 <pre>console.log(mySet.has(2)); // Output: true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9774,6 +9785,7 @@ let myMap = new Map();
 myMap.set('keyl', 'valuel');
 myMap.set('key2', 'value2');
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Getting Values from a Map:</h4>
 <pre>console.log(myMap.get('keyl')); // Output: 'valuel'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9789,7 +9801,7 @@ myMap.set('key2', 'value2');
 let object1 = {name: 'John'};
 let object2 = objectl; // object2 points to the same object as object 1
 </pre>
-
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Object through Reference:</h4>
 <pre>
 object2.name = 'Alice';
@@ -10072,15 +10084,18 @@ function processData(data) {
 }
 fetchData(processData); // Output after 2 seconds : 'Data received : Some data'
 </pre>
-<pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Callback Functions</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Problem: Elaborate on <span class="consolas">callback</span> functions in JavaScript.</p>
 <p>Solution: In JavaScript, a <span class="consolas">callback</span> function is a function 
 that is passed as an argument to another function and is executed after the parent function 
 completes its task.</p>
 <p>Callbacks play a key role in asynchronous programming, enabling the execution of code after
 asynchronous operations finish.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a Callback Function:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function getData(callback) {
   let data = "data"; callback(data);
@@ -23906,7 +23921,7 @@ const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
 console.log(lcm(6, 8));  // Output: 24
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js-98">js-99. Find the Longest Word in a String</h2>
+<h2 id="js-99">js-99. Find the Longest Word in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find the longest word in a string.</p>
 
