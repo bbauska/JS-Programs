@@ -8747,7 +8747,7 @@ in a single variable.</p>
 <pre>let numbers = &lbrack;1,2,3,4,5&rbrack;;  // Array of numbers
 let fruits = &lbrack;'apple','banana','orange'&rbrack;;  // Array of strings</pre>
 
-<h4>Accessging Elements:</h4>
+<h4>Accessing Elements:</h4>
 <pre>console.log(fruits&lbrack;0&rbrack;);  // Output: 'apple'</pre>
 
 <h4>Modifying Elements:</h4>
