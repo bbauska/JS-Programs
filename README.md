@@ -299,7 +299,7 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#js27">js27. Guess a Random Number</a></li>
   <li><a href="#js28">js28. Shuffle Deck of Cards</a></li>
   <li><a href="#js29">js29. Display Fibonacci Sequence Using Recursion</a></li>
-  <li><a href="#js30">30. Find Factorial of Number Using Recursion</a></li>
+  <li><a href="#js30">js30. Find Factorial of Number Using Recursion</a></li>
   <li><a href="#js31">31. Convert Decimal to Binary</a></li>
   <li><a href="#js32">32. Find ASCII Value of Character</a></li>
   <li><a href="#js33">33. Check Whether a String is Palindrome or Not</a></li>
@@ -9261,7 +9261,7 @@ let result = 5 ^ 3;  // Output: 6
 <h3>Examples of JS RegExp:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Regular Expression:</h4>
-<pre>let pattern = / hello / i; // Case - insensitive 'hello'</pre>
+<pre>let pattern = / hello /i; // Case - insensitive 'hello'</pre>
 
 <h4>Testing a String with RegExp:</h4>
 
@@ -9331,7 +9331,9 @@ console.log(globalVar);  // Accessible outside function
 <pre>
 console.log(myVar);  // Outputs : undefined
 varmyVar = 10;
-Function Hoisting:
+</pre>
+<p>Function Hoisting:</p>
+<pre>
 sayHello();  // Outputs : 'Hello'
 function sayHello() {
   console.log('Hello');
@@ -9955,7 +9957,7 @@ function outerFunction() {
   return innerFunction;
 }
 let closure = outerFunction();
-closure(); // Output: 'I am from the outer function'
+closure();  // Output: 'I am from the outer function'
 </pre>
 
 <p>This comprehensive guide covers various aspects of JavaScript functions, including 
@@ -10053,8 +10055,8 @@ immediately.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Callbacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Callbacks in JavaScript are functions passed as arguments to another function to be 
-executed later.</p>
+<p><span class="consolas">Callbacks</span> in JavaScript are functions passed as arguments to 
+another function to be executed later.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Callbacks Example:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10070,10 +10072,47 @@ function processData(data) {
 }
 fetchData(processData); // Output after 2 seconds : 'Data received : Some data'
 </pre>
+<pre>
+<h4>Callback Functions</h4>
+<p>Problem: Elaborate on <span class="consolas">callback</span> functions in JavaScript.</p>
+<p>Solution: In JavaScript, a <span class="consolas">callback</span> function is a function 
+that is passed as an argument to another function and is executed after the parent function 
+completes its task.</p>
+<p>Callbacks play a key role in asynchronous programming, enabling the execution of code after
+asynchronous operations finish.</p>
+<h4>Example of a Callback Function:</h4>
+<pre>
+function getData(callback) {
+  let data = "data"; callback(data);
+}
+function recieveData(data) {
+  console.log(data);
+}
+getData(recieveData); // 'data'
+</pre>
+<p>In the above code, getData accepts a parameter named callback, which is a function. 
+After retrieving data, getData invokes the callback function, passing the data as an
+argument. The receiveData function is a callback, passed as an argument to getData, 
+and it logs the data.</p>
+<p>Common Usage: Callback functions are prevalent in JavaScript, employed in various APIs 
+and libraries to manage asynchronous behavior. For instance, you can use a callback
+function with the fetch API for handling asynchronous HTTP requests:</p>
+<p>Here, the fetch function returns a promise. The then method takes callback functions 
+to handle successful responses and errors.</p>
+<pre>
+fetch(”https://api.example.com/data”)
+  .then(response => response.json())
+  .then(data => {
+  console.log(data);
+})
+  .catch(error => { console.error(error);
+})
+</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Asynchronous</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Asynchronous operations in JavaScript allow non - blocking execution of code.</p>
+<p><span class="consolas">Asynchronous</span> operations in JavaScript allow non - blocking 
+execution of code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Asynchronous Example:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10082,8 +10121,7 @@ console.log('Start');
 setTimeout(() => {
   console.log('Inside setTimeout');
 }, 2000);
-console.log('End');
-// Output: 'Start', 'End', 'Inside setTimeout' (After 2 seconds)
+console.log('End');  // Output: 'Start', 'End', 'Inside setTimeout' (After 2 seconds)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
@@ -10093,8 +10131,8 @@ console.log('End');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex87">87. JS Promises</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Promises in JavaScript represent a value that might not be available yet but will 
-resolve or reject in the future.</p>
+<p><span class="consolas">Promises</span> in JavaScript represent a value that might not be 
+available yet but will resolve or reject in the future.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Promises Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10113,8 +10151,8 @@ myPromise.then((result) => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex88">88. JS Async / Await</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Async / await in JavaScript provides a more synchronous way to write asynchronous code 
-using promises.</p>
+<p><span class="consolas">Async / await</span> in JavaScript provides a more synchronous way to 
+write asynchronous code using promises.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Async / Await Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10146,8 +10184,8 @@ and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex89">89. JS HTML DOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript interacts with HTML documents through the Document Object Model (DOM), 
-representing the document as a tree structure.</p>
+<p>JavaScript interacts with HTML documents through the <span class="consolas">Document Object 
+Model (DOM)</span>, representing the document as a tree structure.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Intro:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10170,7 +10208,7 @@ representing the document as a tree structure.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Methods</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>DOM methods provide various ways to manipulate HTML elements.</p>
+<p><span class="consolas">DOM methods</span> provide various ways to manipulate HTML elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Element Content:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10195,7 +10233,7 @@ representing the document as a tree structure.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Document</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The document object represents the entire HTML document.</p>
+<p>The <span class="consolas">document object</span> represents the entire HTML document.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Document Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10215,7 +10253,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Elements in the DOM represent HTML tags.</p>
+<p>Elements in the <span class="consolas">DOM</span> represent HTML tags.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Element Styles:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10241,7 +10279,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The DOM HTML includes properties that deal with the HTML content.</p>
+<p>The <span class="consolas">DOM HTML</span> includes properties that deal with the HTML content.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing HTML Attributes:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10262,7 +10300,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Forms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The DOM allows manipulation of HTML forms.</p>
+<p>The <span class="consolas">DOM</span> allows manipulation of HTML forms.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10291,7 +10329,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM CSS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The DOM CSS allows manipulation of CSS styles.</p>
+<p>The <span class="consolas">DOM CSS</span> allows manipulation of CSS styles.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing CSS Classes:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10312,7 +10350,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Animations</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The DOM supports creating simple animations.</p>
+<p>The <span class="consolas">DOM</span> supports creating simple animations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Animating an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10345,7 +10383,8 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Events in the DOM represent interactions by users or by the browser.</p>
+<p><span class="consolas">Events</span> in the <span class="consolas">DOM</span> represent 
+interactions by users or by the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Click Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10367,7 +10406,8 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Event Listener</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The addEventListener method is used to attach an event to an element.</p>
+<p>The <span class="consolas">addEventListener method</span> is used to attach an event to an 
+element.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Mouseover Event Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10393,7 +10433,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Navigation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The DOM allows navigation between elements.</p>
+<p>The <span class="consolas">DOM</span> allows navigation between elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Traversing Child Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10419,7 +10459,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Nodes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Nodes are the fundamental building blocks in the DOM.</p>
+<p><span class="consolas">Nodes</span> are the fundamental building blocks in the DOM.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a New Node:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10446,7 +10486,7 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Collections</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Collections in the DOM are arrays of HTML elements.</p>
+<p><span class="consolas">Collections</span> in the DOM are arrays of HTML elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Collection Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10469,7 +10509,9 @@ console.log(document.URL);   // Output: Document URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Node Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
+<p><span class="consolas">Node lists</span> in the <span class="consolas">DOM</span> are similar 
+to <span class="consolas">collections</span> and <span class="consolas">contain nodes</span> or 
+<span class="consolas">elements</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Node List Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10499,12 +10541,13 @@ for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex90">90. JS Browser BOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Browser Object Model (BOM) in JavaScript represents the browser window and its 
-components.</p>
+<p>The <span class="consolas">Browser Object Model (BOM)</span> in JavaScript represents the 
+browser window and its components.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Window</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The window object is the global object in a browser's JavaScript environment.</p>
+<p>The <span class="consolas">window object</span> is the global object in a browser's JavaScript 
+environment.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Window Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10515,7 +10558,7 @@ console.log(window.innerWidth);  // Output: Inner width of the window
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Screen</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The screen object represents the screen of a device.</p>
+<p>The <span class="consolas">screen</span> object represents the screen of a device.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Screen Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10526,7 +10569,7 @@ console.log(screen.height);  // Output: Screen height in pixels
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Location</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The location object contains information about the current URL.</p>
+<p>The <span class="consolas">location</span> object contains information about the current URL.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Location Information:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10541,7 +10584,7 @@ console.log(location.hostname);  // Output: Hostname of the current URL
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS History</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The history object contains the browsing history of the window.</p>
+<p>The <span class="consolas">history</span> object contains the browsing history of the window.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing History Methods:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10552,7 +10595,7 @@ history.forward();  // Go forward to the next page
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Navigator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The navigator object contains information about the browser.</p>
+<p>The <span class="consolas">navigator</span> object contains information about the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Navigator Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10563,7 +10606,7 @@ console.log(navigator.platform);  // Output: Platform of the browser
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Popup Alert</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Popup alerts in JavaScript display messages to users.</p>
+<p><span class="consolas">Popup alerts</span> in JavaScript display messages to users.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Displaying an Alert:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10575,7 +10618,7 @@ console.log(navigator.platform);  // Output: Platform of the browser
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Timing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript's timing functions allow scheduling of code execution.</p>
+<p>JavaScript's <span class="consolas">timing</span> functions allow scheduling of code execution.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using setTimeout():</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10595,7 +10638,7 @@ setInterval(() => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Cookies in JavaScript store small pieces of information on the client's machine.</p>
+<p><span class="consolas">Cookies</span> in JavaScript store small pieces of information on the client's machine.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Setting a Cookie:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10618,8 +10661,8 @@ and cookies, with examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex91">91. JS Web APIs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Web APIs are sets of tools and interfaces provided by web browsers to interact with 
-various functionalities of the browser or device.</p>
+<p><span class="consolas">Web APIs</span> are sets of tools and interfaces provided by web 
+browsers to interact with various functionalities of the browser or device.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web API Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10639,7 +10682,8 @@ if ("geolocation" in navigator) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Forms API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Web Forms API provides methods and properties to manipulate HTML form elements.</p>
+<p>The <span class="consolas">Web Forms API</span> provides methods and properties to manipulate 
+HTML form elements.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10652,7 +10696,7 @@ console.log(inputField.value);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web History API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Web History API allows manipulation of the browser's history.</p>
+<p>The <span class="consolas">Web History API</span> allows manipulation of the browser's history.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Browser History:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10660,7 +10704,7 @@ console.log(inputField.value);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Storage API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Web Storage API provides methods to store data in the browser.</p>
+<p>The <span class="consolas">Web Storage API</span> provides methods to store data in the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using localstorage:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10675,8 +10719,8 @@ let data = localstorage.getItem("key");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Worker API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Web Worker API enables running scripts in the background to handle time - 
-consuming tasks without blocking the UI.</p>
+<p>The <span class="consolas">Web Worker API</span> enables running scripts in the background to 
+handle time - consuming tasks without blocking the UI.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Web Worker:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10697,7 +10741,7 @@ worker.postMessage("Message from main");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Fetch API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Fetch API provides a way to make HTTP requests.</p>
+<p>The <span class="consolas">Fetch API</span> provides a way to make HTTP requests.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Making a GET Request:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10710,7 +10754,8 @@ fetch("https://api.example.com/data")
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Geolocation API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Geolocation API retrieves geographical information about the user's device.</p>
+<p>The <span class="consolas">Geolocation API</span> retrieves geographical information about the 
+user's device.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Getting User's Location:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10732,12 +10777,13 @@ concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex92">92. JS AJAX</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX (Asynchronous JavaScript and XML) is a technique used to send and receive data 
-asynchronously between a web browser and a server.</p>
+<p><span class="consolas">AJAX (Asynchronous JavaScript and XML)</span> is a technique used to 
+send and receive data asynchronously between a web browser and a server.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX allows web pages to update content without reloading the entire page.</p>
+<p><span class="consolas">AJAX</span> allows web pages to update content without reloading the 
+entire page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Simple AJAX Request:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10754,8 +10800,8 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX XMLHttp</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data 
-between a web browser and a server.</p>
+<p>The <span class="consolas">XMLHttpRequest object (XHR)</span> is a core component of 
+<span class="consolas">AJAX</span> used to exchange data between a web browser and a server.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using XMLHttpRequest:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10776,7 +10822,8 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Request</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX requests enable communication between the browser and the server.</p>
+<p><span class="consolas">AJAX</span> requests enable communication between the browser and the 
+server.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sending POST Request:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10794,7 +10841,8 @@ xhttp.send("name = John&age = 30");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Response</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Handling AJAX responses involves processing data received from the server.</p>
+<p>Handling <span class="consolas">AJAX responses</span> involves processing data received from 
+the server.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Handling JSON Response:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10812,7 +10860,8 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX XML File</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX can be used to fetch and handle XML files.</p>
+<p><span class="consolas">AJAX</span> can be used to fetch and handle <span class="consolas">XML</span> 
+files.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Fetching XML File:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10834,7 +10883,8 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX PHP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX can interact with server - side technologies like PHP to exchange data.</p>
+<p><span class="consolas">AJAX</span> can interact with server - side technologies like PHP to 
+exchange data.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Handling AJAX in PHP:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10852,7 +10902,7 @@ xhttp.send();
 <h5>PHP code</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-// process. php
+// process.php
 &lt;?php
 echo "Hello from PHP!";
 ?&gt;
@@ -10860,7 +10910,8 @@ echo "Hello from PHP!";
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX ASP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Similarly, AJAX can communicate with server - side technologies like ASP.</p>
+<p>Similarly, <span class="consolas">AJAX</span> can communicate with server - side technologies 
+like ASP.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX with ASP:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10890,7 +10941,7 @@ Response.Write("Hello from ASP!")
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Database</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX can be used to interact with databases on the server.</p>
+<p><span class="consolas">AJAX</span> can be used to interact with databases on the server.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Database Interaction with AJAX:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10916,7 +10967,8 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Applications</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX enables building interactive web applications with real - time data.</p>
+<p><span class="consolas">AJAX</span> enables building interactive web applications with real - 
+time data.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Real-time Chat Application:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10932,7 +10984,7 @@ setInterval(() => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Examples</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Here are more examples demonstrating various AJAX functionalities.</p>
+<p>Here are more examples demonstrating various <span class="consolas">AJAX</span> functionalities.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 1:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10988,9 +11040,9 @@ function loadContent() {
 &lt;h2&gt;Welcome to Dynamic Content&lt;/h2&gt;
 &lt;p&gt;This content was loaded dynamically using AJAX.&lt;/p&gt;
 </pre>
-<p>This example demonstrates a simple 
-button that triggers an AJAX request to load content from an external HTML file and 
-displays it on the webpage without refreshing the entire page.</p>
+<p>This example demonstrates a simple button that triggers an <span class="consolas">AJAX</span> 
+request to load content from an external HTML file and displays it on the webpage without 
+refreshing the entire page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 4: Form Submission with AJAX</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11139,9 +11191,10 @@ function loadimages() {
   // Add more image objects as needed
 &rbrack;
 </pre>
-<p>This example demonstrates loading images dynamically into an image gallery on a 
-webpage using AJAX. The images and their respective URLs are stored in a JSON file, 
-which is fetched asynchronously, and the images are displayed in the gallery.</p>
+<p>This example demonstrates loading images dynamically into an image gallery on a webpage using 
+<span class="consolas">AJAX</span>. The images and their respective URLs are stored in a 
+<span class="consolas">JSON file</span>, which is fetched asynchronously, and the images are 
+displayed in the gallery.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 7: Autocomplete Search</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16296,10 +16349,10 @@ function.</p>
 <pre>
 // Define a recursive function to calculate the sum of natural numbers
 function sumOfNaturalNumbers(n) {
-  if(n===l){
+  if(n === 1){
     return 1;
   } else {
-    return n + sumOfNaturalNumbers(n -1);
+    return n + sumOfNaturalNumbers(n - 1);
   }
 }
 // Prompt user for a positive integer
