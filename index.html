@@ -8669,12 +8669,13 @@ let result = 5 ^ 3;  // Output: 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex48">48. JS RegExp</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Regular expressions in JavaScript are used for pattern matching within strings.</p>
+<p><span class="consolas">Regular expressions</span> in JavaScript are used for pattern 
+matching within strings.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS RegExp:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Regular Expression:</h4>
-<pre>let pattern = / hello / i;  // Case - insensitive 'hello'</pre>
+<pre>let pattern = / hello /i;  // Case - insensitive 'hello'</pre>
 
 <h4>Testing a String with RegExp:</h4>
 
@@ -8725,7 +8726,8 @@ console.log(globalVar);  // Accessible outside function
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex52">52. JS Hoisting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Hoisting in JavaScript allows variables and functions to be used before they are declared.</p>
+<p><span class="consolas">Hoisting</span> in JavaScript allows variables and functions to 
+be used before they are declared.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Hoisting:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8742,7 +8744,8 @@ function sayHello() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex53">53. JS Strict Mode</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Strict mode in JavaScript enforces stricter rules and better error handling.</p>
+<p><span class="consolas">Strict mode</span> in JavaScript enforces stricter rules and 
+better error handling.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Strict Mode:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8758,7 +8761,7 @@ function myFunction() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex54">54. JS this Keyword</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The this keyword in JavaScript refers to the object it belongs to.</p>
+<p>The <span class="consolas">this</span> keyword in JavaScript refers to the object it belongs to.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS this Keyword:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8775,7 +8778,8 @@ person.greet();  // Outputs : 'Hello, my name is Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex55">55. JS Arrow Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Arrow functions in JavaScript provide a concise syntax for writing functions.</p>
+<p><span class="consolas">Arrow functions</span> in JavaScript provide a concise syntax for 
+writing functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Arrow Function:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8784,14 +8788,15 @@ person.greet();  // Outputs : 'Hello, my name is Alice'
 
 <h4>Arrow Function with Multiple Lines:</h4>
 <pre>
-let greet = (name ) => {
+let greet = (name) => {
   return 'Hello, ' + name + '!'
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex56">56. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Classes in JavaScript provide a way to create objects using a blueprint.</p>
+<p><span class="consolas">Classes</span> in JavaScript provide a way to create objects using 
+a blueprint.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Classes:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8811,8 +8816,8 @@ alice.greet();  // Outputs : 'Hello, my name is Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex57">57. JS Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Modules in JavaScript allow splitting code into separate files or modules for better 
-organization.</p>
+<p><span class="consolas">Modules</span> in JavaScript allow splitting code into separate 
+files or modules for better organization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Modules:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8823,7 +8828,6 @@ export function greet(name) {
   console.log('Hello,' + name + '!');
 }
 </pre>
-
 <h4>Importing a Module:</h4>
 <pre>
 // Main.js
@@ -8833,31 +8837,31 @@ greet('Alice');  // Outputs : 'Hello, Alice !'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex58">58. JS JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON (JavaScript Object Notation ) is a lightweight data interchange format.</p>
+<p><span class="consolas">JSON (JavaScript Object Notation)</span> is a lightweight data 
+interchange format.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS JSON:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Parsing JSON:</h4>
 <pre>
-let jsonStr = '{"name":" Alice", "age": 30}';
-let obj = JSON.parse (jsonStr);
+let jsonStr = '{"name": "Alice", "age": 30}';
+let obj = JSON.parse(jsonStr);
 console.log(obj.name);  // Output: 'Alice'
 </pre>
-
 <h4>Stringify Object to JSON:</h4>
 <pre>
-let obj = {name: 'Alice',age: 30};
-let jsonString = JSON.stringify(obj);
+let obj = {name: 'Alice',age: 30};  // {name: 'Alice', age: 30}
+let jsonString = JSON.stringify(obj);  // '{"name":"Alice","age":30}'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex59">59. JS Debugging</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Debugging in JavaScript involves identifying and fixing errors or issues in the code.</p>
+<p><span class="consolas">Debugging</span> in JavaScript involves identifying and fixing 
+errors or issues in the code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Debugging:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using console.log() for Debugging:</h4>
-
 <pre>
 let x = 5;
 console.log(x);
@@ -8874,7 +8878,7 @@ and maintainable code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Naming Conventions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Use camelCase for variable and function names.</p>
+<p>Use <span class="consolas">camelCase</span> for variable and function names.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Indentation:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8921,7 +8925,7 @@ console.log(y);  // Outputs : undefined
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Reduce DOM Manipulations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Combine multiple DOM updates into one to reduce reflows.</p>
+<p>Combine multiple <span class="consolas">DOM</span> updates into one to reduce reflows.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Use Efficient Algorithms:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8935,14 +8939,14 @@ console.log(y);  // Outputs : undefined
 <h3>Examples of JS Reserved Words:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>let, const, function, class, etc.</h4>
-<p>This comprehensive guide covers a wide range of JavaScript topics including conditional statements, loops, data
-structures, type handling, advanced features, error handling, best practices, common mistakes, and performance
-optimization.</p>
+<p>This comprehensive guide covers a wide range of JavaScript topics including conditional 
+statements, loops, data structures, type handling, advanced features, error handling, best 
+practices, common mistakes, and performance optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex65">65. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Objects in JavaScript are collections of key - value pairs. They store data as properties 
-(variables) and functionality as methods (functions).</p>
+<p><span class="consolas">Objects</span> in JavaScript are collections of <b>key - value</b> 
+pairs. They store data as properties (variables) and functionality as methods (functions).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Definitions:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8966,7 +8970,8 @@ car.model = 'Camry';
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex66">66. JS Object Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Properties in JavaScript objects are variables that hold values.</p>
+<p><span class="consolas">Properties</span> in JavaScript <span class="consolas">objects</span> 
+are variables that hold values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Properties Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8981,7 +8986,8 @@ car.model = 'Corolla';  // Modifying property 'model'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex67">67. JS Object Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Methods in JavaScript objects are functions that define behavior.</p>
+<p><span class="consolas">Methods</span> in JavaScript <span class="consolas">objects</span> 
+are functions that define behavior.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Methods Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9012,7 +9018,8 @@ console.log(carString);  // Output the string representation of the object
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex69">69. JS Object Accessors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Accessors in JavaScript objects provide a way to get and set the values of object properties.</p>
+<p><span class="consolas">Accessors</span> in JavaScript <span class="consolas">objects</span> 
+provide a way to <b>get</b> and <b>set</b> the values of object properties.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Accessors Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9037,7 +9044,7 @@ console.log(user.firstName);  // Output: 'Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex70">70. JS Object Constructors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Constructors in JavaScript are functions used for creating objects and setting initial values.</p>
+<p><span class="consolas">Constructors</span> in JavaScript are functions used for creating objects and setting initial values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Constructors Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9057,12 +9064,12 @@ console.log(newPerson.greet());  // Output: 'Hello, my name is Bob'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex71">71. JS Object Prototypes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Prototypes in JavaScript are a mechanism to share properties and methods between objects.</p>
+<p><span class="consolas">Prototypes</span> in JavaScript are a mechanism to share properties 
+and methods between <span class="consolas">objects</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Prototypes Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding Methods to the Prototype:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 Person.prototype.info = function() {
   return 'Name: ' + this.name + ', Age: ' + this.age;
@@ -9072,63 +9079,60 @@ console.log(newPerson.info());  // Output: 'Name : Bob, Age : 25'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex72">72. JS Object Iterables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Iterables in JavaScript are objects that can be iterated using loops.</p>
+<p><span class="consolas">Iterables</span> in JavaScript are <span class="consolas">objects</span> 
+that can be iterated using loops.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Iterables Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using for ... in Loop:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 for (let key in person) {
   console.log(key + ': ' + person[key]);
 }
 </pre>
-
 <h4>Using Object.keys():</h4>
 <pre>let keys = Object.keys(person);  // Get an array of object keys</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex73">73. JS Object Sets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Sets in JavaScript are collections of unique values.</p>
+<p><span class="consolas">Sets</span> in JavaScript are <b>collections of unique values</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Sets Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Set:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let mySet = new Set();
 mySet.add(1);
 mySet.add(2);
 mySet.add(3);
 </pre>
-
 <h4>Checking Set Membership:</h4>
 <pre>console.log(mySet.has(2));  // Output: true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex74">74. JS Object Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Maps in JavaScript are collections of key - value pairs where keys can be any type.</p>
+<p><span class="consolas">Maps</span> in JavaScript are <b>collections of key - value pairs</b> 
+where keys can be any type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Maps Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Map:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let myMap = new Map();
-myMap.set('keyl', 'valuel');
+myMap.set('key1', 'value1');
 myMap.set('key2', 'value2');
 </pre>
 <h4>Getting Values from a Map:</h4>
-<pre>console.log(myMap.get('keyl'));  // Output: 'valuel'</pre>
+<pre>console.log(myMap.get('key1'));  // Output: 'value1'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex75">75. JS Object Reference</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In JavaScript, objects are stored and passed by reference.</p>
+<p>In JavaScript, <span class="consolas">objects</span> are <b>stored and passed</b> 
+by <span class="consolas">reference</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Reference Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Referencing an Object:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let object1 = {name: 'John'};
 let object2 = objectl;  // object2 points to the same object as object 1
@@ -9147,28 +9151,24 @@ concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex76">76. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Functions in JavaScript are reusable blocks of code that perform a specific task when called.</p>
+<p><span class="consolas">Functions</span> in JavaScript are <b>reusable blocks of code</b> 
+that perform a specific task when called.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Definitions:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Declaration:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello!';
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Expression:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let greet = function() {
   return 'Hello!';
 };
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arrow Function:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let greet = () => {
   return 'Hello!';
@@ -9177,20 +9177,18 @@ let greet = () => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex77">77. JS Function Parameters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Function parameters are placeholders for values that a function will receive when it's called.</p>
+<p><span class="consolas">Function parameters</span> are <b>placeholders for values</b> that 
+a function will receive when it's called.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Parameters Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Single Parameter:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet(name) {
   return 'Hello,' + name + '!';
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Multiple Parameters:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function sum(a, b) {
   return a + b;
@@ -9199,12 +9197,12 @@ function sum(a, b) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex78">78. JS Function Invocation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Function invocation means calling a function to execute its code.</p>
+<p><span class="consolas">Function invocation</span> means <b>calling</b> a function to 
+<b>execute</b> its code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Invocation Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Calling a Function:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 greet();  // Function call
 let result = sum(5,3);  // Function call with arguments
@@ -9212,13 +9210,13 @@ let result = sum(5,3);  // Function call with arguments
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex79">79. JS Function Call</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The call() method in JavaScript allows a function to be called with a specified this 
-value and arguments provided individually.</p>
+<p>The <span class="consolas">call() method</span> in JavaScript allows a function to be 
+called with a specified <span class="consolas">this</span> value and <b>arguments</b> provided 
+<b>individually</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Call Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using call():</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9229,13 +9227,13 @@ let message = greet.call(person);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex80">80. JS Function Apply</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The apply() method in JavaScript allows a function to be called with a specified this 
-value and arguments provided as an array.</p>
+<p>The <span class="consolas">apply() method</span> in JavaScript allows a function to be 
+called with a specified <span class="consolas">this</span> value and arguments provided as an 
+<b>array</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Apply Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using apply():</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9247,13 +9245,13 @@ let message = greet.apply(person, args);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex81">81. JS Function Bind</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The bind() method in JavaScript creates a new function that, when called, has its this 
-keyword set to a specified value.</p>
+<p>The <span class="consolas">bind() method</span> in JavaScript creates a new function 
+that, when called, has its <span class="consolas">this keyword</span> set to a <b>specified 
+value</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Bind Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using bind():</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9265,13 +9263,12 @@ let message = newGreet();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex82">82. JS Function Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Closures in JavaScript are functions that retain access to variables in the scope 
-where they were defined.</p>
+<p><span class="consolas">Closures</span> in JavaScript are <b>functions</b> that 
+<b>retain access to variables</b> in the <span class="consolas">scope</span> where they were defined.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Closures Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Closure Example:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function outerFunction() {
   let outerVariable = 'I am from the outer function';
@@ -9290,12 +9287,12 @@ and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex83">83. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Classes in JavaScript provide a way to create objects using a blueprint.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Class Intro:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Class Declaration:</h4>
+<p><span class="consolas">Classes</span> in JavaScript provide a way to <b>create objects</b> 
+using a <b>blueprint</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Class Intro:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Class Declaration:</h4>
 <pre>
 class Animal {
   constructor(name, age) {
@@ -9307,9 +9304,7 @@ class Animal {
   }
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating Instances:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let dog = new Animal('Buddy', 3);
 console.log(dog.sound());  // Output: 'Animal sound'
@@ -9317,13 +9312,12 @@ console.log(dog.sound());  // Output: 'Animal sound'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex84">84. JS Class Inheritance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Inheritance in JavaScript classes allows a subclass to inherit properties and methods 
-from a superclass.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Class Inheritance Example:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Extending a Class:</h4>
+<p><span class="consolas">Inheritance</span> in JavaScript <b>classes</b> allows a <b>subclass</b> 
+to <b>inherit properties and methods</b> from a <b>superclass</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Class Inheritance Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Extending a Class:</h4>
 <pre>
 class Dog extends Animal {
   constructor(name, age, breed) {
@@ -9335,9 +9329,7 @@ class Dog extends Animal {
   }
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Inherited Methods:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let puppy = new Dog('Max', 1, 'Labrador');
 console.log(puppy.sound());  // Output: 'Woof!'
@@ -9345,13 +9337,12 @@ console.log(puppy.sound());  // Output: 'Woof!'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex85">85. Class Static</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Static methods in JavaScript classes are called on the class itself rather than on 
-instances of the class.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Class Static Example:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Adding a Static Method:</h4>
+<p><span class="consolas">Static methods</span> in JavaScript <b>classes</b> are called on 
+the class itself rather than on instances of the class.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Class Static Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Adding a Static Method:</h4>
 <pre>
 class Calculator {
   static add(a, b) {
@@ -9364,16 +9355,14 @@ console.log(result);  // Output: 8
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex86">86. JS Async</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Asynchronous programming in JavaScript involves handling operations that don't execute 
-immediately.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><span class="consolas">Asynchronous</span> programming in JavaScript involves handling 
+operations that don't execute immediately.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Callbacks</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Callbacks in JavaScript are functions passed as arguments to another function to be 
-executed later.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><span class="consolas">Callbacks</span> in JavaScript are <b>functions passed as arguments</b> 
+to another function to be executed later.</p>
 <h4>Callbacks Example:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData(callback) {
   setTimeout(() => {
@@ -9386,13 +9375,12 @@ function processData(data) {
 }
 fetchData(processData);  // Output after 2 seconds : 'Data received : Some data'
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Asynchronous</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Asynchronous operations in JavaScript allow non - blocking execution of code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p><span class="consolas">Asynchronous operations</span> in JavaScript allow 
+<b>non - blocking execution</b> of code.</p>
 <h4>Asynchronous Example:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log('Start');
 setTimeout(() => {
@@ -9406,11 +9394,10 @@ console.log('End');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Promises in JavaScript represent a value that might not be available yet but will 
 resolve or reject in the future.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Promises Example:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Creating a Promise:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Promises Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Creating a Promise:</h4>
 <pre>
 let myPromise = new Promise((resolve, reject) => {
   setTimeout (() => {
@@ -9426,11 +9413,10 @@ myPromise.then((result) => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Async / await in JavaScript provides a more synchronous way to write asynchronous code 
 using promises.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Async / Await Example:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Using Async / Await:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Async / Await Example:</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>Using Async / Await:</h4>
 <pre>
 async function fetchData() {
   return new Promise((resolve) => {
@@ -9454,13 +9440,11 @@ and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript interacts with HTML documents through the Document Object Model (DOM), 
 representing the document as a tree structure.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Intro:</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing an Element by ID:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9473,15 +9457,12 @@ representing the document as a tree structure.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Methods</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>DOM methods provide various ways to manipulate HTML elements.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Element Content:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9493,15 +9474,12 @@ representing the document as a tree structure.</p>
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Document</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The document object represents the entire HTML document.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Document Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9513,15 +9491,12 @@ console.log(document.URL);  // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Elements</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Elements in the DOM represent HTML tags.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing Element Styles:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9539,11 +9514,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM HTML includes properties that deal with the HTML content.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing HTML Attributes:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9556,15 +9528,12 @@ console.log(document.URL);  // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Forms</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows manipulation of HTML forms.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9580,15 +9549,12 @@ console.log(document.URL);  // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM CSS</h3>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM CSS allows manipulation of CSS styles.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Changing CSS Classes:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9605,11 +9571,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Animations</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM supports creating simple animations.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Animating an Element:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9634,11 +9597,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Events in the DOM represent interactions by users or by the browser.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Click Event Handling:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9656,11 +9616,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Event Listener</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The addEventListener method is used to attach an event to an element.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Mouseover Event Handling:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9678,11 +9635,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Navigation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows navigation between elements.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Traversing Child Elements:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9704,11 +9658,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Nodes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Nodes are the fundamental building blocks in the DOM.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a New Node:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9727,11 +9678,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Collections</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Collections in the DOM are arrays of HTML elements.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Collection Elements:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9750,11 +9698,8 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Node Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Node List Elements:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9780,9 +9725,7 @@ components.</p>
 <h3>JS Window</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The window object is the global object in a browser's JavaScript environment.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Window Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(window.innerHeight);  // Output: Inner height of the window
 console.log(window.innerWidth);  // Output: Inner width of the window
@@ -9791,9 +9734,7 @@ console.log(window.innerWidth);  // Output: Inner width of the window
 <h3>JS Screen</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The screen object represents the screen of a device.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Screen Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(screen.width);  // Output: Screen width in pixels
 console.log(screen.height);  // Output: Screen height in pixels
@@ -9802,9 +9743,7 @@ console.log(screen.height);  // Output: Screen height in pixels
 <h3>JS Location</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The location object contains information about the current URL.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Location Information:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(location.href);  // Output: Full URL of the current page
 console.log(location.hostname);  // Output: Hostname of the current URL
@@ -9813,9 +9752,7 @@ console.log(location.hostname);  // Output: Hostname of the current URL
 <h3>JS History</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The history object contains the browsing history of the window.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing History Methods:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 history.back();  // Go back to the previous page
 history.forward();  // Go forward to the next page
@@ -9824,9 +9761,7 @@ history.forward();  // Go forward to the next page
 <h3>JS Navigator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The navigator object contains information about the browser.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Navigator Properties:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 console.log(navigator.userAgent);  // Output: User - Agent header of the browser
 console.log(navigator.platform);  // Output: Platform of the browser
@@ -9835,25 +9770,19 @@ console.log(navigator.platform);  // Output: Platform of the browser
 <h3>JS Popup Alert</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Popup alerts in JavaScript display messages to users.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Displaying an Alert:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>alert("This is an alert message");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Timing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript's timing functions allow scheduling of code execution.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>JavaScript&apos;s timing functions allow scheduling of code execution.</p>
 <h4>Using setTimeout():</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 setTimeout(() =&gt; {
   console.log("Delayed message");
 }, 2000);  // Execute after 2 seconds
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using setInterval():</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 setInterval(() => {
   console.log("Repeated message");
@@ -9862,19 +9791,15 @@ setInterval(() => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Cookies in JavaScript store small pieces of information on the client's machine.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>Cookies in JavaScript store small pieces of information on the client&apos;s machine.</p>
 <h4>Setting a Cookie:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.cookie="username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path=/";</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing a Cookie:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let username = document.cookie.split(';')[0].split('=')[1];
 console.log(username);  // Output: 'John Doe'
 </pre>
-<p>This comprehensive guide covers JavaScript's Browser Object Model (BOM), including 
+<p>This comprehensive guide covers JavaScript&apos;s Browser Object Model (BOM), including 
 the window object, screen, location, history, navigator, popup alerts, timing functions, 
 and cookies, with examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9886,9 +9811,7 @@ various functionalities of the browser or device.</p>
 <h3>Web API Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Web APIs enable web developers to access various browser features and functionalities.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing the Web API:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Example: Using the Geolocation API
 if ("geolocation" in navigator) {
@@ -9902,9 +9825,7 @@ if ("geolocation" in navigator) {
 <h3>Web Forms API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Forms API provides methods and properties to manipulate HTML form elements.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Form Elements:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let form = document.getElementById("myForm");
 let inputField = form.elements&lbrack;"username"&rbrack;;
@@ -9914,18 +9835,14 @@ console.log(inputField.value);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web History API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Web History API allows manipulation of the browser's history.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The Web History API allows manipulation of the browser&apos;s history.</p>
 <h4>Changing Browser History:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>window.history.pushState({page: 1}, "Title", "?page = 1");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Storage API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Storage API provides methods to store data in the browser.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using localstorage:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 localstorage.setItem("key", "value");
 let data = localstorage.getItem("key");
@@ -9956,9 +9873,7 @@ worker.postMessage("Message from main");
 <h3>Web Fetch API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Fetch API provides a way to make HTTP requests.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Making a GET Request:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch("https://api.example.com/data")
   .then((response) => response.json())
@@ -9968,10 +9883,8 @@ fetch("https://api.example.com/data")
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Geolocation API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Geolocation API retrieves geographical information about the user's device.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Getting User's Location:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>The Geolocation API retrieves geographical information about the user&apos;s device.</p>
+<h4>Getting User&apos;s Location:</h4>
 <pre>
 navigator.geolocation.getCurrentPosition ((position) => {
   console.log("Latitude:", position.coords.latitude);
@@ -10598,9 +10511,9 @@ if ($_SERVER['REQUEST-METHOD'] === 'POST' && isset($_FILES['file'])) {
 ?&gt;
 </pre>
 <p>This example demonstrates a file upload functionality using AJAX with a progress bar. 
-When a user selects a file and clicks the " Upload" button, the file is uploaded 
-asynchronously to the server using an XMLHttpRequest. The progress bar visually indicates 
-the upload progress.</p>
+When a user selects a file and clicks the "Upload" button, the file is uploaded 
+asynchronously to the server using an <span class="consolas">XMLHttpRequest</span>. The 
+progress bar visually indicates the upload progress.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 11: Displaying Time Dynamically</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10651,14 +10564,14 @@ enhancing user experience and providing dynamic content updates.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex93">93. JS JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is 
-easy for humans to read and write and easy for machines to parse and generate. It is 
-commonly used to transmit data between a server and a web application.</p>
+<p><span class="consolas">JSON (JavaScript Object Notation)</span> is a lightweight data 
+interchange format that is easy for humans to read and write and easy for machines to 
+parse and generate. It is commonly used to transmit data between a server and a web application.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON serves as a language - independent data format derived from JavaScript object 
-literals. It's widely used for data exchange between web servers and web clients.</p>
+literals. It's widely used for data exchange between <b>web servers</b> and <b>web clients</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Data:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10703,8 +10616,9 @@ booleans, or null.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON vs XML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON and XML are both used for data interchange, but JSON is generally more 
-lightweight and easier to read and parse than XML.</p>
+<p><span class="consolas">JSON</span> and <span class="consolas">XML</span> are both used for 
+<b>data interchange</b>, but <span class="consolas">JSON</span> is generally more lightweight 
+and easier to read and parse than <span class="consolas">XML</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example Comparison between JSON and XML:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10732,7 +10646,8 @@ lightweight and easier to read and parse than XML.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Data Types</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON supports several datatypes : strings, numbers, booleans, objects, arrays, null.</p>
+<p><span class="consolas">JSON</span> supports several datatypes : <b>strings</b>, <b>numbers</b>, 
+<b>booleans</b>, <b>objects</b>, <b>arrays</b>, <b>null</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Different Data Types in JSON:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10777,7 +10692,7 @@ console.log(jsonString);  // Output: {"name": "Bob", "age": 30}
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Objects</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">JSON Objects</span> contain <span class="consolas">key - value pairs</span> 
+<p><span class="consolas">JSON objects</span> contain <b>key - value pairs</b> 
 enclosed in curly braces {}. Keys must be strings, and values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Object:</h4>
@@ -10794,8 +10709,8 @@ enclosed in curly braces {}. Keys must be strings, and values can be of any JSON
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON Arrays</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON arrays are ordered lists of values enclosed in square brackets []. The values can 
-be of any JSON data type.</p>
+<p><span class="consolas">JSON arrays</span> are <b>ordered lists</b> of values enclosed in square 
+brackets []. The values can be of any JSON data type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of a JSON Array:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10844,7 +10759,8 @@ $decodedData = json.decode($jsonString, true);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON data can be used in HTML to dynamically generate content on webpages using JavaScript.</p>
+<p><span class="consolas">JSON</span> data can be used in <span class="consolas">HTML</span> to 
+dynamically generate content on webpages using JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of Using JSON Data in HTML:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10869,8 +10785,8 @@ users.forEach(user =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JSON JSONP</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSONP (JSON with Padding) is a technique for requesting JSON data from a different 
-domain in web development to bypass the same - origin policy limitations.</p>
+<p><span class="consolas">JSONP (JSON with Padding)</span> is a technique for requesting JSON 
+data from a different domain in web development to bypass the same - origin policy limitations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSONP Request:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10883,9 +10799,9 @@ script.src = 'https://example.com/data?callback=handleData';
 document.head.appendChild(script);
 </pre>
 
-<p>This comprehensive guide covers JSON (JavaScript Object Notation) in detail, including 
-an introduction, syntax, comparison with XML, data types, parsing, stringifying, JSON 
-objects and arrays, working with JSON in server-side technologies like PHP, HTML, and 
+<p>This comprehensive guide covers <span class="consolas">JSON (JavaScript Object Notation)</span> 
+in detail, including an introduction, syntax, comparison with XML, data types, parsing, stringifying, 
+JSON objects and arrays, working with JSON in server-side technologies like PHP, HTML, and 
 JSONP, with examples and explanations for each topic. JSON plays a crucial role in data 
 interchange in web development due to its simplicity, ease of use, and widespread support.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10929,7 +10845,7 @@ let books = [
 ];
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>5. Converting JSON to String:</h4>
+<h4>05. Converting JSON to String:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonString = JSON.stringify(person);
@@ -10956,8 +10872,8 @@ fetch('data.json')
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let jsonData = {"name":"Bob", "age": 28};
-let displayDiv = document.getElementById('jsonDataDisplay');
-displayDiv.innerHTML = ` <p>Name: ${jsonData.name} </p><p>Age: ${jsonData.age}</p>`;
+let displayDiv = document.getElementById("jsonDataDisplay");
+displayDiv.innerHTML = `<p>Name: ${jsonData.name}</p><p>Age: ${jsonData.age}</p>`;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>09. Handling JSON Data in Forms:</h4>
@@ -11000,7 +10916,8 @@ let employees = [
   {"name": "Bob", "department":" HR"}
 ];
 let hrEmployees = employees.filter(employee => employee.department === "HR");
-  console.log(hrEmployees);  // Output: [{"name": "John", "department": "HR"}, {"name": "Bob", "department": "HR"}]
+
+console.log(hrEmployees);  // Output: [{"name": "John", "department": "HR"}, {"name": "Bob", "department": "HR"}]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>12. Updating JSON Object Properties:</h4>
