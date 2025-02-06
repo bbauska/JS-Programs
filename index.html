@@ -24250,8 +24250,8 @@ console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;));
 <p>Check if two arrays are equal through a shallow comparison of their elements.</p>
 
 <pre>
-const arraysAreEqual = (arr1, arr2) => arr1.length === arr2.length &&
-arr1.every((val, index) => val === arr2&lbrack;index&rbrack;);
+const arraysAreEqual = (arr1, arr2) => arr1.length === arr2.length && 
+  arr1.every((val, index) => val === arr2&lbrack;index&rbrack;);
 
 // Example usage
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 3&rbrack;));  // Output: true
