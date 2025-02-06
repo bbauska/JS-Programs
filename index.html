@@ -1069,8 +1069,8 @@ if (true) {
   let blockVariable = "Hello";
   const anotherBlockVariable = "World";
 }
-console.log(blockVariable); // Error, outside block scope 
-console.log(anotherBlockVariable); // Error, outside block scope
+console.log(blockVariable);  // Error, outside block scope 
+console.log(anotherBlockVariable);  // Error, outside block scope
 </pre>
 
 <p><b>Lexical Scope:</b> Lexical scope refers to how nested functions can access
@@ -1083,13 +1083,13 @@ function outer() {
   let outerVariable = "Outer";
 
   function inner() {
-    console.log(outerVariable); // Access to the variable from the parent function
+    console.log(outerVariable);  // Access to the variable from the parent function
   }
   return inner;
 }
 
 const nestedFunction = outer();
-nestedFunction(); // Prints "Outer"
+nestedFunction();  // Prints "Outer"
 </pre>
 
 <p>Function scope, block scope, and lexical scope are essential concepts to understand 
@@ -1121,7 +1121,7 @@ etc.</p>
 if (condition) {
   // If statement
 }
-let x = 10; // Assignment
+let x = 10;  // Assignment
 
 function greet() {
   // Function statement
@@ -1441,14 +1441,14 @@ elements are nested and related to each other.</p>
 <blockquote>
 Document (html)<br>
 |— html<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|-- head<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;|-- title<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;|-- body<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- head<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- title<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- body<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- hl<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;|-- "Page Title"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- "Page Title"<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- p<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
 </blockquote>
 
 <p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
@@ -1548,7 +1548,7 @@ function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
 }
 const person - { name: 'John'
-  greet.call(person, 'Maria'); // Prints: "Hello, Maria! My name is John"
+  greet.call(person, 'Maria');  // Prints: "Hello, Maria! My name is John"
 }
 </pre> 
 
@@ -1573,7 +1573,7 @@ function greet(name) {
 }
 const person - { name: 'John'
 const greetPerson - greet.bind(person);
-greetPerson('Maria'); // Prints: "Hello, Maria! My name is John"
+greetPerson('Maria');  // Prints: "Hello, Maria! My name is John"
 </pre>
 
 <p><b>In summary:</b></p>
@@ -1615,7 +1615,7 @@ methods of the object that will be created with new.</p>
 instance of a specific class or constructor. It returns true if the object is an
 instance of the given class, otherwise, it returns false.</p>
 
-<pre>console.log(personl instanceof Person); // Returns true</pre>
+<pre>console.log(personl instanceof Person);  // Returns true</pre>
 
 <p><b>Instances:</b> An instance is a unique object created from a constructor. Each
 time you use new with a constructor, a new instance of the object is
@@ -1668,7 +1668,7 @@ Animal.prototype.greet = function() {
 
 // Define a "Dog" constructor that inherits from "Animal"
 function Dog(name, breed) {
-  Animal.call(this, name); // Call the "Animal" constructor 
+  Animal.call(this, name);  // Call the "Animal" constructor 
   this.breed = breed;
 }
 
@@ -1683,8 +1683,8 @@ Dog.prototype.bark = function() {
 
 // Create an instance of "Dog"
 const myDog = new Dog("Max", "Labrador");
-myDog.greet(); // Prints "Hello, I'm Max"
-myDog.bark(); // Prints "Woof woof!"
+myDog.greet();  // Prints "Hello, I'm Max"
+myDog.bark();  // Prints "Woof woof!"
 </pre>
 
 <p>In this example:</p>
@@ -1722,7 +1722,7 @@ const animal = {
 };
 const dog = Object.create(animal);
 dog.sound = "Woof woof";
-dog.makeSound(); // Prints "Woof woof"
+dog.makeSound();  // Prints "Woof woof"
 </pre>
 
 <p><b>Object.assign:</b> Object.assign is a method used to copy enumerable
@@ -1856,8 +1856,8 @@ function counter() {
 }
 
 const counterl = counter();
-counterl(); // Prints: 1
-counterl(); // Prints: 2=
+counterl();  // Prints: 1
+counterl();  // Prints: 2=
 </pre>
 
 <p>In this example, the counter function returns the increment function. The
@@ -1876,9 +1876,9 @@ function makeCounter() {
 
 const counter = makeCounter();
 
-console.log(counter()); // 0
-console.log(counter()); // 1
-console.log(counter()); // 2
+console.log(counter());  // 0
+console.log(counter());  // 1
+console.log(counter());  // 2
 </pre>
 
 <p><b>Explanation:</b></p>
@@ -1936,7 +1936,7 @@ function subtract(x, y) {
   return x - y;
 }
  
-const resultAddition = performOperation(add, 5, 3); // Result: 8
+const resultAddition = performOperation(add, 5, 3);  // Result: 8
 const resultSubtraction = performOperation(subtract, 10, 4);  // Result: 6
 </pre>
 
@@ -1953,8 +1953,8 @@ function multiplier(factor) {
 const double = multiplier(2);
 const triple = multiplier(3);
 
-const resultDouble = double(5); // Result: 10
-const resultTriple = triple(4); // Result: 12
+const resultDouble = double(5);  // Result: 10
+const resultTriple = triple(4);  // Result: 12
 </pre>
 
 <p><b>Mapping (Map):</b> The map method of an array applies a function to each
@@ -1962,7 +1962,7 @@ element of the array and returns a new array with the results.</p>
 
 <pre>
 const numbers = [1, 2, 3, 4];
-const duplicates = numbers.map(number => number * 2); // Result: [2, 4, 6, 8]
+const duplicates = numbers.map(number => number * 2);  // Result: [2, 4, 6, 8]
 </pre>
 
 <p><b>Filtering (Filter):</b> The filter method of an array creates a new array with
@@ -1970,7 +1970,7 @@ elements that pass a specified condition.</p>
 
 <pre>
 const numbers = [1, 2, 3, 4, 5];
-const odds = numbers.filter(number => number % 2 !== 0); // Result: [1, 3, 5]
+const odds = numbers.filter(number => number % 2 !== 0);  // Result: [1, 3, 5]
 </pre>
 
 <p><b>reducing (reduce):</b> The reduce method or an array accumulates
@@ -1979,7 +1979,7 @@ elements by applying a reducing function and returns a single result.</p>
 <pre>
 const numbers = [1, 2, 3, 4];
 const totalSum = numbers.reduce((accumulator, number) => 
-  accumulator + number, 0); // Result: 10
+  accumulator + number, 0);  // Result: 10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk23">23. Recursion</h2>
@@ -1996,13 +1996,13 @@ factorial of a number:</p>
 <pre>
 function factorial(n) {
   if (n === 0 || n === 1) {
-    return 1; // Base case: factorial of 0 and 1 is 1 
+    return 1;  // Base case: factorial of 0 and 1 is 1 
   } else {
-    return n * factorial(n - 1); // Recursive call
+    return n * factorial(n - 1);  // Recursive call
   }
 }
 
-const result = factorial(5); // Result: 120 (5 * 4 * 3 * 2 * 1)
+const result = factorial(5);  // Result: 120 (5 * 4 * 3 * 2 * 1)
 </pre>
 
 <p>In this example, the factorial function calls itself with a reduced argument
@@ -2057,7 +2057,7 @@ map.set('age', 25);
 const set = new Set();
 set.add('red');
 set.add('green');
-set.add('red'); // Not added, as 'red' is already in the set
+set.add('red');  // Not added, as 'red' is already in the set
 </pre>
 
 <p><b>Generators:</b> Generators are special functions that allow pausing and
@@ -2076,8 +2076,8 @@ function* counter() {
 </pre>
 
 const generator = counter(); 
-console.log(generator.next().value); // Prints: 0 
-console.log(generator.next().value); // Prints: 1
+console.log(generator.next().value);  // Prints: 0 
+console.log(generator.next().value);  // Prints: 1
 
 <p>Generators are useful when you need to generate a sequence of values
 on-demand, rather than generating all values at once. This can be
@@ -2257,7 +2257,7 @@ useful when you need to maintain a list of elements without duplicates.</p>
 const set = new Set();
 set.add('red');
 set.add('green');
-set.add('red'); // Not added, as 'red' is already in the set
+set.add('red');  // Not added, as 'red' is already in the set
 </pre>
 
 <p><b>Queues and Stacks:</b> Queues and stacks are data structures for managing elements 
@@ -2269,13 +2269,13 @@ LIFO (Last In, First Out) principle.</p>
 const queue = [];
 queue.push('a');
 queue.push('b');
-const firstElement = queue.shift(); // 'a'
+const firstElement = queue.shift();  // 'a'
 
 // Example of a stack
 const stack = [];
 stack.push('x');
 stack.push('y');
-const lastElement = stack.pop(); // 'y'
+const lastElement = stack.pop();  // 'y'
 </pre>
 
 <p>These are just some of the basic data structures in JavaScript The choice
@@ -2403,7 +2403,7 @@ class Dog extends Animal {
   }
 }
 const myDog = new Dog('Max', 'Labrador');
-myDog.speak(); // Prints: "Max barks."
+myDog.speak();  // Prints: "Max barks."
 </pre>
 
 <p>In this example, Dog inherits from Animal and extends its functionality.
@@ -2442,8 +2442,8 @@ class Square extends Shape {
 const square = new Square(5);
 const circle = new Circle(3);
 
-console.log(square.area()); // Prints: 25
-console.log(circle.area()); // Prints: 28.274333882308138
+console.log(square.area());  // Prints: 25
+console.log(circle.area());  // Prints: 28.274333882308138
 </pre>
 
 <p>In this example, both Square and Circle are subclasses of Shape, and both
@@ -2548,8 +2548,8 @@ function sum(a, b) {
   return a + b;
 }
 
-const sum5 = sum.bind(null, 5); // Partial application of 'a' 
-console.log(sum5(3)); // Prints: 8
+const sum5 = sum.bind(null, 5);  // Partial application of 'a' 
+console.log(sum5(3));  // Prints: 8
 </pre>
 
 <p>In this example, sum5 is a function that already has the first argument preset to 5. 
@@ -2567,7 +2567,7 @@ function sum(a) {
 }
 
 const sum5 = sum(5);
-console.log(sum5(3)); // Prints: 8
+console.log(sum5(3));  // Prints: 8
 </pre>
 
 <p>In this case, sum is transformed into a curried function. The first call sum(5) 
@@ -2588,7 +2588,7 @@ function increment(x) {
 }
 
 const doubleIncrement = x => increment(double(x));
-console.log(doubleIncrement(3)); // Prints: 7
+console.log(doubleIncrement(3));  // Prints: 7
 </pre>
 
 <p>In this example, doubleIncrement is a function that first doubles the value and then 
@@ -2609,7 +2609,7 @@ const result = pipe(
   double
 )(3);
 
-console.log(result); // Prints: 14 (3 * 2 + 1) * 2
+console.log(result);  // Prints: 14 (3 * 2 + 1) * 2
 </pre>
 
 <p>In this example, the pipe function takes a series of functions and returns a new 
@@ -2684,7 +2684,7 @@ try {
 
 <pre>
 try {
-  const result = divide(10, 0); // Trying to divide by zero 
+  const result = divide(10, 0);  // Trying to divide by zero 
   console.log(result);
 } catch (error) {
   console.error('Error:', error.message);
@@ -2731,11 +2731,11 @@ using the import keyword.</p>
 import { PI, sum } from './module.js';
 import Person from './module.js';
 
-console.log(PI); // Prints: 3.14159
-console.log(sum(5, 3)); // Prints: 8
+console.log(PI);  // Prints: 3.14159
+console.log(sum(5, 3));  // Prints: 8
 
 const person = new Person('John');
-console.log(person.name); // Prints: John
+console.log(person.name);  // Prints: John
 </pre>
 
 <p><b>Import Everything as an Alias:</b> You can import all exported values as an object 
@@ -2745,11 +2745,11 @@ using an alias.</p>
 // file: app.js
 import * as module from ' ./module.js';
 
-console.log(module.PI); // Prints: 3.14159
-console.log(module.sum(5, 3)); // Prints: 8
+console.log(module.PI);  // Prints: 3.14159
+console.log(module.sum(5, 3));  // Prints: 8
 
 const person = new module.default('Maria');
-console.log(person.name); // Prints: Maria
+console.log(person.name);  // Prints: Maria
 </pre>
 
 <p><b>Import Only the Default Value:</b> If you have a default export, you can import it 
@@ -2760,7 +2760,7 @@ directly without using braces.</p>
 import Person from './module.js';
 
 const person = new Person('Peter');
-console.log(person.name); // Prints: Peter
+console.log(person.name);  // Prints: Peter
 </pre>
 
 <p>ES6 modules promote modifying and code reuse, making it easier to build organized and 
@@ -2787,7 +2787,7 @@ if...else statement in a single Line. The basic syntax of the ternary operator i
 <pre>
 const age = 18;
 const isAdult = age >= 18 ? "Yes" : "No";
-console.log(isAdult); // Prints: Yes
+console.log(isAdult);  // Prints: Yes
 </pre>
 
 <p>Using the ternary operator to perform an action based on a condition:</p>
@@ -2795,7 +2795,7 @@ console.log(isAdult); // Prints: Yes
 <pre>
 const hour = 14;
 const greeting = hour < 12 ? "Good morning" : "Good afternoon";
-console.log(greeting); // Prints: Good afternoon
+console.log(greeting);  // Prints: Good afternoon
 </pre>
 
 <p>Using the ternary operator to calculate a discount:</p>
@@ -2805,7 +2805,7 @@ const originalPrice = 100;
 const hasDiscount = true;
 const finalPrice = hasDiscount ? originalPrice * 0.8 :
 originalPrice;
-console.log(finalPrice); // Prints: 80
+console.log(finalPrice);  // Prints: 80
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk37">37. Spread and Rest Operators</h2>
@@ -2826,7 +2826,7 @@ const copiedArray = [...originalArray];
 // Combine arrays using spread
 const arrayl = [1, 2, 3];
 const array2 = [4, 5, 6];
-const combined = [...arrayl, ...array2]; // [1, 2, 3, 4, 5, 6]
+const combined = [...arrayl, ...array2];  // [1, 2, 3, 4, 5, 6]
 </pre>
  
 <p>In objects, the spread operator is used to create shallow copies:</p>
@@ -2839,7 +2839,7 @@ const copiedObject - { ...originalObject
 // Combine objects using spread
 const objectl = { a: 1, b: 2 };
 const object2 = { b: 3, c: 4
-const combined = { ...objectl, ...object2 }; // { a: 1, b: 3, c: 4 }
+const combined = { ...objectl, ...object2 };  // { a: 1, b: 3, c: 4 }
 </pre>
 
 <p><b>Rest Operator (...):</b> The rest operator is used to gather multiple elements into 
@@ -2850,12 +2850,12 @@ an array in contexts where function arguments or destructuring parameters are ex
 function sum(...numbers) {
   return numbers.reduce((total, num) => total + num, 0);
 }
-console.log(sum(l, 2, 3, 4)); // Prints: 10
+console.log(sum(l, 2, 3, 4));  // Prints: 10
 
 // Use rest in destructuring
 const [first, ...rest] = [1, 2, 3, 4];
-console.log(first); // Prints: 1
-console.log(rest); // Prints: [2, 3, 4]
+console.log(first);  // Prints: 1
+console.log(rest);  // Prints: [2, 3, 4]
 </pre>
 
 <p>In the example of the sum function, the rest operator gathers all arguments into an 
@@ -2881,9 +2881,9 @@ const numbers = [1, 2, 3, 5];
 
 // Extracting individual values
 const [first, second, ...rest] = numbers;
-console.log(first); // Prints: 1
-console.log(second); // Prints: 2
-console.log(rest); // Prints: [3, 4, 5]
+console.log(first);  // Prints: 1
+console.log(second);  // Prints: 2
+console.log(rest);  // Prints: [3, 4, 5]
 </pre>
 
 <p><b>Destructuring with Objects:</b></p>
@@ -2893,8 +2893,8 @@ const person = { name: 'Ana', age: 30, city: 'Madrid' };
 
 // Extracting individual properties
 const { name, age } = person; 
-console.log(name); // Prints: Ana 
-console.log(age); // Prints: 30
+console.log(name);  // Prints: Ana 
+console.log(age);  // Prints: 30
 </pre>
 
 <p><b>Nested Destructuring:</b> You con destructure nested objects and arrays:</p>
@@ -2910,9 +2910,9 @@ const product = {
 };
 
 const { name, details: { color, sizes } } = product;
-console.log(name); // Prints: T-shirt
-console.log(color); // Prints: Red
-console.log(sizes); //Prints:  ['S', 'M', 'L']
+console.log(name);  // Prints: T-shirt
+console.log(color);  // Prints: Red
+console.log(sizes);  //Prints:  ['S', 'M', 'L']
 </pre>
 
 <p>Destructuring assignment is especially handy when working with functions that return 
@@ -2925,8 +2925,8 @@ function getInformation() {
 }
 
 const { name, age } = getInformation();
-console.log(name); // Prints: Juan
-console.log(age); // Prints: 25
+console.log(name);  // Prints: Juan
+console.log(age);  // Prints: 25
 </pre>
 
 <p>Destructuring assignment can save time and reduce the need for writing repetitive 
@@ -2950,7 +2950,7 @@ const age = 30;
 // Using template literals
 const message = `Hello, my name is ${name} and I am ${age} years old.`
 
-console.log(message); // Prints "Hello, my name is Juan and I am 30 years old."
+console.log(message);  // Prints "Hello, my name is Juan and I am 30 years old."
 </pre>
 
 <p>The ${} are placeholders that indicate variables or expressions to be
@@ -3042,7 +3042,7 @@ const person = {
   }
 };
 
-person.greet(); // Prints "Hello, I am John" after 1 second
+person.greet();  // Prints "Hello, I am John" after 1 second
 </pre>
 
 <p>In summary, arrow functions provide a more concise and convenient way
@@ -3062,7 +3062,7 @@ array.</p>
 
 <pre>
 const numbers = [1, 2, 3, 4, 5];
-const elementcount = numbers.length; // Result: 5
+const elementcount = numbers.length;  // Result: 5
 </pre>
 
 <p><b>Array.push(elementl, element2, ...):</b> The push method adds one or
@@ -3099,7 +3099,7 @@ of the array.</p>
 
 <pre>
 const numbers = [2, 3, 4];
-numbers.unshift(l, 0); // Result: [1, 0, 2, 3, 4]
+numbers.unshift(l, 0);  // Result: [1, 0, 2, 3, 4]
 </pre>
 
 <p><b>Array.forEach(callback(currentValue, index, array)):</b> The forEach
@@ -3108,7 +3108,7 @@ callback function for each one.</p>
 
 <pre>
 const numbers = [1, 2, 3];
-numbers.forEach(number => console.log(number)); // Prints 1, 2, 3
+numbers.forEach(number => console.log(number));  // Prints 1, 2, 3
 </pre>
 
 <p><b>Array.some(callback(currentValue, index, array)):</b> The some method
@@ -3167,7 +3167,7 @@ characters) of a text string.</p>
 
 <pre>
 const text = 'Hello, world!';
-const length = text.length; // Result: 12
+const length = text.length;  // Result: 12
 </pre>
 
 <p><b>String.charAt(index):</b> The charAt method returns the character at the
@@ -3175,7 +3175,7 @@ specified position in the string.</p>
 
 <pre>
 const text = 'Hello';
-const firstCharacter = text.charAt(0); // Result: 'H'
+const firstCharacter = text.charAt(0);  // Result: 'H'
 </pre>
 
 <p><b>String.concat(strl, str2,...):</b> The concat method combines two or more
@@ -3194,7 +3194,7 @@ returns -1.</p>
 
 <pre>
 const phrase = 'Hello, world!';
-const position - phrase.indexOf('world'); // Result: 7
+const position - phrase.indexOf('world');  // Result: 7
 </pre>
 
 <p><b>String.substring(start, end):</b> The substring method extracts a substring
@@ -3202,7 +3202,7 @@ from start to end (exclusive) of the string.</p>
 
 <pre>
 const text = 'Hello, world!';
-const substring = text.substring(6, 11); // Result: 'world'
+const substring = text.substring(6, 11);  // Result: 'world'
 </pre>
 
 <p><b>String.split(separator, limit):</b> The split method divides a string into an
@@ -3219,7 +3219,7 @@ from a string.</p>
 
 <pre>
 const text = ' Hello, world! ';
-const cleanText = text.trim(); // Result: 'Hello, world!'
+const cleanText = text.trim();  // Result: 'Hello, world!'
 </pre>
 
 <p><b>String.replace(search, replacement):</b> The replace method replaces a
@@ -3237,8 +3237,8 @@ respectively.</p>
 
 <pre>
 const text = 'Hello, World!';
-const uppercase = text.toUpperCase(); // Result: 'HELLO, WORLD!'
-const lowercase = text.toLowerCase(); // Result: 'hello, world!'
+const uppercase = text.toUpperCase();  // Result: 'HELLO, WORLD!'
+const lowercase = text.toLowerCase();  // Result: 'hello, world!'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk43">43. Object Methods (keys, values, entries, etc.)</h2>
@@ -3252,7 +3252,7 @@ of Object:</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const keys = Object.keys(object); // Result: ['a', 'b', 'c']
+const keys = Object.keys(object);  // Result: ['a', 'b', 'c']
 </pre>
 
 <p><b>Object, values(obj):</b> The values method returns an array of values of the
@@ -3260,7 +3260,7 @@ enumerable properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const values = Object.values(object); // Result: [1, 2, 3]
+const values = Object.values(object);  // Result: [1, 2, 3]
 </pre> 
 
 <p><b>Object.entries(obj):</b> The entries method returns on array of arrays with
@@ -3280,7 +3280,7 @@ target object.</p>
 const target = { a: 1 };
 const source = { b: 2, c: 3 };
 Object.assign(target, source);
-console.log(target); // Result: { a: 1, b: 2, c: 3 }
+console.log(target);  // Result: { a: 1, b: 2, c: 3 }
 </pre>
 
 <p><b>Object.hasOwnProperty(prop):</b> The hasOwnProperty method checks if an object has 
@@ -3288,8 +3288,8 @@ an own property with the specified name.</p>
 
 <pre>
 const object = { a: 1, b: 2 };
-const hasPropertyA = object.hasOwnProperty('a'); // Result: true
-const hasPropertyC = object.hasOwnPropertyC'c'); // Result: false
+const hasPropertyA = object.hasOwnProperty('a');  // Result: true
+const hasPropertyC = object.hasOwnPropertyC'c');  // Result: false
 </pre>
 
 <p><b>Object.freeze(obj):</b> The freeze method freezes an object, meaning that its
@@ -3298,7 +3298,7 @@ existing properties cannot be added, deleted, or modified.</p>
 <pre>
 const object = { a: 1, b: 2 };
 Object.freeze(object);
-object.a - 10; // No effect
+object.a - 10;  // No effect
 </pre>
 
 <p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys
@@ -3306,7 +3306,7 @@ object.a - 10; // No effect
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const keys - Object.keys(object); // Result: ['a', 'b', 'c']
+const keys - Object.keys(object);  // Result: ['a', 'b', 'c']
 </pre>
 
 <p><b>Object, values(obj):</b> The values method returns an array of values of the
@@ -3314,7 +3314,7 @@ enumerable properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
-const values - Object.values(object); // Result: [1, 2, 3]
+const values - Object.values(object);  // Result: [1, 2, 3]
 </pre>
 
 <p><b>Object.entries(obj):</b> The entries method returns an array of arrays with
@@ -3347,14 +3347,14 @@ integer.</p>
 
 <pre>
 const number = 5.7;
-const roundedNumber - Math.floor(number); // Result: 5
+const roundedNumber - Math.floor(number);  // Result: 5
 </pre>
 
 <p><b>Math.ceil(x):</b> The ceil method rounds a number up to the nearest integer.</p>
 
 <pre>
 const number = 5.2;
-const roundedNumber = Math.ceil(number); // Result: 6
+const roundedNumber = Math.ceil(number);  // Result: 6
 </pre>
 
 <p><b>Math.round(x):</b> The round method rounds a number to the nearest
@@ -3363,8 +3363,8 @@ integer. If the decimal is 0.5 or greater, it will round to the next integer.</p
 <pre>
 const numberl = 5.2;
 const number2 = 5.8;
-const roundingl = Math.round(numberl); // Result: 5
-const rounding2 = Math.round(number2); // Result: 6
+const roundingl = Math.round(numberl);  // Result: 5
+const rounding2 = Math.round(number2);  // Result: 6
 </pre>
 
 <p><b>Math.max(...args) and Math.min(...args):</b> The max and min methods
@@ -3372,28 +3372,28 @@ return the maximum and minimum values, respectively, of a series of
 numeric arguments.</p>
 
 <pre>
-const maximum = Math.max(5, 10, 3, 8); // Result: 10
-const minimum = Math.min(5, 10, 3, 8); // Result: 3
+const maximum = Math.max(5, 10, 3, 8);  // Result: 10
+const minimum = Math.min(5, 10, 3, 8);  // Result: 3
 </pre>
 
 <p><b>Math.pow(base, exponent):</b> The pow method calculates the power of a
 given number.</p>
 
 <pre>
-const result = Math.pow(2, 3); // Result: 8 (2 to the power of 3)
+const result = Math.pow(2, 3);  // Result: 8 (2 to the power of 3)
 </pre>
 
 <p><b>Math.sqrt(x):</b> The sqrt method calculates the square root of a number.</p>
 
 <pre>
-const squareRoot = Math.sqrt(25); // Result: 5 (square root of 25)
+const squareRoot = Math.sqrt(25);  // Result: 5 (square root of 25)
 </pre>
 
 <p><b>Math.abs(x):</b> The abs method returns the absolute value of a number, i.e.,
 its value without a sign.</p>
 
 <pre>
-const absoluteValue - Math.abs(-7); // Result: 7
+const absoluteValue - Math.abs(-7);  // Result: 7
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk45">45. JSON and Object Serialization/Deserialization</h2>
@@ -3418,7 +3418,7 @@ const person = {
 };
 
 const personJSON = JSON.stringify(person);
-console.log(personJSON); // Outputs
+console.log(personJSON);  // Outputs
 '{"name":"Juan","age":30,"city":"Mexico"}'
 </pre>
 
@@ -3547,7 +3547,7 @@ localStorage.setItem('name', 'John');
 
 // Retrieve data from LocalStorage
 const name = localStorage.getItem('name');
-console.log(name); // Prints "John"
+console.log(name);  // Prints "John"
 
 // Remove data from localStorage
 localStorage.removeItem('name');
@@ -3573,7 +3573,7 @@ sessionStorage.setItem('language', 'Spanish');
 
 // Retrieve data from SessionStorage
 const language - sessionStorage.getItem('language');
-console.log(language); // Prints "Spanish"
+console.log(language);  // Prints "Spanish"
 
 // Remove data from Sessionstorage
 sessionStorage.removeItem('language');
@@ -4122,11 +4122,11 @@ function min(a, b) {
   if (a < b) return a;
   else return b;
 }<br>
-console.log(min(0, 10)); // → 0
-console.log(min(0, -10)); // → -10
+console.log(min(0, 10));  // → 0
+console.log(min(0, -10));  // → -10
 </pre>
 
-<pre>console.log(Math.min(2, 4) + 100); // → 102</pre>
+<pre>console.log(Math.min(2, 4) + 100);  // → 102</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Some functions produce a value, such as power and square, and some don’t, such as 
 makeNoise, which produces only a side effect. A return statement determines the value the 
@@ -4168,7 +4168,7 @@ function findSolution(target) {
   return find(1, "1");
 }
 
-console.log(findSolution(24)); // ▷ (((1 * 3) + 5) * 3)
+console.log(findSolution(24));  // ▷ (((1 * 3) + 5) * 3)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -4179,22 +4179,22 @@ function power(base, exponent) {
     return base * power(base, exponent - 1);
   }
 }
-console.log(power(2, 3)); // → 8
-console.log(power(7, 4)); // → 2401
+console.log(power(2, 3));  // → 8
+console.log(power(7, 4));  // → 2401
 </pre>
 
 <pre>
 var makeNoise = function() {
   console.log("Pling!");
 };
-makeNoise(); // → Pling!
+makeNoise();  // → Pling!
 var power = function(base, exponent) {
   var result = 1;
   for (var count = 0; count < exponent; count++)
   result *= base;
   return result;
 };
-console.log(power(2, 10)); // → 1024
+console.log(power(2, 10));  // → 1024
 </pre>
 
 <pre>
@@ -4204,9 +4204,9 @@ function isEven(n) {
   else if (n < 0) return isEven(-n);
   else return isEven(n - 2);
 }<br>
-console.log(isEven(50)); // → true
-console.log(isEven(75)); // → false
-console.log(isEven(-1)); // → false
+console.log(isEven(50));  // → true
+console.log(isEven(75));  // → false
+console.log(isEven(-1));  // → false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el06">06. Functions: Bean counting</h2>
@@ -4245,8 +4245,8 @@ function countChar(string, ch) {
 function countBs(string) {
   return countChar(string, "B");
 }<br>
-console.log(countBs("BBC")); // → 2
-console.log(countChar("kakkerlak", "k")); // → 4
+console.log(countBs("BBC"));  // → 2
+console.log(countChar("kakkerlak", "k"));  // → 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el07">07. Data Structures: Objects and Arrays</h2>
@@ -4364,9 +4364,9 @@ function sum(array) {
   return total;
 }<br>
 console.log(range(1, 10)) // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-console.log(range(5, 2, -1)); // → [5, 4, 3, 2]
-console.log(sum(range(1, 10))); // → 55
-console.log(sum(range(1, 77))); // → 3003
+console.log(range(5, 2, -1));  // → [5, 4, 3, 2]
+console.log(sum(range(1, 10)));  // → 55
+console.log(sum(range(1, 77)));  // → 3003
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el09">09. Data-Structures: Reversing an Array</h2>
@@ -4408,10 +4408,10 @@ function reverseArrayInPlace(array) {
   }
   return array;
 }<br>
-console.log(reverseArray(["A", "B", "C"])); // → ["C", "B", "A"];
+console.log(reverseArray(["A", "B", "C"]));  // → ["C", "B", "A"];
 let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
-console.log(arrayValue); // → [5, 4, 3, 2, 1]
+console.log(arrayValue);  // → [5, 4, 3, 2, 1]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el10">10. Data-Structures: A list</h2>
@@ -4461,10 +4461,10 @@ function nth(list, n) {
   else if (n == 0) return list.value;
   else return nth(list.rest, n - 1);
 }<br>
-console.log(arrayToList([10, 20])); // → {value: 10, rest: {value: 20, rest: null}}
-console.log(listToArray(arrayToList([10, 20, 30]))); // → [10, 20, 30]
-console.log(prepend(10, prepend(20, null))); // → {value: 10, rest: {value: 20, rest: null}}
-console.log(nth(arrayToList([10, 20, 30]), 1)); // → 20
+console.log(arrayToList([10, 20]));  // → {value: 10, rest: {value: 20, rest: null}}
+console.log(listToArray(arrayToList([10, 20, 30])));  // → [10, 20, 30]
+console.log(prepend(10, prepend(20, null)));  // → {value: 10, rest: {value: 20, rest: null}}
+console.log(nth(arrayToList([10, 20, 30]), 1));  // → 20
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el11">11. Data-Structures: Deep comparison</h2>
@@ -4502,9 +4502,9 @@ function deepEqual(a, b) {
   return true;
 }<br>
 let obj = {here: {is: "an"}, object: 2};<br>
-console.log(deepEqual(obj, obj)); // → true
-console.log(deepEqual(obj, {here: 1, object: 2})); // → false
-console.log(deepEqual(obj, {here: {is: "an"}, object: 2})); // → true
+console.log(deepEqual(obj, obj));  // → true
+console.log(deepEqual(obj, {here: 1, object: 2}));  // → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));  // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el12">12. Higher-Order Functions: Flattening</h2>
@@ -4529,7 +4529,7 @@ function greaterThan(n) {
   return m => m > n;
 }
 let greaterThan10 = greaterThan(10);
-console.log(greaterThan10(11)); // → true
+console.log(greaterThan10(11));  // → true
 </pre>
 
 <p>And we can have functions that change other functions.</p>
@@ -4543,7 +4543,7 @@ function noisy(f) {
     return result;
   };
 }
-noisy(Math.min)(3, 2, 1); // → calling with [3, 2, 1]
+noisy(Math.min)(3, 2, 1);  // → calling with [3, 2, 1]
 // → called with [3, 2, 1] , returned 1
 </pre>
 
@@ -4634,9 +4634,9 @@ function every(array, predicate) {
 function every2(array, predicate) {
   return !array.some(element => !predicate(element));
 }<br>
-console.log(every([1, 3, 5], n => n < 10)); // → true
-console.log(every([2, 4, 16], n => n < 10)); // → false
-console.log(every([], n => n < 10)); // → true
+console.log(every([1, 3, 5], n => n < 10));  // → true
+console.log(every([2, 4, 16], n => n < 10));  // → false
+console.log(every([], n => n < 10));  // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el15">15. Higher-Order Functions: Dominant writing direction</h2>
@@ -4671,7 +4671,7 @@ function countBy(items, groupName) {
   }
   return counts;
 }
-console.log(countBy([1, 2, 3, 4, 5], n => n > 2)); // → [{name: false, count: 2}, {name: true, count: 3}]
+console.log(countBy([1, 2, 3, 4, 5], n => n > 2));  // → [{name: false, count: 2}, {name: true, count: 3}]
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -4683,8 +4683,8 @@ function dominantDirection(text) {
   if (counted.length == 0) return "ltr";
     return counted.reduce((a, b) => a.count > b.count ? a : b).name;
 }<br>
-console.log(dominantDirection("Hello!")); // → ltr
-console.log(dominantDirection("Hey, مساء الخير")); // → rtl
+console.log(dominantDirection("Hello!"));  // → ltr
+console.log(dominantDirection("Hey, مساء الخير"));  // → rtl
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el16">16. Objects: A vector type</h2>
@@ -4795,9 +4795,9 @@ class Vec {
     return Math.sqrt(this.x * this.x + this.y * this.y);
   }
 }<br>
-console.log(new Vec(1, 2).plus(new Vec(2, 3))); // → Vec{x: 3, y: 5}
-console.log(new Vec(1, 2).minus(new Vec(2, 3))); // → Vec{x: -1, y: -1}
-console.log(new Vec(3, 4).length); // → 5
+console.log(new Vec(1, 2).plus(new Vec(2, 3)));  // → Vec{x: 3, y: 5}
+console.log(new Vec(1, 2).minus(new Vec(2, 3)));  // → Vec{x: -1, y: -1}
+console.log(new Vec(3, 4).length);  // → 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el17">17. Objects: Groups</h2>
@@ -4843,8 +4843,8 @@ class Group {
   }
 }<br>
 let group = Group.from([10, 20]);
-console.log(group.has(10)); // → true
-console.log(group.has(30)); // → false
+console.log(group.has(10));  // → true
+console.log(group.has(30));  // → false
 group.add(10);
 group.delete(10);
 console.log(group.has(10));
@@ -4928,7 +4928,7 @@ called, returns a new instance of the iterator class for that group.</p>
 
 <pre>
 let map = {one: true, two: true, hasOwnProperty: true};<br>
-console.log(Object.prototype.hasOwnProperty.call(map, "one")); // → true
+console.log(Object.prototype.hasOwnProperty.call(map, "one"));  // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>robot.js</h3>
@@ -5155,9 +5155,9 @@ PGroup.empty = new PGroup([]);
 let a = PGroup.empty.add("a");
 let ab = a.add("b");
 let b = ab.delete("a");<br>
-console.log(b.has("b")); // → true
-console.log(a.has("b")); // → false
-console.log(b.has("a")); // → false
+console.log(b.has("b"));  // → true
+console.log(a.has("b"));  // → false
+console.log(b.has("a"));  // → false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el23">23. Bugs and Errors: Retry</h2>
@@ -5190,7 +5190,7 @@ function reliableMultiply(a, b) {
     }
   }
 }<br>
-console.log(reliableMultiply(8, 8)); // → 64
+console.log(reliableMultiply(8, 8));  // → 64
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el24">24. Bugs and Errors: The locked box</h2>
@@ -5236,7 +5236,7 @@ try {
 } catch (e) {
   console.log("Error raised:", e);
 }<br>
-console.log(box.locked); // → true
+console.log(box.locked);  // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el25">25. Regular Expressions: Regexp golf</h2>
@@ -5435,8 +5435,8 @@ function locateScalpel2(nest) {
   }
   return loop(nest.name);
 }<br>
-locateScalpel(bigOak).then(console.log); // → Butcher's Shop
-locateScalpel2(bigOak).then(console.log); // → Butcher's Shop
+locateScalpel(bigOak).then(console.log);  // → Butcher's Shop
+locateScalpel2(bigOak).then(console.log);  // → Butcher's Shop
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el30">30. Asynchronous Programming: Building Promise.all</h2>
@@ -5577,7 +5577,7 @@ do(define(x, 4),
    print(x))
 `);
 // → 50<br>
-run(`set(quux, true)`); // → Some kind of ReferenceError
+run(`set(quux, true)`);  // → Some kind of ReferenceError
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el34">34. The Document Object Model: Build a table</h2>
@@ -5674,10 +5674,10 @@ doing a recursive call on it to inspect its own children.</p>
     explore(node);
     return found;
   }<br>
-  console.log(byTagName(document.body, "h1").length);   // → 1
-  console.log(byTagName(document.body, "span").length); // → 3
+  console.log(byTagName(document.body, "h1").length);  // → 1
+  console.log(byTagName(document.body, "span").length);  // → 3
   let para = document.querySelector("p");
-  console.log(byTagName(para, "span").length); // → 2
+  console.log(byTagName(para, "span").length);  // → 2
 &lt;/script&gt;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7726,9 +7726,9 @@ function findPath(a, b) {
 }<br>
 let graph = treeGraph(4, 4);
 let root = graph[0], leaf = graph[graph.length - 1];
-console.log(findPath(root, leaf).length); // → 4<br>
+console.log(findPath(root, leaf).length);  // → 4<br>
 leaf.connect(root);
-console.log(findPath(root, leaf).length); // → 2</pre>
+console.log(findPath(root, leaf).length);  // → 2</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el58">58. JS and Performance: Timing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7809,7 +7809,7 @@ form the logic of a program and can be simple or complex.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol start="1">
   <li><h4>Variable Declaration:</h4>
-    <pre>let x; // Declaring a variable 'x'</pre>
+    <pre>let x;  // Declaring a variable 'x'</pre>
   </li>
   <li><h4>Conditional Statement:</h4>
     <pre>if(x === 5) {
@@ -7885,13 +7885,13 @@ as numbers, strings, objects, arrays, methods, and more.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol type="1">
   <li><h4>Declaring and Assigning a Variable:</h4>
-    <pre>let age = 25; // Declaring 'age' and assigning a value of 25</pre>
+    <pre>let age = 25;  // Declaring 'age' and assigning a value of 25</pre>
   </li>
   <li><h4>String Variable:</h4>
-    <pre>let Name = 'Alice'; // A variable holding a string value</pre>
+    <pre>let Name = 'Alice';  // A variable holding a string value</pre>
   </li>
   <li><h4>Object Variable:</h4>
-    <pre>let person = {name: 'Bob', age: 30}; // A variable holding a object</pre>
+    <pre>let person = {name: 'Bob', age: 30};  // A variable holding a object</pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7903,7 +7903,7 @@ reassigned a new value if needed.</p>
 <h3>Example of let in JavaScript:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let x = 5;
-x = 10; // Reassigning 'x' to a new Value</pre>
+x = 10;  // Reassigning 'x' to a new Value</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex06">06. JS const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7913,7 +7913,7 @@ Once assigned, the value of a const <span class="consolas">cannot be changed</sp
 <h3>Example of const in JavaScript:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>const PI = 3.14159;  // Declaring a constant PI
-PI = 3; // This will throw an error as reassignment is not Allowed</pre>
+PI = 3;  // This will throw an error as reassignment is not Allowed</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex07">07. JS Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7927,25 +7927,25 @@ operations, and more.</p>
   <li><h4>Arithmetic Operators:</h4>
     <pre>let a = 10;
 let b = 5;
-let sum = a + b; // Addition
-let difference = a - b; // Subtraction
-let product = a * b; // Multiplication
-let quotient = a / b; // Division</pre>
+let sum = a + b;  // Addition
+let difference = a - b;  // Subtraction
+let product = a * b;  // Multiplication
+let quotient = a / b;  // Division</pre>
   </li>
   <li><h4>Comparison Operators:</h4>
     <pre>let x = 5;
 let y = 10;
-console.log(x === y); // Equality check
-console.log(x !== y); // Inequality check
-console.log(x > y); // Greater Than
-console.log(x < y); // Less Than</pre>
+console.log(x === y);  // Equality check
+console.log(x !== y);  // Inequality check
+console.log(x > y);  // Greater Than
+console.log(x < y);  // Less Than</pre>
   </li>
   <li><h4>Logical Operators:</h4>
     <pre>let p = true;
 let q = false;
-console.log(p && q); // Logical AND
-console.log(p || q); // Logical OR
-console.log(!p); / Logical NOT</pre>
+console.log(p && q);  // Logical AND
+console.log(p || q);  // Logical OR
+console.log(!p);  // Logical NOT</pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7958,19 +7958,19 @@ operations on numbers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
   <li><h4>Addition:</h4>
-    <pre>let sum = 5 + 3; // sum = 8</pre>
+    <pre>let sum = 5 + 3;  // sum = 8</pre>
   </li>
   <li><h4>Subtraction:</h4>
-    <pre>let difference = 10 - 4; // difference = 6</pre>
+    <pre>let difference = 10 - 4;  // difference = 6</pre>
   </li>
   <li><h4>Multiplication:</h4>
-    <pre>let product = 6 * 7; // product = 42</pre>
+    <pre>let product = 6 * 7;  // product = 42</pre>
   </li>
   <li><h4>Division:</h4>
-    <pre>let quotient = 20 / 5; // quotient = 4</pre>
+    <pre>let quotient = 20 / 5;  // quotient = 4</pre>
   </li>
   <li><h4>Modulus (Remainder):</h4>
-    <pre>let remainder = 15 % 4 // remainer = 3</pre>
+    <pre>let remainder = 15 % 4  // remainer = 3</pre>
   </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7983,9 +7983,9 @@ values to variables.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Assigning a Value to a Variable:</h4>
 
-<pre>let x = 10; // Assigning the value 10 to variable 'x'</pre>
+<pre>let x = 10;  // Assigning the value 10 to variable 'x'</pre>
 <h4>Assigning the Result of an Expression:</h4>
-<pre>let y = x + 5; // Assigning the result of an expression to 'y'</pre>
+<pre>let y = x + 5;  // Assigning the result of an expression to 'y'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex10">10. JS Data Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8021,11 +8021,11 @@ blocks of code that perform a specific task when called</span>.</p>
 }</pre>
 
 <h4>Function Call:</h4>
-<pre>let message = greet('John'); // message = 'Hello, John!'</pre>
+<pre>let message = greet('John');  // message = 'Hello, John!'</pre>
 
 <h4>Arrow Function:</h4>
 <pre>const multiply = (a,b) => a * b;
-let result = multiply(5,3); // result = 15</pre>
+let result = multiply(5,3);  // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex12">12. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8044,10 +8044,10 @@ let result = multiply(5,3); // result = 15</pre>
 };</pre>
 
 <h4>Accessing Object Properties:</h4>
-<pre>console.log(person.name); // Output: Alice</pre>
+<pre>console.log(person.name);  // Output: Alice</pre>
 
 <h4>Calling Object Method:</h4>
-<pre>console.log(person.greet()); // Output: Hello, my name is Alice!</pre>
+<pre>console.log(person.greet());  // Output: Hello, my name is Alice!</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex13">13. JS Events</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8080,7 +8080,7 @@ enclosed in single or double quotes.</p>
 <h4>Concatenating Strings:</h4>
 <pre>let greeting = 'Hello, ';
 let name = 'Alice';
-let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
+let welcomeMessage = greeting + name;  // welcomeMessage = 'Hello, Alice'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex15">15. JS String Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8090,11 +8090,11 @@ let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>toUpperCase() Methods:</h4>
 <pre>let text = 'hello';
-let upperCaseText = text.toUpperCase(); // upperCaseText = 'HELLO'</pre>
+let upperCaseText = text.toUpperCase();  // upperCaseText = 'HELLO'</pre>
 
 <h4>substring() Method:</h4>
 <pre>let sentence = 'This is a sentence';
-let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
+let subSentence = sentence.substring(5, 10);  // subSentence = 'is a '</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex16">16. JS String Search</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8105,11 +8105,11 @@ a string</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>indexOf() Method:</h4>
 <pre>let text = 'Hello, World!';
-let position = text.indexOf('World'); // position = 7</pre>
+let position = text.indexOf('World');  // position = 7</pre>
 
 <h4>includes() Method:</h4>
 <pre>let sentence = 'This is a sentence';
-let containsWord = sentence.includes('sentence'); // containsWord = true</pre>
+let containsWord = sentence.includes('sentence');  // containsWord = true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex17">17. JS String Templates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8120,7 +8120,7 @@ variables into strings.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic Template Literal:</h4>
 <pre>let name = 'Alice';
-let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
+let message = `Hello, ${name}!`;  // message = 'Hello, Alice!'</pre>
 
 <h4>Multi-line Template Literal:</h4>
 <pre>let multiLineMessage = `
@@ -8141,7 +8141,7 @@ let message = `Hello, ${name}!`; // message = 'Hello, Alice!'</pre>
 <pre>let decimalNumber = 3.14;</pre>
 
 <h4>Scientific Notation:</h4>
-<pre>let scientificNumber = 2e3; // scientificNumber = 2000</pre>
+<pre>let scientificNumber = 2e3;  // scientificNumber = 2000</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex19">19. JS BigInt</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8166,13 +8166,13 @@ manipulations</span> with numbers.</p>
 <h4>toFixed() Method:</h4>
 <pre>
 let number = 3.14159;
-let roundedNumber = number.toFixed(2); // roundedNumber = '3.14'
+let roundedNumber = number.toFixed(2);  // roundedNumber = '3.14'
 </pre>
 
 <h4>parseInt() Method:</h4>
 <pre>
 let stringNumber = '42';
-let parsedNumber = parseInt(stringNumber); // parsedNumber = 42
+let parsedNumber = parseInt(stringNumber);  // parsedNumber = 42
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex21">21. JS Number Properties</h2>
@@ -8183,7 +8183,7 @@ numbers.</p>
 <h3>Examples of JS Number Properties:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Number.MAX_VALUE Property:</h4>
-<pre>console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e + 308</pre>
+<pre>console.log(Number.MAX_VALUE);  // Output: 1.7976931348623157e + 308</pre>
 
 <h4>Number.MIN_VALUE Property:</h4>
 <pre>console.log(Number.MIN_VALUE);  // Output: 5e-324</pre>
@@ -8202,15 +8202,15 @@ in a single variable.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaration:</h4>
 <pre>
-let numbers = &lbrack;1,2,3,4,5&rbrack;; // Array of numbers
-let fruits = &lbrack;'apple','banana','orange'&rbrack;; // Array of strings
+let numbers = &lbrack;1,2,3,4,5&rbrack;;  // Array of numbers
+let fruits = &lbrack;'apple','banana','orange'&rbrack;;  // Array of strings
 </pre>
 
 <h4>Accessging Elements:</h4>
-<pre>console.log(fruits&lbrack;0&rbrack;); // Output: 'apple'</pre>
+<pre>console.log(fruits&lbrack;0&rbrack;);  // Output: 'apple'</pre>
 
 <h4>Modifying Elements:</h4>
-<pre>fruits&lbrack;1&rbrack; = 'grapes'; // Changing 'banana' to 'grapes'</pre>
+<pre>fruits&lbrack;1&rbrack; = 'grapes';  // Changing 'banana' to 'grapes'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex23">23. JS Array Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8220,13 +8220,13 @@ efficiently.</p>
 <h3>Examples of JS Array Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>push() Method:</h4>
-<pre>fruits.push('melon'); // Adds 'melon' to the end of the array</pre>
+<pre>fruits.push('melon');  // Adds 'melon' to the end of the array</pre>
 
 <h4>pop() Method:</h4>
-<pre>let removedFruit = fruits.pop(); // Removes and returns the last element ('melon')</pre>
+<pre>let removedFruit = fruits.pop();  // Removes and returns the last element ('melon')</pre>
 
 <h4>splice() Method:</h4>
-<pre>numbers.splice(2,1); // Removes 1 element at index 2 (removes '3')</pre>
+<pre>numbers.splice(2,1);  // Removes 1 element at index 2 (removes '3')</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex24">24. JS Array Sort </h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8235,10 +8235,10 @@ efficiently.</p>
 <h3>Examples of JS Array Sort:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sorting Numbers:</h4>
-<pre>numbers.sort((a, b) => a - b); // Ascending order</pre>
+<pre>numbers.sort((a, b) => a - b);  // Ascending order</pre>
 
 <h4>Sorting Strings:</h4>
-<pre>fruits.sort(); // Alphabetic Order</pre>
+<pre>fruits.sort();  // Alphabetic Order</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex25">25. JS Array Iteration</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8266,7 +8266,7 @@ elements can be modified.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const weekdays = &lbrack;'Monday','Tuesday','Wednesday'&rbrack;;
-weekdays&lbrack;1&rbrack; = 'Thursday'; // Modifying an element is allowed
+weekdays&lbrack;1&rbrack; = 'Thursday';  // Modifying an element is allowed
 weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8281,7 +8281,7 @@ and times.</p>
 <pre>let specificDate = new Date();  // Current date and time</pre>
 
 <h4>Creating a Specific Date:</h4>
-<pre>let specificDate = new Date('2024-12-25'); // December 25, 2024</pre>
+<pre>let specificDate = new Date('2024-12-25');  // December 25, 2024</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex28">28. JS Date Formats</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8291,10 +8291,10 @@ to different formats.</p>
 <h3>Examples of JS Date Formats:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Formatting to String:</h4>
-<pre>let dateString = specificDate.toDateString(); // Convert to a human - readable string</pre>
+<pre>let dateString = specificDate.toDateString();  // Convert to a human - readable string</pre>
 
 <h4>Formatting to Locale String:</h4>
-<pre>let localeString = specificDate.toLocaleString('en-US'); // Convert to local date and time string</pre>
+<pre>let localeString = specificDate.toLocaleString('en-US');  // Convert to local date and time string</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex29">29. JS Date Get Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8304,10 +8304,10 @@ to different formats.</p>
 <h3>Examples of JS Date Get Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>getFullYear() Method:</h4>
-<pre>let year = specificDate.getFullYear(); // Get the year (2023)</pre>
+<pre>let year = specificDate.getFullYear();  // Get the year (2023)</pre>
 
 <h4>getMonth() Method:</h4>
-<pre>let month = specificDate.getMonth(); // Get the month (11 for December)</pre>
+<pre>let month = specificDate.getMonth();  // Get the month (11 for December)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex30">30. JS Date Set Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8317,10 +8317,10 @@ to different formats.</p>
 <h3>Examples of JS Date Set Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>setFullYear() Method:</h4>
-<pre>specificDate.setFullYear(2024); // Set the year to 2024</pre>
+<pre>specificDate.setFullYear(2024);  // Set the year to 2024</pre>
 
 <h4>setMonth() Method:</h4>
-<pre>specificDate.setMonth(0); // Set the month to January (0 index)</pre>
+<pre>specificDate.setMonth(0);  // Set the month to January (0 index)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex31">31. JS Math</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8330,10 +8330,10 @@ and functions.</p>
 <h3>Examples of JS Math:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Math.PI Property:</h4>
-<pre>let piValue = Math.PI; // Value of PI & piValue (3.141592653589793)</pre>
+<pre>let piValue = Math.PI;  // Value of PI & piValue (3.141592653589793)</pre>
 
 <h4>Math.sqrt() Method:</h4>
-<pre>let squareRoot = Math.sqrt(25); // Square root of 25 (5)</pre>
+<pre>let squareRoot = Math.sqrt(25);  // Square root of 25 (5)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex32">32. JS Random</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8342,10 +8342,10 @@ and functions.</p>
 <h3>Examples of JS Random:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Generating Random Number:</h4>
-<pre>let randomNumber = Math.random(); // Random number between 0 and 1</pre>
+<pre>let randomNumber = Math.random();  // Random number between 0 and 1</pre>
 
 <h4>Generating Random Integer:</h4>
-<pre>let randomInteger = Math.floor(Math.random() * 10); // Random integer between 0 and 9</pre>
+<pre>let randomInteger = Math.floor(Math.random() * 10);  // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex33">33. JS Booleans</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8361,8 +8361,8 @@ let isFalse = false;
 <h4>Comparison:</h4>
 
 <pre>
-let greaterThan = 5 &gt; 3; // true
-let equalTo = 5 === 5; // true
+let greaterThan = 5 &gt; 3;  // true
+let equalTo = 5 === 5;  // true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex34">34. JS Comparisons</h2>
@@ -8373,10 +8373,10 @@ compare values.</p>
 <h3>Examples of JS Comparisons:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>== (Equality Operator):</h4>
-<pre>console.log(5 == '5'); // true (coerces types)</pre>
+<pre>console.log(5 == '5');  // true (coerces types)</pre>
 
 <h4> === (Strict Equality Operator):</h4>
-<pre>console.log(5 === '5'); // false (compares both value and type)</pre>
+<pre>console.log(5 === '5');  // false (compares both value and type)</pre>
 <p>This comprehensive guide covers various aspects of JavaScript including arrays, array 
 methods, array sort, array iteration, array const, dates, date formats, date get methods, 
 date set methods, math, random, booleans, and comparisons, providing examples and 
@@ -8590,9 +8590,9 @@ of its operand.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using typeof:</h4>
 <pre>
-console.log(typeof 5); // Output: 'number'
-console.log(typeof 'Hello'); // Output: 'string'
-console.log(typeof true); // Output: 'boolean'
+console.log(typeof 5);  // Output: 'number'
+console.log(typeof 'Hello');  // Output: 'string'
+console.log(typeof true);  // Output: 'boolean'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex46">46. JS Type Conversion</h2>
@@ -8611,7 +8611,7 @@ let num = parseInt(strNumber);
 <h4>Number to String:</h4>
 <pre>
 let number = 15;
-let str = number.toString(); // Output: '15'
+let str = number.toString();  // Output: '15'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex47">47. JS Bitwise</h2>
@@ -8633,37 +8633,37 @@ of either but not both operands are 1.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Bitwise AND Operator (&):</h4>
 <pre>
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
-console.log(a & b); // 00000000000000000000000000000001
-let result = 5 & 3; // Output: 1
+const a = 5;  // 00000000000000000000000000000101
+const b = 3;  // 00000000000000000000000000000011
+console.log(a & b);  // 00000000000000000000000000000001
+let result = 5 & 3;  // Output: 1
 </pre>
 
 <h4>Bitwise NOT Operator (~):</h4>
 <pre>
 const a = 5;  // 00000000000000000000000000000101
-const b = -3; // 11111111111111111111111111111101
-console.log(~a); // 11111111111111111111111111111010
+const b = -3;  // 11111111111111111111111111111101
+console.log(~a);  // 11111111111111111111111111111010
 // Expected output: -6
-console.log(~b); // 00000000000000000000000000000010
+console.log(~b);  // 00000000000000000000000000000010
 // Expected output: 2
 </pre>
 
 <h4>Bitwise OR Operator (|):</h4>
 <pre>
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
-console.log(a | b); // 00000000000000000000000000000111
-let result = 5 | 3; // Output: 7
+const a = 5;  // 00000000000000000000000000000101
+const b = 3;  // 00000000000000000000000000000011
+console.log(a | b);  // 00000000000000000000000000000111
+let result = 5 | 3;  // Output: 7
 </pre>
 
 <h4>Bitwise XOR Operator (^):</h4>
 <pre>
-const a = 5; // 00000000000000000000000000000101
-const b = 3; // 00000000000000000000000000000011
+const a = 5;  // 00000000000000000000000000000101
+const b = 3;  // 00000000000000000000000000000011
 
-console.log(a ^ b); // 00000000000000000000000000000110
-let result = 5 ^ 3; // Output: 6
+console.log(a ^ b);  // 00000000000000000000000000000110
+let result = 5 ^ 3;  // Output: 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex48">48. JS RegExp</h2>
@@ -8673,13 +8673,13 @@ let result = 5 ^ 3; // Output: 6
 <h3>Examples of JS RegExp:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Regular Expression:</h4>
-<pre>let pattern = / hello / i; // Case - insensitive 'hello'</pre>
+<pre>let pattern = / hello / i;  // Case - insensitive 'hello'</pre>
 
 <h4>Testing a String with RegExp:</h4>
 
 <pre>
 let str = 'Hello, World ! ';
-console.log(pattern.test(str)); // Output: true
+console.log(pattern.test(str));  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex49">49. JS Precedence</h2>
@@ -8689,7 +8689,7 @@ console.log(pattern.test(str)); // Output: true
 <h3>Examples of JS Precedence:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arithmetic Precedence:</h4>
-<pre>let result = 5 + 3 * 2; // Output: 11 (Multiplication has higher precedence)</pre>
+<pre>let result = 5 + 3 * 2;  // Output: 11 (Multiplication has higher precedence)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex50">50. JS Errors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8717,9 +8717,9 @@ console.log(pattern.test(str)); // Output: true
 <pre>
 let globalVar = 'I am global';
 function test() {
-  console.log(globalVar); // Accessible inside function
+  console.log(globalVar);  // Accessible inside function
 }
-console.log(globalVar); // Accessible outside function
+console.log(globalVar);  // Accessible outside function
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex52">52. JS Hoisting</h2>
@@ -8730,10 +8730,10 @@ console.log(globalVar); // Accessible outside function
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Variable Hoisting:</h4>
 <pre>
-console.log(myVar); // Outputs : undefined
+console.log(myVar);  // Outputs : undefined
 varmyVar = 10;
 Function Hoisting:
-sayHello(); // Outputs : 'Hello'
+sayHello();  // Outputs : 'Hello'
 function sayHello() {
   console.log('Hello');
 }
@@ -8751,8 +8751,7 @@ function sayHello() {
 <h4>Using Strict Mode Inside a Function:</h4>
 <pre>
 function myFunction() {
-  'use strict';
-  // Strict mode only applies inside this function
+  'use strict';  // Strict mode only applies inside this function
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8770,7 +8769,7 @@ let person = {
     console.log('Hello, my name is ' + this.name);
   }
 };
-person.greet(); // Outputs : 'Hello, my name is Alice'
+person.greet();  // Outputs : 'Hello, my name is Alice'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex55">55. JS Arrow Function</h2>
@@ -8806,7 +8805,7 @@ class Person {
   }
 }
 let alice = new Person('Alice');
-alice.greet(); // Outputs : 'Hello, my name is Alice'
+alice.greet();  // Outputs : 'Hello, my name is Alice'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex57">57. JS Modules</h2>
@@ -8828,7 +8827,7 @@ export function greet(name) {
 <pre>
 // Main.js
 import {greet} from './Module.js';
-greet('Alice'); // Outputs : 'Hello, Alice !'
+greet('Alice');  // Outputs : 'Hello, Alice !'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex58">58. JS JSON</h2>
@@ -8841,7 +8840,7 @@ greet('Alice'); // Outputs : 'Hello, Alice !'
 <pre>
 let jsonStr = '{"name":" Alice", "age": 30}';
 let obj = JSON.parse (jsonStr);
-console.log(obj.name); // Output: 'Alice'
+console.log(obj.name);  // Output: 'Alice'
 </pre>
 
 <h4>Stringify Object to JSON:</h4>
@@ -8888,7 +8887,7 @@ and maintainable code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Use Meaningful Variable Names:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>let d = new Date(); // Instead, use let currentDate = new Date();</pre>
+<pre>let d = new Date();  // Instead, use let currentDate = new Date();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Avoid Global Variables:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8910,7 +8909,7 @@ and maintainable code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let y;
-console.log(y); // Outputs : undefined
+console.log(y);  // Outputs : undefined
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex63">63. JS Performance</h2>
@@ -9085,7 +9084,7 @@ for (let key in person) {
 </pre>
 
 <h4>Using Object.keys():</h4>
-<pre>let keys = Object.keys(person); // Get an array of object keys</pre>
+<pre>let keys = Object.keys(person);  // Get an array of object keys</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex73">73. JS Object Sets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9103,7 +9102,7 @@ mySet.add(3);
 </pre>
 
 <h4>Checking Set Membership:</h4>
-<pre>console.log(mySet.has(2)); // Output: true</pre>
+<pre>console.log(mySet.has(2));  // Output: true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex74">74. JS Object Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9119,7 +9118,7 @@ myMap.set('keyl', 'valuel');
 myMap.set('key2', 'value2');
 </pre>
 <h4>Getting Values from a Map:</h4>
-<pre>console.log(myMap.get('keyl')); // Output: 'valuel'</pre>
+<pre>console.log(myMap.get('keyl'));  // Output: 'valuel'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex75">75. JS Object Reference</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9131,13 +9130,13 @@ myMap.set('key2', 'value2');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let object1 = {name: 'John'};
-let object2 = objectl; // object2 points to the same object as object 1
+let object2 = objectl;  // object2 points to the same object as object 1
 </pre>
 
 <h4>Changing Object through Reference:</h4>
 <pre>
 object2.name = 'Alice';
-console.log(objectl.name); // Output: Alice'
+console.log(objectl.name);  // Output: Alice'
 </pre>
 
 <p>This comprehensive guide covers various aspects of JavaScript objects, including 
@@ -9281,7 +9280,7 @@ function outerFunction() {
   return innerFunction;
 }
 let closure = outerFunction();
-closure(); // Output: 'I am from the outer function'
+closure();  // Output: 'I am from the outer function'
 </pre>
 
 <p>This comprehensive guide covers various aspects of JavaScript functions, including 
@@ -9312,7 +9311,7 @@ class Animal {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let dog = new Animal('Buddy', 3);
-console.log(dog.sound()); // Output: 'Animal sound'
+console.log(dog.sound());  // Output: 'Animal sound'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex84">84. JS Class Inheritance</h2>
@@ -9340,7 +9339,7 @@ class Dog extends Animal {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let puppy = new Dog('Max', 1, 'Labrador');
-console.log(puppy.sound()); // Output: 'Woof!'
+console.log(puppy.sound());  // Output: 'Woof!'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex85">85. Class Static</h2>
@@ -9359,7 +9358,7 @@ class Calculator {
   }
 }
 let result = Calculator.add(5,3);
-console.log(result); // Output: 8
+console.log(result);  // Output: 8
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex86">86. JS Async</h2>
@@ -9384,7 +9383,7 @@ function fetchData(callback) {
 function processData(data) {
   console.log('Data received : ' + data);
 }
-fetchData(processData); // Output after 2 seconds : 'Data received : Some data'
+fetchData(processData);  // Output after 2 seconds : 'Data received : Some data'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Asynchronous</h3>
@@ -9418,7 +9417,7 @@ let myPromise = new Promise((resolve, reject) => {
   }, 2000);
 });
 myPromise.then((result) => {
-  console.log(result); // Output after 2 seconds : 'Promise resolved'
+  console.log(result);  // Output after 2 seconds : 'Promise resolved'
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9441,7 +9440,7 @@ async function fetchData() {
 }
 async function processData() {
   let data = await fetchData();
-  console.log(data); // Output after 2 seconds : 'Data fetched'
+  console.log(data);  // Output after 2 seconds : 'Data fetched'
 }
 processData();
 </pre>
@@ -9468,7 +9467,7 @@ representing the document as a tree structure.</p>
   &lt;hl id = "heading"&gt; Welcome to the DOM&lt;/hl&gt;
 &lt;script&gt;
   let element = document.getElementById("heading");
-  console.log(element.innerHTML); // Output: 'Welcome to the DOM'
+  console.log(element.innerHTML);  // Output: 'Welcome to the DOM'
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -9507,8 +9506,8 @@ representing the document as a tree structure.</p>
 &lt;html&gt;
 &lt;body&gt;
 &lt;script&gt;
-console.log(document.title); // Output: Document title
-console.log(document.URL);   // Output: Document URL
+console.log(document.title);  // Output: Document title
+console.log(document.URL);  // Output: Document URL
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -9695,7 +9694,7 @@ console.log(document.URL);   // Output: Document URL
 &lt;script&gt;
   let list = document.getElementById("myList");
   let items = list.getElementsByTagName("li");
-  console.log(items.length); // Output: 3
+  console.log(items.length);  // Output: 3
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -9762,7 +9761,7 @@ console.log(document.URL);   // Output: Document URL
 &lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;
 &lt;script&gt;
   let nodeList = document.querySelectorAll("#demo");
-  console.log(nodeList[0].innerHTML); // Output: 'This is a paragraph.'
+  console.log(nodeList[0].innerHTML);  // Output: 'This is a paragraph.'
 &lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -12440,7 +12439,7 @@ let area = calculateCircleArea(5);  // Output: ~78.54
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
-let reversed = reverseString('hello'); // Output: 'olleh'
+let reversed = reverseString('hello');  // Output: 'olleh'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Check for Palindrome:</h4>
@@ -14193,7 +14192,7 @@ const phoneInput = document.getElementById('4253192332');
 
 phoneInput.addEventListener('input', () => {
   let value = phoneInput.value.replace(/\D/g,'');
-  value = value.slice(0, 10); // Limit to 10 digits for a phone number
+  value = value.slice(0, 10);  // Limit to 10 digits for a phone number
   phoneInput.value = value;
 });
 </pre>
@@ -15337,7 +15336,7 @@ function createDeck() {
 function shuffledDeck(deck) {
   for (let i = deck.length -1; i > 0; i-) {
     const j = Math.floor(Math.random() * (i + 1));
-    &lbrack;deck&lbrack;i&rbrack;, deck&lbrack;j&rbrack;&rbrack; = &lbrack;deck&lbrack;j&rbrack;, deck&lbrack;i&rbrack;&rbrack;; // Swap elements to shuffle
+    &lbrack;deck&lbrack;i&rbrack;, deck&lbrack;j&rbrack;&rbrack; = &lbrack;deck&lbrack;j&rbrack;, deck&lbrack;i&rbrack;&rbrack;;  // Swap elements to shuffle
   }
 }
 
@@ -15347,7 +15346,7 @@ console.log("Initial Deck:");
 console.log(initialDeck);
 
 // Shuffle the deck and display the shuffled deck
-const shuffledDeck = &lbrack;...initialDeck&rbrack;; // Create a copy to avoid modifying the original
+const shuffledDeck = &lbrack;...initialDeck&rbrack;;  // Create a copy to avoid modifying the original
 shuffledDeck(shuffledDeck);
 console.log("\nShuffled Deck:");
 console.log(shuffledDeck);
@@ -16238,7 +16237,7 @@ should not be reassigned.</p>
 const PI = 3.14159;
 
 // Attempt to reassign a constant (will result in an error)
-// PI = 3.14; // Uncommenting this line will result in an error
+// PI = 3.14;  // Uncommenting this line will result in an error
 
 // Display the value of the constant
 console.log("The value of PI is:", PI);
@@ -16306,7 +16305,7 @@ function exampleFunction() {
 exampleFunction();
 exampleFunction(42);
 exampleFunction("Hello", 7);
-exampleFunction(true, "world"); // Invalid arguments
+exampleFunction(true, "world");  // Invalid arguments
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js73">73. Implement a Stack</h2>
@@ -16357,12 +16356,12 @@ stack.push(l);
 stack.push(2);
 stack.push(3);
 console.log("Stack elements:");
-stack.print(); // Outputs: &lbrack;1,2,3&rbrack;
+stack.print();  // Outputs: &lbrack;1,2,3&rbrack;
 
-console.log("Top element:", stack.peek()); // Outputs: 3
-console.log("Popped element:", stack.pop()); // Outputs: 3
-console.log("Stack size:", stack.size()); // Outputs: 2
-console.log("Is the stack empty?", stack.isEmpty()); // Outputs: false
+console.log("Top element:", stack.peek());  // Outputs: 3
+console.log("Popped element:", stack.pop());  // Outputs: 3
+console.log("Stack size:", stack.size());  // Outputs: 2
+console.log("Is the stack empty?", stack.isEmpty());  // Outputs: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js74">74. Implement a Queue</h2>
@@ -16412,11 +16411,11 @@ queue.enqueue(1);
 queue.enqueue(2);
 queue.enqueue(3);
 console.log("Queue elements:");
-queue.print(); // Outputs: &lbrack;1, 2, 3&rbrack;
-console.log("Front element:", queue.front()); // Outputs: 1
-console.log("Dequeued element:", queue.dequeue()); // Outputs: 1
-console.log("Queue size:", queue.size()); // Outputs: 2
-console.log("Is the queue empty?", queue.isEmpty()); // Outputs: false
+queue.print();  // Outputs: &lbrack;1, 2, 3&rbrack;
+console.log("Front element:", queue.front());  // Outputs: 1
+console.log("Dequeued element:", queue.dequeue());  // Outputs: 1
+console.log("Queue size:", queue.size());  // Outputs: 2
+console.log("Is the queue empty?", queue.isEmpty());  // Outputs: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js75">75. Check if a Number is Float or Integer</h2>
@@ -16434,12 +16433,12 @@ function checkNumberType(number) {
 }
 
 // Example usage:
-checkNumberType(5); // Outputs: 5 is an integer.
-checkNumberType(3.14); // Outputs: 3.14 is afloat.
-checkNumberType(7.0); // Outputs: 7 is an integer.
-checkNumberType(-2.5); // Outputs: -2.5 is a float.
-checkNumberType(NaN); // Outputs: NaN is not a valid number.
-checkNumberType("abc"); // Outputs: abc is not a valid number.
+checkNumberType(5);  // Outputs: 5 is an integer.
+checkNumberType(3.14);  // Outputs: 3.14 is afloat.
+checkNumberType(7.0);  // Outputs: 7 is an integer.
+checkNumberType(-2.5);  // Outputs: -2.5 is a float.
+checkNumberType(NaN);  // Outputs: NaN is not a valid number.
+checkNumberType("abc");  // Outputs: abc is not a valid number.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js76">76. Pass a Function as Parameter</h2>
@@ -16462,9 +16461,9 @@ function multiply(x, y) {
 
 // Example usage
 let resultl = operateOnNumbers(3, 5, add);
-console.log("Result of addition:", resultl); // Outputs: 8
+console.log("Result of addition:", resultl);  // Outputs: 8
 let result2 = operateOnNumbers(3, 5, multiply);
-console.log("Result of multiplication:", result2); // Outputs: 15
+console.log("Result of multiplication:", result2);  // Outputs: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js77">77. Get the Dimensions of an Image</h2>
@@ -16631,8 +16630,8 @@ function isEmptyString(str) {
 // Example usage:
 const emptystring = "";
 const nonEmptyString = "Hello, world!";
-console.log("Is emptystring empty?", isEmptyString(emptyString)); // Outputs: true
-console.log("Is nonEmptyString empty?", isEmptyString(nonEmptyString)); // Outputs: false
+console.log("Is emptystring empty?", isEmptyString(emptyString));  // Outputs: true
+console.log("Is nonEmptyString empty?", isEmptyString(nonEmptyString));  // Outputs: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js85">85. Capitalize the First Letter of a String</h2>
@@ -16882,8 +16881,8 @@ function calculateSimpleInterest(principal, rate, time) {
 
 // Example usage:
 const principalAmount = 1000;
-const interestRate = 5; // 5%
-const investmentTime = 2; // 2 years
+const interestRate = 5;  // 5%
+const investmentTime = 2;  // 2 years
 
 const interestAmount = calculateSimpleInterest(principalAmount, interestRate, investmentTime);
 
@@ -17833,7 +17832,7 @@ function isSmithNumber(number) {
 }
 
 // Example: Check if 728 is a Smith number
-console.log(isSmithNumber(728)); // Output: true
+console.log(isSmithNumber(728));  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js126">126. Basic Chessboard</h2>
@@ -17845,7 +17844,7 @@ representation of a chessboard.</p>
 <pre>
 // Function to generate a basic chessboard
 function generateChessboard() {
-  const size = 8; // Size of the chessboard (8x8)
+  const size = 8;  // Size of the chessboard (8x8)
   const chessboard = &lbrack;&rbrack;;
   for (let row = 0; row < size; row++) {
     const currentRow = &lbrack;&rbrack;;
@@ -17943,7 +17942,7 @@ function solveMaze(maze) {
       &lbrack;-1,0&rbrack;, // Up
       &lbrack;1, 0&rbrack;, // Down
       &lbrack;0,-1&rbrack;,// Left
-      &lbrack;0,1&rbrack; //Right
+      &lbrack;0,1&rbrack;  //Right
       &rbrack;;
       for (const&lbrack;dr, dc&rbrack; of directions) {
         const newRow = row + dr;
@@ -17952,7 +17951,7 @@ function solveMaze(maze) {
           return true;
         }
       }
-      visited&lbrack;row&rbrack;&lbrack;col&rbrack; = false; // Backtrack
+      visited&lbrack;row&rbrack;&lbrack;col&rbrack; = false;  // Backtrack
     }
 	
     return false;
@@ -18162,7 +18161,7 @@ const binaryRepresentation = number.toString(2);
 const reversedBinary = binaryRepresentation.split(").reverse().join(");
 return binaryRepresentation === reversedBinary;
 // Example usage
-const numberToCheck = 9; // Replace with the number you want to check
+const numberToCheck = 9;  // Replace with the number you want to check
 if (isBinaryPalindrome(numberToCheck)) {
   console.log(`${numberToCheck} is a binary palindrome!`);
 } else {
@@ -18220,7 +18219,7 @@ function isCatalanNumber(num) {
 }
 
 // Example usage
-const numberToCheck = 42; // Replace with the number you want to check
+const numberToCheck = 42;  // Replace with the number you want to check
 if (isCatalanNumber(numberToCheck)) {
   console.log(`${numberToCheck} is a Catalan number!`);
 } else {
@@ -18255,7 +18254,7 @@ function calculateLuhnCheckDigit(input) {
   return checkDigit;
 }
 // Example usage
-const partialNumber = 123456789; // Replace with the partial number for which you want to calculate the check digit
+const partialNumber = 123456789;  // Replace with the partial number for which you want to calculate the check digit
 const checkDigit = calculateLuhnCheckDigit(partialNumber);
 const fullNumber = `${partialNumber} ${checkDigit}`;
 
@@ -18280,7 +18279,7 @@ class MazeGenerator {
     this.visitCell(0,0);
   }
   visitCell(row, col) {
-    this.grid&lbrack;row&rbrack;&lbrack;col&rbrack; = 1; // Mark the current cell as visited
+    this.grid&lbrack;row&rbrack;&lbrack;col&rbrack; = 1;  // Mark the current cell as visited
 
     // Define the possible directions (up, down, left, right)
     const directions = &lbrack;
@@ -18335,7 +18334,7 @@ const day = parse!nt(yearStr.substring(2, 4), 10);
 return month * day === parse!nt(yearStr.substring(4), 10);
 
 // Example usage
-const yearToCheck = 1978; // Replace with the year you want to check
+const yearToCheck = 1978;  // Replace with the year you want to check
 if (isMagicYear(yearToCheck)) {
   console.log(`${yearToCheck} is a Magic Year!`);
 } else {
@@ -18405,8 +18404,8 @@ function calculateRegularPolygonArea(n, s) {
 }
 
 // Example usage
-const numberOfSides = 6; // Replace with the number of sides of your polygon
-const sideLength = 5; // Replace with the length of each side of your polygon
+const numberOfSides = 6;  // Replace with the number of sides of your polygon
+const sideLength = 5;  // Replace with the length of each side of your polygon
 const polygonArea = calculateRegularPolygonArea(numberOfSides, sideLength);
 console.log(`The area of the regular polygon is: ${polygonArea.toFixed(2)}`);
 </pre>
@@ -18432,7 +18431,7 @@ function isAbundantNumber(number) {
 }
 
 // Example usage
-const numberToCheck = 12; // Replace with the number you want to check
+const numberToCheck = 12;  // Replace with the number you want to check
 if (isAbundantNumber(numberToCheck)) {
   console.log(`${numberToCheck} is an Abundant Number!`);
 } else {
@@ -18516,25 +18515,25 @@ function eulerTotientFunction(n) {
   if(n <= 0) {
     return "Input must be a positive integer.";
   }
-  let result = n; // Initialize result as n
+  let result = n;  // Initialize result as n
   // Iterate through all prime factors of n
   for (letp = 2; p * p <= n; p++) {
     if (n % p === 0) {
       while (n % p === 0) {
         n/=p;
       }
-      result -= result / p; // Apply the formula for prime factors
+      result -= result / p;  // Apply the formula for prime factors
     }
   }
   // If n is a prime number greater than 1
   if (n > 1) {
     result -= result / n;
   }
-  return Math.floor(result); // Return the result as an integer
+  return Math.floor(result);  // Return the result as an integer
 }
 
 // Example usage
-const n = 12; // Replace with the positive integer for which you want to calculate Euler's Totient Function
+const n = 12;  // Replace with the positive integer for which you want to calculate Euler's Totient Function
 const result = eulerTotientFunction(n);
 console.log(' Euler's Totient Function for ${n} is: $ {result}');
 </pre>
@@ -18547,7 +18546,7 @@ allowing the player to flip two cards at a time, and checking for matches.</p>
 <pre>
 class MemoryMatchingGame {
   constructor(cards) {
-    this.cards = cards.concat(cards); // Duplicate the cards to create pairs
+    this.cards = cards.concat(cards);  // Duplicate the cards to create pairs
     this.shuffleCards();
     this.board = this.createBoard();
     this.flippedCards = &lbrack;&rbrack;;
@@ -18672,7 +18671,7 @@ function getDigitPairs(strNumber) {
 }
 
 // Example usage
-const vampireNumber = 1260; // Replace with the number you want to check
+const vampireNumber = 1260;  // Replace with the number you want to check
 if (isVampireNumber(vampireNumber)) {
   console.log(`${vampireNumber} is a Vampire Number!`);
 } else {
@@ -18760,7 +18759,7 @@ function calculateHexagonArea(sideLength) {
 }
   
 // Example usage
-const sideLength = 5; // Replace with the length of a side of your hexagon
+const sideLength = 5;  // Replace with the length of a side of your hexagon
 const hexagonArea = calculateHexagonArea(sideLength);
 console.log(`The area of the hexagon is: ${hexagonArea.toFixed(2)}`);
 </pre>
@@ -18782,7 +18781,7 @@ function isPronicNumber(number) {
 }
 
 // Example usage
-const pronicNumber = 6; // Replace with the number you want to check
+const pronicNumber = 6;  // Replace with the number you want to check
 if (isPronicNumber(pronicNumber)) {
   console.log(`${pronicNumber} is a Pronic Number!`);
 } else {
@@ -18906,7 +18905,7 @@ function calculatePentagonArea(sideLength) {
 }
 
 // Example usage
-const sideLength = 4; // Replace with the length of a side of your pentagon
+const sideLength = 4;  // Replace with the length of a side of your pentagon
 const pentagonArea = calculatePentagonArea(sideLength);
 console.log(`The area of the pentagon is: ${pentagonArea.toFixed(2)}`);
 </pre>
@@ -18924,7 +18923,7 @@ function isCubeNumber(number) {
 }
 
 // Example usage
-const numberToCheck = 27; // Replace with the number you want to check
+const numberToCheck = 27;  // Replace with the number you want to check
 if (isCubeNumber(numberToCheck)) {
   console.log(`${numberToCheck} is a Cube Number!`);
 } else {
@@ -18960,7 +18959,7 @@ class TypingSpeedTest {
   }
   endTest() {
     this.endTime = Date.now();
-    const elapsedTime = (this.endTime - this.startTime) / 1000; // Convert to seconds
+    const elapsedTime = (this.endTime - this.startTime) / 1000;  // Convert to seconds
     const wordsPerMinute = (this.text.splitf ').length / elapsedTime) * 60;
     console.log(`You typed at a speed of ${wordsPerMinute.toFixed(2)} words per minute.`);
   }
@@ -18997,7 +18996,7 @@ function calculateCubeSurfaceArea(sideLength) {
 }
 
 // Example usage
-const sideLength = 4; // Replace with the length of a side of your cube
+const sideLength = 4;  // Replace with the length of a side of your cube
 const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
 console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 </pre>
@@ -19016,7 +19015,7 @@ function calculateCubeSurfaceArea(sideLength) {
 }
 
 // Example usage
-const sideLength = 4; // Replace with the length of a side of your cube
+const sideLength = 4;  // Replace with the length of a side of your cube
 const cubeSurfaceArea = calculateCubeSurfaceArea(sideLength);
 console.log(`The surface area of the cube is: ${cubeSurfaceArea}`);
 </pre>
@@ -19040,7 +19039,7 @@ return Array.from(String(number), Number)
 .reduce((sum, digit) => sum + Math.pow(digit, 2), 0);
 }
 // Example usage
-const happyNumber = 19; // Replace with the number you want to check
+const happyNumber = 19;  // Replace with the number you want to check
 if (isHappyNumber(happyNumber)) {
   console.logC ${happyNumber} is a Happy Number! ');
 } else {
@@ -19066,10 +19065,10 @@ const surfaceArea = baseArea + perimeter * height;
 return surfaceArea;
 
 // Example usage
-const side A = 3; // Replace with the length of side A of the triangular base
-const sideB = 4; // Replace with the length of side B of the triangular base
-const sideC = 5; // Replace with the length of side C of the triangular base
-const prismHeight = 6; // Replace with the height of the triangular prism
+const side A = 3;  // Replace with the length of side A of the triangular base
+const sideB = 4;  // Replace with the length of side B of the triangular base
+const sideC = 5;  // Replace with the length of side C of the triangular base
+const prismHeight = 6;  // Replace with the height of the triangular prism
 const triangularPrismSurfaceArea = calculateTriangularPrismSurfaceArea(sideA, sideB, sideC, prismHeight);
 console.log(` The surface area of the triangular prism is: ${triangularPrismSurfaceArea.toFixed(2)}`);
 </pre>
@@ -19103,7 +19102,7 @@ return isPrime(number) && isPerfectSquare(5 * Math.pow(number, 2) + 4)
 }
 
 // Example usage
-const fibonacciPrimeCandidate = 13; // Replace with the number you want to check
+const fibonacciPrimeCandidate = 13;  // Replace with the number you want to check
 if (isFibonacciPrime(fibonacciPrimeCandidate)) {
   console.log(`${fibonacciPrimeCandidate} is a Fibonacci Prime!`);
   } else {
@@ -19145,7 +19144,7 @@ function getFactors(number) {
 }
 
 // Example usage
-const squarefulNumber = 36; // Replace with the number you want to check
+const squarefulNumber = 36;  // Replace with the number you want to check
 if (isSquarefulNumber(squarefulNumber)) {
   console.log(`${squarefulNumber} is a Squareful Number!`);
 } else {
@@ -19166,7 +19165,7 @@ function calculateTetrahedronSurfaceArea(edgeLength) {
 }
 
 // Example usage
-const edgeLength = 5; // Replace with the length of an edge of the tetrahedron
+const edgeLength = 5;  // Replace with the length of an edge of the tetrahedron
 const tetrahedronSurfaceArea = calculateTetrahedronSurfaceArea(edgeLength);
 console.log(`The surface area of the tetrahedron is: ${tetrahedronSurfaceArea.toFixed(2)}`);
 </pre>
@@ -19187,7 +19186,7 @@ function isAutomorphicNumber(number) {
 }
 
 // Example usage
-const automorphicNumber = 25; // Replace with the number you want to check
+const automorphicNumber = 25;  // Replace with the number you want to check
 if (isAutomorphicNumber(automorphicNumber)) {
   console.log(`${automorphicNumber} is an Automorphic Number!`);
 } else {
@@ -19213,8 +19212,8 @@ function calculatePyramidSurfaceArea(sideLength, slantHeight) {
 }
 
 // Example usage
-const sideLength = 4; // Replace with the length of a side of the pyramid's base
-const slantHeight = 5; // Replace with the slant height of the pyramid
+const sideLength = 4;  // Replace with the length of a side of the pyramid's base
+const slantHeight = 5;  // Replace with the slant height of the pyramid
 const pyramidSurfaceArea = calculatePyramidSurfaceArea(sideLength, slantHeight);
 console.log(`The surface area of the pyramid is: ${pyramidSurfaceArea.toFixed(2)}`);
 </pre>
@@ -19252,7 +19251,7 @@ function isSmithMorraGambitNumber(number) {
 }
 
 // Example: Check if 22 is a Smith-Morra Gambit Number
-console.log(isSmithMorraGambitNumber(22)); // Output: true
+console.log(isSmithMorraGambitNumber(22));  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js163">163. Check if a Number is a Solitary Number</h2>
@@ -19261,7 +19260,7 @@ console.log(isSmithMorraGambitNumber(22)); // Output: true
 
 <pre>
 function getProperDivisorsSum(number) {
-  let sum = 1; // Start with 1 as every number is divisible by 1
+  let sum = 1;  // Start with 1 as every number is divisible by 1
   
   for (let i = 2; i < = Math.sqrt(number); i++) {
     if (number % i === 0) {
@@ -19281,7 +19280,7 @@ function isSolitaryNumber(number) {
 }
 
 // Example usage
-const solitaryNumber = 28; // Replace with the number you want to check
+const solitaryNumber = 28;  // Replace with the number you want to check
 if (isSolitaryNumber(solitaryNumber)) {
   console.log(`${solitaryNumber} is a Solitary Number!`);
 } else {
@@ -19369,7 +19368,7 @@ function isMotzkinNumber(number) {
 }
 
 // Example usage
-const motzkinNumber = 5; // Replace with the number you want to check
+const motzkinNumber = 5;  // Replace with the number you want to check
 if (isMotzkinNumber(motzkinNumber)) {
   console.log(`${motzkinNumber} is a Motzkin Number!`);
 } else {
@@ -19399,7 +19398,7 @@ function isPadovanNumber(number) {
 }
 
 // Example usage
-const padovanNumber = 9; // Replace with the number you want to check
+const padovanNumber = 9;  // Replace with the number you want to check
 if (isPadovanNumber(padovanNumber)) {
   console.log(`${padovanNumber} is a Padovan Number!`);
 } else {
@@ -19422,8 +19421,8 @@ function calculateKochSnowflakeArea(sideLength, iterations) {
 }
 
 // Example usage
-const sideLength = 100; // Replace with the side length of the original equilateral triangle
-const iterations = 4; // Replace with the number of iterations
+const sideLength = 100;  // Replace with the side length of the original equilateral triangle
+const iterations = 4;  // Replace with the number of iterations
 const kochSnowflakeArea = calculateKochSnowflakeArea(sideLength, iterations);
 console.log(`The area of the Koch snowflake is: ${kochSnowflakeArea.toFixed(2)}`);
 </pre>
@@ -19452,7 +19451,7 @@ function startChat() {
   if (userinput !== null) {
     const response = chatbot(userlnput);
     console.log('Chatbot:', response);
-    startChatO; // Continue the conversation
+    startChatO;  // Continue the conversation
   } else {
     console.log('Goodbye!');
   }
@@ -19524,7 +19523,7 @@ resetCounter();
 <pre>
 let bombTimer;
 let countdownInterval;
-let timeLeft = 10; // Initial time in seconds
+let timeLeft = 10;  // Initial time in seconds
 
 function startBomb() {
   console.log("The bomb is ticking! Hurry defuse it!");
@@ -19597,7 +19596,7 @@ const minutes = now.getMinutes();
 const seconds = now.getSeconds();
 
 const formattedTime = `${hours}:${minutes}:${seconds}`;
-console.clear(); // Clears the console to update the time
+console.clear();  // Clears the console to update the time
 console.log("Current Time:" + formattedTime);
 }
 
@@ -20641,7 +20640,7 @@ function simplifyAbsolutePath(path) {
   const simplifiedParts = &lbrack;&rbrack;;
   for (const part of parts) {
     if (part === '..'){
-      simplifiedParts.pop(); // Move up one level for '..'
+      simplifiedParts.pop();  // Move up one level for '..'
    } else if (part!== " && part !=='.'){
       simplifiedParts.push(part);
    }
@@ -20827,7 +20826,7 @@ binary representation, reverses the bits, and converts it back to an integer.</p
 
 <pre>
 function reverseOrderOfBits(integer) {
-  const binaryRepresentation = integer.toString(2).padStart(8, '0'); // Assuming 8 bits for simplicity
+  const binaryRepresentation = integer.toString(2).padStart(8, '0');  // Assuming 8 bits for simplicity
   const reversedBinary = binaryRepresentation.split('').reverse().join('');
   const reversedInteger = parseInt(reversedBinary, 2);
   console.log(`Original Integer: ${integer}`);
@@ -21025,7 +21024,7 @@ const clearCookies = document.cookie.split(';').forEach(cookie =>
 <pre>
 const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
 
-console.log(randomHex()); // Result: #92b008, different each time.
+console.log(randomHex());  // Result: #92b008, different each time.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-11">11. Get Query Params from URL</h2>
@@ -21087,7 +21086,7 @@ goToTop();
 
 <pre>
 const reverse = str => str.split('').reverse().join('');
-reverse('hello world'); // Result: 'dlrow olleh'
+reverse('hello world');  // Result: 'dlrow olleh'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-17">17. Check if array is empty</h2>
@@ -21133,7 +21132,7 @@ console.log(isDarkMode)  // Result: True or False
 
 <pre>
 const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
-console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); // Result: &lbrack; 1, 2, 3, 4, 5, 6 &rbrack;
+console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));  // Result: &lbrack; 1, 2, 3, 4, 5, 6 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-22">22. Get the Length of a String</h2>
@@ -21167,7 +21166,7 @@ const isPrime = (num) => {
   return true;
 };
 
-isPrime(13); // Result: true
+isPrime(13);  // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-25">25. Count Occurrences of a Character in a String</h2>
@@ -21197,7 +21196,7 @@ removeWhitespaces(" Hello, world! ");  // Result: "Hello, world!"
 <pre>
 const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-randomInRange(1, 10); // Result: Random number between 1 and 10 (inclusive)
+randomInRange(1, 10);  // Result: Random number between 1 and 10 (inclusive)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-28">28. Convert Seconds to HH:MM:SS Format</h2>
@@ -21213,7 +21212,7 @@ const secs = seconds % 60;
 return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 };
 
-secondsToHHMMSS(3660); // Result: "01:01:00"
+secondsToHHMMSS(3660);  // Result: "01:01:00"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-29">29. Get the Last Element of an Array</h2>
@@ -21223,7 +21222,7 @@ secondsToHHMMSS(3660); // Result: "01:01:00"
 <pre>
 const getLastElement = (arr) => arr&lbrack;arr.length - 1&rbrack;;
 
-getLastElement(&lbrack;1, 2, 3, 4&rbrack;); // Result: 4
+getLastElement(&lbrack;1, 2, 3, 4&rbrack;);  // Result: 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-30">30. Sort an Array of Numbers in Ascending Order</h2>
@@ -21244,7 +21243,7 @@ sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;);
 <pre>
 const isPalindrome = (str) => str === str.split('').reverse().join('');
 
-isPalindrome("level"); // Result: true
+isPalindrome("level");  // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-32">32. Calculate Factorial of a Number</h2>
@@ -21257,7 +21256,7 @@ const factorial = (num) => {
   return num * factorial(num - 1);
 };
 
-factorial(5); // Result: 120
+factorial(5);  // Result: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-33">33. Sum all Numbers in an Array</h2>
@@ -21267,7 +21266,7 @@ factorial(5); // Result: 120
 <pre>
 const sumArray = (arr) => arr.reduce((acc, val) => acc + val, 0);
 
-sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;); // Result: 15
+sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;);  // Result: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-34">34. Find the Maximum Value in an Array</h2>
@@ -21278,7 +21277,7 @@ sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;); // Result: 15
 const findMax = (arr) => Math.max(...arr);
 
 // Example usage
-findMax(&lbrack;10, 5, 8, 20, 3&rbrack;); // Result: 20
+findMax(&lbrack;10, 5, 8, 20, 3&rbrack;);  // Result: 20
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-35">35. Get the Current Date in DD/MM/YYYY Format</h2>
@@ -21295,7 +21294,7 @@ const getCurrentDate = () => {
 };
 
 // Example usage
-getCurrentDate(); // Result: "12/01/2025"
+getCurrentDate();  // Result: "12/01/2025"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-36">36. Calculate the Power of a Number</h2>
@@ -21306,10 +21305,10 @@ getCurrentDate(); // Result: "12/01/2025"
 const power = (base, exponent) => Math.pow(base, exponent);
 
 // Example usage
-power(2, 5); // Result: 32
+power(2, 5);  // Result: 32
 
 // Example usage
-power(17, 5); // Result: 1419857
+power(17, 5);  // Result: 1419857
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-37">37. Convert String to Number</h2>
@@ -21320,7 +21319,7 @@ power(17, 5); // Result: 1419857
 const stringToNumber = (str) => parseFloat(str);
 
 // Example usage
-stringToNumber("3.14"); // Result: 3.14
+stringToNumber("3.14");  // Result: 3.14
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-38">38. Find the First N Fibonacci Numbers</h2>
@@ -21337,7 +21336,7 @@ const fibonacci = (n) => {
 };
 
 // Example usage
-fibonacci(8); // Result: &lbrack;0, 1, 1, 2, 3, 5, 8, 13&rbrack;
+fibonacci(8);  // Result: &lbrack;0, 1, 1, 2, 3, 5, 8, 13&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-39">39. Count the Number of Words in a String</h2>
@@ -21348,7 +21347,7 @@ fibonacci(8); // Result: &lbrack;0, 1, 1, 2, 3, 5, 8, 13&rbrack;
 const countWords = (str) => str.trim().split(/\s+/).length;
 
 // Example usage
-console.log(countWords("Hello world, how are you?")); // Output: 5
+console.log(countWords("Hello world, how are you?"));  // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-40">40. Reverse an Array</h2>
@@ -21359,7 +21358,7 @@ console.log(countWords("Hello world, how are you?")); // Output: 5
 const reverseArray = (arr) => arr.slice().reverse();
 
 // Example usage
-console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: &lbrack;5, 4, 3, 2, 1&rbrack;
+console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5, 4, 3, 2, 1&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-41">41. Get the Current Year</h2>
@@ -21370,7 +21369,7 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: &lbrack;5, 
 const currentYear = () => new Date().getFullYear();
 
 // Example usage
-console.log(currentYear()); // Output: 2023 (depending on the current year)
+console.log(currentYear());  // Output: 2023 (depending on the current year)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-42">42. Generate a Random Number between 1 and 10</h2>
@@ -21381,7 +21380,7 @@ console.log(currentYear()); // Output: 2023 (depending on the current year)
 const random1To10 = () => Math.floor(Math.random() * 10) + 1;
 
 // Example usage
-console.log(random1To10()); // Output: Random number between 1 and 10 (inclusive)
+console.log(random1To10());  // Output: Random number between 1 and 10 (inclusive)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-43">43. Check if a String is Empty</h2>
@@ -21392,8 +21391,8 @@ console.log(random1To10()); // Output: Random number between 1 and 10 (inclusive
 const isEmptyString = (str) => str.trim().length === 0;
 
 // Example usage
-console.log(isEmptyString("")); // Output: true
-console.log(isEmptyString("Hello, world!")); // Output: false
+console.log(isEmptyString(""));  // Output: true
+console.log(isEmptyString("Hello, world!"));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-44">44. Check if an Object has a Specific Property</h2>
@@ -21405,8 +21404,8 @@ const hasProperty = (obj, prop) => prop in obj;
 
 // Example usage
 const person = { name: "John", age: 30 };
-console.log(hasProperty(person, "name")); // Output: true
-console.log(hasProperty(person, "gender")); // Output: false
+console.log(hasProperty(person, "name"));  // Output: true
+console.log(hasProperty(person, "gender"));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-45">45. Calculate the Average of Numbers in an Array</h2>
@@ -21417,7 +21416,7 @@ console.log(hasProperty(person, "gender")); // Output: false
 const average = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
 
 // Example usage
-console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
+console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-46">46. Check if a Number is a Multiple of 5</h2>
@@ -21428,7 +21427,7 @@ console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
 const isMultipleOf5 = (num) => num % 5 === 0;
 
 // Example usage
-console.log(isMultipleOf5(10)); // Output: true
+console.log(isMultipleOf5(10));  // Output: true
 console.log(isMultipleOf5(7));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21440,7 +21439,7 @@ console.log(isMultipleOf5(7));  // Output: false
 const minsToSecs = (mins) => mins * 60;
 
 // Example usage
-console.log(minsToSecs(5)); // Output: 300
+console.log(minsToSecs(5));  // Output: 300
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-48">48. Find the Maximum Value in an Array of Objects</h2>
@@ -21468,8 +21467,8 @@ console.log(findMaxValue(students, "score"));  // Output: 95
 const startsWithChar = (str, char) => str.startsWith(char);
 
 // Example usage
-console.log(startsWithChar("Hello, world!", "H")); // Output: true
-console.log(startsWithChar("Hello, world!", "h")); // Output: false
+console.log(startsWithChar("Hello, world!", "H"));  // Output: true
+console.log(startsWithChar("Hello, world!", "h"));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-50">50. Convert a String to Title Case</h2>
@@ -21481,7 +21480,7 @@ const toTitleCase = (str) => str.replace(/\b\w/g, match =>
   match.toUpperCase());
 
 // Example usage
-console.log(toTitleCase("hello world")); // Output: "Hello World"
+console.log(toTitleCase("hello world"));  // Output: "Hello World"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-51">51. Check if an Array contains a specific value</h2>
@@ -21492,8 +21491,8 @@ console.log(toTitleCase("hello world")); // Output: "Hello World"
 const containsValue = (arr, value) => arr.includes(value);
 
 // Example usage
-console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: true
-console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6)); // Output: false
+console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: true
+console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-52">52. Convert an Array to a Comma-separated String</h2>
@@ -21504,7 +21503,7 @@ console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6)); // Output: false
 const arrayToCSV = (arr) => arr.join(', ');
 
 // Example usage
-console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: "1, 2, 3, 4, 5"
+console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: "1, 2, 3, 4, 5"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-53">53. Check if a Year is a Leap Year</h2>
@@ -21516,8 +21515,8 @@ const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) ||
   (year % 400 === 0);
 
 // Example usage
-console.log(isLeapYear(2024)); // Output: true
-console.log(isLeapYear(2023)); // Output: false
+console.log(isLeapYear(2024));  // Output: true
+console.log(isLeapYear(2023));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-54">54. Find the Index of an Element in an Array</h2>
@@ -21529,7 +21528,7 @@ const findIndex = (arr, element) => arr.indexOf(element);
 
 // Example usage
 const fruits = &lbrack;"apple", "banana", "orange", "grape"&rbrack;;
-console.log(findIndex(fruits, "orange")); // Output: 2
+console.log(findIndex(fruits, "orange"));  // Output: 2
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-55">55. Convert Minutes to Hours and Minutes</h2>
@@ -21544,7 +21543,7 @@ const minsToHoursAndMins = (mins) => {
 };
 
 // Example usage
-console.log(minsToHoursAndMins(150)); // Output: "2 hours and 30 minutes"
+console.log(minsToHoursAndMins(150));  // Output: "2 hours and 30 minutes"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-56">56. Check if an Array is Sorted in Ascending Order</h2>
@@ -21555,8 +21554,8 @@ console.log(minsToHoursAndMins(150)); // Output: "2 hours and 30 minutes"
 const isSortedAscending = (arr) => arr.every((el, i) => i === 0 || el >= arr&lbrack;i - 1&rbrack;);
 
 // Example usage
-console.log(isSortedAscending(&lbrack;1, 2, 3, 5, 8&rbrack;)); // Output: true
-console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;)); // Output: false
+console.log(isSortedAscending(&lbrack;1, 2, 3, 5, 8&rbrack;));  // Output: true
+console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-57">57. Remove a Specific Element from an Array</h2>
@@ -21567,7 +21566,7 @@ console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;)); // Output: false
 const removeElement = (arr, element) => arr.filter(el => el !== element);
 
 // Example usage
-console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3)); // Output: &lbrack;1, 2, 4, 5&rbrack;
+console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrack;1, 2, 4, 5&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-58">58. Truncate a String to a Given Length</h2>
@@ -21579,7 +21578,7 @@ const truncateString = (str, maxLength) =>
   str.length > maxLength ? str.slice(0, maxLength) + '...' : str;
 
 // Example usage
-console.log(truncateString("Hello, world!", 5)); // Output: "Hello..."
+console.log(truncateString("Hello, world!", 5));  // Output: "Hello..."
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-59">59. Calculate the Exponentiation of a Number</h2>
@@ -21602,7 +21601,7 @@ const dateDifferenceInDays = (date1, date2) =>
 const startDate = new Date("2023-08-01");
 const endDate = new Date("2023-08-10");
 
-console.log(dateDifferenceInDays(startDate, endDate)); // Output: 9
+console.log(dateDifferenceInDays(startDate, endDate));  // Output: 9
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-61">61. Check if a String is a Valid Email Address</h2>
@@ -21613,7 +21612,7 @@ console.log(dateDifferenceInDays(startDate, endDate)); // Output: 9
 const isValidEmail = (email) => /^&lbrack;^\s@&rbrack;+@&lbrack;^\s@&rbrack;+\.&lbrack;^\s@&rbrack;+$/.test(email);
 
 // Example usage
-console.log(isValidEmail("user@example.com")); // Output: true
+console.log(isValidEmail("user@example.com"));  // Output: true
 console.log(isValidEmail("invalid-email"));    // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21650,7 +21649,7 @@ console.log(isFunction({}));  // Output: false
 <pre>
 const binaryToDecimal = (binary) => parseInt(binary, 2);
 
-console.log(binaryToDecimal("1101")); // Output: 13
+console.log(binaryToDecimal("1101"));  // Output: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-65">65. Check if an Array contains only Unique Values</h2>
@@ -21677,7 +21676,7 @@ const getDayOfWeek = (date) => {
   return daysOfWeek&lbrack;date.getDay()&rbrack;;
 };
 
-console.log(getDayOfWeek(new Date("2023-08-02"))); // Output: "Wednesday"
+console.log(getDayOfWeek(new Date("2023-08-02")));  // Output: "Wednesday"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-67">67. Check if a Number is a Power of Two</h2>
@@ -21687,8 +21686,8 @@ console.log(getDayOfWeek(new Date("2023-08-02"))); // Output: "Wednesday"
 <pre>
 const isPowerOfTwo = (num) => (num & (num - 1)) === 0;
 
-console.log(isPowerOfTwo(16)); // Output: true
-console.log(isPowerOfTwo(5)); // Output: false
+console.log(isPowerOfTwo(16));  // Output: true
+console.log(isPowerOfTwo(5));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-68">68. Convert Object to Query Parameters String</h2>
@@ -21712,8 +21711,8 @@ console.log(objectToQueryParams({ search: "hello", page: 1 }));
 <pre>
 const hasEvenNumber = (arr) => arr.some(num => num % 2 === 0);
 
-console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 8&rbrack;)); // Output: true
-console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 9&rbrack;)); // Output: false
+console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 8&rbrack;));  // Output: true
+console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-70">70. Get the Month Name from a Date</h2>
@@ -21727,7 +21726,7 @@ const getMonthName = (date) => {
   return months&lbrack;date.getMonth()&rbrack;;
 };
 
-console.log(getMonthName(new Date("2023-08-02"))); // Output: "August"
+console.log(getMonthName(new Date("2023-08-02")));  // Output: "August"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-71">71. Check if a String is a Palindrome (case-insensitive)</h2>
@@ -21738,8 +21737,8 @@ console.log(getMonthName(new Date("2023-08-02"))); // Output: "August"
 const isPalindromeCaseInsensitive = (str) => str.toLowerCase() === 
   str.toLowerCase().split('').reverse().join('');
 
-console.log(isPalindromeCaseInsensitive("LeVel")); // Output: true
-console.log(isPalindromeCaseInsensitive("Hello")); // Output: false
+console.log(isPalindromeCaseInsensitive("LeVel"));  // Output: true
+console.log(isPalindromeCaseInsensitive("Hello"));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-72">72. Convert Feet to Meters</h2>
@@ -21749,7 +21748,7 @@ console.log(isPalindromeCaseInsensitive("Hello")); // Output: false
 <pre>
 const feetToMeters = (feet) => feet * 0.3048;
 
-console.log(feetToMeters(10)); // Output: 3.048
+console.log(feetToMeters(10));  // Output: 3.048
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-73">73. Check if a Number is a Perfect Square</h2>
@@ -21759,8 +21758,8 @@ console.log(feetToMeters(10)); // Output: 3.048
 <pre>
 const isPerfectSquare = (num) => Math.sqrt(num) % 1 === 0;
 
-console.log(isPerfectSquare(16)); // Output: true
-console.log(isPerfectSquare(10)); // Output: false
+console.log(isPerfectSquare(16));  // Output: true
+console.log(isPerfectSquare(10));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-74">74. Check if a String contains only Numbers</h2>
@@ -21781,7 +21780,7 @@ console.log(containsOnlyNumbers("12a34"));  // Output: false
 <pre>
 const currentMonth = () => new Date().getMonth();
 
-console.log(currentMonth()); // Output: Current month (0-based index)
+console.log(currentMonth());  // Output: Current month (0-based index)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-76">76. Calculate the Mean of an Array of Numbers</h2>
@@ -21791,7 +21790,7 @@ console.log(currentMonth()); // Output: Current month (0-based index)
 <pre>
 const mean = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
 
-console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 3
+console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-77">77. Check if a Number is a Prime Number</h2>
@@ -21856,7 +21855,7 @@ console.log(isValidURL("invalid-url"));  // Output: false
 <pre>
 const intersection = (arr1, arr2) => arr1.filter(val => arr2.includes(val));
 
-console.log(intersection(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;)); // Output: &lbrack;2, 3&rbrack;
+console.log(intersection(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // Output: &lbrack;2, 3&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-82">82. Convert Days to Years, Months, and Days</h2>
@@ -21906,7 +21905,7 @@ console.log(factorial(5));  // Output: 120
 <pre>
 const removeWhitespace = (str) => str.replace(/\s/g, '');
 
-console.log(removeWhitespace(" Hello, world! ")); // Output: "Hello,world!"
+console.log(removeWhitespace(" Hello, world! "));  // Output: "Hello,world!"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-86">86. Find the Difference between Two Arrays</h2>
@@ -21916,7 +21915,7 @@ console.log(removeWhitespace(" Hello, world! ")); // Output: "Hello,world!"
 <pre>
 const difference = (arr1, arr2) => arr1.filter(val => !arr2.includes(val));
 
-console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;)); // Output: &lbrack;1&rbrack;
+console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // Output: &lbrack;1&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-87">87. Check if a Number is a Fibonacci Number</h2>
@@ -21958,8 +21957,8 @@ console.log(firstNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbra
 <pre>
 const isOdd = (num) => num % 2 !== 0;
 
-console.log(isOdd(5)); // Output: true
-console.log(isOdd(4)); // Output: false
+console.log(isOdd(5));  // Output: true
+console.log(isOdd(4));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-91">91. Calculate the Standard Deviation of an Array of Numbers</h2>
@@ -21974,7 +21973,7 @@ const standardDeviation = (arr) => {
   return Math.sqrt(variance);
 };
 
-console.log(standardDeviation(&lbrack;1, 2, 3, 4, 5&rbrack;)); // Output: 1.4142135623730951
+console.log(standardDeviation(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 1.4142135623730951
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-92">92. Check if a String ends with a specific Substring</h2>
@@ -22333,7 +22332,7 @@ array's length.</p>
 const countWords = (str) => str.split(/\s+/).length;
   
 // Example usage
-console.log(countWords("Hello, how are you doing?")); // Output: 5
+console.log(countWords("Hello, how are you doing?"));  // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-118">118. Check if a Number is a Triangular Number</h2>
@@ -22421,7 +22420,7 @@ const firstNonRepeatedChar = (str) => {
 };
   
 // Example usage
-console.log(firstNonRepeatedChar('abacabad')); // Output: "c"
+console.log(firstNonRepeatedChar('abacabad'));  // Output: "c"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-123">123. Sort an Array of Objects by a Property Value</h2>
@@ -23167,7 +23166,7 @@ const isValidIPv4 = (ip) => /^(?:(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&l
 
 // Example usage
 console.log(isValidIPv4("192.168.1.1"));  // Output: true
-console.log(isValidIPv4("256.0.0.1"));   // Output: false
+console.log(isValidIPv4("256.0.0.1"));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-169">169. Convert Decimal Number to Hexadecimal</h2>
