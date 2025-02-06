@@ -21742,9 +21742,9 @@ coinTossingGame();
 
 <pre>
 function fibonacciNumberGenerator() {
-  const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
+  const limit = parseInt(prompt("Enter the limit for Fibonacci numbers:"), 10);
 
-  if (isNaN(limit) 11 limit < 1) {
+  if (isNaN(limit) || limit < 1) {
     console.log("Invalid input. Please enter a positive number.");
     return;
   }
@@ -21779,7 +21779,7 @@ function mathQuizGame() {
     const num2 = Math.floor(Math.random() * 10) + 1;
     const correctAnswer = numl + num2;
     const userAnswer = parseInt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
-    if (’isNaN(userAnswer) && userAnswer === correctAnswer) {
+    if (!isNaN(userAnswer) && userAnswer === correctAnswer) {
       console.log("Correct! Well done!");
       score++;
     } else {
@@ -21902,7 +21902,7 @@ function countryCapitalQuizGame() {
   console.log("Welcome to the Country Capital Quiz Game!");
   console.log("Match the country with its capital:");
   for (const {country, capital} of countryCapitalPairs) {
-    console.log(' \nCountry: ${country}');
+    console.log(`\nCountry: ${country}`);
     const userCapital = prompt(`Enter the capital of ${country}:` ).trim();
     if (userCapital.toLowerCaseQ === capital.toLowerCaseO) {
       console.log("Correct! Well done!");
@@ -21911,7 +21911,7 @@ function countryCapitalQuizGame() {
       console.log(`Wrong! The correct capital is: ${capital}`);
     }
   }
-  console.log(' Quiz complete! Your final score is: ${score} out of ${countryCapitalPairs.length}');
+  console.log(`Quiz complete! Your final score is: ${score} out of ${countryCapitalPairs.length}`);
 }
 
 // Example: Start the Country Capital Quiz Game
@@ -21939,7 +21939,7 @@ function guessTheAnimalGame() {
   console.log("Welcome to the Guess the Animal Game!");
   console.log("Read the clues and guess the correct animal:");
   for (const {name, clues} of animals) {
-    console.log(' \nAnimal Clues:');
+    console.log('\nAnimal Clues:');
     for (const clue of clues) {
       console.log(clue);
     }
@@ -22021,7 +22021,7 @@ function shoppingListProgram() {
   console.log("Welcome to the Shopping List Program!");
   console.log("You can add items, remove items, and view your current shopping list.");
   while (true) {
-    const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, or 'view' 
+    const action = prompt('Enter 'add' to add an item, 'remove' to remove an item, or 'view' 
       to see your shopping list. Type 'exit' to end the program:").toLowerCase();
     if (action === "exit") {
       console.log("Exiting the Shopping List Program. Goodbye!");
