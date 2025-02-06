@@ -197,8 +197,18 @@ pre[href]:hover  {
 pre:hover, pre:focus { 
   width: min-content; 
 }
-/* min-content */
+.consolas {
+  color: blue;
+  font-weight: bold;
+  font-family: consolas, Bahnschrift, Inter, Helvetic, sans-serif;
+}
+.gimme {
+  color: darkred;
+  font-weight: 900;
+  font-family: sans-serif, Bahnschrift, Inter, Helvetic;
+}
 
+/* min-content */
 @media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
   div.example {
     font-size: 50px;
