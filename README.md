@@ -8449,9 +8449,9 @@ console.log(x < y); // Less Than</pre>
   <li><h4>Logical Operators:</h4>
     <pre>let p = true;
 let q = false;
-console.log(p && q); // Logical AND
-console.log(p || q); // Logical OR
-console.log(!p); / Logical NOT</pre>
+console.log(p && q);  // Logical AND
+console.log(p || q);  // Logical OR
+console.log(!p);  // Logical NOT</pre>
   </li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8469,19 +8469,19 @@ operations on numbers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
   <li><h4>Addition:</h4>
-    <pre>let sum = 5 + 3; // sum = 8</pre>
+    <pre>let sum = 5 + 3;  // sum = 8</pre>
   </li>
   <li><h4>Subtraction:</h4>
-    <pre>let difference = 10 - 4; // difference = 6</pre>
+    <pre>let difference = 10 - 4;  // difference = 6</pre>
   </li>
   <li><h4>Multiplication:</h4>
-    <pre>let product = 6 * 7; // product = 42</pre>
+    <pre>let product = 6 * 7;  // product = 42</pre>
   </li>
   <li><h4>Division:</h4>
-    <pre>let quotient = 20 / 5; // quotient = 4</pre>
+    <pre>let quotient = 20 / 5;  // quotient = 4</pre>
   </li>
   <li><h4>Modulus (Remainder):</h4>
-    <pre>let remainder = 15 % 4 // remainer = 3</pre>
+    <pre>let remainder = 15 % 4;  // remainer = 3</pre>
   </li>
 </ul>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8499,10 +8499,10 @@ values to variables.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Assigning a Value to a Variable:</h4>
 
-<pre>let x = 10; // Assigning the value 10 to variable 'x'</pre>
+<pre>let x = 10;  // Assigning the value 10 to variable 'x'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Assigning the Result of an Expression:</h4>
-<pre>let y = x + 5; // Assigning the result of an expression to 'y'</pre>
+<pre>let y = x + 5;  // Assigning the result of an expression to 'y'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex10">10. JS Data Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8544,11 +8544,11 @@ blocks of code that perform a specific task when called</span>.</p>
 }</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Call:</h4>
-<pre>let message = greet('John'); // message = 'Hello, John!'</pre>
+<pre>let message = greet('John');  // message = 'Hello, John!'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arrow Function:</h4>
 <pre>const multiply = (a,b) => a * b;
-let result = multiply(5,3); // result = 15</pre>
+let result = multiply(5,3);  // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex12">12. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8567,10 +8567,10 @@ let result = multiply(5,3); // result = 15</pre>
 };</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Properties:</h4>
-<pre>console.log(person.name); // Output: Alice</pre>
+<pre>console.log(person.name);  // Output: Alice</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Calling Object Method:</h4>
-<pre>console.log(person.greet()); // Output: Hello, my name is Alice!</pre>
+<pre>console.log(person.greet());  // Output: Hello, my name is Alice!</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8608,7 +8608,7 @@ enclosed in single or double quotes.</p>
 <h4>Concatenating Strings:</h4>
 <pre>let greeting = 'Hello, ';
 let name = 'Alice';
-let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
+let welcomeMessage = greeting + name;  // welcomeMessage = 'Hello, Alice'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8623,11 +8623,11 @@ let welcomeMessage = greeting + name; // welcomeMessage = 'Hello, Alice'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>toUpperCase() Methods:</h4>
 <pre>let text = 'hello';
-let upperCaseText = text.toUpperCase(); // upperCaseText = 'HELLO'</pre>
+let upperCaseText = text.toUpperCase();  // upperCaseText = 'HELLO'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>substring() Method:</h4>
 <pre>let sentence = 'This is a sentence';
-let subSentence = sentence.substring(5, 10); // subSentence = 'is a '</pre>
+let subSentence = sentence.substring(5, 10);  // subSentence = 'is a '</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div align="right">
   <b><a href="#ex0">↥ back to top</a></b>
@@ -8643,11 +8643,11 @@ a string</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>indexOf() Method:</h4>
 <pre>let text = 'Hello, World!';
-let position = text.indexOf('World'); // position = 7</pre>
+let position = text.indexOf('World');  // position = 7</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>includes() Method:</h4>
 <pre>let sentence = 'This is a sentence';
-let containsWord = sentence.includes('sentence'); // containsWord = true</pre>
+let containsWord = sentence.includes('sentence');  // containsWord = true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex17">17. JS String Templates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8727,7 +8727,7 @@ numbers.</p>
 <h3>Examples of JS Number Properties:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Number.MAX_VALUE Property:</h4>
-<pre>console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e + 308</pre>
+<pre>console.log(Number.MAX_VALUE);  // Output: 1.7976931348623157e + 308</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Number.MIN_VALUE Property:</h4>
 <pre>console.log(Number.MIN_VALUE);  // Output: 5e-324</pre>
@@ -9309,7 +9309,8 @@ console.log(pattern.test(str)); // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex51">51. JS Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Scope in JavaScript defines the visibility and accessibility of variables.</p>
+<p><span class="consolas">Scope</span> in JavaScript defines the visibility and accessibility of 
+variables.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Scope:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9330,7 +9331,8 @@ console.log(globalVar);  // Accessible outside function
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex52">52. JS Hoisting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Hoisting in JavaScript allows variables and functions to be used before they are declared.</p>
+<p><span class="consolas">Hoisting</span> in JavaScript allows variables and functions to be 
+used before they are declared.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Hoisting:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9350,7 +9352,8 @@ function sayHello() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex53">53. JS Strict Mode</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Strict mode in JavaScript enforces stricter rules and better error handling.</p>
+<p><span class="consolas">Strict mode</span> in JavaScript enforces stricter rules and better 
+error handling.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Strict Mode:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9373,7 +9376,8 @@ function myFunction() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex54">54. JS this Keyword</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The this keyword in JavaScript refers to the object it belongs to.</p>
+<p>The <span class="consolas">this</span> keyword in JavaScript refers to the object it belongs 
+to.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS this Keyword:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9412,7 +9416,8 @@ let greet = (name) => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex56">56. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Classes in JavaScript provide a way to create objects using a blueprint.</p>
+<p><span class="consolas">Classes</span> in JavaScript provide a way to create objects 
+using a blueprint.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Classes:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9432,8 +9437,8 @@ alice.greet(); // Outputs : 'Hello, my name is Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex57">57. JS Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Modules in JavaScript allow splitting code into separate files or modules for better 
-organization.</p>
+<p><span class="consolas">Modules</span> in JavaScript allow splitting code into separate 
+files or modules for better organization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Modules:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9460,7 +9465,8 @@ greet('Alice'); // Outputs : 'Hello, Alice !'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex58">58. JS JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON (JavaScript Object Notation ) is a lightweight data interchange format.</p>
+<p><span class="consolas">JSON (JavaScript Object Notation)</span> is a lightweight data 
+interchange format.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS JSON:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9470,7 +9476,6 @@ let jsonStr = '{"name":" Alice", "age": 30}';
 let obj = JSON.parse (jsonStr);
 console.log(obj.name); // Output: 'Alice'
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Stringify Object to JSON:</h4>
 <pre>
@@ -9507,7 +9512,7 @@ and maintainable code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Naming Conventions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Use camelCase for variable and function names.</p>
+<p>Use <span class="consolas">camelCase</span> for variable and function names.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>Indentation:</h5>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9583,8 +9588,8 @@ optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex65">65. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Objects in JavaScript are collections of key - value pairs. They store data as properties 
-(variables) and functionality as methods (functions).</p>
+<p><span class="consolas">Objects</span> in JavaScript are collections of key - value pairs. 
+They store data as properties (variables) and functionality as methods (functions).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Definitions:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9613,7 +9618,8 @@ car.model = 'Camry';
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex66">66. JS Object Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Properties in JavaScript objects are variables that hold values.</p>
+<p><span class="consolas">Properties</span> in JavaScript objects are variables that hold 
+values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Properties Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9628,7 +9634,7 @@ car.model = 'Corolla';  // Modifying property 'model'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex67">67. JS Object Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Methods in JavaScript objects are functions that define behavior.</p>
+<p><span class="consolas">Methods</span> in JavaScript objects are functions that define behavior.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Methods Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9664,7 +9670,8 @@ console.log(carString);  // Output the string representation of the object
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex69">69. JS Object Accessors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Accessors in JavaScript objects provide a way to get and set the values of object properties.</p>
+<p><span class="consolas">Accessors</span> in JavaScript objects provide a way to get and 
+set the values of object properties.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Accessors Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9694,7 +9701,8 @@ console.log(user.firstName);  // Output: 'Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex70">70. JS Object Constructors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Constructors in JavaScript are functions used for creating objects and setting initial values.</p>
+<p><span class="consolas">Constructors</span> in JavaScript are functions used for creating 
+objects and setting initial values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Constructors Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9714,7 +9722,8 @@ console.log(newPerson.greet());  // Output: 'Hello, my name is Bob'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex71">71. JS Object Prototypes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Prototypes in JavaScript are a mechanism to share properties and methods between objects.</p>
+<p><span class="consolas">Prototypes</span> in JavaScript are a mechanism to share properties 
+and methods between objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Prototypes Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9734,7 +9743,8 @@ console.log(newPerson.info());  // Output: 'Name : Bob, Age : 25'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex72">72. JS Object Iterables</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Iterables in JavaScript are objects that can be iterated using loops.</p>
+<p><span class="consolas">Iterables</span> in JavaScript are objects that can be iterated 
+using loops.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Iterables Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9751,7 +9761,7 @@ for (let key in person) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex73">73. JS Object Sets</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Sets in JavaScript are collections of unique values.</p>
+<p><span class="consolas">Sets</span> in JavaScript are collections of unique values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Sets Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9774,7 +9784,8 @@ mySet.add(3);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex74">74. JS Object Maps</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Maps in JavaScript are collections of key - value pairs where keys can be any type.</p>
+<p><span class="consolas">Maps</span> in JavaScript are collections of key - value pairs where 
+keys can be any type.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Maps Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9791,7 +9802,7 @@ myMap.set('key2', 'value2');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex75">75. JS Object Reference</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In JavaScript, objects are stored and passed by reference.</p>
+<p>In JavaScript, <span class="consolas">objects</span> are stored and passed by reference.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Reference Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9820,7 +9831,8 @@ concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex76">76. JS Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Functions in JavaScript are reusable blocks of code that perform a specific task when called.</p>
+<p><span class="consolas">Functions</span> in JavaScript are reusable blocks of code that 
+perform a specific task when called.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Definitions:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9850,7 +9862,8 @@ let greet = () => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex77">77. JS Function Parameters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Function parameters are placeholders for values that a function will receive when it's called.</p>
+<p><span class="consolas">Function parameters</span> are placeholders for values that a 
+function will receive when it's called.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Parameters Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9877,7 +9890,8 @@ function sum(a, b) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex78">78. JS Function Invocation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Function invocation means calling a function to execute its code.</p>
+<p><span class="consolas">Function invocation</span> means calling a function to execute 
+its code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Invocation Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9890,8 +9904,8 @@ let result = sum(5,3);  // Function call with arguments
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex79">79. JS Function Call</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The call() method in JavaScript allows a function to be called with a specified this 
-value and arguments provided individually.</p>
+<p>The <span class="consolas">call() method</span> in JavaScript allows a function to be 
+called with a specified this value and arguments provided individually.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Call Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9912,8 +9926,8 @@ let message = greet.call(person);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex80">80. JS Function Apply</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The apply() method in JavaScript allows a function to be called with a specified this 
-value and arguments provided as an array.</p>
+<p>The <span class="consolas">apply() method</span> in JavaScript allows a function to be 
+called with a specified this value and arguments provided as an array.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Apply Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9930,8 +9944,8 @@ let message = greet.apply(person, args);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex81">81. JS Function Bind</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The bind() method in JavaScript creates a new function that, when called, has its this 
-keyword set to a specified value.</p>
+<p>The <span class="consolas">bind() method</span> in JavaScript creates a new function 
+that, when called, has its this keyword set to a specified value.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Bind Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9953,8 +9967,8 @@ let message = newGreet();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex82">82. JS Function Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Closures in JavaScript are functions that retain access to variables in the scope 
-where they were defined.</p>
+<p><span class="consolas">Closures</span> in JavaScript are functions that retain access to 
+variables in the scope where they were defined.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Closures Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9978,7 +9992,8 @@ and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex83">83. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Classes in JavaScript provide a way to create objects using a blueprint.</p>
+<p><span class="consolas">Classes</span> in JavaScript provide a way to create objects 
+using a blueprint.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Class Intro:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10010,8 +10025,8 @@ console.log(dog.sound()); // Output: 'Animal sound'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex84">84. JS Class Inheritance</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Inheritance in JavaScript classes allows a subclass to inherit properties and methods 
-from a superclass.</p>
+<p><span class="consolas">Inheritance</span> in JavaScript classes allows a subclass to 
+inherit properties and methods from a superclass.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Class Inheritance Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10038,8 +10053,8 @@ console.log(puppy.sound()); // Output: 'Woof!'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex85">85. Class Static</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Static methods in JavaScript classes are called on the class itself rather than on 
-instances of the class.</p>
+<p><span class="consolas">Static methods</span> in JavaScript classes are called on the class 
+itself rather than on instances of the class.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Class Static Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10062,8 +10077,8 @@ console.log(result); // Output: 8
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex86">86. JS Async</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Asynchronous programming in JavaScript involves handling operations that don't execute 
-immediately.</p>
+<p><span class="consolas">Asynchronous programming</span> in JavaScript involves handling 
+operations that don't execute immediately.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Callbacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
