@@ -89,6 +89,8 @@ you have solved a certain number of programs, you will be able to develop yourse
 turn your own ideas into a reality without even having to think about it.</p>
 <p>I've always considered JavaScript a 4th generation language. Perhaps even 5th.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~ 50 javascript concepts every developer should know ~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk0">50 JS Concepts Every Developer Should Know</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ul>
@@ -143,6 +145,8 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#sk49">sk49. Canvas and WebGL</a></li>
   <li><a href="#sk50">sk50. Testing with Jest or Mocha</a></li>
 </ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 59 eloquent javascript examples ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a id="el0">59 Eloquent JS Examples</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -207,6 +211,8 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#el58">El58. JS and Performance: Timing</a></li>
   <li><a href="#el59">El59. JS and Performance: Optimizing</a></li>
 </ul>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~ 94 javascript examples from basic to advanced ~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a id="ex0">94 JavaScript Examples From Basics to Advanced</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -314,6 +320,8 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#ex93">JS JSON</a></li>
   <li><a href="#ex94">JavaScript vs jQuery: A Comprehensive Comparison</a></li>
 </ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 218 simple javascript example scripts ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a id="js0">218 Simple JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -537,6 +545,8 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#js217">217. Reverse Order of Bits</a></li>
   <li><a href="#js218">218. Pyramid</a></li>
 </ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~ 266 more javascript example scripts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2><a id="js-0">266 More JavaScript Example Scripts</a></h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1040,13 +1050,13 @@ surprises in your program's behavior.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk06">06. Function Scope, Block Scope, and Lexical Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The concepts of function scope, block scope, and Lexical scope refer to how
-variables are accessed and managed in different contexts within the code.</p>
+<p>The concepts of <span class="consolas">function scope, block scope</span>, and 
+<span class="consolas">Lexical scope</span> refer to how variables are accessed and managed in 
+different contexts within the code.</p>
 
-<p><b>Function Scope:</b> In JavaScript, variables declared within a function are
-visible and accessible only within that function and any nested functions
-within it This is called function scope. Variables declared with var have
-function scope.</p>
+<p><span class="consolas">Function Scope:</span> In JavaScript, variables declared within a function are
+visible and accessible only within that function and any nested functions within it This is called 
+function scope. Variables declared with <b>var</b> have function scope.</p>
 
 <pre>
 function myFunction() {
@@ -1059,10 +1069,9 @@ console.log(functionVariable);
 // Not accessible outside the function
 </pre>
 
-<p><b>Block Scope:</b> With the introduction of Let and const in ES6, block scope
-was introduced. Variables declared with let and const have a scope
-Limited to the block in which they are declared, such as within an if, a for, a
-while, etc.</p>
+<p><span class="consolas">Block Scope:</span> With the introduction of <b>let</b> and <b>const</b> in 
+ES6, block scope was introduced. Variables declared with let and const have a scope limited to the block 
+in which they are declared, such as within an if, a for, a while, etc.</p>
 
 <pre>
 if (true) {
@@ -1073,10 +1082,9 @@ console.log(blockVariable);  // Error, outside block scope
 console.log(anotherBlockVariable);  // Error, outside block scope
 </pre>
 
-<p><b>Lexical Scope:</b> Lexical scope refers to how nested functions can access
-variables from their parent functions, regardless of where they are called.
-This is because functions in JavaScript maintain a reference to the scope in
-which they were created.</p>
+<p><span class="consolas">Lexical Scope:</span> Lexical scope refers to how nested functions can access
+variables from their parent functions, regardless of where they are called. This is because functions in 
+JavaScript maintain a <b>reference to the scope</b> in which they were created.</p>
 
 <pre>
 function outer() {
@@ -1098,12 +1106,12 @@ understanding JavaScript execution and preventing errors related to variable sco
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk07">07. Expression vs Statement</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Expressions and statements are fundamental concepts used to construct
+<p><span class="consolas">Expressions and statements</span> are fundamental concepts used to construct
 programs.</p>
 
-<p><b>Expression:</b> An expression is a combination of values, operators, and
-function calls that evaluates to a single value. It can be as simple as a
-literal value or as complex as a mathematical operation or a function call.
+<p><span class="consolas">Expression:</span> An expression is a combination of values, operators, and
+function calls that evaluates to a <b>single value</b>. It can be as simple as a literal value or as complex 
+as a mathematical operation or a function call.</p>
 
 <pre>
 5 + 3               // Mathematical operation
@@ -1112,10 +1120,9 @@ myFunction()        // Function call
 42                  // Literal value
 </pre>
 
-<p><b>Statement:</b> A statement is a unit of code that performs an action or a
-series of actions. It represents a complete instruction in a program and
-can be a control flow statement, an assignment, a function declaration,
-etc.</p>
+<p><span class="consolas">Statement:</span> A statement is a <b>unit of code</b> that <b>performs an action</b> 
+or a <b>series of actions</b>. It represents a <b>complete instruction</b> in a program and can be a 
+control flow statement, an assignment, a function declaration, etc.</p>
 
 <pre>
 if (condition) {
@@ -1145,14 +1152,13 @@ any programming language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk08">08. IIFE, Modules, and Namespaces</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Immediately Invoked Function Expressions (IIFE), modules, and namespaces are techniques 
-used to modularize and organize code. Each addresses scope management and code organization 
-in different ways.</p>
+<p><span class="consolas">Immediately Invoked Function Expressions (IIFE), modules, and 
+namespaces</span> are techniques used to <b>modularize and organize code</b>. Each addresses scope management 
+and code organization in different ways.</p>
 
-<p><b>IIFE (Immediately Invoked Function Expression):</b> An IIFE is a function
-that is defined and executed immediately after its creation. It is useful for
-creating a private function scope and avoiding pollution of the global
-scope.</p>
+<p><span class="consolas">IIFE (Immediately Invoked Function Expression):</span> An IIFE is a function
+that is <b>defined and executed immediately after its creation</b>. It is useful for
+creating a private function scope and avoiding pollution of the global scope.</p>
 
 <pre>
 (function() {
@@ -1160,9 +1166,9 @@ scope.</p>
 })();
 </pre>
 
-<p><b>Modules:</b> Modules are a more modern and structured way of organizing
-code, They allow breaking the code into separate and reusable parts while
-maintaining the local scope of variables. In ES6, the import and export
+<p><span class="consolas">Modules:</span> Modules are a more modern and structured way of organizing 
+code, They <b>allow breaking the code</b> into separate and reusable parts while
+<b>maintaining the local scope</b> of variables. In ES6, the <b>import</b> and <b>export</b> 
 keywords were introduced to work with modules.</p>
 
 <pre>
@@ -1176,9 +1182,9 @@ import { greet } from "./module.js";
 greet();
 </pre>
 
-<p><b>Namespaces:</b> Namespaces are an older approach to code organization.
-They allow grouping related objects and functions under a common name
-to avoid naming collisions. This is done using global objects.</p>
+<p><span class="consolas">Namespaces:</span> Namespaces are an <b>older approach to code organization</b>.
+They allow <b>grouping related objects</b> and functions under a common name
+to avoid naming collisions. This is done <b>using global objects</b>.</p>
 
 <pre>
 // MyNamespace.js 
@@ -1198,31 +1204,31 @@ modularize code and are more efficient for maintenance and scalability. Namespac
 an older technique but can still be useful in certain situations where full modularity 
 is not necessary.</p>
 
-<p>In modern projects, it is recommended to use modules to effectively organize code and 
-maintain cleaner control over scope and code reuse.</p>
+<p>In modern projects, it is recommended to use <p><span class="consolas">modules</span> to 
+effectively <b>organize code</b> and <b>maintain cleaner control</b> over scope and code reuse.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk09">09. Message Queue and Event Loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The message queue and event Loop are crucial concepts to understand how event handling 
-and asynchronous operations work in JavaScript.</p>
+<p>The <span class="consolas">message queue</span> and <span class="consolas">event loop</span> 
+are crucial concepts to understand how <b>event handling</b> and <b>asynchronous</b> 
+operations work in JavaScript.</p>
 
-<p><b>Message Queue:</b> The message queue is a structure where events and pending 
+<p><span class="consolas">Message Queue:</span> The message queue is a structure where events and pending 
 callback functions are stored to be executed. These events can include user interactions, 
 timers, network requests, and more.</p>
 
-<p><b>Event Loop:</b> The event Loop is a continuous cycle running in the background 
-of the JavaScript program. Its function is to constantly check if there are tasks in the 
-message queue to be processed. If there are tasks pending in the queue, the event loop 
-takes them one by one and executes them in order.</p>
+<p><span class="consolas">Event Loop:</span> The event loop is a <b>continuous cycle</b> running 
+in the <b>background</b> of the JavaScript program. Its function is to constantly check if there 
+are <b>tasks</b> in the <b>message queue</b> to be processed. If there are tasks pending in the 
+queue, the <b>event loop</b> takes them one by one and executes them in order.</p>
 
-<p>The interaction between the message queue and the event loop is fundamental to 
-understanding how JavaScript handles asynchronous and non-blocking tasks. When an event 
+<p>The <b>interaction between the <b>message queue</b> and the <b>event loop</b> is fundamental to 
+understanding how JavaScript handles <b>asynchronous</b> and <b>non-blocking tasks</b>. When an event 
 occurs or an asynchronous task is completed (such as an AJAX request or a timer), a 
-callback function is added to the message queue. The event Loop takes these functions 
-one by one and executes them.</p>
+callback function is added to the message queue. The <b>event loop</b> takes these functions 
+one by one and <b>executes them</b>.</p>
 
 <p><b>Example of Message Queue and Event Loop:</b></p>
-
 <pre>
 console.log("Start of the program");
 setTimeout(function() {
@@ -1247,19 +1253,17 @@ In this example, the code executes in the following order:</p>
     printing "Asynchronous task completed."</li>
 </ol>
 
-<p>Understanding how the message queue and event loop work is crucial for
-writing asynchronous JavaScript code and avoiding blocking and
-bottlenecks in program execution.</p>
+<p>Understanding how the message queue and event loop work is crucial for writing asynchronous 
+JavaScript code and avoiding blocking and bottlenecks in program execution.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk10">10. setTimeout, setInterval, and requestAnimationFrame</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>These three functions are very useful for working with timers and
-performing asynchronous tasks in JavaScript However, each has its own
-purpose and advantages.</p>
+<p>These three functions are very useful for working with timers and performing asynchronous tasks 
+in JavaScript However, each has its own purpose and advantages.</p>
 
-<p><b>setTimeout:</b> setTimeout is used to schedule the execution of a function
-after a certain period of time (in milliseconds). You can use it to create
-delays in code execution or to perform actions after a specified time.</p>
+<p><span class="consolas">setTimeout:</span> setTimeout is used to <b>schedule the execution</b> of 
+a function <b>after a certain period of time (in milliseconds)</b>. You can use it to create delays 
+in code execution or to perform actions after a specified time.</p>
 
 <pre>
 console.log("Start");
@@ -3920,9 +3924,9 @@ for (let line = "#"; line.length &lt; 8; line += "#")
 ######
 #######
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el02">02. Program Structure: FizzBuzz</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Going over the numbers is clearly a looping job, and selecting what to print is
 a matter of conditional execution. Remember the trick of using the remainder
 (%) operator for checking whether a number is divisible by another number (has
@@ -4060,9 +4064,9 @@ Fizz
 Fizz
 Buzz
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el03">03. Program Structure: Chessboard</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can build the string by starting with an empty one ("") and repeatedly
 adding characters. A newline character is written "\n".</p>
 <p>To work with two dimensions, you will need a loop inside of a loop. Put
@@ -4109,9 +4113,9 @@ console.log(board);
 &nbsp;&#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 &#35;&nbsp;&#35;&nbsp;&#35;&nbsp;&#35;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el04">04. Functions: Minimum</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>If you have trouble putting braces and parentheses in the right place to get a
 valid function definition, start by copying one of the examples in this chapter
 and modifying it.</p>
@@ -4134,9 +4138,9 @@ function returns. When control comes across such a statement, it immediately jum
 the current function and gives the returned value to the code that called the function.
 The return keyword without an expression after it will cause the function to return 
 undefined. Parameters and scopes</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el05">05. Functions: Recursion</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your function will likely look somewhat similar to the inner find function in the
 recursive <a href="findSolution">findSolution example</a> in this chapter, with an 
 if/else if/else chain that tests which of the three cases applies. The final else, 
@@ -4208,9 +4212,9 @@ console.log(isEven(50));  // → true
 console.log(isEven(75));  // → false
 console.log(isEven(-1));  // → false
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el06">06. Functions: Bean counting</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your function will need a loop that looks at every character in the string. It
 can run an index from zero to one below its length (< string.length). If the
 character at the current position is the same as the one the function is looking
@@ -4248,9 +4252,9 @@ function countBs(string) {
 console.log(countBs("BBC"));  // → 2
 console.log(countChar("kakkerlak", "k"));  // → 4
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el07">07. Data Structures: Objects and Arrays</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Run code here in the context of Chapter 4 Eloquent JavaScript
 // journalEvents of journal.js
@@ -4323,9 +4327,9 @@ var list = {
   }
 };
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el08">08. Data Structures: The sum of a range</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Building up an array is most easily done by first initializing a binding to []
 (a fresh, empty array) and repeatedly calling its push method to add a value.
 Don’t forget to return the array at the end of the function.
@@ -4368,9 +4372,9 @@ console.log(range(5, 2, -1));  // → [5, 4, 3, 2]
 console.log(sum(range(1, 10)));  // → 55
 console.log(sum(range(1, 77)));  // → 3003
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el09">09. Data-Structures: Reversing an Array</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>There are two obvious ways to implement reverseArray. The first is to simply
 go over the input array from front to back and use the unshift method on
 the new array to insert each element at its start. The second is to loop over
@@ -4413,9 +4417,9 @@ let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);  // → [5, 4, 3, 2, 1]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el10">10. Data-Structures: A list</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Building up a list is easier when done back to front. So arrayToList could iter-
 ate over the array backwards (see the previous exercise) and, for each element,
 add an object to the list. You can use a local binding to hold the part of the
@@ -4466,9 +4470,9 @@ console.log(listToArray(arrayToList([10, 20, 30])));  // → [10, 20, 30]
 console.log(prepend(10, prepend(20, null)));  // → {value: 10, rest: {value: 20, rest: null}}
 console.log(nth(arrayToList([10, 20, 30]), 1));  // → 20
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el11">11. Data-Structures: Deep comparison</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your test for whether you are dealing with a real object will look something like;</p>
 
 <pre>typeof x == "object" && x != null</pre>
@@ -4506,9 +4510,9 @@ console.log(deepEqual(obj, obj));  // → true
 console.log(deepEqual(obj, {here: 1, object: 2}));  // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));  // → true
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el12">12. Higher-Order Functions: Flattening</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use the reduce method in combination with the concat method to “flatten”
 an array of arrays into a single array that has all the elements of the original
 arrays.</p>
@@ -4576,9 +4580,9 @@ let arrays = [[1, 2, 3], [4, 5], [6]];<br>
 console.log(arrays.reduce((flat, current) => flat.concat(current), [])); 
 // → [1, 2, 3, 4, 5, 6]
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el13">13. Higher-Order Functions: Your own loop</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Write a higher-order function loop that provides something like a for loop
 statement. It takes a value, a test function, an update function, and a body
 function. Each iteration, it first runs the test function on the current loop value
@@ -4600,9 +4604,9 @@ loop(3, n => n > 0, n => n - 1, console.log);
 // → 2
 // → 1
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el14">14. Higher-Order Functions: Everything</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Analogous to the some method, arrays also have an every method. This one
 returns true when the given function returns true for every element in the array.
 In a way, some is a version of the || operator that acts on arrays, and every is
@@ -4638,9 +4642,9 @@ console.log(every([1, 3, 5], n => n < 10));  // → true
 console.log(every([2, 4, 16], n => n < 10));  // → false
 console.log(every([], n => n < 10));  // → true
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el15">15. Higher-Order Functions: Dominant writing direction</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Write a function that computes the dominant writing direction in a string of
 text. Remember that each script object has a direction property that can be
 "ltr" (left to right), "rtl" (right to left), or "ttb" (top to bottom).</p>
@@ -4686,9 +4690,9 @@ function dominantDirection(text) {
 console.log(dominantDirection("Hello!"));  // → ltr
 console.log(dominantDirection("Hey, مساء الخير"));  // → rtl
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el16">16. Objects: A vector type</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function makeRabbit(type) {
   let rabbit = Object.create(protoRabbit);
@@ -4799,9 +4803,9 @@ console.log(new Vec(1, 2).plus(new Vec(2, 3)));  // → Vec{x: 3, y: 5}
 console.log(new Vec(1, 2).minus(new Vec(2, 3)));  // → Vec{x: -1, y: -1}
 console.log(new Vec(3, 4).length);  // → 5
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el17">17. Objects: Groups</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The easiest way to do this is to store an array of group members in an instance
 property. The includes or indexOf methods can be used to check whether a
 given value is in the array.</p>
@@ -4849,9 +4853,9 @@ group.add(10);
 group.delete(10);
 console.log(group.has(10));
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el18">18. Objects: Iterable groups</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>It is probably worthwhile to define a new class GroupIterator. Iterator in-
 stances should have a property that tracks the current position in the group.
 Every time next is called, it checks whether it is done and, if not, moves past
@@ -4910,9 +4914,9 @@ for (let value of Group.from(["a", "b", "c"])) {
 // → b
 // → c
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el19">19. Objects: Borrowing a method</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Remember that methods that exist on plain objects come from Object.prototype.</p>
 
 <p>Also remember that you can call a function with a specific this binding by
@@ -5042,9 +5046,9 @@ function goalOrientedRobot({place, parcels}, route) {
   }
   return {direction: route[0], memory: route.slice(1)};
 }</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el20">20. A Robot: Measuring a robot</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You’ll have to write a variant of the runRobot function that, instead of log-
 ging the events to the console, returns the number of steps the robot took to
 complete the task.</p>
@@ -5075,9 +5079,9 @@ function compareRobots(robot1, memory1, robot2, memory2) {
 }
 compareRobots(routeRobot, [], goalOrientedRobot, []);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el21">21. A Robot: Robot efficiency</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The main limitation of goalOrientedRobot is that it considers only one parcel
 at a time. It will often walk back and forth across the village because the parcel
 it happens to be looking at happens to be at the other side of the map, even if
@@ -5113,9 +5117,9 @@ function lazyRobot({place, parcels}, route) {
 }
 runRobotAnimation(VillageState.random(), lazyRobot, &lbrack;&rbrack;);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el22">22. A Robot: Persistent group</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The most convenient way to represent the set of member values is still as an
 array since arrays are easy to copy.</p>
 
@@ -5159,9 +5163,9 @@ console.log(b.has("b"));  // → true
 console.log(a.has("b"));  // → false
 console.log(b.has("a"));  // → false
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el23">23. Bugs and Errors: Retry</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The call to primitiveMultiply should definitely happen in a try block. The
 corresponding catch block should rethrow the exception when it is not an
 instance of MultiplicatorUnitFailure and ensure the call is retried when it is.</p>
@@ -5192,9 +5196,9 @@ function reliableMultiply(a, b) {
 }<br>
 console.log(reliableMultiply(8, 8));  // → 64
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el24">24. Bugs and Errors: The locked box</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This exercise calls for a finally block. Your function should first unlock the
 box and then call the argument function from inside a try body. The finally
 block after it should lock the box again.</p>
@@ -5238,9 +5242,9 @@ try {
 }<br>
 console.log(box.locked);  // → true
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el25">25. Regular Expressions: Regexp golf</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Code golf is a term used for the game of trying to express a particular program
 in as few characters as possible. Similarly, regexp golf is the practice of writing
 as tiny a regular expression as possible to match a given pattern, and only that
@@ -5299,9 +5303,9 @@ function verify(regexp, yes, no) {
   }
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el26">26. Regular Expressions: Quoting style</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Imagine you have written a story and used single quotation marks throughout
 to mark pieces of dialogue. Now you want to replace all the dialogue quotes
 with double quotes, while keeping the single quotes used in contractions like
@@ -5325,9 +5329,9 @@ let text = "'I'm the cook,' he said, 'it's my job.'";<br>
 console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 // → "I'm the cook," he said, "it's my job."
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el27">27. Regular Expressions: Numbers again</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Write an expression that matches only JavaScript-style numbers. It must sup-
 port an optional minus or plus sign in front of the number, the decimal dot,
 and exponent notation—5e-3 or 1E10—again with an optional sign in front of
@@ -5366,9 +5370,9 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
   }
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el28">28. Modules: Roads module</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Since this is a CommonJS module, you have to use require to import the graph
 module. That was described as exporting a buildGraph function, which you
 can pick out of its interface object with a destructuring const declaration.</p>
@@ -5390,9 +5394,9 @@ const roads = &lbrack;
 &rbrack;;<br>
 exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el29">29. Asynchronous Programming: Tracking the scalpel</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This can be done with a single loop that searches through the nests, moving
 forward to the next when it finds a value that doesn’t match the current nest’s
 name and returning the name when it finds a matching value. In the async
@@ -5438,9 +5442,9 @@ function locateScalpel2(nest) {
 locateScalpel(bigOak).then(console.log);  // → Butcher's Shop
 locateScalpel2(bigOak).then(console.log);  // → Butcher's Shop
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el30">30. Asynchronous Programming: Building Promise.all</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The function passed to the Promise constructor will have to call then on each
 of the promises in the given array. When one of them succeeds, two things
 need to happen. The resulting value needs to be stored in the correct position
@@ -5492,9 +5496,9 @@ Promise_all([soon(1), Promise.reject("X"), soon(3)]).then(array => {
   }
 });
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el31">31. A Programming Language: Arrays</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The easiest way to do this is to represent Egg arrays with JavaScript arrays.</p>
 
 <p>The values added to the top scope must be functions. By using a rest argu-
@@ -5516,9 +5520,9 @@ do(define(sum, fun(array,
 &#96;);<br>
 // → 6
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el32">32. A Programming Language: Comments</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Make sure your solution handles multiple comments in a row, with potentially
 whitespace between or after them.</p>
 
@@ -5542,9 +5546,9 @@ console.log(parse("a # one\n   # two\n()"));
 {type: "word", name: "x"}
 {type: "apply", operator: {type: "word", name: "a"}, …}
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el33">33. A Programming Language: Fixing scope</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You will have to loop through one scope at a time, using Object.getPrototypeOf
 to go to the next outer scope. For each scope, use hasOwnProperty to find out
 whether the binding, indicated by the name property of the first argument to
@@ -5579,9 +5583,9 @@ do(define(x, 4),
 // → 50<br>
 run(`set(quux, true)`);  // → Some kind of ReferenceError
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el34">34. The Document Object Model: Build a table</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can use document.createElement to create new element nodes, document.
 createTextNode to create text nodes, and the appendChild method to put nodes
 into other nodes.</p>
@@ -5636,9 +5640,9 @@ or document.querySelector to find the node with the proper id attribute.</p>
     .appendChild(buildTable(MOUNTAINS));
 &lt;/script&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el35">35. The Document Object Model: Elements by tag name</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The solution is most easily expressed with a recursive function, similar to the
 talksAbout function defined earlier in this chapter.</p>
 
@@ -5680,9 +5684,9 @@ doing a recursive call on it to inspect its own children.</p>
   console.log(byTagName(para, "span").length);  // → 2
 &lt;/script&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el36">36. The Document Object Model: The cat's hat</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el36">36. The Document Object Model: The cat&apos;s hat</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Math.cos and Math.sin measure angles in radians, where a full circle is 2π. For
 a given angle, you can get the opposite angle by adding half of this, which is
 Math.PI. This can be useful for putting the hat on the opposite side of the
@@ -5712,9 +5716,9 @@ orbit.</p>
   requestAnimationFrame(animate);
 &lt;/script&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el37">37. Handling Events: Balloon</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You’ll want to register a handler for the "keydown" event and look at event.key
 to figure out whether the up or down arrow key was pressed.</p>
 
@@ -5755,9 +5759,9 @@ parent node to a new string.</p>
   document.body.addEventListener("keydown", handleArrow);
 &lt;/script&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el38">38. Handling Events: Mouse trail</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Creating the elements is best done with a loop. Append them to the document
 to make them show up. To be able to access them later to change their position,
 you’ll want to store the elements in an array.</p>
@@ -5808,9 +5812,9 @@ out a good way to do this is up to you.</p>
 &lt;/script&gt;
 &lt;/body&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el39">39. Handling Events: Tabs</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>One pitfall you might run into is that you can’t directly use the node’s childNodes
 property as a collection of tab nodes. For one thing, when you add the buttons,
 they will also become child nodes and end up in this object because it is a live
@@ -5861,9 +5865,9 @@ with the first tab visible.</p>
   asTabs(document.querySelector("tab-panel"));
 &lt;/script&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el40">40. A Platform Game: Game over</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 &lt;!doctype html&gt;
 &lt;script src="js/game.js"&gt;&lt;/script&gt;
@@ -5891,9 +5895,9 @@ with the first tab visible.</p>
 &lt;/script&gt;
 &lt;/body&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el41">41. A Platform Game: Pausing the game</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An animation can be interrupted by returning false from the function given
 to runAnimation. It can be continued by calling runAnimation again.</p>
 
@@ -5994,18 +5998,18 @@ either that function value or a method that handles the unregistering directly.<
   runGame(GAME_LEVELS, DOMDisplay);
 &lt;/script&gt;
 &lt;/body&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el42">42. A Platform Game: A monster</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>If you want to implement a type of motion that is stateful, such as bounc-
-ing, make sure you store the necessary state in the actor object—include it as
-constructor argument and add it as a property.</p>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>If you want to implement a type of motion that is stateful, such as bouncing, make sure you 
+store the necessary state in the actor object—include it as constructor argument and add it as 
+a property.</p>
 <p>Remember that update returns a new object, rather than changing the old one.</p>
-<p>When handling collision, find the player in state.actors and compare its
-position to the monster’s position. To get the bottom of the player, you have
-to add its vertical size to its vertical position. The creation of an updated
-state will resemble either Coin’s collide method (removing the actor) or Lava
-’s (changing the status to "lost"), depending on the player position.</p>
+<p>When handling collision, find the player in state.actors and compare its position to the 
+monster’s position. To get the bottom of the player, you have to add its vertical size to its 
+vertical position. The creation of an updated state will resemble either Coin’s collide method 
+(removing the actor) or Lava’s (changing the status to "lost"), depending on the player 
+position.</p>
 
 <pre>
 &lt;!doctype html&gt;<br>
@@ -6057,9 +6061,9 @@ state will resemble either Coin’s collide method (removing the actor) or Lava
 `), DOMDisplay);
   &lt;/script&gt;
 &lt;/body&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el43">43. Drawing on Canvas: Shapes</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The trapezoid (1) is easiest to draw using a path. Pick suitable center coordi-
 nates and add each of the four corners around the center.</p>
 
@@ -6151,9 +6155,9 @@ quadraticCurveTo, you can use the center as the control point.</p>
   }
   star(440, 20);
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el44">44. Drawing on Canvas: The pie chart</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You will need to call fillText and set the context’s textAlign and textBaseline
 properties in such a way that the text ends up where you want it.</p>
 
@@ -6217,9 +6221,9 @@ side of the circle we are on.</p>
     cx.fill();
   });
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el45">45. Drawing on Canvas: A bouncing ball</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A box is easy to draw with strokeRect. Define a binding that holds its size or
 define two bindings if your box’s width and height differ. To create a round
 ball, start a path and call arc(x, y, radius, 0, 7), which creates an arc going
@@ -6269,9 +6273,9 @@ scene and redraw it using the new position.</p>
     cx.fill();
   }
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el46">46. HTTP and Forms: Content negotiation</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Base your code on the fetch examples earlier in the chapter.
 Asking for a bogus media type will return a response with code 406, “Not
 acceptable”, which is the code a server should return when it can’t fulfill the
@@ -6290,9 +6294,9 @@ async function showTypes() {
   }
 }<br>
 showTypes();</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el47">47. HTTP and Forms: A JavaScript workbench</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use document.querySelector or document.getElementById to get access to the
 elements defined in your HTML. An event handler for "click" or "mousedown
 " events on the button can get the value property of the text field and call
@@ -6326,9 +6330,9 @@ on a single line.</p>
     }
   });
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el48">48. HTTP and Forms: Conway's Game of Life</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To solve the problem of having the changes conceptually happen at the same
 time, try to see the computation of a generation as a pure function, which takes
 one grid and produces a new grid that represents the next turn.</p>
@@ -6431,9 +6435,9 @@ break) elements between the rows.</p>
     }
   });
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el49">49. A Pixel Art Editor: Keyboard bindings</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The key property of events for letter keys will be the lowercase letter itself, if
 shift isn’t being held. We’re not interested in key events with shift here.</p>
 
@@ -6492,9 +6496,9 @@ patch the appropriate action.</p>
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el50">50. A Pixel Art Editor: Efficient drawing</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This exercise is a good example of how immutable data structures can make
 code faster. Because we have both the old and the new picture, we can compare
 them and redraw only the pixels that changed color, saving more than 99
@@ -6544,9 +6548,9 @@ you’ve changed the canvas size.</p>
   document.querySelector("div")
     .appendChild(startPixelEditor({}));
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el51">51. A Pixel Art Editor: Circles</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can take some inspiration from the rectangle tool. Like that tool, you’ll
 want to keep drawing on the starting picture, rather than the current picture,
 when the pointer moves.</p>
@@ -6594,9 +6598,9 @@ boundaries.</p>
   });
   document.querySelector("div").appendChild(dom);
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el52">52. A Pixel Art Editor: Proper lines</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The thing about the problem of drawing a pixelated line is that it is really four
 similar but slightly different problems. Drawing a horizontal line from the left
 to the right is easy—you loop over the x-coordinates and color a pixel at every
@@ -6679,9 +6683,9 @@ coordinates.</p>
   });
   document.querySelector("div").appendChild(dom);
 &lt;/script&gt;</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el53">53. Node.js: Search tool</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>On Unix systems, there is a command line tool called grep that can be used to
 quickly search files for a regular expression.</p>
 
@@ -6736,9 +6740,9 @@ function search(file) {
     console.log(file);
   }
 }</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el54">54. Node.js: Directory creation</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Though the DELETE method in our file server is able to delete directories (using
 rmdir), the server currently does not provide any way to create a directory.</p>
 <p>Add support for the MKCOL method (“make column”), which should create a
@@ -6771,9 +6775,9 @@ methods.MKCOL = async function(request) {
   else return {status: 400, body: "Not a directory"};
 };
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el55">55. Skill-Sharing Website: Disk persistence</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h2 id="el55">55. Skill-Sharing Website: Disk Persistence</h2>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>A skill-sharing meeting is an event where people with a shared interest come
 together and give small, informal presentations about things they know. At a
 gardening skill-sharing meeting, someone might explain how to cultivate celery.
@@ -7322,7 +7326,7 @@ we should put it in public/index.html. This is our index file:</p>
 &lt;link rel="stylesheet" href="skillsharing.css"&gt;
 </pre>
 
-<h2>Skill Sharing</h2>
+<h3>Skill Sharing</h3>
 <pre>&lt;script src="skillsharing_client.js"&gt;&lt;/script&gt;</pre>
 
 <p>It defines the document title and includes a style sheet, which defines a few
@@ -7609,9 +7613,9 @@ project’s dependency with npm install.</p>
 crashes or is restarted for any reason, all talks and comments are lost. Extend the 
 server so that it stores the talk data to disk and automatically reloads the data when 
 it is restarted. Do not worry about efficiency—do the simplest thing that works.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el56">56. Skill-Sharing Website: Comment field resets</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The wholesale redrawing of talks works pretty well because you usually can’t tell the 
 difference between a DOM node and its identical replacement. But there are exceptions. If 
 you start typing something in the comment field for a talk in one browser window and 
@@ -7709,9 +7713,9 @@ class SkillShareApp {
     }
   }
 }</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el57">57. JS and Performance: Pathfinding</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function findPath(a, b) {
   let work = [[a]];
@@ -7730,9 +7734,9 @@ let root = graph[0], leaf = graph[graph.length - 1];
 console.log(findPath(root, leaf).length);  // → 4<br>
 leaf.connect(root);
 console.log(findPath(root, leaf).length);  // → 2</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el58">58. JS and Performance: Timing</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function findPath(a, b) {
   let work = [[a]];
@@ -7753,9 +7757,9 @@ function time(findPath) {
   console.log(`Path with length ${result.length} found in ${Date.now() - startTime}ms`);
 }<br>
 time(findPath);</pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el59">59. JS and Performance: Optimizing</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function time(findPath) {
   let graph = treeGraph(6, 6);
@@ -7798,6 +7802,8 @@ function findPath_list(a, b) {
 }<br>
 time(findPath_list);
 </pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~ 94 javascript examples from basics to advanced ~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>94 JavaScript Examples from Basics to Advanced</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7854,7 +7860,7 @@ interpreter or browser can understand.</p>
     <pre>const numbers = &lbrack;1,2,3,4,5&rbrack;;</pre>
   </li>
 </ol>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--><!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex03">03. JS Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>They are ignored by the interpreter and are only meant for human readers.</p>
@@ -7983,7 +7989,6 @@ values to variables.</p>
 <h3>Examples of JS Assignment:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Assigning a Value to a Variable:</h4>
-
 <pre>let x = 10;  // Assigning the value 10 to variable 'x'</pre>
 <h4>Assigning the Result of an Expression:</h4>
 <pre>let y = x + 5;  // Assigning the result of an expression to 'y'</pre>
@@ -23975,10 +23980,9 @@ console.log(sectorArea(5, 60));  // Output: 5.235987755982989
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>When click button display confetti on screen; HTML, CSS & JS code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>Example:</h4>
+<h3>Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>HTML:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>HTML:</h4>
 <pre>
 /* HTML */
 &lt;canvas id="confetti"&gt;&lt;/canvas&gt;
@@ -23988,9 +23992,7 @@ console.log(sectorArea(5, 60));  // Output: 5.235987755982989
 &lt;script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"&gt;&lt;/script&gt;
 &lt;script src="script.js"&gt;&lt;/script&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h5>CSS:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h4>CSS:</h4>
 <pre>
 /* CSS */
 body {
@@ -24071,9 +24073,7 @@ canvas#confetti {
   }
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>JS:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 /* JavaScript - confetti */
 const button = document.querySelector('#button');
@@ -24114,9 +24114,7 @@ button.addEventListener('click', () => {
   }
 &lt;/script&gt;
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>CSS:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
   #myBtn {
     display: none;
