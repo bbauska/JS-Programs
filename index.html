@@ -14433,7 +14433,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
 <h2 id="js19">js19. Find Armstrong Number in an Interval</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program prompts the user to enter a range (start and end) and then prints all 
-Armstrong numbers within that interval.</p>
+<span class="consolas">Armstrong numbers</span> within that interval.</p>
 
 <pre>
 // Prompt user for the interval
@@ -14525,16 +14525,16 @@ if (!isNaN(numl) && !isNaN(num2)) {
 }
 
 // Examples:
-Result of 407 &ast; 3345 is: 1361415
-Result of 997 + 2231 is: 3228
-Result of 999 / 30 is: 33.3
-Result of 705 - 45 is: 660
+// Result of 407 &ast; 3345 is: 1361415
+// Result of 997 + 2231 is: 3228
+// Result of 999 / 30 is: 33.3
+// Result of 705 - 45 is: 660
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js21">js21. Find the Sum of Natural Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates the sum of natural numbers up to a given positive integer 
-<span class="consolas">n</span>. 
+<p>This program calculates the <span class="consolas">sum of natural numbers</span> up to a given 
+positive integer <span class="consolas">n</span>. 
 The sum is calculated using the formula: 
 <span class="consolas">sum = n*(n + l) / 2</span>.</p>
 
@@ -14552,7 +14552,7 @@ if (!isNaN(n) && Number.isInteger(n) && n > 0) {
 }
 
 // Example
-The sum of natural numbers from 1 to 76 is: 2926
+// The sum of natural numbers from 1 to 76 is: 2926
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js22">js22. Check if the Numbers Have the Same Last Digit</h2>
@@ -14591,10 +14591,10 @@ if (
 }
 
 // Example:
-The last digit of 201 is different from the last digit of 202.
+// The last digit of 201 is different from the last digit of 202.
 
 // Another example:
-The last digit of 297 is the same as the last digit of 4047.
+// The last digit of 297 is the same as the last digit of 4047.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js23">js23. Find HCF or GCD</h2>
@@ -16677,23 +16677,23 @@ console.log(`The sentence "${sentence}" has ${result} words.`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js108">js108. Find the Union of Two Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To find the union of two arrays in JavaScript, you can create a function that 
-concatenates the arrays and removes duplicate elements.</p>
+<p>To find the union of two arrays in JavaScript, you can create a function that concatenates the 
+arrays and removes duplicate elements.</p>
 
 <pre>
 function findUnion(arrl, arr2) {
   // Check if the inputs are valid arrays
-  if (’Array.isArray(arrl) 11 !Array.isArray(arr2)) {
+  if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
     return "Invalid inputs. Please provide valid arrays.";
   }
   // Concatenate the arrays and remove duplicates
-  const unionArray = Array.from(new Set(&lbrack;...arrl, ...arr2&rbrack;));
+  const unionArray = Array.from(new Set(&lbrack;...arr1, ...arr2&rbrack;));
   return unionArray;
 }
 // Example usage:
 const arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
-const result = findUnion(arrayl, array2);
+const result = findUnion(array1, array2);
 console.log("Union of Arrays:", result);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16711,16 +16711,20 @@ function calculateFactorial(n) {
     return "Invalid input. Please provide a non-negative integer.";
   }
   // Use BigInt to handle large factorials
-  let result = BigInt(l);
+  let result = BigInt(1);
   for (let i = 2;i<=n;i++){
     result *= BigInt(i);
   }
-  return result.toStringO;
+  return result.toString();
 }
 // Example usage:
-const number = 50;
+<!--
+const number = 5;
 const result = calculateFactorial(number);
-console.log(`The factorial of ${number} is:\n$ {result}`);
+console.log(`The factorial of ${number} is:\n${result}`);
+The factorial of 5 is:
+120
+-->
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js110">js110. Check if a Number is a Strong Number</h2>
@@ -16733,14 +16737,14 @@ each digit and checks if their sum equals the original number.</p>
 <pre>
 function calculateFactorial(number) {
   let result = 1;
-  for (let i = 2; i < = number; i++) {
+  for (let i = 2; i <= number; i++) {
     result *= i;
   }
   return result;
 }
 function isStrongNumber(num) {
   // Check if the input is a non-negative integer
-  if (!Number.is!nteger(num) 11 num < 0) {
+  if (!Number.isInteger(num) || num < 0) {
     return false;
   }
   // Convert the number to an array of digits
@@ -16751,9 +16755,12 @@ function isStrongNumber(num) {
   return digitFactorialSum === num;
 }
 // Example usage:
+<!--
 const testNumber = 145;
 const result = isStrongNumber(testNumber);
 console.log(`${testNumber} is a strong number: ${result}`);
+145 is a strong number: true
+-->
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js111">js111. Check if a Number is a Narcissistic Number</h2>
@@ -16768,24 +16775,28 @@ function isNarcissisticNumber(num) {
   if (!Number.isInteger(num) || num < 0) {
     return false;
   }
-  const numStr = num.toStringO;
+  const numStr = num.toString();
   const numDigits = numStr.length;
   let sum = 0;
-  for (let i = 0; i < numDigits; i+ +) {
-    const digit = parse!nt(numStr&lbrack;i&rbrack;, 10);
-    sum + = Math.pow(digit, numDigits);
+  for (let i = 0; i < numDigits; i++) {
+    const digit = parseInt(numStr[i], 10);
+    sum += Math.pow(digit, numDigits);
   }
   return sum === num;
 }
 // Example usage:
+<!--
 const testNumber = 1634;
 const result = isNarcissisticNumber(testNumber);
 console.log(`${testNumber} is a Narcissistic Number: ${result}`);
+1634 is a Narcissistic Number: true
+-->
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js112">js112. Count the Number of Consonants in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>You can create a JavaScript function to count the number of consonants in a given string.</p>
+<p>You can create a JavaScript function to <span class="consolas">count the number of consonants</span> 
+in a given string.</p>
 
 <pre>
 function countConsonants(str) {
@@ -16794,16 +16805,19 @@ function countConsonants(str) {
     return "Invalid input. Please provide a valid string.";
   }
   // Define a regular expression pattern for consonants
-  const consonantPattern = /&lbrack;bcdfghjklmnpqrstvwxyz&rbrack;/gi;
+  const consonantPattern = /[bcdfghjklmnpqrstvwxyz]/gi;
   // Use match() to find all consonants in the string
   const consonants = str.match(consonantPattern);
   // Return the count of consonants
   return consonants ? consonants.length: 0;
 }
 // Example usage:
-const teststring = "Hello World";
+<!--
+const testString = "Hello World";
 const result = countConsonants(testString);
 console.log(`The number of consonants in "${testString}" is: ${result}`);
+The number of consonants in "Hello World" is: 7
+-->
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js113">js113. Check if a Number is a Triangular Number</h2>
@@ -16830,9 +16844,12 @@ function isTriangularNumber(num) {
   return sum === num;
 }
 // Example usage:
+<!--
 const testNumber = 10;
 const result = isTriangularNumber(testNumber);
 console.log(`${testNumber} is a triangular number: ${result}`);
+10 is a triangular number: true
+-->
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js114">js114. Find the Area of a Trapezoid</h2>
