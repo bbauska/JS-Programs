@@ -14770,9 +14770,9 @@ shuffled order.</p>
 <pre>
 // Function to create a standard deck of cards
 function createDeck() {
-  const suits = &lbrack;"Hearts", "Diamonds", "Clubs", "Spades"&rbrack;;
-  const ranks = &lbrack;"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"&rbrack;;
-  let deck = &lbrack;&rbrack;;
+  const suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+  const ranks = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
+  let deck = [];
   for (let suit of suits) {
     for (let rank of ranks) {
       deck.push(`${rank} of ${suit}`);
@@ -14781,11 +14781,14 @@ function createDeck() {
   return deck;
 }
 
-// Function to shuffle the deck of cards
-function shuffledDeck(deck) {
-  for (let i = deck.length -1; i > 0; i-) {
-    const j = Math.floor(Math.random() * (i + 1));
-    &lbrack;deck&lbrack;i&rbrack;, deck&lbrack;j&rbrack;&rbrack; = &lbrack;deck&lbrack;j&rbrack;, deck&lbrack;i&rbrack;&rbrack;;  // Swap elements to shuffle
+//loops throug each card
+function shuffleDeck(deck) {
+  for (let i = 0; i < deck.length; i++) {
+    // picks the random number between 0 and length of the deck
+    let shuffle = Math.floor(Math.random() * (deck.length));
+    
+    //swap the current with a random position
+    [ deck[i], deck[shuffle] ] = [ deck[shuffle], deck[i] ];
   }
 }
 
@@ -14795,8 +14798,8 @@ console.log("Initial Deck:");
 console.log(initialDeck);
 
 // Shuffle the deck and display the shuffled deck
-const shuffledDeck = &lbrack;...initialDeck&rbrack;;  // Create a copy to avoid modifying the original
-shuffledDeck(shuffledDeck);
+const shuffledDeck = [...initialDeck];  // Create a copy to avoid modifying the original
+shuffleDeck(shuffledDeck);
 console.log("\nShuffled Deck:");
 console.log(shuffledDeck);
 </pre>
