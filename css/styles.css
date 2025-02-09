@@ -182,6 +182,7 @@ pre {
   padding:.5em 1em;
   white-space: pre-wraps;
   overflow-x: auto;
+  width: min-content; 
 }
 pre code,
 pre .line-number {
