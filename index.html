@@ -955,7 +955,7 @@ memory.</p>
 <p>The concepts of typing refer to how data types are managed and assigned in a language. 
 Here is a description of the different types of typing:</p>
 
-<p><b>Implicit Typing:</b> In Languages with implicit typing, a variable's data type is 
+<p><b>Implicit Typing:</b> In Languages with implicit typing, a variable&apos;s data type is 
 automatically determined based on the assigned value. No explicit type declaration is 
 needed.</p>
 
@@ -1018,7 +1018,7 @@ entertain(canary);  // Type doesn't matter, as long as it has the 'sing' method
 <h2 id="sk05">sk05. == vs === vs typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="gimme">==, ===, and typeof</span> are operators used to compare values 
-and retrieve information about data types. Here's an explanation of each:</p>
+and retrieve information about data types. Here&apos;s an explanation of each:</p>
 
 <p><b>==  (Weak Equality):</b> The == operator compares two values for equality but 
 performs type conversion if the values are of different types. This is called "weak 
@@ -1050,7 +1050,7 @@ typeof true;  // "boolean"
 <p>It is important to understand the difference between <b>== and ===</b> to avoid 
 unexpected comparison issues due to automatic type conversion. The use of <b>===</b> 
 is generally safer and recommended as it provides more accurate comparisons and avoids 
-surprises in your program's behavior.</p>
+surprises in your program&apos;s behavior.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk06">sk06. Function Scope, Block Scope, and Lexical Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1150,7 +1150,7 @@ for (let i = 0; i < 5; i++) {
 </ul>
 
 <p>An important distinction is that expressions have a resulting value, while statements 
-can change the program's execution flow or perform operations without necessarily 
+can change the program&apos;s execution flow or perform operations without necessarily 
 returning a value. Both concepts are essential for writing coherent and effective code in 
 any programming language.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1418,7 +1418,7 @@ performance optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM (Document Object Model) is a structural representation of an
 HTML or XML document that allows interaction and manipulation of a
-web page's content and structure through programming. The DOM
+web page&apos;s content and structure through programming. The DOM
 organizes document elements into a hierarchical structure called the
 documenttree.</p>
 
@@ -1537,7 +1537,7 @@ working with inheritance and similar objects.</p>
 <h2 id="sk15">sk15. this, call, apply, and bind</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>this, call, apply, and bind are concepts and methods in JavaScript related
-to managing the value of this in the context of a function. Here's a
+to managing the value of this in the context of a function. Here&apos;s a
 description of each of them:</p>
 
 <p><b>this:</b> In JavaScript, this refers to the object that is the current "execution
@@ -1652,7 +1652,7 @@ between objects.</p>
 mechanism by which an object can inherit properties and methods from
 another object called its "prototype." Instead of traditional classes,
 JavaScript uses prototypal inheritance to create relationships between
-objects. When a property or method is looked up in an object, if it's not
+objects. When a property or method is looked up in an object, if it&apos;s not
 found in the object itself, it is searched in its prototype and in the
 ascending prototype chain.</p>
 
@@ -1714,7 +1714,7 @@ used for working with objects, but they serve different purposes.</p>
 
 <p><b>Object.create:</b> Object.create is a method used to create a new object and
 set its prototype (parent object). It allows creating objects that inherit
-properties and methods from another object It's especially useful for
+properties and methods from another object. It&apos;s especially useful for
 implementing prototypal inheritance in JavaScript.</p>
 
 <pre>const newObj = Object.create(prototype);</pre>
@@ -1736,7 +1736,7 @@ dog.makeSound();  // Prints "Woof woof"
 <p><b>Object.assign:</b> Object.assign is a method used to copy enumerable
 properties from one or more source objects to a target object If there are
 properties with the same name in the target object they will be
-overwritten. It's usefulfor combining objects or cloning objects.</p>
+overwritten. It&apos;s usefulfor combining objects or cloning objects.</p>
 
 <pre>Object.assign(targetObject, sourceObjectl, sourceObject2, ...);</pre>
 
@@ -1805,7 +1805,7 @@ const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
 <h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event Propagation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These concepts are related to functional programming, data manipulation, and 
-interaction in JavaScript Here's an explanation of each one:</p>
+interaction in JavaScript Here&apos;s an explanation of each one:</p>
 
 <p><b>Pure Functions:</b> Pure functions are functions that produce the same
 result for the same arguments and have no side effects on the
@@ -1846,7 +1846,7 @@ applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">sk21. Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Closures are an important concept in programming, referring to a function's ability 
+<p>Closures are an important concept in programming, referring to a function&apos;s ability 
 to access and remember variables from its lexical scope even after that function has 
 finished execution and Left that scope. Closures enable the creation of functions that 
 maintain access to variables even when they are no Longer in the scope of the function 
@@ -1998,7 +1998,7 @@ into smaller, more manageable problems until it reaches a base case that
 can be solved directly. Recursion is particularly useful for solving problems
 that have an intrinsic recursive structure.</p>
 
-<p>Here's a simple example of a recursive function that calculates the
+<p>Here&apos;s a simple example of a recursive function that calculates the
 factorial of a number:</p>
 
 <pre>
@@ -2016,19 +2016,19 @@ const result = factorial(5);  // Result: 120 (5 * 4 * 3 * 2 * 1)
 <p>In this example, the factorial function calls itself with a reduced argument
 in each call until it reaches the base case, where the result is returned.
 Recursion can also have side effects, such as the use of the call stack, so
-it's essential to ensure a clear base case and that recursion converges
+it&apos;s essential to ensure a clear base case and that recursion converges
 toward it.</p>
 
 <p>Some classic problems solved with recursion include multiplication 
 calculations (factorials, Fibonacci numbers), tree and graph traversal, and
-divide and conquer in algorithms. However, it's crucial to use recursion
+divide and conquer in algorithms. However, it&apos;s crucial to use recursion
 carefully, as improper use can lead to performance issues and stack
 overflow errors.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk24">sk24. Collections and Generators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Collections and generators are important concepts in JavaScript that help
-handle and manipulate sets of data efficiently and flexibly. Here's a
+handle and manipulate sets of data efficiently and flexibly. Here&apos;s a
 description of both:</p>
 
 <p><b>Collections:</b> Collections are data structures that allow storing and
@@ -2170,7 +2170,7 @@ that looks synchronous but efficiently handles asynchronous operations.</p>
 
 <p><b>Async Functions:</b> A function declared with the async keyword automatically returns a 
 promise. You can use the await keyword within an async function to wait for the 
-resolution of a promise without blocking the main thread's execution.</p>
+resolution of a promise without blocking the main thread&apos;s execution.</p>
 
 <pre>
 async function fetchDataQ 1
@@ -2187,7 +2187,7 @@ fetchData()
 <p>In this example, fetchData is an asynchronous function that waits for the
 response of an API request and then awaits the conversion of that
 response into a JSON object The code looks like a synchronous flow, even
-though it's handling asynchronous operations.</p>
+though it&apos;s handling asynchronous operations.</p>
 
 <p><b>Error Handling:</b> You can use the try/catch block with async/await to
 handle errors more naturally.</p>
@@ -2219,7 +2219,7 @@ async function fetchAndProcessData() {
 <p>async/await is a powerful and elegant way to handle asynchronous
 operations in JavaScript Although it is newer than promises, it has gained
 popularity due to its simpler and easier-to-understand syntax. However,
-it's essential to remember that async/await still relies on underlying
+it&apos;s essential to remember that async/await still relies on underlying
 promises, so understanding how promises work is crucial to make the
 most out of asy nc/await.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2324,7 +2324,7 @@ algorithms based on the input.</p>
 
 <p>Choosing efficient algorithms and data structures is crucial to minimize
 costly operations. In many cases, algorithms with lower Big 0 notations
-are sought to improve performance. However, it's essential to consider
+are sought to improve performance. However, it&apos;s essential to consider
 context and other factors that may influence the choice of the right
 algorithm.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2540,7 +2540,7 @@ well-known design patterns:</p>
 <p>Each of these patterns has its own purpose and context of use. By understanding and 
 applying the appropriate design patterns, you can enhance the quality, maintainability, 
 and scalability of your applications.</p>
-<p>However, it's important to note that not all patterns are applicable in every situation, 
+<p>However, it&apos;s important to note that not all patterns are applicable in every situation, 
 and evaluating the suitability of a pattern for the specific problem you're facing is 
 crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2682,7 +2682,7 @@ try {
 }
 </pre>
 
-<p>Here's a more detailed explanation:</p>
+<p>Here&apos;s a more detailed explanation:</p>
 <ul>
   <li>The try block contains the code where an error might occur.</li>
   <li>If an error occurs within the try block, the control flow moves to the catch block.</li>
@@ -2702,7 +2702,7 @@ try {
 <p>In this example, if the divide function throws an error while attempting to divide by 
 zero, the catch block will capture the error and display an error message.</p>
 
-<p>It's important to note that you shouldn't use try...catch to control normal program 
+<p>It&apos;s important to note that you shouldn't use try...catch to control normal program 
 flows but to handle exceptional situations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk35">sk35. ES6 Modules</h2>
@@ -2711,7 +2711,7 @@ flows but to handle exceptional situations.</p>
 organizing and structuring code into smaller, reusable units.<br>
 Modules provide a mechanism for exporting and importing functionality between different 
 JavaScript files, making it easier to separate concerns and build more maintainable 
-applications. Here's an overview of how ES6 modules work:</p>
+applications. Here&apos;s an overview of how ES6 modules work:</p>
 
 <p><b>Export from a Module:</b> You can export values, functions, and classes from a 
 module using the export keyword.</p>
@@ -2949,7 +2949,7 @@ This enables the interpolation of variables and expressions directly into the st
 well as the inclusion of Line breaks and special characters without the need for manual 
 concatenation.</p>
 
-<p><b>Here's a basic example of how template literals work:</b></p>
+<p><b>Here&apos;s a basic example of how template literals work:</b></p>
 
 <pre>
 const name = 'Juan';
@@ -2992,7 +2992,7 @@ string concatenation, which can be error-prone and confusing.</p>
 provide a more concise and clear syntax for defining functions in
 JavaScript Arrow functions are especially useful when working with
 anonymous functions or functions that do not require a special this
-context Here's an overview of how arrow functions are used:</p>
+context Here&apos;s an overview of how arrow functions are used:</p>
 
 <p><b>Basic Syntax:</b> An arrow function is defined using the syntax 0 =>
 where the parentheses contain the function parameters, and the arrow
@@ -3055,7 +3055,7 @@ person.greet();  // Prints "Hello, I am John" after 1 second
 
 <p>In summary, arrow functions provide a more concise and convenient way
 to define functions in JavaScript, especially in situations where you aim to
-simplify syntax and maintain predictable this behavior. However, it's
+simplify syntax and maintain predictable this behavior. However, it&apos;s
 essential to understand their differences from regular functions, especially
 when dealing with more complex this contexts.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3348,7 +3348,7 @@ const properties = Object.getOwnPropertyNames(object);
 <p>The Math object in JavaScript provides a variety of methods and properties for 
 mathematical operations and numerical calculations.</p>
 
-<p>Here's a description of some ofthe most common methods of Math:</p>
+<p>Here&apos;s a description of some ofthe most common methods of Math:</p>
 
 <p><b>Math.floor(x):</b> The floor method rounds a number down to the nearest
 integer.</p>
@@ -3772,7 +3772,7 @@ to provide in your web application.</p>
 <p>Jest and Mocha are two popular frameworks for unit and integration
 testing in JavaScript Both allow for automated testing to ensure that the
 code functions correctly and behaves as expected. However, they have
-some differences in terms of their approach and features. Here's a
+some differences in terms of their approach and features. Here&apos;s a
 description of each:</p>
 
 <p><b>Jest:</b> Jest is a testing framework developed by Facebook. It is designed to
@@ -3798,7 +3798,7 @@ own test runner, meaning you don't need to set up an additional runner.</p>
     specific tools for component testing.</li>
 </ul>
 
-<p><b>Example with Jest:</b> Let's assume we want to test a simple function that adds two 
+<p><b>Example with Jest:</b> Let&apos;s assume we want to test a simple function that adds two 
 numbers:</p>
 
 <pre>
@@ -3821,7 +3821,7 @@ test('Correctly adds negative numbers', () => {
 });
 </pre>
 
-<p>In this example, we are using Jest for testing along with Jest's built-in
+<p>In this example, we are using Jest for testing along with Jest&apos;s built-in
 assertions. In the second example, we use Mocha, Chai for assertions, and
 Sinon for HTTP request mocking.</p>
 
@@ -3843,7 +3843,7 @@ conjunction with libraries like Chai (for assertions) and Sinon (for mocking).</
     libraries by default, providing more control but requiring more configuration.</li>
 </ul>
 
-<p><b>Example with Mocha, Chai, and Sinon:</b> Let's assume we want to test a
+<p><b>Example with Mocha, Chai, and Sinon:</b> Let&apos;s assume we want to test a
 function that makes a simulated HTTP request using Sinon:</p>
 
 <pre>
@@ -6334,7 +6334,7 @@ on a single line.</p>
   });
 &lt;/script&gt;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="el48">el48. HTTP and Forms: Conway's Game of Life</h2>
+<h2 id="el48">el48. HTTP and Forms: Conway&apos;s Game of Life</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To solve the problem of having the changes conceptually happen at the same
 time, try to see the computation of a generation as a pure function, which takes
@@ -8268,7 +8268,7 @@ numbers.forEach(number => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex26">ex26. JS Array Const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Arrays declared with const</span> can't be reassigned but their 
+<p><span class="consolas">Arrays declared with const</span> can&apos;t be reassigned but their 
 elements can be modified.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Array Const:</h3>
@@ -9186,7 +9186,7 @@ let greet = () => {
 <h2 id="ex77">ex77. JS Function Parameters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="consolas">Function parameters</span> are <b>placeholders for values</b> that 
-a function will receive when it's called.</p>
+a function will receive when it&apos;s called.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Parameters Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9719,7 +9719,7 @@ console.log(document.URL);  // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<p>This comprehensive guide covers JavaScript's HTML DOM, including an introduction to 
+<p>This comprehensive guide covers JavaScript&apos;s HTML DOM, including an introduction to 
 the DOM, methods, document, elements, HTML, forms, CSS, animations, events, event 
 listeners, navigation, nodes, collections, and node lists, with examples and explanations 
 for each topic.</p>
@@ -9731,7 +9731,7 @@ components.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Window</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The window object is the global object in a browser's JavaScript environment.</p>
+<p>The window object is the global object in a browser&apos;s JavaScript environment.</p>
 <h4>Accessing Window Properties:</h4>
 <pre>
 console.log(window.innerHeight);  // Output: Inner height of the window
@@ -10578,7 +10578,7 @@ parse and generate. It is commonly used to transmit data between a server and a 
 <h3>JSON Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JSON serves as a language - independent data format derived from JavaScript object 
-literals. It's widely used for data exchange between <b>web servers</b> and <b>web clients</b>.</p>
+literals. It&apos;s widely used for data exchange between <b>web servers</b> and <b>web clients</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Example of JSON Data:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11031,7 +11031,7 @@ differences, capabilities, and usage scenarios is crucial for developers.</p>
 <h3>JavaScript Overview</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript is a versatile programming language primarily used for enhancing 
-interactivity on web pages. It's a core technology in web development, enabling dynamic 
+interactivity on web pages. It&apos;s a core technology in web development, enabling dynamic 
 content updates, user interactions, and handling client-side functionalities.</p>
 
 <h4>Example of JavaScript Functionality:</h4>
@@ -11122,7 +11122,7 @@ $("ul").append("&lt;li&gt;New Item&lt;/li&gt;");
 $("#content").text("Updated content");
 </pre>
 
-<p>With jQuery's methods like append, html, text, and remove, developers can efficiently
+<p>With jQuery&apos;s methods like append, html, text, and remove, developers can efficiently
 modify HTML content on the fly.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>jQuery CSS Manipulation</h3>
@@ -11140,7 +11140,7 @@ $("#toggleBtn").click(function() {
 });
 </pre>
 
-<p>jQuery's css, addClass, removeclass, and toggleClass methods simplify applying, 
+<p>jQuery&apos;s css, addClass, removeclass, and toggleClass methods simplify applying, 
 removing, and toggling CSS styles.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>jQuery DOM Traversal</h3>
@@ -11167,7 +11167,7 @@ ways to navigate and manipulate elements within the DOM.</p>
 JavaScript is the foundation language that provides extensive capabilities for building 
 complex applications. jQuery, as a library built on JavaScript, simplifies common tasks, 
 particularly DOM manipulation, offering a more concise syntax. For modern development, 
-JavaScript's native features are often preferred due to advancements in web standards, 
+JavaScript&apos;s native features are often preferred due to advancements in web standards, 
 while jQuery remains relevant for legacy projects or when compatibility with older 
 browsers is a concern. Understanding both JavaScript and jQuery empowers developers 
 to choose the right tool for the job and build robust, interactive web applications.</p>
@@ -12247,7 +12247,7 @@ let emailPattern = / A [ A\s@ ]+ @ [ A\s@ ]+ \ .[ A\s@ ]+ $ /;
 let isValidEmail = emailPattern.test('test@example.com');  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>These examples delve deeper into JavaScript's functionalities, including advanced 
+<p>These examples delve deeper into JavaScript&apos;s functionalities, including advanced 
 functions, array and object manipulation, iteration methods, async operations, DOM 
 manipulation, and newer ES6 + features.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13083,7 +13083,7 @@ const isEvenPresent = numbers.some(num => num % 2 === 0);  // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>5. Using Object.keys to Get Object's Own Properties:</h4>
+<h4>5. Using Object.keys to Get Object&apos;s Own Properties:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const obj = {a: 1,b: 2,c: 3);
@@ -13935,7 +13935,7 @@ full-screen mode functionality.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Installing JavaScript:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript is an interpreted programming language that runs in web browsers. As it's 
+<p>JavaScript is an interpreted programming language that runs in web browsers. As it&apos;s 
 not a separate entity that needs to be installed, you don't install JavaScript itself; 
 instead, you work with JavaScript within environments that support its execution, such 
 as web browsers and server-side platforms like Node.js.</p>
@@ -13962,7 +13962,7 @@ managing dependencies.</p>
 <p><b>JavaScript (ES6) Code Snippets:</b> Provides handy code snippets for JavaScript 
 development. Search for it in the Extensions tab in VS Code and install it.</p>
 <p><b>Prettier - Code formatter:</b> For auto-formatting your code according to 
-predefined rules. It's optional but highly recommended.</p>
+predefined rules. It&apos;s optional but highly recommended.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a JavaScript Project:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13998,7 +13998,7 @@ sidebar).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Conclusion:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>That's a basic setup to start coding in JavaScript with Visual Studio Code. Remember, 
+<p>That&apos;s a basic setup to start coding in JavaScript with Visual Studio Code. Remember, 
 JavaScript development often involves web development, where you'll need to write 
 JavaScript code within HTML I CSS files. For web-based development, you'd generally use 
 VS Code to manage the entire project structure. Additionally, for more advanced 
@@ -15447,7 +15447,7 @@ if (isLeapYear(yearToCheck)) {
 <p>Formatting a date in JavaScript typically involves using the 
 <span class="consolas">toLocaleDateString()</span> method or constructing a
 formatted string manually. The <span class="consolas">toLocaleDateString()</span> method 
-provides a way to format a date based on the user's locale, including options for 
+provides a way to format a date based on the user&apos;s locale, including options for 
 formatting the date, such as specifying the date style and time zone.</p>
 
 <pre>
@@ -16565,7 +16565,7 @@ console.log("Intersection of Arrays:", result);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>To convert feet to meters in JavaScript, you can use the following conversion formula:
 <span class="consolas">Meters=Feet*0.3048</span>.</p>
-<p>Here's a simple function that performs the conversion:</p>
+<p>Here&apos;s a simple function that performs the conversion:</p>
 
 <pre>
 function feetToMeters(feet) {
@@ -17129,9 +17129,9 @@ const result = areAnagrams(string1, string2);
 console.log(`${string1} and ${string2} are anagrams: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js120">js120. Generate Pascal's Triangle</h2>
+<h2 id="js120">js120. Generate Pascal&apos;s Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Pascal's Triangle is a triangular array of binomial coefficients. Each number in the 
+<p>Pascal&apos;s Triangle is a triangular array of binomial coefficients. Each number in the 
 triangle is the sum of the two directly above it.</p>
 
 <pre>
@@ -17244,7 +17244,7 @@ console.log(`The area of the parallelogram is: ${areaResult}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js123">js123. Basic Rock, Paper, Scissors Game</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Here's a basic implementation of a Rock, Paper, Scissors game using JavaScript.</p>
+<p>Here&apos;s a basic implementation of a Rock, Paper, Scissors game using JavaScript.</p>
 
 <pre>
 function computerPlayO {
@@ -18050,12 +18050,12 @@ game.makeGuess('u');
 game.makeGuess('s');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js143">js143. Calculate the Euler's Totient Function</h2>
+<h2 id="js143">js143. Calculate the Euler&apos;s Totient Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program calculates Euler's Totient Function, also known as Euler's Phi Function, 
+<p>This program calculates Euler&apos;s Totient Function, also known as Euler&apos;s Phi Function, 
 which counts the positive integers up to a given integer 
 <span class="consolas">n</span> that are relatively prime to 
-<span class="consolas">n</span>. The formula for Euler's Totient Function is: 
+<span class="consolas">n</span>. The formula for Euler&apos;s Totient Function is: 
 <span class="consolas">&#934;(n) = n * (1 - 1/pl) * (1 - l/p2) * ... * 
 (1 - 1/pk)</span>, where pl, p2,..., pk are the distinct prime factors of 
 <span class="consolas">n</span>.</p>
@@ -18083,9 +18083,9 @@ function eulerTotientFunction(n) {
 }
 
 // Example usage
-const n = 12;  // Replace with the positive integer for which you want to calculate Euler's Totient Function
+const n = 12;  // Replace with the positive integer for which you want to calculate Euler&apos;s Totient Function
 const result = eulerTotientFunction(n);
-console.log(' Euler's Totient Function for ${n} is: $ {result}');
+console.log(' Euler&apos;s Totient Function for ${n} is: $ {result}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js144">js144. Basic Memory Matching Game</h2>
@@ -18605,7 +18605,7 @@ its base sides (<span class="consolas">a , b , and c</span>) and the height of t
 is <span class="consolas">Surface Area = (Perimeter of the base * Height) + 
 (2 * Area of the base)</span>, where the perimeter of the base is 
 <span class="consolas">Perimeter = a + b + c</span> and the area of the base is calculated using 
-Heron's formula.</p>
+Heron&apos;s formula.</p>
 
 <pre>
 function calculateTriangularPrismSurfaceArea(a, b, c, height) {
@@ -21698,9 +21698,9 @@ console.log(isHarshadNumber(21));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This function performs the conversion of a binary number to its equivalent
 decimal representation, all without utilizing the parseInt function. The
-process involves splitting the binary number's digits, reversing them, and
+process involves splitting the binary number&apos;s digits, reversing them, and
 using a reduce operation to calculate the decimal value by considering each
-digit's position and value.</p>
+digit&apos;s position and value.</p>
 
 <pre>
 const binaryToDecimalWithoutParseInt = (binary) =>
@@ -21876,7 +21876,7 @@ console.log(fibonacci(7));  // Output: 13
 <p>The countWords function determines the number of words in a given string.
 It accomplishes this by splitting the string using a regular expression that
 matches one or more whitespace characters, and then counting the resulting
-array's length.</p>
+array&apos;s length.</p>
 
 <pre>
 const countWords = (str) => str.split(/\s+/).length;
@@ -21976,7 +21976,7 @@ console.log(firstNonRepeatedChar('abacabad'));  // Output: "c"
 <h2 id="js-123">js-123. Sort an Array of Objects by a Property Value</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The sortByProperty function arranges an array of objects based on a
-specified property's value. It employs the sort method with a custom
+specified property&apos;s value. It employs the sort method with a custom
 comparison function that compares the property values of two objects.</p>
 
 <pre>
