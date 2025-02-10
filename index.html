@@ -14535,7 +14535,7 @@ if (!isNaN(numl) && !isNaN(num2)) {
 <p>This program calculates the <span class="consolas">sum of natural numbers</span> up to a given 
 positive integer <span class="consolas">n</span>. 
 The sum is calculated using the formula: 
-<span class="consolas">sum = n*(n + l) / 2</span>.</p>
+<span class="consolas">sum = n*(n + 1) / 2</span>.</p>
 
 <pre>
 // Prompt user for a positive integer
@@ -14890,10 +14890,10 @@ function to generate and display the Fibonacci sequence.</p>
 <pre>
 // Function to generate the Fibonacci sequence using recursion
 function fibonacci(n) {
-  if(n &lt;= l){
+  if(n &lt;= 1){
     return n;
   } else {
-    return fibonacci(n -1) + fibonacci(n - 2);
+    return fibonacci(n - 1) + fibonacci(n - 2);
   }
 }
 
@@ -17614,7 +17614,7 @@ function solveSudoku(board) {
   const &lbrack;row, col&rbrack; = emptyCell;
 
   // Try filling the empty cell with numbers 1 to 9
-  for (let num = l; num &lt;= 9; num++) {
+  for (let num = 1; num &lt;= 9; num++) {
     if (isSafe(board, row, col, num)) {
       // If placing 'num' in the current cell is safe, try the next step
       board&lbrack;row&rbrack;&lbrack;col&rbrack; = num;
@@ -17750,7 +17750,7 @@ console.log(`The area of the rhombus is: ${rhombus Area.toFixed(2)`);
 <p>This program checks if a given non-negative integer is a Catalan number. Catalan 
 numbers are a sequence of natural numbers that occur in various counting problems, 
 often involving recursive structures. The nth Catalan number is given by the formula:
-<span class="consolas">Cn = (2n)!/((n + l)! * n!)</span>.</p>
+<span class="consolas">Cn = (2n)!/((n + 1)! * n!)</span>.</p>
 
 <pre>
 // Function to calculate binomial coefficient (n choose k)
@@ -18062,7 +18062,7 @@ game.makeGuess('s');
 which counts the positive integers up to a given integer 
 <span class="consolas">n</span> that are relatively prime to 
 <span class="consolas">n</span>. The formula for Euler&apos;s Totient Function is: 
-<span class="consolas">&#934;(n) = n * (1 - 1/pl) * (1 - l/p2) * ... * 
+<span class="consolas">&#934;(n) = n * (1 - 1/ pl) * (1 - 1/ p2) * ... * 
 (1 - 1/pk)</span>, where pl, p2,..., pk are the distinct prime factors of 
 <span class="consolas">n</span>.</p>
 
@@ -18886,13 +18886,13 @@ towerOfHanoi(numberOfDisks, sourcePeg, auxiliaryPeg, targetPeg);
 top and bottom bases (<span class="consolas">r1</span> and 
 <span class="consolas">r2</span>) and the slant height 
 (<span class="consolas">l</span>). The formula for the surface area of a frustum of a cone 
-is <span class="consolas">Surface Area = &pi; * (rl + r2) * l + &pi; * rl^2 
+is <span class="consolas">Surface Area = &pi; * (rl + r2) * 1 + &pi; * rl^2 
 + &pi; * r2^2</span>, where <span class="consolas">&pi;</span> is the mathematical 
 constant Pi.</p>
 
 <pre>
 function surfaceAreaOfFrustum(rl, r2, l) {
-  const surfaceArea = Math.PI * (rl + r2) * l + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
+  const surfaceArea = Math.PI * (rl + r2) * 1 + Math.PI * rl ** 2 + Math.PI * r2 ** 2;
   console.log(`Surface Area of the frustum is: ${surfaceArea}`);
 }
 
@@ -19359,7 +19359,7 @@ textBasedCalculator(userInput);
 function generateNumberPyramid(height) {
   for (let i = 1; i &lt;= height; i++) {
     const spaces = ''.repeat(height - i);
-    const numbers = Array.from({length: i}, (_, index) => index + l).join(' ');
+    const numbers = Array.from({length: i}, (_, index) => index + 1).join(' ');
     console.log(spaces + numbers);
   }
 }<br>
@@ -19377,7 +19377,7 @@ generateNumberPyramid(pyramidHeight);
 function generateDiamondPattern(height) {
   const midpoint = Math.ceil(height / 2);
   
-  for (let i = l;i &lt;= height; i++) {
+  for (let i = 1;i &lt;= height; i++) {
     const spaces = Math.abs(midpoint - i);
     const stars = '*'.repeat(height - 2 * spaces);
     console.log(''.repeat(spaces) + stars);
@@ -19673,7 +19673,7 @@ function fibonacciNumberGenerator() {
 
   let fibonacciNumbers = &lbrack;0, 1&rbrack;;
 
-  for (let i = 2; i &lt;= limit; i+ +) {
+  for (let i = 2; i &lt;= limit; i++) {
    fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibonacciNumbers&lbrack;i - 2&rbrack;;
   }
 
@@ -23230,7 +23230,7 @@ const rgbToHSL = (r, g, b) => {
   const &lbrack;max, min&rbrack; = &lbrack;Math.max(r, g, b), Math.min(r, g, b)&rbrack;;
   let h = (max !== min) ? ((max === r ? g - b : (max === g ? b - r : r - g)) /
   (max - min) + (max === g ? 2 : (max === b ? 4 : 0))) / 6 : 0;
-  let s = (max !== min) ? (l => l > 0.5 ? (max - min) / (2 - max - min) : (max - min) / (max + min))(l) : 0;
+  let s = (max !== min) ? (l => 1 > 0.5 ? (max - min) / (2 - max - min) : (max - min) / (max + min))(l) : 0;
   let l = (max + min) / 2;
   return { h: Math.round(h * 360), 
     s: Math.round(s * 100), 
