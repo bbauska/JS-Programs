@@ -1285,12 +1285,12 @@ in a loop until explicitly stopped.</p>
 <pre>
 let counter = 0;
 
-let interval = setlnterval(function() {
+let interval = setInterval(function() {
   console.log("Counter:", counter);
   counter++;
 
   if (counter > 5) {
-    clearlnterval(interval);  // Stop the interval after 5 times
+    clearInterval(interval);  // Stop the interval after 5 times
   }
 }, 1000);
 </pre>
@@ -20468,6 +20468,7 @@ corresponding hexadecimal representation.</p>
 const rgbToHex = (r, g, b) =&gt; 
   "#" + ((1 &lt;&lt; 24) + (r &lt;&lt; 16) + (g &lt;&lt; 8) + b).toString(16).slice(1);
 
+// Example usage
 rgbToHex(0, 51, 255);  // Result: #0033ff = pure blue
 rgbToHex(255, 0, 17);  // Result: #ff0011 = pure red
 </pre>
@@ -20521,6 +20522,7 @@ const copyToClipboard = str => {
 <pre>
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 
+// Example usage
 isDateValid("January 12, 2025 08:24:00");  // Result: true
 isDateValid("January 32, 2025 08:24:00");  // Result: false
 </pre>
@@ -20533,6 +20535,7 @@ isDateValid("January 32, 2025 08:24:00");  // Result: false
 const dayOfYear = (date) =>
   Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
+// Example usage
 dayOfYear(new Date());  // Result: Current day of year
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20544,6 +20547,7 @@ following code for the purpose.</p>
 <pre>
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
+// Example usage
 capitalize("follow for more")  // Result: 'Follow for more'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20555,6 +20559,7 @@ capitalize("follow for more")  // Result: 'Follow for more'
 const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() -
   date2.getTime()) / 86400000)
 
+// Example usage
 dayDif(new Date("2025-10-21"), new Date("2025-11-22"))  // Result: 32
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20575,6 +20580,7 @@ const clearCookies = document.cookie.split(';').forEach(cookie =>
 <pre>
 const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
 
+// Example usage
 console.log(randomHex());  // Result: #92b008, different each time.
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20590,6 +20596,7 @@ const getParameters = (URL) => {
   return JSON.stringify(URL);
 };
 
+// Example usage
 getParameters(window.location)  // Result: {search : "easy", page: 3}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20599,6 +20606,8 @@ getParameters(window.location)  // Result: {search : "easy", page: 3}
 
 <pre>
 const timeFromDate = date => date.toTimeString().slice(0, 8);
+
+// Example usage
 console.log(timeFromDate(new Date(2025, 0, 10, 17, 30, 0)));  // Result: "17:30:00"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20609,6 +20618,8 @@ takes a "num" as input and returns true if even, false if odd.</p>
 
 <pre>
 const isEven = num => num % 2 === 0;
+
+// Example usage
 console.log(isEven(2));  // Result: True
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20618,6 +20629,8 @@ console.log(isEven(2));  // Result: True
 
 <pre>
 const average = (...args) => args.reduce((a, b) => a + b) / args.length;
+
+// Example usage
 average(1, 2, 3, 4);  // Result: 2.5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20637,6 +20650,8 @@ goToTop();
 
 <pre>
 const reverse = str => str.split('').reverse().join('');
+
+// Example usage
 reverse('hello world');  // Result: 'dlrow olleh'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20646,6 +20661,8 @@ reverse('hello world');  // Result: 'dlrow olleh'
 
 <pre>
 const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
+
+// Example usage
 isNotEmpty(&lbrack;1, 2, 3&rbrack;);  // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20655,6 +20672,8 @@ isNotEmpty(&lbrack;1, 2, 3&rbrack;);  // Result: true
 
 <pre>
 const getSelectedText = () => window.getSelection().toString();
+
+// Example usage
 getSelectedText();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20664,6 +20683,8 @@ getSelectedText();
 
 <pre>
 const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
+
+// Example usage
 console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;));  // Result: &lbrack; 1, 4, 3, 2 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20674,6 +20695,8 @@ console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;));  // Result: &lbrack; 1, 4
 <pre>
 const isDarkMode = window.matchMedia &&
 window.matchMedia('(prefers-color-scheme: dark)').matches
+
+// Example usage
 console.log(isDarkMode)  // Result: True or False
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20683,6 +20706,8 @@ console.log(isDarkMode)  // Result: True or False
 
 <pre>
 const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
+
+// Example usage
 console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));  // Result: &lbrack; 1, 2, 3, 4, 5, 6 &rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20692,6 +20717,8 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));  // Re
 
 <pre>
 const getLength = (str) => str.length;
+
+// Example usage
 getLength("Hello, world!");  // Result: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20701,6 +20728,8 @@ getLength("Hello, world!");  // Result: 13
 
 <pre>
 const calculateCircleArea = (radius) => Math.PI * Math.pow(radius, 2);
+
+// Example usage
 calculateCircleArea(5);  // Result: 78.53981633974483
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20717,6 +20746,7 @@ const isPrime = (num) => {
   return true;
 };
 
+// Example usage
 isPrime(13);  // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20727,6 +20757,7 @@ isPrime(13);  // Result: true
 <pre>
 const countOccurrences = (str, char) => str.split(char).length - 1;
 
+// Example usage
 countOccurrences("banana", "a");  // Result: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20737,6 +20768,7 @@ countOccurrences("banana", "a");  // Result: 3
 <pre>
 const removeWhitespaces = (str) => str.trim();
 
+// Example usage
 removeWhitespaces(" Hello, world! ");  // Result: "Hello, world!"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20747,6 +20779,7 @@ removeWhitespaces(" Hello, world! ");  // Result: "Hello, world!"
 <pre>
 const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+// Example usage
 randomInRange(1, 10);  // Result: Random number between 1 and 10 (inclusive)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20756,14 +20789,16 @@ randomInRange(1, 10);  // Result: Random number between 1 and 10 (inclusive)
 
 <pre>
 const secondsToHHMMSS = (seconds) => {
-const pad = (num) => String(num).padStart(2, '0');
-const hours = Math.floor(seconds / 3600);
-const minutes = Math.floor((seconds % 3600) / 60);
-const secs = seconds % 60;
-return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
+  const pad = (num) => String(num).padStart(2, '0');
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const secs = seconds % 60;
+  return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
 };
 
+// Example usage
 secondsToHHMMSS(3660);  // Result: "01:01:00"
+secondsToHHMMSS(5000);  // Result: "01:23:20"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-29">js-29. Get the Last Element of an Array</h2>
@@ -20773,6 +20808,7 @@ secondsToHHMMSS(3660);  // Result: "01:01:00"
 <pre>
 const getLastElement = (arr) => arr&lbrack;arr.length - 1&rbrack;;
 
+// Example usage
 getLastElement(&lbrack;1, 2, 3, 4&rbrack;);  // Result: 4
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20783,8 +20819,8 @@ getLastElement(&lbrack;1, 2, 3, 4&rbrack;);  // Result: 4
 <pre>
 const sortAscending = (arr) => arr.slice().sort((a, b) => a - b);
 
-sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;); 
-// Result: &lbrack;1, 1, 2, 3, 3, 4, 5, 5, 6, 9&rbrack;
+// Example usage
+sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;);  // Result: &lbrack;1, 1, 2, 3, 3, 4, 5, 5, 6, 9&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-31">js-31. Check if a String is Palindrome</h2>
@@ -20794,6 +20830,7 @@ sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;);
 <pre>
 const isPalindrome = (str) => str === str.split('').reverse().join('');
 
+// Example usage
 isPalindrome("level");  // Result: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20807,6 +20844,7 @@ const factorial = (num) => {
   return num * factorial(num - 1);
 };
 
+// Example usage
 factorial(5);  // Result: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20817,6 +20855,7 @@ factorial(5);  // Result: 120
 <pre>
 const sumArray = (arr) => arr.reduce((acc, val) => acc + val, 0);
 
+// Example usage
 sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;);  // Result: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20844,8 +20883,16 @@ const getCurrentDate = () => {
   return `${day}/${month}/${year}`;
 };
 
+<!-- Another current date -->
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '/' + dd + '/' + yyyy;
+
 // Example usage
-getCurrentDate();  // Result: "12/01/2025"
+getCurrentDate();  // Result: "10/02/2025"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-36">js-36. Calculate the Power of a Number</h2>
@@ -20857,8 +20904,6 @@ const power = (base, exponent) => Math.pow(base, exponent);
 
 // Example usage
 power(2, 5);  // Result: 32
-
-// Example usage
 power(17, 5);  // Result: 1419857
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21139,6 +21184,7 @@ console.log(truncateString("Hello, world!", 5));  // Output: "Hello..."
 <pre>
 const exponentiate = (base, exponent) => Math.pow(base, exponent);
 
+// Example usage
 console.log(exponentiate(2, 3));  // Output: 8
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21152,6 +21198,7 @@ const dateDifferenceInDays = (date1, date2) =>
 const startDate = new Date("2023-08-01");
 const endDate = new Date("2023-08-10");
 
+// Example usage
 console.log(dateDifferenceInDays(startDate, endDate));  // Output: 9
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21200,6 +21247,7 @@ console.log(isFunction({}));  // Output: false
 <pre>
 const binaryToDecimal = (binary) => parseInt(binary, 2);
 
+// Example usage
 console.log(binaryToDecimal("1101"));  // Output: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21210,10 +21258,9 @@ console.log(binaryToDecimal("1101"));  // Output: 13
 <pre>
 const hasUniqueValues = (arr) => new Set(arr).size === arr.length;
 
-console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 5&rbrack;));
-// Output: true
-console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 4&rbrack;));
-// Output: false
+// Example usage
+console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: true
+console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 4&rbrack;));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-66">js-66. Get the Day of the Week from a Date</h2>
@@ -21227,6 +21274,7 @@ const getDayOfWeek = (date) => {
   return daysOfWeek&lbrack;date.getDay()&rbrack;;
 };
 
+// Example usage
 console.log(getDayOfWeek(new Date("2023-08-02")));  // Output: "Wednesday"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21237,6 +21285,7 @@ console.log(getDayOfWeek(new Date("2023-08-02")));  // Output: "Wednesday"
 <pre>
 const isPowerOfTwo = (num) => (num & (num - 1)) === 0;
 
+// Example usage
 console.log(isPowerOfTwo(16));  // Output: true
 console.log(isPowerOfTwo(5));  // Output: false
 </pre>
@@ -21251,8 +21300,8 @@ const objectToQueryParams = (obj) => Object.entries(obj).map((&lbrack;key,
   `${encodeURIComponent(key)}=${encodeURIComponent(value)}`).join('
   &');
   
-console.log(objectToQueryParams({ search: "hello", page: 1 }));
-// Output: "search=hello&page=1"
+// Example usage
+console.log(objectToQueryParams({ search: "hello", page: 1 }));  // Output: "search=hello&page=1"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-69">js-69. Check if an Array contains an Even Number</h2>
@@ -21262,6 +21311,7 @@ console.log(objectToQueryParams({ search: "hello", page: 1 }));
 <pre>
 const hasEvenNumber = (arr) => arr.some(num => num % 2 === 0);
 
+// Example usage
 console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 8&rbrack;));  // Output: true
 console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: false
 </pre>
@@ -21277,6 +21327,7 @@ const getMonthName = (date) => {
   return months&lbrack;date.getMonth()&rbrack;;
 };
 
+// Example usage
 console.log(getMonthName(new Date("2023-08-02")));  // Output: "August"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21288,6 +21339,7 @@ console.log(getMonthName(new Date("2023-08-02")));  // Output: "August"
 const isPalindromeCaseInsensitive = (str) => str.toLowerCase() === 
   str.toLowerCase().split('').reverse().join('');
 
+// Example usage
 console.log(isPalindromeCaseInsensitive("LeVel"));  // Output: true
 console.log(isPalindromeCaseInsensitive("Hello"));  // Output: false
 </pre>
@@ -21299,6 +21351,7 @@ console.log(isPalindromeCaseInsensitive("Hello"));  // Output: false
 <pre>
 const feetToMeters = (feet) => feet * 0.3048;
 
+// Example usage
 console.log(feetToMeters(10));  // Output: 3.048
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21309,6 +21362,7 @@ console.log(feetToMeters(10));  // Output: 3.048
 <pre>
 const isPerfectSquare = (num) => Math.sqrt(num) % 1 === 0;
 
+// Example usage
 console.log(isPerfectSquare(16));  // Output: true
 console.log(isPerfectSquare(10));  // Output: false
 </pre>
@@ -21320,6 +21374,7 @@ console.log(isPerfectSquare(10));  // Output: false
 <pre>
 const containsOnlyNumbers = (str) => /^&lbrack;0-9&rbrack;+$/.test(str);
 
+// Example usage
 console.log(containsOnlyNumbers("12345"));  // Output: true
 console.log(containsOnlyNumbers("12a34"));  // Output: false
 </pre>
@@ -21331,6 +21386,7 @@ console.log(containsOnlyNumbers("12a34"));  // Output: false
 <pre>
 const currentMonth = () => new Date().getMonth();
 
+// Example usage
 console.log(currentMonth());  // Output: Current month (0-based index)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21341,6 +21397,7 @@ console.log(currentMonth());  // Output: Current month (0-based index)
 <pre>
 const mean = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
 
+// Example usage
 console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21357,6 +21414,7 @@ const isPrime = (num) => {
   return true;
 };
 
+// Example usage
 console.log(isPrime(13));  // Output: true
 console.log(isPrime(4));  // Output: false
 </pre>
@@ -21368,6 +21426,7 @@ console.log(isPrime(4));  // Output: false
 <pre>
 const lastNElements = (arr, n) => arr.slice(-n);
 
+// Example usage
 console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrack;3, 4, 5&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21378,6 +21437,7 @@ console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrac
 <pre>
 const degToRad = (degrees) => degrees * (Math.PI / 180);
 
+// Example usage
 console.log(degToRad(90));  // Output: 1.5707963267948966
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21395,6 +21455,7 @@ const isValidURL = (url) => {
   }
 };
 
+// Example usage
 console.log(isValidURL("https://www.example.com"));  // Output: true
 console.log(isValidURL("invalid-url"));  // Output: false
 </pre>
@@ -21406,6 +21467,7 @@ console.log(isValidURL("invalid-url"));  // Output: false
 <pre>
 const intersection = (arr1, arr2) => arr1.filter(val => arr2.includes(val));
 
+// Example usage
 console.log(intersection(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // Output: &lbrack;2, 3&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21422,6 +21484,7 @@ const daysToYearsMonthsDays = (days) => {
   return `${years} years, ${months} months, and ${remainingDaysInMonth} days`;
 };
 
+// Example usage
 console.log(daysToYearsMonthsDays(1000));  // Output: "2 years, 8 months, and 20 days
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21432,6 +21495,7 @@ console.log(daysToYearsMonthsDays(1000));  // Output: "2 years, 8 months, and 20
 <pre>
 const isEmptyObject = (obj) => Object.keys(obj).length === 0;
 
+// Example usage
 console.log(isEmptyObject({}));  // Output: true
 console.log(isEmptyObject({ name: "John", age: 30 }));  // Output: false
 </pre>
@@ -21446,6 +21510,7 @@ const factorial = (num) => {
   return num * factorial(num - 1);
 };
 
+// Example usage
 console.log(factorial(5));  // Output: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21466,6 +21531,7 @@ console.log(removeWhitespace(" Hello, world! "));  // Output: "Hello,world!"
 <pre>
 const difference = (arr1, arr2) => arr1.filter(val => !arr2.includes(val));
 
+// Example usage
 console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // Output: &lbrack;1&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21477,6 +21543,7 @@ console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // O
 const isFibonacci = (num) => isPerfectSquare(5 * num * num + 4) ||
   isPerfectSquare(5 * num * num - 4);
 
+// Example usage
 console.log(isFibonacci(5));  // Output: true
 console.log(isFibonacci(6));  // Output: false
 </pre>
@@ -21488,6 +21555,7 @@ console.log(isFibonacci(6));  // Output: false
 <pre>
 const hoursToMinutes = (hours) => hours * 60;
 
+// Example usage
 console.log(hoursToMinutes(2));  // Output: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21498,6 +21566,7 @@ console.log(hoursToMinutes(2));  // Output: 120
 <pre>
 const firstNElements = (arr, n) => arr.slice(0, n);
 
+// Example usage
 console.log(firstNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrack;1, 2, 3&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21508,6 +21577,7 @@ console.log(firstNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbra
 <pre>
 const isOdd = (num) => num % 2 !== 0;
 
+// Example usage
 console.log(isOdd(5));  // Output: true
 console.log(isOdd(4));  // Output: false
 </pre>
@@ -21524,6 +21594,7 @@ const standardDeviation = (arr) => {
   return Math.sqrt(variance);
 };
 
+// Example usage
 console.log(standardDeviation(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 1.4142135623730951
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21534,6 +21605,7 @@ console.log(standardDeviation(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 1.414
 <pre>
 const endsWithSubstring = (str, subStr) => str.endsWith(subStr);
 
+// Example usage
 console.log(endsWithSubstring("Hello, world!", "world!"));  // Output: true
 console.log(endsWithSubstring("Hello, world!", "Hello"));  // Output: false
 </pre>
@@ -21545,6 +21617,7 @@ console.log(endsWithSubstring("Hello, world!", "Hello"));  // Output: false
 <pre>
 const sumOfSquares = (arr) => arr.reduce((acc, val) => acc + val ** 2, 0);
 
+// Example usage
 console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21556,6 +21629,7 @@ console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
 const isPalindromeCaseSensitive = (str) => str === 
   str.split('').reverse().join('');
 
+// Example usage
 console.log(isPalindromeCaseSensitive("level"));  // Output: true
 console.log(isPalindromeCaseSensitive("Hello"));  // Output: false
 </pre>
@@ -21568,6 +21642,7 @@ console.log(isPalindromeCaseSensitive("Hello"));  // Output: false
 const randomArray = (length) => Array.from({ length }, () =>
   Math.floor(Math.random() * 100));
 
+// Example usage
 console.log(randomArray(5));  // Output: Array with 5 random numbers, e.g., &lbrack;23, 45, 67, 11, 88&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21601,6 +21676,7 @@ const secsToHoursMinsSecs = (seconds) => {
   return `${hours} hours, ${minutes} minutes, and ${remainingSecs} seconds`;
 };
 
+// Example usage
 console.log(secsToHoursMinsSecs(7320));  // Output: "2 hours, 2 minutes, and 0 seconds"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21611,6 +21687,7 @@ console.log(secsToHoursMinsSecs(7320));  // Output: "2 hours, 2 minutes, and 0 s
 <pre>
 const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
 
+// Example usage
 console.log(lcm(6, 8));  // Output: 24
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21622,6 +21699,7 @@ console.log(lcm(6, 8));  // Output: 24
 const findLongestWord = (str) => str.split(' ').reduce((longest, word) =>
   word.length > longest.length ? word : longest, '');
 
+// Example usage
 console.log(findLongestWord("Hi, how are you doing?"));  // Output: "doing?"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21632,6 +21710,7 @@ console.log(findLongestWord("Hi, how are you doing?"));  // Output: "doing?"
 <pre>
 const countOccurrences = (str, char) => str.split(char).length - 1;
 
+// Example usage
 console.log(countOccurrences("hello world", "l"));  // Output: 3
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21647,6 +21726,7 @@ const median = (arr) => {
   sorted&lbrack;mid&rbrack;;
 };
 
+// Example usage
 console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21658,6 +21738,7 @@ console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: 5
 const removeDuplicatesFromString = (str) => 
   &lbrack;...new Set(str.split(''))&rbrack;.join('');
 
+// Example usage
 console.log(removeDuplicatesFromString("hello"));  // Output: "helo"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21676,6 +21757,7 @@ const mode = (arr) => {
     maxFrequency).map(Number);
 };
 
+// Example usage
 console.log(mode(&lbrack;1, 2, 2, 3, 3, 3, 4, 4, 4, 4&rbrack;));  // Output: &lbrack;4&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21691,6 +21773,7 @@ const isHarshadNumber = (num) =>
   num % &lbrack;...String(num)&rbrack;.reduce((sum, digit) => 
   sum + Number(digit), 0) === 0;
 
+// Example usage
 console.log(isHarshadNumber(18));  // Output: true
 console.log(isHarshadNumber(21));  // Output: false
 </pre>
@@ -21708,6 +21791,7 @@ const binaryToDecimalWithoutParseInt = (binary) =>
   binary.split('').reverse().reduce((dec, bit, index) => 
   dec + bit * (2 ** index), 0);
 
+// Example usage
 console.log(binaryToDecimalWithoutParseInt("1101"));  // Output: 13
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21722,6 +21806,7 @@ const isSortedDescending = (arr) => arr.every((el, i) =>
   i === 0 || el &lt;= arr&lbrack;
   i - 1&rbrack;);
 
+// Example usage
 console.log(isSortedDescending(&lbrack;5, 4, 3, 2, 1&rbrack;));  // Output: true
 console.log(isSortedDescending(&lbrack;1, 5, 3, 8, 2&rbrack;));  // Output: false
 </pre>
@@ -21739,6 +21824,7 @@ const averageOfEvenNumbers = (arr) => {
   return evenNumbers.reduce((sum, num) => sum + num, 0) / evenNumbers.length;
 };
 
+// Example usage
 console.log(averageOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;));  // Output: 6
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21754,6 +21840,7 @@ const capitalizeWords = (str) =>
   str.replace(/\b\w/g, char =>
   char.toUpperCase());
 
+// Example usage
 console.log(capitalizeWords("hello world"));  // Output: "Hello World"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21766,6 +21853,7 @@ present in the second array (arr2).</p>
 <pre>
 const isSubset = (arr1, arr2) => arr1.every(item => arr2.includes(item));
 
+// Example usage
 console.log(isSubset(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4, 5, 6&rbrack;));  // Output: false
 console.log(isSubset(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 1, 5, 6&rbrack;));  // Output: true
 </pre>
@@ -21784,6 +21872,7 @@ const minMax = (arr) => ({
   max: Math.max(...arr)
 });
 
+// Example usage
 console.log(minMax(&lbrack;10, 5, 25, 3, 15&rbrack;));  // Output: { min: 3, max: 25 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21801,6 +21890,7 @@ const isNarcissisticNumber = (num) => {
   return sumOfPowers === num;
 };
 
+// Example usage
 console.log(isNarcissisticNumber(153));  // Output: true
 console.log(isNarcissisticNumber(370));  // Output: true
 console.log(isNarcissisticNumber(123));  // Output: false
@@ -21816,8 +21906,8 @@ non-undefined elements.</p>
 const removeNullAndUndefined = (arr) => arr.filter(item => 
   item !== null && item !== undefined);
 
-console.log(removeNullAndUndefined(&lbrack;1, null, 2, 3, undefined, 4, null&rbrack;));
-// Output: &lbrack;1, 2, 3, 4&rbrack;
+// Example usage
+console.log(removeNullAndUndefined(&lbrack;1, null, 2, 3, undefined, 4, null&rbrack;));  // Output: &lbrack;1, 2, 3, 4&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-113">js-113. Reverse the Order of Words in a String</h2>
@@ -21828,6 +21918,7 @@ where the order of words has been reversed.</p>
 <pre>
 const reverseWords = (str) => str.split(' ').reverse().join(' ');
 
+// Example usage
 console.log(reverseWords("Hello, world!"));  // Output: "world! Hello,"
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21841,6 +21932,7 @@ adding it to the accumulator.</p>
 <pre>
 const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val ** 3, 0);
 
+// Example usage
 console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 225
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24087,9 +24179,7 @@ console.log(sectorArea(5, 60));  // Output: 5.235987755982989
 <pre>
 /* HTML */
 &lt;canvas id="confetti"&gt;&lt;/canvas&gt;
-
 &lt;button id="button" class="button-53" role="button"&gt;Celebrate!!!&lt;/button&gt;
-
 &lt;script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"&gt;&lt;/script&gt;
 &lt;script src="script.js"&gt;&lt;/script&gt;
 </pre>
@@ -24190,9 +24280,7 @@ button.addEventListener('click', () => {
   }).then(() => jsConfetti.addConfetti())
 })
 </pre>
-
 <!-- goto ch1 -->
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
 <pre>
@@ -24252,7 +24340,6 @@ function scrollToTop() {
   window.scrollTo(0, 0);
 }
 </pre>
-
 <p><small><small>/* the end */</small></small></p>
 <footer>
 <p>In every line of code, they have woven a story of innovation and creativity.
@@ -24262,5 +24349,6 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>Thank you for allowing me to be part of your journey.</p>
 <p>With gratitude,</p>
 <p>Brian Bauska</p>
+<p>Last changhed 2/10/2025 3:30p</p>
 </footer>
 </html>
