@@ -1137,7 +1137,7 @@ let x = 10;  // Assignment
 function greet() {
   // Function statement
 }
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i &lt; 5; i++) {
   // For loop statement
 }
 </pre>
@@ -2802,7 +2802,7 @@ console.log(isAdult);  // Prints: Yes
 
 <pre>
 const hour = 14;
-const greeting = hour < 12 ? "Good morning" : "Good afternoon";
+const greeting = hour &lt; 12 ? "Good morning" : "Good afternoon";
 console.log(greeting);  // Prints: Good afternoon
 </pre>
 
@@ -3725,14 +3725,14 @@ canvas.</p>
 <p><b>Canvas Example:</b></p>
 
 <pre>
-<canvas id="myCanvas" width="400" height="300"></canvas>
-<script>
+&lt;canvas id="myCanvas" width="400" height="300"&gt;&lt;/canvas&gt;
+&lt;script&gt;
   const canvas = document.getElementById('myCanvas'); 
   const context = canvas.getContext('2d');
   
   context.fillStyle = 'blue';
   context.fillRect(50, 50, 100, 100);
-</script>
+&lt;/script&gt;
 </pre>
 
 <p><b>WebGL:</b> WebGL (Web Graphics Library) is a more advanced technology
@@ -3752,13 +3752,13 @@ games.</p>
 <p><b>WebGL Example:</b></p>
 
 <pre>
-<canvas id="myCanvas" width="800" height="600"></canvas>
-<script>
+&lt;canvas id="myCanvas" width="800" height="600"&gt;&lt;/canvas&gt;
+&lt;script&gt;
   const canvas = document.getElementById('myCanvas');
-  const gl = canvas.getContext('webgl');
+  const g1 = canvas.getContext('webgl');
   
   // Here, you would write code to render 3D content with WebGL
-</script>
+&lt;/script&gt;
 </pre>
 
 <p>In summary, if you need simple 2D graphics or visual elements on your
@@ -3956,7 +3956,7 @@ percentage of programmer candidates. So if you solved it, you’re now allowed t
 good about yourself.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-for (let n = 1; n <= 100; n++) {
+for (let n = 1; n &lt;= 100; n++) {
   let output = "";
   if (n % 3 == 0) output += "Fizz";
   if (n % 5 == 0) output += "Buzz";
@@ -4091,8 +4091,8 @@ console.log should show something like Solution (below):</p>
 <pre>
 let size = 8;
 let board = "";
-for (let y = 0; y < size; y++) {
-  for (let x = 0; x < size; x++) {
+for (let y = 0; y &lt; size; y++) {
+  for (let x = 0; x &lt; size; x++) {
     if ((x + y) % 2 == 0) {
       board += " ";
     } else {
@@ -4127,7 +4127,7 @@ and modifying it.</p>
 
 <pre>
 function min(a, b) {
-  if (a < b) return a;
+  if (a &lt; b) return a;
   else return b;
 }<br>
 console.log(min(0, 10));  // → 0
@@ -4198,7 +4198,7 @@ var makeNoise = function() {
 makeNoise();  // → Pling!
 var power = function(base, exponent) {
   var result = 1;
-  for (var count = 0; count < exponent; count++)
+  for (var count = 0; count &lt; exponent; count++)
   result *= base;
   return result;
 };
@@ -4209,7 +4209,7 @@ console.log(power(2, 10));  // → 1024
 function isEven(n) {
   if (n == 0) return true;
   else if (n == 1) return false;
-  else if (n < 0) return isEven(-n);
+  else if (n &lt; 0) return isEven(-n);
   else return isEven(n - 2);
 }<br>
 console.log(isEven(50));  // → true
@@ -4220,7 +4220,7 @@ console.log(isEven(-1));  // → false
 <h2 id="el06">el06. Functions: Bean counting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Your function will need a loop that looks at every character in the string. It
-can run an index from zero to one below its length (< string.length). If the
+can run an index from zero to one below its length (&lt; string.length). If the
 character at the current position is the same as the one the function is looking
 for, it adds 1 to a counter variable. Once the loop has finished, the counter can
 be returned.</p>
@@ -4232,7 +4232,7 @@ by properly declaring them with the let or const keyword</p>
 similar to how you get its length with "s".length. The returned value will be a string
 containing only one character (for example, "b"). The first character has position zero, 
 which causes the last one to be found at position string.length - 1. In other words, a 
-two-character string has length 2, and its characters have positions 0 and 1.<?p>
+two-character string has length 2, and its characters have positions 0 and 1.</p>
 
 <p>Write a function countBs that takes a string as its only argument and returns a number 
 that indicates how many uppercase “B” characters are in the string. Next, write a function 
@@ -4243,7 +4243,7 @@ characters). Rewrite countBs to make use of this new function.</p>
 <pre>
 function countChar(string, ch) {
   let counted = 0;
-  for (let i = 0; i < string.length; i++) {
+  for (let i = 0; i &lt; string.length; i++) {
     if (string[i] == ch) {
       counted += 1;
     }
@@ -4264,7 +4264,7 @@ console.log(countChar("kakkerlak", "k"));  // → 4
 // journalEvents of journal.js
 for (let event of journalEvents(JOURNAL)) {
   let correlation = phi(tableFor(event, JOURNAL));
-  if (correlation > 0.1 || correlation < -0.1) {
+  if (correlation &gt; 0.1 || correlation &lt; -0.1) {
     console.log(event + ":", correlation);
   }
 }
@@ -4294,7 +4294,7 @@ function phi(table) {
 }<br>
 function tableFor(event, journal) {
   let table = [0, 0, 0, 0];
-  for (let i = 0; i < journal.length; i++) {
+  for (let i = 0; i &lt; journal.length; i++) {
     let entry = journal[i], index = 0;
     if (entry.events.includes(event)) index += 1;
     if (entry.squirrel) index += 2;
@@ -4338,7 +4338,7 @@ var list = {
 (a fresh, empty array) and repeatedly calling its push method to add a value.
 Don’t forget to return the array at the end of the function.
 
-<p>Since the end boundary is inclusive, you’ll need to use the <= operator rather
+<p>Since the end boundary is inclusive, you’ll need to use the &lt;= operator rather
 than &lt; to check for the end of your loop.</p>
 
 <p>The step parameter can be an optional parameter that defaults (using the =
@@ -4355,12 +4355,12 @@ something meaningful, rather than getting stuck in an infinite loop. It is possi
 to refer to previous parameters in the default value of a parameter.</p>
 
 <pre>
-function range(start, end, step = start < end ? 1 : -1) {
+function range(start, end, step = start &lt; end ? 1 : -1) {
   let array = [];
-  if (step > 0) {
-    for (let i = start; i <= end; i += step) array.push(i);
+  if (step &gt; 0) {
+    for (let i = start; i &lt;= end; i += step) array.push(i);
   } else {
-    for (let i = start; i >= end; i += step) array.push(i);
+    for (let i = start; i &gt;= end; i += step) array.push(i);
   }
   return array;
 }<br>
@@ -4409,7 +4409,7 @@ function reverseArray(array) {
   return output;
 }<br>
 function reverseArrayInPlace(array) {
-  for (let i = 0; i < Math.floor(array.length / 2); i++) {
+  for (let i = 0; i &lt; Math.floor(array.length / 2); i++) {
     let old = array[i];
     array[i] = array[array.length - 1 - i];
     array[array.length - 1 - i] = old;
@@ -4642,9 +4642,9 @@ function every(array, predicate) {
 function every2(array, predicate) {
   return !array.some(element => !predicate(element));
 }<br>
-console.log(every([1, 3, 5], n => n < 10));  // → true
-console.log(every([2, 4, 16], n => n < 10));  // → false
-console.log(every([], n => n < 10));  // → true
+console.log(every([1, 3, 5], n =&gt; n &lt; 10));  // → true
+console.log(every([2, 4, 16], n =&gt; n &lt; 10));  // → false
+console.log(every([], n =&gt; n &lt; 10));  // → true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el15">el15. Higher-Order Functions: Dominant writing direction</h2>
@@ -5007,7 +5007,7 @@ function randomRobot(state) {
 }<br>
 VillageState.random = function(parcelCount = 5) {
   let parcels = [];
-  for (let i = 0; i < parcelCount; i++) {
+  for (let i = 0; i &lt; parcelCount; i++) {
     let address = randomPick(Object.keys(roadGraph));
     let place;
     do {
@@ -5031,7 +5031,7 @@ function routeRobot(state, memory) {
 }<br>
 function findRoute(graph, from, to) {
   let work = [{at: from, route: []}];
-  for (let i = 0; i < work.length; i++) {
+  for (let i = 0; i &lt; work.length; i++) {
     let {at, route} = work[i];
     for (let place of graph[at]) {
       if (place == to) return route.concat(place);
@@ -5074,7 +5074,7 @@ function countSteps(state, robot, memory) {
 }<br>
 function compareRobots(robot1, memory1, robot2, memory2) {
   let total1 = 0, total2 = 0;
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i &lt; 100; i++) {
     let state = VillageState.random();
     total1 += countSteps(state, robot1, memory1);
     total2 += countSteps(state, robot2, memory2);
@@ -5182,7 +5182,7 @@ is a pretty safe bet).</p>
 <pre>
 class MultiplicatorUnitFailure extends Error {}
 function primitiveMultiply(a, b) {
-  if (Math.random() < 0.2) {
+  if (Math.random() &lt; 0.2) {
     return a * b;
   } else {
     throw new MultiplicatorUnitFailure("Klunk");
@@ -5469,7 +5469,7 @@ function Promise_all(promises) {
   return new Promise((resolve, reject) => {
     let results = [];
     let pending = promises.length;
-    for (let i = 0; i < promises.length; i++) {
+    for (let i = 0; i &lt; promises.length; i++) {
       promises[i].then(result => {
         results[i] = result;
         pending--;
@@ -5515,7 +5515,7 @@ run(`
 do(define(sum, fun(array,
      do(define(i, 0),
         define(sum, 0),
-        while(<(i, length(array)),
+        while(&lt;(i, length(array)),
           do(define(sum, +(sum, element(array, i))),
              define(i, +(i, 1)))),
         sum))),
@@ -6354,8 +6354,8 @@ values in the checkboxes before computing the next turn.</p>
 that identify the position that each checkbox corresponds to so that it is easy
 to find out which cell to change.</p>
 
-<p>To draw the grid of checkboxes, you can either use a <table> element (see
-Chapter 14) or simply put them all in the same element and put <br> (line
+<p>To draw the grid of checkboxes, you can either use a &lt;table&gt; element (see
+Chapter 14) or simply put them all in the same element and put &lt;br&gt; (line
 break) elements between the rows.</p>
 
 <pre>
