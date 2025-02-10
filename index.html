@@ -1610,7 +1610,7 @@ function Person(name, age) {
   this.name = name;
   this.age = age;
 }
-const personl = new Person("John", 30);
+const person1 = new Person("John", 30);
 </pre>
 
 <p><b>Constructor:</b> A constructor is a function used to create and configure
@@ -1737,13 +1737,13 @@ properties from one or more source objects to a target object If there are
 properties with the same name in the target object they will be
 overwritten. It&apos;s usefulfor combining objects or cloning objects.</p>
 
-<pre>Object.assign(targetObject, sourceObjectl, sourceObject2, ...);</pre>
+<pre>Object.assign(targetObject, sourceObject1, sourceObject2, ...);</pre>
 
 <p><b>Example of Objectassign:</b></p>
 
 <pre>
 const target = {};
-const sourcel = { name: "John", age: 30 };
+const source1 = { name: "John", age: 30 };
 const source2 = { city: "New York" };
 
 Object.assign(target, sourcel, source2);
@@ -1797,8 +1797,7 @@ value.</p>
 
 <pre>
 const numbers = [1, 2, 3, 4, 5];
-const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
-// sum is 15
+const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);  // sum is 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event Propagation</h2>
@@ -1862,9 +1861,9 @@ function counter() {
   return increment;
 }
 
-const counterl = counter();
-counterl();  // Prints: 1
-counterl();  // Prints: 2=
+const counter1 = counter();
+counter1();  // Prints: 1
+counter1();  // Prints: 2
 </pre>
 
 <p>In this example, the counter function returns the increment function. The
