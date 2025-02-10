@@ -17770,7 +17770,7 @@ function binomialCoefficient(n, k) {
 }
 // Function to check if a number is a Catalan number
 function isCatalanNumber(num) {
-  for (let i = 0; i < = num; i++) {
+  for (let i = 0; i &lt;= num; i++) {
     if (binomialCoefficient(2 * i, i) === num / (i + 1)) {
       return true;
     }
@@ -18217,8 +18217,8 @@ function isVampireNumber(number) {
 function getDigitPairs(strNumber) {
   const pairs = &lbrack;&rbrack;;
   const length = strNumber.length;
-  for (let i = 0; i < length; i++) {
-    for (let j = 0;j < length; j++) {
+  for (let i = 0; i &lt; length; i++) {
+    for (let j = 0;j &lt; length; j++) {
       if (i !== j){
         const pairl = parse!nt(strNumber&lbrack;i&rbrack; + strNumber&lbrack;j&rbrack;, 10);
         const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index !== j).join("), 10);
@@ -18253,14 +18253,14 @@ class SimonSaysGame {
     this.generateSequence();
   }
   generateSequence() {
-    for (let i = 0; i < this.round; i++) {
-      const randomindex = Math.floor(Math.random() *this.colors.length);
-      this.sequence.push(this.colors&lbrack;randomlndex&rbrack;);
+    for (let i = 0; i &lt; this.round; i++) {
+      const randomIndex = Math.floor(Math.random() * this.colors.length);
+      this.sequence.push(this.colors&lbrack;randomIndex&rbrack;);
     }
   }
   displaySequence() {
-    console.log(' Round ${this.round} - Simon says:');
-    for (const color of this.sequence) {
+    console.log(`Round ${this.round} - Simon says:`);
+    for(const color of this.sequence) {
       console.log(color);
       // Simulate a delay between colors (you can replace this with actual delays in a real environment)
       this.sleep(lOOO);
@@ -18270,12 +18270,12 @@ class SimonSaysGame {
   getPlayerInput() {
     console.log('Your turn! Enter the sequence (e.g., "red blue green"):');
     // Simulate user input (you can replace this with actual user input in a real environment)
-    const userinput = promptfEnter the sequence:').toLowerCase();
+    const userInput = prompt('Enter the sequence:').toLowerCase();
     this.playerSequence = userlnput.split('');
   }
   checkSequence() {
-    for (let i = 0; i < this.round; i++) {
-      if (this.playerSequence&lbrack;i&rbrack; !== this.sequencefi&rbrack;) {
+    for (let i = 0; i &lt; this.round; i++) {
+      if (this.playerSequence&lbrack;i&rbrack; !== this.sequence&lbrack;i&rbrack;) {
         console.log('Wrong sequence! Game over.1);
         process.exit();
       }
@@ -18284,7 +18284,7 @@ class SimonSaysGame {
     this.round++;
   }
   sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve =&gt; setTimeout(resolve, ms));
   }
   async play() {
     while (true) {
@@ -18301,7 +18301,7 @@ const simonSaysGame = new SimonSaysGame(colors);
 console.log('Welcome to Simon Says! Repeat the sequence correctly to advance.');
 
 // Start the game loop
-simonSaysGame.playO;
+simonSaysGame.play();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js147">js147. Calculate the Area of a Hexagon</h2>
@@ -18331,7 +18331,7 @@ integers. The nth pronic number is given by the formula: <span class="consolas">
 
 <pre>
 function isPronicNumber(number) {
-  for (let i = O; i*(i + 1) <= number; i++) {
+  for (let i = 0; i*(i + 1) &lt;= number; i++) {
     if (i * (i + 1) === number) {
       return true;
     }
@@ -18374,15 +18374,15 @@ class MinesweeperGame {
         board&lbrack;row&rbrack;&lbrack;col&rbrack; = 'X';
     }
     // Calculate numbers around mines
-    for (let i = 0; i < this.rows; i++) {
-      for (letj = 0; j < this.cols; j ++) {
+    for (let i = 0; i &lt; this.rows; i++) {
+      for (letj = 0; j &gt; this.cols; j ++) {
         if (board&lbrack;i&rbrack;&lbrack;j&rbrack; ==='X') {
           continue;
         }
-        for (let row = i- l;row <= i + l;row++) {
-          for (let col = j - l;col<= j + l;col++) {
-            if (row > = 0 && row < this.rows && col > = 0 
-              && col < this.cols 
+        for (let row = i- 1;row &lt;= i + 1;row++) {
+          for (let col = j - 1;col &lt;= j + 1;col++) {
+            if (row &gt;= 0 && row &lt; this.rows && col &gt;= 0 
+              && col &lt; this.cols 
               && board&lbrack;row&rbrack;&lbrack;col&rbrack; === 'X') {
                 board&lbrack;i&rbrack;&lbrack;j&rbrack;++;
             }
@@ -18395,11 +18395,11 @@ class MinesweeperGame {
   displayBoard() {
     console.log('Minesweeper Board:');
     for (const row of this.board) {
-      console.log(row.map(cell => (cell === 'X' ? 'X':' ')).join(''));
+      console.log(row.map(cell =&gt; (cell === 'X' ? 'X':' ')).join(''));
     }
   }
   uncoverCell(row, col) {
-    if (this.gameO ver || row < 0 || row >= this.rows || col < 0 || col >= this.cols) {
+    if (this.gameO ver || row &lt; 0 || row &gt;= this.rows || col &lt; 0 || col &gt;= this.cols) {
       return;
     }
   const cell = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
@@ -18415,12 +18415,12 @@ class MinesweeperGame {
     this.checkWin();
   }
   uncoverNeighbors(row, col) {
-    for (let i = row - l;i <= row + l;i++) {
-      for (let j = col - l;j <= col + l;j++) {
-        if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; === 0) {
+    for (let i = row - 1;i &lt;= row + 1;i++) {
+      for (let j = col - 1;j &lt;= col + 1;j++) {
+        if (i &gt;= 0 && i &lt; this.rows && j &gt;= 0 && j &lt; this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; === 0) {
           this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = '';
           this.uncoverNeighbors(i, j);
-        } else if (i > = 0 && i < this.rows && j > = 0 && j < this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; !== 'X') {
+        } else if (i &gt;= 0 && i &lt; this.rows && j &gt;= 0 && j &lt; this.cols && this.board&lbrack;i&rbrack;&lbrack;j&rbrack; !== 'X') {
           this.board&lbrack;i&rbrack;&lbrack;j&rbrack; = this.board&lbrack;i&rbrack;&lbrack;j&rbrack;.toString();
         }
       }
@@ -18429,7 +18429,7 @@ class MinesweeperGame {
   checkWin() {
     let uncoveredCount = 0;
     for (const row of this.board) {
-      uncoveredCount += row.filter(cell => cell !== 'X').length;
+      uncoveredCount += row.filter(cell =&gt; cell !== 'X').length;
     }
     if (uncoveredCount === this.rows * this.cols - this.numMines) {
       console.log('Congratulations! You win!');
@@ -18454,7 +18454,7 @@ minesweeperGame.uncoverCell(4, 4);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>This program calculates the area of a regular pentagon given the side length 
 (<span class="consolas">s</span>). The formula for the area of a regular pentagon is 
-<span class="consolas">Area = (1/4) * &radic;(5 * (5 + 2 * &radic;5)) * s^2<span>, 
+<span class="consolas">Area = (1/4) * &radic;(5 * (5 + 2 * &radic;5)) * s^2</span>, 
 where <span class="consolas">s</span> is the side length.</p>
 
 <pre>
@@ -18639,10 +18639,10 @@ number. A Fibonacci prime is a number that is both a Fibonacci number and a prim
 
 <pre>
 function isPrime(number) {
-  if (number <= 1) {
+  if (number &lt;= 1) {
     return false;
   }
-  for (let i = 2; i < = Math.sqrt(number); i++) {
+  for (let i = 2; i &lt;= Math.sqrt(number); i++) {
     if (number % i === 0) {
       return false;
     }
@@ -18691,7 +18691,7 @@ function isSquarefulNumber(number) {
 
 function getFactors(number) {
   const factors = &lbrack;&rbrack;;
-  for (let i = 1; i < = Math.sqrt(number); i++) {
+  for (let i = 1; i &lt;= Math.sqrt(number); i++) {
     if (number % i === 0) {
       factors.push(i);
       if (i !== Math.sqrt(number)) {
@@ -18792,7 +18792,7 @@ function isSmithMorraGambitNumber(number) {
   // Function to calculate the prime factorization of a number
   const primeFactorization = (n) => {
     const factors = &lbrack;&rbrack;;
-    for (let i = 2; i <= n; i++) {
+    for (let i = 2; i &lt;= n; i++) {
       while (n % i === 0) {
         factors.push(i);
         n /= i;
@@ -18821,7 +18821,7 @@ console.log(isSmithMorraGambitNumber(22));  // Output: true
 function getProperDivisorsSum(number) {
   let sum = 1;  // Start with 1 as every number is divisible by 1
   
-  for (let i = 2; i < = Math.sqrt(number); i++) {
+  for (let i = 2; i &lt;= Math.sqrt(number); i++) {
     if (number % i === 0) {
       sum + = i;
 
@@ -18911,14 +18911,14 @@ chords between points on a circle (not necessarily touching every point with a c
 
 <pre>
 function isMotzkinNumber(number) {
-  if (number < 0) {
+  if (number &lt; 0) {
     return false;
   }
   
   // Use dynamic programming to calculate Motzkin numbers
   const motzkinNumbers = &lbrack;1, 1&rbrack;;
-  for (let n = 2; n <= number; n++) {
-    const nextMotzkin = ((2 *n + 1) * <i>motzkinNumbers&lbrack;n-l&rbrack; 
+  for (let n = 2; n &lt;= number; n++) {
+    const nextMotzkin = ((2 * n + 1) * <i>motzkinNumbers&lbrack;n-l&rbrack; 
       + (3 * n - 3) * </i>motzkinNumbers&lbrack;n - 2&rbrack;) / (n + 2);
     motzkinNumbers.push(nextMotzkin);
   }
@@ -18943,11 +18943,11 @@ a recurrence relation of P(n) = P(n-2) + P(n-3) with initial values P(0) = P(l) 
 
 <pre>
 function isPadovanNumber(number) {
-  if (number < 0) {
+  if (number &lt; 0) {
     return false;
   }
   const padovanNumbers = &lbrack;1,1,1&rbrack;;
-  while (padovanNumbers&lbrack;padovanNumbers.length - 1&rbrack; <= number) {
+  while (padovanNumbers&lbrack;padovanNumbers.length - 1&rbrack; &lt;= number) {
     const nextPadovan = padovanNumbers&lbrack;padovanNumbers.length - 2&rbrack; 
       + padovanNumbers&lbrack;padovanNumbers.length 
       - 3&rbrack;;
@@ -19204,7 +19204,7 @@ function runQuiz() {
   let score = 0;
   for (const question of questions) {
     console.log(question.question);
-    for (let i = 0; i < question.options.length; i++) {
+    for (let i = 0; i &lt; question.options.length; i++) {
       console.log(`${i + 1}.${question.options&lbrack;i&rbrack;}`);
     }
     
@@ -19548,7 +19548,7 @@ function guessTheNumberGame() {
     if (userGuess === secretNumber) {
       console.log(`Congratulations! You guessed the number in ${attempts} attempts.`);
       return;
-    } else if (userGuess < secretNumber) {
+    } else if (userGuess &lt; secretNumber) {
       console.log("Too low. Try again!");
     } else {
       console.log("Too high. Try again!");
@@ -19588,7 +19588,7 @@ function whackAMoleGame() {
     
     const userWhacklndex = parseInt(prompt("Enter the index to whack the mole:"), 10);
     
-    if (isNaN(userWhacklndex) || userWhacklndex < 0 || userWhacklndex >= totalHoles) {
+    if (isNaN(userWhacklndex) || userWhacklndex &lt; 0 || userWhacklndex &gt;= totalHoles) {
       console.log(`Invalid input. Please enter a number between 0 and ${totalHoles -1}.`);
       continue;
     }
@@ -19669,7 +19669,7 @@ coinTossingGame();
 function fibonacciNumberGenerator() {
   const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
 
-  if (isNaN(limit) 11 limit < 1) {
+  if (isNaN(limit) || limit &lt; 1) {
     console.log("Invalid input. Please enter a positive number.");
     return;
   }
@@ -19729,7 +19729,7 @@ function colorGuessingGame() {
   const maxAttempts = 3;
   console.log("Welcome to the Color Guessing Game!");
   console.log("Guess the color based on the RGB values.");
-  for (let attempts = 1; attempts <= maxAttempts; attempts++) {
+  for (let attempts = 1; attempts &lt;= maxAttempts; attempts++) {
     const randomColor = colors&lbrack;Math.floor(Math.random() * colors.length)&rbrack;;
     const rgb Values = generateRandomRGBValues();
     console.log(`RGB:${rgbValues.join(",")}`);
@@ -19767,7 +19767,7 @@ function wordScrambleGame() {
   const maxAttempts = 3;
   console.log("Welcome to the Word Scramble Game!");
   console.log("Unscramble the word and enter your guess.");
-  for (let attempts = 1; attempts <= maxAttempts; attempts++) {
+  for (let attempts = 1; attempts &lt;= maxAttempts; attempts++) {
     const randomWord = words&lbrack;Math.floor(Math.random() * words.length)&rbrack;;
     const scrambledWord = scrambleWord(randomWord);
     console.log(`Scrambled word: ${scrambledWord}`);
@@ -19972,7 +19972,7 @@ for multiples of 5, it prints "Buzz," and for multiples of both 3 and 5, it prin
 function fizzBuzzGame() {
   console.logf'Welcome to the FizzBuzz Game!");
   console.logf'Let's play FizzBuzz!");
-  for (let i = l;i <= 100; i++) {
+  for (let i = 1;i &lt;= 100; i++) {
     let output = "";
     if (i % 3 === 0) {
       output += "Fizz";
@@ -20006,7 +20006,7 @@ function swapPairsOfAdjacentDigits(number) {
   }
   // Swap pairs of adjacent digits
   let swappedNumber = "";
-  for (let i = 0; i < length; i += 2) {
+  for (let i = 0; i &lt; length; i += 2) {
     swappedNumber += numberStr&lbrack;i + 1&rbrack; + numberStr&lbrack;i&rbrack;;
   }
   // Convert the result back to an integer
@@ -20061,7 +20061,7 @@ function swapArrayHalves(arr) {
   // Calculate the midpoint of the array
   const midpoint = length / 2;
   // Swap the two halves of the array
-  for (let i = 0; i < midpoint; i++) {
+  for (let i = 0; i &lt; midpoint; i++) {
     const temp = arr &lbrack;i&rbrack;;
     arr&lbrack;i&rbrack; = arr&lbrack;midpoint + i&rbrack;;
     arr&lbrack;midpoint + i&rbrack; = temp;
@@ -20106,7 +20106,7 @@ total sum.</p>
 <pre>
 function sumOfCubes(upToInteger) {
   let cubesSum = 0;
-  for (let i = 1; i < = upToInteger; i++) {
+  for (let i = 1; i &lt;= upToInteger; i++) {
     // Calculate the cube of each integer and add to sum
     cubesSum += Math.pow(i, 3);
   }
@@ -20128,15 +20128,15 @@ the formula <span class="consolas">Sum = n * (n + 1) / 2</span>.</p>
 function findMaxIntegerForSum(targetSum) {
   let currentSum = 0;
   let maxInteger = 0;
-  while (currentSum + maxInteger + 1 <= targetSum) {
-    maxlnteger++;
+  while (currentSum + maxInteger + 1 &lt;= targetSum) {
+    maxInteger++;
     currentSum += maxInteger;
   }
-  console.log(`Maximum Integer (n) for Sum <= ${targetSum}: ${maxinteger}`);
+  console.log(`Maximum Integer (n) for Sum &lt;= ${targetSum}: ${maxInteger}`);
 }
 
-// Example: Find the maximum integer for the sum <=15
-findMaxIntegerForSum(l 5);
+// Example: Find the maximum integer for the sum &lt;= 15
+findMaxIntegerForSum(l5);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js206">js206. URL Breakdown</h2>
@@ -20240,7 +20240,7 @@ converts the number to a string and compares each digit to the first digit.</p>
 function areAllDigitsSame(number) {
   const numberStr = String(number);
   const firstDigit = numberStr&lbrack;0&rbrack;;
-  for (let i = 1; i < numberStr.length; i++) {
+  for (let i = 1; i &lt; numberStr.length; i++) {
     if (numberStr&lbrack;i&rbrack; !== firstDigit) {
       console.log(' Digits in ${number} are not all the same.');
       return;
@@ -20356,8 +20356,8 @@ checks numbers one by one starting from the given number until it finds the next
 
 <pre>
 function isPrime(num) {
-  if (num < 2) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num &lt; 2) return false;
+  for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
@@ -20421,9 +20421,9 @@ console.</p>
 
 <pre>
 function generateAsciiTriangle(height) {
-  for (let i = 1; i <= height; i++) {
+  for (let i = 1; i &lt;= height; i++) {
     const spaces = ' '.repeat(height - i);
-    const stars = '*'.repeat(i * 2 -1);
+    const stars = '*'.repeat(i * 2 - 1);
     console.log(spaces + stars);
   }
 }<br>
@@ -20473,8 +20473,8 @@ const cookie = name => `; ${document.cookie}.split(`;
 corresponding hexadecimal representation.</p>
 
 <pre>
-const rgbToHex = (r, g, b) =>
-  "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+const rgbToHex = (r, g, b) =&gt; 
+  "#" + ((1 &lt;&lt; 24) + (r &lt;&lt; 16) + (g &lt;&lt; 8) + b).toString(16).slice(1);
 
 rgbToHex(0, 51, 255);  // Result: #0033ff = pure blue
 rgbToHex(255, 0, 17);  // Result: #ff0011 = pure red
@@ -20718,8 +20718,8 @@ calculateCircleArea(5);  // Result: 78.53981633974483
 
 <pre>
 const isPrime = (num) => {
-  if (num <= 1) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num &lt;= 1) return false;
+  for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
@@ -20888,7 +20888,7 @@ stringToNumber("3.14");  // Result: 3.14
 <pre>
 const fibonacci = (n) => {
   const result = &lbrack;0, 1&rbrack;;
-  for (let i = 2; i < n; i++) {
+  for (let i = 2; i &lt; n; i++) {
     result.push(result&lbrack;i - 1&rbrack; + result&lbrack;i - 2&rbrack;);
   }
   return result;
@@ -21358,8 +21358,8 @@ console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 
 <pre>
 const isPrime = (num) => {
-  if (num <= 1) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num &lt;= 1) return false;
+  for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
@@ -21727,7 +21727,7 @@ equal to the preceding element, ensuring a descending order.</p>
 
 <pre>
 const isSortedDescending = (arr) => arr.every((el, i) => 
-  i === 0 || el <= arr&lbrack;
+  i === 0 || el &lt;= arr&lbrack;
   i - 1&rbrack;);
 
 console.log(isSortedDescending(&lbrack;5, 4, 3, 2, 1&rbrack;));  // Output: true
@@ -21874,7 +21874,7 @@ recursive approach. It determines the Fibonacci number by summing the
 previous two Fibonacci numbers until it reaches the base cases of 0 and 1.</p>
 
 <pre>
-const fibonacci = (n) => (n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2));
+const fibonacci = (n) =&gt; (n &lt;= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2));
   
 // Example usage
 console.log(fibonacci(7));  // Output: 13
@@ -21899,10 +21899,10 @@ console.log(countWords("Hello, how are you doing?"));  // Output: 5
 <p>The isTriangularNumber function determines whether a given number is a triangular number.</p>
 
 <pre>
-const isTriangularNumber = (num) => {
+const isTriangularNumber = (num) =&gt; {
   let n = 0;
   let sum = 0;
-  while (sum < num) {
+  while (sum &lt; num) {
     n++;
     sum += n;
   }
@@ -21937,7 +21937,7 @@ as the initial common prefix.</p>
 const longestCommonPrefix = (strs) => {
   if (strs.length === 0) return '';
   let prefix = strs&lbrack;0&rbrack;;
-  for (let i = 1; i < strs.length; i++) {
+  for (let i = 1; i &lt; strs.length; i++) {
     while (!strs&lbrack;i&rbrack;.startsWith(prefix)) {
       prefix = prefix.slice(0, prefix.length - 1);
     }
@@ -22265,9 +22265,9 @@ console.log(isPrimeFactor(20, 3));  // Output: false
 <p>The largestPrimeFactor function calculates the largest prime factor of a given number.</p>
 
 <pre>
-const largestPrimeFactor = (num) => {
+const largestPrimeFactor = (num) =&gt; {
   let factor = 2;
-  while (factor <= num) {
+  while (factor &lt;= num) {
     if (num % factor === 0) {
       num /= factor;
     } else {
@@ -22362,8 +22362,8 @@ console.log(isHappyNumber(4));  // Output: false
 
 <pre>
 const isPrime = (num) => {
-  if (num <= 1) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num &lt;= 1) return false;
+  for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
@@ -22371,7 +22371,7 @@ const isPrime = (num) => {
 const firstNPrimes = (n) => {
   const primes = &lbrack;&rbrack;;
   let num = 2;
-  while (primes.length < n) {
+  while (primes.length &lt; n) {
     if (isPrime(num)) primes.push(num);
     num++;
   }
@@ -22622,7 +22622,7 @@ perfect number is a positive integer that is equal to the sum of its proper divi
 <pre>
 const isPerfectNumber = (num) => {
   let sum = 0;
-  for (let i = 1; i <= num / 2; i++) {
+  for (let i = 1; i &lt;= num / 2; i++) {
     if (num % i === 0) sum += i;
   }
   return sum === num;
@@ -22643,7 +22643,7 @@ those numbers.</p>
 <pre>
 const factors = (num) => {
   const result = &lbrack;&rbrack;;
-  for (let i = 2; i < num; i++) {
+  for (let i = 2; i &lt; num; i++) {
     if (num % i === 0) result.push(i);
   }
   return result;
@@ -22795,7 +22795,7 @@ const fibonacci = (n) => {
   let prev1 = 0;
   let prev2 = 1;
   let result;
-  for (let i = 3; i <= n; i++) {
+  for (let i = 3; i &lt;= n; i++) {
     result = prev1 + prev2;
     prev1 = prev2;
     prev2 = result;
@@ -22838,7 +22838,7 @@ console.log(distanceBetweenPoints(0, 0, 3, 4));  // Output: 5
 <p>The isAbundantNumber function determines whether a given number is an abundant number.</p>
 
 <pre>
-const isAbundantNumber = (num) => num < sumOfProperDivisors(num);
+const isAbundantNumber = (num) =&gt; num &lt; sumOfProperDivisors(num);
 
 // Example usage
 console.log(isAbundantNumber(12));  // Output: true
@@ -23022,7 +23022,7 @@ each digit raised to the power of its respective position is equal to the number
 <pre>
 const sumOfDigitsRaisedToPowerUpToThousand = () => {
   let sum = 0;
-  for (let i = 1; i <= 1000; i++) {
+  for (let i = 1; i &lt;= 1000; i++) {
     if (sumOfDigitsRaisedToPower(i) === i) {
       sum += i;
     }
@@ -23154,8 +23154,8 @@ console.log(ellipseArea(5, 10));  // Output: 157.07963267948966
 <pre>
 const isLeylandNumber = (num) => {
   let found = false;
-  for (let x = 2; x <= Math.floor(Math.pow(num, 1 / 3)) && !found; x++) {
-    for (let y = x + 1; x * y <= num && !found; y++) {
+  for (let x = 2; x &lt;= Math.floor(Math.pow(num, 1 / 3)) && !found; x++) {
+    for (let y = x + 1; x * y &lt;= num && !found; y++) {
       if (Math.pow(x, y) + Math.pow(y, x) === num) {
         found = true;
       }
@@ -23275,7 +23275,7 @@ console.log(isPandigitalNumber(1023456789));  // Output: false
 <pre>
 const sumOfProperDivisors = (num) => {
   let sum = 0;
-  for (let i = 1; i <= Math.sqrt(num); i++) {
+  for (let i = 1; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) {
       sum += i;
       if (num / i !== i) {
@@ -23349,7 +23349,7 @@ console.log(productOfDigits(12345));  // Output: 120
 <pre>
 const isPracticalNumber = (num) => {
   const factors = primeFactors(num);
-  for (let i = 2; i <= factors.length; i++) {
+  for (let i = 2; i &lt;= factors.length; i++) {
     if (sumOfArray(combinations(factors, i)) !== num) {
       return false;
     }
@@ -23417,7 +23417,7 @@ const randomAlphanumericString = (length) => {
   const characters =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i &lt; length; i++) {
     result += characters.charAt(Math.floor(Math.random() *
     characters.length));
   }
@@ -23501,7 +23501,7 @@ console.log(circleCircumference(5));  // Output: 31.41592653589793
 
 <pre>
 const shortestWord = (str) => str.split(' ').reduce((shortest, word) =>
-  (word.length < shortest.length ? word : shortest), '');
+  (word.length &lt; shortest.length ? word : shortest), '');
 
 // Example usage
 console.log(shortestWord("This is a test sentence"));  // Output: "a"
@@ -23586,11 +23586,11 @@ console.log(isHarshadSmithNumber(10));  // Output: false
 <p>Check if a given number is a perfect power.</p>
 
 <pre>
-const isPerfectPower = (num) => {
-  for (let i = 2; i * i <= num; i++) {
+const isPerfectPower = (num) =&gt; {
+  for (let i = 2; i * i &lt;= num; i++) {
     let power = 2;
     let result = i * i;
-    while (result <= num) {
+    while (result &lt;= num) {
       if (result === num) {
         return true;
       }
@@ -24261,9 +24261,8 @@ function scrollToTop() {
 }
 </pre>
 
-<footer>
 <h7>/* the end */</h7>
-
+<footer>
 <p>In every line of code, they have woven a story of innovation and creativity.
 This website is your starting line for racing into a vast new world of JavaScript.
 More like a pentathlon of races. Each being a little easier then the prior.
