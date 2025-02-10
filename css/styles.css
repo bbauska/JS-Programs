@@ -124,8 +124,8 @@ body {
   border-radius: 1px;
 }
 #myBtn:hover {
-  background-color: #fdfeff;  /* pale blue */
-  color: #8b0000;  /* dark red */
+  background-color: #ffff00;  /* yellow */
+  color: #ffff00;  /* dark red */
 }
 
 p.highlight {
