@@ -6867,7 +6867,6 @@ SkillShareServer.prototype.updated = function() {
 };<br>
 // The line that starts the server must be changed to
 new SkillShareServer(loadTalks()).start(8000);</pre>
-</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Long Polling</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -7387,7 +7386,7 @@ makes sure the returned promise is rejected when the server returns an error cod
 <pre>
 function fetchOK(url, options) {
   return fetch(url, options).then(response => {
-    if (response.status < 400) return response;
+    if (response.status &lt; 400) return response;
     else throw new Error(response.statusText);
   });
 }
@@ -7815,7 +7814,7 @@ time(findPath_list);
 <p><span class="consolas">JavaScript statements</span> are individual commands or instructions that 
 the browser executes. They form the logic of a program and can be simple or complex.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Examples of JavaScript Statements:</h4>
+<h3>Examples of JavaScript Statements:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <ol start="1">
   <li><h4>Variable Declaration:</h4>
@@ -7831,7 +7830,7 @@ the browser executes. They form the logic of a program and can be simple or comp
 }</pre>
   </li>
   <li><h4>Loops:</h4>
-    <pre>for (let i = 0;i<5;i++) {
+    <pre>for (let i = 0;i&lt;5;i++) {
   // Executed 5 times
   console.log(i);
 }</pre>
@@ -7947,8 +7946,8 @@ let quotient = a / b;  // Division</pre>
 let y = 10;
 console.log(x === y);  // Equality check
 console.log(x !== y);  // Inequality check
-console.log(x > y);  // Greater Than
-console.log(x < y);  // Less Than</pre>
+console.log(x &gt; y);  // Greater Than
+console.log(x &lt; y);  // Less Than</pre>
   </li>
   <li><h4>Logical Operators:</h4>
     <pre>let p = true;
@@ -8064,7 +8063,7 @@ let result = multiply(5,3);  // result = 15</pre>
 interacts with a web page, like <span class="consolas">clicking a button or typing in a form 
 field</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>Examples of JS Events:</h4>
+<h3>Examples of JS Events:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Click Event:</h4>
 <pre>document.getElementById('myButton').addEventListener('click', function() {
@@ -8446,14 +8445,14 @@ switch (day) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex37">ex37. JS Loop For</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">for loop<span> in JavaScript repeatedly executes a block 
+<p>The <span class="consolas">for loop</span> in JavaScript repeatedly executes a block 
 of code until a specified condition evaluates to false.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Loop For:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic for Loop:</h4>
 <pre>
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i &lt; 10; i++) {
   console.log(i);
 }
 </pre>
@@ -8461,7 +8460,7 @@ for (let i = 0; i < 10; i++) {
 <h4>Looping Array Elements:</h4>
 <pre>
 let arr = ['apple', 'banana', 'orange'];
-for (let i = 0; i < arr.length; i++) {
+for (let i = 0; i &lt; arr.length; i++) {
   console.log(arr[i])
 }
 </pre>
@@ -8510,7 +8509,7 @@ while a specified condition is true.</p>
 <h4>Basic while Loop:</h4>
 <pre>
 let count = 0;
-while (count < 5 ) {
+while (count &lt; 5 ) {
 console.log(count);
   count++;
 }
@@ -8525,7 +8524,7 @@ loop or switch statement.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using break in a Loop:</h4>
 <pre>
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i &lt; 10; i++) {
   if (i === 5) {
     break;
   }
@@ -10880,7 +10879,7 @@ fetch('data.json')
 <pre>
 let jsonData = {"name":"Bob", "age": 28};
 let displayDiv = document.getElementById("jsonDataDisplay");
-displayDiv.innerHTML = `<p>Name: ${jsonData.name}</p><p>Age: ${jsonData.age}</p>`;
+displayDiv.innerHTML = `&lt;p&gt;Name: ${jsonData.name}&lt;/p&gt;&lt;p&gt;Age: ${jsonData.age}&lt;/p&gt;`;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>09. Handling JSON Data in Forms:</h4>
@@ -11189,7 +11188,7 @@ element.style.color = "blue";
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let elements = document.getElementsByClassName (" myClass ");
-for (let i = 0; i < elements.length; i ++) {
+for (let i = 0; i &lt; elements.length; i ++) {
   elements[i].style.fontWeight = "bold";
 }
 </pre>
@@ -12190,7 +12189,7 @@ getData();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let fragment = document.createDocumentFragment();
-for (let i = 0; i < 5; i ++) {
+for (let i = 0; i &lt; 5; i ++) {
   let newElement = document.createElement('div');
   newElement.textcontent = 'Element ${i}';
   fragment.appendchild(newElement);
@@ -13036,7 +13035,7 @@ console.log(first, second, rest);  // Output: 12 [ 3,4, 5 ]
 <h4>10. Rest Parameters in Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const sum = (... args) => args.reduce((acc, curr) => acc + curr, 0);
+const sum = (... args) =&gt; args.reduce((acc, curr) =&gt; acc + curr, 0);
 console.log(sum(1, 2, 3, 4, 5));  // Output: 15
 <p>These JavaScript code snippets demonstrate advanced function operations, array 
 manipulations, object methods, promises and async / await functionalities.</p>
@@ -13129,7 +13128,7 @@ async function fetchData() {
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h4>ES6 + Features:<//h4>
+<h4>ES6 + Features:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Template Literals for Dynamic Strings:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14177,7 +14176,7 @@ let minRange = parseFloat(prompt("Enter the minimum value of the range:"));
 let maxRange = parseFloat(prompt("Enter the maximum value of the range:"));
 
 // Check if input is a valid number
-if (!isNaN(minRange) && !isNaN(maxRange) && minRange < maxRange) {
+if (!isNaN(minRange) && !isNaN(maxRange) && minRange &lt; maxRange) {
   // Generate a random number within the specified range
   let randomNumber = Math.random() * (maxRange - minRange) + minRange;
   console.log(
@@ -14201,9 +14200,9 @@ let number = parseFloat(prompt("Enter a number:"));
 // Check if input is a valid number
 if (!isNaN(number)) {
   // Check if the number is positive, negative, or zero
-  if (number > 0) {
+  if (number &gt; 0) {
     console.log(`${number} is a positive number.`);
-  } else if (number < 0) {
+  } else if (number &lt; 0) {
     console.log(`${number} is a negative number.`);
   } else {
     console.log("The entered number is zero.");
@@ -14269,7 +14268,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 1) {
   let isPrime = true;
   
   // Check for factors from 2 to the square root of the number
-  for (let i = 2; i <= Math.sqrt(number); i++) {
+  for (let i = 2; i &lt;= Math.sqrt(number); i++) {
     if (number % i === 0) {
       isPrime = false;
       break;
@@ -14303,15 +14302,15 @@ if(
   !isNaN(endNumber) &&
   Number.isInteger(startNumber) &&
   Number.isInteger(endNumber) &&
-  startNumber < endNumber &&
-  startNumber > 1
+  startNumber &lt; endNumber &&
+  startNumber &gt; 1
 ){
   console.log(`Prime numbers in the interval [${startNumber}, ${endNumber}]:`);
 
 // Check for prime numbers in the interval
-for (let i = startNumber; i <= endNumber; i++) {
+for (let i = startNumber; i &lt;= endNumber; i++) {
   let isPrime = true;
-  for (let j = 2; j <= Math.sqrt(i); j++) {
+  for (let j = 2; j &lt;= Math.sqrt(i); j++) {
     if (i % j === 0) {
       isPrime = false;
       break;
@@ -14340,7 +14339,7 @@ if (!isNaN(number) && Number.isInteger(number) && number >= 0) {
 
   // Calculate the factorial
   let factorial = 1;
-  for (let i = 1; i <= number; i++) {
+  for (let i = 1; i &lt;= number; i++) {
     factorial *= i;
   }
   console.log(`The factorial of ${number} is: ${factorial}`);
@@ -14365,7 +14364,7 @@ if (!isNaN(number) && Number.isInteger(number)) {
   console.log(`Multiplication table for ${number} (up to ${range}):`);
 
   // Display the multiplication table
-  for (let i = 1;i <= range; i++) {
+  for (let i = 1;i &lt;= range; i++) {
     let result = number * i;
     console.log(`${number} x ${i} = ${result}`);
   }
@@ -14392,7 +14391,7 @@ if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > 0) {
   let fibArray = &lbrack;0,1&rbrack;;
   
   // Generate the Fibonacci sequence
-  for (let i = 2; i < numTerms; i++) {
+  for (let i = 2; i &lt; numTerms; i++) {
     fibArray&lbrack;i&rbrack; = fibArray&lbrack;i -1&rbrack; + fibArray&lbrack;i - 2&rbrack;;
   }
   console.log(fibArray.join(","));
@@ -14451,15 +14450,15 @@ if(
   !isNaN(endNumber) &&
   Number.isInteger(startNumber) &&
   Number.isInteger(endNumber) &&
-  startNumber > 0 &&
-  startNumber < endNumber
+  startNumber &gt; 0 &&
+  startNumber &lt; endNumber
 ){
 console.log(
   `Armstrong numbers in the interval &lbrack;${startNumber}, ${endNumber}&rbrack;:`
 );
 
 // Check for Armstrong numbers in the interval
-for (let i = startNumber; i <= endNumber; i++) {
+for (let i = startNumber; i &lt;= endNumber; i++) {
   let originalNumber = i;
   let numberOfDigits = originalNumber.toString().length;
   let sum = 0;
@@ -14617,7 +14616,7 @@ if (!isNaN(numl) && !isNaN(num2) && Number.isInteger(numl) && Number.isInteger(n
   // Find the HCF or GCD
   let smallerNumber = Math.min(numl, num2);
   let hcf = 1;
-  for (let i = 1; i <= smallerNumber; i++) {
+  for (let i = 1; i &lt;= smallerNumber; i++) {
     if (numl % i === 0 && num2 % i === 0) {
       hcf = i;
     }
@@ -14676,7 +14675,7 @@ if (!isNaN(number) && Number.isInteger(number) && number > 0) {
   console.log(`Factors of ${number}:`);
 
   // Find and display the factors
-  for (let i = 1; i <= number; i++) {
+  for (let i = 1; i &lt;= number; i++) {
     if (number % i === 0) {
       console.log(i);
     }
@@ -14751,9 +14750,9 @@ do {
   if (!isNaN(userGuess)) {
     attempts++;
     // Provide feedback to the user
-    if (userGuess < randomNumber) {
+    if (userGuess &lt; randomNumber) {
       console.log("Too low! Try again.");
-    } else if (userGuess > randomNumber) {
+    } else if (userGuess &gt; randomNumber) {
       console.log("Too high! Try again.");
     } else {
       console.log(`Congratulations! You guessed the correct number ${randomNumber} in ${attempts} attempts.`);
@@ -14786,7 +14785,7 @@ function createDeck() {
 
 //loops throug each card
 function shuffleDeck(deck) {
-  for (let i = 0; i < deck.length; i++) {
+  for (let i = 0; i &lt; deck.length; i++) {
     // picks the random number between 0 and length of the deck
     let shuffle = Math.floor(Math.random() * (deck.length));
     
@@ -14815,8 +14814,8 @@ var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
 function getDeck() {
   let deck = new Array();
-    for(let i = 0; i < suits.length; i++) {
-      for(let x = 0; x < values.length; x++) {
+    for(let i = 0; i &lt; suits.length; i++) {
+      for(let x = 0; x &lt; values.length; x++) {
         let card = {Value: values[x], Suit: suits[i]};
         deck.push(card);
       }
@@ -14827,7 +14826,7 @@ function getDeck() {
 function shuffle(deck) {
   // for 1000 turns
   // switch the values of two random cards
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i &lt; 1000; i++) {
     let location1 = Math.floor((Math.random() * deck.length));
     let location2 = Math.floor((Math.random() * deck.length));
     let tmp = deck[location1];
@@ -14838,7 +14837,7 @@ function shuffle(deck) {
 
 function renderDeck(deck) {
   document.getElementById("deck").innerHTML = "";
-  for(let i = 0; i < deck.length; i++) {
+  for(let i = 0; i &lt; deck.length; i++) {
     let card = document.createElement("div");
     let value = document.createElement("div");
     let suit = document.createElement("div");
@@ -14894,7 +14893,7 @@ function to generate and display the Fibonacci sequence.</p>
 <pre>
 // Function to generate the Fibonacci sequence using recursion
 function fibonacci(n) {
-  if(n <= l){
+  if(n &lt;= l){
     return n;
   } else {
     return fibonacci(n -1) + fibonacci(n - 2);
@@ -14909,7 +14908,7 @@ if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms >= 0) {
   console.log(`Fibonacci sequence of ${numTerms} terms:`);
   
   // Display the Fibonacci sequence using recursion
-  for (let i = 0; i < numTerms; i++) {
+  for (let i = 0; i &lt; numTerms; i++) {
     console.log(fibonacci(i));
   }
 } else {
@@ -15119,7 +15118,7 @@ let targetchar = prompt("Enter the character to count:");
 if (inputString.length > 0 && targetChar.length === 1) {
   // Count occurrences of the target character
   let count = 0;
-  for (let i = 0; i < inputString.length; i++) {
+  for (let i = 0; i &lt; inputString.length; i++) {
     if (inputString&lbrack;i&rbrack; === targetChar) {
       count++;
     }
@@ -15271,7 +15270,7 @@ generates a string with random characters.</p>
 function generateRandomString(length) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let randomstring = '';
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i &lt; length; i++) {
     const randomIndex = Math.floor(Math.random() * characters.length);
     randomstring += characters.charAt(randomIndex);
   }
@@ -15487,16 +15486,16 @@ console.log(' Current Date: ${formattedDate}');
 
 <pre>
 // Example dates
-let datel = new Date('2022-01-0r);
+let date1 = new Date('2022-01-0r);
 let date2 = new Date('2023-01-0r);
 
 // Compare dates
-if (date 1 < date2) {
-  console.log(` $ {datel} is earlier than ${date2}`);
-} else if (datel > date2) {
-  console.log(` ${datel} is later than ${date2}`);
+if (date1 &lt; date2) {
+  console.log(`${date1} is earlier than ${date2}`);
+} else if (date1 &gt; date2) {
+  console.log(`${date1} is later than ${date2}`);
 } else {
-  console.log(` ${datel} is equal to ${date2}`);
+  console.log(`${date1} is equal to ${date2}`);
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15625,7 +15624,7 @@ console.log("Intersection:", intersection);
 <pre>
 function chunkArray(array, chunksize) {
   let result = &lbrack;&rbrack;;
-  for (let i = 0; i < array.length; i + = chunksize) {
+  for (let i = 0; i &lt; array.length; i + = chunksize) {
     result.push(array.slice(i, i + chunksize));
   }
   return result;
@@ -16113,7 +16112,7 @@ console.log(`The average of ${number1} and ${number2} is: ${result}`);
 <pre>
 function calculateCircleArea(radius) {
   // Check if the radius is a valid number
-  if (isNaN(radius) || radius <= 0) {
+  if (isNaN(radius) || radius &lt;= 0) {
     return "Invalid radius. Please provide a positive number.";
   }
   // Calculate the area
@@ -16293,7 +16292,7 @@ can use simple mathematical operations.</p>
 <pre>
 function convertMinutesToHoursAndMinutes(totalMinutes) {
 // Check if the input is a valid positive number
-if (isNaN(totalMinutes) 11 totalMinutes < 0) {
+if (isNaN(totalMinutes) || totalMinutes &lt; 0) {
   return "Invalid input. Please provide a non-negative number of minutes.";
 }
 // Calculate hours and remaining minutes
@@ -16301,7 +16300,7 @@ const hours = Math.floor(totalMinutes / 60);
 const minutes = totalMinutes % 60;
 
 // Construct the result string
-const result = `${hours} hours and $ {minutes} minutes`;
+const result = `${hours} hours and ${minutes} minutes`;
 return result;
 }
 // Example usage:
@@ -16318,7 +16317,7 @@ through each digit and add them together.</p>
 <pre>
 function sumOfDigits(number) {
   // Check if the input is a valid number
-  if (isNaN(number) || !Number.isInteger(number) || number < 0) {
+  if (isNaN(number) || !Number.isInteger(number) || number &lt; 0) {
     return "Invalid input. Please provide a non-negative integer.";
   }
   
@@ -16326,7 +16325,7 @@ function sumOfDigits(number) {
   const digitsArray = String(number).split('').map(Number);
 
   // Calculate the sum of digits
-  const sum = digitsArray.reduce((acc, digit) => acc + digit, 0);
+  const sum = digitsArray.reduce((acc, digit) =&gt; acc + digit, 0);
 
   return sum;
 }
@@ -16379,13 +16378,13 @@ function generateRandomPassword(length) {
   const allChars = uppercaseChars + lowercaseChars + numericChars + specialChars;
 
   // Check if the input length is a valid positive number
-  if (!Number.isInteger(length) || length <= 0) {
+  if (!Number.isInteger(length) || length &lt;= 0) {
     return "Invalid input. Please provide a positive integer for the password length.";
   }
   
   // Generate the random password
   let password = '';
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i &lt; length; i++) {
     const randomIndex = Math.floor(Math.random() * allChars.length);
     password += allChars.charAt(randomIndex);
   }
@@ -16404,7 +16403,7 @@ console.log(`Generated Password: ${randomPassword}`);
 <pre>
 function calculateSimpleInterest(principal, rate, time) {
   // Check if the inputs are valid positive numbers
-  if (isNaN(principal) || isNaN(rate) || isNaN(time) || principal <= 0 || rate <= 0 || time <= 0) {
+  if (isNaN(principal) || isNaN(rate) || isNaN(time) || principal &lt;= 0 || rate &lt;= 0 || time &lt;= 0) {
     return "Invalid inputs. Please provide valid positive numbers.";
   }
   // Calculate simple interest
@@ -16419,10 +16418,10 @@ const investmentTime = 2;  // 2 years
 
 const interestAmount = calculateSimpleInterest(principalAmount, interestRate, investmentTime);
 
-console.log(`Principal Amount: $${principalAmount}`);
+console.log(`Principal Amount: ${principalAmount}`);
 console.log(`Interest Rate: ${interestRate}%`);
 console.log(`Investment Time: ${investmentTime} years`);
-console.log(`Simple Interest: $${interestAmount}`);
+console.log(`Simple Interest: ${interestAmount}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js95">js95. Implement a Basic Stopwatch</h2>
@@ -16452,7 +16451,7 @@ function updateDisplay() {
   
   const minutes = Math.floor(elapsedTime / 60);
   const seconds = elapsedTime % 60;
-  const formattedTime = `${minutes}:${seconds < 10 ? "0": ""}${seconds}`;
+  const formattedTime = `${minutes}:${seconds &lt; 10 ? "0": ""}${seconds}`;
   document.getElementById("display").textContent = formattedTime;
 }
 </pre>
