@@ -322,7 +322,6 @@ turn your own ideas into a reality without even having to think about it.</p>
   <li><a href="#ex92">ex92. JS AJAX</a></li>
   <li><a href="#ex93">ex93. JS JSON</a></li>
   <li><a href="#ex94">ex94. JavaScript vs jQuery: A Comprehensive Comparison</a></li>
-  <li><a href="#ex95">ex95. JS Overview</a></li>
 </ol>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~ 218 simple javascript example scripts ~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1451,12 +1450,12 @@ Document (html)<br>
 |— html<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- head<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- title<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- body<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- hl<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- "Page Title"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- hl<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "Page Title"<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- p<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
 </blockquote>
 
 <p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
@@ -6502,21 +6501,20 @@ patch the appropriate action.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el50">el50. A Pixel Art Editor: Efficient drawing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This exercise is a good example of how immutable data structures can make
-code faster. Because we have both the old and the new picture, we can compare
-them and redraw only the pixels that changed color, saving more than 99
-percent of the drawing work in most cases.</p>
+<p>This exercise is a good example of how immutable data structures can make code faster. Because 
+we have both the old and the new picture, we can compare them and <b>redraw only the pixels that 
+changed color</b>, saving more than 99 percent of the drawing work in most cases.</p>
 
-<p>You can either write a new function updatePicture or have drawPicture take
-an extra argument, which may be undefined or the previous picture. For each
-pixel, the function checks whether a previous picture was passed with the same
-color at this position and skips the pixel when that is the case.</p>
+<p>You can either write a new function <span class="consolas">updatePicture</span> or have 
+<span class="consolas">drawPicture</span> take an extra argument, which may be undefined or 
+the previous picture. For each pixel, the function checks whether a previous picture was 
+passed with the same color at this position and skips the pixel when that is the case.</p>
 
 <p>Because the canvas gets cleared when we change its size, you should also
 avoid touching its width and height properties when the old picture and the
 new picture have the same size. If they are different, which will happen when a
-new picture has been loaded, you can set the binding holding the old picture to
-null after changing the canvas size because you shouldn’t skip any pixels after
+new picture has been loaded, you can set the <span class="consolas">binding</span> holding the 
+old picture to null after changing the canvas size because you shouldn’t skip any pixels after
 you’ve changed the canvas size.</p>
 
 <pre>
@@ -11022,12 +11020,11 @@ creating, manipulating, parsing, and working with JSON data in various scenarios
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex94">ex94. JavaScript vs jQuery: A Comprehensive Comparison</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript and jQuery are both powerful tools used in web development. JavaScript is a 
 programming language, while jQuery is a library built with JavaScript. Understanding their 
 differences, capabilities, and usage scenarios is crucial for developers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h3>JavaScript Overview</h3>
+<h3>JS Overview</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript is a versatile programming language primarily used for enhancing 
 interactivity on web pages. It&apos;s a core technology in web development, enabling dynamic 
@@ -20141,10 +20138,9 @@ findMaxIntegerForSum(l5);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js206">js206. URL Breakdown</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program breaks a URL address into its parts and puts them into an array. The URL 
-structure considered is 
-<span class="consolas">schema://domain&lbrack;/:path &rbrack;</span>, where 
-<span class="consolas">path</span> is optional.</p>
+<p>This program breaks a <span class="consolas">URL address</span> into its parts and puts them 
+into an array. The URL structure considered is <b>schema://domain&lbrack;/:path &rbrack;</b>, 
+where <b>path</b> is optional.</p>
 
 <pre>
 function breakURL(url) {
@@ -20168,9 +20164,8 @@ breakURL("https://www.example.org/page");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js207">js207. Sort Strings by Length</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program sorts the strings of a given array of strings in order of increasing 
-length. It uses the 
-<span class="consolas">Array.sort</span> method to achieve the desired order.</p>
+<p>This program <b>sorts</b> the strings of a given <b>array of strings</b> in order of increasing 
+length. It uses the <span class="consolas">Array.sort</span> method to achieve the desired order.</p>
 
 <pre>
 function sortStringsByLength(stringsArray) {
@@ -20187,11 +20182,9 @@ sortStringsByLength(&lbrack;"apple", "banana", "orange", "kiwi", "grape"&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js208">js208. Simplify Absolute Path</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program simplifies a given absolute path for a file in Unix-style. It takes a 
-string representing the absolute path and simplifies it by resolving any redundant 
-slashes (<span class="consolas">//</span>), parent directory references (
-<span class="consolas">..</span>), and current directory references (
-<span class="consolas">.</span>).</p>
+<p>This program simplifies a given <span class="consolas">absolute path</span> for a file in 
+Unix-style. It takes a string representing the absolute path and simplifies it by resolving any redundant 
+slashes (//), parent directory references (..), and current directory references (.).</p>
 
 <pre>
 function simplifyAbsolutePath(path) {
@@ -20214,7 +20207,7 @@ simplifyAbsolutePath('/home/user/../documents/./file.txt');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js209">js209. Count Common Elements in Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This program finds the number of common elements between two arrays. It compares the 
+<p>This program finds the number of <b>common elements</b> between two arrays. It compares the 
 elements in both arrays and counts the occurrences of common elements.</p>
 
 <pre>
