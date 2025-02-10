@@ -20,13 +20,37 @@ p {
   text-align: left; 
   margin-left: 10px;
 }
+/* unvisited link */
+a:link {
+  color: #ff69b4;  /* hotpink */
+  background: #000000;  /* black */
+}
+
+/* visited link */
+a:visited {
+  background: #ffea00;  /* bright yellow */
+  color: #000000;  /* black */
+}
+
+/* mouse over link */
+a:hover {
+  background: #000000;  /* black */
+  color: #ff69b4;  /* hotpink */
+}
+
+/* selected link */
+a:active {
+  color: #00008b;  /* darkblue */
+  background: #ffea00;  /* bright yellow */
+}
 
 a {
   text-decoration: none; 
 }
+
 a[href]:hover {
   color: #000000;
-  background-color: #ffff00;
+  background-color: #ffff00;  /* yellow */
   text-decoration: underline; 
 }
 
