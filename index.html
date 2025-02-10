@@ -18365,7 +18365,7 @@ class MinesweeperGame {
   createBoard() {
     const board = Array.from({ length: this.rows },()=> Array(this.cols).fill(0));
     // Place mines randomly
-    for (let i = 0; i < this.numMines; i++) {
+    for (let i = 0; i &lt; this.numMines; i++) {
       let row, col;
       do {
         row = Math.floor(Math.random() * this.rows);
@@ -19676,7 +19676,7 @@ function fibonacciNumberGenerator() {
 
   let fibonacciNumbers = &lbrack;0, 1&rbrack;;
 
-  for (let i = 2; i < = limit; i+ +) {
+  for (let i = 2; i &lt;= limit; i+ +) {
    fibonacciNumbers&lbrack;i&rbrack; = fibonacciNumbers&lbrack;i -1&rbrack; + fibonacciNumbers&lbrack;i - 2&rbrack;;
   }
 
@@ -22038,7 +22038,7 @@ number. Factors are the positive integers that evenly divide the input number.</
 <pre>
 const factors = (num) => {
   const result = &lbrack;&rbrack;;
-  for (let i = 1; i <= num; i++) {
+  for (let i = 1; i &lt;= num; i++) {
     if (num % i === 0) {
       result.push(i);
     }
@@ -24199,7 +24199,7 @@ button.addEventListener('click', () => {
 })
 </pre>
 
-<!-- goto ch1 --->
+<!-- goto ch1 -->
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h5>HTML:</h5>
@@ -24261,7 +24261,7 @@ function scrollToTop() {
 }
 </pre>
 
-<h7>/* the end */</h7>
+<p><small><small>/* the end */</small></small></p>
 <footer>
 <p>In every line of code, they have woven a story of innovation and creativity.
 This website is your starting line for racing into a vast new world of JavaScript.
