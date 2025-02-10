@@ -20,24 +20,22 @@ p {
   text-align: left; 
   margin-left: 10px;
 }
+
 /* unvisited link */
 a:link {
-  color: #ff69b4;  /* hotpink */
-  background: #000000;  /* black */
+  color: #000000;  /* black */
+  background: #add8e6;  /* lightblue */
 }
-
 /* visited link */
 a:visited {
   background: #ffea00;  /* bright yellow */
   color: #000000;  /* black */
 }
-
 /* mouse over link */
 a:hover {
   background: #000000;  /* black */
   color: #ff69b4;  /* hotpink */
 }
-
 /* selected link */
 a:active {
   color: #00008b;  /* darkblue */
