@@ -16591,7 +16591,7 @@ you can use the following function:</p>
 <pre>
 function convertDaysToYearsMonthsDays(days) {
   // Check if the input is a valid positive number
-  if (isNaN(days) 11 days <= 0) {
+  if (isNaN(days) 11 days &lt;= 0) {
     return "Invalid input. Please provide a valid positive number of days.";
   }
   // Calculate years
@@ -17290,7 +17290,7 @@ function game() {
   let playerScore = 0;
   let computerScore = 0;
   
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i &lt; 5; i++) {
     const playerSelection = prompt('Enter your choice (rock, paper, or scissors):');
     const computerSelection = computerPlay();
     const result = playRound(playerSelection, computerSelection);
@@ -17306,7 +17306,7 @@ function game() {
   console.log(`Final Score: Player ${playerScore} - ${computerScore} Computer`);
   if (playerScore > computerScore) {
     console.log('You win the game!');
-  } else if (playerScore < computerScore) {
+  } else if (playerScore &lt; computerScore) {
     console.log('You lose the game!');
   } else {
     console.log('The game is a tie!');
@@ -17362,8 +17362,8 @@ factors are obtained.</p>
 
 <pre>
 function isPrime(num) {
-  if (num < 2) return false;
-  for (let i = 2; i <= Math.sqrt(num); i++) {
+  if (num &lt; 2) return false;
+  for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
@@ -17375,7 +17375,7 @@ function sumOfDigits(number) {
 
 function primeFactors(number) {
   const factors = &lbrack;&rbrack;;
-  for (let i = 2; i <= number; i++) {
+  for (let i = 2; i &lt;= number; i++) {
     while (isPrime(i) && number % i === 0) {
       factors.push(i);
       number/= i;
@@ -17406,9 +17406,9 @@ representation of a chessboard.</p>
 function generateChessboard() {
   const size = 8;  // Size of the chessboard (8x8)
   const chessboard = &lbrack;&rbrack;;
-  for (let row = 0; row < size; row++) {
+  for (let row = 0; row &lt; size; row++) {
     const currentRow = &lbrack;&rbrack;;
-    for (let col = 0; col < size; col++) {
+    for (let col = 0; col &lt; size; col++) {
       // Use 'X' for black squares and'' for white squares
       const isBlack = (row + col) % 2 === 1;
       const square = isBlack ? 'X':'';
@@ -17438,7 +17438,7 @@ includeSpecialChars) {
   const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUV WXYZ';
   const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
   const numberChars = '0123456789';
-  const specialChars = '!@#$%^&*()-=_+&lbrack;&rbrack;{}|;:,.<>?';
+  const specialChars = '!@#$%^&*()-=_+&lbrack;&rbrack;{}|;:,.&lt;&gt;?';
 
   let validChars = '';
   let password = '';
@@ -17452,7 +17452,7 @@ includeSpecialChars) {
     console.error('Error: At least one character type must be selected.');
     return null;
   }
-  for (let i = 0; i < length; i++) {
+  for (let i = 0; i &lt; length; i++) {
     const randomindex = Math.floor(Math.random() * validChars.length);
     password += validChars.charAt(randomlndex);
   }
@@ -17486,7 +17486,7 @@ function solveMaze(maze) {
   const visited = Array.from({length: rows}, () => Array(cols).fill(false));
 
   function isSafe(row, col) {
-    return row >= 0 && row < rows && col >= 0 && col < cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
+    return row &gt;= 0 && row &lt; rows && col &gt;= 0 && col &lt; cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
   }
   
   function dfs(row, col) {
@@ -17575,7 +17575,7 @@ a solution is found.</p>
 // Function to check if a number can be placed in a particular cell
 function isSafe(board, row, col, num) {
   // Check if ’num' is not present in the current row and column
-  for (let i = 0;i < 9;i++) {
+  for (let i = 0;i &lt; 9;i++) {
     if (board&lbrack;row&rbrack;&lbrack;i&rbrack; === num || board&lbrack;i&rbrack;&lbrack;col&rbrack; === num) {
       return false;
     }
@@ -17584,8 +17584,8 @@ function isSafe(board, row, col, num) {
   // Check if 'num' is not present in the 3x3 subgrid
   const startRow = Math.floor(row / 3) * 3;
   const startCol = Math.floor(col / 3) * 3;
-  for (let i = 0;i < 3;i++){
-    for (let j = 0; j < 3;j++){
+  for (let i = 0;i &lt; 3;i++) {
+    for (let j = 0; j &lt; 3;j++) {
       if (board&lbrack;startRow + i&rbrack;&lbrack;startCol + j&rbrack; === num) {
         return false;
       }
@@ -17596,8 +17596,8 @@ function isSafe(board, row, col, num) {
 
 // Function to find an empty cell in the Sudoku grid
 function findEmptyCell(board) {
-  for (let row = 0; row < 9; row++) {
-    for (let col = 0; col < 9; col++) {
+  for (let row = 0; row &lt; 9; row++) {
+    for (let col = 0; col &lt; 9; col++) {
       if (board&lbrack;row&rbrack;&lbrack;col&rbrack; === 0) {
         return &lbrack;row, col&rbrack;;
       }
@@ -17617,7 +17617,7 @@ function solveSudoku(board) {
   const &lbrack;row, col&rbrack; = emptyCell;
 
   // Try filling the empty cell with numbers 1 to 9
-  for (let num = l; num <= 9; num++) {
+  for (let num = l; num &lt;= 9; num++) {
     if (isSafe(board, row, col, num)) {
       // If placing 'num' in the current cell is safe, try the next step
       board&lbrack;row&rbrack;&lbrack;col&rbrack; = num;
@@ -17762,7 +17762,7 @@ function binomialCoefficient(n, k) {
     k = n - k;
   }
   let result = 1;
-  for (let i = 0; i < k; i++) {
+  for (let i = 0; i &lt; k; i++) {
     result *= (n - i);
     result /= (i + 1);
   }
@@ -17855,15 +17855,14 @@ class MazeGenerator {
       const newRow = row + dr;
       const newCol = col + de;
       // Check if the new cell is within bounds and unvisited
-      if (newRow > = 0 && newRow < this.rows && newCol > = 0 && newCol < this.cols && this.grid&lbrack;newRow&rbrack;&lbrack;newCol&rbrack; ===
-    0){
-      // Mark the cell between the current and new cell as visited
-      this.grid&lbrack;row + dr / 2&rbrack;&lbrack;col + de / 2&rbrack; = 1;
-      // Recursively visit the new cell
-      this.visitCell(newRow, newCol);
+      if (newRow &gt;= 0 && newRow &lt; this.rows && newCol &gt;= 0 && newCol &lt; this.cols && this.grid&lbrack;newRow&rbrack;&lbrack;newCol&rbrack; === 0) {
+        // Mark the cell between the current and new cell as visited
+        this.grid&lbrack;row + dr / 2&rbrack;&lbrack;col + de / 2&rbrack; = 1;
+        // Recursively visit the new cell
+        this.visitCell(newRow, newCol);
       }
     }
-}
+  }
 
   printMaze() {
     for (const row of this.grid) {
@@ -17914,23 +17913,23 @@ class CrosswordPuzzle {
   constructor(rows, cols) {
     this.rows = rows;
     this.cols = cols;
-    this.grid = Array.from({ length: rows },()=> Array(cols).fill(''));
+    this.grid = Array.from({length: rows},()=&gt; Array(cols).fill(''));
     this.words = &lbrack;&rbrack;;
   }
   addWord(word, row, col, direction) {
     if (direction === 'across') {
-      for (let i = 0; i < word.length; i++) {
+      for (let i = 0; i &lt; word.length; i++) {
         this.grid&lbrack;row&rbrack;&lbrack;col + i&rbrack; = word&lbrack;i&rbrack;;
       }
     } else if (direction === 'down') {
-      for (let i = 0; i < word.length; i++) {
+      for (let i = 0; i &lt; word.length; i++) {
         this.grid&lbrack;row + i&rbrack;&lbrack;col&rbrack; = word&lbrack;i&rbrack;;
       }
     }
-      this.words.push({ word, row, col, direction});
+      this.words.push({word, row, col, direction});
   }
 
-  printPuzzleO {
+  printPuzzle() {
     for (const row of this.grid) {
       console.log(row.join(''));
     }
@@ -17978,16 +17977,16 @@ divisors, excluding itself. The sum of proper divisors is greater than the numbe
 <pre>
 function getProperDivisorsSum(number) {
   let sum = 0;
-  for (let i = 1; i < = Math.floor(number I 2); i++) {
+  for (let i = 1; i &lt;= Math.floor(number / 2); i++) {
     if (number % i === 0) {
-      sum + = i;
+      sum += i;
     }
   }
   return sum;
 }
 function isAbundantNumber(number) {
   const divisorsSum = getProperDivisorsSum(number);
-  return divisorsSum > number;
+  return divisorsSum &gt; number;
 }
 
 // Example usage
@@ -18020,7 +18019,7 @@ class WordGuessingGame {
   displayWord() {
     return this.selectedWord
     .split(")
-    .map(letter => (this.guesses.includes(letter) ? letter: '_'))
+    .map(letter =&gt; (this.guesses.includes(letter) ? letter: '_'))
     .join('');
   }
   makeGuess(letter) {
@@ -18030,13 +18029,13 @@ class WordGuessingGame {
       if (Ithis.selectedWord.includes(letter)) {
         this.maxAttempts--;
         if (this.maxAttempts === 0) {
-          console.log(' Sorry, you're out of attempts. The word was: ${this.selectedWord}');
+          console.log(`Sorry, you're out of attempts. The word was: ${this.selectedWord}`);
           process.exit();
         }
       }
     }
-    console.log(' Attempts left: $ {this.maxAttempts}');
-    console.log(' Current word: ${this.displayWord()}');
+    console.log(`Attempts left: ${this.maxAttempts}`);
+    console.log(`Current word: ${this.displayWord()}`);
     if (!this.displayWord().includes('_')) {
       console.log('Congratulations! You guessed the word!');
       process.exit();
@@ -18072,21 +18071,21 @@ which counts the positive integers up to a given integer
 
 <pre>
 function eulerTotientFunction(n) {
-  if(n <= 0) {
+  if(n &lt;= 0) {
     return "Input must be a positive integer.";
   }
   let result = n;  // Initialize result as n
   // Iterate through all prime factors of n
-  for (letp = 2; p * p <= n; p++) {
+  for (let p = 2; p * p &lt;= n; p++) {
     if (n % p === 0) {
       while (n % p === 0) {
-        n/=p;
+        n /= p;
       }
       result -= result / p;  // Apply the formula for prime factors
     }
   }
   // If n is a prime number greater than 1
-  if (n > 1) {
+  if (n &gt; 1) {
     result -= result / n;
   }
   return Math.floor(result);  // Return the result as an integer
@@ -18095,7 +18094,7 @@ function eulerTotientFunction(n) {
 // Example usage
 const n = 12;  // Replace with the positive integer for which you want to calculate Euler&apos;s Totient Function
 const result = eulerTotientFunction(n);
-console.log(' Euler&apos;s Totient Function for ${n} is: $ {result}');
+console.log(`Euler&apos;s Totient Function for ${n} is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js144">js144. Basic Memory Matching Game</h2>
@@ -18114,17 +18113,17 @@ class MemoryMatchingGame {
     this.matches = 0;
   }
   shuffleCards() {
-    for (let i = this.cards.length -1; i > 0; i--) {
-      constj = Math.floor(Math.random() * (i + 1));
+    for (let i = this.cards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
       &lbrack;this.cards&lbrack;i&rbrack;, this.cards&lbrack;j&rbrack;&rbrack; 
       = &lbrack;this.cards&lbrack;j&rbrack;, this.cardsfi&rbrack;&rbrack;;
     }
   }
   createBoard() {
     const board = &lbrack;&rbrack;;
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i &lt; 4; i++) {
       const row = &lbrack;&rbrack;;
-      for (let j = 0; j <4;j++){
+      for (let j = 0; j &lt; 4; j++){
         row.push(this.cards&lbrack;i * 4 + j&rbrack;);
       }
       board.push(row);
@@ -18133,22 +18132,22 @@ class MemoryMatchingGame {
   }
   displayBoard() {
     for (const row of this.board) {
-      console.log(row.map(card => (card.faceUp ? card.value : 'X')).join(''));
+      console.log(row.map(card =&gt; (card.faceUp ? card.value : 'X')).join(''));
     }
   }
   flipCard(row, col) {
     const card = this.board&lbrack;row&rbrack;&lbrack;col&rbrack;;
-    if (’card.faceUp && this.flippedCards.length < 2) {
+    if (!card.faceUp && this.flippedCards.length &lt; 2) {
       card.faceUp = true;
       this.flippedCards.push(card);
       if (this.flippedCards.length === 2) {
         this.attempts++;
-        if (this.flippedCards&lbrack;O&rbrack;.value === this.flippedCards&lbrack;l&rbrack;.value) {
+        if (this.flippedCards&lbrack;O&rbrack;.value === this.flippedCards&lbrack;1&rbrack;.value) {
           this.matches++;
           console.log('Match found!');
         } else {
           console.log('No match. Try again.');
-          this.flippedCards.forEach(card => (card.faceUp = false));
+          this.flippedCards.forEach(card =&gt; (card.faceUp = false));
           }
         this.flippedCards = &lbrack;&rbrack;;
       }
@@ -18169,14 +18168,14 @@ const cards = &lbrack;
   {value: 'D', faceUp: false},
   {value: 'A', faceUp: false},
   {value: 'B', faceUp: false},
-  {value: 'C, faceUp: false},
+  {value: 'C', faceUp: false},
   {value: 'D', faceUp: false}
 &rbrack;;
 
-// Example usage
 const game = new MemoryMatchingGame(cards);
 console.log('Welcome to the Memory Matching Game!');
 game.displayBoard();
+
 // Simulate the game loop (you can replace this with actual user input in a real environment)
 game.flipCard(0, 0);
 game.flipCard(1, 1);
