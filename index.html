@@ -13037,9 +13037,9 @@ console.log(first, second, rest);  // Output: 12 [ 3,4, 5 ]
 <pre>
 const sum = (... args) =&gt; args.reduce((acc, curr) =&gt; acc + curr, 0);
 console.log(sum(1, 2, 3, 4, 5));  // Output: 15
+</pre>
 <p>These JavaScript code snippets demonstrate advanced function operations, array 
 manipulations, object methods, promises and async / await functionalities.</p>
-</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Functions and Operations:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -15523,7 +15523,7 @@ function updateCountdown() {
   // Display the countdown
   document.getElementById('countdown').innerHTML = ' ${days}d ${hours}h ${minutes}m ${seconds}s';
   // Check if the countdown has reached zero
-  if (timeDifference < = 0) {
+  if (timeDifference &lt; = 0) {
     clearlnterval(countdownlnterval);
     document.getElementById('countdown').innerHTML = 'Countdown expired!';
   }
@@ -16464,12 +16464,12 @@ function updateDisplay() {
 <pre>
 function isPerfectNumber(number) {
   // Check if the input is a positive integer
-  if (!Number.isInteger(number) || number <= 0) {
+  if (!Number.isInteger(number) || number &lt;= 0) {
     return "Invalid input. Please provide a positive integer.";
   }
   // Find divisors and calculate sum
   let sum = 0;
-  for (let i = 1; i <= Math.floor(number / 2); i++) {
+  for (let i = 1; i &lt;= Math.floor(number / 2); i++) {
     if (number % i === 0) {
       sum += i;
     }
@@ -16490,7 +16490,7 @@ console.log(`Is ${testNumber} a perfect number? ${result}`);
 <pre>
 function calculateCylinderVolume(radius, height) {
   // Check if the inputs are valid positive numbers
-  if (isNaN(radius) || isNaN(height) || radius < = 0 || height <= 0) {
+  if (isNaN(radius) || isNaN(height) || radius &lt;= 0 || height &lt;= 0) {
     return "Invalid inputs. Please provide valid positive numbers.";
   }
 
@@ -16500,7 +16500,7 @@ function calculateCylinderVolume(radius, height) {
 }
 // Example usage:
 const cylinderRadius = 5;
-const cylinderHeight =10;
+const cylinderHeight = 10;
 const cylindervolume = calculateCylinderVolume(cylinderRadius, cylinderHeight);
 console.log(`Cylinder Volume: ${cylinderVolume.toFixed(2)} cubic units`);
 </pre>
@@ -16676,7 +16676,7 @@ is equal to the original number.</p>
 <pre>
 function isPerfectSquare(number) {
   // Check if the input is a valid positive number
-  if (isNaN(number) || number < 0) {
+  if (isNaN(number) || number &lt; 0) {
     return "Invalid input. Please provide a valid non-negative number.";
   }
   // Calculate the square root
@@ -16699,7 +16699,7 @@ the length and width as parameters and applies the formula:</p>
 <pre>
 function calculateRectangleArea(length, width) {
   // Check if the inputs are valid positive numbers
-  if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
+  if (isNaN(length) || isNaN( width) || length &lt;= 0 || width &lt;= 0) {
     return "Invalid inputs. Please provide valid positive numbers for length and width.";
   }
     // Calculate the area of the rectangle
@@ -16792,12 +16792,12 @@ can use libraries that support arbitrary-precision arithmetic. One such library 
 <pre>
 function calculateFactorial(n) {
   // Check if the input is a valid non-negative integer
-  if (!Number.isInteger(n) || n < 0) {
+  if (!Number.isInteger(n) || n &lt; 0) {
     return "Invalid input. Please provide a non-negative integer.";
   }
   // Use BigInt to handle large factorials
   let result = BigInt(1);
-  for (let i = 2;i<=n;i++){
+  for (let i = 2;i&lt;=n;i++){
     result *= BigInt(i);
   }
   return result.toString();
@@ -16822,14 +16822,14 @@ each digit and checks if their sum equals the original number.</p>
 <pre>
 function calculateFactorial(number) {
   let result = 1;
-  for (let i = 2; i <= number; i++) {
+  for (let i = 2; i &lt;= number; i++) {
     result *= i;
   }
   return result;
 }
 function isStrongNumber(num) {
   // Check if the input is a non-negative integer
-  if (!Number.isInteger(num) || num < 0) {
+  if (!Number.isInteger(num) || num &lt; 0) {
     return false;
   }
   // Convert the number to an array of digits
@@ -16857,13 +16857,13 @@ narcissistic number because 1^3 + 5^3 + 3^3 equals 153.</p>
 <pre>
 function isNarcissisticNumber(num) {
   // Check if the input is a non-negative integer
-  if (!Number.isInteger(num) || num < 0) {
+  if (!Number.isInteger(num) || num &lt; 0) {
     return false;
   }
   const numStr = num.toString();
   const numDigits = numStr.length;
   let sum = 0;
-  for (let i = 0; i < numDigits; i++) {
+  for (let i = 0; i &lt; numDigits; i++) {
     const digit = parseInt(numStr[i], 10);
     sum += Math.pow(digit, numDigits);
   }
@@ -16915,13 +16915,13 @@ formula: <span class="consolas">T_n = n*(n+l)/2</span>.</p>
 <pre>
 function isTriangularNumber(num) {
   // Check if the input is a non-negative integer
-  if (!Number.isInteger(num) || num < 0) {
+  if (!Number.isInteger(num) || num &lt; 0) {
     return false;
   }
   // Iterate through natural numbers until the sum exceeds or equals the input number
   let sum = 0;
   let n = 0;
-  while (sum < num) {
+  while (sum &lt; num) {
     n++;
     sum += n;
   }
@@ -16945,20 +16945,21 @@ console.log(`${testNumber} is a triangular number: ${result}`);
 <span class="consolas">Area = (a + b) * h / 2</span>.</p>
 
 <pre>
-function trapezoidArea(basel, base2, height) {
+function trapezoidArea(base1, base2, height) {
   // Check if the inputs are valid numbers
-  if (isNaN(basel) 11 isNaN(base2) || isNaN(height) 11 basel <= 0 11 base2 <= 0 11 height <= 0) {
+  if (isNaN(basel) || isNaN(base2) || isNaN(height) || basel &lt;= 0 || base2 &lt;= 0 || height &lt;= 0) {
     return "Invalid input. Please provide valid numbers.";
   }
   // Calculate the area of the trapezoid
   const area = 0.5 * height * (basel + base2);
   return area;
 }
+
 // Example usage:
-const basel Length = 5;
+const base1Length = 5;
 const base2Length = 9;
 const trapezoidHeight = 4;
-const result = trapezoidArea(baselLength, base2Length, trapezoidHeight);
+const result = trapezoidArea(base1Length, base2Length, trapezoidHeight);
 console.log(`The area of the trapezoid is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16972,7 +16973,7 @@ numbers, and one commonly used algorithm is the Euclidean Algorithm.</p>
 <pre>
 function calculateGCD(a, b) {
   // Check if the inputs are valid numbers
-  if (!Number.isInteger(a) || !Number.isInteger(b) || a < = 0 || b < = 0) {
+  if (!Number.isInteger(a) || !Number.isInteger(b) || a &lt;= 0 || b &lt;= 0) {
     return "Invalid input. Please provide valid positive integers.";
   }
   // Apply the Euclidean Algorithm to find the GCD
@@ -16983,11 +16984,12 @@ function calculateGCD(a, b) {
   }
   return a;
 }
+
 // Example usage:
-const numberl = 48;
+const number1 = 48;
 const number2 = 18;
-const gcdResult = calculateGCD(numberl, number 2);
-console.log(`The GCD of ${numberl} and ${number2} is: ${gcdResult}`);
+const gcdResult = calculateGCD(number1, number2);
+console.log(`The GCD of ${number1} and ${number2} is: ${gcdResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js116">js116. Check if a Number is a Fibonacci Number</h2>
@@ -16999,19 +17001,22 @@ with 0 and 1.</p>
 <pre>
 function isFibonacciNumber(num) {
   // Check if the input is a non-negative integer
-  if (’Number.isInteger(num) 11 num < 0) {
-return false;
-// Check if the number is a perfect square
-const isPerfectSquare = (n) => {
-const sqrt = Math.sqrt(n);
-return sqrt === Math.floor(sqrt);
-};
-// A number is a Fibonacci number if and only if one of (5 * numA2 + 4) or (5 * numA2 - 4) is a perfect square
-return isPerfectSquare(5 * num * num + 4) || isPerfectSquare(5 * num * num - 4);
+  if (’Number.isInteger(num) || num &lt; 0) {
+    return false;
+  }
+  // Check if the number is a perfect square
+  const isPerfectSquare = (n) =&gt; {
+    const sqrt = Math.sqrt(n);
+    return sqrt === Math.floor(sqrt);
+  };
+  // A number is a Fibonacci number if and only if one of (5 * num^2 + 4) or (5 * num^2 - 4) is a perfect square:
+  return isPerfectSquare(5 * num * num + 4) || isPerfectSquare(5 * num * num - 4);
+}
+
 // Example usage:
 const testNumber = 8;
 const result = isFibonacciNumber(testNumber);
-console.log(' $ {testNumber} is a Fibonacci number: $ {result}');
+console.log(' ${testNumber} is a Fibonacci number: ${result}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js117">js117. Find the Perimeter of a Rectangle</h2>
@@ -17023,17 +17028,20 @@ formula for the perimeter of a rectangle is:
 
 <pre>
 function rectanglePerimeter(length, width) {
-// Check if the inputs are valid numbers
-if (isNaN(length) || isNaN( width) 11 length <= 0 11 width <= 0) {
-return "Invalid input. Please provide valid positive numbers.";
-// Calculate the perimeter of the rectangle
-const perimeter = 2 * length + 2 * width;
-return perimeter;
+  // Check if the inputs are valid numbers
+  if (isNaN(length) || isNaN( width) || length &lt;= 0 || width &lt;= 0) {
+    return "Invalid input. Please provide valid positive numbers.";
+  }
+  // Calculate the perimeter of the rectangle
+  const perimeter = 2 * length + 2 * width;
+  return perimeter;
+}
+
 // Example usage:
 const rectangleLength = 5;
 const rectangle Width = 8;
 const perimeterResult = rectanglePerimeter(rectangleLength, rectangleWidth);
-console.log(' The perimeter of the rectangle is: $ {perimeterResult}');
+console.log(' The perimeter of the rectangle is: ${perimeterResult}');
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js118">js118. Convert Roman Numerals to Numbers</h2>
@@ -17045,11 +17053,11 @@ and its rules.</p>
 function romanToNumber(roman) {
   // Define a mapping of Roman numeral symbols to their numeric values
   const romanNumerals = {
-    T: 1,
-    V: 5,
+    'I': 1,
+    'V': 5,
     'X': 10,
     'L': 50,
-    'C: 100,
+    'C': 100,
     'D': 500,
     'M': 1000,
   };
@@ -17059,25 +17067,28 @@ function romanToNumber(roman) {
   }
   // Convert the Roman numeral string to a numeric value
   let result = 0;
-  for (let i = 0; i < roman.length; i++) {
+  for (let i = 0; i &lt; roman.length; i++) {
     const currentSymbol = roman&lbrack;i&rbrack;;
     const currentValue = romanNumerals&lbrack;currentSymbol&rbrack;;
     const nextSymbol = roman&lbrack;i + 1&rbrack;;
     const nextValue = romanNumerals&lbrack;nextSymbol&rbrack;;
     // If the current value is less than the next value, subtract it; otherwise, add it
-    if (nextValue > currentValue) {
+    if (nextValue &gt; currentValue) {
       result -= currentValue;
     } else {
       result += currentValue;
-      return result;
-    }
-    // Example usage:
-    const romanNumeral = 'XIV';
-    const numericValue = romanToNumber(romanNumeral);
-    console.log(`The numeric value of ${romanNumeral} is: ${numericValue}`);
+	}
+  }
+  return result;
+}
+
+// Example usage:
+const romanNumeral = 'XIV';
+const numericValue = romanToNumber(romanNumeral);
+console.log(`The numeric value of ${romanNumeral} is: ${numericValue}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<h2 id="js119">js119. Check if a String is Anagram of Another Strin</h2>
+<h2 id="js119">js119. Check if a String is Anagram of Another String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>An anagram is a word or phrase formed by rearranging the letters of another. To check 
 if two strings are anagrams, you can compare whether the characters in both strings have 
@@ -17099,12 +17110,12 @@ function areAnagrams(str1, str2) {
   }
 
   // Create character frequency maps for both strings
-  const charFrequencyMapl = {};
+  const charFrequencyMap1 = {};
   const charFrequencyMap2 = {};
 
   // Update frequency maps for strl
-  for (const char of cleanStrl) {
-    charFrequencyMapl&lbrack;char&rbrack; = (charFrequencyMapl&lbrack;char&rbrack; || 0) + 1;
+  for (const char of cleanStr1) {
+    charFrequencyMap1&lbrack;char&rbrack; = (charFrequencyMap1&lbrack;char&rbrack; || 0) + 1;
   }
 
   // Update frequency maps for str2
@@ -17136,14 +17147,14 @@ triangle is the sum of the two directly above it.</p>
 <pre>
 function generatePascalsTriangle(numRows) {
   // Check if the input is a positive integer
-  if (!Number.isInteger(numRows) || numRows <= 0) {
+  if (!Number.isInteger(numRows) || numRows &lt;= 0) {
     return "Invalid input. Please provide a valid positive integer.";
   }
   const pascalsTriangle = &lbrack;&rbrack;;
-  for (let i = 0; i < numRows; i++) {
+  for (let i = 0; i &lt; numRows; i++) {
     const row = &lbrack;&rbrack;;
     
-    for (let j = 0; j <= i; j++) {
+    for (let j = 0; j &lt;= i; j++) {
       // Calculate the binomial coefficient using nCr formula
       const coefficient = factorial(i) / (factorial(j) * factorial(i - j));
       row.push(coefficient);
@@ -17178,7 +17189,7 @@ Roman numeral symbols that represent the given decimal value.</p>
 <pre>
 function decimalToRoman(num) {
   // Check if the input is a positive integer within the valid Roman numeral range
-  if (’Number.isInteger(num) 11 num < = 0 || num > 3999) {
+  if (’Number.isInteger(num) || num &lt;= 0 || num &gt; 3999) {
     return "Invalid input. Please provide a valid positive integer within the range 1 to 3999.";
   }
 
@@ -17188,21 +17199,21 @@ function decimalToRoman(num) {
   {value: 900, symbol: 'CM'},
   {value: 500, symbol: 'D'},
   {value: 400, symbol: 'CD'},
-  {value: 100, symbol: 'C},
-  {value: 90, symbol: 'XC},
+  {value: 100, symbol: 'C'},
+  {value: 90, symbol: 'XC'},
   {value: 50, symbol: 'L'},
   {value: 40, symbol: 'XL'},
   {value: 10, symbol: 'X'},
   {value: 9, symbol: 'IX'},
   {value: 5, symbol: 'V'},
-  {value: 4, symbol: 'IV},
-  {value: 1, symbol: 'I' },
+  {value: 4, symbol: 'IV'},
+  {value: 1, symbol: 'I'},
   &rbrack;;
 
   // Convert the decimal number to Roman numerals
   let result = '';
   for (const symbol of romanSymbols) {
-    while (num >= symbol.value) {
+    while (num &gt;= symbol.value) {
       result += symbol.symbol;
       num -= symbol.value;
     }
@@ -17224,7 +17235,7 @@ the corresponding perpendicular height.</p>
 <pre>
 function parallelogramArea(base, height) {
   // Check if the inputs are valid numbers
-  if (isNaN(base) || isNaN(height) || base <= 0 11 height <= 0) {
+  if (isNaN(base) || isNaN(height) || base &lt;= 0 || height &lt;= 0) {
     return "Invalid input. Please provide valid positive numbers.";
   }
 
