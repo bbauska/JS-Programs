@@ -17678,7 +17678,7 @@ function calculateEllipseArea(semiMajorAxis, semiMinorAxis) {
   const pi = Math.PI;
   const area = pi * semiMajorAxis * semiMinorAxis;
   return area;
-}let inputNumber = parseFloat(prompt("Enter a non-negative number: "));
+} let inputNumber = parseFloat(prompt("Enter a non-negative number: "));
 if (!isNaN(inputNumber) && inputNumber >= 0) {
   let squareRoot = Math.sqrt(inputNumber);
   console.log(`The square root of ${inputNumber} is: ${squareRoot}`);
@@ -19445,7 +19445,7 @@ down, and the program displays the remaining time.</p>
 
 <pre>
 function countdownTimer() {
-  const userTime = promptf'Enter the countdown time in seconds:");
+  const userTime = prompt("Enter the countdown time in seconds:");
   const countdownTime = parseInt(userTime, 10);
   
   if (isNaN(countdownTime) || countdownTime &lt;= 0) {
@@ -19652,7 +19652,7 @@ coinTossingGame();
 
 <pre>
 function fibonacciNumberGenerator() {
-  const limit = parse!nt(prompt("Enter the limit for Fibonacci numbers:"), 10);
+  const limit = parseInt(prompt("Enter the limit for Fibonacci numbers:"), 10);
 
   if (isNaN(limit) || limit &lt; 1) {
     console.log("Invalid input. Please enter a positive number.");
@@ -19901,7 +19901,7 @@ function shoppingListProgram() {
   console.log("Welcome to the Shopping List Program!");
   console.log("You can add items, remove items, and view your current shopping list.");
   while (true) {
-    const action = promptf'Enter 'add' to add an item, 'remove' to remove an item, or 'view' 
+    const action = prompt("Enter 'add' to add an item, 'remove' to remove an item, or 'view' 
       to see your shopping list. Type 'exit' to end the program:").toLowerCase();
     if (action === "exit") {
       console.log("Exiting the Shopping List Program. Goodbye!");
