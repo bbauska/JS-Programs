@@ -11371,7 +11371,7 @@ document.getElementById("myForm").addEventListener("submit"  function(event) {
 $("#myForm").submit(function(event) {
   event.preventDefault();
   let formData = $(this).serialize();
-// Process form data
+  // Process form data
 });
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -16588,7 +16588,7 @@ you can use the following function:</p>
 <pre>
 function convertDaysToYearsMonthsDays(days) {
   // Check if the input is a valid positive number
-  if (isNaN(days) 11 days &lt;= 0) {
+  if (isNaN(days) || days &lt;= 0) {
     return "Invalid input. Please provide a valid positive number of days.";
   }
   // Calculate years
@@ -17869,7 +17869,7 @@ class MazeGenerator {
 }
 
 // Example usage
-const mazeRows =11;
+const mazeRows = 11;
 const mazeCols = 21;
 const mazeGenerator = new MazeGenerator(mazeRows, mazeCols);
 mazeGenerator.generateMaze();
@@ -20147,13 +20147,13 @@ function breakURL(url) {
   const urlParts = {};
   const urlRegex = /^(\w+):\/\/(&lbrack;\w.-&rbrack;+)(\/.*)?$/;
   const matches = url.match(urlRegex);
-  if (’matches) {
+  if (!matches) {
     console.log("Invalid URL format.");
     return;
   }
-  urlParts.scheme = matches! 1&rbrack;;
+  urlParts.scheme = matches&lbrack;1&rbrack;;
   urlParts.domain = matches&lbrack;2&rbrack;;
-  urlParts.path = matches! 3&rbrack; 11
+  urlParts.path = matches&lbrack;3&rbrack; || '';
   console.log("URL Parts:");
   console.log(urlParts);
 }
@@ -24350,6 +24350,6 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>Thank you for allowing me to be part of your journey.</p>
 <p>With gratitude,</p>
 <p>Brian Bauska</p>
-<p>Last changhed 2/10/2025 3:30p</p>
+<p>Last changed 2/10/2025 3:30p</p>
 </footer>
 </html>
