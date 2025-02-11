@@ -41,11 +41,9 @@ a:active {
   color: #00008b;  /* darkblue */
   background: #ffea00;  /* bright yellow */
 }
-
 a {
   text-decoration: none; 
 }
-
 a[href]:hover {
   color: #000000;
   background-color: #ffff00;  /* yellow */
@@ -103,7 +101,8 @@ body {
   background-color: #eee;  /* very light gray */
   color: #000000;  /* black */
   text-align: left;
-  margin-left: 10px;
+/*  margin-left: 10px; */
+  margin: 0 auto;
 }
 
 #myBtn {
@@ -124,11 +123,6 @@ body {
 #myBtn:hover {
   background-color: #ffff00;  /* yellow */
   color: #8b0000;  /* dark red */
-}
-
-p.highlight {
-  background-color: yellow;
-  color: #333;
 }
 
 <!-- 2/9/25 added -->
@@ -197,7 +191,7 @@ pre:hover, pre:focus {
   width: min-content; 
 }
 .consolas {
-  color: blue;
+  color: darkgreen;
   font-weight: bold;
   font-family: consolas, Bahnschrift, Inter, Helvetic, sans-serif;
 }
