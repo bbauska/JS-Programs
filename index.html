@@ -16654,9 +16654,9 @@ console.log(`The distance between (${xl}, ${y1}) and (${x2}, ${y2}) is ${result.
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js104">js104. Check if a Number is a Perfect Square</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To check if a number is a perfect square in JavaScript, you can calculate the square 
-root of the number and then check if the square of the integer part of the square root 
-is equal to the original number.</p>
+<p>To check if a number is a <span class="consolas">perfect square</span> in JavaScript, you 
+can calculate the square root of the number and then check if the square of the integer part 
+of the square root is equal to the original number.</p>
 
 <pre>
 function isPerfectSquare(number) {
@@ -16677,9 +16677,9 @@ console.log(`Is ${testNumber} a perfect square? ${result}`);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js105">js105. Find the Area of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To find the area of a rectangle in JavaScript, you can create a function that takes 
-the length and width as parameters and applies the formula:</p>
-<p>Area=Length x Width</p>
+<p>To find the <span class="consolas">area of a rectangle</span> in JavaScript, you can create 
+a function that takes the length and width as parameters and applies the formula:</p>
+<span class="consolas">Area=Length * Width</span>
 
 <pre>
 function calculateRectangleArea(length, width) {
@@ -16691,6 +16691,7 @@ function calculateRectangleArea(length, width) {
     const area = length * width;
     return area;
 }
+
 // Example usage:
 const rectangleLength = 5;
 const rectangle Width = 8;
@@ -16713,6 +16714,7 @@ function binaryToDecimal(binaryString) {
   const decimalValue = parse!nt(binaryString, 2);
   return decimalValue;
 }
+
 // Example usage:
 const binaryNumber = "1101";
 const decimalResult = binaryToDecimal(binaryNumber);
@@ -16739,6 +16741,7 @@ function countWords(sentence) {
   const wordCount = nonEmptyWords.length;
   return wordCount;
 }
+
 // Example usage:
 const sentence = "This is a sample sentence.";
 const result = countWords(sentence);
@@ -16760,6 +16763,7 @@ function findUnion(arrl, arr2) {
   const unionArray = Array.from(new Set(&lbrack;...arr1, ...arr2&rbrack;));
   return unionArray;
 }
+
 // Example usage:
 const arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
@@ -16787,14 +16791,11 @@ function calculateFactorial(n) {
   }
   return result.toString();
 }
+
 // Example usage:
-<!--
 const number = 5;
 const result = calculateFactorial(number);
-console.log(`The factorial of ${number} is:\n${result}`);
-The factorial of 5 is:
-120
--->
+console.log(`The factorial of ${number} is:\n${result}`);  // The factorial of 5 is: 120
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js110">js110. Check if a Number is a Strong Number</h2>
@@ -16824,13 +16825,11 @@ function isStrongNumber(num) {
   // Check if the sum equals the original number
   return digitFactorialSum === num;
 }
+
 // Example usage:
-<!--
 const testNumber = 145;
 const result = isStrongNumber(testNumber);
-console.log(`${testNumber} is a strong number: ${result}`);
-145 is a strong number: true
--->
+console.log(`${testNumber} is a strong number: ${result}`);  / 145 is a strong number: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js111">js111. Check if a Number is a Narcissistic Number</h2>
@@ -16854,13 +16853,11 @@ function isNarcissisticNumber(num) {
   }
   return sum === num;
 }
+
 // Example usage:
-<!--
 const testNumber = 1634;
 const result = isNarcissisticNumber(testNumber);
-console.log(`${testNumber} is a Narcissistic Number: ${result}`);
-1634 is a Narcissistic Number: true
--->
+console.log(`${testNumber} is a Narcissistic Number: ${result}`);  // 1634 is a Narcissistic Number: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js112">js112. Count the Number of Consonants in a String</h2>
@@ -16881,13 +16878,11 @@ function countConsonants(str) {
   // Return the count of consonants
   return consonants ? consonants.length: 0;
 }
+
 // Example usage:
-<!--
 const testString = "Hello World";
 const result = countConsonants(testString);
-console.log(`The number of consonants in "${testString}" is: ${result}`);
-The number of consonants in "Hello World" is: 7
--->
+console.log(`The number of consonants in "${testString}" is: ${result}`);  // The number of consonants in "Hello World" is: 7
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js113">js113. Check if a Number is a Triangular Number</h2>
@@ -16913,13 +16908,11 @@ function isTriangularNumber(num) {
   // Check if the input number is equal to a triangular number
   return sum === num;
 }
+
 // Example usage:
-<!--
 const testNumber = 10;
 const result = isTriangularNumber(testNumber);
-console.log(`${testNumber} is a triangular number: ${result}`);
-10 is a triangular number: true
--->
+console.log(`${testNumber} is a triangular number: ${result}`);  // 10 is a triangular number: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js114">js114. Find the Area of a Trapezoid</h2>
@@ -17026,7 +17019,7 @@ function rectanglePerimeter(length, width) {
 const rectangleLength = 5;
 const rectangle Width = 8;
 const perimeterResult = rectanglePerimeter(rectangleLength, rectangleWidth);
-console.log(' The perimeter of the rectangle is: ${perimeterResult}');
+console.log(`The perimeter of the rectangle is: ${perimeterResult}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js118">js118. Convert Roman Numerals to Numbers</h2>
@@ -18582,6 +18575,7 @@ function sumOfSquaredDigits(number) {
 return Array.from(String(number), Number)
 .reduce((sum, digit) => sum + Math.pow(digit, 2), 0);
 }
+
 // Example usage
 const happyNumber = 19;  // Replace with the number you want to check
 if (isHappyNumber(happyNumber)) {
