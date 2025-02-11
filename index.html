@@ -963,7 +963,7 @@ needed.</p>
 <p><b>Explicit Typing:</b> In languages with explicit typing, the programmer must 
 explicitly declare the data type of a variable during its creation.</p>
 
-<pre>let name: string = "Juan";  // Type is declared as String</pre>
+<pre>let name = string = "Juan";  // Type is declared as String</pre>
 
 <p><b>Nominal Typing:</b> Nominal typing relies on type names and focuses on nominal 
 differences between types, even if their internal structure is identical.</p>
@@ -1016,8 +1016,8 @@ entertain(canary);  // Type doesn't matter, as long as it has the 'sing' method
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk05">sk05. == vs === vs typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="gimme">==, ===, and typeof</span> are operators used to compare values 
-and retrieve information about data types. Here&apos;s an explanation of each:</p>
+<p><span class="gimme">==, ===, and typeof</span> are <b>operators</b> used to <b>compare values</b> 
+and <b>retrieve information about data types</b>. Here&apos;s an explanation of each:</p>
 
 <p><b>==  (Weak Equality):</b> The == operator compares two values for equality but 
 performs type conversion if the values are of different types. This is called "weak 
@@ -1054,11 +1054,11 @@ surprises in your program&apos;s behavior.</p>
 <h2 id="sk06">sk06. Function Scope, Block Scope, and Lexical Scope</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The concepts of <span class="consolas">function scope, block scope</span>, and 
-<span class="consolas">Lexical scope</span> refer to how variables are accessed and managed in 
+<span class="consolas">Lexical scope</span> refer to <b>how variables are accessed and managed</b> in 
 different contexts within the code.</p>
 
 <p><span class="consolas">Function Scope:</span> In JavaScript, variables declared within a function are
-visible and accessible only within that function and any nested functions within it This is called 
+visible and accessible only within that function and any nested functions within it. This is called 
 function scope. Variables declared with <b>var</b> have function scope.</p>
 
 <pre>
@@ -1073,7 +1073,7 @@ console.log(functionVariable);
 </pre>
 
 <p><span class="consolas">Block Scope:</span> With the introduction of <b>let</b> and <b>const</b> in 
-ES6, block scope was introduced. Variables declared with let and const have a scope limited to the block 
+ES6, block scope was introduced. Variables declared with let and const have a scope <b>limited to the block</b> 
 in which they are declared, such as within an if, a for, a while, etc.</p>
 
 <pre>
@@ -1086,7 +1086,7 @@ console.log(anotherBlockVariable);  // Error, outside block scope
 </pre>
 
 <p><span class="consolas">Lexical Scope:</span> Lexical scope refers to how nested functions can access
-variables from their parent functions, regardless of where they are called. This is because functions in 
+variables from their <b>parent functions</b>, regardless of where they are called. This is because functions in 
 JavaScript maintain a <b>reference to the scope</b> in which they were created.</p>
 
 <pre>
@@ -1109,8 +1109,8 @@ understanding JavaScript execution and preventing errors related to variable sco
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk07">sk07. Expression vs Statement</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Expressions and statements</span> are fundamental concepts used to construct
-programs.</p>
+<p><span class="consolas">Expressions and statements</span> are fundamental concepts used to 
+<b>construct programs</b>.</p>
 
 <p><span class="consolas">Expression:</span> An expression is a combination of values, operators, and
 function calls that evaluates to a <b>single value</b>. It can be as simple as a literal value or as complex 
@@ -3348,23 +3348,22 @@ mathematical operations and numerical calculations.</p>
 
 <p>Here&apos;s a description of some ofthe most common methods of Math:</p>
 
-<p><b>Math.floor(x):</b> The floor method rounds a number down to the nearest
-integer.</p>
+<p><b>Math.floor(x):</b> The floor method <b>rounds a number down</b> to the nearest integer.</p>
 
 <pre>
 const number = 5.7;
 const roundedNumber - Math.floor(number);  // Result: 5
 </pre>
 
-<p><b>Math.ceil(x):</b> The ceil method rounds a number up to the nearest integer.</p>
+<p><b>Math.ceil(x):</b> The ceil method <b>rounds a number up</b> to the nearest integer.</p>
 
 <pre>
 const number = 5.2;
 const roundedNumber = Math.ceil(number);  // Result: 6
 </pre>
 
-<p><b>Math.round(x):</b> The round method rounds a number to the nearest
-integer. If the decimal is 0.5 or greater, it will round to the next integer.</p>
+<p><b>Math.round(x):</b> The round method <b>rounds a number to the nearest
+integer<b>. If the decimal is 0.5 or greater, it will round to the next integer.</p>
 
 <pre>
 const numberl = 5.2;
@@ -3374,7 +3373,7 @@ const rounding2 = Math.round(number2);  // Result: 6
 </pre>
 
 <p><b>Math.max(...args) and Math.min(...args):</b> The max and min methods
-return the maximum and minimum values, respectively, of a series of
+return the <b>maximum and minimum values</b>, respectively, of a series of
 numeric arguments.</p>
 
 <pre>
@@ -3382,39 +3381,32 @@ const maximum = Math.max(5, 10, 3, 8);  // Result: 10
 const minimum = Math.min(5, 10, 3, 8);  // Result: 3
 </pre>
 
-<p><b>Math.pow(base, exponent):</b> The pow method calculates the power of a
-given number.</p>
+<p><b>Math.pow(base, exponent):</b> The pow method calculates the <b>power of a given number</b>.</p>
 
-<pre>
-const result = Math.pow(2, 3);  // Result: 8 (2 to the power of 3)
-</pre>
+<pre>const result = Math.pow(2, 3);  // Result: 8 (2 to the power of 3)</pre>
 
 <p><b>Math.sqrt(x):</b> The sqrt method calculates the square root of a number.</p>
 
-<pre>
-const squareRoot = Math.sqrt(25);  // Result: 5 (square root of 25)
-</pre>
+<pre>const squareRoot = Math.sqrt(25);  // Result: 5 (square root of 25)</pre>
 
 <p><b>Math.abs(x):</b> The abs method returns the absolute value of a number, i.e.,
 its value without a sign.</p>
 
-<pre>
-const absoluteValue - Math.abs(-7);  // Result: 7
-</pre>
+<pre>const absoluteValue - Math.abs(-7);  // Result: 7</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk45">sk45. JSON and Object Serialization/Deserialization</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON (JavaScript Object Notation) is a Lightweight and widely used data
-interchange format in programming. It allows for the representation of
+<p>JSON (JavaScript Object Notation) is a Lightweight and widely used <b>data
+interchange format</b> in programming. It allows for the representation of
 data structures in a readable and organized way and is common in
 communication between client and server applications. Serialization and
 deserialization of objects in JSON are essential processes for converting
 objects into a format that can be transmitted and then recovered in their
 originalform.</p>
 
-<p><b>Serialization:</b> Serialization refers to the conversion of a JavaScript object
-into a JSON string. This is useful for sending data over a network or saving
-it in a file. The JSON.stringifyQ function is used for serialization.</p>
+<p><b>Serialization:</b> Serialization refers to the <b>conversion of a JavaScript object
+into a JSON string</b>. This is useful for sending data over a network or saving
+it in a file. The JSON.stringify() function is used for serialization.</p>
 
 <pre> 
 const person = {
@@ -3428,10 +3420,9 @@ console.log(personJSON);  // Outputs
 '{"name":"Juan","age":30,"city":"Mexico"}'
 </pre>
 
-<p><b>Deserialization:</b> Deserialization is the reverse process—converting a
-JSON string into a JavaScript object This is useful when receiving JSON
-data from the server and needing to convert it back into objects for
-manipulation in the code. The JSON.parseQ function is used for
+<p><b>Deserialization:</b> Deserialization is the <b>reverse process—converting a JSON string into 
+a JavaScript object</b>. This is useful when receiving JSON data from the server and needing to 
+convert it back into objects for manipulation in the code. The JSON.parse() function is used for
 deserialization.</p>
 
 <p><b>Deserialization Example:</b></p>
@@ -3443,9 +3434,8 @@ console.log(person);
 // Outputs { name: 'Juan', age: 30, city: 'Mexico' }
 </pre>
 
-<p><b>Serialization and Deserialization of Complex Objects:</b> JSON can
-represent more complex data structures, such as nested arrays and
-objects.</p>
+<p><b>Serialization and Deserialization of Complex Objects:</b> JSON can represent more complex data 
+structures, such as nested arrays and objects.</p>
 
 <pre>
 const book = {
@@ -3471,14 +3461,14 @@ between different systems and the persistence of information.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk46">sk46. Fetch API and AJAX</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Both the Fetch API and AJAX are methods used in JavaScript to make requests and 
-receive responses from web servers, enabling interaction between a web application and a 
+<p>Both the Fetch API and AJAX are methods used in JavaScript to <b>make requests</b> and 
+<b>receive responses from web servers</b>, enabling interaction between a web application and a 
 server. Although both serve the same purpose, they differ in terms of functionality and 
 approach.</p>
 
 <p><b>Fetch API:</b> The Fetch API is a modern API introduced in JavaScript that provides 
 a more elegant and flexible way to make HTTP requests and handle responses. It uses 
-promises to handle asynchronous responses, making it easier to manage the logic of 
+<b>promises to handle asynchronous responses</b>, making it easier to manage the logic of 
 request and response. The Fetch API supports a variety of data types and response 
 formats, such as JSON, text, blobs, and more.</p>
 
@@ -3500,7 +3490,7 @@ fetch('https://api.example.com/data')
 </pre>
 
 <p><b>AJAX: AJAX (Asynchronous JavaScript and XML)</b> is an older approach to making 
-asynchronous requests to the server using the XMLHttpRequest object. Although the name 
+asynchronous requests to the server using the <b>XMLHttpRequest object</b>. Although the name 
 suggests it is related to XML, it can actually be used for any type of response, such as 
 JSON or plain text AJAX was very popular before the arrival of the Fetch API and is still 
 used in many projects.</p>
@@ -3508,8 +3498,7 @@ used in many projects.</p>
 <p><b>Features of AJAX:</b></p>
 <ul>
   <li>Uses the XMLHttpRequest object: It is older and uses a slightly more complex syntax.<li>
-  <li>Higher compatibility: It works in older browser versions that do not fully support 
-    the Fetch API.</li>
+  <li>Higher compatibility: It works in older browser versions that do not fully support the Fetch API.</li>
 </ul>
  
 <p><b>AJAX example:</b></p>
@@ -3530,12 +3519,12 @@ xhr.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Both LocalStorage and SessionStorage are mechanisms for Local storage
 in the browser that allow web applications to save data in the browser for
-later retrieval Although they have similarities, they differ in terms of data
+later retrieval. Although they have similarities, they differ in terms of data
 duration and scope. Here is a description of each:</p>
 
-<p><b>LocalStorage:</b> LocaLStorage is an object that provides a way to store key­
-value pairs persistently in the browser. Data stored in LocalStorage
-persists even after closing the browser and reopening it. This data is
+<p><b>LocalStorage:</b> LocaLStorage is an object that <b>provides a way to store key­
+value pairs</b> persistently in the browser. Data stored in LocalStorage
+<b>persists even after closing the browser</b> and reopening it. This data is
 available to all open tabs and windows of the same domain.</p>
 
 <p><b>Features of Localstorage:</b></p>
@@ -3559,9 +3548,9 @@ console.log(name);  // Prints "John"
 localStorage.removeItem('name');
 </pre>
 
-<p><b>SessionStorage:</b> SessionStorage is similar to Localstorage, but the data
-stored in SessionStorage is only available during the current browser
-session. If the browser or tab is closed, the data stored in SessionStorage
+<p><b>SessionStorage:</b> SessionStorage is similar to LocalStorage, but the data
+stored in SessionStorage is <b>only available during the current browser
+session</b>. If the browser or tab is closed, the data stored in SessionStorage
 will be automatically cleared.</p>
 
 <p><b>Features of SessionStorage:</b></p>
@@ -3702,11 +3691,11 @@ to use.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk49">sk49. Canvas and WebGL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Both Canvas and WebGL are technologies used in JavaScript to render
-graphics in web browsers, but they differ in terms of functionality and
+<p>Both Canvas and WebGL are technologies used in JavaScript to <b>render
+graphics in web browsers</b>, but they differ in terms of functionality and
 complexity.</p>
 
-<p><b>Canvas:</b> Canvas is an HTML5 API that provides a drawing area in which
+<p><b>Canvas:</b> Canvas is an HTML5 API that provides a <b>drawing area</b> in which
 2D graphics can be created using JavaScript. It is ideal for creating simple
 graphics, visualizations, 2D games, and visual design elements on a web
 page. You can draw lines, shapes, text, and work with images on the
@@ -3734,10 +3723,9 @@ canvas.</p>
 </pre>
 
 <p><b>WebGL:</b> WebGL (Web Graphics Library) is a more advanced technology
-that provides access to hardware acceleration for rendering 3D graphics
-in web browsers. It uses a specification similar to OpenGL and is perfect
-for creating immersive 3D experiences, complex visualizations, and 3D
-games.</p>
+that provides access to hardware acceleration for <b>rendering 3D graphics
+in web browsers</b>. It uses a specification similar to OpenGL and is perfect
+for creating immersive 3D experiences, complex visualizations, and 3D games.</p>
 
 <p><b>Features of WebGL:</b></p>
 <ul>
