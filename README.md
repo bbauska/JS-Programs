@@ -24541,7 +24541,7 @@ const isPangram = (str) => {
   return letters.size === 26;
 };
 
-// Check example
+// Example usage
 console.log(isPangram("The quick brown fox jumps over the lazy dog"));  // Output: true
 console.log(isPangram("Hello, World!"));  // Output: false
 </pre>
@@ -26282,7 +26282,7 @@ console.log(regularOctagonArea(5));  // Output: 86.60254037844387
 
 <pre>
 const isRepunitNumber = num => /^1+$/.test(num.toString());
-<br>
+
 // Example usage
 console.log(isRepunitNumber(111));  // Output: true
 console.log(isRepunitNumber(11));  // Output: false
@@ -26294,7 +26294,7 @@ console.log(isRepunitNumber(11));  // Output: false
 
 <pre>
 const ellipsoidVolume = (a, b, c) => (4 / 3) * Math.PI * a * b * c;
-<br>
+
 // Example usage
 console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
 </pre>
@@ -26590,8 +26590,7 @@ const fibonacciSequence = n =>
   fibSeq&lbrack;i - 2&rbrack; : i), &lbrack;0, 1&rbrack;);
 
 // Example usage
-console.log(fibonacciSequence(10));
-// Output: &lbrack;0, 1, 1, 2, 3, 5, 8, 13, 21, 34&rbrack;
+console.log(fibonacciSequence(10));  // Output: &lbrack;0, 1, 1, 2, 3, 5, 8, 13, 21, 34&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-257">js-257. Find the ASCII Value of a Character</h2>
