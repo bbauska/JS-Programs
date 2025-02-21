@@ -22620,9 +22620,10 @@ celsiusToFahrenheit(25);  // Result: 77
 <p>Retrieve the value of a cookie by accessing with document.cookie.</p>
 
 <pre>
-const cookie = name => `; ${document.cookie}.split(`;
-  ${name}={')').pop().split(';').shift();
-  cookie('_ga');
+const cookie = name => `; ${document.cookie}`.split(`;
+  ${name}={`).pop().split(';').shift();
+
+cookie('_ga');
 
 // Result: "GA1.2.1929736587.1601974046"
 </pre>
