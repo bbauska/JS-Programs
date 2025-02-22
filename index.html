@@ -1279,7 +1279,7 @@ console.log("End");
 </pre>
 
 <p><span class="consolas">setInterval:</span> setInterval is used to repeatedly execute a function 
-at regular time intervals. Unlike <b>setTimeout</b, <span class="consolas">setlnterval</span> will 
+at regular time intervals. Unlike <b>setTimeout</b>, <span class="consolas">setInterval</span> will 
 keep running the function in a loop until explicitly stopped.</p>
 
 <pre>
@@ -9336,7 +9336,7 @@ console.log(result);  // Output: 8
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex86">ex86. JS Async</h2>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="consolas">Asynchronous</span> programming in JavaScript involves handling 
 operations that don't execute immediately.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9362,6 +9362,7 @@ fetchData(processData);  // Output after 2 seconds : 'Data received : Some data'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="consolas">Asynchronous operations</span> in JavaScript allow 
 <b>non - blocking execution</b> of code.</p>
+
 <h4>Asynchronous Example:</h4>
 <pre>
 console.log('Start');
@@ -15476,9 +15477,8 @@ if (date1 &lt; date2) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js56">js56. Create Countdown Timer</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Create a countdown timer in JavaScript, you can use the 
-<span class="consolas">setlnterval()</span> function to update the timer at regular 
-intervals and calculate the remaining time.</p>
+<p>Create a countdown timer in JavaScript, you can use the <span class="consolas">setInterval()</span> 
+function to update the timer at regular intervals and calculate the remaining time.</p>
 
 <pre>
 // Set the target date for the countdown
@@ -19441,7 +19441,7 @@ function countdownTimer() {
   
   let secondsRemaining = countdownTime;
   
-  const intervalId = setlnterval(() =&gt; {
+  const intervalId = setInterval(() =&gt; {
     console.clear();
     console.log(`Time Remaining: ${secondsRemaining} seconds`);
     
