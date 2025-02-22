@@ -1264,7 +1264,7 @@ JavaScript code and avoiding blocking and bottlenecks in program execution.</p>
 <p>These three functions are very useful for working with timers and performing asynchronous tasks 
 in JavaScript However, each has its own purpose and advantages.</p>
 
-<p><span class="consolas">setTimeout:</span> setTimeout is used to <b>schedule the execution</b> of 
+<p><span class="consolas">setTimeout:</span> <b>setTimeout</b> is used to <b>schedule the execution</b> of 
 a function <b>after a certain period of time (in milliseconds)</b>. You can use it to create delays 
 in code execution or to perform actions after a specified time.</p>
 
@@ -1278,9 +1278,9 @@ setTimeout(function() {
 console.log("End");
 </pre>
 
-<p><b>setInterval:</b> setInterval is used to repeatedly execute a function at regular
-time intervals. Unlike setTimeout, setlnterval will keep running the function
-in a loop until explicitly stopped.</p>
+<p><span class="consolas">setInterval:</span> setInterval is used to repeatedly execute a function 
+at regular time intervals. Unlike <b>setTimeout</b, <span class="consolas">setlnterval</span> will 
+keep running the function in a loop until explicitly stopped.</p>
 
 <pre>
 let counter = 0;
@@ -1295,9 +1295,9 @@ let interval = setInterval(function() {
 }, 1000);
 </pre>
 
-<p><b>requestAnimationFrame:</b> requestAnimationFrame is a function specifically used 
-for creating smooth animations in the browser. It ensures that animations run in sync 
-with screen refreshes, improving performance and user experience.</p>
+<p><span class="consolas">requestAnimationFrame:</span> requestAnimationFrame is a function 
+specifically used for creating smooth animations in the browser. It ensures that animations 
+run in sync with screen refreshes, improving performance and user experience.</p>
 
 <pre>
 function animate(timestamp) {
@@ -1310,67 +1310,62 @@ requestAnimationFrame(animate);
 </pre>
 
 <ul>
-  <li><b>setTimeout:</b> Executes a function after a certain time.</li>
-  <li><b>setInterval:</b> Executes a function at regular intervals.</li>
-  <li><b>requestAnimationFrame:</b> Used for creating smooth and efficient animations.</li>
+  <li><span class="consolas">setTimeout:</span> Executes a function after a certain time.</li>
+  <li><span class="consolas">setInterval:</span> Executes a function at regular intervals.</li>
+  <li><span class="consolas">requestAnimationFrame:</span> Used for creating smooth and efficient 
+    animations.</li>
 </ul>
 
-<p>Choose the appropriate function based on your needs. setTimeout and
-setInterval are useful for controlling time and executing code after certain
-intervals, while requestAnimationFrame is specific for creating smooth
-and efficient animations in the browser.</p>
+<p>Choose the appropriate function based on your needs. <span class="consolas">setTimeout</span> and 
+<span class="consolas">setInterval</span> are useful for controlling time and executing code after 
+certain intervals, while <span class="consolas">requestAnimationFrame</span> is specific for creating 
+smooth and efficient animations in the browser.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk11">sk11. JavaScript Engines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript engines are fundamental components in browsers and
-execution environments that interpret and execute JavaScript code. Each
-browser and environment has its own JavaScript engine.</p>
+<p>JavaScript engines are fundamental components in browsers and execution environments that 
+interpret and execute JavaScript code. Each browser and environment has its own JavaScript engine.</p>
 
 <p><b>Here are some of the well-known engines:</b></p>
 
-<p><b>V8 (Google Chrome, Node.js):</b> V8 is an open-source JavaScript engine
-developed by Google. It is known for its speed and efficiency in executing
-code. It is used in Google Chrome and is also the engine behind Node.js,
-enabling JavaScript to run on the server.</p>
+<p><span class="consolas">V8 (Google Chrome, Node.js):</span> V8 is an open-source JavaScript engine
+developed by Google. It is known for its speed and efficiency in executing code. It is used in Google 
+Chrome and is also the engine behind Node.js, enabling JavaScript to run on the server.</p>
 
-<p><b>SpiderMonkey (Mozilla Firefox):</b> SpiderMonkey is the JavaScript engine
-used in Mozilla Firefox. It was one of the first JavaScript engines and has
-been extensively optimized overtime to improve performance.</p>
+<p><span class="consolas">SpiderMonkey (Mozilla Firefox):</span> SpiderMonkey is the JavaScript engine 
+used in Mozilla Firefox. It was one of the first JavaScript engines and has been extensively optimized 
+overtime to improve performance.</p>
 
-<p><b>JavaScriptCore (Safari):</b> JavaScriptCore, also known as Nitro, is the
-JavaScript engine for Safari. It is developed by Apple and is used in Safari
-browsers and other Apple products.</p>
+<p><span class="consolas">JavaScriptCore (Safari):</span> JavaScriptCore, also known as Nitro, is the
+JavaScript engine for Safari. It is developed by Apple and is used in Safari browsers and other Apple 
+products.</p>
 
-<p><b>Chakra (Internet Explorer, Microsoft Edge Legacy):</b> Chakra was the
-JavaScript engine used in earlier versions of Internet Explorer and the
-initial versions of Microsoft Edge (up to EdgeHTML). However, Microsoft
-Edge has migrated to a new engine called Blink.</p>
+<p><span class="consolas">Chakra (Internet Explorer, Microsoft Edge Legacy):</span> Chakra was the 
+JavaScript engine used in earlier versions of Internet Explorer and the initial versions of Microsoft 
+Edge (up to EdgeHTML). However, Microsoft Edge has migrated to a new engine called Blink.</p>
 
-<p><b>Blink (Chromium, Microsoft Edge):</b> Blink is an open source rendering
-engine that also includes a JavaScript engine. It is used in the Chromium
-project (the base for Google Chrome) and in the latest version of Microsoft
-Edge.</p>
+<p><span class="consolas">Blink (Chromium, Microsoft Edge):</span> Blink is an open source rendering
+engine that also includes a JavaScript engine. It is used in the Chromium project (the base for Google 
+Chrome) and in the latest version of Microsoft Edge.</p>
 
-<p><b>JerryScript:</b> JerrgScript is a JavaScript engine designed for devices with
+<p><span class="consolas">JerryScript:</span> JerrgScript is a JavaScript engine designed for devices with
 Limited resources, such as microcontrollers and embedded systems.</p>
 
-<p><b>Nashorn (Java):</b> Nashorn was a JavaScript engine developed by Oracle
-and integrated into the Java platform. However, starting from Java 11,
-Nashorn was removed from the JDK in favor of other technologies.</p>
+<p><span class="consolas">Nashorn (Java):</span> Nashorn was a JavaScript engine developed by Oracle
+and integrated into the Java platform. However, starting from Java 11, Nashorn was removed from the 
+JDK in favor of other technologies.</p>
 
-<p>These are just a few examples of the many JavaScript engines that exist
-Each engine has its own features and approaches to optimizing and
-executing JavaScript code, contributing to the browsing experience and
-performance of online applications.</p>
+<p>These are just a few examples of the many JavaScript engines that exist. Each engine has its own 
+features and approaches to optimizing and executing JavaScript code, contributing to the browsing 
+experience and performance of online applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk12">sk12. Bitwise Operators, Typed Arrays, and Array Buffers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These concepts are related to advanced data manipulations in JavaScript.</p>
 
-<p><b>Bitwise Operators:</b> Bitwise operators allow you to perform
-manipulations at the bit level rather than on entire integer values. They
-are useful for bitwise operations such as masks and individual bit
-manipulations.</p>
+<p><span class="consolas">Bitwise Operators:</span> Bitwise operators allow you to perform 
+manipulations at the bit level rather than on entire integer values. They are useful for bitwise 
+operations such as masks and individual bit manipulations.</p>
 
 <p>Some bitwise operators in JavaScript include:</p>
 <ul>
@@ -1382,10 +1377,9 @@ manipulations.</p>
   <li><b>» &gt;&gt; (Right Shift with Sign):</b> Shifts bits to the right preserving the sign.</li>
 </ul>
 
-<p><b>Typed Arrays:</b> Typed Arrays are data structures in JavaScript that allow
-you to store binary data of specific types, such as integers, floats, etc. They
-are useful for manipulating raw data and performing low-level operations
-efficiently.</p>
+<p><span class="consolas">Typed Arrays:</span> Typed Arrays are data structures in JavaScript that 
+allow you to store binary data of specific types, such as integers, floats, etc. They are useful 
+for manipulating raw data and performing low-level operations efficiently.</p>
 
 <p>Some types of typed arrays in JavaScript are:</p>
 <ul>
@@ -1396,38 +1390,32 @@ efficiently.</p>
 
 <pre>const intArray = new Int8Array(&lbrack;10, 20, 30&rbrack;);</pre>
 
-<p><b>Array Buffers:</b> Array Buffers are a data structure representing a raw
-memory area that can contain binary data. Array Buffers are used to
-work with binary data efficiently, and Typed Arrays are views of these
-buffers that provide a manipulation interface.</p>
+<p><span class="consolas">Array Buffers:</span> Array Buffers are a data structure representing a 
+raw memory area that can contain binary data. Array Buffers are used to work with binary data 
+efficiently, and Typed Arrays are views of these buffers that provide a manipulation interface.</p>
 
 <pre>
-const buffer = new ArrayBuffer(8);
-// Create an 8-byte buffer
-const intArray = new Int32Array(buffer);
-// View the buffer as a 32-bit integer array
+const buffer = new ArrayBuffer(8);  // Create an 8-byte buffer
+const intArray = new Int32Array(buffer);  // View the buffer as a 32-bit integer array
 </pre>
 
-<p>These concepts are more advanced and are typically used when bitwise
-manipulation and low-level operations are required. They are especially
-useful in applications dealing with network protocols, binary data, and
-performance optimization.</p>
+<p>These concepts are more advanced and are typically used when bitwise manipulation and low-level 
+operations are required. They are especially useful in applications dealing with network protocols, 
+binary data, and performance optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk13">sk13. DOM and Document Trees</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The DOM (Document Object Model) is a structural representation of an
-HTML or XML document that allows interaction and manipulation of a
-web page&apos;s content and structure through programming. The DOM
-organizes document elements into a hierarchical structure called the
-documenttree.</p>
+<p>The <span class="consolas">DOM (Document Object Model)</span> is a structural representation 
+of an HTML or XML document that allows interaction and manipulation of a web page&apos;s content 
+and structure through programming. The <span class="consolas">DOM</span> organizes document 
+elements into a hierarchical structure called the document tree.</p>
 
-<p><b>Document Tree (DOM Tree):</b> The document tree is a hierarchical
-structure that organizes all the elements of an HTML or XML document
-Each element attribute, and text content is represented as a node in the
-tree. Nodes are organized hierarchically, starting from the root node,
-which represents the entire document.</p>
+<p><span class="consolas">Document Tree (DOM Tree):</span> The <b>document tree</b> is a 
+hierarchical structure that organizes all the elements of an HTML or XML document. Each 
+element attribute, and text content is represented as a node in the tree. Nodes are organized 
+hierarchically, starting from the root node, which represents the entire document.</p>
 
-<p>In the case of a web page, the document tree represents how HTML
+<p>In the case of a web page, the <span class="consolas">document tree</span> represents how HTML 
 elements are nested and related to each other.</p>
 
 <pre>
@@ -1437,35 +1425,35 @@ elements are nested and related to each other.</p>
   &lt;title&gt;My Page&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;hl&gt;Page Title&lt;/hl&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
   &lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/htmt&gt;
 </pre>
  
-<p>The corresponding document tree would have a structure similar to this:</p>
+<p>The corresponding <span class="consolas">document tree</span> would have a structure similar to 
+this:</p>
 
 <blockquote>
 Document (html)<br>
 |— html<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- head<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- title<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|-- title<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "My Page"<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- body<br>
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- hl<br>
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- h1<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "Page Title"<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- p<br>
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- "This is a paragraph."
 </blockquote>
 
-<p><b>DOM Manipulation:</b> Through JavaScript, you can interact and modify the
-content and structure of a web page via the DOM. You can access
-elements, modify their attributes, add or remove nodes, and change their
-content.</p>
+<p><span class="consolas">DOM Manipulation:</span> Through JavaScript, you can interact and modify 
+the content and structure of a web page via the <span class="consolas">DOM</span>. You can access 
+elements, modify their attributes, add or remove nodes, and change their content.</p>
 
 <pre>
 // Access an element and change its content 
-const heading = document.querySelector("hl"); 
+const heading = document.querySelector("h1"); 
 heading.textcontent = "New Title";
 </pre>
 
@@ -1477,14 +1465,13 @@ pages.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk14">sk14. Factories and Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Factories and classes are two approaches to creating objects and
-structures in JavaScript Each has its own purpose and advantages.</p>
+<p><span class="consolas">Factories and classes</span> are two approaches to creating objects and 
+structures in JavaScript. Each has its own purpose and advantages.</p>
 
-<p><b>Factories:</b> Factories are functions that generate and return objects. These
-functions act as "factories" to create instances of objects with specific
-properties and methods. Factories are a flexible way to create objects in
-JavaScript as they can customize object creation based on the provided
-arguments.</p>
+<p><span class="consolas">Factories:</span> <b>Factories</b> are functions that generate and 
+return objects. These functions act as "factories" to create instances of objects with specific 
+properties and methods. <b>Factories</b> are a flexible way to create objects in JavaScript as 
+they can customize object creation based on the provided arguments.</p>
 
 <pre>
 function createPerson(name, age) {
@@ -1501,12 +1488,11 @@ const person1 = createPerson("John", 30);
 person1.greet();  // Prints "Hello, I'm John and I'm 30 years old."
 </pre>
 
-<p><b>Classes:</b> Classes are a concept introduced in ES6 that allows creating
-objects using a more object-oriented syntax. Classes serve as a blueprint
-for creating objects and define properties and methods that all instances
-will share. Although in JavaScript, classes are "syntactic sugar" over the
-prototype system, they provide a more structured way of working with
-objects.</p>
+<p><span class="consolas">Classes:</span> <b>Classes</b> are a concept introduced in ES6 that 
+allows the creating of objects using a more object-oriented syntax. <b>Classes</b> serve as a 
+blueprint for creating objects and define properties and methods that all instances will share. 
+Although in JavaScript, classes are "syntactic sugar" over the prototype system, they provide a 
+more structured way of working with objects.</p>
 
 <pre>
 class Person {
@@ -1524,54 +1510,55 @@ person2.greet();  // Prints "Hello, I'm Jane and I'm 25 years old."
 
 <p>In summary:</p>
 <ul>
-  <li><b>Factories:</b> Use functions to create and customize objects.</li>
-  <li><b>Classes:</b> Define object blueprints with shared properties and methods.</li>
+  <li><span class="consolas">Factories:</span> Use functions to create and customize objects.</li>
+  <li><span class="consolas">Classes:</span> Define object blueprints with shared properties and 
+    methods.</li>
 </ul>
 
-<p>The choice between factories and classes depends on your needs and
-preferences. Factories are more flexible and versatile, while classes
-provide a more object-oriented structure and are especially useful when
-working with inheritance and similar objects.</p>
+<p>The choice between <b>factories</b> and <b>classes</b> depends on your needs and preferences. 
+<b>Factories</b> are more flexible and versatile, while <b>classes</b> provide a more object-
+oriented structure and are especially useful when working with inheritance and similar objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk15">sk15. this, call, apply, and bind</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>this, call, apply, and bind are concepts and methods in JavaScript related
-to managing the value of this in the context of a function. Here&apos;s a
-description of each of them:</p>
+<p><span class="consolas">this, call, apply</span>, and <span class="consolas">bind</span> are 
+concepts and methods in JavaScript related to managing the value of this in the context of a 
+function. Here&apos;s a description of each of them:</p>
 
-<p><b>this:</b> In JavaScript, this refers to the object that is the current "execution
-context" in a function. The value of this can change depending on how a
+<p><span class="consolas">this:</span> In JavaScript, <b>this</b> refers to the object that is the 
+current "execution context" in a function. The value of <b>this</b> can change depending on how a 
 function is called and where it is in the code.</p>
 
-<p><b>call and apply:</b> Both methods allow temporarily changing the value of
-this in a function and then executing it The main difference between call
-and apply Lies in how arguments are passed:</p>
+<p><span class="consolas">call and apply:</span> Both methods allow temporarily changing the value 
+of <b>this</b> in a function and then executing it. The main difference between <b>call</b> 
+and <b>apply</b> lies in how arguments are passed:</p>
 
-<p><b>call:</b> Invokes a function with a specific value for this and individually
-passed arguments.</p>
+<p><span class="consolas">call:</span> Invokes a function with a specific value for <b>this</b> and 
+individually passed arguments.</p>
 
 <pre>
 function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
 }
-const person - { name: 'John'
-  greet.call(person, 'Maria');  // Prints: "Hello, Maria! My name is John"
-}
+const person = { name: 'John' };
+
+greet.call(person, 'Maria');  // Prints: "Hello, Maria! My name is John"
 </pre> 
 
-<p><b>apply:</b> Similar to call, but arguments are passed as an array.</p>
+<p><span class="consolas">apply:</span> Similar to <b>call</b>, but arguments are passed as an 
+array.</p>
 
 <pre>
 function greet(name) {
   console.log(`Hello, ${name}! My name is ${this.name}`);
 }
-const person - { name: 'John' };
+const person = { name: 'John' };
 greet.apply(person, &lbrack;'Maria'&rbrack;);
 // Prints: "Hello, Maria! My name is John"
 </pre>
 
-<p><b>bind:</b> The bind method returns a new function where the value of this is
-fixed to the provided value, and the initial arguments (if any) are "bound"
+<p><span class="consolas">bind:</span> The <b>bind method</b> returns a new function where the 
+value of <b>this</b> is fixed to the provided value, and the initial arguments (if any) are "bound" 
 to the new function.</p>
 
 <pre>
@@ -1585,25 +1572,28 @@ greetPerson('Maria');  // Prints: "Hello, Maria! My name is John"
 
 <p><b>In summary:</b></p>
 <ul>
-  <li><b>this:</b> Refers to the current execution context.</li>
-  <li><b>call:</b> Invokes a function with a specific value for this and individually passed arguments.</li>
-  <li><b>apply:</b> Similar to call, but arguments are passed as an array.</li>
-  <li><b>bind:</b> Creates a new function with this and arguments fixed.</li>
+  <li><span class="consolas">this:</span> Refers to the current execution context.</li>
+  <li><span class="consolas">call:</span> Invokes a function with a specific value for <b>this</b> 
+    and individually passed arguments.</li>
+  <li><span class="consolas">apply:</span> Similar to <b>call</b>, but arguments are passed as an 
+    array.</li>
+  <li><span class="consolas">bind:</span> Creates a new function with <b>this</b> and arguments 
+    fixed.</li>
 </ul>
 
-<p>These methods ore useful for controlling the context of this in different
-situations, especially when working with functions that are part of objects
-or when you need to manipulate how a function is invoked.</p>
+<p>These methods are useful for controlling the context of <b>this</b> in different situations, 
+especially when working with functions that are part of objects or when you need to manipulate 
+how a function is invoked.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk16">sk16. new, Constructor, instanceof, and Instances</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>These concepts are related to the creation and use of objects through constructors in 
-JavaScript.</p>
+<p>These concepts are related to the creation and use of objects through <span class="consolas">
+constructors</span> in JavaScript.</p>
 
-<p><b>new:</b> new is a keyword used to create a new instance of an object from a
-constructor function. When used with a constructor function, new creates
-a new object and assigns the value of this within the function to the new object.
-Then, the constructor function can initialize properties and methods on that object.</p>
+<p><span class="consolas">new:</span> <b>new</b> is a keyword used to create a new instance of an 
+object from a <b>constructor function</b>. When used with a <b>constructor function</b>, <b>new</b> 
+creates a new object and assigns the value of <b>this</b> within the function to the <b>new</b> 
+object. Then, the <b>constructor function</b> can initialize properties and methods on that object.</p>
 
 <pre>
 function Person(name, age) {
@@ -1613,16 +1603,16 @@ function Person(name, age) {
 const person1 = new Person("John", 30);
 </pre>
 
-<p><b>Constructor:</b> A constructor is a function used to create and configure
-objects. Constructors often follow a naming convention with the first
-Letter capitalized. Inside the constructor, you can initialize properties and
-methods of the object that will be created with new.</p>
+<p><span class="consolas">Constructor:</span> A <b>constructor</b> is a function used to create and 
+configure objects. <b>Constructors</b> often follow a naming convention with the first
+Letter capitalized. Inside the <b>constructor</b>, you can initialize properties and
+methods of the object that will be created with <b>new</b>.</p>
 
-<p><b>instanceof:</b> instanceof is an operator used to check if an object is an
-instance of a specific class or constructor. It returns true if the object is an
-instance of the given class, otherwise, it returns false.</p>
+<p><span class="consolas">instanceof:</span> <b>instanceof</b> is an operator used to check if an 
+object is an instance of a specific <b>class</b> or <b>constructor</b>. It returns true if the object 
+is an instance of the given <b>class</b>, otherwise, it returns false.</p>
 
-<pre>console.log(personl instanceof Person);  // Returns true</pre>
+<pre>console.log(person1 instanceof Person);  // Returns true</pre>
 
 <p><b>Instances:</b> An instance is a unique object created from a constructor. Each
 time you use new with a constructor, a new instance of the object is
@@ -3475,7 +3465,7 @@ formats, such as JSON, text, blobs, and more.</p>
 <p><b>Features of the Fetch API:</b></p>
 
 <ul>
-  <li>Promise-based: It uses promises to hanlde asynchronous responses.</li>
+  <li>Promise-based: It uses promises to handle asynchronous responses.</li>
   <li>Modern: Introduced in ES6, it is a more modern API that offers a clearer syntax.</li>
   <li>Support for different formats: It can handle responses in JSON, text, blobs, forms, etc.</li>
 </ul>
@@ -3814,7 +3804,7 @@ Sinon for HTTP request mocking.</p>
 <p><b>Mocha:</b> Mocha is a more flexible and extensible testing framework compared to 
 Jest. It focuses on providing a solid structure for writing tests and allows developers 
 to choose assertion Libraries and mocking tools according to their preferences. Mocha 
-itself does not include built-in assertions or mocking, so it is commonlg used in 
+itself does not include built-in assertions or mocking, so it is commonly used in 
 conjunction with libraries like Chai (for assertions) and Sinon (for mocking).</p>
 
 <p><b>Features of Mocha:</b></p>
@@ -4762,9 +4752,9 @@ let object = new class { getWord() { return "hello"; } };
 console.log(object.getWord());  // → hello
 </pre>
 
-<p>In fact, class was only introduce in the 2015 edition of JavaScript. Any func-
-tion can be used as a constructor, and before 2015 the way to define a class
-was to write a regular function and then manipulate its prototype property.</p>
+<p>In fact, class was only introduce in the 2015 edition of JavaScript. Any function can be used as a 
+constructor, and before 2015 the way to define a class was to write a regular function and then 
+manipulate its prototype property.</p>
 
 <p>Look above to the Rabbit class example if you’re unsure how class declarations look.</p>
 
@@ -9441,7 +9431,7 @@ representing the document as a tree structure.</p>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;body&gt;
-  &lt;hl id = "heading"&gt; Welcome to the DOM&lt;/hl&gt;
+  &lt;h1 id = "heading"&gt; Welcome to the DOM&lt;/h1&gt;
 &lt;script&gt;
   let element = document.getElementById("heading");
   console.log(element.innerHTML);  // Output: 'Welcome to the DOM'
@@ -10351,7 +10341,7 @@ asynchronous data fetching and manipulation on a webpage.</p>
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;hl&gt;Live Data: &lt;spanid="liveData"&gt;&lt;/span&gt;&lt;/hl&gt;
+&lt;h1&gt;Live Data: &lt;spanid="liveData"&gt;&lt;/span&gt;&lt;/h1&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
@@ -10531,7 +10521,7 @@ function displayTime() {
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;hl&gt;Current Time: &lt;span id =" timeDisplay"&gt;&lt;/span&gt;&lt;/hl&gt;
+&lt;h1&gt;Current Time: &lt;span id =" timeDisplay"&gt;&lt;/span&gt;&lt;/h1&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
