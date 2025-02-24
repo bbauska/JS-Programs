@@ -20493,13 +20493,50 @@ const copyToClipboard = str => {
 <h2 id="js-05">js-05. Check if Date is Valid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Use the following snippet to check if a given date is valid or not.</p>
-
+<p>In JavaScript, <b>val</b> is not a keyword or a built-in function. It is commonly used as a 
+method name provided by libraries like jQuery to get or set the value of form elements. 
+Specifically, the val() method in jQuery is used to manipulate the value attribute of HTML 
+form elements such as input fields, select boxes, and text areas.<br>
+When used without any arguments, val() returns the current value of the first matched element.<br>
+When used with an argument, it sets the value of all matched elements to the provided argument.</p>
 <pre>
+// Get the value of an input field with the ID "myInput"
+var inputValue = $("#myInput").val();
+
+// Set the value of all input fields with the class "myClass" to "new value"
+$(".myClass").val("new value");
+</pre>
+<pre>
+const val = "Febrary 29, 2025 08:00:00";
 const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
 
 // Example usage
-isDateValid("January 12, 2025 08:24:00");  // Result: true
-isDateValid("January 32, 2025 08:24:00");  // Result: false
+isDateValid("February 29, 2025 08:00:00");  // Result sb: false
+<!-- isDateValid("January 32, 2025 08:24:00");  // Result: false  -->
+<!-- isDateValid("January 12, 2025 08:24:00");  // Result: true  -->
+</pre>
+<pre>
+var parsedDate = Date.parse(date);
+
+// You want to check again for !isNaN(parsedDate) here because Dates can be converted
+// to numbers, but a failed Date parse will not.
+if (isNaN(date) && !isNaN(parsedDate)) {
+    /* do your work */
+}
+</pre>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<h3>Using Moment</h3>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<p>As I explained in this answer there is currently a library available for that: Moment.js</p>
+<p>It is a library to parse, validate, manipulate, and display dates in JavaScript, that has a 
+much richer API than the standard JavaScript date handling functions.</p>
+<p>It is 12kB minified/gzipped and works in Node.js and other places:</p>
+<pre>
+bower install moment --save # bower
+npm install moment --save   # npm
+Install-Package Moment.js   # NuGet
+spm install moment --save   # spm
+meteor add momentjs:moment  # meteor
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-06">js-06. Find the day of year</h2>
@@ -20511,7 +20548,7 @@ const dayOfYear = (date) =>
   Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
 // Example usage
-dayOfYear(new Date());  // Result: 41 (2/10/2025)
+dayOfYear(new Date());  // Result: 55 (2/24/2025)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-07">js-07. Capitalize a String</h2>
@@ -24356,5 +24393,6 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>With gratitude,</p>
 <p>Brian Bauska</p>
 <p>Last changed 2/10/2025 3:30p</p>
+<p>Last changed 2/24/2025 Mon 10:54a</p>
 </footer>
 </html>
