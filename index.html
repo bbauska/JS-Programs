@@ -2124,7 +2124,7 @@ method, allowing for sequential asynchronous operations.</p>
 
 <pre>
 doSomethingAsync()
-  .then(resultl => doAnotherAsyncThing(resultl))
+  .then(result1 => doAnotherAsyncThing(result1))
   .then(result2 => doMoreAsyncThings(result2))
   .then(finalResult => console.log(finalResult))
   .catch(error => console.error(error));
@@ -2135,12 +2135,12 @@ handle an array of promises and returns a new promise that is resolved
 when all promises in the array have been resolved.</p>
 
 <pre>
-const promisel = fetchDatal();
+const promisel = fetchData1();
 const promise2 = fetchData2();
 
 Promise.all(&lbrack;promisel, promise2&rbrack;)
 .then(results => {
-  const resultl = results&lbrack;0&rbrack;;
+  const result1 = results&lbrack;0&rbrack;;
   const result2 = results&lbrack;l&rbrack;;
   // Do something with the results
 })
@@ -3355,12 +3355,12 @@ const roundedNumber = Math.ceil(number);  // Result: 6
 </pre>
 
 <p><b>Math.round(x):</b> The round method <b>rounds a number to the nearest
-integer<b>. If the decimal is 0.5 or greater, it will round to the next integer.</p>
+integer</b>. If the decimal is 0.5 or greater, it will round to the next integer.</p>
 
 <pre>
-const numberl = 5.2;
+const number1 = 5.2;
 const number2 = 5.8;
-const roundingl = Math.round(numberl);  // Result: 5
+const roundingl = Math.round(number1);  // Result: 5
 const rounding2 = Math.round(number2);  // Result: 6
 </pre>
 
@@ -13194,8 +13194,8 @@ Promise.resolve('Resolved value').then(value => console.log(value));  // Output:
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function fetchData() {
-  const &lbrack;datal, data2&rbrack; = await Promise.all(&lbrack;
-    fetch('https://api.example.com/datal').then(res => res.json()),
+  const &lbrack;data1, data2&rbrack; = await Promise.all(&lbrack;
+    fetch('https://api.example.com/data1').then(res => res.json()),
     fetch('https://api.example.com/data2').then(res => res.json())
   &rbrack;);
   console.log(data1, data2);
@@ -15969,8 +15969,8 @@ function multiply(x, y) {
 }
 
 // Example usage
-let resultl = operateOnNumbers(3, 5, add);
-console.log("Result of addition:", resultl);  // Outputs: 8
+let result1 = operateOnNumbers(3, 5, add);
+console.log("Result of addition:", result1);  // Outputs: 8
 let result2 = operateOnNumbers(3, 5, multiply);
 console.log("Result of multiplication:", result2);  // Outputs: 15
 </pre>
@@ -16078,7 +16078,7 @@ function findAverage(num1, num2) {
 // Example usage:
 let number1 = 10;
 let number2 = 20;
-let result = findAverage(numberl, number2);
+let result = findAverage(number1, number2);
 console.log(`The average of ${number1} and ${number2} is: ${result}`);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -18241,7 +18241,7 @@ class SimonSaysGame {
     console.log('Your turn! Enter the sequence (e.g., "red blue green"):');
     // Simulate user input (you can replace this with actual user input in a real environment)
     const userInput = prompt('Enter the sequence:').toLowerCase();
-    this.playerSequence = userlnput.split('');
+    this.playerSequence = userInput.split('');
   }
   checkSequence() {
     for (let i = 0; i &lt; this.round; i++) {
@@ -18259,7 +18259,7 @@ class SimonSaysGame {
   async play() {
     while (true) {
       this.displaySequence();
-      this.getPlayerlnput();
+      this.getPlayerInput();
       this.checkSequence();
     }
   }
@@ -18475,7 +18475,7 @@ class TypingSpeedTest {
     this.text = this.generateRandomText();
     this.startTime = 0;
     this.endTime = 0;
-    this.userlnput = '';
+    this.userInput = '';
   }
   generateRandomText() {
     const randomindex = Math.floor(Math.random() * this.words.length);
@@ -18492,9 +18492,9 @@ class TypingSpeedTest {
     const wordsPerMinute = (this.text.splitf ').length / elapsedTime) * 60;
     console.log(`You typed at a speed of ${wordsPerMinute.toFixed(2)} words per minute.`);
   }
-  getUserlnput(input) {
-    this.userlnput = input.trim();
-    if (this.userlnput === this.text) {
+  getUserInput(input) {
+    this.userInput = input.trim();
+    if (this.userInput === this.text) {
       console.log('Congratulations! You typed the correct text.');
       this.endTest();
     } else {
@@ -18508,7 +18508,7 @@ const typingTest = new TypingSpeedTest();
 typingTest.startTest();
 // Simulate user input (you can replace this with actual user input in a real environment)
 const userinput = 'javascript developer';
-typingTest.getUserlnput(userlnput);
+typingTest.getUserInput(userInput);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js153">js153. Find the Area of a Cube</h2>
@@ -18979,7 +18979,7 @@ function chatbot(message) {
 function startChat() {
   const userinput = prompt('You:');
   if (userinput !== null) {
-    const response = chatbot(userlnput);
+    const response = chatbot(userInput);
     console.log('Chatbot:', response);
     startChatO;  // Continue the conversation
   } else {
@@ -19179,7 +19179,7 @@ function runQuiz() {
       console.log(`${i + 1}.${question.options&lbrack;i&rbrack;}`);
     }
     
-    const userAnswerlndex = prompt("Enter the number of your answer:");
+    const userAnswerIndex = prompt("Enter the number of your answer:");
     const user Answer = question.options&lbrack;userAnswerindex -1&rbrack;;
 
     if (userAnswer === question.correctAnswer) {
