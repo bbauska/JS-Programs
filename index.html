@@ -888,10 +888,10 @@ values.</p>
 <p><b>Floating-point:</b></p>
 <pre>let temperature = 26.5;  // Float</pre>
 
-<p><b>Floating-point:</b></p>
+<p><b>Character:</b></p>
 <pre>let grade = 'A';  // Character</pre>
 
-<p><b>Floating-point:</b></p>
+<p><b>Boolean:</b></p>
 <pre>let isStudent = true;  // Boolean</pre>
 
 <p>These are examples of primitive types because they represent the most basic forms of 
@@ -919,7 +919,7 @@ value is copied into the variable.</p>
 </ol>
 
 <pre>
-let numl = 42;  // Value type (Number)
+let num1 = 42;  // Value type (Number)
 let text = "Hello";  // Value type (String)
 let isTrue = true;  // Value type (Boolean)
 </pre>
@@ -14463,11 +14463,11 @@ displays the result.</p>
 
 <pre>
 // Prompt user for two numbers
-let numl = parseFloat(prompt("Enter the first number:"));
+let num1 = parseFloat(prompt("Enter the first number:"));
 let num2 = parseFloat(prompt("Enter the second number:"));
 
 // Check if inputs are valid numbers
-if (!isNaN(numl) && !isNaN(num2)) {
+if (!isNaN(num1) && !isNaN(num2)) {
 
   // Prompt user for the operation
   let operation = prompt("Choose an operation (+ for addition, - for subtraction, * for multiplication, / for division):");
@@ -14476,17 +14476,17 @@ if (!isNaN(numl) && !isNaN(num2)) {
   let result;
   switch (operation) {
     case "+":
-      result = numl + num2;
+      result = num1 + num2;
       break;
     case "-":
-      result = numl - num2;
+      result = num1 - num2;
       break;
     case "*":
-      result = numl * num2;
+      result = num1 * num2;
       break;
     case"/":
       if (num2 !== 0) {
-        result = numl / num2;
+        result = num1 / num2;
       } else {
         console.log("Cannot divide by zero.");
         break;
@@ -14498,7 +14498,7 @@ if (!isNaN(numl) && !isNaN(num2)) {
   }
   // Display the result
   if (result !== undefined) {
-    console.log(`Result of ${numl} ${operation} ${num2} is: ${result}`);
+    console.log(`Result of ${num1} ${operation} ${num2} is: ${result}`);
   }
 } else {
   console.log("Please enter valid numbers.");
@@ -14584,22 +14584,22 @@ Highest Common Factor (HCF) or Greatest Common Divisor (GCD).</p>
 
 <pre>
 // Prompt user for two positive integers
-let numl = parseInt(prompt("Enter the first positive integer:"));
+let num1 = parseInt(prompt("Enter the first positive integer:"));
 let num2 = parseInt(prompt("Enter the second positive integer:"));
 
 // Check if inputs are valid positive integers
-if (!isNaN(numl) && !isNaN(num2) && Number.isInteger(numl) && Number.isInteger(num2) 
-  && numl > 0 && num2 > 0) {
+if (!isNaN(num1) && !isNaN(num2) && Number.isInteger(num1) && Number.isInteger(num2) 
+  && num1 > 0 && num2 > 0) {
 
   // Find the HCF or GCD
-  let smallerNumber = Math.min(numl, num2);
+  let smallerNumber = Math.min(num1, num2);
   let hcf = 1;
   for (let i = 1; i &lt;= smallerNumber; i++) {
-    if (numl % i === 0 && num2 % i === 0) {
+    if (num1 % i === 0 && num2 % i === 0) {
       hcf = i;
     }
   }
-  console.log(`The HCF (GCD) of ${numl} and ${num2} is: ${hcf}`);
+  console.log(`The HCF (GCD) of ${num1} and ${num2} is: ${hcf}`);
 } else {
   console.log("Please enter valid positive integers.");
 }
@@ -14615,18 +14615,18 @@ The HCF (GCD) of 108 and 208 is: 4
 
 <pre>
 // Prompt user for two positive integers
-let numl = parseInt(prompt("Enter the first positive integer:"));
+let num1 = parseInt(prompt("Enter the first positive integer:"));
 let num2 = parseInt(prompt("Enter the second positive integer:"));
 
 // Check if inputs are valid positive integers
-if (!isNaN(numl) && !isNaN(num2) && Number.isInteger(numl) && Number.isInteger(num2) && numl > 0 
+if (!isNaN(num1) && !isNaN(num2) && Number.isInteger(num1) && Number.isInteger(num2) && num1 > 0 
   && num2 > 0) {
   // Find the LCM
-  let largerNumber = Math.max(numl, num2);
+  let largerNumber = Math.max(num1, num2);
   let lcm = largerNumber;
   while (true) {
-    if (lcm % numl === 0 && lcm % num2 === 0) {
-      console.log(`The LCM of ${numl} and ${num2} is: ${lcm}`);
+    if (lcm % num1 === 0 && lcm % num2 === 0) {
+      console.log(`The LCM of ${num1} and ${num2} is: ${lcm}`);
       break;
     }
     lcm += largerNumber;
@@ -16066,9 +16066,9 @@ console.log("Numeric Representation:", numericDate);
 and then divide the sum by 2.</p>
 
 <pre>
-function findAverage(numl, num2) {
+function findAverage(num1, num2) {
   // Calculate the sum of the two numbers
-  let sum = numl + num2;
+  let sum = num1 + num2;
 
   // Calculate the average by dividing the sum by 2
   let average = sum / 2;
@@ -19671,10 +19671,10 @@ function mathQuizGame() {
   console.log("Welcome to the Math Quiz Game!");
   console.log("Answer the following addition questions:");
   for (let i = 0; i &lt; maxQuestions; i++) {
-    const numl = Math.floor(Math.random() * 10) + 1;
+    const num1 = Math.floor(Math.random() * 10) + 1;
     const num2 = Math.floor(Math.random() * 10) + 1;
-    const correctAnswer = numl + num2;
-    const userAnswer = parseInt(prompt(' Question ${i + 1}: ${numl} + ${num2} = ?'), 10);
+    const correctAnswer = num1 + num2;
+    const userAnswer = parseInt(prompt(' Question ${i + 1}: ${num1} + ${num2} = ?'), 10);
     if (’isNaN(userAnswer) && userAnswer === correctAnswer) {
       console.log("Correct! Well done!");
       score++;
@@ -23049,7 +23049,7 @@ const isDuckNumber = (num) =>
   String(num)&lbrack;0&rbrack; !== '0';
 
 // Example usage
-console.log(isDuckNumber(1023));  // Output: true
+console.log(isDuckNumber(1123));  // Output: true
 console.log(isDuckNumber(12345));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
