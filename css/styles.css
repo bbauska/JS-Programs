@@ -46,7 +46,7 @@ a {
 }
 a[href]:hover {
   color: #000000;
-  background-color: #ffff00;  /* yellow */
+  background-color: #76ff76;  /* #76ff76 #ffff00 yellow */
   text-decoration: underline; 
 }
 
