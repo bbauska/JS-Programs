@@ -33,7 +33,7 @@ a:visited {
 }
 /* mouse over link */
 a:hover {
-  background: #ffffed;  /* very light yellow, was black */
+  background: #76ff76;  /* ffffed very light yellow, was black */
   color: #006700;  /* dark green, hotpink */
 }
 /* selected link */
