@@ -22203,14 +22203,14 @@ identifies digits in the string and adds them up to calculate the total sum.</p>
 <pre>
 function sumOfDigitsInString(inputString) {
   let digitSum = 0;
-  for (const char of inputstring) {
+  for (const char of inputString) {
     // Check if the character is a digit
     if (/\d/.test(char)) {
       // Convert the digit character to its numerical value and add to sum
       digitSum += parseInt(char, 10);
     }
   }
-  console.log(`Original String: ${inputstring}`);
+  console.log(`Original String: ${inputString}`);
   console.log(`Sum of Digits in the String: ${digitSum}`);
 }
 
