@@ -22227,7 +22227,7 @@ total sum.</p>
 <pre>
 function sumOfCubes(upToInteger) {
   let cubesSum = 0;
-  for (let i = 1; i < = upToInteger; i++) {
+  for (let i = 1; i <= upToInteger; i++) {
     // Calculate the cube of each integer and add to sum
     cubesSum += Math.pow(i, 3);
   }
@@ -22378,7 +22378,7 @@ function areAllDigitsSame(number) {
   const firstDigit = numberStr&lbrack;0&rbrack;;
   for (let i = 1; i < numberStr.length; i++) {
     if (numberStr&lbrack;i&rbrack; !== firstDigit) {
-      console.log(' Digits in ${number} are not all the same.');
+      console.log(`Digits in ${number} are not all the same.`);
       return;
     }
   }
@@ -22403,7 +22403,7 @@ round number, if any.</p>
 
 <pre>
 function rightmostRoundNumberPosition(arr) {
-  for (let i = arr.length -1; i > = 0; i--) {
+  for (let i = arr.length -1; i >= 0; i--) {
     if (arr&lbrack;i&rbrack; % 10 ===0){
       console.log(`Rightmost Round Number: ${arr&lbrack;i&rbrack;}, Position: ${i + 1}`);
       return;
@@ -22671,7 +22671,7 @@ copyToClipboard("Hello World!");
 &lt;script&gt;
   function copyToClipboard() {
     var copyText = document.getElementById("content").value;
-    navigator.clipboard.writeText(copyText).then(() =&gt; {
+    navigator.clipboard.writeText(copyText).then(() => {
         // Alert the user that the action took place.
         // Nobody likes hidden stuff being done under the hood!
         alert("Copied to clipboard");
@@ -26908,3 +26908,4 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>With gratitude,</p>
 <p>Brian Bauska</p>
 </footer>
+</html>
