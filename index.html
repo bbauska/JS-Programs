@@ -1009,7 +1009,7 @@ function entertain(concert: CanSing) {
 }
 
 const canary = {
-  sing: () => console.log("Tweet tweet")
+  sing: () =&gt; console.log("Tweet tweet")
 };
 entertain(canary);  // Type doesn't matter, as long as it has the 'sing' method
 </pre>
@@ -1768,7 +1768,7 @@ the same order.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4&rbrack;;
-const doubles = numbers.map(number => number * 2);
+const doubles = numbers.map(number =&gt; number * 2);
 // doubles is now &lbrack;2, 4, 6, 8&rbrack;
 </pre>
 
@@ -1778,7 +1778,7 @@ array with the elements that satisfy the condition.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4, 5, 6&rbrack;;
-const evens = numbers.filter(number => number % 2 === 0);
+const evens = numbers.filter(number =&gt; number % 2 === 0);
 // evens is now &lbrack;2, 4, 6&rbrack;
 </pre>
 
@@ -1789,7 +1789,7 @@ value.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
-const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);  // sum is 15
+const sum = numbers.reduce((accumulator, number) =&gt; accumulator + number, 0);  // sum is 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event Propagation</h2>
@@ -1960,7 +1960,7 @@ element of the array and returns a new array with the results.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4&rbrack;;
-const duplicates = numbers.map(number => number * 2);  // Result: &lbrack;2, 4, 6, 8&rbrack;
+const duplicates = numbers.map(number =&gt; number * 2);  // Result: &lbrack;2, 4, 6, 8&rbrack;
 </pre>
 
 <p><b>Filtering (Filter):</b> The filter method of an array creates a new array with
@@ -1968,7 +1968,7 @@ elements that pass a specified condition.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
-const odds = numbers.filter(number => number % 2 !== 0);  // Result: &lbrack;1, 3, 5&rbrack;
+const odds = numbers.filter(number =&gt; number % 2 !== 0);  // Result: &lbrack;1, 3, 5&rbrack;
 </pre>
 
 <p><b>reducing (reduce):</b> The reduce method or an array accumulates
@@ -1976,7 +1976,7 @@ elements by applying a reducing function and returns a single result.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4&rbrack;;
-const totalSum = numbers.reduce((accumulator, number) => 
+const totalSum = numbers.reduce((accumulator, number) =&gt; 
   accumulator + number, 0);  // Result: 10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2101,7 +2101,7 @@ constructor takes a function with two parameters, resolve and reject,
 which are functions to fulfill or reject the promise.</p>
 
 <pre>
-const promise = new Promise((resolve, reject) => {
+const promise = new Promise((resolve, reject) =&gt; {
   // Perform an asynchronous operation here
   // If the operation is successful, call resolve(value)
   // If the operation fails, call reject(error)
@@ -2113,8 +2113,8 @@ result These methods include then to handle resolution and catch to
 handle rejection.</p>
 
 <pre>
-nnomiqp.thpnfvalue => 4
-// Do something with the resolved value }).catch(error => {
+nnomiqp.thpnfvalue =&gt; 4
+// Do something with the resolved value }).catch(error =&gt; {
 // Handle the error if the promise is rejected
 });
 </pre>
@@ -2124,10 +2124,10 @@ method, allowing for sequential asynchronous operations.</p>
 
 <pre>
 doSomethingAsync()
-  .then(result1 => doAnotherAsyncThing(result1))
-  .then(result2 => doMoreAsyncThings(result2))
-  .then(finalResult => console.log(finalResult))
-  .catch(error => console.error(error));
+  .then(result1 =&gt; doAnotherAsyncThing(result1))
+  .then(result2 =&gt; doMoreAsyncThings(result2))
+  .then(finalResult =&gt; console.log(finalResult))
+  .catch(error =&gt; console.error(error));
 </pre>
 
 <p><b>Handling Multiple Promises:</b> The Promise.all method allows you to
@@ -2139,12 +2139,12 @@ const promisel = fetchData1();
 const promise2 = fetchData2();
 
 Promise.all(&lbrack;promisel, promise2&rbrack;)
-.then(results => {
+.then(results =&gt; {
   const result1 = results&lbrack;0&rbrack;;
   const result2 = results&lbrack;l&rbrack;;
   // Do something with the results
 })
-.catch(error => console.error(error));
+.catch(error =&gt; console.error(error));
 </pre>
 
 <p>Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
@@ -2170,8 +2170,8 @@ const data = await response.jsonQ;
 return data;
 
 fetchData()
-.then(data => console.log(data))
-.catch(error => console.error(error));
+.then(data =&gt; console.log(data))
+.catch(error =&gt; console.error(error));
 </pre>
 
 <p>In this example, fetchData is an asynchronous function that waits for the
@@ -2585,7 +2585,7 @@ function increment(x) {
   return x + 1;
 }
 
-const doubleIncrement = x => increment(double(x));
+const doubleIncrement = x =&gt; increment(double(x));
 console.log(doubleIncrement(3));  // Prints: 7
 </pre>
 
@@ -2597,8 +2597,8 @@ output of one function as the input to the next. This allows you to create chain
 transformations in a more readable syntax.</p>
 
 <pre>
-const pipe = (...funcs) => input => 
-  funcs.reduce((value, func) => 
+const pipe = (...funcs) =&gt; input =&gt; 
+  funcs.reduce((value, func) =&gt; 
   func(value), input);
 
 const result = pipe(
@@ -2846,7 +2846,7 @@ an array in contexts where function arguments or destructuring parameters are ex
 <pre>
 // Use rest in functions
 function sum(...numbers) {
-  return numbers.reduce((total, num) => total + num, 0);
+  return numbers.reduce((total, num) =&gt; total + num, 0);
 }
 console.log(sum(l, 2, 3, 4));  // Prints: 10
 
@@ -2984,9 +2984,9 @@ JavaScript Arrow functions are especially useful when working with
 anonymous functions or functions that do not require a special this
 context Here&apos;s an overview of how arrow functions are used:</p>
 
-<p><b>Basic Syntax:</b> An arrow function is defined using the syntax 0 =>
+<p><b>Basic Syntax:</b> An arrow function is defined using the syntax 0 =&gt;
 where the parentheses contain the function parameters, and the arrow
-(=>) separates the parameters from the function body.</p>
+(=&gt;) separates the parameters from the function body.</p>
 
 <pre>
 // Traditional function
@@ -2995,7 +2995,7 @@ function sum(a, b) {
 }
 
 // Equivalent arrow function
-const arrowSum = (a, b) => {
+const arrowSum = (a, b) =&gt; {
   return a + b;
 };
 </pre>
@@ -3006,7 +3006,7 @@ will automatically return the result of that expression.</p>
 
 <pre>
 // Arrow function with implicit return
-const arrowSum = (a, b) => a + b;
+const arrowSum = (a, b) =&gt; a + b;
 </pre>
 
 <p><b>Single Parameter:</b> If the function has only one parameter, the
@@ -3014,7 +3014,7 @@ parentheses around the parameters can also be omitted.</p>
 
 <pre>
 // Arrow function with a single parameter
-const square = num => num * num;
+const square = num =&gt; num * num;
 </pre>
 
 <p><b>No Parameters:</b> If the function has no parameters, empty parentheses Q
@@ -3022,7 +3022,7 @@ must be used.</p>
 
 <pre>
 // Arrow function with no parameters
-const getCurrentDate = () => new Date();
+const getCurrentDate = () =&gt; new Date();
 </pre>
 
 <p><b>Using this:</b> One of the advantages of arrow functions is that they inherit
@@ -3034,7 +3034,7 @@ where you work with objects and classes.</p>
 const person = {
   name:  'John',
   greet: function() {
-    setTimeout(() => {
+    setTimeout(() =&gt; {
       console.log(`Hello, I am ${this.name}`); 
     }, 1000);
   }
@@ -3106,7 +3106,7 @@ callback function for each one.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3&rbrack;;
-numbers.forEach(number => console.log(number));  // Prints 1, 2, 3
+numbers.forEach(number =&gt; console.log(number));  // Prints 1, 2, 3
 </pre>
 
 <p><b>Array.some(callback(currentValue, index, array)):</b> The some method
@@ -3115,7 +3115,7 @@ in the callbackfunction.</p>
 
 <pre>
 const numbers - &lbrack;2, 4, 6&rbrack;;
-const hasOdd = numbers.some(number => number % 2 !== 0);
+const hasOdd = numbers.some(number =&gt; number % 2 !== 0);
 // Result: false
 </pre>
 
@@ -3125,7 +3125,7 @@ callback function.</p>
 
 <pre>
 const numbers = {2, 4, 6&rbrack;;
-const allEven - numbers.every(number => number % 2 --- 0);
+const allEven - numbers.every(number =&gt; number % 2 --- 0);
 // Result: true
 </pre>
 
@@ -3140,7 +3140,7 @@ const people = &lbrack;
   { name: 'Peter', age: 22 }
 &rbrack;;
 
-const person - people.find(person => person.age > 25); 
+const person - people.find(person =&gt; person.age > 25); 
 // Result: { name: 'Mary', age: 30 }
 </pre>
 
@@ -3150,7 +3150,7 @@ condition specified in the callbackfunction.</p>
 
 <pre>
 const numbers = &lbrack;10, 20, 30, 40&rbrack;;
-const index = numbers.findIndex(number => number > 25);
+const index = numbers.findIndex(number =&gt; number > 25);
 // Result: 2 (30 is the first number greater than 25)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3476,9 +3476,9 @@ formats, such as JSON, text, blobs, and more.</p>
 
 <pre>
 fetch('https://api.example.com/data')
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error('Error:', error));
+.then(response =&gt; response.json())
+.then(data =&gt; console.log(data))
+.catch(error =&gt; console.error('Error:', error));
 </pre>
 
 <p><b>AJAX: AJAX (Asynchronous JavaScript and XML)</b> is an older approach to making 
@@ -3613,7 +3613,7 @@ socket.addEventListener('open', () -> {
   socket.send('Hello, server!');
 });
 
-socket.addEventListener('message', event => { 
+socket.addEventListener('message', event =&gt; { 
   console.log('Message from the server:', event.data);
 });
 
@@ -3624,7 +3624,7 @@ const wss = new WebSocket.Server({ port: 3000 });
 wss.on('connection', ws -> {
   ws.send('Welcome to the WebSocket server!');
   
-  ws.on(' message', message => {
+  ws.on(' message', message =&gt; {
     console.log('Message from the client:', message);
     ws.send('Message received: ' + message);
   });
@@ -3654,7 +3654,7 @@ socket.on('connect', () -> {
   socket.emit('message', 'Hello, server!');
 });
 
-socket.on('response', data => {
+socket.on('response', data =&gt; {
   console.log('Server response:', data);
 });
 
@@ -3665,7 +3665,7 @@ const io = require('socket.io')(server);
 io.on('connection', socket -> {
   socket.emit('response', 'Welcome to the Socket.IO server!');
   
-  socket.on('message', message => {
+  socket.on('message', message =&gt; {
     console.log('Client message:', message);
     socket.emit('response', 'Message received: ' + message);
   });
@@ -3790,11 +3790,11 @@ module.exports = { sum };
 // math.test.js (tests with Jest)
 const { sum } = require('./math');
 
-test('Correctly adds two numbers', () => {
+test('Correctly adds two numbers', () =&gt; {
   expect(sum(2, 3)).toBe(5);
 });
 
-test('Correctly adds negative numbers', () => {
+test('Correctly adds negative numbers', () =&gt; {
   expect(sum(-2, -3)).toBe(-5);
 });
 </pre>
@@ -3829,7 +3829,7 @@ function that makes a simulated HTTP request using Sinon:</p>
 const request = require('request');
 
 function fetchData(callback) {
-  request('http://api.example.com/data', (error, response, body) => {
+  request('http://api.example.com/data', (error, response, body) =&gt; {
     if (!error && response.statusCode === 200) { 
       callback(JSON.parse(body));
     } else { 
@@ -3845,24 +3845,24 @@ const { expect } = require('chai');
 const sinon - require('sinon');
 const { fetchData } - require('./http');
 
-describe('fetchData', () => {
-  it('Should retrieve valid data', () => {
+describe('fetchData', () =&gt; {
+  it('Should retrieve valid data', () =&gt; {
     const stub = sinon.stub().yields(null, { 
       statusCode: 200
     },  '{"data": "value"}');
     sinon.replace(request, 'get', stub);
     
-    fetchData(data => {
+    fetchData(data =&gt; {
       expect(data).to.deep.equal({ data: 'value' });
     });
     sinon.restore();
   });
   
-  it('Should handle request error', () => {
+  it('Should handle request error', () =&gt; {
     const stub = sinon.stub().yields(new Error('Request error'));
     sinon.replace(request, 'get', stub);
 
-    fetchData(data => {
+    fetchData(data =&gt; {
       expect(data).to.be.null;
     });
     sinon.restore();
@@ -4512,7 +4512,7 @@ new functions.</p>
 
 <pre>
 function greaterThan(n) {
-  return m => m > n;
+  return m =&gt; m > n;
 }
 let greaterThan10 = greaterThan(10);
 console.log(greaterThan10(11));  // → true
@@ -4522,7 +4522,7 @@ console.log(greaterThan10(11));  // → true
 
 <pre>
 function noisy(f) {
-  return (...args) => {
+  return (...args) =&gt; {
     console.log("calling with", args);
     let result = f(...args);
     console.log("called with", args, ", returned", result);
@@ -4539,8 +4539,8 @@ noisy(Math.min)(3, 2, 1);  // → calling with &lbrack;3, 2, 1&rbrack;
 function unless(test, then) {
   if (!test) then();
 }
-repeat(3, n => {
-  unless(n % 2 == 1, () => {
+repeat(3, n =&gt; {
+  unless(n % 2 == 1, () =&gt; {
     console.log(n, "is even");
   });
 });
@@ -4552,14 +4552,14 @@ repeat(3, n => {
 for/of loop as a higher-order function.</p>
 
 <pre>
-&lbrack;"A", "B"&rbrack;.forEach(l => console.log(l));
+&lbrack;"A", "B"&rbrack;.forEach(l =&gt; console.log(l));
 // → A
 // → B
 </pre>
 
 <pre>
 let arrays = &lbrack;&lbrack;1, 2, 3&rbrack;, &lbrack;4, 5&rbrack;, &lbrack;6&rbrack;&rbrack;;<br>
-console.log(arrays.reduce((flat, current) => flat.concat(current), &lbrack;&rbrack;)); 
+console.log(arrays.reduce((flat, current) =&gt; flat.concat(current), &lbrack;&rbrack;)); 
 // → &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4581,7 +4581,7 @@ function loop(start, test, update, body) {
     body(value);
   }
 }<br>
-loop(3, n => n > 0, n => n - 1, console.log);
+loop(3, n =&gt; n > 0, n =&gt; n - 1, console.log);
 // → 3
 // → 2
 // → 1
@@ -4618,7 +4618,7 @@ function every(array, predicate) {
   return true;
 }<br>
 function every2(array, predicate) {
-  return !array.some(element => !predicate(element));
+  return !array.some(element =&gt; !predicate(element));
 }<br>
 console.log(every(&lbrack;1, 3, 5&rbrack;, n =&gt; n &lt; 10));  // → true
 console.log(every(&lbrack;2, 4, 16&rbrack;, n =&gt; n &lt; 10));  // → false
@@ -4648,7 +4648,7 @@ function countBy(items, groupName) {
   let counts = &lbrack;&rbrack;;
   for (let item of items) {
     let name = groupName(item);
-    let known = counts.findIndex(c => c.name == name);
+    let known = counts.findIndex(c =&gt; c.name == name);
     if (known == -1) {
       counts.push({name, count: 1});
     } else {
@@ -4657,17 +4657,17 @@ function countBy(items, groupName) {
   }
   return counts;
 }
-console.log(countBy(&lbrack;1, 2, 3, 4, 5&rbrack;, n => n > 2));  // → &lbrack;{name: false, count: 2}, {name: true, count: 3}&rbrack;
+console.log(countBy(&lbrack;1, 2, 3, 4, 5&rbrack;, n =&gt; n > 2));  // → &lbrack;{name: false, count: 2}, {name: true, count: 3}&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function dominantDirection(text) {
-  let counted = countBy(text, char => {
+  let counted = countBy(text, char =&gt; {
     let script = characterScript(char.codePointAt(0));
     return script ? script.direction : "none";
-  }).filter(({name}) => name != "none");<br>
+  }).filter(({name}) =&gt; name != "none");<br>
   if (counted.length == 0) return "ltr";
-    return counted.reduce((a, b) => a.count > b.count ? a : b).name;
+    return counted.reduce((a, b) =&gt; a.count > b.count ? a : b).name;
 }<br>
 console.log(dominantDirection("Hello!"));  // → ltr
 console.log(dominantDirection("Hey, مساء الخير"));  // → rtl
@@ -4817,7 +4817,7 @@ class Group {
     }
   }
   delete(value) {
-    this.members = this.members.filter(v => v !== value);
+    this.members = this.members.filter(v =&gt; v !== value);
   }
   has(value) {
     return this.members.includes(value);
@@ -4859,7 +4859,7 @@ class Group {
     }
   }
   delete(value) {
-    this.members = this.members.filter(v => v !== value);
+    this.members = this.members.filter(v =&gt; v !== value);
   }
   has(value) {
     return this.members.includes(value);
@@ -4940,7 +4940,7 @@ function buildGraph(edges) {
       graph&lbrack;from&rbrack; = &lbrack;to&rbrack;;
     }
   }
-  for (let &lbrack;from, to&rbrack; of edges.map(r => r.split("-"))) {
+  for (let &lbrack;from, to&rbrack; of edges.map(r =&gt; r.split("-"))) {
     addEdge(from, to);
     addEdge(to, from);
   }
@@ -4956,10 +4956,10 @@ var VillageState = class VillageState {
     if (!roadGraph&lbrack;this.place&rbrack;.includes(destination)) {
       return this;
     } else {
-      let parcels = this.parcels.map(p => {
+      let parcels = this.parcels.map(p =&gt; {
         if (p.place != this.place) return p;
         return {place: destination, address: p.address};
-      }).filter(p => p.place != p.address);
+      }).filter(p =&gt; p.place != p.address);
       return new VillageState(destination, parcels);
     }
   }
@@ -5013,7 +5013,7 @@ function findRoute(graph, from, to) {
     let {at, route} = work&lbrack;i&rbrack;;
     for (let place of graph&lbrack;at&rbrack;) {
       if (place == to) return route.concat(place);
-      if (!work.some(w => w.at == place)) {
+      if (!work.some(w =&gt; w.at == place)) {
         work.push({at: place, route: route.concat(place)});
       }
     }
@@ -5130,7 +5130,7 @@ class PGroup {
   }
   delete(value) {
     if (!this.has(value)) return this;
-    return new PGroup(this.members.filter(m => m !== value));
+    return new PGroup(this.members.filter(m =&gt; m !== value));
   }
   has(value) {
     return this.members.includes(value);
@@ -5373,7 +5373,7 @@ const roads = &lbrack;
   "Marketplace-Post Office",     "Marketplace-Shop",
   "Marketplace-Town Hall",       "Shop-Town Hall"
 &rbrack;;<br>
-exports.roadGraph = buildGraph(roads.map(r => r.split("-")));
+exports.roadGraph = buildGraph(roads.map(r =&gt; r.split("-")));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el29">el29. Asynchronous Programming: Tracking the scalpel</h2>
@@ -5413,7 +5413,7 @@ async function locateScalpel(nest) {
 }<br>
 function locateScalpel2(nest) {
   function loop(current) {
-    return anyStorage(nest, current, "scalpel").then(next => {
+    return anyStorage(nest, current, "scalpel").then(next =&gt; {
       if (next == current) return current;
       else return loop(next);
     });
@@ -5444,11 +5444,11 @@ in one of them triggers the rejection of the whole wrapper promise.</p>
 
 <pre>
 function Promise_all(promises) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) =&gt; {
     let results = &lbrack;&rbrack;;
     let pending = promises.length;
     for (let i = 0; i &lt; promises.length; i++) {
-      promises&lbrack;i&rbrack;.then(result => {
+      promises&lbrack;i&rbrack;.then(result =&gt; {
         results&lbrack;i&rbrack; = result;
         pending--;
         if (pending == 0) resolve(results);
@@ -5458,20 +5458,20 @@ function Promise_all(promises) {
   });
 }<br>
 // Test code.
-Promise_all(&lbrack;&rbrack;).then(array => {
+Promise_all(&lbrack;&rbrack;).then(array =&gt; {
   console.log("This should be &lbrack;&rbrack;:", array);
 });<br>
 function soon(val) {
-  return new Promise(resolve => {
-    setTimeout(() => resolve(val), Math.random() * 500);
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; resolve(val), Math.random() * 500);
   });
 }<br>
-Promise_all(&lbrack;soon(1), soon(2), soon(3)&rbrack;).then(array => {
+Promise_all(&lbrack;soon(1), soon(2), soon(3)&rbrack;).then(array =&gt; {
   console.log("This should be &lbrack;1, 2, 3&rbrack;:", array);
 });<br>
-Promise_all(&lbrack;soon(1), Promise.reject("X"), soon(3)&rbrack;).then(array => {
+Promise_all(&lbrack;soon(1), Promise.reject("X"), soon(3)&rbrack;).then(array =&gt; {
   console.log("We should not get here");
-}).catch(error => {
+}).catch(error =&gt; {
   if (error != "X") {
     console.log("Unexpected failure:", error);
   }
@@ -5486,9 +5486,9 @@ Promise_all(&lbrack;soon(1), Promise.reject("X"), soon(3)&rbrack;).then(array =>
 ment (with triple-dot notation), the definition of array can be very simple.</p>
 
 <pre>
-topScope.array = (...values) => values;
-topScope.length = array => array.length;
-topScope.element = (array, i) => array&lbrack;i&rbrack;;<br>
+topScope.array = (...values) =&gt; values;
+topScope.length = array =&gt; array.length;
+topScope.element = (array, i) =&gt; array&lbrack;i&rbrack;;<br>
 run(`
 do(define(sum, fun(array,
      do(define(i, 0),
@@ -5541,7 +5541,7 @@ we haven’t found the binding yet, it doesn’t exist, and an error should be
 thrown.</p>
 
 <pre>
-specialForms.set = (args, env) => {
+specialForms.set = (args, env) =&gt; {
   if (args.length != 2 || args&lbrack;0&rbrack;.type != "word") {
     throw new SyntaxError("Bad use of set");
   }
@@ -6836,9 +6836,9 @@ function loadTalks() {
 SkillShareServer.prototype.updated = function() {
   this.version++;
   let response = this.talkResponse();
-  this.waiting.forEach(resolve => resolve(response));
+  this.waiting.forEach(resolve =&gt; resolve(response));
   this.waiting = &lbrack;&rbrack;;<br>
-  writeFile(fileName, JSON.stringify(this.talks), e => {
+  writeFile(fileName, JSON.stringify(this.talks), e =&gt; {
     if (e) throw e;
   });
 };<br>
@@ -7065,15 +7065,15 @@ class SkillShareServer {
     this.version = 0;
     this.waiting = &lbrack;&rbrack;;
     let fileServer = ecstatic({root: "./public"});
-    this.server = createServer((request, response) => {
+    this.server = createServer((request, response) =&gt; {
       let resolved = router.resolve(this, request);
       if (resolved) {
-        resolved.catch(error => {
+        resolved.catch(error =&gt; {
           if (error.status != null) return error;
           return {body: String(error), status: 500};
         }).then(({body,
         status = 200,
-        headers = defaultHeaders}) => {
+        headers = defaultHeaders}) =&gt; {
           response.writeHead(status, headers);
           response.end(body);
         });
@@ -7108,7 +7108,7 @@ respond either with the talk’s JSON data or with a 404 error response.</p>
 <pre>
 const talkPath = /^\/talks\/(&lbrack;^\/&rbrack;+)$/;
 
-router.add("GET", talkPath, async (server, title) => {
+router.add("GET", talkPath, async (server, title) =&gt; {
   if (title in server.talks) {
     return {body: JSON.stringify(server.talks&lbrack;title&rbrack;),
     headers: {"Content-Type": "application/json"}};
@@ -7121,7 +7121,7 @@ router.add("GET", talkPath, async (server, title) => {
 <p>Deleting a talk is done by removing it from the talks object.</p>
 
 <pre>
-router.add("DELETE", talkPath, async (server, title) => {
+router.add("DELETE", talkPath, async (server, title) =&gt; {
   if (title in server.talks) {
     delete server.talks&lbrack;title&rbrack;;
     server.updated();
@@ -7137,11 +7137,11 @@ resolves to a string.</p>
 
 <pre>
 function readStream(stream) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) =&gt; {
     let data = "";
     stream.on("error", reject);
-    stream.on("data", chunk => data += chunk.toString());
-    stream.on("end", () => resolve(data));
+    stream.on("data", chunk =&gt; data += chunk.toString());
+    stream.on("end", () =&gt; resolve(data));
   });
 }
 </pre>
@@ -7157,7 +7157,7 @@ and again calls updated.</p>
 
 <pre>
 router.add("PUT", talkPath,
-async (server, title, request) => {
+async (server, title, request) =&gt; {
   let requestBody = await readStream(request);
   let talk;
   try { talk = JSON.parse(requestBody); }
@@ -7182,7 +7182,7 @@ when it looks valid.</p>
 
 <pre>
 router.add("POST", /^\/talks\/(&lbrack;^\/&rbrack;+)\/comments$/,
-  async (server, title, request) => {
+  async (server, title, request) =&gt; {
   let requestBody = await readStream(request);
   let comment;
   try { comment = JSON.parse(requestBody); }
@@ -7231,7 +7231,7 @@ None-Match and Prefer headers are present. Node stores headers, whose names
 are specified to be case insensitive, under their lowercase names.</p>
 
 <pre>
-router.add("GET", /^\/talks$/, async (server, request) => {
+router.add("GET", /^\/talks$/, async (server, request) =&gt; {
   let tag = /"(.*)"/.exec(request.headers&lbrack;"if-none-match"&rbrack;);
   let wait = /\bwait=(\d+)/.exec(request.headers&lbrack;"prefer"&rbrack;);
   if (!tag || tag&lbrack;1&rbrack; != server.version) {
@@ -7256,11 +7256,11 @@ request has waited long enough.</p>
 
 <pre>
 SkillShareServer.prototype.waitForChanges = function(time) {
-  return new Promise(resolve => {
+  return new Promise(resolve =&gt; {
     this.waiting.push(resolve);
-    setTimeout(() => {
+    setTimeout(() =&gt; {
       if (!this.waiting.includes(resolve)) return;
-      this.waiting = this.waiting.filter(r => r != resolve);
+      this.waiting = this.waiting.filter(r =&gt; r != resolve);
       resolve({status: 304});
     }, time * 1000);
   });
@@ -7272,7 +7272,7 @@ up all waiting requests.</p>
 SkillShareServer.prototype.updated = function() {
   this.version++;
   let response = this.talkResponse();
-  this.waiting.forEach(resolve => resolve(response));
+  this.waiting.forEach(resolve =&gt; resolve(response));
   this.waiting = &lbrack;&rbrack;;
 };
 </pre>
@@ -7362,7 +7362,7 @@ makes sure the returned promise is rejected when the server returns an error cod
 
 <pre>
 function fetchOK(url, options) {
-  return fetch(url, options).then(response => {
+  return fetch(url, options).then(response =&gt; {
     if (response.status &lt; 400) return response;
     else throw new Error(response.statusText);
   });
@@ -7499,7 +7499,7 @@ async function pollTalks(update) {
       });
     } catch (e) {
       console.log("Request failed: " + e);
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve =&gt; setTimeout(resolve, 500));
       continue;
     }
     if (response.status == 304) continue;
@@ -7562,7 +7562,7 @@ function runApp() {
     state = handleAction(state, action);
     app.syncState(state);
   }
-  pollTalks(talks => {
+  pollTalks(talks =&gt; {
     if (!app) {
       state = {user, talks};
       app = new SkillShareApp(state, dispatch);
@@ -7630,7 +7630,7 @@ class Talk {
       "section", {className: "talk"},
       elt("h2", null, talk.title, " ", elt("button", {
         type: "button",
-        onclick:() => dispatch({type: "deleteTalk",
+        onclick:() =&gt; dispatch({type: "deleteTalk",
                                  talk: talk.title})
       }, "Delete")),
       elt("div", null, "by ",
@@ -7685,7 +7685,7 @@ class SkillShareApp {
       }
     }
     for (let title of Object.keys(this.talkMap)) {
-      if (!state.talks.some(talk => talk.title == title)) {
+      if (!state.talks.some(talk =&gt; talk.title == title)) {
         this.talkMap&lbrack;title&rbrack;.dom.remove();
         delete this.talkMap&lbrack;title&rbrack;;
       }
@@ -7702,7 +7702,7 @@ function findPath(a, b) {
     let end = path&lbrack;path.length - 1&rbrack;;
     if (end == b) return path;
     for (let next of end.edges) {
-      if (!work.some(path => path&lbrack;path.length - 1&rbrack; == next)) {
+      if (!work.some(path =&gt; path&lbrack;path.length - 1&rbrack; == next)) {
         work.push(path.concat(&lbrack;next&rbrack;));
       }
     }
@@ -7723,7 +7723,7 @@ function findPath(a, b) {
     let end = path&lbrack;path.length - 1&rbrack;;
     if (end == b) return path;
     for (let next of end.edges) {
-      if (!work.some(path => path&lbrack;path.length - 1&rbrack; == next)) {
+      if (!work.some(path =&gt; path&lbrack;path.length - 1&rbrack; == next)) {
         work.push(path.concat(&lbrack;next&rbrack;));
       }
     }
@@ -8010,7 +8010,7 @@ a specific task when called</b>.</p>
 <pre>let message = greet('John');  // message = 'Hello, John!'</pre>
 
 <h4>Arrow Function:</h4>
-<pre>const multiply = (a,b) => a * b;
+<pre>const multiply = (a,b) =&gt; a * b;
 let result = multiply(5,3);  // result = 15</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex12">ex12. JS Objects</h2>
@@ -8221,7 +8221,7 @@ efficiently.</p>
 <h3>Examples of JS Array Sort:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sorting Numbers:</h4>
-<pre>numbers.sort((a, b) => a - b);  // Ascending order</pre>
+<pre>numbers.sort((a, b) =&gt; a - b);  // Ascending order</pre>
 
 <h4>Sorting Strings:</h4>
 <pre>fruits.sort();  // Alphabetic Order</pre>
@@ -8235,13 +8235,13 @@ perform operations on each element</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>forEach() Method:</h4>
 <pre>
-numbers.forEach(number => {
+numbers.forEach(number =&gt; {
   console.log(number);
 });
 </pre>
 
 <h4>map() Method:</h4>
-<pre>let doubledNumbers = numbers.map(number => number * 2);</pre>
+<pre>let doubledNumbers = numbers.map(number =&gt; number * 2);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex26">ex26. JS Array Const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8769,11 +8769,11 @@ writing functions.</p>
 <h3>Examples of JS Arrow Function:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic Arrow Function:</h4>
-<pre>let multiply = (a, b) => a * b;</pre>
+<pre>let multiply = (a, b) =&gt; a * b;</pre>
 
 <h4>Arrow Function with Multiple Lines:</h4>
 <pre>
-let greet = (name) => {
+let greet = (name) =&gt; {
   return 'Hello, ' + name + '!'
 };
 </pre>
@@ -9155,7 +9155,7 @@ let greet = function() {
 </pre>
 <h4>Arrow Function:</h4>
 <pre>
-let greet = () => {
+let greet = () =&gt; {
   return 'Hello!';
 };
 </pre>
@@ -9349,7 +9349,7 @@ to another function to be executed later.</p>
 <h4>Callbacks Example:</h4>
 <pre>
 function fetchData(callback) {
-  setTimeout(() => {
+  setTimeout(() =&gt; {
     let data = 'Some data';
     callback(data);
   },2000);
@@ -9368,7 +9368,7 @@ fetchData(processData);  // Output after 2 seconds : 'Data received : Some data'
 <h4>Asynchronous Example:</h4>
 <pre>
 console.log('Start');
-setTimeout(() => {
+setTimeout(() =&gt; {
   console.log('Inside setTimeout');
 }, 2000);
 console.log('End');
@@ -9384,12 +9384,12 @@ resolve or reject in the future.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Promise:</h4>
 <pre>
-let myPromise = new Promise((resolve, reject) => {
-  setTimeout (() => {
+let myPromise = new Promise((resolve, reject) =&gt; {
+  setTimeout (() =&gt; {
     resolve('Promise resolved');
   }, 2000);
 });
-myPromise.then((result) => {
+myPromise.then((result) =&gt; {
   console.log(result);  // Output after 2 seconds : 'Promise resolved'
 });
 </pre>
@@ -9404,8 +9404,8 @@ using promises.</p>
 <h4>Using Async / Await:</h4>
 <pre>
 async function fetchData() {
-  return new Promise((resolve) => {
-    setTimeout(() => {
+  return new Promise((resolve) =&gt; {
+    setTimeout(() =&gt; {
       resolve('Data fetched');
     }, 2000);
   });
@@ -9769,7 +9769,7 @@ setTimeout(() =&gt; {
 </pre>
 <h4>Using setInterval():</h4>
 <pre>
-setInterval(() => {
+setInterval(() =&gt; {
   console.log("Repeated message");
 }, 3000);  // Execute every 3 seconds
 </pre>
@@ -9800,7 +9800,7 @@ various functionalities of the browser or device.</p>
 <pre>
 // Example: Using the Geolocation API
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition((position) => {
+  navigator.geolocation.getCurrentPosition((position) =&gt; {
     console.log("Latitude:", position.coords.latitude);
     console.log("Longitude:", position.coords.longitude);
   });
@@ -9861,9 +9861,9 @@ worker.postMessage("Message from main");
 <h4>Making a GET Request:</h4>
 <pre>
 fetch("https://api.example.com/data")
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((error) => console.log("Error, error));
+  .then((response) =&gt; response.json())
+  .then((data) =&gt; console.log(data))
+  .catch((error) =&gt; console.log("Error, error));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Geolocation API</h3>
@@ -9871,7 +9871,7 @@ fetch("https://api.example.com/data")
 <p>The Geolocation API retrieves geographical information about the user&apos;s device.</p>
 <h4>Getting User&apos;s Location:</h4>
 <pre>
-navigator.geolocation.getCurrentPosition ((position) => {
+navigator.geolocation.getCurrentPosition ((position) =&gt; {
   console.log("Latitude:", position.coords.latitude);
   console.log("Longitude:", position.coords.longitude);
 });
@@ -10060,7 +10060,7 @@ xhttp.send();
 <h4>Real-time Chat Application:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-setInterval(() => {
+setInterval(() =&gt; {
   // Fetch new messages and update chat interface
 },5000);
 </pre>
@@ -10734,7 +10734,7 @@ functions respectively, to convert data to and from JSON format.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 // Encoding PHP array to JSON
-$data = array("name " => " Peter ", " age " => 28 );
+$data = array("name " =&gt; " Peter ", " age " =&gt; 28 );
 $jsonData = json.encode($data);
 
 // Decoding JSON to PHP array
@@ -10848,9 +10848,9 @@ console.log(jsonObject.name);  // Output: Alice
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch('data.json')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error('Error:', error));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>08. Displaying JSON Data Dynamically in HTML:</h4>
@@ -10869,7 +10869,7 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
   let formData = new FormData(form);
   let jsonObject = {};
-  formData.forEach((value, key) => {
+  formData.forEach((value, key) =&gt; {
     jsonObject&lbrack;key&rbrack; = value;
   });
   console.log(jsonObject);
@@ -10900,7 +10900,7 @@ let employees = &lbrack;
   {"name": "Alice", "department":" IT "},
   {"name": "Bob", "department":" HR"}
 &rbrack;;
-let hrEmployees = employees.filter(employee => employee.department === "HR");
+let hrEmployees = employees.filter(employee =&gt; employee.department === "HR");
 
 console.log(hrEmployees);  // Output: &lbrack;{"name": "John", "department": "HR"}, {"name": "Bob", "department": "HR"}&rbrack;
 </pre>
@@ -10971,8 +10971,8 @@ console.log(jsonString);  // Output: {"name":"Joe", "birthday":"1990-01-15T00:00
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 axios.get('https://api.example.com/data')
-  .then(response => console.log(response.data))
-  .catch(error => console.error('Error:', error));
+  .then(response =&gt; console.log(response.data))
+  .catch(error =&gt; console.error('Error:', error));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>19. Merging JSON Objects:</h4>
@@ -10992,7 +10992,7 @@ let data = &lbrack;
   {"id": 2, "name":"Item2"},
   {"id": 3, "name":"Item3"}
 &rbrack;;
-let mappedData = data.map(item => ({itemId: item.id, itemName: item.name}));
+let mappedData = data.map(item =&gt; ({itemId: item.id, itemName: item.name}));
 console.log(mappedData);
 // Output: &lbrack;{"itemId": 1, "itemName":" Item1"}, {"itemId": 2, "itemName":"Item2"}, {"itemId": 3, "itemName":"Item3"} &rbrack;
 </pre>
@@ -11895,7 +11895,7 @@ let products = &lbrack;
   {name: 'Phone', price: 600},
   {name: 'Tablet', price: 300}
 &rbrack;;
-products.sort((a, b) => a.price - b.price);
+products.sort((a, b) =&gt; a.price - b.price);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Functions:</h4>
@@ -11904,7 +11904,7 @@ products.sort((a, b) => a.price - b.price);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = &lbrack;1, 2, 3&rbrack;;
-let doubled = numbers.map(num => num * 2);  // Output: &lbrack;2, 4, 6&rbrack;
+let doubled = numbers.map(num =&gt; num * 2);  // Output: &lbrack;2, 4, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Immediately Invoked Function Expression (IIFE):</h4>
@@ -11984,14 +11984,14 @@ try {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
-  return new Promise ((resolve, reject) => {
+  return new Promise ((resolve, reject) =&gt; {
     // Simulate fetching data
-    setTimeout(() => {
+    setTimeout(() =&gt; {
       resolve(’Data fetched successfully');
     }, 2000);
   });
 };
-fetchData().then(data => console.log(data));
+fetchData().then(data =&gt; console.log(data));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Async / Await Example:</h4>
@@ -12002,7 +12002,7 @@ async function fetchData() {
   let jsonData = await data, json();
   return jsonData;
 }
-fetchData().then(data => console.log(data));
+fetchData().then(data =&gt; console.log(data));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>DOM Manipulation:</h4>
@@ -12019,7 +12019,7 @@ document.body.appendchild(newElement);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let button = document.getElementById('myButton');
-button.addEventListener('click', () => {
+button.addEventListener('click', () =&gt; {
   console.log('Button clicked!');
 });
 </pre>
@@ -12074,14 +12074,14 @@ let product = multiplyByTwo(5);  // Output: 10
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
-let sum = numbers.reduce((acc, curr) => acc + curr, 0);  // Output: 15
+let sum = numbers.reduce((acc, curr) =&gt; acc + curr, 0);  // Output: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Filter and Map Together:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
-let filteredAndDoubled = numbers.filter(num => num % 2 === 0).map(num => num * 2); 
+let filteredAndDoubled = numbers.filter(num =&gt; num % 2 === 0).map(num =&gt; num * 2); 
 // Output: &lbrack;4, 8&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12127,26 +12127,26 @@ for (let value of iterable ) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function asyncFunction() {
-  return new Promise((resolve, reject) => {
-    setTimeout (() => {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout (() =&gt; {
       resolve ('First part done');
     },1000);
   });
 }
 asyncFunction()
-  .then (result => {
+  .then (result =&gt; {
     console.log(result);
     return 'Second part done';
   })
-  .then (result => console.log(result));
+  .then (result =&gt; console.log(result));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Async / Await with Error Handling</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 function fetchData() {
-  return new Promise((resolve, reject) => {
-    setTimeout (() => {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout (() =&gt; {
       reject ('Failed to fetch data');
     }, 2000);
   });
@@ -12234,13 +12234,13 @@ manipulation, and newer ES6 + features.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
-let evenNumbers = numbers.filter(num => num % 2 === 0);  // Output: &lbrack;2,4&rbrack;
+let evenNumbers = numbers.filter(num =&gt; num % 2 === 0);  // Output: &lbrack;2,4&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Immediately Invoked Arrow Function Expression (IIAFE):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-(()=>{
+(()=&gt;{
   console.log('IIAFE executed.');
 })();
 </pre>
@@ -12251,14 +12251,14 @@ let evenNumbers = numbers.filter(num => num % 2 === 0);  // Output: &lbrack;2,4&
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 letarr =&lbrack;&lbrack;1,2&rbrack;, &lbrack;3,4&rbrack;, &lbrack;5,6&rbrack;&rbrack;;
-let flatArray = arr.flatMap(innerArr => innerArr.map(item => item * 2));  // Output: &lbrack;2,4,6,8,10,12&rbrack;
+let flatArray = arr.flatMap(innerArr =&gt; innerArr.map(item =&gt; item * 2));  // Output: &lbrack;2,4,6,8,10,12&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Reduce to Flatten Arrays:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let nestedArrays =&lbrack;&lbrack;1,2&rbrack;, &lbrack;3,4&rbrack;, &lbrack;5,6&rbrack;&rbrack;;
-let flattenedArray = nestedArrays.reduce((acc, curr) => acc.concat(curr), &lbrack;&rbrack;);  // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
+let flattenedArray = nestedArrays.reduce((acc, curr) =&gt; acc.concat(curr), &lbrack;&rbrack;);  // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -12293,8 +12293,8 @@ let city = user?.address?.city;  // Output: 'New York'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 async function asyncOperation(value) {
-  return new Promise(resolve => {
-  setTimeout(() => {
+  return new Promise(resolve =&gt; {
+  setTimeout(() =&gt; {
     console.log(value );
     resolve();
   1,1000);
@@ -12309,7 +12309,7 @@ executeAsyncOperations();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Using Array.from with Mapping:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<pre>let newArray = Array.from ({length: 5}, (index) => index * 2 );  // Output: &lbrack; 0, 2, 4, 6, 8 &rbrack;</pre>
+<pre>let newArray = Array.from ({length: 5}, (index) =&gt; index * 2 );  // Output: &lbrack; 0, 2, 4, 6, 8 &rbrack;</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Error Handling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12388,7 +12388,7 @@ let users = &lbrack;
   {id: 2, name: 'Bob'},
   {id: 3, name: 'Charlie'}
 &rbrack;;
-let user = users.find(user => user.id === 2);  // Output: {id: 2, name: 'Bob'}
+let user = users.find(user =&gt; user.id === 2);  // Output: {id: 2, name: 'Bob'}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Functionality:</h4>
@@ -12411,9 +12411,9 @@ console.log(generator.next().value);  // Output: 2
 <pre>
 async function * asyncGenerator() {
   yield 'First';
-  await new Promise (resolve => setTimeout(resolve, 1000));
+  await new Promise (resolve =&gt; setTimeout(resolve, 1000));
   yield ’Second';
-  (async() => {
+  (async() =&gt; {
     for await(let item of asyncGenerator()) {
       console.log(item);  // Output: 'First' after 0ms, 'Second' after 1000ms
     }
@@ -12427,7 +12427,7 @@ async function * asyncGenerator() {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 Promise.reject('Error message')
-  .catch(error => console.error('Caught error:', error));
+  .catch(error =&gt; console.error('Caught error:', error));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Handling Multiple Promises with Promise.all:</h4>
@@ -12436,7 +12436,7 @@ Promise.reject('Error message')
 let promise1 = Promise.resolve('First');
 let promise2 = Promise.resolve('Second');
 Promise.all(&lbrack;promise1, promise2&rbrack;)
-  .then(values => console.log(values)); || Output: &lbrack;'First', 'Second'&rbrack;
+  .then(values =&gt; console.log(values)); || Output: &lbrack;'First', 'Second'&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -12495,9 +12495,9 @@ const memoizedFactorial = memoize(factorial);
 <h4>2. Function Composition:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const add = x => x + 5;
-const multiply = x => x * 2;
-const compose = (... fns) => x => fns.reduceRight((acc, fn) => fn (acc), x);
+const add = x =&gt; x + 5;
+const multiply = x =&gt; x * 2;
+const compose = (... fns) =&gt; x =&gt; fns.reduceRight((acc, fn) =&gt; fn (acc), x);
 const addAndMultiply = compose(multiply, add);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -12514,8 +12514,8 @@ let flattenedArr = nestedArr.flat(Infinity);  // Output: &lbrack;1, 2, 3, 4, 5, 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 let numbers = &lbrack;2, 4, 6, 7, 8&rbrack;;
-let allEven = numbers.every(num => num % 2 === 0);  // Output: false
-let hasOdd = numbers.some(num => num % 2 !== 0);  // Output: true
+let allEven = numbers.every(num =&gt; num % 2 === 0);  // Output: false
+let hasOdd = numbers.some(num =&gt; num % 2 !== 0);  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -12542,7 +12542,7 @@ const descriptors = Object.getOwnPropertyDescriptors (obj);
 function fetchData(url, timeout) {
   return Promise.race(&lbrack;
     fetch(url),
-    new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), timeout))
+    new Promise((_, reject) =&gt; setTimeout(() =&gt; reject(new Error('Timeout')), timeout))
   &rbrack;);
 }
 </pre>
@@ -12607,7 +12607,7 @@ console.log(boundGetX());  // Output: 42
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const immediatePromise = Promise.resolve('Immediate resolution');
-immediatePromise.then(result => console.log(result));  // Output: 'Immediate resolution'
+immediatePromise.then(result =&gt; console.log(result));  // Output: 'Immediate resolution'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
@@ -12616,7 +12616,7 @@ immediatePromise.then(result => console.log(result));  // Output: 'Immediate res
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = &lbrack;5,12,8,130,44&rbrack;;
-const index = array.findIndex(element => element > 10);  // Output: 1 (index of first element > 10)
+const index = array.findIndex(element =&gt; element > 10);  // Output: 1 (index of first element > 10)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.fill:</h4>
@@ -12651,10 +12651,10 @@ obj.newProp = 10;  // Cannot add new properties to obj
 const promises = &lbrack;
   Promise.resolve('Resolved'),
   Promise.reject('Rejected'),
-  new Promise (resolve => setTimeout(() => resolve('Resolved after timeout'), 1000))
+  new Promise (resolve =&gt; setTimeout(() =&gt; resolve('Resolved after timeout'), 1000))
 &rbrack;;
 Promise.allSettled(promises)
-  .then(results => console.log(results));
+  .then(results =&gt; console.log(results));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Rejected Promise:</h4>
@@ -12663,7 +12663,7 @@ Promise.allSettled(promises)
 async function throwError() {
   throw new Error('Error thrown from async function');
 }
-throwError().catch(error => console.error(error.message));  // Output: 'Error thrown from async function'
+throwError().catch(error =&gt; console.error(error.message));  // Output: 'Error thrown from async function'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -12679,8 +12679,8 @@ const binary = Ob1010_0001;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 Promise.resolve('Success')
-  .finally(() => console.log('Finally block executed'))
-  .then(result => console.log(result));  // Output: 'Success'
+  .finally(() =&gt; console.log('Finally block executed'))
+  .then(result =&gt; console.log(result));  // Output: 'Success'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets showcase more advanced function operations, array 
@@ -12692,14 +12692,14 @@ features like numeric separators and Promise.finally method.</p>
 <h4>1. Function Caching using Memoization:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const memoize = (fn) => {
+const memoize = (fn) =&gt; {
   const cache = {};
-  return (... args) => {
+  return (... args) =&gt; {
     const stringifiedArgs = JSON.stringify(args);
     return cache&lbrack;stringifiedArgs&rbrack; || (cache&lbrack;stringifiedArgs&rbrack; = fn(... args ));
   };
 };<br>
-const sum = (a, b) => {
+const sum = (a, b) =&gt; {
   console.log('Calculating sum ...');
   return a + b;
 };<br>
@@ -12711,7 +12711,7 @@ console.log(memoizedSum(2, 3 ));  // Output: 5 ( Retrieved from cache )
 <h4>2. Function Throttling:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const throttle = (func, limit) => {
+const throttle = (func, limit) =&gt; {
   let inThrottle;
   return function() {
     const args = arguments;
@@ -12719,7 +12719,7 @@ const throttle = (func, limit) => {
     if (!inThrottle) {
       func.apply(context, args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() =&gt; inThrottle = false, limit);
     }
   };
 };<br>
@@ -12735,14 +12735,14 @@ const throttled = throttle(throttledFunc, 3000);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = &lbrack;1, 2, 3, 4, 5, 6&rbrack;;
-const new Array = Array.from(numbers, x => x * 2 ).filter (x => x > 5);  // Output: &lbrack;6, 8, 10, 12&rbrack;
+const new Array = Array.from(numbers, x =&gt; x * 2 ).filter (x =&gt; x > 5);  // Output: &lbrack;6, 8, 10, 12&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.reduceRight:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = &lbrack;1, 2, 3, 4&rbrack;;
-const sum = array.reduceRight((acc, curr) => acc + curr, 0);  // Output: 10
+const sum = array.reduceRight((acc, curr) =&gt; acc + curr, 0);  // Output: 10
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -12776,7 +12776,7 @@ const promises = &lbrack;
   Promise.resolve('Resolved3')
 &rbrack;;
 Promise.any(promises)
-  .then(result => console.log(result));  // Output: 'Resolved2'
+  .then(result =&gt; console.log(result));  // Output: 'Resolved2'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Using for ... await... of:</h4>
@@ -12816,7 +12816,7 @@ features like dynamic import and nullish coalescing operator.</p>
 <h4>1. Partial Application of Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const multiply = (a, b) => a * b;
+const multiply = (a, b) =&gt; a * b;
 const partialMultiplyByTwo = multiply.bind(null, 2);
 console.log(partialMultiplyByTwo(5));  // Output: 10
 </pre>
@@ -12824,13 +12824,13 @@ console.log(partialMultiplyByTwo(5));  // Output: 10
 <h4>2. Debouncing Function:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const debounce = (func, delay) => {
+const debounce = (func, delay) =&gt; {
   let timeout;
   return function() {
     const context = this;
     const args = arguments;
     clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(context, args), delay);
+    timeout = setTimeout(() =&gt; func.apply(context, args), delay);
   };
 };<br>
 function handleInput() {
@@ -12861,7 +12861,7 @@ const clonedArray = originalArray.slice();  // Clones the originalArray
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 constobj = {a: l,b: 2,c: 3};
-const mappedObj = Object.fromEntries(Object.keys(obj).map(key => &lbrack;key, obj&lbrack;key&rbrack; * 2&rbrack;));
+const mappedObj = Object.fromEntries(Object.keys(obj).map(key =&gt; &lbrack;key, obj&lbrack;key&rbrack; * 2&rbrack;));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Object.is for Strict Equality Comparison:</h4>
@@ -12889,10 +12889,10 @@ const results = await Promise.allSettled(promises);
 <pre>
 async function * asyncGenerator() {
   yield 'First';
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  await new Promise(resolve =&gt; setTimeout(resolve, 1000));
   yield 'Second';
 }
-(async() => {
+(async() =&gt; {
   for await (let item of asyncGenerator()) {
     console.log(item);  // Output: 'First' after 0ms, 'Second' after 1000ms
   }
@@ -12924,7 +12924,7 @@ features like optional chaining and BigInt.</p>
 <h4>1. Currying Function:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const multiply = (a) => (b) => a * b;
+const multiply = (a) =&gt; (b) =&gt; a * b;
 const multiplyByTwo = multiply(2);
 console.log(multiplyByTwo(5));  // Output: 10
 </pre>
@@ -12932,14 +12932,14 @@ console.log(multiplyByTwo(5));  // Output: 10
 <h4>2. Function Memoization Using Closures:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const memoize = (func) => {
+const memoize = (func) =&gt; {
   const cache = {};
-  return(... args) => {
+  return(... args) =&gt; {
     const stringifiedArgs = JSON.stringify(args);
     return cache&lbrack;stringifiedArgs&rbrack; || (cache&lbrack;stringifiedArgs&rbrack; = func(... args));
   };
 };<br>
-const sum = (a, b) => {
+const sum = (a, b) =&gt; {
   console.log('Calculating sum ...');
   return a + b;
 };<br>
@@ -12954,14 +12954,14 @@ console.log(memoizedSum(2, 3));  // Output: 5 (Retrieved from cache)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const array = &lbrack;1, 2, 3, 4, 5&rbrack;;
-const sum = array.reduce((acc, curr) => acc + curr, 0);  // Output: 15
+const sum = array.reduce((acc, curr) =&gt; acc + curr, 0);  // Output: 15
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array.findIndex with Custom Predicate:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = &lbrack;10, 20, 30, 40, 50&rbrack;;
-const index = numbers.findIndex(num => num > 25);  // Output: 2 (Index of first element > 25)
+const index = numbers.findIndex(num =&gt; num > 25);  // Output: 2 (Index of first element > 25)
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -12989,8 +12989,8 @@ obj.prop = 'newValue';  // Assignment not allowed in a frozen object
 <pre>
 const resolvedPromise = Promise.resolve('Resolved');
 const rejectedPromise = Promise.reject('Rejected');
-resolvedPromise.then(result => console.log(result));  // Output: 'Resolved'
-rejectedPromise.catch(error => console.error(error));  // Output: 'Rejected'
+resolvedPromise.then(result =&gt; console.log(result));  // Output: 'Resolved'
+rejectedPromise.catch(error =&gt; console.error(error));  // Output: 'Rejected'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function Returning Resolved Promise:</h4>
@@ -12998,7 +12998,7 @@ rejectedPromise.catch(error => console.error(error));  // Output: 'Rejected'
 <pre>
 async function returnResolved() {
   return 'Resolved from async function';
-  returnResolved().then(result => console.log(result));  // Output: 'Resolved from async function'
+  returnResolved().then(result =&gt; console.log(result));  // Output: 'Resolved from async function'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>ES6 + Features:</h4>
@@ -13024,9 +13024,9 @@ manipulations, object methods, promises and async / await functionalities.</p>
 <h4>1. Function Composition with Multiple Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const add = (x, y) => x + y;
-const multiply = (x, y) => x * y;
-const compose = (... funcs) => funcs.reduce((f, g) => (... args) => f(g(... args)));
+const add = (x, y) =&gt; x + y;
+const multiply = (x, y) =&gt; x * y;
+const compose = (... funcs) =&gt; funcs.reduce((f, g) =&gt; (... args) =&gt; f(g(... args)));
 const addAndMultiply = compose(multiply, add);
 console.log(addAndMultiply(3, 4));  // Output :21(3+4*3)
 </pre>
@@ -13047,7 +13047,7 @@ console.log(functionsource);  // Output:" function greet() {console.log('Hello!'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const arr = &lbrack;1, 2, 3&rbrack;;
-const mappedAndFlattened = arr.flatMap(x => &lbrack;x * 2, x * 3&rbrack;);
+const mappedAndFlattened = arr.flatMap(x =&gt; &lbrack;x * 2, x * 3&rbrack;);
 console.log(mappedAndFlattened);  // Output: &lbrack;2, 3, 4, 6, 6, 9&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13055,7 +13055,7 @@ console.log(mappedAndFlattened);  // Output: &lbrack;2, 3, 4, 6, 6, 9&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = &lbrack;5, 10, 15, 20&rbrack;;
-const isEvenPresent = numbers.some(num => num % 2 === 0);  // Output: true
+const isEvenPresent = numbers.some(num =&gt; num % 2 === 0);  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Object Manipulation:</h4>
@@ -13085,9 +13085,9 @@ newObj.greet();  // Output: 'Greetings!'
 <h4>7. Promise.race to Get Fastest Resolved Promise:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const promise1 = new Promise((resolve) => setTimeout(resolve, 1000, 'First'));
-const promise2 = new Promise((resolve) => setTimeout(resolve, 500, 'Second'));<br>
-Promise.race(&lbrack;promise1, promise2&rbrack;).then((value) => {
+const promise1 = new Promise((resolve) =&gt; setTimeout(resolve, 1000, 'First'));
+const promise2 = new Promise((resolve) =&gt; setTimeout(resolve, 500, 'Second'));<br>
+Promise.race(&lbrack;promise1, promise2&rbrack;).then((value) =&gt; {
   console.log(value);  // Output: 'Second' (Resolved earlier)
 });
 </pre>
@@ -13133,7 +13133,7 @@ features like template literals and array spread operator.</p>
 <h4>1. Function Returning Functions - Higher-Order Functions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const add = (x) => (y) => x + y;
+const add = (x) =&gt; (y) =&gt; x + y;
 const addTwo = add(2);
 console.log(addTwo(3));  // Output: 5
 </pre>
@@ -13141,12 +13141,12 @@ console.log(addTwo(3));  // Output: 5
 <h4>2. Function That Delays Execution:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const delayExecution = (time) => {
-  return new Promise ((resolve) => {
+const delayExecution = (time) =&gt; {
+  return new Promise ((resolve) =&gt; {
     setTimeout (resolve, time );
   });
 };<br>
-delayExecution(2000).then(() => console.log('Delayed execution'));  // Output after 2 seconds
+delayExecution(2000).then(() =&gt; console.log('Delayed execution'));  // Output after 2 seconds
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Advanced Array Manipulation:</h4>
@@ -13155,7 +13155,7 @@ delayExecution(2000).then(() => console.log('Delayed execution'));  // Output af
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = &lbrack;10, 20, 30&rbrack;;
-const allGreaterThanFive = numbers.every(num => num > 5);  // Output: true
+const allGreaterThanFive = numbers.every(num =&gt; num > 5);  // Output: true
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Using Array.reverse to Reverse an Array:</h4>
@@ -13187,7 +13187,7 @@ const mergedObj = Object.assign({}, objl, obj2);  // Output: {a: l,b: 3,c: 4}
 <h4>7. Promise.resolve with Then Method:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-Promise.resolve('Resolved value').then(value => console.log(value));  // Output: 'Resolved value'
+Promise.resolve('Resolved value').then(value =&gt; console.log(value));  // Output: 'Resolved value'
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Async Function with Promise.all for Parallel Execution:</h4>
@@ -13195,8 +13195,8 @@ Promise.resolve('Resolved value').then(value => console.log(value));  // Output:
 <pre>
 async function fetchData() {
   const &lbrack;data1, data2&rbrack; = await Promise.all(&lbrack;
-    fetch('https://api.example.com/data1').then(res => res.json()),
-    fetch('https://api.example.com/data2').then(res => res.json())
+    fetch('https://api.example.com/data1').then(res =&gt; res.json()),
+    fetch('https://api.example.com/data2').then(res =&gt; res.json())
   &rbrack;);
   console.log(data1, data2);
 }
@@ -13222,7 +13222,7 @@ const users = &lbrack;
   {id: 2, name: 'Bob'},
   {id: 3, name: 'Charlie'}
 &rbrack;;
-const user = users.find(user => user.id === 2);  // Output: {id: 2, name: 'Bob'}
+const user = users.find(user =&gt; user.id === 2);  // Output: {id: 2, name: 'Bob'}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets explore advanced function operations, array 
@@ -13298,7 +13298,7 @@ Object.defineProperty(obj, 'prop', {
 <pre>
 const promise1 = Promise.resolve('Resolved1');
 const promise2 = Promise.resolve('Resolved2');
-Promise.all(&lbrack;promise1, promise2&rbrack;).then (values => {
+Promise.all(&lbrack;promise1, promise2&rbrack;).then (values =&gt; {
   console.log(values);  // Output: &lbrack;'Resolved1', 'Resolved2'&rbrack;
 });
 </pre>
@@ -13330,7 +13330,7 @@ console.log(name, age);  // Output: 'Alice' 30
 <h4>10. Arrow Functions for Concise Function Definitions:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-const sum = (a, b) => a + b;
+const sum = (a, b) =&gt; a + b;
 console.log(sum(2,3));  // Output: 5
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13365,7 +13365,7 @@ console.log(sum, product, division);  // Output: 15 50 2
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
-const doubledNumbers = numbers.map(num => num * 2);  // Output: &lbrack;2, 4, 6, 8, 10&rbrack;
+const doubledNumbers = numbers.map(num =&gt; num * 2);  // Output: &lbrack;2, 4, 6, 8, 10&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Array. find() to Get First Matching Element:</h4>
@@ -13376,7 +13376,7 @@ const users = &lbrack;
   {id: 2, name: 'Bob'},
   {id: 3, name: 'Charlie'}
 &rbrack;;
-const user = users.find(user => user.id === 2);
+const user = users.find(user =&gt; user.id === 2);
 console.log(user);  // Output: {id: 2, name: 'Bob'}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13404,8 +13404,8 @@ const values = Object.values(obj);  // Output: &lbrack;1, 2, 3&rbrack;
 <pre>
 async function fetchData() {
   return fetch ('https://api.example.com/data')
-    .then (response => response.json())
-    .catch (error => console.error('Error fetching data:', error));
+    .then (response =&gt; response.json())
+    .catch (error =&gt; console.error('Error fetching data:', error));
 }
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -13436,8 +13436,8 @@ const userEmail = user?.profile?.email;  // Output: 'user@example.com'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 fetch ('https://api.example.com/data')
-  .then(response => response.json())
-  .finally(() => console.log('Data fetching completed'));  // Runs irrespective of resolution/rejection
+  .then(response =&gt; response.json())
+  .finally(() =&gt; console.log('Data fetching completed'));  // Runs irrespective of resolution/rejection
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>These JavaScript code snippets explore advanced function operations, array 
@@ -13462,7 +13462,7 @@ container.appendchild(paragraph);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const button = document.getElementById('myButton');
-button.addEventListener('click', () => {
+button.addEventListener('click', () =&gt; {
   console.log('Button clicked');
 });
 </pre>
@@ -13474,7 +13474,7 @@ button.addEventListener('click', () => {
 <pre>
 // Select all elements with class 'box' and change their background color
 const boxes = document.querySelectorAll('.box');
-  boxes.forEach(box => {
+  boxes.forEach(box =&gt; {
     box.style.backgroundColor = 'lightblue';
 });
 </pre>
@@ -13493,7 +13493,7 @@ if (elementToRemove) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const list = document.getElementById('myList');
-list.addEventListener('click', (event) => {
+list.addEventListener('click', (event) =&gt; {
   if (event.target.tagName === 'li') {
     console.log(`Clicked on list item: ${event.target.textContent}`);
   }
@@ -13506,7 +13506,7 @@ list.addEventListener('click', (event) => {
 const customEvent = new CustomEvent('customEventName', {detail: 'Some data'});
 document.dispatchEvent(customEvent);
 // Listening for the custom event
-document.addEventListener('customEventName', (event) => {
+document.addEventListener('customEventName', (event) =&gt; {
 console.log(`Custom event triggered with data: ${event.detail}`);
 });
 </pre>
@@ -13524,7 +13524,7 @@ element.innerHTML = '&lt;strong&gt;New HTML content&lt;/strong&gt;';
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const form = document.getElementById('myForm');
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) =&gt; {
   event.preventDefault();
   const formData = new FormData(event.target);
   const value = formData.get('inputFieldName');
@@ -13543,7 +13543,7 @@ interactions, and custom event creation.</p>
 const inputField = document.getElementById('textInput');
 const charCount = document.getElementById('charCount');
 
-inputField.addEventListener ('input', () => {
+inputField.addEventListener ('input', () =&gt; {
   charCount.textContent = `Character count: ${inputField.value.length}`;
 });
 </pre>
@@ -13553,7 +13553,7 @@ inputField.addEventListener ('input', () => {
 <pre>
 const inputField = document. getElementById ('textinput');
 
-inputField.addEventListener ('change', (event) => {
+inputField.addEventListener ('change', (event) =&gt; {
   console.log(`Input value changed to: ${event.target.value}`);
 });
 </pre>
@@ -13565,7 +13565,7 @@ inputField.addEventListener ('change', (event) => {
 <pre>
 const passwordField = document.getElementById('password');
 const strengthIndicator = document.getElementById('passwordStrength');
-passwordField.addEventListener ('input', () => {
+passwordField.addEventListener ('input', () =&gt; {
   const password = passwordField.value;
   let strength = '';
   // Perform password strength checks
@@ -13581,7 +13581,7 @@ passwordField.addEventListener ('input', () => {
 const form = document.getElementById('myForm');
 const emailField = document.getElementById('email');
 
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) =&gt; {
   event.preventDefault();<br>
   // Validate the email input before submission
   if (!validateEmail(emailField.value)) {
@@ -13605,7 +13605,7 @@ function validateEmail(email) {
 <pre>
 const rangeInput = document.getElementById('rangeSlider');
 const valueDisplay = document.getElementById('rangeValue');<br>
-rangeinput.addEventListener('input', () => {
+rangeinput.addEventListener('input', () =&gt; {
   valueDisplay.textcontent = `Value: ${rangeinput.value}`;
   // Update UI based on range input value changes
 });
@@ -13617,7 +13617,7 @@ rangeinput.addEventListener('input', () => {
 //const phoneInput = document.getElementById('phoneNumber');
 const phoneInput = document.getElementById('4253192332');
 
-phoneInput.addEventListener('input', () => {
+phoneInput.addEventListener('input', () =&gt; {
   let value = phoneInput.value.replace(/\D/g,'');
   value = value.slice(0, 10);  // Limit to 10 digits for a phone number
   phoneInput.value = value;
@@ -13691,11 +13691,11 @@ element.classList.remove('oldClass');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const element = document.getElementById('myElement');
-element.addEventListener('mouseenter', () => {
+element.addEventListener('mouseenter', () =&gt; {
   element.style.backgroundColor = 'red';
 });
 
-element.addEventListener('mouseleave', () => {
+element.addEventListener('mouseleave', () =&gt; {
   element.style.backgroundColor = 'blue';
 });
 </pre>
@@ -13733,7 +13733,7 @@ event handling, and content manipulation.</p>
 <h4>1. Keyboard Event Handling - Key Press:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document.addEventListener('keypress', (event) => {
+document.addEventListener('keypress', (event) =&gt; {
   console.log(`Key pressed: ${event.key}`);
 });
 </pre>
@@ -13743,11 +13743,11 @@ document.addEventListener('keypress', (event) => {
 <pre>
 const inputField = document.getElementById('mylnput');
 
-inputField.addEventListener('focus', () => {
+inputField.addEventListener('focus', () =&gt; {
   console.log('Input field focused');
 });
 
-inputField.addEventListener('blur', () => {
+inputField.addEventListener('blur', () =&gt; {
   console.log('Input field blurred');
 });
 </pre>
@@ -13758,7 +13758,7 @@ inputField.addEventListener('blur', () => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const list = document.getElementById('myList');<br>
-list.addEventListener('click', (event) => {
+list.addEventListener('click', (event) =&gt; {
   if (event.target.tagName === 'li') {
     console.log(`Clicked on list item: ${event.target.textContent}`);
 });
@@ -13769,7 +13769,7 @@ list.addEventListener('click', (event) => {
 <pre>
 const parent = document.getElementById('parentElement');
 
-parent.addEventListener('click', (event) => {
+parent.addEventListener('click', (event) =&gt; {
   console.log('Clicked on parent element');
 });
 </pre>
@@ -13779,7 +13779,7 @@ parent.addEventListener('click', (event) => {
 <h4>5. Window Load Event:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-window.addEventListener ('load', () => {
+window.addEventListener ('load', () =&gt; {
   console.log('Page fully loaded');
 });
 </pre>
@@ -13787,7 +13787,7 @@ window.addEventListener ('load', () => {
 <h4>6. Document Ready Event ( DOMContentLoaded):</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () =&gt; {
   console.log('DOM fully loaded and parsed');
 });
 </pre>
@@ -13798,7 +13798,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const form = document.getElementById('myForm');<br>
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) =&gt; {
   event.preventDefault();
   console.log('Form submitted');
   // Perform form data handling or validation
@@ -13809,7 +13809,7 @@ form.addEventListener('submit', (event) => {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const emailField = document.getElementById('email');<br>
-emailField.addEventListener('input', () => {
+emailField.addEventListener('input', () =&gt; {
   if (!emailField.validity.valid) {
     emailField.setCustomValidity('Enter a valid email address');
   } else {
@@ -13829,7 +13829,7 @@ form - related events for submission and input validation.</p>
 <pre>
 const openWindowButton = document.getElementById('openWindowButton');
 
-openWindowButton.addEventListener('click', () => {
+openWindowButton.addEventListener('click', () =&gt; {
   window.open('https://example.com', '_blank', 'width = 500,height = 500');
 });
 </pre>
@@ -13839,7 +13839,7 @@ openWindowButton.addEventListener('click', () => {
 <pre>
 const closeWindowButton = document.getElementById('closeWindowButton');
 
-closeWindowButton.addEventListener('click', () => {
+closeWindowButton.addEventListener('click', () =&gt; {
   window.close();
 });
 </pre>
@@ -13898,7 +13898,7 @@ console.log(`Screen height: ${window.screen.height}`);
 <pre>
 const fullScreenButton = document.getElementById('fullScreenButton');
 
-fullScreenButton.addEventListener('click', () => {
+fullScreenButton.addEventListener('click', () =&gt; {
   if (document.fullscreenEnabled) {
     document.documentElement.requestFullscreen();
   }
@@ -15587,7 +15587,7 @@ let arrayl = &lbrack;1, 2, 3,4, 5&rbrack;;
 let array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
 
 // Find the intersection using filter
-let intersection = arrayl.filter(value => array2.includes(value));
+let intersection = arrayl.filter(value =&gt; array2.includes(value));
 
 // Display the result
 console.log("Intersection:", intersection);
@@ -16527,7 +16527,7 @@ function findIntersection(arrl, arr2) {
   const set = new Set(arrl);
 
   // Filter the second array to include only elements present in the set
-  const intersection = arr2.filter(element => set.has(element));
+  const intersection = arr2.filter(element =&gt; set.has(element));
   return intersection;
 }
 // Example usage:
@@ -16603,7 +16603,7 @@ function findMedian(arr) {
     return "Invalid input. Please provide a non-empty array.";
   }
   // Sort the array
-  const sortedArray = arr.slice().sort((a, b) => a - b);
+  const sortedArray = arr.slice().sort((a, b) =&gt; a - b);
   // Calculate the median
   const middleIndex = Math.floor(sortedArray.length / 2);
   if (sortedArray.length % 2 === 0) {
@@ -16728,7 +16728,7 @@ function countWords(sentence) {
   // Use a regular expression to split the sentence into words
   const words = sentence.split(/\s+/);
   // Filter out empty strings
-  const nonEmptyWords = words.filter(word => word.length > 0);
+  const nonEmptyWords = words.filter(word =&gt; word.length > 0);
   // Count the number of words
   const wordCount = nonEmptyWords.length;
   return wordCount;
@@ -16813,7 +16813,7 @@ function isStrongNumber(num) {
   // Convert the number to an array of digits
   const digits = Array.from(String(num), Number);
   // Calculate the factorial of each digit and sum them
-  const digitFactorialSum = digits.reduce((sum, digit) => sum + calculateFactorial(digit), 0);
+  const digitFactorialSum = digits.reduce((sum, digit) =&gt; sum + calculateFactorial(digit), 0);
   // Check if the sum equals the original number
   return digitFactorialSum === num;
 }
@@ -17340,7 +17340,7 @@ function isPrime(num) {
 }
 
 function sumOfDigits(number) {
-  return number.toString().split('').reduce((sum, digit) => sum + parseInt(digit, 10), 0);
+  return number.toString().split('').reduce((sum, digit) =&gt; sum + parseInt(digit, 10), 0);
 }
 
 function primeFactors(number) {
@@ -17356,7 +17356,7 @@ function primeFactors(number) {
 
 function isSmithNumber(number) {
   const originalSum = sumOfDigits(number);
-  const primeFactorSum = primeFactors(number).reduce((sum, factor) => sum + sumOfDigits(factor), 0);
+  const primeFactorSum = primeFactors(number).reduce((sum, factor) =&gt; sum + sumOfDigits(factor), 0);
 
   return originalSum === primeFactorSum;
 }
@@ -17453,7 +17453,7 @@ the starting point to the exit.</p>
 function solveMaze(maze) {
   const rows = maze.length;
   const cols = maze&lbrack;O&rbrack;.length;
-  const visited = Array.from({length: rows}, () => Array(cols).fill(false));
+  const visited = Array.from({length: rows}, () =&gt; Array(cols).fill(false));
 
   function isSafe(row, col) {
     return row &gt;= 0 && row &lt; rows && col &gt;= 0 && col &lt; cols && maze&lbrack;row&rbrack;&lbrack;col&rbrack; === 1 && !visited&lbrack;row&rbrack;&lbrack;col&rbrack;;
@@ -17620,7 +17620,7 @@ const sudokuBoard = &lbrack;
 
 if (solveSudoku(sudokuBoard)) {
   console.log('Sudoku solved successfully:');
-  console.log(sudokuBoard.map(row => row.join('')).join('\n'));
+  console.log(sudokuBoard.map(row =&gt; row.join('')).join('\n'));
 } else {
   console.log('No solution exists for the given Sudoku puzzle.');
 }
@@ -17778,7 +17778,7 @@ function calculateLuhnCheckDigit(input) {
       digitslbrack;i&rbrack; = doubledDigit;
   }
   // Calculate the sum of all digits
-  const sum = digits.reduce((acc, digit) => acc + digit, 0);
+  const sum = digits.reduce((acc, digit) =&gt; acc + digit, 0);
   // Find the smallest number (x) such that (sum + x) is a multiple of 10
   const checkDigit = (10 - (sum % 10)) % 10;
   return checkDigit;
@@ -17803,7 +17803,7 @@ class MazeGenerator {
   constructor(rows, cols) {
     this.rows = rows;
     this.cols = cols;
-    this.grid = Array.from({ length: rows },()=> Array(cols).fill(0));
+    this.grid = Array.from({ length: rows },()=&gt; Array(cols).fill(0));
   }
   generateMaze() {
     this.visitCell(0,0);
@@ -17820,7 +17820,7 @@ class MazeGenerator {
     &rbrack;;
 
     // Shuffle the directions randomly
-    directions.sort(() => Math.random() - 0.5);
+    directions.sort(() =&gt; Math.random() - 0.5);
     for (const &lbrack;dr, de&rbrack; of directions) {
       const newRow = row + dr;
       const newCol = col + de;
@@ -17836,7 +17836,7 @@ class MazeGenerator {
 
   printMaze() {
     for (const row of this.grid) {
-      console.log(row.map(cell => (cell === 1 ? '': '#')).join(''));
+      console.log(row.map(cell =&gt; (cell === 1 ? '': '#')).join(''));
     }
   }
 }
@@ -18191,7 +18191,7 @@ function getDigitPairs(strNumber) {
     for (let j = 0;j &lt; length; j++) {
       if (i !== j){
         const pairl = parse!nt(strNumber&lbrack;i&rbrack; + strNumber&lbrack;j&rbrack;, 10);
-        const pair2 = parseInt(strNumber.split(").filter((_, index) => index !== i && index !== j).join("), 10);
+        const pair2 = parseInt(strNumber.split(").filter((_, index) =&gt; index !== i && index !== j).join("), 10);
         pairs.push(&lbrack;pairl, pair 2&rbrack;);
       }
     }
@@ -18333,7 +18333,7 @@ class MinesweeperGame {
     this.gameOver = false;
   }
   createBoard() {
-    const board = Array.from({ length: this.rows },()=> Array(this.cols).fill(0));
+    const board = Array.from({ length: this.rows },()=&gt; Array(this.cols).fill(0));
     // Place mines randomly
     for (let i = 0; i &lt; this.numMines; i++) {
       let row, col;
@@ -18565,7 +18565,7 @@ function isHappyNumber(number) {
   return number === 1;
 function sumOfSquaredDigits(number) {
 return Array.from(String(number), Number)
-.reduce((sum, digit) => sum + Math.pow(digit, 2), 0);
+.reduce((sum, digit) =&gt; sum + Math.pow(digit, 2), 0);
 }
 
 // Example usage
@@ -18652,7 +18652,7 @@ function isSquarefulNumber(number) {
   const uniqueFactors = &lbrack;...new Set(factors)&rbrack;;
 
   for (const factor of uniqueFactors) {
-    const count = factors.filter((num) => num === factor).length;
+    const count = factors.filter((num) =&gt; num === factor).length;
     if (count % 2 !== 0) {
       return false;
     }
@@ -18757,11 +18757,11 @@ digits of its prime factors, including repetitions.</p>
 <pre>
 function isSmithMorraGambitNumber(number) {
   // Function to calculate the sum of digits
-  const digitSum = (n) => n.toString().split('').reduce((acc, digit) => 
+  const digitSum = (n) =&gt; n.toString().split('').reduce((acc, digit) =&gt; 
     acc + parseInt(digit), 0);
 
   // Function to calculate the prime factorization of a number
-  const primeFactorization = (n) => {
+  const primeFactorization = (n) =&gt; {
     const factors = &lbrack;&rbrack;;
     for (let i = 2; i &lt;= n; i++) {
       while (n % i === 0) {
@@ -18774,7 +18774,7 @@ function isSmithMorraGambitNumber(number) {
 
   // Get the prime factorization of the number and calculate the sum of its digits
   const factors = primeFactorization(number);
-  const sumOfDigits = factors.reduce((acc, factor) => acc + digitSum(factor), 0);
+  const sumOfDigits = factors.reduce((acc, factor) =&gt; acc + digitSum(factor), 0);
 
   // Check if the sum of digits of prime factors equals the original number
   return sumOfDigits === digitSum(number);
@@ -18997,7 +18997,7 @@ startChat();
 
 <pre>
 function convertToHex(red, green, blue) {
-  const toHex = value => {
+  const toHex = value =&gt; {
     const hex = parseInt(value, 10).toString(16);
     return hex.length === 1 ? '0' + hex:hex;
   };
@@ -19222,7 +19222,7 @@ function textRPGAdventure() {
       break;
     }
     
-    currentchoice = choices.findlndex(choice => choice.next === userChoice.toLowerCase());
+    currentchoice = choices.findlndex(choice =&gt; choice.next === userChoice.toLowerCase());
     if (currentchoice === -1) {
       console.log("Invalid choice. Try again or type 'exit' to end the adventure.");
     }
@@ -19333,7 +19333,7 @@ textBasedCalculator(userInput);
 function generateNumberPyramid(height) {
   for (let i = 1; i &lt;= height; i++) {
     const spaces = ''.repeat(height - i);
-    const numbers = Array.from({length: i}, (_, index) => index + 1).join(' ');
+    const numbers = Array.from({length: i}, (_, index) =&gt; index + 1).join(' ');
     console.log(spaces + numbers);
   }
 }<br>
@@ -19720,7 +19720,7 @@ function colorGuessingGame() {
   console.log("Sorry, you've run out of attempts. The correct color was revealed above.");
 }
 function generateRandomRGBValues() {
-  return Array.from({length: 3}, () => Math.floor(Math.random() * 256));
+  return Array.from({length: 3}, () =&gt; Math.floor(Math.random() * 256));
 }
 
 // Example: Start the Color Guessing Game
@@ -19758,7 +19758,7 @@ function wordScrambleGame() {
   console.log("Sorry, you've run out of attempts. The correct word was revealed above.");
 }
 function scrambleWord(word) {
-  return word.split("").sort(() => Math.random() - 0.5).join("");
+  return word.split("").sort(() =&gt; Math.random() - 0.5).join("");
 }
 
 // Example: Start the Word Scramble Game
@@ -20143,7 +20143,7 @@ length. It uses the <span class="consolas">Array.sort</span> method to achieve t
 
 <pre>
 function sortStringsByLength(stringsArray) {
-  const sortedArray = stringsArray.slice().sort((a, b) => a.length - b.length);
+  const sortedArray = stringsArray.slice().sort((a, b) =&gt; a.length - b.length);
   console.log("Original Array of Strings:");
   console.log(stringsArray);
   console.log("Array of Strings Sorted by Length:");
@@ -20186,7 +20186,7 @@ elements in both arrays and counts the occurrences of common elements.</p>
 
 <pre>
 function countCommonElements(arrl, arr2) {
-  const commonElements = arrl.filter(element => arr2.includes(element));
+  const commonElements = arrl.filter(element =&gt; arr2.includes(element));
   const numberOfCommonElements = commonElements.length;
   console.log("Array 1:", arrl);
   console.log("Array 2:", arr2);
@@ -20416,7 +20416,7 @@ takes a value in Celsius as input and uses the formula (Celsius * 9/5) + 32 to p
 the conversion.exadecimal representation.</p>
 
 <pre>
-const celsiusToFahrenheit = (celsius) => (celsius * 9/5) + 32;
+const celsiusToFahrenheit = (celsius) =&gt; (celsius * 9/5) + 32;
 
 // Example usage:
 celsiusToFahrenheit(25);  // Result: 77
@@ -20427,7 +20427,7 @@ celsiusToFahrenheit(25);  // Result: 77
 <p>Retrieve the value of a cookie by accessing with document.cookie.</p>
 
 <pre>
-const cookie = name => `; ${document.cookie}.split(`;
+const cookie = name =&gt; `; ${document.cookie}.split(`;
   ${name}={'').pop().split(';').shift();
   cookie('_ga');
 
@@ -20483,7 +20483,7 @@ copyToClipboard("Hello World!");
 </pre>
 <p>Finally, check if clipboard api is available.</p>
 <pre>
-const copyToClipboard = str => {
+const copyToClipboard = str =&gt; {
   if (navigator && navigator.clipboard && navigator.clipboard.writeText)
     return navigator.clipboard.writeText(str);
   return Promise.reject('The Clipboard API is not available.');
@@ -20508,7 +20508,7 @@ $(".myClass").val("new value");
 </pre>
 <pre>
 const val = "Febrary 29, 2025 08:00:00";
-const isDateValid = (...val) => !Number.isNaN(new Date(...val).valueOf());
+const isDateValid = (...val) =&gt; !Number.isNaN(new Date(...val).valueOf());
 
 // Example usage
 isDateValid("February 29, 2025 08:00:00");  // Result sb: false
@@ -20544,7 +20544,7 @@ meteor add momentjs:moment  # meteor
 <p>Find which day since Jan 1 is today.</p>
 
 <pre>
-const dayOfYear = (date) =>
+const dayOfYear = (date) =&gt;
   Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
 
 // Example usage
@@ -20557,7 +20557,7 @@ dayOfYear(new Date());  // Result: 55 (2/24/2025)
 following code for the purpose.</p>
 
 <pre>
-const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+const capitalize = str =&gt; str.charAt(0).toUpperCase() + str.slice(1);
 
 // Example usage
 capitalize("follow for more")  // Result: 'Follow for more'
@@ -20568,7 +20568,7 @@ capitalize("follow for more")  // Result: 'Follow for more'
 <p>Find the days between 2 given dates using the following snippet.</p>
 
 <pre>
-const dayDif = (date1, date2) => Math.ceil(Math.abs(date1.getTime() -
+const dayDif = (date1, date2) =&gt; Math.ceil(Math.abs(date1.getTime() -
   date2.getTime()) / 86400000)
 
 // Example usage
@@ -20581,7 +20581,7 @@ dayDif(new Date("2024-10-21"), new Date("2024-11-22"))  // Result: 32
 cookie using document.cookie and clearing it.</p>
 
 <pre>
-const clearCookies = document.cookie.split(';').forEach(cookie =>
+const clearCookies = document.cookie.split(';').forEach(cookie =&gt;
   document.cookie = cookie.replace(/^ +/,'').replace(/=.*/, `=;expires=${new Date(0).toUTCString()};path=/`));
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20590,7 +20590,7 @@ const clearCookies = document.cookie.split(';').forEach(cookie =>
 <p>You can generate random hex colors with Math.random and padEnd properties.</p>
 
 <pre>
-const randomHex = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
+const randomHex = () =&gt; `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0")}`;
 
 // Example usage
 console.log(randomHex());  // Result: #92b008, different each time.
@@ -20602,12 +20602,12 @@ console.log(randomHex());  // Result: #92b008, different each time.
 raw URL goole.com?search=easy&page=3</p>
 
 <pre>
-const getParameters = (URL) => {
+const getParameters = (URL) =&gt; {
   URL = JSON.parse('{"' + decodeURI(URL.split("?")&lbrack;1&rbrack;).replace(/"/g,
   '\\"').replace(/&/g, '","').replace(/=/g, '":"') +'"}');
   return JSON.stringify(URL);
 };
-const getParameters = (URL) => {
+const getParameters = (URL) =&gt; {
 URL = JSON.parse('{"' + decodeURI(URL.split("?")&lbrack;1&rbrack;).replace(/"/g,
 '\\"').replace(/&/g, '","').replace(/=/g, '":"') +'"}');
 return JSON.stringify(URL);
@@ -20633,7 +20633,7 @@ let parsedParams = getParameters(myUrl); // Output: {"search":"easy","page":"3"}
 <p>We can log time, in the format hour::minutes::seconds from a given date.</p>
 
 <pre>
-const timeFromDate = date => date.toTimeString().slice(0, 8);
+const timeFromDate = date =&gt; date.toTimeString().slice(0, 8);
 
 // Example usage
 console.log(timeFromDate(new Date(2025, 0, 10, 17, 30, 0)));  // Result: "17:30:00"
@@ -20645,7 +20645,7 @@ console.log(timeFromDate(new Date(2025, 0, 10, 17, 30, 0)));  // Result: "17:30:
 takes a "num" as input and returns true if even, false if odd.</p>
 
 <pre>
-const isEven = num => num % 2 === 0;
+const isEven = num =&gt; num % 2 === 0;
 
 // Example usage
 console.log(isEven(2));  // Result: True
@@ -20656,7 +20656,7 @@ console.log(isEven(2));  // Result: True
 <p>Find the average between multiple numbers using reduce method.</p>
 
 <pre>
-const average = (...args) => args.reduce((a, b) => a + b) / args.length;
+const average = (...args) =&gt; args.reduce((a, b) =&gt; a + b) / args.length;
 
 // Example usage
 average(1, 2, 3, 4);  // Result: 2.5
@@ -20668,7 +20668,7 @@ average(1, 2, 3, 4);  // Result: 2.5
 y as 0.</p>
 
 <pre>
-const goToTop = () => window.scrollTo(0, 0);
+const goToTop = () =&gt; window.scrollTo(0, 0);
 goToTop();
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -20677,7 +20677,7 @@ goToTop();
 <p>You can easily reverse a string using split, reverse and join methods.</p>
 
 <pre>
-const reverse = str => str.split('').reverse().join('');
+const reverse = str =&gt; str.split('').reverse().join('');
 
 // Example usage
 reverse('hello world');  // Result: 'dlrow olleh'
@@ -20688,7 +20688,7 @@ reverse('hello world');  // Result: 'dlrow olleh'
 <p>You can check if an array if empty with this snippet.</p>
 
 <pre>
-const isNotEmpty = arr => Array.isArray(arr) && arr.length > 0;
+const isNotEmpty = arr =&gt; Array.isArray(arr) && arr.length > 0;
 
 // Example usage
 isNotEmpty(&lbrack;1, 2, 3&rbrack;);  // Result: true
@@ -20699,7 +20699,7 @@ isNotEmpty(&lbrack;1, 2, 3&rbrack;);  // Result: true
 <p>Get the text the user has selected using inbuilt getSelection property.</p>
 
 <pre>
-const getSelectedText = () => window.getSelection().toString();
+const getSelectedText = () =&gt; window.getSelection().toString();
 
 // Example usage
 getSelectedText();
@@ -20710,7 +20710,7 @@ getSelectedText();
 <p>Shuffling an array is super easy with sort and random methods.</p>
 
 <pre>
-const shuffleArray = (arr) => arr.sort(() => 0.5 - Math.random());
+const shuffleArray = (arr) =&gt; arr.sort(() =&gt; 0.5 - Math.random());
 
 // Example usage
 console.log(shuffleArray(&lbrack;1, 2, 3, 4&rbrack;));  // Result: &lbrack; 1, 4, 3, 2 &rbrack;
@@ -20733,7 +20733,7 @@ console.log(isDarkMode)  // Result: True or False
 <p>You can easily remove duplicates with Set in JavaScript. Its a life saver.</p>
 
 <pre>
-const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
+const removeDuplicates = (arr) =&gt; &lbrack;...new Set(arr)&rbrack;;
 
 // Example usage
 console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));  // Result: &lbrack; 1, 2, 3, 4, 5, 6 &rbrack;
@@ -20744,7 +20744,7 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));  // Re
 <p>getLength efficiently calculates the length of a given string using .length property.</p>
 
 <pre>
-const getLength = (str) => str.length;
+const getLength = (str) =&gt; str.length;
 
 // Example usage
 getLength("Hello, world!");  // Result: 13
@@ -20755,7 +20755,7 @@ getLength("Hello, world!");  // Result: 13
 <p>Calculate the area of a circle given its radius.</p>
 
 <pre>
-const calculateCircleArea = (radius) => Math.PI * Math.pow(radius, 2);
+const calculateCircleArea = (radius) =&gt; Math.PI * Math.pow(radius, 2);
 
 // Example usage
 calculateCircleArea(5);  // Result: 78.53981633974483
@@ -20766,7 +20766,7 @@ calculateCircleArea(5);  // Result: 78.53981633974483
 <p>Determine if a given number is a prime number.</p>
 
 <pre>
-const isPrime = (num) => {
+const isPrime = (num) =&gt; {
   if (num &lt;= 1) return false;
   for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
@@ -20783,7 +20783,7 @@ isPrime(13);  // Result: true
 <p>Count the occurrences of a specific character in a given string.</p>
 
 <pre>
-const countOccurrences = (str, char) => str.split(char).length - 1;
+const countOccurrences = (str, char) =&gt; str.split(char).length - 1;
 
 // Example usage
 countOccurrences("banana", "a");  // Result: 3
@@ -20794,7 +20794,7 @@ countOccurrences("banana", "a");  // Result: 3
 <p>Remove leading and trailing whitespaces from a given string.</p>
 
 <pre>
-const removeWhitespaces = (str) => str.trim();
+const removeWhitespaces = (str) =&gt; str.trim();
 
 // Example usage
 removeWhitespaces(" Hello, world! ");  // Result: "Hello, world!"
@@ -20805,7 +20805,7 @@ removeWhitespaces(" Hello, world! ");  // Result: "Hello, world!"
 <p>Generate a random integer within a specified range.</p>
 
 <pre>
-const randomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const randomInRange = (min, max) =&gt; Math.floor(Math.random() * (max - min + 1)) + min;
 
 // Example usage
 randomInRange(1, 10);  // Result: Random number between 1 and 10 (inclusive)
@@ -20816,8 +20816,8 @@ randomInRange(1, 10);  // Result: Random number between 1 and 10 (inclusive)
 <p>Convert a given number of seconds into the "hours:minutes:seconds" format.</p>
 
 <pre>
-const secondsToHHMMSS = (seconds) => {
-  const pad = (num) => String(num).padStart(2, '0');
+const secondsToHHMMSS = (seconds) =&gt; {
+  const pad = (num) =&gt; String(num).padStart(2, '0');
   const hours = Math.floor(seconds / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
   const secs = seconds % 60;
@@ -20834,7 +20834,7 @@ secondsToHHMMSS(5000);  // Result: "01:23:20"
 <p>Retrieve the last element of a given array.</p>
 
 <pre>
-const getLastElement = (arr) => arr&lbrack;arr.length - 1&rbrack;;
+const getLastElement = (arr) =&gt; arr&lbrack;arr.length - 1&rbrack;;
 
 // Example usage
 getLastElement(&lbrack;1, 2, 3, 4&rbrack;);  // Result: 4
@@ -20845,7 +20845,7 @@ getLastElement(&lbrack;1, 2, 3, 4&rbrack;);  // Result: 4
 <p>Sort a given array of numbers in ascending order.</p>
 
 <pre>
-const sortAscending = (arr) => arr.slice().sort((a, b) => a - b);
+const sortAscending = (arr) =&gt; arr.slice().sort((a, b) =&gt; a - b);
 
 // Example usage
 sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;);  // Result: &lbrack;1, 1, 2, 3, 3, 4, 5, 5, 6, 9&rbrack;
@@ -20856,7 +20856,7 @@ sortAscending(&lbrack;3, 1, 4, 1, 5, 9, 2, 6, 5, 3&rbrack;);  // Result: &lbrack
 <p>Determine if a given string is a palindrome.</p>
 
 <pre>
-const isPalindrome = (str) => str === str.split('').reverse().join('');
+const isPalindrome = (str) =&gt; str === str.split('').reverse().join('');
 
 // Example usage
 isPalindrome("level");  // Result: true
@@ -20867,7 +20867,7 @@ isPalindrome("level");  // Result: true
 <p>Calculate the factorial of a given number.</p>
 
 <pre>
-const factorial = (num) => {
+const factorial = (num) =&gt; {
   if (num === 0 || num === 1) return 1;
   return num * factorial(num - 1);
 };
@@ -20881,7 +20881,7 @@ factorial(5);  // Result: 120
 <p>Calculate the sum of all numbers in a given array.</p>
 
 <pre>
-const sumArray = (arr) => arr.reduce((acc, val) => acc + val, 0);
+const sumArray = (arr) =&gt; arr.reduce((acc, val) =&gt; acc + val, 0);
 
 // Example usage
 sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;);  // Result: 15
@@ -20892,7 +20892,7 @@ sumArray(&lbrack;1, 2, 3, 4, 5&rbrack;);  // Result: 15
 <p>Find the maximum value in a given array of numbers.</p>
 
 <pre>
-const findMax = (arr) => Math.max(...arr);
+const findMax = (arr) =&gt; Math.max(...arr);
 
 // Example usage
 findMax(&lbrack;10, 5, 8, 20, 3&rbrack;);  // Result: 20
@@ -20903,7 +20903,7 @@ findMax(&lbrack;10, 5, 8, 20, 3&rbrack;);  // Result: 20
 <p>Get the current date in the "DD/MM/YYYY" format.</p>
 
 <pre>
-const getCurrentDate = () => {
+const getCurrentDate = () =&gt; {
   const date = new Date();
   const day = String(date.getDate()).padStart(2, '0');
   const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -20928,7 +20928,7 @@ getCurrentDate();  // Result: "10/02/2025"
 <p>Calculate the result of raising a given base to a specified exponent.</p>
 
 <pre>
-const power = (base, exponent) => Math.pow(base, exponent);
+const power = (base, exponent) =&gt; Math.pow(base, exponent);
 
 // Example usage
 power(2, 5);  // Result: 32
@@ -20940,7 +20940,7 @@ power(17, 5);  // Result: 1419857
 <p>Convert a given string to a numeric value (float or integer).</p>
 
 <pre>
-const stringToNumber = (str) => parseFloat(str);
+const stringToNumber = (str) =&gt; parseFloat(str);
 
 // Example usage
 stringToNumber("3.14");  // Result: 3.14
@@ -20951,7 +20951,7 @@ stringToNumber("3.14");  // Result: 3.14
 <p>Generate the first N Fibonacci numbers.</p>
 
 <pre>
-const fibonacci = (n) => {
+const fibonacci = (n) =&gt; {
   const result = &lbrack;0, 1&rbrack;;
   for (let i = 2; i &lt; n; i++) {
     result.push(result&lbrack;i - 1&rbrack; + result&lbrack;i - 2&rbrack;);
@@ -20968,7 +20968,7 @@ fibonacci(8);  // Result: &lbrack;0, 1, 1, 2, 3, 5, 8, 13&rbrack;
 <p>Count the number of words in a given string.</p>
 
 <pre>
-const countWords = (str) => str.trim().split(/\s+/).length;
+const countWords = (str) =&gt; str.trim().split(/\s+/).length;
 
 // Example usage
 console.log(countWords("Hello world, how are you?"));  // Output: 5
@@ -20979,7 +20979,7 @@ console.log(countWords("Hello world, how are you?"));  // Output: 5
 <p>Reverse the elements of a given array.</p>
 
 <pre>
-const reverseArray = (arr) => arr.slice().reverse();
+const reverseArray = (arr) =&gt; arr.slice().reverse();
 
 // Example usage
 console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5, 4, 3, 2, 1&rbrack;
@@ -20990,7 +20990,7 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5,
 <p>Get the current year.</p>
 
 <pre>
-const currentYear = () => new Date().getFullYear();
+const currentYear = () =&gt; new Date().getFullYear();
 
 // Example usage
 console.log(currentYear());  // Output: 2025 (depending on the current year)
@@ -21001,7 +21001,7 @@ console.log(currentYear());  // Output: 2025 (depending on the current year)
 <p>Generate a random integer between 1 and 10 (inclusive).</p>
 
 <pre>
-const random1To10 = () => Math.floor(Math.random() * 10) + 1;
+const random1To10 = () =&gt; Math.floor(Math.random() * 10) + 1;
 
 // Example usage
 console.log(random1To10());  // Output: Random number between 1 and 10 (inclusive)
@@ -21012,7 +21012,7 @@ console.log(random1To10());  // Output: Random number between 1 and 10 (inclusiv
 <p>Check if a given string is empty (contains no characters).</p>
 
 <pre>
-const isEmptyString = (str) => str.trim().length === 0;
+const isEmptyString = (str) =&gt; str.trim().length === 0;
 
 // Example usage
 console.log(isEmptyString(""));  // Output: true
@@ -21024,7 +21024,7 @@ console.log(isEmptyString("Hello, world!"));  // Output: false
 <p>Check if an object contains a specific property.</p>
 
 <pre>
-const hasProperty = (obj, prop) => prop in obj;
+const hasProperty = (obj, prop) =&gt; prop in obj;
 
 // Example usage
 const person = { name: "John", age: 30 };
@@ -21037,7 +21037,7 @@ console.log(hasProperty(person, "gender"));  // Output: false
 <p>Calculate the average of numbers in a given array.</p>
 
 <pre>
-const average = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
+const average = (arr) =&gt; arr.reduce((acc, val) =&gt; acc + val, 0) / arr.length;
 
 // Example usage
 console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
@@ -21048,7 +21048,7 @@ console.log(average(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 <p>Check if a given number is a multiple of 5.</p>
 
 <pre>
-const isMultipleOf5 = (num) => num % 5 === 0;
+const isMultipleOf5 = (num) =&gt; num % 5 === 0;
 
 // Example usage
 console.log(isMultipleOf5(10));  // Output: true
@@ -21060,7 +21060,7 @@ console.log(isMultipleOf5(7));  // Output: false
 <p>Convert minutes to seconds.</p>
 
 <pre>
-const minsToSecs = (mins) => mins * 60;
+const minsToSecs = (mins) =&gt; mins * 60;
 
 // Example usage
 console.log(minsToSecs(5));  // Output: 300
@@ -21071,7 +21071,7 @@ console.log(minsToSecs(5));  // Output: 300
 <p>Find the maximum value of a specific property in an array of objects.</p>
 
 <pre>
-const findMaxValue = (arr, key) => Math.max(...arr.map(item =>
+const findMaxValue = (arr, key) =&gt; Math.max(...arr.map(item =&gt;
   item&lbrack;key&rbrack;));
 const students = &lbrack;
   {name: "Alice", score: 80},
@@ -21088,7 +21088,7 @@ console.log(findMaxValue(students, "score"));  // Output: 95
 <p>Check if a given string starts with a specific character.</p>
 
 <pre>
-const startsWithChar = (str, char) => str.startsWith(char);
+const startsWithChar = (str, char) =&gt; str.startsWith(char);
 
 // Example usage
 console.log(startsWithChar("Hello, world!", "H"));  // Output: true
@@ -21100,7 +21100,7 @@ console.log(startsWithChar("Hello, world!", "h"));  // Output: false
 <p>Convert a given string to title case (capitalize the first letter of each word).</p>
 
 <pre>
-const toTitleCase = (str) => str.replace(/\b\w/g, match =>
+const toTitleCase = (str) =&gt; str.replace(/\b\w/g, match =&gt;
   match.toUpperCase());
 
 // Example usage
@@ -21112,7 +21112,7 @@ console.log(toTitleCase("hello world"));  // Output: "Hello World"
 <p>Check if a given array contains a specific value.</p>
 
 <pre>
-const containsValue = (arr, value) => arr.includes(value);
+const containsValue = (arr, value) =&gt; arr.includes(value);
 
 // Example usage
 console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: true
@@ -21124,7 +21124,7 @@ console.log(containsValue(&lbrack;1, 2, 3, 4, 5&rbrack;, 6));  // Output: false
 <p>Convert a given array to a comma-separated string.</p>
 
 <pre>
-const arrayToCSV = (arr) => arr.join(', ');
+const arrayToCSV = (arr) =&gt; arr.join(', ');
 
 // Example usage
 console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: "1, 2, 3, 4, 5"
@@ -21135,7 +21135,7 @@ console.log(arrayToCSV(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: "1, 2, 3, 4,
 <p>Check if a given year is a leap year.</p>
 
 <pre>
-const isLeapYear = (year) => (year % 4 === 0 && year % 100 !== 0) || 
+const isLeapYear = (year) =&gt; (year % 4 === 0 && year % 100 !== 0) || 
   (year % 400 === 0);
 
 // Example usage
@@ -21148,7 +21148,7 @@ console.log(isLeapYear(2023));  // Output: false
 <p>Find the index of a specific element in a given array.</p>
 
 <pre>
-const findIndex = (arr, element) => arr.indexOf(element);
+const findIndex = (arr, element) =&gt; arr.indexOf(element);
 
 // Example usage
 const fruits = &lbrack;"apple", "banana", "orange", "grape"&rbrack;;
@@ -21160,7 +21160,7 @@ console.log(findIndex(fruits, "orange"));  // Output: 2
 <p>Convert a given number of minutes to hours and remaining minutes.</p>
 
 <pre>
-const minsToHoursAndMins = (mins) => {
+const minsToHoursAndMins = (mins) =&gt; {
   const hours = Math.floor(mins / 60);
   const remainingMins = mins % 60;
   return `${hours} hours and ${remainingMins} minutes`;
@@ -21175,7 +21175,7 @@ console.log(minsToHoursAndMins(150));  // Output: "2 hours and 30 minutes"
 <p>Check if a given array is sorted in ascending order.</p>
 
 <pre>
-const isSortedAscending = (arr) => arr.every((el, i) => i === 0 || el >= arr&lbrack;i - 1&rbrack;);
+const isSortedAscending = (arr) =&gt; arr.every((el, i) =&gt; i === 0 || el >= arr&lbrack;i - 1&rbrack;);
 
 // Example usage
 console.log(isSortedAscending(&lbrack;1, 2, 3, 5, 8&rbrack;));  // Output: true
@@ -21187,7 +21187,7 @@ console.log(isSortedAscending(&lbrack;1, 5, 3, 8, 2&rbrack;));  // Output: false
 <p>Remove a specific element from a given array.</p>
 
 <pre>
-const removeElement = (arr, element) => arr.filter(el => el !== element);
+const removeElement = (arr, element) =&gt; arr.filter(el =&gt; el !== element);
 
 // Example usage
 console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrack;1, 2, 4, 5&rbrack;
@@ -21198,7 +21198,7 @@ console.log(removeElement(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrac
 <p>Truncate a given string to a specified maximum length.</p>
 
 <pre>
-const truncateString = (str, maxLength) => 
+const truncateString = (str, maxLength) =&gt; 
   str.length > maxLength ? str.slice(0, maxLength) + '...' : str;
 
 // Example usage
@@ -21210,7 +21210,7 @@ console.log(truncateString("Hello, world!", 5));  // Output: "Hello..."
 <p>Calculate the exponentiation of a given base raised to a specified exponent.</p>
 
 <pre>
-const exponentiate = (base, exponent) => Math.pow(base, exponent);
+const exponentiate = (base, exponent) =&gt; Math.pow(base, exponent);
 
 // Example usage
 console.log(exponentiate(2, 3));  // Output: 8
@@ -21221,7 +21221,7 @@ console.log(exponentiate(2, 3));  // Output: 8
 <p>Find the difference between two dates in days.</p>
 
 <pre>
-const dateDifferenceInDays = (date1, date2) => 
+const dateDifferenceInDays = (date1, date2) =&gt; 
   Math.abs(Math.floor((date2 - date1) / (1000 * 60 * 60 * 24)));
 const startDate = new Date("2023-08-01");
 const endDate = new Date("2023-08-10");
@@ -21235,7 +21235,7 @@ console.log(dateDifferenceInDays(startDate, endDate));  // Output: 9
 <p>Check if a given string is a valid email address.</p>
 
 <pre>
-const isValidEmail = (email) => /^&lbrack;^\s@&rbrack;+@&lbrack;^\s@&rbrack;+\.&lbrack;^\s@&rbrack;+$/.test(email);
+const isValidEmail = (email) =&gt; /^&lbrack;^\s@&rbrack;+@&lbrack;^\s@&rbrack;+\.&lbrack;^\s@&rbrack;+$/.test(email);
 
 // Example usage
 console.log(isValidEmail("user@example.com"));  // Output: true
@@ -21247,7 +21247,7 @@ console.log(isValidEmail("invalid-email"));    // Output: false
 <p>Convert a given number of seconds to minutes and remaining seconds.</p>
 
 <pre>
-const secsToMinsAndSecs = (seconds) => {
+const secsToMinsAndSecs = (seconds) =&gt; {
   const mins = Math.floor(seconds / 60);
   const remainingSecs = seconds % 60;
   return `${mins} minutes and ${remainingSecs} seconds`;
@@ -21262,9 +21262,9 @@ console.log(secsToMinsAndSecs(120));  // Output: "2 minutes and 0 seconds"
 <p>Check if a given object is a function.</p>
 
 <pre>
-const isFunction = (obj) => typeof obj === 'function';
+const isFunction = (obj) =&gt; typeof obj === 'function';
 
-console.log(isFunction(() => {}));  // Output: true
+console.log(isFunction(() =&gt; {}));  // Output: true
 console.log(isFunction({}));  // Output: false
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -21273,7 +21273,7 @@ console.log(isFunction({}));  // Output: false
 <p>Convert a given binary number to its decimal representation.</p>
 
 <pre>
-const binaryToDecimal = (binary) => parseInt(binary, 2);
+const binaryToDecimal = (binary) =&gt; parseInt(binary, 2);
 
 // Example usage
 console.log(binaryToDecimal("1101"));  // Output: 13
@@ -21284,7 +21284,7 @@ console.log(binaryToDecimal("1101"));  // Output: 13
 <p>Check if a given array contains only unique values.</p>
 
 <pre>
-const hasUniqueValues = (arr) => new Set(arr).size === arr.length;
+const hasUniqueValues = (arr) =&gt; new Set(arr).size === arr.length;
 
 // Example usage
 console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: true
@@ -21296,7 +21296,7 @@ console.log(hasUniqueValues(&lbrack;1, 2, 3, 4, 4&rbrack;));  // Output: false
 <p>Get the day of the week from any given date.</p>
 
 <pre>
-const getDayOfWeek = (date) => {
+const getDayOfWeek = (date) =&gt; {
   const daysOfWeek = &lbrack;"Sunday", "Monday", "Tuesday", "Wednesday",
     "Thursday", "Friday", "Saturday"&rbrack;;
   return daysOfWeek&lbrack;date.getDay()&rbrack;;
@@ -21311,7 +21311,7 @@ console.log(getDayOfWeek(new Date("2023-08-02")));  // Output: "Tuesday"
 <p>Check if a given number is a power of two.</p>
 
 <pre>
-const isPowerOfTwo = (num) => (num & (num - 1)) === 0;
+const isPowerOfTwo = (num) =&gt; (num & (num - 1)) === 0;
 
 // Example usage
 console.log(isPowerOfTwo(16));  // Output: true
@@ -21323,8 +21323,8 @@ console.log(isPowerOfTwo(5));  // Output: false
 <p>Convert a given object to a string of query parameters.</p>
 
 <pre>
-const objectToQueryParams = (obj) => Object.entries(obj).map((&lbrack;key,
-  value&rbrack;) =>
+const objectToQueryParams = (obj) =&gt; Object.entries(obj).map((&lbrack;key,
+  value&rbrack;) =&gt;
   `${encodeURIComponent(key)}=${encodeURIComponent(value)}`).join('
   &');
   
@@ -21337,7 +21337,7 @@ console.log(objectToQueryParams({ search: "hello", page: 1 }));  // Output: "sea
 <p>Check if a given array contains at least one even number.</p>
 
 <pre>
-const hasEvenNumber = (arr) => arr.some(num => num % 2 === 0);
+const hasEvenNumber = (arr) =&gt; arr.some(num =&gt; num % 2 === 0);
 
 // Example usage
 console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 8&rbrack;));  // Output: true
@@ -21349,7 +21349,7 @@ console.log(hasEvenNumber(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: false
 <p>Get the name of the month from a given date.</p>
 
 <pre>
-const getMonthName = (date) => {
+const getMonthName = (date) =&gt; {
   const months = &lbrack;"January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"&rbrack;;
   return months&lbrack;date.getMonth()&rbrack;;
@@ -21364,7 +21364,7 @@ console.log(getMonthName(new Date("2023-08-02")));  // Output: "August"
 <p>Check if a given string is a palindrome, considering it case-insensitive.</p>
 
 <pre>
-const isPalindromeCaseInsensitive = (str) => str.toLowerCase() === 
+const isPalindromeCaseInsensitive = (str) =&gt; str.toLowerCase() === 
   str.toLowerCase().split('').reverse().join('');
 
 // Example usage
@@ -21377,7 +21377,7 @@ console.log(isPalindromeCaseInsensitive("Hello"));  // Output: false
 <p>Convert a given length in feet to meters.</p>
 
 <pre>
-const feetToMeters = (feet) => feet * 0.3048;
+const feetToMeters = (feet) =&gt; feet * 0.3048;
 
 // Example usage
 console.log(feetToMeters(10));  // Output: 3.048
@@ -21388,7 +21388,7 @@ console.log(feetToMeters(10));  // Output: 3.048
 <p>Check if a given number is a perfect square.</p>
 
 <pre>
-const isPerfectSquare = (num) => Math.sqrt(num) % 1 === 0;
+const isPerfectSquare = (num) =&gt; Math.sqrt(num) % 1 === 0;
 
 // Example usage
 console.log(isPerfectSquare(16));  // Output: true
@@ -21400,7 +21400,7 @@ console.log(isPerfectSquare(10));  // Output: false
 <p>Check if a given string contains only numeric characters.</p>
 
 <pre>
-const containsOnlyNumbers = (str) => /^&lbrack;0-9&rbrack;+$/.test(str);
+const containsOnlyNumbers = (str) =&gt; /^&lbrack;0-9&rbrack;+$/.test(str);
 
 // Example usage
 console.log(containsOnlyNumbers("12345"));  // Output: true
@@ -21412,7 +21412,7 @@ console.log(containsOnlyNumbers("12a34"));  // Output: false
 <p>Get the current month as a 0-based index (0 for January, 1 for February, etc.).</p>
 
 <pre>
-const currentMonth = () => new Date().getMonth();
+const currentMonth = () =&gt; new Date().getMonth();
 
 // Example usage
 console.log(currentMonth());  // Output: Current month (0-based index)
@@ -21423,7 +21423,7 @@ console.log(currentMonth());  // Output: Current month (0-based index)
 <p>Calculate the mean (average) of a given array of numbers.</p>
 
 <pre>
-const mean = (arr) => arr.reduce((acc, val) => acc + val, 0) / arr.length;
+const mean = (arr) =&gt; arr.reduce((acc, val) =&gt; acc + val, 0) / arr.length;
 
 // Example usage
 console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
@@ -21434,7 +21434,7 @@ console.log(mean(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 <p>Check if a given number is a prime number.</p>
 
 <pre>
-const isPrime = (num) => {
+const isPrime = (num) =&gt; {
   if (num &lt;= 1) return false;
   for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
@@ -21452,7 +21452,7 @@ console.log(isPrime(4));  // Output: false
 <p>Get the last N elements from a given array.</p>
 
 <pre>
-const lastNElements = (arr, n) => arr.slice(-n);
+const lastNElements = (arr, n) =&gt; arr.slice(-n);
 
 // Example usage
 console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrack;3, 4, 5&rbrack;
@@ -21463,7 +21463,7 @@ console.log(lastNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrac
 <p>Convert a given angle from degrees to radians.</p>
 
 <pre>
-const degToRad = (degrees) => degrees * (Math.PI / 180);
+const degToRad = (degrees) =&gt; degrees * (Math.PI / 180);
 
 // Example usage
 console.log(degToRad(90));  // Output: 1.5707963267948966
@@ -21474,7 +21474,7 @@ console.log(degToRad(90));  // Output: 1.5707963267948966
 <p>Check if a given string is a valid URL.</p>
 
 <pre>
-const isValidURL = (url) => {
+const isValidURL = (url) =&gt; {
   try {
     new URL(url);
     return true;
@@ -21493,7 +21493,7 @@ console.log(isValidURL("invalid-url"));  // Output: false
 <p>Find the common elements (intersection) between two arrays.</p>
 
 <pre>
-const intersection = (arr1, arr2) => arr1.filter(val => arr2.includes(val));
+const intersection = (arr1, arr2) =&gt; arr1.filter(val =&gt; arr2.includes(val));
 
 // Example usage
 console.log(intersection(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // Output: &lbrack;2, 3&rbrack;
@@ -21504,7 +21504,7 @@ console.log(intersection(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  //
 <p>Convert a given number of days to years, months, and remaining days.</p>
 
 <pre>
-const daysToYearsMonthsDays = (days) => {
+const daysToYearsMonthsDays = (days) =&gt; {
   const years = Math.floor(days / 365);
   const remainingDays = days % 365;
   const months = Math.floor(remainingDays / 30);
@@ -21521,7 +21521,7 @@ console.log(daysToYearsMonthsDays(1000));  // Output: "2 years, 8 months, and 20
 <p>Check if a given object has no own properties (i.e., it is empty).</p>
 
 <pre>
-const isEmptyObject = (obj) => Object.keys(obj).length === 0;
+const isEmptyObject = (obj) =&gt; Object.keys(obj).length === 0;
 
 // Example usage
 console.log(isEmptyObject({}));  // Output: true
@@ -21533,7 +21533,7 @@ console.log(isEmptyObject({ name: "John", age: 30 }));  // Output: false
 <p>Calculate the factorial of a given number using a recursive function.</p>
 
 <pre>
-const factorial = (num) => {
+const factorial = (num) =&gt; {
   if (num === 0 || num === 1) return 1;
   return num * factorial(num - 1);
 };
@@ -21547,7 +21547,7 @@ console.log(factorial(5));  // Output: 120
 <p>Remove all whitespace characters from a given string.</p>
 
 <pre>
-const removeWhitespace = (str) => str.replace(/\s/g, '');
+const removeWhitespace = (str) =&gt; str.replace(/\s/g, '');
 
 console.log(removeWhitespace(" Hello, world! "));  // Output: "Hello,world!"
 </pre>
@@ -21557,7 +21557,7 @@ console.log(removeWhitespace(" Hello, world! "));  // Output: "Hello,world!"
 <p>Find the elements that are present in the first array but not in the second array.</p>
 
 <pre>
-const difference = (arr1, arr2) => arr1.filter(val => !arr2.includes(val));
+const difference = (arr1, arr2) =&gt; arr1.filter(val =&gt; !arr2.includes(val));
 
 // Example usage
 console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // Output: &lbrack;1&rbrack;
@@ -21568,7 +21568,7 @@ console.log(difference(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4&rbrack;));  // O
 <p>Check if a given number is a Fibonacci number.</p>
 
 <pre>
-const isFibonacci = (num) => isPerfectSquare(5 * num * num + 4) ||
+const isFibonacci = (num) =&gt; isPerfectSquare(5 * num * num + 4) ||
   isPerfectSquare(5 * num * num - 4);
 
 // Example usage
@@ -21581,7 +21581,7 @@ console.log(isFibonacci(6));  // Output: false
 <p>Convert a given number of hours to minutes.</p>
 
 <pre>
-const hoursToMinutes = (hours) => hours * 60;
+const hoursToMinutes = (hours) =&gt; hours * 60;
 
 // Example usage
 console.log(hoursToMinutes(2));  // Output: 120
@@ -21592,7 +21592,7 @@ console.log(hoursToMinutes(2));  // Output: 120
 <p>Get the first N elements from the beginning of an array.</p>
 
 <pre>
-const firstNElements = (arr, n) => arr.slice(0, n);
+const firstNElements = (arr, n) =&gt; arr.slice(0, n);
 
 // Example usage
 console.log(firstNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbrack;1, 2, 3&rbrack;
@@ -21603,7 +21603,7 @@ console.log(firstNElements(&lbrack;1, 2, 3, 4, 5&rbrack;, 3));  // Output: &lbra
 <p>Get the first N elements from the beginning of an array.</p>
 
 <pre>
-const isOdd = (num) => num % 2 !== 0;
+const isOdd = (num) =&gt; num % 2 !== 0;
 
 // Example usage
 console.log(isOdd(5));  // Output: true
@@ -21615,9 +21615,9 @@ console.log(isOdd(4));  // Output: false
 <p>Calculate the standard deviation of an array of numbers.</p>
 
 <pre>
-const standardDeviation = (arr) => {
+const standardDeviation = (arr) =&gt; {
   const avg = mean(arr);
-  const squaredDiffs = arr.map(num => Math.pow(num - avg, 2));
+  const squaredDiffs = arr.map(num =&gt; Math.pow(num - avg, 2));
   const variance = mean(squaredDiffs);
   return Math.sqrt(variance);
 };
@@ -21631,7 +21631,7 @@ console.log(standardDeviation(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 1.414
 <p>Check if a string ends with a specific substring.</p>
 
 <pre>
-const endsWithSubstring = (str, subStr) => str.endsWith(subStr);
+const endsWithSubstring = (str, subStr) =&gt; str.endsWith(subStr);
 
 // Example usage
 console.log(endsWithSubstring("Hello, world!", "world!"));  // Output: true
@@ -21643,7 +21643,7 @@ console.log(endsWithSubstring("Hello, world!", "Hello"));  // Output: false
 <p>Calculate the sum of squares of an array of numbers.</p>
 
 <pre>
-const sumOfSquares = (arr) => arr.reduce((acc, val) => acc + val ** 2, 0);
+const sumOfSquares = (arr) =&gt; arr.reduce((acc, val) =&gt; acc + val ** 2, 0);
 
 // Example usage
 console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
@@ -21654,7 +21654,7 @@ console.log(sumOfSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
 <p>Check if a string is a palindrome, considering case sensitivity.</p>
 
 <pre>
-const isPalindromeCaseSensitive = (str) => str === 
+const isPalindromeCaseSensitive = (str) =&gt; str === 
   str.split('').reverse().join('');
 
 // Example usage
@@ -21667,7 +21667,7 @@ console.log(isPalindromeCaseSensitive("Hello"));  // Output: false
 <p>Generate an array of random numbers.</p>
 
 <pre>
-const randomArray = (length) => Array.from({ length }, () =>
+const randomArray = (length) =&gt; Array.from({ length }, () =&gt;
   Math.floor(Math.random() * 100));
 
 // Example usage
@@ -21679,7 +21679,7 @@ console.log(randomArray(5));  // Output: Array with 5 random numbers, e.g., &lbr
 <p>Calculate the Greatest Common Divisor (GCD) of two numbers.</p>
 
 <pre>
-const gcd = (num1, num2) => {
+const gcd = (num1, num2) =&gt; {
   while (num2 !== 0) {
     let temp = num2;
     num2 = num1 % num2;
@@ -21696,7 +21696,7 @@ console.log(gcd(48, 18));  // Output: 6
 <p>Convert seconds to hours, minutes, and seconds.</p>
 
 <pre>
-const secsToHoursMinsSecs = (seconds) => {
+const secsToHoursMinsSecs = (seconds) =&gt; {
   const hours = Math.floor(seconds / 3600);
   const remainingSeconds = seconds % 3600;
   const minutes = Math.floor(remainingSeconds / 60);
@@ -21713,7 +21713,7 @@ console.log(secsToHoursMinsSecs(7320));  // Output: "2 hours, 2 minutes, and 0 s
 <p>Calculate the Least Common Multiple (LCM) of two numbers.</p>
 
 <pre>
-const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
+const lcm = (num1, num2) =&gt; (num1 * num2) / gcd(num1, num2);
 
 // Example usage
 console.log(lcm(6, 8));  // Output: 24
@@ -21724,7 +21724,7 @@ console.log(lcm(6, 8));  // Output: 24
 <p>Find the longest word in a string.</p>
 
 <pre>
-const findLongestWord = (str) => str.split(' ').reduce((longest, word) =>
+const findLongestWord = (str) =&gt; str.split(' ').reduce((longest, word) =&gt;
   word.length > longest.length ? word : longest, '');
 
 // Example usage
@@ -21736,7 +21736,7 @@ console.log(findLongestWord("Hi, how are you doing?"));  // Output: "doing?"
 <p>Count the occurrences of a character in a string.</p>
 
 <pre>
-const countOccurrences = (str, char) => str.split(char).length - 1;
+const countOccurrences = (str, char) =&gt; str.split(char).length - 1;
 
 // Example usage
 console.log(countOccurrences("hello world", "l"));  // Output: 3
@@ -21747,8 +21747,8 @@ console.log(countOccurrences("hello world", "l"));  // Output: 3
 <p>Find the median of an array of numbers.</p>
 
 <pre>
-const median = (arr) => {
-  const sorted = arr.sort((a, b) => a - b);
+const median = (arr) =&gt; {
+  const sorted = arr.sort((a, b) =&gt; a - b);
   const mid = Math.floor(sorted.length / 2);
   return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
   sorted&lbrack;mid&rbrack;;
@@ -21763,7 +21763,7 @@ console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: 5
 <p>Remove duplicate characters from a string.</p>
 
 <pre>
-const removeDuplicatesFromString = (str) => 
+const removeDuplicatesFromString = (str) =&gt; 
   &lbrack;...new Set(str.split(''))&rbrack;.join('');
 
 // Example usage
@@ -21777,11 +21777,11 @@ of numbers. It identifies the number(s) with the highest frequency and
 returns them in an array.</p>
 
 <pre>
-const mode = (arr) => {
+const mode = (arr) =&gt; {
   const frequency = {};
-  arr.forEach(num => frequency&lbrack;num&rbrack; = (frequency&lbrack;num&rbrack; || 0) + 1);
+  arr.forEach(num =&gt; frequency&lbrack;num&rbrack; = (frequency&lbrack;num&rbrack; || 0) + 1);
   const maxFrequency = Math.max(...Object.values(frequency));
-  return Object.keys(frequency).filter(num => frequency&lbrack;num&rbrack; ===
+  return Object.keys(frequency).filter(num =&gt; frequency&lbrack;num&rbrack; ===
     maxFrequency).map(Number);
 };
 
@@ -21797,8 +21797,8 @@ a given number meets this criterion. It calculates the sum of the digits of the
 number, and then checks if the number itself is divisible by this sum.</p>
 
 <pre>
-const isHarshadNumber = (num) => 
-  num % &lbrack;...String(num)&rbrack;.reduce((sum, digit) => 
+const isHarshadNumber = (num) =&gt; 
+  num % &lbrack;...String(num)&rbrack;.reduce((sum, digit) =&gt; 
   sum + Number(digit), 0) === 0;
 
 // Example usage
@@ -21815,8 +21815,8 @@ using a reduce operation to calculate the decimal value by considering each
 digit&apos;s position and value.</p>
 
 <pre>
-const binaryToDecimalWithoutParseInt = (binary) =>
-  binary.split('').reverse().reduce((dec, bit, index) => 
+const binaryToDecimalWithoutParseInt = (binary) =&gt;
+  binary.split('').reverse().reduce((dec, bit, index) =&gt; 
   dec + bit * (2 ** index), 0);
 
 // Example usage
@@ -21830,7 +21830,7 @@ through the array and verifies that each element is either greater than or
 equal to the preceding element, ensuring a descending order.</p>
 
 <pre>
-const isSortedDescending = (arr) => arr.every((el, i) => 
+const isSortedDescending = (arr) =&gt; arr.every((el, i) =&gt; 
   i === 0 || el &lt;= arr&lbrack;
   i - 1&rbrack;);
 
@@ -21847,9 +21847,9 @@ these even numbers, and finally divides the sum by the count of even
 numbers to obtain the average.</p>
 
 <pre>
-const averageOfEvenNumbers = (arr) => {
-  const evenNumbers = arr.filter(num => num % 2 === 0);
-  return evenNumbers.reduce((sum, num) => sum + num, 0) / evenNumbers.length;
+const averageOfEvenNumbers = (arr) =&gt; {
+  const evenNumbers = arr.filter(num =&gt; num % 2 === 0);
+  return evenNumbers.reduce((sum, num) =&gt; sum + num, 0) / evenNumbers.length;
 };
 
 // Example usage
@@ -21864,8 +21864,8 @@ word (defined as a word boundary followed by a letter), and then replaces it
 with its uppercase version.</p>
 
 <pre>
-const capitalizeWords = (str) => 
-  str.replace(/\b\w/g, char =>
+const capitalizeWords = (str) =&gt; 
+  str.replace(/\b\w/g, char =&gt;
   char.toUpperCase());
 
 // Example usage
@@ -21879,7 +21879,7 @@ achieves this by verifying that every element in the first array (arr1) is
 present in the second array (arr2).</p>
 
 <pre>
-const isSubset = (arr1, arr2) => arr1.every(item => arr2.includes(item));
+const isSubset = (arr1, arr2) =&gt; arr1.every(item =&gt; arr2.includes(item));
 
 // Example usage
 console.log(isSubset(&lbrack;1, 2, 3&rbrack;, &lbrack;2, 3, 4, 5, 6&rbrack;));  // Output: false
@@ -21895,7 +21895,7 @@ the input array. The function returns an object containing both the minimum
 and maximum values.</p>
 
 <pre>
-const minMax = (arr) => ({
+const minMax = (arr) =&gt; ({
   min: Math.min(...arr),
   max: Math.max(...arr)
 });
@@ -21910,10 +21910,10 @@ console.log(minMax(&lbrack;10, 5, 25, 3, 15&rbrack;));  // Output: { min: 3, max
 narcissistic number.</p>
 
 <pre>
-const isNarcissisticNumber = (num) => {
+const isNarcissisticNumber = (num) =&gt; {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
   const numDigits = digits.length;
-  const sumOfPowers = digits.reduce((sum, digit) => 
+  const sumOfPowers = digits.reduce((sum, digit) =&gt; 
     sum + Math.pow(digit, numDigits), 0);
   return sumOfPowers === num;
 };
@@ -21931,7 +21931,7 @@ by utilizing the filter method. It returns a new array containing only the non-n
 non-undefined elements.</p>
 
 <pre>
-const removeNullAndUndefined = (arr) => arr.filter(item => 
+const removeNullAndUndefined = (arr) =&gt; arr.filter(item =&gt; 
   item !== null && item !== undefined);
 
 // Example usage
@@ -21944,7 +21944,7 @@ console.log(removeNullAndUndefined(&lbrack;1, null, 2, 3, undefined, 4, null&rbr
 where the order of words has been reversed.</p>
 
 <pre>
-const reverseWords = (str) => str.split(' ').reverse().join(' ');
+const reverseWords = (str) =&gt; str.split(' ').reverse().join(' ');
 
 // Example usage
 console.log(reverseWords("Hello, world!"));  // Output: "world! Hello,"
@@ -21958,7 +21958,7 @@ accumulating the sum of cubes by raising each value to the power of 3 and
 adding it to the accumulator.</p>
 
 <pre>
-const sumOfCubes = (arr) => arr.reduce((acc, val) => acc + val ** 3, 0);
+const sumOfCubes = (arr) =&gt; arr.reduce((acc, val) =&gt; acc + val ** 3, 0);
 
 // Example usage
 console.log(sumOfCubes(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 225
@@ -21972,7 +21972,7 @@ characters, then using the sort method with a random comparison function.
 Finally, the shuffled characters are rejoined to form a new string.</p>
 
 <pre>
-const shuffleString = (str) => str.split('').sort(() => 
+const shuffleString = (str) =&gt; str.split('').sort(() =&gt; 
   0.5 - Math.random()).join('');
   
 // Example usage
@@ -22000,7 +22000,7 @@ matches one or more whitespace characters, and then counting the resulting
 array&apos;s length.</p>
 
 <pre>
-const countWords = (str) => str.split(/\s+/).length;
+const countWords = (str) =&gt; str.split(/\s+/).length;
   
 // Example usage
 console.log(countWords("Hello, how are you doing?"));  // Output: 5
@@ -22033,7 +22033,7 @@ console.log(isTriangularNumber(7));  // Output: false
 summing twice the width and twice the height of the rectangle.</p>
 
 <pre>
-const rectanglePerimeter = (width, height) => 2 * (width + height);
+const rectanglePerimeter = (width, height) =&gt; 2 * (width + height);
   
 // Example usage
 console.log(rectanglePerimeter(5, 10));  // Output: 30
@@ -22046,7 +22046,7 @@ among an array of strings. It starts by assuming the first string in the array
 as the initial common prefix.</p>
 
 <pre>
-const longestCommonPrefix = (strs) => {
+const longestCommonPrefix = (strs) =&gt; {
   if (strs.length === 0) return '';
   let prefix = strs&lbrack;0&rbrack;;
   for (let i = 1; i &lt; strs.length; i++) {
@@ -22068,7 +22068,7 @@ It employs the charCodeAt method, which returns the ASCII code of the
 character at the specified index (0 in this case).</p>
 
 <pre>
-const getASCIIValue = (char) => char.charCodeAt(0);
+const getASCIIValue = (char) =&gt; char.charCodeAt(0);
   
 // Example usage
 console.log(getASCIIValue('A'));  // Output: 65
@@ -22082,12 +22082,12 @@ string, building a character count object, and then using the find method to
 locate the first character with a count of 1.</p>
 
 <pre>
-const firstNonRepeatedChar = (str) => {
+const firstNonRepeatedChar = (str) =&gt; {
   const charCount = {};
   for (const char of str) {
     charCount&lbrack;char&rbrack; = (charCount&lbrack;char&rbrack; || 0) + 1;
   }
-  return str.split('').find((char) => charCount&lbrack;char&rbrack; === 1);
+  return str.split('').find((char) =&gt; charCount&lbrack;char&rbrack; === 1);
 };
   
 // Example usage
@@ -22101,7 +22101,7 @@ specified property&apos;s value. It employs the sort method with a custom
 comparison function that compares the property values of two objects.</p>
 
 <pre>
-const sortByProperty = (arr, prop) => arr.sort((a, b) => a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
+const sortByProperty = (arr, prop) =&gt; arr.sort((a, b) =&gt; a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
   
 // Example usage
 const people = &lbrack;
@@ -22121,7 +22121,7 @@ console.log(sortByProperty(people, 'age'));
 specified exponent using the exponentiation operator (**).</p>
 
 <pre>
-const exponential = (base, exponent) => base ** exponent;
+const exponential = (base, exponent) =&gt; base ** exponent;
   
 // Example usage
 console.log(exponential(2, 3));  // Output: 8
@@ -22134,7 +22134,7 @@ other. An anagram is a word or phrase formed by rearranging the letters of anoth
 using all the original letters exactly once.</p>
 
 <pre>
-const isAnagram = (str1, str2) => 
+const isAnagram = (str1, str2) =&gt; 
   str1.split('').sort().join('') === str2.split('').sort().join('');
 
 // Example usage
@@ -22148,7 +22148,7 @@ console.log(isAnagram('hello', 'world'));  // Output: false
 number. Factors are the positive integers that evenly divide the input number.</p>
 
 <pre>
-const factors = (num) => {
+const factors = (num) =&gt; {
   const result = &lbrack;&rbrack;;
   for (let i = 1; i &lt;= num; i++) {
     if (num % i === 0) {
@@ -22168,9 +22168,9 @@ console.log(factors(12));  // Output: &lbrack;1, 2, 3, 4, 6, 12&rbrack;
 number is a number where the sum of the digits of its square is equal to the number itself.</p>
 
 <pre>
-const isNeonNumber = (num) => {
+const isNeonNumber = (num) =&gt; {
   const squared = num ** 2;
-  const digitSum = &lbrack;...String(squared)&rbrack;.map(Number).reduce((sum, digit) =>
+  const digitSum = &lbrack;...String(squared)&rbrack;.map(Number).reduce((sum, digit) =&gt;
     sum + digit, 0);
   return squared === digitSum;
 };
@@ -22186,10 +22186,10 @@ console.log(isNeonNumber(12));  // Output: false
 possible subsets of the set, including the empty set and the set itself.</p>
 
 <pre>
-const powerSet = (set) => {
+const powerSet = (set) =&gt; {
   const result = &lbrack;&lbrack;&rbrack;&rbrack;;
   for (const item of set) {
-    const subsets = result.map((subset) => &lbrack;...subset, item&rbrack;);
+    const subsets = result.map((subset) =&gt; &lbrack;...subset, item&rbrack;);
     result.push(...subsets);
   }
   return result;
@@ -22205,9 +22205,9 @@ console.log(powerSet(&lbrack;1, 2, 3&rbrack;));
 <p>The isDisariumNumber function determines whether a given number is a disarium number.</p>
 
 <pre>
-const isDisariumNumber = (num) => {
+const isDisariumNumber = (num) =&gt; {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
-  const sumOfPowers = digits.reduce((sum, digit, index) => sum + digit **
+  const sumOfPowers = digits.reduce((sum, digit, index) =&gt; sum + digit **
   (index + 1), 0);
   return sumOfPowers === num;
 };
@@ -22225,7 +22225,7 @@ lowercase) from a given string using the replace method along with a
 regular expression.</p>
 
 <pre>
-const removeVowels = (str) => 
+const removeVowels = (str) =&gt; 
   str.replace(/&lbrack;aeiouAEIOU&rbrack;/g, '');
 
 // Example usage
@@ -22238,8 +22238,8 @@ console.log(removeVowels("Hello, World!"));  // Output: "Hll, Wrld!"
 numbers within a specified range.</p>
 
 <pre>
-const consecutiveNumbers = (start, end) => 
-  Array.from({ length: end - start + 1 }, (_, i) => start + i);
+const consecutiveNumbers = (start, end) =&gt; 
+  Array.from({ length: end - start + 1 }, (_, i) =&gt; start + i);
 
 // Example usage
 console.log(consecutiveNumbers(1, 5));  // Output: &lbrack;1, 2, 3, 4, 5&rbrack;
@@ -22251,7 +22251,7 @@ console.log(consecutiveNumbers(1, 5));  // Output: &lbrack;1, 2, 3, 4, 5&rbrack;
 (also known as an oblong number or rectangular number).</p>
 
 <pre>
-const isPronicNumber = (num) => {
+const isPronicNumber = (num) =&gt; {
   const n = Math.floor(Math.sqrt(num));
   return n * (n + 1) === num;
 };
@@ -22268,7 +22268,7 @@ console.log(isPronicNumber(7));  // Output: false
 is a sentence that contains every letter of the alphabet at least once.</p>
 
 <pre>
-const isPangram = (str) => {
+const isPangram = (str) =&gt; {
   const letters = new Set(str.toLowerCase().match(/&lbrack;a-z&rbrack;/g));
   return letters.size === 26;
 };
@@ -22283,7 +22283,7 @@ console.log(isPangram("Hello, World!"));  // Output: false
 <p>The reverseSentence function reverses the order of words in a given sentence.</p>
 
 <pre>
-const reverseSentence = (sentence) => sentence.split(' ').reverse().join(' ');
+const reverseSentence = (sentence) =&gt; sentence.split(' ').reverse().join(' ');
 
 // Example usage
 console.log(reverseSentence("Hello, how are you doing?"));  // Output: "doing? you are how Hello,"
@@ -22296,7 +22296,7 @@ decimal number using the built-in parseInt function with the base parameter
 set to 2.</p>
 
 <pre>
-const binaryToDecimalWithParseInt = (binary) => parseInt(binary, 2);
+const binaryToDecimalWithParseInt = (binary) =&gt; parseInt(binary, 2);
 
 // Example usage
 console.log(binaryToDecimalWithParseInt("1101"));  // Output: 13
@@ -22309,9 +22309,9 @@ within a given array. It does so by filtering the odd numbers from the array,
 then computing their sum and dividing by the count of odd numbers.</p>
 
 <pre>
-const averageOfOddNumbers = (arr) => {
-  const oddNumbers = arr.filter(num => num % 2 !== 0);
-  return oddNumbers.reduce((sum, num) => sum + num, 0) / oddNumbers.length;
+const averageOfOddNumbers = (arr) =&gt; {
+  const oddNumbers = arr.filter(num =&gt; num % 2 !== 0);
+  return oddNumbers.reduce((sum, num) =&gt; sum + num, 0) / oddNumbers.length;
 };
 
 // Example usage
@@ -22325,7 +22325,7 @@ string, considering both uppercase and lowercase versions as the same
 letter.</p>
 
 <pre>
-const countLetters = (str) => {
+const countLetters = (str) =&gt; {
   const letters = str.toLowerCase().match(/&lbrack;a-z&rbrack;/g);
   const letterCount = {};
   for (const letter of letters) {
@@ -22344,7 +22344,7 @@ console.log(countLetters("Hello, World!"));  // Output: { h: 1, e: 1, l: 3, o: 2
 seconds into days, hours, minutes, and remaining seconds.</p>
 
 <pre>
-const secsToDaysHoursMinsSecs = (seconds) => {
+const secsToDaysHoursMinsSecs = (seconds) =&gt; {
   const days = Math.floor(seconds / 86400);
   seconds %= 86400;
   const hours = Math.floor(seconds / 3600);
@@ -22364,7 +22364,7 @@ console.log(secsToDaysHoursMinsSecs(100000));  // Output: "1 days, 3 hours, 46 m
 another number.</p>
 
 <pre>
-const isPrimeFactor = (num, factor) => num % factor === 0 &&
+const isPrimeFactor = (num, factor) =&gt; num % factor === 0 &&
   isPrime(factor);
 
 // Example usage
@@ -22398,7 +22398,7 @@ console.log(largestPrimeFactor(48));  // Output: 3
 <p>The isPronicSquare function checks if a given number is a pronic square.</p>
 
 <pre>
-const isPronicSquare = (num) => Number.isInteger(Math.sqrt(num));
+const isPronicSquare = (num) =&gt; Number.isInteger(Math.sqrt(num));
 
 // Example usage
 console.log(isPronicSquare(6));  // Output: true
@@ -22411,7 +22411,7 @@ console.log(isPronicSquare(21));  // Output: true
 <p>The sumOfDigits function calculates the sum of the digits of a given number.</p>
 
 <pre>
-const sumOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((sum, digit) => 
+const sumOfDigits = (num) =&gt; &lbrack;...String(num)&rbrack;.reduce((sum, digit) =&gt; 
   sum + Number(digit), 0);
 
 // Example usage
@@ -22424,13 +22424,12 @@ console.log(sumOfDigits(12345));  // Output: 15
 median is the middle value of a dataset when it is ordered.</p>
 
 <pre>
-const median = (arr) => {
-  const sorted = arr.sort((a, b) => a - b);
+const median = (arr) =&gt; {
+  const sorted = arr.sort((a, b) =&gt; a - b);
   const mid = Math.floor(sorted.length / 2);
   return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
   sorted&lbrack;mid&rbrack;;
 };
-
 // Example usage
 console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: 5
 </pre>
@@ -22441,8 +22440,7 @@ console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: 5
 given numbers using a recursive approach.</p>
 
 <pre>
-const gcd = (num1, num2) => (num2 === 0 ? num1 : gcd(num2, num1 % num2));
-
+const gcd = (num1, num2) =&gt; (num2 === 0 ? num1 : gcd(num2, num1 % num2));
 // Example usage
 console.log(gcd(48, 18));  // Output: 6
 </pre>
@@ -22454,15 +22452,14 @@ happy number is a number where the sequence of repeatedly summing the squares of
 digits eventually reaches the number 1.</p>
 
 <pre>
-const isHappyNumber = (num) => {
+const isHappyNumber = (num) =&gt; {
   const seen = new Set();
   while (num !== 1 && !seen.has(num)) {
     seen.add(num);
-    num = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum + digit ** 2, 0);
+    num = &lbrack;...String(num)&rbrack;.reduce((sum, digit) =&gt; sum + digit ** 2, 0);
   }
   return num === 1;
 };
-
 // Example usage
 console.log(isHappyNumber(19));  // Output: true
 console.log(isHappyNumber(4));  // Output: false
@@ -22473,14 +22470,14 @@ console.log(isHappyNumber(4));  // Output: false
 <p>The firstNPrimes function generates an array of the first n prime numbers.</p>
 
 <pre>
-const isPrime = (num) => {
+const isPrime = (num) =&gt; {
   if (num &lt;= 1) return false;
   for (let i = 2; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) return false;
   }
   return true;
 };
-const firstNPrimes = (n) => {
+const firstNPrimes = (n) =&gt; {
   const primes = &lbrack;&rbrack;;
   let num = 2;
   while (primes.length &lt; n) {
@@ -22489,7 +22486,6 @@ const firstNPrimes = (n) => {
   }
   return primes;
 };
-
 // Example usage
 console.log(firstNPrimes(5));  // Output: &lbrack;2, 3, 5, 7, 11&rbrack;
 </pre>
@@ -22500,8 +22496,7 @@ console.log(firstNPrimes(5));  // Output: &lbrack;2, 3, 5, 7, 11&rbrack;
 the formula (4/3) * π * r^3, where r is the radius of the sphere.</p>
 
 <pre>
-const sphereVolume = (radius) => (4 / 3) * Math.PI * radius ** 3;
-
+const sphereVolume = (radius) =&gt; (4 / 3) * Math.PI * radius ** 3;
 // Example usage
 console.log(sphereVolume(5));  // Output: 523.5987755982989
 </pre>
@@ -22514,9 +22509,8 @@ and then using the reduce method to compare the length of each word and
 keep track of the longest one.</p>
 
 <pre>
-const longestWord = (sentence) => sentence.split(' ').reduce((longest, word) => 
+const longestWord = (sentence) =&gt; sentence.split(' ').reduce((longest, word) =&gt; 
   (word.length > longest.length ? word : longest), '');
-
 // Example usage
 console.log(longestWord("The quick brown fox jumped over the lazy dog"));  // Output: "jumped"
 </pre>
@@ -22530,14 +22524,13 @@ its digits is equal to the number itself. For example, 153 and 371 are Armstrong
 as a narcissistic number.</p>
 
 <pre>
-const isArmstrongNumber = (num) => {
+const isArmstrongNumber = (num) =&gt; {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
   const numDigits = digits.length;
-  const sumOfPowers = digits.reduce((sum, digit) => sum + digit **
+  const sumOfPowers = digits.reduce((sum, digit) =&gt; sum + digit **
   numDigits, 0);
   return sumOfPowers === num;
 };
-
 // Example usage
 console.log(isArmstrongNumber(153));  // Output: true
 console.log(isArmstrongNumber(370));  // Output: true
@@ -22552,10 +22545,9 @@ sentence. It splits the sentence into words using spaces as separators, and then
 the reduce method to find the maximum length among all the words.</p>
 
 <pre>
-const longestWordLength = (sentence) => 
-  sentence.split(' ').reduce((longest, word) => 
+const longestWordLength = (sentence) =&gt; 
+  sentence.split(' ').reduce((longest, word) =&gt; 
     Math.max(longest, word.length), 0);
-
 // Example usage
 console.log(longestWordLength("The quick brown fox jumped over the lazy dog"));  // Output: 6
 </pre>
@@ -22567,13 +22559,12 @@ strong number is a number whose sum of factorials of its digits is equal to
 the number itself.</p>
 
 <pre>
-const factorial = (num) => (num === 0 ? 1 : num * factorial(num - 1));
-const isStrongNumber = (num) => {
-  const sumOfFactorials = &lbrack;...String(num)&rbrack;.reduce((sum, digit) => sum +
+const factorial = (num) =&gt; (num === 0 ? 1 : num * factorial(num - 1));
+const isStrongNumber = (num) =&gt; {
+  const sumOfFactorials = &lbrack;...String(num)&rbrack;.reduce((sum, digit) =&gt; sum +
   factorial(Number(digit)), 0);
   return sumOfFactorials === num;
 };
-
 // Example usage
 console.log(isStrongNumber(145));  // Output: true
 console.log(isStrongNumber(123));  // Output: false
@@ -22584,8 +22575,7 @@ console.log(isStrongNumber(123));  // Output: false
 <p>The reverseArray function reverses the order of elements in an array using the reverse method.</p>
 
 <pre>
-const reverseArray = (arr) => arr.reverse();
-
+const reverseArray = (arr) =&gt; arr.reverse();
 // Example usage
 console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5, 4, 3, 2, 1&rbrack;
 </pre>
@@ -22596,8 +22586,7 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5,
 length and width using the formula: length * width.</p>
 
 <pre>
-const rectangleArea = (length, width) => length * width;
-
+const rectangleArea = (length, width) =&gt; length * width;
 // Example usage
 console.log(rectangleArea(5, 10));  // Output: 50
 </pre>
@@ -22609,9 +22598,8 @@ within an array. It first filters the array to keep only the even numbers, and
 then uses the reduce method to compute their sum.</p>
 
 <pre>
-const sumOfEvenNumbers = (arr) => 
-  arr.filter(num => num % 2 === 0).reduce((sum, num) => sum + num, 0);
-
+const sumOfEvenNumbers = (arr) =&gt; 
+  arr.filter(num =&gt; num % 2 === 0).reduce((sum, num) =&gt; sum + num, 0);
 // Example usage
 console.log(sumOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;));  // Output: 30
 </pre>
@@ -22623,7 +22611,7 @@ using an iterative approach. It employs the Euclidean algorithm to iteratively f
 GCD.</p>
 
 <pre>
-const gcdIterative = (num1, num2) => {
+const gcdIterative = (num1, num2) =&gt; {
   while (num2 !== 0) {
     const temp = num2;
     num2 = num1 % num2;
@@ -22631,7 +22619,6 @@ const gcdIterative = (num1, num2) => {
   }
   return num1;
 };
-
 // Example usage
 console.log(gcdIterative(48, 18));  // Output: 6
 </pre>
@@ -22642,8 +22629,7 @@ console.log(gcdIterative(48, 18));  // Output: 6
 * radius^2 * height.</p>
 
 <pre>
-const cylinderVolume = (radius, height) => Math.PI * radius ** 2 * height;
-
+const cylinderVolume = (radius, height) =&gt; Math.PI * radius ** 2 * height;
 // Example usage
 console.log(cylinderVolume(5, 10));  // Output: 785.3981633974483
 </pre>
@@ -22653,9 +22639,9 @@ console.log(cylinderVolume(5, 10));  // Output: 785.3981633974483
 <p>The isSmithNumber function checks whether a given number is a Smith number.</p>
 
 <pre>
-const sumOfDigits = (num) => &lbrack;...String(num)&rbrack;.reduce((sum, digit) => 
+const sumOfDigits = (num) =&gt; &lbrack;...String(num)&rbrack;.reduce((sum, digit) =&gt; 
   sum + Number(digit), 0);
-const sumOfPrimeFactors = (num) => {
+const sumOfPrimeFactors = (num) =&gt; {
   let factor = 2;
   let sum = 0;
   while (num > 1) {
@@ -22668,8 +22654,7 @@ const sumOfPrimeFactors = (num) => {
   }
   return sum;
 };
-const isSmithNumber = (num) => sumOfDigits(num) === sumOfPrimeFactors(num);
-
+const isSmithNumber = (num) =&gt; sumOfDigits(num) === sumOfPrimeFactors(num);
 // Example usage
 console.log(isSmithNumber(666));  // Output: true
 console.log(isSmithNumber(378));  // Output: true
@@ -22682,8 +22667,7 @@ console.log(isSmithNumber(123));  // Output: false
 representation using the .toString() method with the base argument set to 8.</p>
 
 <pre>
-const decimalToOctal = (num) => num.toString(8);
-
+const decimalToOctal = (num) =&gt; num.toString(8);
 // Example usage
 console.log(decimalToOctal(27));  // Output: "33"
 </pre>
@@ -22694,8 +22678,7 @@ console.log(decimalToOctal(27));  // Output: "33"
 using the formula: (num1 * num2) / gcd(num1, num2).</p>
 
 <pre>
-const lcm = (num1, num2) => (num1 * num2) / gcd(num1, num2);
-
+const lcm = (num1, num2) =&gt; (num1 * num2) / gcd(num1, num2);
 // Example usage
 console.log(lcm(24, 36));  // Output: 72
 </pre>
@@ -22706,8 +22689,7 @@ console.log(lcm(24, 36));  // Output: 72
 in the North American format "XXX-XXX-XXXX", where X represents a digit.</p>
 
 <pre>
-const isValidPhoneNumber = (phone) => /^\d{3}-\d{3}-\d{4}$/.test(phone);
-
+const isValidPhoneNumber = (phone) =&gt; /^\d{3}-\d{3}-\d{4}$/.test(phone);
 // Example usage
 console.log(isValidPhoneNumber("555-123-4567"));  // Output: true
 console.log(isValidPhoneNumber("123-4567"));  // Output: false
@@ -22719,8 +22701,7 @@ console.log(isValidPhoneNumber("123-4567"));  // Output: false
 numbers using the formula: (n * (n + 1)) / 2.</p>
 
 <pre>
-const sumOfNaturals = (n) => (n * (n + 1)) / 2;
-
+const sumOfNaturals = (n) =&gt; (n * (n + 1)) / 2;
 // Example usage
 console.log(sumOfNaturals(10));  // Output: 55
 </pre>
@@ -22732,14 +22713,13 @@ perfect number is a positive integer that is equal to the sum of its proper divi
 (excluding itself).</p>
 
 <pre>
-const isPerfectNumber = (num) => {
+const isPerfectNumber = (num) =&gt; {
   let sum = 0;
   for (let i = 1; i &lt;= num / 2; i++) {
     if (num % i === 0) sum += i;
   }
   return sum === num;
 };
-
 // Example usage
 console.log(isPerfectNumber(28));  // Output: true
 console.log(isPerfectNumber(12));  // Output: false
@@ -22753,14 +22733,13 @@ than the given number, checking if the given number is divisible by each of
 those numbers.</p>
 
 <pre>
-const factors = (num) => {
+const factors = (num) =&gt; {
   const result = &lbrack;&rbrack;;
   for (let i = 2; i &lt; num; i++) {
     if (num % i === 0) result.push(i);
   }
   return result;
 };
-
 // Example usage
 console.log(factors(12));  // Output: &lbrack;2, 3, 4, 6&rbrack;
 </pre>
@@ -22771,8 +22750,7 @@ console.log(factors(12));  // Output: &lbrack;2, 3, 4, 6&rbrack;
 0.5 * base * height.</p>
 
 <pre>
-const triangleArea = (base, height) => 0.5 * base * height;
-
+const triangleArea = (base, height) =&gt; 0.5 * base * height;
 // Example usage
 console.log(triangleArea(5, 10));  // Output: 25
 </pre>
@@ -22784,8 +22762,7 @@ console.log(triangleArea(5, 10));  // Output: 25
 Number (SSN) in the format "XXX-XX-XXXX", where X represents a digit.</p>
 
 <pre>
-const isValidSSN = (ssn) => /^\d{3}-\d{2}-\d{4}$/.test(ssn);
-
+const isValidSSN = (ssn) =&gt; /^\d{3}-\d{2}-\d{4}$/.test(ssn);
 // Example usage
 console.log(isValidSSN("123-45-6789"));  // Output: true
 console.log(isValidSSN("123-45-678"));  // Output: false
@@ -22798,10 +22775,9 @@ specified range and of a specified length. It uses the Array.from method with a 
 function to create the desired array.</p>
 
 <pre>
-const randomArrayInRange = (min, max, length) => 
-  Array.from({ length }, () => 
+const randomArrayInRange = (min, max, length) =&gt; 
+  Array.from({ length }, () =&gt; 
   Math.floor(Math.random() * (max - min + 1)) + min);
-
 // Example usage
 console.log(randomArrayInRange(1, 100, 5));  // Output: &lbrack;34, 87, 19, 56, 72&rbrack;
 </pre>
@@ -22813,7 +22789,7 @@ number is a number that eventually reaches the value 1 when the sum of its digit
 repeatedly calculated.</p>
 
 <pre>
-const isMagicNumber = (num) => {
+const isMagicNumber = (num) =&gt; {
   let sum = 0;
   while (num > 0) {
     sum += num % 10;
@@ -22821,7 +22797,6 @@ const isMagicNumber = (num) => {
   }
   return sum === 1;
 };
-
 // Example usage
 console.log(isMagicNumber(19));  // Output: true
 console.log(isMagicNumber(123));  // Output: false
@@ -22832,9 +22807,8 @@ console.log(isMagicNumber(123));  // Output: false
 <p>The isValidIPv4 function checks whether a given string represents a valid IPv4 address.</p>
 
 <pre>
-const isValidIPv4 = (ip) => /^(?:(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)\.)
+const isValidIPv4 = (ip) =&gt; /^(?:(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)\.)
 {3}(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)$/.test(ip);
-
 // Example usage
 console.log(isValidIPv4("192.168.1.1"));  // Output: true
 console.log(isValidIPv4("256.0.0.1"));  // Output: false
@@ -22847,8 +22821,7 @@ hexadecimal (base 16) representation using the built-in toString method with a r
 16.</p>
 
 <pre>
-const decimalToHex = (num) => num.toString(16);
-
+const decimalToHex = (num) =&gt; num.toString(16);
 // Example usage
 console.log(decimalToHex(255));  // Output: "ff"
 </pre>
@@ -22859,8 +22832,7 @@ console.log(decimalToHex(255));  // Output: "ff"
 "YYYY-MM-DD".</p>
 
 <pre>
-const isValidDate = (date) => /^\d{4}-\d{2}-\d{2}$/.test(date);
-
+const isValidDate = (date) =&gt; /^\d{4}-\d{2}-\d{2}$/.test(date);
 // Example usage
 console.log(isValidDate("2023-08-02"));  // Output: true
 console.log(isValidDate("02-08-2023"));  // Output: false
@@ -22874,8 +22846,7 @@ common multiple (LCM) of an array of numbers by reducing the array and
 applying the formula (lcm * num) / gcd(lcm, num).</p>
 
 <pre>
-const lcmArray = (arr) => arr.reduce((lcm, num) => (lcm * num) / gcd(lcm, num));
-
+const lcmArray = (arr) =&gt; arr.reduce((lcm, num) =&gt; (lcm * num) / gcd(lcm, num));
 // Example usage
 console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;));  // Output: 60
 </pre>
@@ -22888,9 +22859,8 @@ requires that the password contains at least one letter (&lbrack;A-Za-z&rbrack;)
 one digit (\d), and one special character (&lbrack;@$!%*?&&rbrack;).</p>
 
 <pre>
-const isValidPassword = (password) => /^(?=.*&lbrack;A-Za-z&rbrack;)(?=.*\d)(?=.*
+const isValidPassword = (password) =&gt; /^(?=.*&lbrack;A-Za-z&rbrack;)(?=.*\d)(?=.*
   &lbrack;@$!%*?&&rbrack;)&lbrack;A-Za-z\d@$!%*?&&rbrack;{8,}$/.test(password);
-
 // Example usage
 console.log(isValidPassword("P@ssw0rd"));  // Output: true
 console.log(isValidPassword("password123"));  // Output: false
@@ -22901,7 +22871,7 @@ console.log(isValidPassword("password123"));  // Output: false
 <p>The fibonacci function calculates the Nth Fibonacci number using an iterative approach.</p>
 
 <pre>
-const fibonacci = (n) => {
+const fibonacci = (n) =&gt; {
   if (n === 1) return 0;
   if (n === 2) return 1;
   let prev1 = 0;
@@ -22914,7 +22884,6 @@ const fibonacci = (n) => {
   }
   return result;
 };
-
 // Example usage
 console.log(fibonacci(7));  // Output: 8
 </pre>
@@ -22924,8 +22893,7 @@ console.log(fibonacci(7));  // Output: 8
 <p>The isDeficientNumber function determines whether a given number is a deficient number.</p>
 
 <pre>
-const isDeficientNumber = (num) => num > sumOfProperDivisors(num);
-
+const isDeficientNumber = (num) =&gt; num > sumOfProperDivisors(num);
 // Example usage
 console.log(isDeficientNumber(10));  // Output: true
 console.log(isDeficientNumber(28));  // Output: false
@@ -22938,9 +22906,8 @@ points in a 2D plane. Given the coordinates of two points (x1, y1) and (x2, y2),
 uses the formula sqrt((x2 - x1)^2 + (y2 - y1)^2) to compute the distance between them.</p>
 
 <pre>
-const distanceBetweenPoints = (x1, y1, x2, y2) => 
+const distanceBetweenPoints = (x1, y1, x2, y2) =&gt; 
   Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
-
 // Example usage
 console.log(distanceBetweenPoints(0, 0, 3, 4));  // Output: 5
 </pre>
@@ -22951,7 +22918,6 @@ console.log(distanceBetweenPoints(0, 0, 3, 4));  // Output: 5
 
 <pre>
 const isAbundantNumber = (num) =&gt; num &lt; sumOfProperDivisors(num);
-
 // Example usage
 console.log(isAbundantNumber(12));  // Output: true
 console.log(isAbundantNumber(28));  // Output: false
@@ -22964,8 +22930,7 @@ formula for the volume of a cube is side^3, where side is the length of one side
 cube.</p>
 
 <pre>
-const cubeVolume = (side) => side ** 3;
-
+const cubeVolume = (side) =&gt; side ** 3;
 // Example usage
 console.log(cubeVolume(5));  // Output: 125
 </pre>
@@ -22975,9 +22940,8 @@ console.log(cubeVolume(5));  // Output: 125
 <p>The isValidCreditCard function uses a regular expression to validate a credit card number.</p>
 
 <pre>
-const isValidCreditCard = (card) => /^(?:4&lbrack;0-9&rbrack;{12}(?:&lbrack;0-9&rbrack;{3})?|5&lbrack;1-5&rbrack;&lbrack;0-
+const isValidCreditCard = (card) =&gt; /^(?:4&lbrack;0-9&rbrack;{12}(?:&lbrack;0-9&rbrack;{3})?|5&lbrack;1-5&rbrack;&lbrack;0-
 9&rbrack;{14}|6(?:011|5&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;)&lbrack;0-9&rbrack;{12}|3&lbrack;47&rbrack;&lbrack;0-9&rbrack;{13})$/.test(card);
-
 // Example usage
 console.log(isValidCreditCard("4012-3456-7890-1234"));  // Output: true
 console.log(isValidCreditCard("1234-5678-9012-3456"));  // Output: false
@@ -22990,8 +22954,7 @@ side lengths. It simply adds up the lengths of all three sides and returns the r
 the perimeter of the triangle.</p>
 
 <pre>
-const trianglePerimeter = (side1, side2, side3) => side1 + side2 + side3;
-
+const trianglePerimeter = (side1, side2, side3) =&gt; side1 + side2 + side3;
 // Example usage
 console.log(trianglePerimeter(5, 10, 7));  // Output: 22
 </pre>
@@ -23001,7 +22964,7 @@ console.log(trianglePerimeter(5, 10, 7));  // Output: 22
 <p>The isVampireNumber function checks if a given number is a vampire number.</p>
 
 <pre>
-const isVampireNumber = (num) => {
+const isVampireNumber = (num) =&gt; {
   const numStr = String(num);
   const numLen = numStr.length;
   const numDigits = &lbrack;...numStr&rbrack;;
@@ -23017,7 +22980,6 @@ const isVampireNumber = (num) => {
   }
   return false;
 };
-
 // Example usage
 console.log(isVampireNumber(1260));  // Output: true
 console.log(isVampireNumber(1250));  // Output: false
@@ -23029,11 +22991,10 @@ console.log(isVampireNumber(1250));  // Output: false
 respective positions.</p>
 
 <pre>
-const sumOfDigitsRaisedToPower = (num) => {
+const sumOfDigitsRaisedToPower = (num) =&gt; {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
-  return digits.reduce((sum, digit, index) => sum + digit ** (index + 1), 0);
+  return digits.reduce((sum, digit, index) =&gt; sum + digit ** (index + 1), 0);
 };
-
 // Example usage
 console.log(sumOfDigitsRaisedToPower(12345));  // Output: 115
 </pre>
@@ -23044,10 +23005,9 @@ console.log(sumOfDigitsRaisedToPower(12345));  // Output: 115
 number is a number that contains the digit "0" but does not start with "0".</p>
 
 <pre>
-const isDuckNumber = (num) => 
+const isDuckNumber = (num) =&gt; 
   String(num).includes('0') &&
   String(num)&lbrack;0&rbrack; !== '0';
-
 // Example usage
 console.log(isDuckNumber(1023));  // Output: true
 console.log(isDuckNumber(12345));  // Output: false
@@ -23058,9 +23018,8 @@ console.log(isDuckNumber(12345));  // Output: false
 <p>The randomPassword function generates a random password of the specified length.</p>
 
 <pre>
-const randomPassword = (length) => Array.from({ length }, () =>
+const randomPassword = (length) =&gt; Array.from({ length }, () =&gt;
   Math.random().toString(36).charAt(2)).join('');
-
 // Example usage
 console.log(randomPassword(8));  // Output: "3klS0p9x"
 </pre>
@@ -23071,9 +23030,8 @@ console.log(randomPassword(8));  // Output: "3klS0p9x"
 0.5 * (base1 + base2) * height.</p>
 
 <pre>
-const trapezoidArea = (base1, base2, height) => 
+const trapezoidArea = (base1, base2, height) =&gt; 
   0.5 * (base1 + base2) * height;
-
 // Example usage
 console.log(trapezoidArea(4, 8, 6));  // Output: 36
 </pre>
@@ -23083,7 +23041,7 @@ console.log(trapezoidArea(4, 8, 6));  // Output: 36
 <p>The isKaprekarNumber function checks if a given number is a Kaprekar number.</p>
 
 <pre>
-const isKaprekarNumber = (num) => {
+const isKaprekarNumber = (num) =&gt; {
   const square = num ** 2;
   const squareStr = String(square);
   const numStr = String(num);
@@ -23091,7 +23049,6 @@ const isKaprekarNumber = (num) => {
   const right = Number(squareStr.slice(-numStr.length));
   return left + right === num;
 };
-
 // Example usage
 console.log(isKaprekarNumber(9));  // Output: true
 console.log(isKaprekarNumber(297));  // Output: true
@@ -23106,8 +23063,7 @@ V = (1/3) * π * r² * h, <br>
 where r is the radius of the base and h is the height of the cone.</p>
 
 <pre>
-const coneVolume = (radius, height) => (1 / 3) * Math.PI * radius ** 2;
-
+const coneVolume = (radius, height) =&gt; (1 / 3) * Math.PI * radius ** 2;
 // Example usage
 console.log(coneVolume(5, 10));  // Output: 261.79938779914943
 </pre>
@@ -23117,7 +23073,7 @@ console.log(coneVolume(5, 10));  // Output: 261.79938779914943
 <p>The isValidUSPhoneNumber function uses a regular expression to validate US phone numbers.</p>
 
 <pre>
-const isValidUSPhoneNumber = (phone) => /^(?:(?:\+1\s?)?(?:\(?\d{3}\)?
+const isValidUSPhoneNumber = (phone) =&gt; /^(?:(?:\+1\s?)?(?:\(?\d{3}\)?
 &lbrack;\s.-&rbrack;?)?\d{3}&lbrack;\s.-&rbrack;?\d{4})$/.test(phone);
 
 // Example usage
@@ -23132,7 +23088,7 @@ console.log(isValidUSPhoneNumber("1-800-ABC-DEFG"));  // Output: false
 each digit raised to the power of its respective position is equal to the number itself.</p>
 
 <pre>
-const sumOfDigitsRaisedToPowerUpToThousand = () => {
+const sumOfDigitsRaisedToPowerUpToThousand = () =&gt; {
   let sum = 0;
   for (let i = 1; i &lt;= 1000; i++) {
     if (sumOfDigitsRaisedToPower(i) === i) {
@@ -23151,7 +23107,7 @@ console.log(sumOfDigitsRaisedToPowerUpToThousand());  // Output: 443839
 <p>The isCarolNumber function checks if a given number is a Carol number.</p>
 
 <pre>
-const isCarolNumber = (num) => {
+const isCarolNumber = (num) =&gt; {
   const carolPrime = (2 ** num) - 1;
   return isPrime(num) && isPerfectSquare(carolPrime);
 };
@@ -23168,7 +23124,7 @@ console.log(isCarolNumber(6));  // Output: false
 ensures that the input number is a non-negative integer.</p>
 
 <pre>
-const isCatalanNumber = (num) => num >= 0 && Number.isInteger(num)
+const isCatalanNumber = (num) =&gt; num >= 0 && Number.isInteger(num)
   && num === ((factorial(2 * num)) / (factorial(num + 1) * factorial(num)));
 
 // Example usage
@@ -23182,7 +23138,7 @@ console.log(isCatalanNumber(10));  // Output: false
 and height.</p>
 
 <pre>
-const cuboidVolume = (length, width, height) => length * width * height;
+const cuboidVolume = (length, width, height) =&gt; length * width * height;
 
 // Example usage
 console.log(cuboidVolume(5, 10, 8));  // Output: 400
@@ -23193,7 +23149,7 @@ console.log(cuboidVolume(5, 10, 8));  // Output: 400
 <p>The isDudeneyNumber function checks if a number is a Dudeney number.</p>
 
 <pre>
-const isDudeneyNumber = (num) => num === sumOfDigitsCube(num);
+const isDudeneyNumber = (num) =&gt; num === sumOfDigitsCube(num);
 
 // Example usage
 console.log(isDudeneyNumber(512));  // Output: true
@@ -23205,7 +23161,7 @@ console.log(isDudeneyNumber(64));  // Output: false
 <p>Generate a random color in hexadecimal format (#RRGGBB).</p>
 
 <pre>
-const randomColorHex = () => `#${Math.floor(Math.random() *
+const randomColorHex = () =&gt; `#${Math.floor(Math.random() *
 16777215).toString(16)}`;
 
 // Example usage
@@ -23217,7 +23173,7 @@ console.log(randomColorHex());  // Output: "#92b008"
 <p>Calculate the area of a circle sector given the radius and the central angle in degrees.</p>
 
 <pre>
-const circleSectorArea = (radius, angle) => (angle / 360) * Math.PI * radius ** 2;
+const circleSectorArea = (radius, angle) =&gt; (angle / 360) * Math.PI * radius ** 2;
 
 // Example usage
 console.log(circleSectorArea(5, 90));  // Output: 11.780972450961725
@@ -23228,7 +23184,7 @@ console.log(circleSectorArea(5, 90));  // Output: 11.780972450961725
 <p>Calculate the area of a regular polygon given the side length and the number of sides.</p>
 
 <pre>
-const regularPolygonArea = (sideLength, numOfSides) => 
+const regularPolygonArea = (sideLength, numOfSides) =&gt; 
   (numOfSides * sideLength ** 2) / (4 * Math.tan(Math.PI / numOfSides));
 
 // Example usage
@@ -23240,7 +23196,7 @@ console.log(regularPolygonArea(5, 6));  // Output: 64.9519052838329
 <p>Remove duplicates from an array while preserving the order of the elements.</p>
 
 <pre>
-const removeDuplicates = (arr) => &lbrack;...new Set(arr)&rbrack;;
+const removeDuplicates = (arr) =&gt; &lbrack;...new Set(arr)&rbrack;;
 
 // Example usage
 console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;)); 
@@ -23253,7 +23209,7 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));
 axis length (b).</p>
 
 <pre>
-const ellipseArea = (a, b) => Math.PI * a * b;
+const ellipseArea = (a, b) =&gt; Math.PI * a * b;
 
 // Example usage
 console.log(ellipseArea(5, 10));  // Output: 157.07963267948966
@@ -23264,7 +23220,7 @@ console.log(ellipseArea(5, 10));  // Output: 157.07963267948966
 <p>Check if a given number is a Leyland number.</p>
 
 <pre>
-const isLeylandNumber = (num) => {
+const isLeylandNumber = (num) =&gt; {
   let found = false;
   for (let x = 2; x &lt;= Math.floor(Math.pow(num, 1 / 3)) && !found; x++) {
     for (let y = x + 1; x * y &lt;= num && !found; y++) {
@@ -23287,7 +23243,7 @@ console.log(isLeylandNumber(100));  // Output: false
 <p>Generate a random Universally Unique Identifier (UUID).</p>
 
 <pre>
-const randomUUID = () => {
+const randomUUID = () =&gt; {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/&lbrack;xy&rbrack;/g,
   function(c) {
     const r = Math.random() * 16 | 0;
@@ -23305,7 +23261,7 @@ console.log(randomUUID());  // Output: "a0f768f5-6bf2-4f6b-a512-c9121ea1b44a"
 <p>Check if a given string represents a valid IPv6 address.</p>
 
 <pre>
-const isValidIPv6 = (ip) => /^(&lbrack;0-9a-fA-F&rbrack;{1,4}:){7}&lbrack;0-9a-fA-F&rbrack;
+const isValidIPv6 = (ip) =&gt; /^(&lbrack;0-9a-fA-F&rbrack;{1,4}:){7}&lbrack;0-9a-fA-F&rbrack;
   {1,4}$/.test(ip);
 
 // Example usage
@@ -23319,7 +23275,7 @@ console.log(isValidIPv6("256.0.0.0"));  // Output: false
 <p>Calculate the area of a parallelogram using the given base and height.</p>
 
 <pre>
-const parallelogramArea = (base, height) => base * height;
+const parallelogramArea = (base, height) =&gt; base * height;
 
 // Example usage
 console.log(parallelogramArea(5, 10));  // Output: 50
@@ -23330,7 +23286,7 @@ console.log(parallelogramArea(5, 10));  // Output: 50
 <p>Check if a given string is a valid MAC address.</p>
 
 <pre>
-const isValidMACAddress = (mac) => 
+const isValidMACAddress = (mac) =&gt; 
   /^(&lbrack;0-9A-Fa-f&rbrack;{2}&lbrack;:-&rbrack;){5}(&lbrack;0-9A-Fa-f&rbrack;{2})$/.test(mac);
 
 // Example usage
@@ -23344,12 +23300,12 @@ console.log(isValidMACAddress("00:1A:2B:3C:4D"));  // Output: false
 Lightness).</p>
 
 <pre>
-const rgbToHSL = (r, g, b) => {
-  &lbrack;r, g, b&rbrack; = &lbrack;r, g, b&rbrack;.map(val => val / 255);
+const rgbToHSL = (r, g, b) =&gt; {
+  &lbrack;r, g, b&rbrack; = &lbrack;r, g, b&rbrack;.map(val =&gt; val / 255);
   const &lbrack;max, min&rbrack; = &lbrack;Math.max(r, g, b), Math.min(r, g, b)&rbrack;;
   let h = (max !== min) ? ((max === r ? g - b : (max === g ? b - r : r - g)) /
   (max - min) + (max === g ? 2 : (max === b ? 4 : 0))) / 6 : 0;
-  let s = (max !== min) ? (l => 1 > 0.5 ? (max - min) / (2 - max - min) : (max - min) / (max + min))(l) : 0;
+  let s = (max !== min) ? (l =&gt; 1 &gt; 0.5 ? (max - min) / (2 - max - min) : (max - min) / (max + min))(l) : 0;
   let l = (max + min) / 2;
   return { h: Math.round(h * 360), 
     s: Math.round(s * 100), 
@@ -23367,7 +23323,7 @@ console.log(rgbToHSL(0, 0, 255));  // Output: { h: 240, s: 100, l: 50 }
 <p>Check if a given number is a pandigital number.</p>
 
 <pre>
-const isPandigitalNumber = (num) => {
+const isPandigitalNumber = (num) =&gt; {
   const numStr = String(num);
   const digits = new Set(numStr);
   return digits.size === numStr.length && !digits.has('0') && digits.size
@@ -23385,7 +23341,7 @@ console.log(isPandigitalNumber(1023456789));  // Output: false
 <p>Calculate the sum of proper divisors of a given number.</p>
 
 <pre>
-const sumOfProperDivisors = (num) => {
+const sumOfProperDivisors = (num) =&gt; {
   let sum = 0;
   for (let i = 1; i &lt;= Math.sqrt(num); i++) {
     if (num % i === 0) {
@@ -23408,7 +23364,7 @@ console.log(sumOfProperDivisors(12));  // Output: 16
 <p>Find the least common multiple (LCM) of an array of numbers.</p>
 
 <pre>
-const lcmArray = (arr) => arr.reduce((lcm, num) => 
+const lcmArray = (arr) =&gt; arr.reduce((lcm, num) =&gt; 
   lcm * num / gcdArray(arr), 1);
 
 // Example usage
@@ -23420,7 +23376,7 @@ console.log(lcmArray(&lbrack;2, 3, 4&rbrack;));  // Output: 12
 <p>Calculate the sum of the squares of the first n natural numbers.</p>
 
 <pre>
-const sumOfSquares = (n) => (n * (n + 1) * (2 * n + 1)) / 6;
+const sumOfSquares = (n) =&gt; (n * (n + 1) * (2 * n + 1)) / 6;
 
 // Example usage
 console.log(sumOfSquares(5));  // Output: 55
@@ -23431,7 +23387,7 @@ console.log(sumOfSquares(5));  // Output: 55
 <p>Check if a given number is a powerful number.</p>
 
 <pre>
-const isPowerfulNumber = (num) => {
+const isPowerfulNumber = (num) =&gt; {
   const factors = primeFactors(num);
   return new Set(factors).size === factors.length;
 };
@@ -23446,8 +23402,8 @@ console.log(isPowerfulNumber(36));  // Output: false
 <p>Find the product of the digits of a given number.</p>
 
 <pre>
-const productOfDigits = (num) => 
-  &lbrack;...String(num)&rbrack;.reduce((product, digit) => 
+const productOfDigits = (num) =&gt; 
+  &lbrack;...String(num)&rbrack;.reduce((product, digit) =&gt; 
     product * Number(digit), 1);
 
 // Example usage
@@ -23459,7 +23415,7 @@ console.log(productOfDigits(12345));  // Output: 120
 <p>Check if a given number is a practical number.</p>
 
 <pre>
-const isPracticalNumber = (num) => {
+const isPracticalNumber = (num) =&gt; {
   const factors = primeFactors(num);
   for (let i = 2; i &lt;= factors.length; i++) {
     if (sumOfArray(combinations(factors, i)) !== num) {
@@ -23480,7 +23436,7 @@ console.log(isPracticalNumber(14));  // Output: false
 <p>Calculate the sum of the cubes of the first n natural numbers.</p>
 
 <pre>
-const sumOfCubes = (n) => Math.pow((n * (n + 1)) / 2, 2);
+const sumOfCubes = (n) =&gt; Math.pow((n * (n + 1)) / 2, 2);
 
 // Example usage
 console.log(sumOfCubes(5));  // Output: 225
@@ -23491,9 +23447,9 @@ console.log(sumOfCubes(5));  // Output: 225
 <p>Check if a given number is a strange number.</p>
 
 <pre>
-const isStrangeNumber = (num) => {
+const isStrangeNumber = (num) =&gt; {
   const factors = primeFactors(num);
-  return factors.every((factor) => 
+  return factors.every((factor) =&gt; 
     sumOfDigits(factor) === sumOfDigits(num));
 };
 
@@ -23508,9 +23464,9 @@ console.log(isStrangeNumber(20));  // Output: false
 <p>Check if a given number is a Tau number.</p>
 
 <pre>
-const isTauNumber = (num) => {
+const isTauNumber = (num) =&gt; {
   const factors = primeFactors(num);
-  return factors.some((factor) => 
+  return factors.some((factor) =&gt; 
     sumOfDigits(factor) === sumOfDigits(num));
 };
 
@@ -23525,7 +23481,7 @@ console.log(isTauNumber(25));  // Output: false
 <p>Generate a random alphanumeric string of a given length.</p>
 
 <pre>
-const randomAlphanumericString = (length) => {
+const randomAlphanumericString = (length) =&gt; {
   const characters =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
@@ -23545,7 +23501,7 @@ console.log(randomAlphanumericString(8));  // Output: "Yw83XmLb"
 <p>Calculate the area of a regular hexagon using its side length.</p>
 
 <pre>
-const regularHexagonArea = (sideLength) => 
+const regularHexagonArea = (sideLength) =&gt; 
   (3 * Math.sqrt(3) * sideLength ** 2) / 2;
 
 // Example usage
@@ -23557,7 +23513,7 @@ console.log(regularHexagonArea(5));  // Output: 64.9519052838329
 <p>Calculate the sum of divisors of a given number.</p>
 
 <pre>
-const sumOfDivisors = (num) => sumOfArray(divisors(num));
+const sumOfDivisors = (num) =&gt; sumOfArray(divisors(num));
 
 // Example usage
 console.log(sumOfDivisors(28));  // Output: 56
@@ -23569,9 +23525,9 @@ console.log(sumOfDivisors(12));  // Output: 28
 <p>Check if a given number is a Zeisel number.</p>
 
 <pre>
-const isZeiselNumber = (num) => {
+const isZeiselNumber = (num) =&gt; {
   const factors = primeFactors(num);
-  return factors.every((factor) => isPrime(factor + 1));
+  return factors.every((factor) =&gt; isPrime(factor + 1));
 };
 
 // Example usage
@@ -23584,11 +23540,10 @@ console.log(isZeiselNumber(10));  // Output: false
 <p>Check if a given number is a reversible number.</p>
 
 <pre>
-const isReversibleNumber = (num) => {
+const isReversibleNumber = (num) =&gt; {
   const reversedNum = Number(String(num).split('').reverse().join(''));
   return num + reversedNum === sumOfDigits(num);
 };
-
 // Example usage
 console.log(isReversibleNumber(36));  // Output: true
 console.log(isReversibleNumber(45));  // Output: true
@@ -23600,9 +23555,8 @@ console.log(isReversibleNumber(10));  // Output: false
 <p>Calculate the circumference of a circle using its radius.</p>
 
 <pre>
-const circleCircumference = (radius) => 
+const circleCircumference = (radius) =&gt; 
   2 * Math.PI * radius;
-
 // Example usage
 console.log(circleCircumference(5));  // Output: 31.41592653589793
 </pre>
@@ -23612,9 +23566,8 @@ console.log(circleCircumference(5));  // Output: 31.41592653589793
 <p>Find the shortest word in a given string.</p>
 
 <pre>
-const shortestWord = (str) => str.split(' ').reduce((shortest, word) =>
+const shortestWord = (str) =&gt; str.split(' ').reduce((shortest, word) =&gt;
   (word.length &lt; shortest.length ? word : shortest), '');
-
 // Example usage
 console.log(shortestWord("This is a test sentence"));  // Output: "a"
 </pre>
@@ -23624,9 +23577,8 @@ console.log(shortestWord("This is a test sentence"));  // Output: "a"
 <p>Find the length of the longest word in a given string.</p>
 
 <pre>
-const longestWordLength = (str) => 
-  Math.max(...str.split(' ').map(word => word.length));
-
+const longestWordLength = (str) =&gt; 
+  Math.max(...str.split(' ').map(word =&gt; word.length));
 // Example usage
 console.log(longestWordLength("This is a test sentence"));  // Output: 8
 </pre>
@@ -23636,8 +23588,7 @@ console.log(longestWordLength("This is a test sentence"));  // Output: 8
 <p>Find the sum of the proper divisors of a given number.</p>
 
 <pre>
-const sumOfProperDivisors = (num) => sumOfArray(divisors(num)) - num;
-
+const sumOfProperDivisors = (num) =&gt; sumOfArray(divisors(num)) - num;
 // Example usage
 console.log(sumOfProperDivisors(28));  // Output: 28
 console.log(sumOfProperDivisors(12));  // Output: 16
@@ -23648,9 +23599,8 @@ console.log(sumOfProperDivisors(12));  // Output: 16
 <p>Check if a given number is a unitary perfect number.</p>
 
 <pre>
-const isUnitaryPerfectNumber = (num) => 
+const isUnitaryPerfectNumber = (num) =&gt; 
   num === sumOfUnitaryDivisors(num);
-
 // Example usage
 console.log(isUnitaryPerfectNumber(18));  // Output: true
 console.log(isUnitaryPerfectNumber(28));  // Output: false
@@ -23662,9 +23612,8 @@ console.log(isUnitaryPerfectNumber(28));  // Output: false
 number of sides.</p>
 
 <pre>
-const regularPolygonPerimeter = (sideLength, numSides) => 
+const regularPolygonPerimeter = (sideLength, numSides) =&gt; 
   sideLength * numSides;
-
 // Example usage
 console.log(regularPolygonPerimeter(5, 6));  // Output: 30
 </pre>
@@ -23674,9 +23623,8 @@ console.log(regularPolygonPerimeter(5, 6));  // Output: 30
 <p>Calculate the area of an equilateral triangle using its side length.</p>
 
 <pre>
-const equilateralTriangleArea = (sideLength) => 
+const equilateralTriangleArea = (sideLength) =&gt; 
   (Math.sqrt(3) * sideLength ** 2) / 4;
-
 // Example usage
 console.log(equilateralTriangleArea(5));  // Output: 10.825317547305486
 </pre>
@@ -23686,9 +23634,8 @@ console.log(equilateralTriangleArea(5));  // Output: 10.825317547305486
 <p>Check if a given number is both a Harshad number and a Smith number.</p>
 
 <pre>
-const isHarshadSmithNumber = (num) => 
+const isHarshadSmithNumber = (num) =&gt; 
   isHarshadNumber(num) && isSmithNumber(num);
-
 console.log(isHarshadSmithNumber(22));  // Output: true
 console.log(isHarshadSmithNumber(10));  // Output: false
 </pre>
@@ -23712,7 +23659,6 @@ const isPerfectPower = (num) =&gt; {
   }
   return false;
 };
-
 // Example usage
 console.log(isPerfectPower(64));  // Output: true
 console.log(isPerfectPower(25));  // Output: false
@@ -23723,9 +23669,8 @@ console.log(isPerfectPower(25));  // Output: false
 <p>Calculate the sum of digits raised to their own power for a given number and power.</p>
 
 <pre>
-const sumOfDigitsToPower = (num, power) =>
+const sumOfDigitsToPower = (num, power) =&gt;
   sumOfDigitsRaisedToPower(num, power);
-
 // Example usage
 console.log(sumOfDigitsToPower(123, 3));  // Output: 36
 console.log(sumOfDigitsToPower(4150, 5));  // Output: 4150
@@ -23736,8 +23681,7 @@ console.log(sumOfDigitsToPower(4150, 5));  // Output: 4150
 <p>Check if a given number is a Dudeney number.</p>
 
 <pre>
-const isDudeneyNumber = (num) => Math.cbrt(num) === sumOfDigits(num);
-
+const isDudeneyNumber = (num) =&gt; Math.cbrt(num) === sumOfDigits(num);
 // Example usage
 console.log(isDudeneyNumber(512));  // Output: true
 console.log(isDudeneyNumber(27));  // Output: false
@@ -23748,9 +23692,8 @@ console.log(isDudeneyNumber(27));  // Output: false
 <p>Calculate the area of a regular pentagon using its side length.</p>
 
 <pre>
-const regularPentagonArea = (sideLength) => 
+const regularPentagonArea = (sideLength) =&gt; 
   (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * sideLength ** 2;
-
 // Example usage
 console.log(regularPentagonArea(5));  // Output: 43.01193501472417
 </pre>
@@ -23760,8 +23703,7 @@ console.log(regularPentagonArea(5));  // Output: 43.01193501472417
 <p>Calculate the volume of a pyramid using its base area and height.</p>
 
 <pre>
-const pyramidVolume = (baseArea, height) => (1 / 3) * baseArea * height;
-
+const pyramidVolume = (baseArea, height) =&gt; (1 / 3) * baseArea * height;
 // Example usage
 console.log(pyramidVolume(25, 10));  // Output: 83.33333333333333
 </pre>
@@ -23771,13 +23713,12 @@ console.log(pyramidVolume(25, 10));  // Output: 83.33333333333333
 <p>Check if a given number is a Wedderburn-Etherington number.</p>
 
 <pre>
-const isWedderburnEtheringtonNumber = (num) => {
+const isWedderburnEtheringtonNumber = (num) =&gt; {
   const primes = primeFactors(num);
-  const factorials = primes.map((prime) => factorial(prime - 1));
-  return factorials.reduce((product, factorial) => 
+  const factorials = primes.map((prime) =&gt; factorial(prime - 1));
+  return factorials.reduce((product, factorial) =&gt; 
     product * factorial, 1) === factorial(num);
 };
-
 // Example usage
 console.log(isWedderburnEtheringtonNumber(6));  // Output: true
 console.log(isWedderburnEtheringtonNumber(12));  // Output: false
@@ -23788,8 +23729,7 @@ console.log(isWedderburnEtheringtonNumber(12));  // Output: false
 <p>Calculate the <b>surface area</b> of a <b>cube</b> using its side length.</p>
 
 <pre>
-const cubeSurfaceArea = (sideLength) => 6 * sideLength ** 2;
-
+const cubeSurfaceArea = (sideLength) =&gt; 6 * sideLength ** 2;
 // Example usage
 console.log(cubeSurfaceArea(5));  // Output: 150
 </pre>
@@ -23799,9 +23739,8 @@ console.log(cubeSurfaceArea(5));  // Output: 150
 <p>Check if a given number is a <b>pluperfect number</b>.</p>
 
 <pre>
-const isPluperfectNumber = (num) => 
+const isPluperfectNumber = (num) =&gt; 
   num === sumOfDivisors(sumOfDivisors(num)) - num;
-
 // Example usage
 console.log(isPluperfectNumber(28));  // Output: true
 console.log(isPluperfectNumber(20));  // Output: false
@@ -23812,7 +23751,7 @@ console.log(isPluperfectNumber(20));  // Output: false
 <p>Calculate the area of a regular <b>octagon</b> using its side length.</p>
 
 <pre>
-const regularOctagonArea = (sideLength) => 2 * (1 + Math.sqrt(2)) * sideLength ** 2;
+const regularOctagonArea = (sideLength) =&gt; 2 * (1 + Math.sqrt(2)) * sideLength ** 2;
 
 // Example usage - <b>different for some reason</b>
 console.log(regularOctagonArea(5));  // Output: 86.60254037844387 (120.71067811865474)
@@ -23826,7 +23765,6 @@ function calculateOctagonArea(sideLength) {
   const area = 2 * (1 + Math.sqrt(2)) * sideLength * sideLength;
   return area;
 }
-
 // Example usage:
 const side = 5;
 const area = calculateOctagonArea(side);
@@ -23838,7 +23776,7 @@ console.log(`The area of the octagon with side ${side} is: ${area}`);
 <p>Check if a given number is a repunit number.</p>
 
 <pre>
-const isRepunitNumber = num => /^1+$/.test(num.toString());
+const isRepunitNumber = num =&gt; /^1+$/.test(num.toString());
 <br>
 // Example usage
 console.log(isRepunitNumber(111));  // Output: true
@@ -23850,7 +23788,7 @@ console.log(isRepunitNumber(11));  // Output: false
 <p>Calculate the volume of an ellipsoid using its semi-axes lengths.</p>
 
 <pre>
-const ellipsoidVolume = (a, b, c) => (4 / 3) * Math.PI * a * b * c;
+const ellipsoidVolume = (a, b, c) =&gt; (4 / 3) * Math.PI * a * b * c;
 <br>
 // Example usage
 console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
@@ -23861,8 +23799,7 @@ console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
 <p>Check if a given string is a valid URL using an alternative approach.</p>
 
 <pre>
-const isValidURLAlt = (url) => /^(ftp|http|https):\/\/&lbrack;^ "&rbrack;+$/.test(url);
-
+const isValidURLAlt = (url) =&gt; /^(ftp|http|https):\/\/&lbrack;^ "&rbrack;+$/.test(url);
 // Example usage
 console.log(isValidURLAlt("https://www.example.com"));  // Output: true
 console.log(isValidURLAlt("invalid url"));  // Output: false
@@ -23873,8 +23810,7 @@ console.log(isValidURLAlt("invalid url"));  // Output: false
 <p>Check if a given string is a valid Tax Identification Number (TIN).</p>
 
 <pre>
-const isValidTIN = (tin) => /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
-
+const isValidTIN = (tin) =&gt; /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
 // Example usage
 console.log(isValidTIN("AB123456CD"));  // Output: true
 console.log(isValidTIN("invalid tin"));  // Output: false
@@ -23885,9 +23821,8 @@ console.log(isValidTIN("invalid tin"));  // Output: false
 <p>Check if a given string is a valid International Standard Book Number (ISBN).</p>
 
 <pre>
-const isValidISBN = (isbn) => /^(?:\d{9}&lbrack;\dX&rbrack;|(?:\d{3}-){2}\d{1}
+const isValidISBN = (isbn) =&gt; /^(?:\d{9}&lbrack;\dX&rbrack;|(?:\d{3}-){2}\d{1}
 &lbrack;\dX&rbrack;)$/.test(isbn);
-
 // Example usage
 console.log(isValidISBN("123456789"));  // Output: true
 console.log(isValidISBN("invalid isbn"));  // Output: false
@@ -23898,9 +23833,8 @@ console.log(isValidISBN("invalid isbn"));  // Output: false
 <p>Check if a given string is a valid IP address.</p>
 
 <pre>
-const isValidIPAddress = (ip) => /^((25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})\.){3}
+const isValidIPAddress = (ip) =&gt; /^((25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})\.){3}
 (25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})$/.test(ip);
-
 // Example usage
 console.log(isValidIPAddress("192.168.1.1"));  // Output: true
 console.log(isValidIPAddress("invalid ip"));  // Output: false
@@ -23911,9 +23845,8 @@ console.log(isValidIPAddress("invalid ip"));  // Output: false
 <p>Reverse a string using a recursive approach.</p>
 
 <pre>
-const reverseStringRecursive = str => str === " ? " :
+const reverseStringRecursive = str =&gt; str === " ? " :
 reverseStringRecursive(str.substr(1)) + str.charAt(0);
-
 // Example usage
 console.log(reverseStringRecursive('hello'));  // Output: 'olleh'
 </pre>
@@ -23923,9 +23856,8 @@ console.log(reverseStringRecursive('hello'));  // Output: 'olleh'
 <p>Count the occurrences of each element in a given array and return the counts in an object.</p>
 
 <pre>
-const countOccurrences = arr => arr.reduce((acc, curr) => 
+const countOccurrences = arr =&gt; arr.reduce((acc, curr) =&gt; 
   (acc&lbrack;curr&rbrack; = (acc&lbrack;curr&rbrack; || 0) + 1, acc), {});
-
 // Example usage
 console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;)); 
 // Output: { '1': 3, '2': 2, '3': 1, '4': 1 }
@@ -23936,9 +23868,8 @@ console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;));
 <p>Check if two arrays are equal through a shallow comparison of their elements.</p>
 
 <pre>
-const arraysAreEqual = (arr1, arr2) => arr1.length === arr2.length && 
-  arr1.every((val, index) => val === arr2&lbrack;index&rbrack;);
-
+const arraysAreEqual = (arr1, arr2) =&gt; arr1.length === arr2.length && 
+  arr1.every((val, index) =&gt; val === arr2&lbrack;index&rbrack;);
 // Example usage
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 3&rbrack;));  // Output: true
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;));  // Output: false
@@ -23949,8 +23880,7 @@ console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;));  
 <p>Find the minimum value in a given array of numbers.</p>
 
 <pre>
-const findMinValue = arr => Math.min(...arr);
-
+const findMinValue = arr =&gt; Math.min(...arr);
 // Example usage
 console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;));  // Output: 1
 </pre>
@@ -23960,8 +23890,7 @@ console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;));  // Output: 1
 <p>Flatten an array of nested arrays using the concat method.</p>
 
 <pre>
-const flattenArray = arr => &lbrack;&rbrack;.concat(...arr);
-
+const flattenArray = arr =&gt; &lbrack;&rbrack;.concat(...arr);
 // Example usage
 console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lbrack;5, 6&rbrack;&rbrack;)); 
 // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
@@ -23972,8 +23901,7 @@ console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lb
 <p>Calculate the average of numbers in a given array.</p>
 
 <pre>
-const findAverage = arr => arr.reduce((sum, num) => sum + num, 0) / arr.length;
-
+const findAverage = arr =&gt; arr.reduce((sum, num) =&gt; sum + num, 0) / arr.length;
 // Example usage
 console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 </pre>
@@ -23983,8 +23911,7 @@ console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 <p>Calculate the sum of the squares of numbers in a given array.</p>
 
 <pre>
-const sumSquares = arr => arr.reduce((sum, num) => sum + num ** 2, 0);
-
+const sumSquares = arr =&gt; arr.reduce((sum, num) =&gt; sum + num ** 2, 0);
 // Example usage
 console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
 </pre>
@@ -23995,11 +23922,10 @@ console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
 considering case-insensitivity.</p>
 
 <pre>
-const isPalindromeIgnoringNonAlphaNumeric = str => {
+const isPalindromeIgnoringNonAlphaNumeric = str =&gt; {
   const cleanedStr = str.replace(/&lbrack;^a-zA-Z0-9&rbrack;/g, ").toLowerCase();
   return cleanedStr === cleanedStr.split(").reverse().join(");
 };
-
 // Example usage
 console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a canal, Panama!"));  // Output: true
 </pre>
@@ -24009,7 +23935,7 @@ console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a canal, Panama!
 <p>Shuffle the elements of an array using the Fisher-Yates shuffle algorithm.</p>
 
 <pre>
-const shuffleArrayFisherYates = arr => {
+const shuffleArrayFisherYates = arr =&gt; {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     &lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; 
@@ -24017,7 +23943,6 @@ const shuffleArrayFisherYates = arr => {
   }
 return arr;
 };
-
 // Example usage
 console.log(shuffleArrayFisherYates(&lbrack;1, 2, 3, 4, 5&rbrack;)); 
 // Output: &lbrack;3, 1, 4, 2, 5&rbrack; (randomly shuffled)
@@ -24028,15 +23953,14 @@ console.log(shuffleArrayFisherYates(&lbrack;1, 2, 3, 4, 5&rbrack;));
 <p>Sort an array of objects based on a specific property value.</p>
 
 <pre>
-const sortByProperty = (arr, prop) => 
-  arr.sort((a, b) => 
+const sortByProperty = (arr, prop) =&gt; 
+  arr.sort((a, b) =&gt; 
     a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
 const data = &lbrack;
   { name: 'Alice', age: 25 }, 
   { name: 'Bob', age: 20 }, 
   { name: 'Carol', age: 30 }
 &rbrack;;
-
 // Example usage
 console.log(sortByProperty(data, 'age'));
 // Output: &lbrack;
@@ -24052,7 +23976,6 @@ console.log(sortByProperty(data, 'age'));
 <pre>
 const originalSentence = "Hello world, how are you?";
 const reversedSentence = reverseWords(originalSentence);
-
 // Example usage
 console.log(reversedSentence);  // Output: "you? are how world, Hello"
 </pre>
@@ -24062,15 +23985,14 @@ console.log(reversedSentence);  // Output: "you? are how world, Hello"
 <p>Find the median value of numbers in a given array.</p>
 
 <pre>
-const findMedian = arr => {
-const sortedArr = arr.sort((a, b) => a - b);
+const findMedian = arr =&gt; {
+const sortedArr = arr.sort((a, b) =&gt; a - b);
 const middle = Math.floor(sortedArr.length / 2);
 return sortedArr.length % 2 === 0 ? 
   (sortedArr&lbrack;middle - 1&rbrack; 
   + sortedArr&lbrack;middle&rbrack;) / 2 
   : sortedArr&lbrack;middle&rbrack;;
 };
-
 // Example usage
 console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;));  // Output: 3
 </pre>
@@ -24080,8 +24002,7 @@ console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;));  // Output: 3
 <p>Count the number of vowels in a given string.</p>
 
 <pre>
-const countVowels = str => (str.match(/&lbrack;aeiou&rbrack;/gi) || &lbrack;&rbrack;).length;
-
+const countVowels = str =&gt; (str.match(/&lbrack;aeiou&rbrack;/gi) || &lbrack;&rbrack;).length;
 // Example usage
 console.log(countVowels('Hello, how are you?'));  // Output: 7
 </pre>
@@ -24091,12 +24012,11 @@ console.log(countVowels('Hello, how are you?'));  // Output: 7
 <p>Check if a given number is a Tribonacci number using an alternative approach.</p>
 
 <pre>
-const isTribonacciNumberAlt = num => &lbrack;0, 0,
-1&rbrack;.concat(&lbrack;...Array(num)&rbrack;).slice(3).map((_, i, arr) => 
+const isTribonacciNumberAlt = num =&gt; &lbrack;0, 0,
+1&rbrack;.concat(&lbrack;...Array(num)&rbrack;).slice(3).map((_, i, arr) =&gt; 
   arr&lbrack;i - 3&rbrack; + 
   arr&lbrack;i - 2&rbrack; +
   arr&lbrack;i - 1&rbrack;).includes(num);
-
 // Example usage
 console.log(isTribonacciNumberAlt(21));  // Output: true
 </pre>
@@ -24106,11 +24026,10 @@ console.log(isTribonacciNumberAlt(21));  // Output: true
 <p>Generate the Fibonacci sequence up to a given number of terms n.</p>
 
 <pre>
-const fibonacciSequence = n => 
-  &lbrack;...Array(n)&rbrack;.reduce((fibSeq, _, i) =>
+const fibonacciSequence = n =&gt; 
+  &lbrack;...Array(n)&rbrack;.reduce((fibSeq, _, i) =&gt;
   fibSeq.concat(i > 1 ? fibSeq&lbrack;i - 1&rbrack; + 
   fibSeq&lbrack;i - 2&rbrack; : i), &lbrack;0, 1&rbrack;);
-
 // Example usage
 console.log(fibonacciSequence(10));
 // Output: &lbrack;0, 1, 1, 2, 3, 5, 8, 13, 21, 34&rbrack;
@@ -24121,8 +24040,7 @@ console.log(fibonacciSequence(10));
 <p>Get the ASCII value of a given character.</p>
 
 <pre>
-const getAsciiValue = char => char.charCodeAt(0);
-
+const getAsciiValue = char =&gt; char.charCodeAt(0);
 // Example usage
 console.log(getAsciiValue('A'));  // Output: 65
 </pre>
@@ -24133,8 +24051,7 @@ console.log(getAsciiValue('A'));  // Output: 65
 (case-insensitive).</p>
 
 <pre>
-const isIsogram = str => new Set(str.toLowerCase()).size === str.length;
-
+const isIsogram = str =&gt; new Set(str.toLowerCase()).size === str.length;
 // Example usage
 console.log(isIsogram('hello'));  // Output: false
 console.log(isIsogram('world'));  // Output: true
@@ -24146,10 +24063,9 @@ console.log(isIsogram('world'));  // Output: true
 the count of differing characters at corresponding positions.</p>
 
 <pre>
-const hammingDistance = (str1, str2) => 
-&lbrack;...str1&rbrack;.reduce((distance, char, i) => 
+const hammingDistance = (str1, str2) =&gt; 
+&lbrack;...str1&rbrack;.reduce((distance, char, i) =&gt; 
   distance + (char !== str2&lbrack;i&rbrack;), 0);
-
 // Example usage
 console.log(hammingDistance('karolin', 'kathrin'));  // Output: 3
 </pre>
@@ -24160,9 +24076,8 @@ console.log(hammingDistance('karolin', 'kathrin'));  // Output: 3
 theorem.</p>
 
 <pre>
-const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) => 
+const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) =&gt; 
   Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
-
 // Example usage
 console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));  // Output: 5 (Pythagorean triple: 3^2 + 4^2 = 5^2)
 </pre>
@@ -24172,8 +24087,7 @@ console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));  // 
 <p>Check if a given string represents a positive integer without any sign or decimal point.</p>
 
 <pre>
-const isPositiveNumber = str => /^&lbrack;0-9&rbrack;+$/.test(str);
-
+const isPositiveNumber = str =&gt; /^&lbrack;0-9&rbrack;+$/.test(str);
 // Example usage
 console.log(isPositiveNumber('123'));  // Output: true
 console.log(isPositiveNumber('-123'));  // Output: false
@@ -24183,9 +24097,8 @@ console.log(isPositiveNumber('-123'));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Find and return the first non-repeating character in a given string.</p>
 <pre>
-const findFirstNonRepeating = str => &lbrack;...str&rbrack;.find(char => 
+const findFirstNonRepeating = str =&gt; &lbrack;...str&rbrack;.find(char =&gt; 
   str.indexOf(char) === str.lastIndexOf(char));
-
 // Example usage
 console.log(findFirstNonRepeating('hello'));  // Output: 'h'
 </pre>
@@ -24194,8 +24107,7 @@ console.log(findFirstNonRepeating('hello'));  // Output: 'h'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a kite using the lengths of its diagonals.</p>
 <pre>
-const areaOfKite = (d1, d2) => 0.5 * d1 * d2;
-
+const areaOfKite = (d1, d2) =&gt; 0.5 * d1 * d2;
 // Example usage: length 10 by 6.
 console.log("Area of the kite:", areaOfKite(10, 6));  // Output: 30
 </pre>
@@ -24204,9 +24116,8 @@ console.log("Area of the kite:", areaOfKite(10, 6));  // Output: 30
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Calculate the area of a sector within a circle based on the provided radius and angle.</p>
 <pre>
-const sectorArea = (radius, angle) => 
+const sectorArea = (radius, angle) =&gt; 
   (Math.PI * radius ** 2 * angle) / 360;
-
 // Example usage: radius=5, angle=60.
 console.log(sectorArea(5, 60));  // Output: 13.08996938995747
 </pre>
@@ -24313,13 +24224,11 @@ canvas#confetti {
 /* JavaScript - confetti */
 const button = document.querySelector('#button');
 const canvas = document.querySelector('#confetti');
- 
 const jsConfetti = new JSConfetti();
- 
-button.addEventListener('click', () => {
+button.addEventListener('click', () =&gt; {
   jsConfetti.addConfetti({
     emojis: &lbrack;'🥩'&rbrack;,
-  }).then(() => jsConfetti.addConfetti())
+  }).then(() =&gt; jsConfetti.addConfetti())
 })
 </pre>
 <!-- goto ch1 -->
@@ -24330,10 +24239,8 @@ button.addEventListener('click', () => {
 &lt;script&gt;
   &lt;!-- get the button --&gt;
   var mybutton = document.getElementById("myBtn");
-
   &lt;!-- when the user scrolls down 10px from the top of the document, show the button --&gt;
   window.onscroll = function() {scrollFunction()};
-
   function scrollFunction() {
     if (document.body.scrollTop &gt; 10 || document.documentElement.scrollTop &gt; 10) {
       mybutton.style.display = "block";
