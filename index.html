@@ -4744,9 +4744,9 @@ class Particle {
 }
 </pre>
 
-Like function, class can be used both in statements and in expressions. When
+<p>Like function, class can be used both in statements and in expressions. When
 used as an expression, it doesn’t define a binding but just produces the con-
-structor as a value. You are allowed to omit the class name in a class expression.
+structor as a value. You are allowed to omit the class name in a class expression.</p>
 
 <pre>
 let object = new class { getWord() { return "hello"; } };
@@ -14797,8 +14797,9 @@ function getDeck() {
         let card = {Value: values&lbrack;x&rbrack;, Suit: suits&lbrack;i&rbrack;};
         deck.push(card);
       }
-    }
-    return deck;
+	}
+  }
+  return deck;
 }
 
 function shuffle(deck) {
@@ -14833,33 +14834,33 @@ function renderDeck(deck) {
 <pre>
 .deck .card
 {
-    border: solid 1px #aaa;
-    border-radius: 9px;
-    width: 95px;
-    height: 150px;
-    float:left;
-    background-color: white;
-    padding: 3px 3px 3px 3px;
-    margin: 5px;
+  border: solid 1px #aaa;
+  border-radius: 9px;
+  width: 95px;
+  height: 150px;
+  float:left;
+  background-color: white;
+  padding: 3px 3px 3px 3px;
+  margin: 5px;
 }
 
 .card2
 {
-    width: 50px;
-    padding: 10px;
-    border: solid 1px #808080;
-    background-color: white;
-    display: inline-block;
-    border-radius: 10px;
-    font-size: 22px;
-    text-align: center;
-    margin: 3px;
-    border:solid 3px;
+  width: 50px;
+  padding: 10px;
+  border: solid 1px #808080;
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 22px;
+  text-align: center;
+  margin: 3px;
+  border:solid 3px;
 }
 
 .card .value{
-    font-size:15pt;
-    font-family: sans-serif;
+  font-size:15pt;
+  font-family: sans-serif;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js29">js29. Display Fibonacci Sequence Using Recursion</h2>
@@ -15709,6 +15710,7 @@ function validateEmail(email) {
   // Test the email against the regular expression
   return emailRegex.test(email);
 }
+
 // Example usage:
 const emailToValidate = "example@email.com";
 if (validateEmail(emailToValidate)) {
@@ -15781,6 +15783,7 @@ function generateNumberRange(start, end) {
   }
   return result;
 }
+
 // Example usage: Generate numbers from 1 to 5
 let numberRange = generateNumberRange(l, 5);
 console.log("Number Range:", numberRange);
@@ -16268,18 +16271,18 @@ can use simple mathematical operations.</p>
 
 <pre>
 function convertMinutesToHoursAndMinutes(totalMinutes) {
-// Check if the input is a valid positive number
-if (isNaN(totalMinutes) || totalMinutes &lt; 0) {
-  return "Invalid input. Please provide a non-negative number of minutes.";
+  // Check if the input is a valid positive number
+  if (isNaN(totalMinutes) || totalMinutes &lt; 0) {
+    return "Invalid input. Please provide a non-negative number of minutes.";
+  }
+  // Calculate hours and remaining minutes
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  // Construct the result string
+  const result = `${hours} hours and ${minutes} minutes`;
+  return result;
 }
-// Calculate hours and remaining minutes
-const hours = Math.floor(totalMinutes / 60);
-const minutes = totalMinutes % 60;
 
-// Construct the result string
-const result = `${hours} hours and ${minutes} minutes`;
-return result;
-}
 // Example usage:
 const totalMinutes = 135;
 const convertedTime = convertMinutesToHoursAndMinutes(totalMinutes);
@@ -16331,6 +16334,7 @@ function isPalindromicPhrase(str) {
   // Compare the cleaned string with its reversed version
   return cleanedStr === cleanedStr.split('').reverse().join('');
 }
+
 // Example usage:
 const phrase1 = "A man, a plan, a canal, Panama!";
 const phrase2 = "Hello, world!";
@@ -16367,6 +16371,7 @@ function generateRandomPassword(length) {
   }
   return password;
 }
+
 // Example usage:
 const passwordLength = 12;
 const randomPassword = generateRandomPassword(passwordLength);
@@ -16454,6 +16459,7 @@ function isPerfectNumber(number) {
   // Check if the sum of divisors equals the original number
   return sum === number;
 }
+
 // Example usage:
 const testNumber = 28;
 const result = isPerfectNumber(testNumber);
@@ -16475,6 +16481,7 @@ function calculateCylinderVolume(radius, height) {
   const volume = Math.PI * Math.pow(radius, 2) * height;
   return volume;
 }
+
 // Example usage:
 const cylinderRadius = 5;
 const cylinderHeight = 10;
@@ -16505,6 +16512,7 @@ function generateRandomQuote() {
   // Return the randomly selected quote
   return quotes&lbrack;randomIndex&rbrack;;
 }
+
 // Example usage:
 const randomQuote = generateRandomQuote();
 console.log("Random Quote:", randomQuote);
@@ -16530,6 +16538,7 @@ function findIntersection(arrl, arr2) {
   const intersection = arr2.filter(element =&gt; set.has(element));
   return intersection;
 }
+
 // Example usage:
 const arrayl = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const array2 = &lbrack;3, 4, 5, 6, 7&rbrack;;
@@ -16585,6 +16594,7 @@ function convertDaysToYearsMonthsDays(days) {
     days: remainingDaysAfterMonths
   };
 }
+
 // Example usage:
 const totalDays = 1000;
 const result = convertDaysToYearsMonthsDays(totalDays);
@@ -16614,10 +16624,12 @@ function findMedian(arr) {
     // If the array has an odd number of elements, return the middle element
     return sortedArray&lbrack;middleIndex&rbrack;;
   }
-    // Example usage:
-    const numbers = &lbrack;5, 2, 8, 1, 7, 3&rbrack;;
-    const result = findMedian(numbers);
-    console.logf'Median:", result);
+}
+
+// Example usage:
+const numbers = &lbrack;5, 2, 8, 1, 7, 3&rbrack;;
+const result = findMedian(numbers);
+console.logf'Median:", result);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js103">js103. Calculate the Distance Between Two Points</h2>
@@ -16635,6 +16647,7 @@ function calculateDistance(xl, yl, x2, y2) {
   const distance = Math.sqrt(Math.pow((x2 - xl), 2) + Math.pow((y2 - yl), 2));
   return distance;
 }
+
 // Example usage:
 const xl = 1;
 const yl = 2;
@@ -16661,6 +16674,7 @@ function isPerfectSquare(number) {
   // Check if the square of the integer part of the square root is equal to the original number
   return squareRoot === Math.floor(squareRoot);
 }
+
 // Example usage:
 const testNumber = 25;
 const result = isPerfectSquare(testNumber);
@@ -17319,6 +17333,7 @@ function spin() {
     console.log('Try again. Better luck next time!');
   }
 }
+
 // Example usage - simulate a spin
 spin();
 </pre>
@@ -17690,6 +17705,7 @@ function isBinaryPalindrome(number) {
 const binaryRepresentation = number.toString(2);
 const reversedBinary = binaryRepresentation.split(").reverse().join(");
 return binaryRepresentation === reversedBinary;
+
 // Example usage
 const numberToCheck = 9;  // Replace with the number you want to check
 if (isBinaryPalindrome(numberToCheck)) {
@@ -17711,6 +17727,7 @@ function calculateRhombusArea(diagonal1, diagonal2) {
   const area = (diagonal1 * diagona2) / 2;
   return area;
 }
+
 // Example usage
 const diagonal1Length = 8;
 const diagonal2Length = 6;
@@ -17783,6 +17800,7 @@ function calculateLuhnCheckDigit(input) {
   const checkDigit = (10 - (sum % 10)) % 10;
   return checkDigit;
 }
+
 // Example usage
 const partialNumber = 123456789;  // Replace with the partial number for which you want to calculate the check digit
 const checkDigit = calculateLuhnCheckDigit(partialNumber);
@@ -20614,6 +20632,7 @@ return JSON.stringify(URL);
 };
 getParameters(window.location)
 // Result: { search : "easy", page : 3 }
+
 // Example usage
 getParameters(window.location)  // Result: {search : "easy", page: 3}
 
@@ -22430,6 +22449,7 @@ const median = (arr) =&gt; {
   return sorted.length % 2 === 0 ? (sorted&lbrack;mid - 1&rbrack; + sorted&lbrack;mid&rbrack;) / 2 :
   sorted&lbrack;mid&rbrack;;
 };
+
 // Example usage
 console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: 5
 </pre>
@@ -22441,6 +22461,7 @@ given numbers using a recursive approach.</p>
 
 <pre>
 const gcd = (num1, num2) =&gt; (num2 === 0 ? num1 : gcd(num2, num1 % num2));
+
 // Example usage
 console.log(gcd(48, 18));  // Output: 6
 </pre>
@@ -22460,6 +22481,7 @@ const isHappyNumber = (num) =&gt; {
   }
   return num === 1;
 };
+
 // Example usage
 console.log(isHappyNumber(19));  // Output: true
 console.log(isHappyNumber(4));  // Output: false
@@ -22486,6 +22508,7 @@ const firstNPrimes = (n) =&gt; {
   }
   return primes;
 };
+
 // Example usage
 console.log(firstNPrimes(5));  // Output: &lbrack;2, 3, 5, 7, 11&rbrack;
 </pre>
@@ -22497,6 +22520,7 @@ the formula (4/3) * π * r^3, where r is the radius of the sphere.</p>
 
 <pre>
 const sphereVolume = (radius) =&gt; (4 / 3) * Math.PI * radius ** 3;
+
 // Example usage
 console.log(sphereVolume(5));  // Output: 523.5987755982989
 </pre>
@@ -22511,6 +22535,7 @@ keep track of the longest one.</p>
 <pre>
 const longestWord = (sentence) =&gt; sentence.split(' ').reduce((longest, word) =&gt; 
   (word.length > longest.length ? word : longest), '');
+
 // Example usage
 console.log(longestWord("The quick brown fox jumped over the lazy dog"));  // Output: "jumped"
 </pre>
@@ -22531,6 +22556,7 @@ const isArmstrongNumber = (num) =&gt; {
   numDigits, 0);
   return sumOfPowers === num;
 };
+
 // Example usage
 console.log(isArmstrongNumber(153));  // Output: true
 console.log(isArmstrongNumber(370));  // Output: true
@@ -22548,6 +22574,7 @@ the reduce method to find the maximum length among all the words.</p>
 const longestWordLength = (sentence) =&gt; 
   sentence.split(' ').reduce((longest, word) =&gt; 
     Math.max(longest, word.length), 0);
+
 // Example usage
 console.log(longestWordLength("The quick brown fox jumped over the lazy dog"));  // Output: 6
 </pre>
@@ -22565,6 +22592,7 @@ const isStrongNumber = (num) =&gt; {
   factorial(Number(digit)), 0);
   return sumOfFactorials === num;
 };
+
 // Example usage
 console.log(isStrongNumber(145));  // Output: true
 console.log(isStrongNumber(123));  // Output: false
@@ -22576,6 +22604,7 @@ console.log(isStrongNumber(123));  // Output: false
 
 <pre>
 const reverseArray = (arr) =&gt; arr.reverse();
+
 // Example usage
 console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5, 4, 3, 2, 1&rbrack;
 </pre>
@@ -22587,6 +22616,7 @@ length and width using the formula: length * width.</p>
 
 <pre>
 const rectangleArea = (length, width) =&gt; length * width;
+
 // Example usage
 console.log(rectangleArea(5, 10));  // Output: 50
 </pre>
@@ -22600,6 +22630,7 @@ then uses the reduce method to compute their sum.</p>
 <pre>
 const sumOfEvenNumbers = (arr) =&gt; 
   arr.filter(num =&gt; num % 2 === 0).reduce((sum, num) =&gt; sum + num, 0);
+
 // Example usage
 console.log(sumOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;));  // Output: 30
 </pre>
@@ -22619,6 +22650,7 @@ const gcdIterative = (num1, num2) =&gt; {
   }
   return num1;
 };
+
 // Example usage
 console.log(gcdIterative(48, 18));  // Output: 6
 </pre>
@@ -22630,6 +22662,7 @@ console.log(gcdIterative(48, 18));  // Output: 6
 
 <pre>
 const cylinderVolume = (radius, height) =&gt; Math.PI * radius ** 2 * height;
+
 // Example usage
 console.log(cylinderVolume(5, 10));  // Output: 785.3981633974483
 </pre>
@@ -22655,6 +22688,7 @@ const sumOfPrimeFactors = (num) =&gt; {
   return sum;
 };
 const isSmithNumber = (num) =&gt; sumOfDigits(num) === sumOfPrimeFactors(num);
+
 // Example usage
 console.log(isSmithNumber(666));  // Output: true
 console.log(isSmithNumber(378));  // Output: true
@@ -22668,6 +22702,7 @@ representation using the .toString() method with the base argument set to 8.</p>
 
 <pre>
 const decimalToOctal = (num) =&gt; num.toString(8);
+
 // Example usage
 console.log(decimalToOctal(27));  // Output: "33"
 </pre>
@@ -22679,6 +22714,7 @@ using the formula: (num1 * num2) / gcd(num1, num2).</p>
 
 <pre>
 const lcm = (num1, num2) =&gt; (num1 * num2) / gcd(num1, num2);
+
 // Example usage
 console.log(lcm(24, 36));  // Output: 72
 </pre>
@@ -22690,6 +22726,7 @@ in the North American format "XXX-XXX-XXXX", where X represents a digit.</p>
 
 <pre>
 const isValidPhoneNumber = (phone) =&gt; /^\d{3}-\d{3}-\d{4}$/.test(phone);
+
 // Example usage
 console.log(isValidPhoneNumber("555-123-4567"));  // Output: true
 console.log(isValidPhoneNumber("123-4567"));  // Output: false
@@ -22702,6 +22739,7 @@ numbers using the formula: (n * (n + 1)) / 2.</p>
 
 <pre>
 const sumOfNaturals = (n) =&gt; (n * (n + 1)) / 2;
+
 // Example usage
 console.log(sumOfNaturals(10));  // Output: 55
 </pre>
@@ -22720,6 +22758,7 @@ const isPerfectNumber = (num) =&gt; {
   }
   return sum === num;
 };
+
 // Example usage
 console.log(isPerfectNumber(28));  // Output: true
 console.log(isPerfectNumber(12));  // Output: false
@@ -22740,6 +22779,7 @@ const factors = (num) =&gt; {
   }
   return result;
 };
+
 // Example usage
 console.log(factors(12));  // Output: &lbrack;2, 3, 4, 6&rbrack;
 </pre>
@@ -22751,10 +22791,10 @@ console.log(factors(12));  // Output: &lbrack;2, 3, 4, 6&rbrack;
 
 <pre>
 const triangleArea = (base, height) =&gt; 0.5 * base * height;
+
 // Example usage
 console.log(triangleArea(5, 10));  // Output: 25
 </pre>
-
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-165">js-165. Check if a String is a Valid Social Security Number (SSN)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22763,6 +22803,7 @@ Number (SSN) in the format "XXX-XX-XXXX", where X represents a digit.</p>
 
 <pre>
 const isValidSSN = (ssn) =&gt; /^\d{3}-\d{2}-\d{4}$/.test(ssn);
+
 // Example usage
 console.log(isValidSSN("123-45-6789"));  // Output: true
 console.log(isValidSSN("123-45-678"));  // Output: false
@@ -22778,6 +22819,7 @@ function to create the desired array.</p>
 const randomArrayInRange = (min, max, length) =&gt; 
   Array.from({ length }, () =&gt; 
   Math.floor(Math.random() * (max - min + 1)) + min);
+
 // Example usage
 console.log(randomArrayInRange(1, 100, 5));  // Output: &lbrack;34, 87, 19, 56, 72&rbrack;
 </pre>
@@ -22797,6 +22839,7 @@ const isMagicNumber = (num) =&gt; {
   }
   return sum === 1;
 };
+
 // Example usage
 console.log(isMagicNumber(19));  // Output: true
 console.log(isMagicNumber(123));  // Output: false
@@ -22809,6 +22852,7 @@ console.log(isMagicNumber(123));  // Output: false
 <pre>
 const isValidIPv4 = (ip) =&gt; /^(?:(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)\.)
 {3}(?:25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;&lbrack;0-9&rbrack;|&lbrack;01&rbrack;?&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;?)$/.test(ip);
+
 // Example usage
 console.log(isValidIPv4("192.168.1.1"));  // Output: true
 console.log(isValidIPv4("256.0.0.1"));  // Output: false
@@ -22822,6 +22866,7 @@ hexadecimal (base 16) representation using the built-in toString method with a r
 
 <pre>
 const decimalToHex = (num) =&gt; num.toString(16);
+
 // Example usage
 console.log(decimalToHex(255));  // Output: "ff"
 </pre>
@@ -22833,6 +22878,7 @@ console.log(decimalToHex(255));  // Output: "ff"
 
 <pre>
 const isValidDate = (date) =&gt; /^\d{4}-\d{2}-\d{2}$/.test(date);
+
 // Example usage
 console.log(isValidDate("2023-08-02"));  // Output: true
 console.log(isValidDate("02-08-2023"));  // Output: false
@@ -22847,6 +22893,7 @@ applying the formula (lcm * num) / gcd(lcm, num).</p>
 
 <pre>
 const lcmArray = (arr) =&gt; arr.reduce((lcm, num) =&gt; (lcm * num) / gcd(lcm, num));
+
 // Example usage
 console.log(lcmArray(&lbrack;2, 3, 4, 5&rbrack;));  // Output: 60
 </pre>
@@ -22861,6 +22908,7 @@ one digit (\d), and one special character (&lbrack;@$!%*?&&rbrack;).</p>
 <pre>
 const isValidPassword = (password) =&gt; /^(?=.*&lbrack;A-Za-z&rbrack;)(?=.*\d)(?=.*
   &lbrack;@$!%*?&&rbrack;)&lbrack;A-Za-z\d@$!%*?&&rbrack;{8,}$/.test(password);
+
 // Example usage
 console.log(isValidPassword("P@ssw0rd"));  // Output: true
 console.log(isValidPassword("password123"));  // Output: false
@@ -22884,6 +22932,7 @@ const fibonacci = (n) =&gt; {
   }
   return result;
 };
+
 // Example usage
 console.log(fibonacci(7));  // Output: 8
 </pre>
@@ -22894,6 +22943,7 @@ console.log(fibonacci(7));  // Output: 8
 
 <pre>
 const isDeficientNumber = (num) =&gt; num > sumOfProperDivisors(num);
+
 // Example usage
 console.log(isDeficientNumber(10));  // Output: true
 console.log(isDeficientNumber(28));  // Output: false
@@ -22908,6 +22958,7 @@ uses the formula sqrt((x2 - x1)^2 + (y2 - y1)^2) to compute the distance between
 <pre>
 const distanceBetweenPoints = (x1, y1, x2, y2) =&gt; 
   Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+
 // Example usage
 console.log(distanceBetweenPoints(0, 0, 3, 4));  // Output: 5
 </pre>
@@ -22918,6 +22969,7 @@ console.log(distanceBetweenPoints(0, 0, 3, 4));  // Output: 5
 
 <pre>
 const isAbundantNumber = (num) =&gt; num &lt; sumOfProperDivisors(num);
+
 // Example usage
 console.log(isAbundantNumber(12));  // Output: true
 console.log(isAbundantNumber(28));  // Output: false
@@ -22931,6 +22983,7 @@ cube.</p>
 
 <pre>
 const cubeVolume = (side) =&gt; side ** 3;
+
 // Example usage
 console.log(cubeVolume(5));  // Output: 125
 </pre>
@@ -22942,6 +22995,7 @@ console.log(cubeVolume(5));  // Output: 125
 <pre>
 const isValidCreditCard = (card) =&gt; /^(?:4&lbrack;0-9&rbrack;{12}(?:&lbrack;0-9&rbrack;{3})?|5&lbrack;1-5&rbrack;&lbrack;0-
 9&rbrack;{14}|6(?:011|5&lbrack;0-9&rbrack;&lbrack;0-9&rbrack;)&lbrack;0-9&rbrack;{12}|3&lbrack;47&rbrack;&lbrack;0-9&rbrack;{13})$/.test(card);
+
 // Example usage
 console.log(isValidCreditCard("4012-3456-7890-1234"));  // Output: true
 console.log(isValidCreditCard("1234-5678-9012-3456"));  // Output: false
@@ -22955,6 +23009,7 @@ the perimeter of the triangle.</p>
 
 <pre>
 const trianglePerimeter = (side1, side2, side3) =&gt; side1 + side2 + side3;
+
 // Example usage
 console.log(trianglePerimeter(5, 10, 7));  // Output: 22
 </pre>
@@ -22980,6 +23035,7 @@ const isVampireNumber = (num) =&gt; {
   }
   return false;
 };
+
 // Example usage
 console.log(isVampireNumber(1260));  // Output: true
 console.log(isVampireNumber(1250));  // Output: false
@@ -22995,6 +23051,7 @@ const sumOfDigitsRaisedToPower = (num) =&gt; {
   const digits = &lbrack;...String(num)&rbrack;.map(Number);
   return digits.reduce((sum, digit, index) =&gt; sum + digit ** (index + 1), 0);
 };
+
 // Example usage
 console.log(sumOfDigitsRaisedToPower(12345));  // Output: 115
 </pre>
@@ -23008,6 +23065,7 @@ number is a number that contains the digit "0" but does not start with "0".</p>
 const isDuckNumber = (num) =&gt; 
   String(num).includes('0') &&
   String(num)&lbrack;0&rbrack; !== '0';
+
 // Example usage
 console.log(isDuckNumber(1023));  // Output: true
 console.log(isDuckNumber(12345));  // Output: false
@@ -23020,6 +23078,7 @@ console.log(isDuckNumber(12345));  // Output: false
 <pre>
 const randomPassword = (length) =&gt; Array.from({ length }, () =&gt;
   Math.random().toString(36).charAt(2)).join('');
+
 // Example usage
 console.log(randomPassword(8));  // Output: "3klS0p9x"
 </pre>
@@ -23032,6 +23091,7 @@ console.log(randomPassword(8));  // Output: "3klS0p9x"
 <pre>
 const trapezoidArea = (base1, base2, height) =&gt; 
   0.5 * (base1 + base2) * height;
+
 // Example usage
 console.log(trapezoidArea(4, 8, 6));  // Output: 36
 </pre>
@@ -23049,6 +23109,7 @@ const isKaprekarNumber = (num) =&gt; {
   const right = Number(squareStr.slice(-numStr.length));
   return left + right === num;
 };
+
 // Example usage
 console.log(isKaprekarNumber(9));  // Output: true
 console.log(isKaprekarNumber(297));  // Output: true
@@ -23064,6 +23125,7 @@ where r is the radius of the base and h is the height of the cone.</p>
 
 <pre>
 const coneVolume = (radius, height) =&gt; (1 / 3) * Math.PI * radius ** 2;
+
 // Example usage
 console.log(coneVolume(5, 10));  // Output: 261.79938779914943
 </pre>
@@ -23544,6 +23606,7 @@ const isReversibleNumber = (num) =&gt; {
   const reversedNum = Number(String(num).split('').reverse().join(''));
   return num + reversedNum === sumOfDigits(num);
 };
+
 // Example usage
 console.log(isReversibleNumber(36));  // Output: true
 console.log(isReversibleNumber(45));  // Output: true
@@ -23557,6 +23620,7 @@ console.log(isReversibleNumber(10));  // Output: false
 <pre>
 const circleCircumference = (radius) =&gt; 
   2 * Math.PI * radius;
+
 // Example usage
 console.log(circleCircumference(5));  // Output: 31.41592653589793
 </pre>
@@ -23568,6 +23632,7 @@ console.log(circleCircumference(5));  // Output: 31.41592653589793
 <pre>
 const shortestWord = (str) =&gt; str.split(' ').reduce((shortest, word) =&gt;
   (word.length &lt; shortest.length ? word : shortest), '');
+
 // Example usage
 console.log(shortestWord("This is a test sentence"));  // Output: "a"
 </pre>
@@ -23579,6 +23644,7 @@ console.log(shortestWord("This is a test sentence"));  // Output: "a"
 <pre>
 const longestWordLength = (str) =&gt; 
   Math.max(...str.split(' ').map(word =&gt; word.length));
+
 // Example usage
 console.log(longestWordLength("This is a test sentence"));  // Output: 8
 </pre>
@@ -23589,6 +23655,7 @@ console.log(longestWordLength("This is a test sentence"));  // Output: 8
 
 <pre>
 const sumOfProperDivisors = (num) =&gt; sumOfArray(divisors(num)) - num;
+
 // Example usage
 console.log(sumOfProperDivisors(28));  // Output: 28
 console.log(sumOfProperDivisors(12));  // Output: 16
@@ -23601,6 +23668,7 @@ console.log(sumOfProperDivisors(12));  // Output: 16
 <pre>
 const isUnitaryPerfectNumber = (num) =&gt; 
   num === sumOfUnitaryDivisors(num);
+
 // Example usage
 console.log(isUnitaryPerfectNumber(18));  // Output: true
 console.log(isUnitaryPerfectNumber(28));  // Output: false
@@ -23614,6 +23682,7 @@ number of sides.</p>
 <pre>
 const regularPolygonPerimeter = (sideLength, numSides) =&gt; 
   sideLength * numSides;
+
 // Example usage
 console.log(regularPolygonPerimeter(5, 6));  // Output: 30
 </pre>
@@ -23625,6 +23694,7 @@ console.log(regularPolygonPerimeter(5, 6));  // Output: 30
 <pre>
 const equilateralTriangleArea = (sideLength) =&gt; 
   (Math.sqrt(3) * sideLength ** 2) / 4;
+
 // Example usage
 console.log(equilateralTriangleArea(5));  // Output: 10.825317547305486
 </pre>
@@ -23659,6 +23729,7 @@ const isPerfectPower = (num) =&gt; {
   }
   return false;
 };
+
 // Example usage
 console.log(isPerfectPower(64));  // Output: true
 console.log(isPerfectPower(25));  // Output: false
@@ -23671,6 +23742,7 @@ console.log(isPerfectPower(25));  // Output: false
 <pre>
 const sumOfDigitsToPower = (num, power) =&gt;
   sumOfDigitsRaisedToPower(num, power);
+
 // Example usage
 console.log(sumOfDigitsToPower(123, 3));  // Output: 36
 console.log(sumOfDigitsToPower(4150, 5));  // Output: 4150
@@ -23682,6 +23754,7 @@ console.log(sumOfDigitsToPower(4150, 5));  // Output: 4150
 
 <pre>
 const isDudeneyNumber = (num) =&gt; Math.cbrt(num) === sumOfDigits(num);
+
 // Example usage
 console.log(isDudeneyNumber(512));  // Output: true
 console.log(isDudeneyNumber(27));  // Output: false
@@ -23694,6 +23767,7 @@ console.log(isDudeneyNumber(27));  // Output: false
 <pre>
 const regularPentagonArea = (sideLength) =&gt; 
   (1 / 4) * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * sideLength ** 2;
+
 // Example usage
 console.log(regularPentagonArea(5));  // Output: 43.01193501472417
 </pre>
@@ -23704,6 +23778,7 @@ console.log(regularPentagonArea(5));  // Output: 43.01193501472417
 
 <pre>
 const pyramidVolume = (baseArea, height) =&gt; (1 / 3) * baseArea * height;
+
 // Example usage
 console.log(pyramidVolume(25, 10));  // Output: 83.33333333333333
 </pre>
@@ -23719,6 +23794,7 @@ const isWedderburnEtheringtonNumber = (num) =&gt; {
   return factorials.reduce((product, factorial) =&gt; 
     product * factorial, 1) === factorial(num);
 };
+
 // Example usage
 console.log(isWedderburnEtheringtonNumber(6));  // Output: true
 console.log(isWedderburnEtheringtonNumber(12));  // Output: false
@@ -23730,6 +23806,7 @@ console.log(isWedderburnEtheringtonNumber(12));  // Output: false
 
 <pre>
 const cubeSurfaceArea = (sideLength) =&gt; 6 * sideLength ** 2;
+
 // Example usage
 console.log(cubeSurfaceArea(5));  // Output: 150
 </pre>
@@ -23741,6 +23818,7 @@ console.log(cubeSurfaceArea(5));  // Output: 150
 <pre>
 const isPluperfectNumber = (num) =&gt; 
   num === sumOfDivisors(sumOfDivisors(num)) - num;
+
 // Example usage
 console.log(isPluperfectNumber(28));  // Output: true
 console.log(isPluperfectNumber(20));  // Output: false
@@ -23765,6 +23843,7 @@ function calculateOctagonArea(sideLength) {
   const area = 2 * (1 + Math.sqrt(2)) * sideLength * sideLength;
   return area;
 }
+
 // Example usage:
 const side = 5;
 const area = calculateOctagonArea(side);
@@ -23777,7 +23856,7 @@ console.log(`The area of the octagon with side ${side} is: ${area}`);
 
 <pre>
 const isRepunitNumber = num =&gt; /^1+$/.test(num.toString());
-<br>
+
 // Example usage
 console.log(isRepunitNumber(111));  // Output: true
 console.log(isRepunitNumber(11));  // Output: false
@@ -23789,7 +23868,7 @@ console.log(isRepunitNumber(11));  // Output: false
 
 <pre>
 const ellipsoidVolume = (a, b, c) =&gt; (4 / 3) * Math.PI * a * b * c;
-<br>
+
 // Example usage
 console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
 </pre>
@@ -23800,6 +23879,7 @@ console.log(ellipsoidVolume(5, 3, 2));  // Output: 125.66370614359172
 
 <pre>
 const isValidURLAlt = (url) =&gt; /^(ftp|http|https):\/\/&lbrack;^ "&rbrack;+$/.test(url);
+
 // Example usage
 console.log(isValidURLAlt("https://www.example.com"));  // Output: true
 console.log(isValidURLAlt("invalid url"));  // Output: false
@@ -23811,6 +23891,7 @@ console.log(isValidURLAlt("invalid url"));  // Output: false
 
 <pre>
 const isValidTIN = (tin) =&gt; /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
+
 // Example usage
 console.log(isValidTIN("AB123456CD"));  // Output: true
 console.log(isValidTIN("invalid tin"));  // Output: false
@@ -23823,6 +23904,7 @@ console.log(isValidTIN("invalid tin"));  // Output: false
 <pre>
 const isValidISBN = (isbn) =&gt; /^(?:\d{9}&lbrack;\dX&rbrack;|(?:\d{3}-){2}\d{1}
 &lbrack;\dX&rbrack;)$/.test(isbn);
+
 // Example usage
 console.log(isValidISBN("123456789"));  // Output: true
 console.log(isValidISBN("invalid isbn"));  // Output: false
@@ -23835,6 +23917,7 @@ console.log(isValidISBN("invalid isbn"));  // Output: false
 <pre>
 const isValidIPAddress = (ip) =&gt; /^((25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})\.){3}
 (25&lbrack;0-5&rbrack;|2&lbrack;0-4&rbrack;\d|&lbrack;0-1&rbrack;?\d{1,2})$/.test(ip);
+
 // Example usage
 console.log(isValidIPAddress("192.168.1.1"));  // Output: true
 console.log(isValidIPAddress("invalid ip"));  // Output: false
@@ -23847,6 +23930,7 @@ console.log(isValidIPAddress("invalid ip"));  // Output: false
 <pre>
 const reverseStringRecursive = str =&gt; str === " ? " :
 reverseStringRecursive(str.substr(1)) + str.charAt(0);
+
 // Example usage
 console.log(reverseStringRecursive('hello'));  // Output: 'olleh'
 </pre>
@@ -23858,6 +23942,7 @@ console.log(reverseStringRecursive('hello'));  // Output: 'olleh'
 <pre>
 const countOccurrences = arr =&gt; arr.reduce((acc, curr) =&gt; 
   (acc&lbrack;curr&rbrack; = (acc&lbrack;curr&rbrack; || 0) + 1, acc), {});
+
 // Example usage
 console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;)); 
 // Output: { '1': 3, '2': 2, '3': 1, '4': 1 }
@@ -23870,6 +23955,7 @@ console.log(countOccurrences(&lbrack;1, 2, 1, 3, 2, 4, 1&rbrack;));
 <pre>
 const arraysAreEqual = (arr1, arr2) =&gt; arr1.length === arr2.length && 
   arr1.every((val, index) =&gt; val === arr2&lbrack;index&rbrack;);
+
 // Example usage
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 3&rbrack;));  // Output: true
 console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;));  // Output: false
@@ -23881,6 +23967,7 @@ console.log(arraysAreEqual(&lbrack;1, 2, 3&rbrack;, &lbrack;1, 2, 4&rbrack;));  
 
 <pre>
 const findMinValue = arr =&gt; Math.min(...arr);
+
 // Example usage
 console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;));  // Output: 1
 </pre>
@@ -23891,6 +23978,7 @@ console.log(findMinValue(&lbrack;2, 7, 1, 9, 4&rbrack;));  // Output: 1
 
 <pre>
 const flattenArray = arr =&gt; &lbrack;&rbrack;.concat(...arr);
+
 // Example usage
 console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lbrack;5, 6&rbrack;&rbrack;)); 
 // Output: &lbrack;1, 2, 3, 4, 5, 6&rbrack;
@@ -23902,6 +23990,7 @@ console.log(flattenArray(&lbrack;&lbrack;1, 2&rbrack;, &lbrack;3, 4&rbrack;, &lb
 
 <pre>
 const findAverage = arr =&gt; arr.reduce((sum, num) =&gt; sum + num, 0) / arr.length;
+
 // Example usage
 console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 </pre>
@@ -23912,6 +24001,7 @@ console.log(findAverage(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 3
 
 <pre>
 const sumSquares = arr =&gt; arr.reduce((sum, num) =&gt; sum + num ** 2, 0);
+
 // Example usage
 console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
 </pre>
@@ -23926,6 +24016,7 @@ const isPalindromeIgnoringNonAlphaNumeric = str =&gt; {
   const cleanedStr = str.replace(/&lbrack;^a-zA-Z0-9&rbrack;/g, ").toLowerCase();
   return cleanedStr === cleanedStr.split(").reverse().join(");
 };
+
 // Example usage
 console.log(isPalindromeIgnoringNonAlphaNumeric("A man, a plan, a canal, Panama!"));  // Output: true
 </pre>
@@ -23941,8 +24032,9 @@ const shuffleArrayFisherYates = arr =&gt; {
     &lbrack;arr&lbrack;i&rbrack;, arr&lbrack;j&rbrack;&rbrack; 
     = &lbrack;arr&lbrack;j&rbrack;, arr&lbrack;i&rbrack;&rbrack;;
   }
-return arr;
+  return arr;
 };
+
 // Example usage
 console.log(shuffleArrayFisherYates(&lbrack;1, 2, 3, 4, 5&rbrack;)); 
 // Output: &lbrack;3, 1, 4, 2, 5&rbrack; (randomly shuffled)
@@ -23961,6 +24053,7 @@ const data = &lbrack;
   { name: 'Bob', age: 20 }, 
   { name: 'Carol', age: 30 }
 &rbrack;;
+
 // Example usage
 console.log(sortByProperty(data, 'age'));
 // Output: &lbrack;
@@ -23976,6 +24069,7 @@ console.log(sortByProperty(data, 'age'));
 <pre>
 const originalSentence = "Hello world, how are you?";
 const reversedSentence = reverseWords(originalSentence);
+
 // Example usage
 console.log(reversedSentence);  // Output: "you? are how world, Hello"
 </pre>
@@ -23993,6 +24087,7 @@ return sortedArr.length % 2 === 0 ?
   + sortedArr&lbrack;middle&rbrack;) / 2 
   : sortedArr&lbrack;middle&rbrack;;
 };
+
 // Example usage
 console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;));  // Output: 3
 </pre>
@@ -24003,6 +24098,7 @@ console.log(findMedian(&lbrack;1, 3, 2, 4, 5&rbrack;));  // Output: 3
 
 <pre>
 const countVowels = str =&gt; (str.match(/&lbrack;aeiou&rbrack;/gi) || &lbrack;&rbrack;).length;
+
 // Example usage
 console.log(countVowels('Hello, how are you?'));  // Output: 7
 </pre>
@@ -24017,6 +24113,7 @@ const isTribonacciNumberAlt = num =&gt; &lbrack;0, 0,
   arr&lbrack;i - 3&rbrack; + 
   arr&lbrack;i - 2&rbrack; +
   arr&lbrack;i - 1&rbrack;).includes(num);
+
 // Example usage
 console.log(isTribonacciNumberAlt(21));  // Output: true
 </pre>
@@ -24030,6 +24127,7 @@ const fibonacciSequence = n =&gt;
   &lbrack;...Array(n)&rbrack;.reduce((fibSeq, _, i) =&gt;
   fibSeq.concat(i > 1 ? fibSeq&lbrack;i - 1&rbrack; + 
   fibSeq&lbrack;i - 2&rbrack; : i), &lbrack;0, 1&rbrack;);
+
 // Example usage
 console.log(fibonacciSequence(10));
 // Output: &lbrack;0, 1, 1, 2, 3, 5, 8, 13, 21, 34&rbrack;
@@ -24041,6 +24139,7 @@ console.log(fibonacciSequence(10));
 
 <pre>
 const getAsciiValue = char =&gt; char.charCodeAt(0);
+
 // Example usage
 console.log(getAsciiValue('A'));  // Output: 65
 </pre>
@@ -24052,6 +24151,7 @@ console.log(getAsciiValue('A'));  // Output: 65
 
 <pre>
 const isIsogram = str =&gt; new Set(str.toLowerCase()).size === str.length;
+
 // Example usage
 console.log(isIsogram('hello'));  // Output: false
 console.log(isIsogram('world'));  // Output: true
@@ -24066,6 +24166,7 @@ the count of differing characters at corresponding positions.</p>
 const hammingDistance = (str1, str2) =&gt; 
 &lbrack;...str1&rbrack;.reduce((distance, char, i) =&gt; 
   distance + (char !== str2&lbrack;i&rbrack;), 0);
+
 // Example usage
 console.log(hammingDistance('karolin', 'kathrin'));  // Output: 3
 </pre>
@@ -24078,6 +24179,7 @@ theorem.</p>
 <pre>
 const calculateDistance = (&lbrack;x1, y1&rbrack;, &lbrack;x2, y2&rbrack;) =&gt; 
   Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+
 // Example usage
 console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));  // Output: 5 (Pythagorean triple: 3^2 + 4^2 = 5^2)
 </pre>
@@ -24088,6 +24190,7 @@ console.log(calculateDistance(&lbrack;0, 0&rbrack;, &lbrack;3, 4&rbrack;));  // 
 
 <pre>
 const isPositiveNumber = str =&gt; /^&lbrack;0-9&rbrack;+$/.test(str);
+
 // Example usage
 console.log(isPositiveNumber('123'));  // Output: true
 console.log(isPositiveNumber('-123'));  // Output: false
@@ -24099,6 +24202,7 @@ console.log(isPositiveNumber('-123'));  // Output: false
 <pre>
 const findFirstNonRepeating = str =&gt; &lbrack;...str&rbrack;.find(char =&gt; 
   str.indexOf(char) === str.lastIndexOf(char));
+
 // Example usage
 console.log(findFirstNonRepeating('hello'));  // Output: 'h'
 </pre>
@@ -24108,6 +24212,7 @@ console.log(findFirstNonRepeating('hello'));  // Output: 'h'
 <p>Calculate the area of a kite using the lengths of its diagonals.</p>
 <pre>
 const areaOfKite = (d1, d2) =&gt; 0.5 * d1 * d2;
+
 // Example usage: length 10 by 6.
 console.log("Area of the kite:", areaOfKite(10, 6));  // Output: 30
 </pre>
@@ -24118,6 +24223,7 @@ console.log("Area of the kite:", areaOfKite(10, 6));  // Output: 30
 <pre>
 const sectorArea = (radius, angle) =&gt; 
   (Math.PI * radius ** 2 * angle) / 360;
+
 // Example usage: radius=5, angle=60.
 console.log(sectorArea(5, 60));  // Output: 13.08996938995747
 </pre>
@@ -24302,3 +24408,4 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>Last changed 2/24/2025 Mon 10:54a</p>
 </footer>
 </html>
+
