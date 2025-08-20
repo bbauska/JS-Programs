@@ -1,5 +1,4 @@
-/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**/
-/**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ css/styles.css in js-programs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**/
+/**~~~~~~~~~~~~ css/styles.css of bbauska/js-programs making js-programs.bauska.org ~~~~~~~~~~~~**/
 img.displayed {
   display: block;
   margin: 0 auto;
@@ -30,7 +29,6 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
-
 p { 
   font-size: 15px;
   font-family: Bahnschrift, Inter, Helvetic, sans-serif;
@@ -66,7 +64,6 @@ a[href]:hover {
   background-color: #76ff76;  /* #76ff76 #ffff00 yellow */
   text-decoration: underline; 
 }
-
 div {
   float: left; 
 }
