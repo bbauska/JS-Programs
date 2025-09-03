@@ -827,8 +827,8 @@ turn your own ideas into a reality without even having to think about it.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2>50 JavaScript Concepts Every Developer Should Know</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This book is on essential guide for all JavaScript programmers since it has very 
-important concepts such as:</p>
+<p>This book is an essential guide for all JavaScript programmers since it has very important 
+concepts such as:</p>
 
 <ul>
   <li>Design Patterns</li>
@@ -838,8 +838,8 @@ important concepts such as:</p>
   <li>Partial Application, Currying, Composition, and Pipe</li>
 </ul>
 
-<p>Learning these concepts will help you level up quickly as a JavaScript developer, 
-they are concepts that you should know if you want to be at a higher level.</p>
+<p>Learning these concepts will help you level up quickly as a JavaScript developer. 
+They are concepts that you should know if you want to be at a higher level.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk01">sk01. Call Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -869,10 +869,9 @@ function storeDish() {
 washDish();
 </pre>
 
-<p>In this example, when washDish() is called, it gets added to the call
-stack. Inside washDish(), dryDish() called, which, in turn, gets added
-to the call stack. Finally, storeDish() is called from dryDish(), and it
-also gets added to the call stack.</p>
+<p>In this example, when washDish() is called, it gets added to the call stack. Inside washDish(), 
+dryDish() called, which, in turn, gets added to the call stack. Finally, storeDish() is called 
+from dryDish(), and it also gets added to the call stack.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk02">sk02. Primitive Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -882,16 +881,19 @@ programming language. Primitive types are usually built-in and include fundament
 data categories such as integers, floating-point numbers, characters, and boolean
 values.</p>
 
-<p><b>Integer:</b></p>
+<h4>Integer:</h4>
 <pre>let age = 25;  // Integer</pre>
 
-<p><b>Floating-point:</b></p>
+<h4>Floating-point:</h4>
+
 <pre>let temperature = 26.5;  // Float</pre>
 
-<p><b>Character:</b></p>
+<h4>Character:</h4>
+
 <pre>let grade = 'A';  // Character</pre>
 
-<p><b>Boolean:</b></p>
+<h4>Boolean:</h4>
+
 <pre>let isStudent = true;  // Boolean</pre>
 
 <p>These are examples of primitive types because they represent the most basic forms of 
@@ -907,7 +909,8 @@ distinction is crucial to understand how data is handled and stored in memory.</
 directly in the variable. When you assign a primitive value to a variable, the actual 
 value is copied into the variable.</p>
 
-<p><b>Example:</b></p>
+<h4>Example:</h4>
+
 <ol type="1">
   <li>Number</li>
   <li>String</li>
@@ -935,7 +938,7 @@ location where the object is stored.</p>
   <li>User-Defined Objects</li>
 </ol>
 
-<p><b>Example:</b></p>
+<h4>Example:</h4>
 
 <pre>
 let person = { name: "Ana", age: 30 };  // Reference type (Literal Object)
@@ -996,8 +999,8 @@ const citizen: Citizen = { name: "Carlos" };
 greet(citizen);  // No structural typing error, the structure is the same
 </pre>
 
-<p><b>Duck Typing:</b> Duck typing is based on whether an object behaves Like a
-certain type, regardless of its structure or name.</p>
+<p><b>Duck Typing:</b> Duck typing is based on whether an object behaves. Like a certain type, 
+regardless of its structure or name.</p>
 
 <pre>
 interface CanSing {
@@ -1019,20 +1022,20 @@ entertain(canary);  // Type doesn't matter, as long as it has the 'sing' method
 <p><span class="gimme">==, ===, and typeof</span> are <b>operators</b> used to <b>compare values</b> 
 and <b>retrieve information about data types</b>. Here&apos;s an explanation of each:</p>
 
-<p><b>==  (Weak Equality):</b> The == operator compares two values for equality but 
-performs type conversion if the values are of different types. This is called "weak 
-equality" or "type coercion."</p>
+<p><b>==  (Weak Equality):</b> The == operator compares two values for equality but performs 
+type conversion if the values are of different types. This is called "weak equality" or "type 
+coercion."</p>
 
 <pre>5 == "5";  // true, type conversion is performed</pre>
 
-<p><b>=== (Strict Equality):</b> The === operator compares two values for equality 
-without performing type conversion. This is known as "strict equality" and is 
-recommended for precise comparisons.</p>
+<p><b>=== (Strict Equality):</b> The === operator compares two values for equality without 
+performing type conversion. This is known as "strict equality" and is recommended for precise 
+comparisons.</p>
 
 <pre>5 === "5";  // false, no type conversion is performed</pre>
 
-<p><b>typeof (typeof Operator):</b> The typeof operator is used to obtain the data
-type of an expression. It returns a string representing the data type.</p>
+<p><b>typeof (typeof Operator):</b> The typeof operator is used to obtain the data type of an 
+expression. It returns a string representing the data type.</p>
 
 <pre>
 typeof 42;  // "number"
@@ -1231,7 +1234,8 @@ occurs or an asynchronous task is completed (such as an AJAX request or a timer)
 callback function is added to the message queue. The <b>event loop</b> takes these functions 
 one by one and <b>executes them</b>.</p>
 
-<p><b>Example of Message Queue and Event Loop:</b></p>
+<h4>Example of Message Queue and Event Loop:</h4>
+
 <pre>
 console.log("Start of the program");
 setTimeout(function() {
@@ -1241,7 +1245,7 @@ setTimeout(function() {
 console.log("End of the program");
 </pre> 
 
-<p><b>Expected Output:</b></p>
+<h4>Expected Output:</h4>
 
 <p>Start of the program End of the program Asynchronous task completed
 In this example, the code executes in the following order:</p>
@@ -1326,7 +1330,7 @@ smooth and efficient animations in the browser.</p>
 <p>JavaScript engines are fundamental components in browsers and execution environments that 
 interpret and execute JavaScript code. Each browser and environment has its own JavaScript engine.</p>
 
-<p><b>Here are some of the well-known engines:</b></p>
+<h4>Here are some of the well-known engines:</h4>
 
 <p><span class="consolas">V8 (Google Chrome, Node.js):</span> <b>V8</b> is an open-source JavaScript 
 engine developed by Google. It is known for its speed and efficiency in executing code. It is used 
@@ -1572,7 +1576,8 @@ const greetPerson - greet.bind(person);
 greetPerson('Maria');  // Prints: "Hello, Maria! My name is John"
 </pre>
 
-<p><b>In summary:</b></p>
+<h4>In summary:</h4>
+
 <ul>
   <li><span class="consolas">this:</span> Refers to the current execution context.</li>
   <li><span class="consolas">call:</span> Invokes a function with a specific value for <b>this</b> 
@@ -1622,7 +1627,8 @@ created with its own properties and methods.</p>
 
 <pre>const person2 = new Person("Maria", 25);</pre>
 
-<p><b>In summary:</b></p>
+<h4>In summary:</h4>
+
 <ul>
   <li><b>new:</b> A keyword used to create instances of objects from constructors.</li>
   <li><b>Constructor:</b> A function used to create and configure objects.</li>
@@ -1635,24 +1641,21 @@ allowing the creation of objects with shared properties and behaviors.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk17">sk17. Prototypal Inheritance and Prototype Chain</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Prototypal inheritance and the prototype chain are fundamental concepts
-in JavaScript for achieving code reuse and establishing relationships
-between objects.</p>
+<p>Prototypal inheritance and the prototype chain are fundamental concepts in JavaScript for 
+achieving code reuse and establishing relationships between objects.</p>
 
-<p><b>Prototypal Inheritance:</b> In JavaScript, prototypal inheritance is a
-mechanism by which an object can inherit properties and methods from
-another object called its "prototype." Instead of traditional classes,
-JavaScript uses prototypal inheritance to create relationships between
-objects. When a property or method is looked up in an object, if it&apos;s not
-found in the object itself, it is searched in its prototype and in the
-ascending prototype chain.</p>
+<p><b>Prototypal Inheritance:</b> In JavaScript, prototypal inheritance is a mechanism by 
+which an object can inherit properties and methods from another object called its "prototype." 
+Instead of traditional classes, JavaScript uses prototypal inheritance to create relationships 
+between objects. When a property or method is looked up in an object, if it&apos;s not found 
+in the object itself, it is searched in its prototype and in the ascending prototype chain.</p>
 
-<p><b>Prototype Chain:</b> The prototype chain is a series of links between
-prototype objects. Each object has an internal link to its prototype, and
-that prototype, in turn, may have its own prototype. This chain continues
-until it reaches the base object, which is the final prototype in the chain.</p>
+<p><b>Prototype Chain:</b> The prototype chain is a series of links between prototype objects. 
+Each object has an internal link to its prototype, and that prototype, in turn, may have its 
+own prototype. This chain continues until it reaches the base object, which is the final prototype 
+in the chain.</p>
 
-<p><b>Example of Prototypal Inheritance and Prototype Chain:</b></p>
+<h4>Example of Prototypal Inheritance and Prototype Chain:</h4>
 
 <pre>
 // Define an "Animal" constructor 
@@ -1700,17 +1703,17 @@ work and code reuse in JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk18">sk18. Object.create and Object.assign</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Both Object.create and Object.assign are important methods in JavaScript
-used for working with objects, but they serve different purposes.</p>
+<p>Both Object.create and Object.assign are important methods in JavaScript used for working 
+with objects, but they serve different purposes.</p>
 
-<p><b>Object.create:</b> Object.create is a method used to create a new object and
-set its prototype (parent object). It allows creating objects that inherit
-properties and methods from another object. It&apos;s especially useful for
-implementing prototypal inheritance in JavaScript.</p>
+<p><b>Object.create:</b> Object.create is a method used to create a new object and set its 
+prototype (parent object). It allows creating objects that inherit properties and methods 
+from another object. It&apos;s especially useful for implementing prototypal inheritance in 
+JavaScript.</p>
 
 <pre>const newObj = Object.create(prototype);</pre>
 
-<p><b>Example of Object.create:</b></p>
+<h4>Example of Object.create:</h4>
 
 <pre>
 const animal = {
@@ -1724,14 +1727,13 @@ dog.sound = "Woof woof";
 dog.makeSound();  // Prints "Woof woof"
 </pre>
 
-<p><b>Object.assign:</b> Object.assign is a method used to copy enumerable
-properties from one or more source objects to a target object If there are
-properties with the same name in the target object they will be
-overwritten. It&apos;s usefulfor combining objects or cloning objects.</p>
+<p><b>Object.assign:</b> Object.assign is a method used to copy enumerable properties from one 
+or more source objects to a target object. If there are properties with the same name in the 
+target object they will be overwritten. It&apos;s usefulfor combining objects or cloning objects.</p>
 
 <pre>Object.assign(targetObject, sourceObject1, sourceObject2, ...);</pre>
 
-<p><b>Example of Objectassign:</b></p>
+<h4>Example of Objectassign:</h4>
 
 <pre>
 const target = {};
@@ -1743,7 +1745,8 @@ console.log(target);
 // Prints { name: "John", age: 30, city: "New York" }
 </pre>
 
-<p><b>In summary:</b></p>
+<h4>In summary:</h4>
+
 <ul>
   <li><b>Object.create:</b> Creates a new object with a specified prototype.</li>
   <li><b>Object.assign:</b> Combines or copies enumerable properties from source objects 
@@ -1794,13 +1797,12 @@ const sum = numbers.reduce((accumulator, number) =&gt; accumulator + number, 0);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk20">sk20. Pure Functions, Side Effects, State Mutation, and Event Propagation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>These concepts are related to functional programming, data manipulation, and 
-interaction in JavaScript Here&apos;s an explanation of each one:</p>
+<p>These concepts are related to functional programming, data manipulation, and interaction 
+in JavaScript Here&apos;s an explanation of each one:</p>
 
-<p><b>Pure Functions:</b> Pure functions are functions that produce the same
-result for the same arguments and have no side effects on the
-environment This means they don't modify external variables, perform
-input/output operations, and don't depend on external mutable data.</p>
+<p><b>Pure Functions:</b> Pure functions are functions that produce the same result for the 
+same arguments and have no side effects on the environment This means they don't modify 
+external variables, perform input/output operations, and don't depend on external mutable data.</p>
 
 <p>Characteristics of pure functions:</p>
 <ul>
@@ -1808,31 +1810,30 @@ input/output operations, and don't depend on external mutable data.</p>
   <li><b>No side effects:</b> They don't alter data outside the function.</li>
 </ul>
 
-<p><b>Side Effects:</b> Side effects are observable changes outside a function due
-to its execution. These changes can include modifying external variables,
-accessing external resources (network, files), and manipulating the DOM.</p>
+<p><b>Side Effects:</b> Side effects are observable changes outside a function due to its 
+execution. These changes can include modifying external variables, accessing external 
+resources (network, files), and manipulating the DOM.</p>
 
-<p><b>State Mutation:</b> State mutation occurs when mutable data, such as
-objects or arrays, is modified directly instead of creating new ones. It can
-lead to unwanted side effects and make tracking changes difficult.</p>
+<p><b>State Mutation:</b> State mutation occurs when mutable data, such as objects or arrays, 
+is modified directly instead of creating new ones. It can lead to unwanted side effects and 
+make tracking changes difficult.</p>
 
-<p><b>Event Propagation</b> In the context of the DOM and interactions on a web 
-page, event propagation refers to the flow of an event through the
-hierarchy of elements. Events can propagate from the target element to
-ancestor elements or vice versa.</p>
+<p><b>Event Propagation</b> In the context of the DOM and interactions on a web page, event 
+propagation refers to the flow of an event through the hierarchy of elements. Events can 
+propagate from the target element to ancestor elements or vice versa.</p>
 
-<p><b>Phases of Event Propagation:</b></p>
+<h4>Phases of Event Propagation:</h4>
+
 <ul>
   <li><b>Capture:</b> The event descends from the root element to the target.</li>
   <li><b>Target:</b> The event reaches the target element.</li>
   <li><b>Bubbling:</b> The event ascends from the target to the root element.</li>
 </ul>
 
-<p>These concepts are fundamental for writing more predictable, maintainable, and 
-scalable code. The focus on pure functions and avoiding side effects contributes to 
-functional programming, while understanding state mutation is crucial for working 
-with changing data. Event propagation is essential for managing interaction in web 
-applications.</p>
+<p>These concepts are fundamental for writing more predictable, maintainable, and scalable code. 
+The focus on pure functions and avoiding side effects contributes to functional programming, while 
+understanding state mutation is crucial for working with changing data. Event propagation is 
+essential for managing interaction in web applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">sk21. Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -1879,22 +1880,22 @@ console.log(counter());  // 1
 console.log(counter());  // 2
 </pre>
 
-<p><b>Explanation:</b></p>
+<h4>Explanation:</h4>
 
 <blockquote>
-<b>makeCounter function:</b>
+<h4>makeCounter function:</h4>
 <ul>
   <li>It creates a local variable count initialized to 0.</li>
   <li>It defines and returns an inner function that increments and returns the value 
     of count.</li>
 </ul>
-<b>counter variable:</b>
+<h4>counter variable:</h4>
 <ul>
   <li>It stores the function returned by makeCounter.</li>
   <li>This function has access to the count variable in the outer scope, even after 
     makeCounter has finished executing.</li>
 </ul>
-<b>Calling counter:</b>
+<h4>Calling counter:</h4>
 <ul>
   <li>Each time counter is called, it increments the count variable and returns the 
     updated value.</li>
@@ -1902,24 +1903,22 @@ console.log(counter());  // 2
     count variable) due to the closure mechanism.</li>
 </ul>
 </blockquote>
-<p>Closures ore particularly useful for creating functions with private states,
-maintaining encapsulation in JavaScript. They are also used in patterns
-like modules and callback functions in events.</p>
+
+<p>Closures ore particularly useful for creating functions with private states, maintaining 
+encapsulation in JavaScript. They are also used in patterns like modules and callback functions 
+in events.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk22">sk22. High Order Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>High Order Functions are functions that can accept other functions as
-arguments and/or return functions as results. These functions are a
-fundamental part of functional programming and enable the creation of
-more modular, reusable, and expressive code. High Order Functions make
-it easier to use common programming patterns such as mapping, filtering,
-and reducing data.</p>
+<p>High Order Functions are functions that can accept other functions as arguments and/or 
+return functions as results. These functions are a fundamental part of functional programming 
+and enable the creation of more modular, reusable, and expressive code. High Order Functions 
+make it easier to use common programming patterns such as mapping, filtering, and reducing data.</p>
 
 <p>Here are some examples and key concepts related to High Order Functions:</p>
 
-<p><b>Functions as Arguments:</b> You can pass a function as an argument to
-another function. This allows customizing the behavior of the receiving
-function.</p>
+<p><b>Functions as Arguments:</b> You can pass a function as an argument to another function. 
+This allows customizing the behavior of the receiving function.</p>
 
 <pre>
 function performOperation(operation, a, b) { 
@@ -1955,24 +1954,24 @@ const resultDouble = double(5);  // Result: 10
 const resultTriple = triple(4);  // Result: 12
 </pre>
 
-<p><b>Mapping (Map):</b> The map method of an array applies a function to each
-element of the array and returns a new array with the results.</p>
+<p><b>Mapping (Map):</b> The map method of an array applies a function to each element of the array 
+and returns a new array with the results.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4&rbrack;;
 const duplicates = numbers.map(number =&gt; number * 2);  // Result: &lbrack;2, 4, 6, 8&rbrack;
 </pre>
 
-<p><b>Filtering (Filter):</b> The filter method of an array creates a new array with
-elements that pass a specified condition.</p>
+<p><b>Filtering (Filter):</b> The filter method of an array creates a new array with elements that 
+pass a specified condition.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const odds = numbers.filter(number =&gt; number % 2 !== 0);  // Result: &lbrack;1, 3, 5&rbrack;
 </pre>
 
-<p><b>reducing (reduce):</b> The reduce method or an array accumulates
-elements by applying a reducing function and returns a single result.</p>
+<p><b>reducing (reduce):</b> The reduce method or an array accumulates elements by applying a 
+reducing function and returns a single result.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4&rbrack;;
@@ -1982,14 +1981,13 @@ const totalSum = numbers.reduce((accumulator, number) =&gt;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk23">sk23. Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Recursion is a programming concept where a function calls itself to solve
-a problem. Essentially, it is a technique in which a function breaks down
-into smaller, more manageable problems until it reaches a base case that
-can be solved directly. Recursion is particularly useful for solving problems
-that have an intrinsic recursive structure.</p>
+<p>Recursion is a programming concept where a function calls itself to solve a problem. 
+Essentially, it is a technique in which a function breaks down into smaller, more manageable 
+problems until it reaches a base case that can be solved directly. Recursion is particularly 
+useful for solving problems that have an intrinsic recursive structure.</p>
 
-<p>Here&apos;s a simple example of a recursive function that calculates the
-factorial of a number:</p>
+<p>Here&apos;s a simple example of a recursive function that calculates the factorial of a 
+number:</p>
 
 <pre>
 function factorial(n) {
@@ -2003,45 +2001,41 @@ function factorial(n) {
 const result = factorial(5);  // Result: 120 (5 * 4 * 3 * 2 * 1)
 </pre>
 
-<p>In this example, the factorial function calls itself with a reduced argument
-in each call until it reaches the base case, where the result is returned.
-Recursion can also have side effects, such as the use of the call stack, so
-it&apos;s essential to ensure a clear base case and that recursion converges
-toward it.</p>
+<p>In this example, the factorial function calls itself with a reduced argument in each call 
+until it reaches the base case, where the result is returned. Recursion can also have side 
+effects, such as the use of the call stack, so it&apos;s essential to ensure a clear base case 
+and that recursion converges toward it.</p>
 
-<p>Some classic problems solved with recursion include multiplication 
-calculations (factorials, Fibonacci numbers), tree and graph traversal, and
-divide and conquer in algorithms. However, it&apos;s crucial to use recursion
-carefully, as improper use can lead to performance issues and stack
-overflow errors.</p>
+<p>Some classic problems solved with recursion include multiplication calculations (factorials, 
+Fibonacci numbers), tree and graph traversal, and divide and conquer in algorithms. However, 
+it&apos;s crucial to use recursion carefully, as improper use can lead to performance issues 
+and stack overflow errors.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk24">sk24. Collections and Generators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Collections and generators are important concepts in JavaScript that help
-handle and manipulate sets of data efficiently and flexibly. Here&apos;s a
-description of both:</p>
+<p>Collections and generators are important concepts in JavaScript that help handle and 
+manipulate sets of data efficiently and flexibly. Here&apos;s a description of both:</p>
 
-<p><b>Collections:</b> Collections are data structures that allow storing and
-organizing multiple elements. In JavaScript, some of the most common
-collections are:</p>
+<p><b>Collections:</b> Collections are data structures that allow storing and organizing 
+multiple elements. In JavaScript, some of the most common collections are:</p>
 
-<p><b>Arrays:</b> Ordered lists of elements that can contain any data type. Arrays
-have zero-based indices to access elements.</p>
+<p><b>Arrays:</b> Ordered lists of elements that can contain any data type. Arrays have zero-
+based indices to access elements.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4&rbrack;;
 const fruits = &lbrack;'apple', 'orange', 'banana'&rbrack;;
 </pre>
 
-<p><b>Objects:</b> Collections of key-value pairs where keys are strings (or symbols
-in ES6) and values can be any data type.</p>
+<p><b>Objects:</b> Collections of key-value pairs where keys are strings (or symbols in ES6) 
+and values can be any data type.</p>
 
 <pre>
 const person = { name: 'John', age: 30 };
 </pre>
 
-<p><b>Maps:</b> Structures similar to objects but allow using any value as a key and
-maintain the insertion order.</p>
+<p><b>Maps:</b> Structures similar to objects but allow using any value as a key and maintain 
+the insertion order.</p>
 
 <pre>
 const map = new Map();
@@ -2058,11 +2052,9 @@ set.add('green');
 set.add('red');  // Not added, as 'red' is already in the set
 </pre>
 
-<p><b>Generators:</b> Generators are special functions that allow pausing and
-resuming their execution at a specific point. They enable creating a
-custom lazy and iterative control flow. They are defined using the
-function* keyword and use the yield statement to pause the function and
-return values.</p>
+<p><b>Generators:</b> Generators are special functions that allow pausing and resuming their execution 
+at a specific point. They enable creating a custom lazy and iterative control flow. They are defined 
+using the function* keyword and use the yield statement to pause the function and return values.</p>
 
 <pre>
 function* counter() {
@@ -2119,8 +2111,8 @@ nnomiqp.thpnfvalue =&gt; 4
 });
 </pre>
 
-<p><b>Chaining Promises:</b> You can chain multiple promises using the then
-method, allowing for sequential asynchronous operations.</p>
+<p><b>Chaining Promises:</b> You can chain multiple promises using the then method, allowing for 
+sequential asynchronous operations.</p>
 
 <pre>
 doSomethingAsync()
@@ -2130,9 +2122,9 @@ doSomethingAsync()
   .catch(error =&gt; console.error(error));
 </pre>
 
-<p><b>Handling Multiple Promises:</b> The Promise.all method allows you to
-handle an array of promises and returns a new promise that is resolved
-when all promises in the array have been resolved.</p>
+<p><b>Handling Multiple Promises:</b> The Promise.all method allows you to handle an array of 
+promises and returns a new promise that is resolved when all promises in the array have been 
+resolved.</p>
 
 <pre>
 const promisel = fetchData1();
@@ -2148,19 +2140,19 @@ Promise.all(&lbrack;promisel, promise2&rbrack;)
 </pre>
 
 <p>Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
-However, as JavaScript evolved, more advanced readable syntax for working with 
-asynchronous operations.</p>
+However, as JavaScript evolved, more advanced readable syntax for working with asynchronous 
+operations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk26">sk26. async/await</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>async/await is a feature introduced in ECMAScript 2017 (ES8) that simplifies 
-asynchronous programming in JavaScript It provides a cleaner and more readable syntax for 
-working with promises and asynchronous operations. With async/await, you can write code 
-that looks synchronous but efficiently handles asynchronous operations.</p>
+<p>async/await is a feature introduced in ECMAScript 2017 (ES8) that simplifies asynchronous 
+programming in JavaScript It provides a cleaner and more readable syntax for working with 
+promises and asynchronous operations. With async/await, you can write code that looks 
+synchronous but efficiently handles asynchronous operations.</p>
 
 <p><b>Async Functions:</b> A function declared with the async keyword automatically returns a 
-promise. You can use the await keyword within an async function to wait for the 
-resolution of a promise without blocking the main thread&apos;s execution.</p>
+promise. You can use the await keyword within an async function to wait for the resolution of 
+a promise without blocking the main thread&apos;s execution.</p>
 
 <pre>
 async function fetchDataQ 1
@@ -2174,13 +2166,12 @@ fetchData()
 .catch(error =&gt; console.error(error));
 </pre>
 
-<p>In this example, fetchData is an asynchronous function that waits for the
-response of an API request and then awaits the conversion of that
-response into a JSON object The code looks like a synchronous flow, even
-though it&apos;s handling asynchronous operations.</p>
+<p>In this example, fetchData is an asynchronous function that waits for the response of an API 
+request and then awaits the conversion of that response into a JSON object The code looks like 
+a synchronous flow, even though it&apos;s handling asynchronous operations.</p>
 
-<p><b>Error Handling:</b> You can use the try/catch block with async/await to
-handle errors more naturally.</p>
+<p><b>Error Handling:</b> You can use the try/catch block with async/await to handle errors more 
+naturally.</p>
 
 <pre>
 async function fetchData() {
@@ -2195,8 +2186,8 @@ async function fetchData() {
 }
 </pre>
 
-<p><b>Chaining Promises with async/await:</b> You can chain async functions
-using await, making the code more readable and avoiding excessive nesting.</p>
+<p><b>Chaining Promises with async/await:</b> You can chain async functions using await, making 
+the code more readable and avoiding excessive nesting.</p>
 
 <pre>
 async function fetchAndProcessData() {
@@ -2206,12 +2197,11 @@ async function fetchAndProcessData() {
 }
 </pre>
 
-<p>async/await is a powerful and elegant way to handle asynchronous
-operations in JavaScript Although it is newer than promises, it has gained
-popularity due to its simpler and easier-to-understand syntax. However,
-it&apos;s essential to remember that async/await still relies on underlying
-promises, so understanding how promises work is crucial to make the
-most out of asy nc/await.</p>
+<p>async/await is a powerful and elegant way to handle asynchronous operations in JavaScript. 
+Although it is newer than promises, it has gained popularity due to its simpler and easier-to-
+understand syntax. However, it&apos;s essential to remember that async/await still relies on 
+underlying promises, so understanding how promises work is crucial to make the most out of 
+async/await.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk27">sk27. Data Structures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2276,23 +2266,21 @@ stack.push('y');
 const lastElement = stack.pop();  // 'y'
 </pre>
 
-<p>These are just some of the basic data structures in JavaScript The choice
-of the right data structure depends on the specific requirements of your
-program and the operations you need to perform on the stored data.</p>
+<p>These are just some of the basic data structures in JavaScript The choice of the right data 
+structure depends on the specific requirements of your program and the operations you need to 
+perform on the stored data.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk28">sk28. Costly Operations and Big 0 Notation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Costly operations refer to actions in a program that consume a significant
-amount of resources, such as time and memory. These operations can
-negatively impact the performance and efficiency of your program. One
-way to measure and compare the efficiency of different algorithms or
-operations is through Big 0 notation.</p>
+<p>Costly operations refer to actions in a program that consume a significant amount of 
+resources, such as time and memory. These operations can negatively impact the performance 
+and efficiency of your program. One way to measure and compare the efficiency of different 
+algorithms or operations is through Big 0 notation.</p>
 
-<p><b>Big 0 Notation:</b> Big 0 notation is a way to express the time or space
-complexity of an algorithm in terms of the input size. It helps understand
-how the execution time or memory usage increases as the size of the
-problem grows. It is used to evaluate the relative performance of different
-algorithms based on the input.</p>
+<p><b>Big 0 Notation:</b> Big 0 notation is a way to express the time or space complexity of 
+an algorithm in terms of the input size. It helps understand how the execution time or memory 
+usage increases as the size of the problem grows. It is used to evaluate the relative performance 
+of different algorithms based on the input.</p>
 
 <p>Some common Big 0 notations include:</p>
 <ul>
@@ -2312,74 +2300,64 @@ algorithms based on the input.</p>
    input sizes.</li>
 </ul>
 
-<p>Choosing efficient algorithms and data structures is crucial to minimize
-costly operations. In many cases, algorithms with lower Big 0 notations
-are sought to improve performance. However, it&apos;s essential to consider
-context and other factors that may influence the choice of the right
-algorithm.</p>
+<p>Choosing efficient algorithms and data structures is crucial to minimize costly operations. 
+In many cases, algorithms with lower Big 0 notations are sought to improve performance. However, 
+it&apos;s essential to consider context and other factors that may influence the choice of the 
+right algorithm.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk29">sk29. Algorithms</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Algorithms ore ordered sets of steps or instructions that solve a problem
-or perform a specific task. In programming, algorithms are fundamental
-for addressing a wide varietg of challenges, from data manipulation to
-decision-making and optimization. A good algorithm should be efficient,
-clear, and capable of solving the given problem.</p>
+<p>Algorithms ore ordered sets of steps or instructions that solve a problem or perform a 
+specific task. In programming, algorithms are fundamental for addressing a wide varietg of 
+challenges, from data manipulation to decision-making and optimization. A good algorithm 
+should be efficient, clear, and capable of solving the given problem.</p>
 
 <p>Here are some examples of algorithms and areas where they are applied:</p>
 
-<p><b>Sorting:</b> Sorting algorithms are used to rearrange elements in a sequence
-according to certain rules. Examples of sorting algorithms include Quick
-Sort, Merge Sort, and Bubble Sort.</p>
+<p><b>Sorting:</b> Sorting algorithms are used to rearrange elements in a sequence according to 
+certain rules. Examples of sorting algorithms include Quick Sort, Merge Sort, and Bubble Sort.</p>
 
-<p><b>Searching:</b> Searching algorithms are used to find a specific element
-within a collection of data. Examples include binary search and Linear
-search.</p>
+<p><b>Searching:</b> Searching algorithms are used to find a specific element within a collection 
+of data. Examples include binary search and Linear search.</p>
 
-<p><b>Graphs and Trees:</b> Algorithms Like Depth-First Search (DFS) and Breadth-
-First Search (BFS) are used to traverse and search in graphs and trees.</p>
+<p><b>Graphs and Trees:</b> Algorithms Like Depth-First Search (DFS) and Breadth-First Search (BFS) 
+are used to traverse and search in graphs and trees.</p>
 
-<p><b>Recursion:</b> Recursive algorithms solve problems by breaking them down
-into smaller subproblems and solving each subproblem recursively.</p>
+<p><b>Recursion:</b> Recursive algorithms solve problems by breaking them down into smaller 
+subproblems and solving each subproblem recursively.</p>
 
 <p>Examples include factorial calculations and Fibonacci numbers.</p>
 
-<p><b>Dynamic Programming:</b> This approach divides a problem into smaller
-subproblems and solves each subproblem only once, storing its results to
-avoid duplicates. It is used in optimization problems, such as efficiently
-calculating the Fibonacci sequence.</p>
+<p><b>Dynamic Programming:</b> This approach divides a problem into smaller subproblems and solves 
+each subproblem only once, storing its results to avoid duplicates. It is used in optimization 
+problems, such as efficiently calculating the Fibonacci sequence.</p>
 
-<p><b>Backtracking:</b> This approach is used to explore all possible solutions to a
-problem, backtracking and retrying if a partial solution doesn't work. It is
-applied in problems like Sudoku and the N-Queens problem.</p>
+<p><b>Backtracking:</b> This approach is used to explore all possible solutions to a problem, 
+backtracking and retrying if a partial solution doesn't work. It is applied in problems like 
+Sudoku and the N-Queens problem.</p>
 
-<p><b>Linear Algebra:</b> Algorithms Like Gaussian Elimination are used to solve
-systems of Linear equations.</p>
+<p><b>Linear Algebra:</b> Algorithms Like Gaussian Elimination are used to solve systems of Linear 
+equations.</p>
 
-<p><b>Cryptography:</b> Cryptographic algorithms are used to secure
-communication and protect information. Examples include encryption
-algorithms Like AES and RSA.</p>
+<p><b>Cryptography:</b> Cryptographic algorithms are used to secure communication and protect 
+information. Examples include encryption algorithms Like AES and RSA.</p>
 
-<p><b>Optimization:</b> Optimization algorithms seek to find the best solution
-among multiple options. Examples include genetic algorithms and search
-optimization algorithms.</p>
+<p><b>Optimization:</b> Optimization algorithms seek to find the best solution among multiple 
+options. Examples include genetic algorithms and search optimization algorithms.</p>
 
-<p><b>Artificial Intelligence:</b> Algorithms Like decision trees and machine
-learning algorithms are used for decision-making and prediction in
-artificial intelligence systems.</p>
+<p><b>Artificial Intelligence:</b> Algorithms Like decision trees and machine learning algorithms 
+are used for decision-making and prediction in artificial intelligence systems.</p>
 
-<p>Algorithms are an essential part of programming and are used in various
-contexts to solve problems effectively and efficiently. Each algorithm has
-advantages and disadvantages depending on the problem and available
-resources, so choosing the right approach for each situation is crucial.</p>
+<p>Algorithms are an essential part of programming and are used in various contexts to solve 
+problems effectively and efficiently. Each algorithm has advantages and disadvantages depending 
+on the problem and available resources, so choosing the right approach for each situation is crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk30">sk30. Inheritance, Polymorphism, and Code Reusability</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Inheritance:</b> Inheritance is a fundamental concept in object-oriented
-programming (OOP) that allows the creation of new classes based on
-existing classes. A class that inherits from another (called a base class or
-superclass) acquires its attributes and methods, enabling code reuse and
-functionality extension.</p>
+<p><b>Inheritance:</b> Inheritance is a fundamental concept in object-oriented programming 
+(OOP) that allows the creation of new classes based on existing classes. A class that inherits 
+from another (called a base class or superclass) acquires its attributes and methods, enabling 
+code reuse and functionality extension.</p>
 
 <pre>
 class Animal {
@@ -2703,8 +2681,8 @@ Modules provide a mechanism for exporting and importing functionality between di
 JavaScript files, making it easier to separate concerns and build more maintainable 
 applications. Here&apos;s an overview of how ES6 modules work:</p>
 
-<p><b>Export from a Module:</b> You can export values, functions, and classes from a 
-module using the export keyword.</p>
+<p><b>Export from a Module:</b> You can export values, functions, and classes from a module 
+using the export keyword.</p>
 
 <pre>
 // file: module.js
@@ -2721,8 +2699,8 @@ export default class Person {
 }
 </pre>
 
-<p><b>Import into Another Module:</b> You con import exported values into another module 
-using the import keyword.</p>
+<p><b>Import into Another Module:</b> You con import exported values into another module using 
+the import keyword.</p>
 
 <pre>
 // file: app.js
@@ -2750,8 +2728,8 @@ const person = new module.default('Maria');
 console.log(person.name);  // Prints: Maria
 </pre>
 
-<p><b>Import Only the Default Value:</b> If you have a default export, you can import it 
-directly without using braces.</p>
+<p><b>Import Only the Default Value:</b> If you have a default export, you can import it directly 
+without using braces.</p>
 
 <pre>
 // file: app.js
@@ -2872,7 +2850,7 @@ variables in a more concise and readable way. This feature is useful for working
 complex data structures and avoiding code repetition when accessing properties and 
 elements.</p>
 
-<p><b>Destructuring with Arrays:</b></p>
+<h4>Destructuring with Arrays:</h4>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 5&rbrack;;
@@ -2884,7 +2862,7 @@ console.log(second);  // Prints: 2
 console.log(rest);  // Prints: &lbrack;3, 4, 5&rbrack;
 </pre>
 
-<p><b>Destructuring with Objects:</b></p>
+<h4>Destructuring with Objects:</h4>
 
 <pre>
 const person = { name: 'Ana', age: 30, city: 'Madrid' };
@@ -2939,7 +2917,7 @@ This enables the interpolation of variables and expressions directly into the st
 well as the inclusion of Line breaks and special characters without the need for manual 
 concatenation.</p>
 
-<p><b>Here&apos;s a basic example of how template literals work:</b></p>
+<h4>Here&apos;s a basic example of how template literals work:</h4>
 
 <pre>
 const name = 'Juan';
@@ -2955,7 +2933,7 @@ console.log(message);  // Prints "Hello, my name is Juan and I am 30 years old."
 interpolated within them. Template literals also allow for including line
 breaks and special characters without the need for escaping:</p>
 
-<p><b>Multiline and Special Characters:</b></p>
+<h4>Multiline and Special Characters:</h4>
 
 <pre>
 const multilineMessage = `
@@ -2971,22 +2949,19 @@ console.log(multilineMessage);
 // that spans multiple lines."
 </pre>
 
-<p>Template literals are especially useful when building complex strings that
-include dynamic values and formatted elements. Moreover, by using
-template Literals, the code becomes more readable and avoids manual
-string concatenation, which can be error-prone and confusing.</p>
+<p>Template literals are especially useful when building complex strings that include dynamic 
+values and formatted elements. Moreover, by using template Literals, the code becomes more 
+readable and avoids manual string concatenation, which can be error-prone and confusing.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk40">sk40. Arrow Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that
-provide a more concise and clear syntax for defining functions in
-JavaScript Arrow functions are especially useful when working with
-anonymous functions or functions that do not require a special this
-context Here&apos;s an overview of how arrow functions are used:</p>
+<p>Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that provide a more concise 
+and clear syntax for defining functions in JavaScript Arrow functions are especially useful 
+when working with anonymous functions or functions that do not require a special this context. 
+Here&apos;s an overview of how arrow functions are used:</p>
 
-<p><b>Basic Syntax:</b> An arrow function is defined using the syntax 0 =&gt;
-where the parentheses contain the function parameters, and the arrow
-(=&gt;) separates the parameters from the function body.</p>
+<p><b>Basic Syntax:</b> An arrow function is defined using the syntax 0 =&gt; where the parentheses 
+contain the function parameters, and the arrow (=&gt;) separates the parameters from the function body.</p>
 
 <pre>
 // Traditional function
@@ -3000,35 +2975,33 @@ const arrowSum = (a, b) =&gt; {
 };
 </pre>
 
-<p><b>Implicit Return:</b> If the function body contains only one expression, you
-can omit the curly braces and the return statement, and the function
-will automatically return the result of that expression.</p>
+<p><b>Implicit Return:</b> If the function body contains only one expression, you can omit the 
+curly braces and the return statement, and the function will automatically return the result of 
+that expression.</p>
 
 <pre>
 // Arrow function with implicit return
 const arrowSum = (a, b) =&gt; a + b;
 </pre>
 
-<p><b>Single Parameter:</b> If the function has only one parameter, the
-parentheses around the parameters can also be omitted.</p>
+<p><b>Single Parameter:</b> If the function has only one parameter, the parentheses around the 
+parameters can also be omitted.</p>
 
 <pre>
 // Arrow function with a single parameter
 const square = num =&gt; num * num;
 </pre>
 
-<p><b>No Parameters:</b> If the function has no parameters, empty parentheses Q
-must be used.</p>
+<p><b>No Parameters:</b> If the function has no parameters, empty parentheses () must be used.</p>
 
 <pre>
 // Arrow function with no parameters
 const getCurrentDate = () =&gt; new Date();
 </pre>
 
-<p><b>Using this:</b> One of the advantages of arrow functions is that they inherit
-the this value from the context they are in. This means they do not have
-their own this value, which can make them more predictable in situations
-where you work with objects and classes.</p>
+<p><b>Using this:</b> One of the advantages of arrow functions is that they inherit the this value 
+from the context they are in. This means they do not have their own this value, which can make them 
+more predictable in situations where you work with objects and classes.</p>
 
 <pre>
 const person = {
@@ -3043,29 +3016,26 @@ const person = {
 person.greet();  // Prints "Hello, I am John" after 1 second
 </pre>
 
-<p>In summary, arrow functions provide a more concise and convenient way
-to define functions in JavaScript, especially in situations where you aim to
-simplify syntax and maintain predictable this behavior. However, it&apos;s
-essential to understand their differences from regular functions, especially
-when dealing with more complex this contexts.</p>
+<p>In summary, arrow functions provide a more concise and convenient way to define functions 
+in JavaScript, especially in situations where you aim to simplify syntax and maintain predictable 
+this behavior. However, it&apos;s essential to understand their differences from regular functions, 
+especially when dealing with more complex this contexts.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk41">sk41. Array Methods (forEach, some, every, find, findindex, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Array object in JavaScript provides a variety of methods for working
-with arrays and performing operations on their elements. Here's a
-description of some of the most common Array methods:</p>
+<p>The Array object in JavaScript provides a variety of methods for working with arrays and 
+performing operations on their elements. Here's a description of some of the most common 
+Array methods:</p>
 
-<p><b>Array.length:</b> The length property returns the number of elements in the
-array.</p>
+<p><b>Array.length:</b> The length property returns the number of elements in the array.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 const elementcount = numbers.length;  // Result: 5
 </pre>
 
-<p><b>Array.push(elementl, element2, ...):</b> The push method adds one or
-more elements to the end of the array and returns the new Length of the
-array.</p>
+<p><b>Array.push(elementl, element2, ...):</b> The push method adds one or more elements to the 
+end of the array and returns the new length of the array.</p>
 
 <pre>
 const fruits = &lbrack;'apple', 'pear'&rbrack;;
@@ -3073,8 +3043,7 @@ fruits.push('orange', 'banana');
 // Result:  &lbrack;'apple', 'pear', 'orange', 'banana'&rbrack;
 </pre>
 
-<p><b>Array.pop():</b> The pop method removes the Last element from the array
-and returns it.</p>
+<p><b>Array.pop():</b> The pop method removes the Last element from the array and returns it.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3, 4&rbrack;;
@@ -3082,8 +3051,7 @@ const lastNumber = numbers.pop();
 // Result: 4 (numbers is now &lbrack;1, 2, 3&rbrack;)
 </pre>
 
-<p><b>Array.shift():</b> The shift method removes the first element from the array
-and returns it.</p>
+<p><b>Array.shift():</b> The shift method removes the first element from the array and returns it.</p>
 
 <pre>
 const colors = &lbrack;'red', 'green', 'blue'&rbrack;;
@@ -3091,27 +3059,24 @@ const firstColor = colors.shift();
 // Result: 'red' (colors is now &lbrack;'green', 'blue'&rbrack;)
 </pre>
 
-<p><b>Array.unshift(elementl, element2,...):</b> The unshift method adds one or
-more elements to the beginning of the array and returns the new length
-of the array.</p>
+<p><b>Array.unshift(elementl, element2,...):</b> The unshift method adds one or more elements to 
+the beginning of the array and returns the new length of the array.</p>
 
 <pre>
 const numbers = &lbrack;2, 3, 4&rbrack;;
 numbers.unshift(l, 0);  // Result: &lbrack;1, 0, 2, 3, 4&rbrack;
 </pre>
 
-<p><b>Array.forEach(callback(currentValue, index, array)):</b> The forEach
-method iterates over each element of the array and executes the provided
-callback function for each one.</p>
+<p><b>Array.forEach(callback(currentValue, index, array)):</b> The forEach method iterates over 
+each element of the array and executes the provided callback function for each one.</p>
 
 <pre>
 const numbers = &lbrack;1, 2, 3&rbrack;;
 numbers.forEach(number =&gt; console.log(number));  // Prints 1, 2, 3
 </pre>
 
-<p><b>Array.some(callback(currentValue, index, array)):</b> The some method
-checks if at Least one element in the array satisfies the condition specified
-in the callbackfunction.</p>
+<p><b>Array.some(callback(currentValue, index, array)):</b> The some method checks if at least 
+one element in the array satisfies the condition specified in the callback function.</p>
 
 <pre>
 const numbers - &lbrack;2, 4, 6&rbrack;;
@@ -3119,9 +3084,8 @@ const hasOdd = numbers.some(number =&gt; number % 2 !== 0);
 // Result: false
 </pre>
 
-<p><b>Array.every(callback(currentValue, index, array)):</b> The every method
-checks if aLL elements in the array satisfy the condition specified in the
-callback function.</p>
+<p><b>Array.every(callback(currentValue, index, array)):</b> The every method checks if all 
+elements in the array satisfy the condition specified in the callback function.</p>
 
 <pre>
 const numbers = {2, 4, 6&rbrack;;
@@ -3129,9 +3093,8 @@ const allEven - numbers.every(number =&gt; number % 2 --- 0);
 // Result: true
 </pre>
 
-<p><b>Array.find(callback(currentValue, index, array)):</b> The find method
-returns the first element in the array that satisfies the condition specified
-in the callback function.</p>
+<p><b>Array.find(callback(currentValue, index, array)):</b> The find method returns the first 
+element in the array that satisfies the condition specified in the callback function.</p>
 
 <pre>
 const people = &lbrack;
@@ -3144,9 +3107,9 @@ const person - people.find(person =&gt; person.age > 25);
 // Result: { name: 'Mary', age: 30 }
 </pre>
 
-<p><b>Array.findIndex(callback(currentValue, index, array)):</b> The findindex
-method returns the index of the first element in the array that satisfies the
-condition specified in the callbackfunction.</p>
+<p><b>Array.findIndex(callback(currentValue, index, array)):</b> The findindex method returns the 
+index of the first element in the array that satisfies the condition specified in the callback 
+function.</p>
 
 <pre>
 const numbers = &lbrack;10, 20, 30, 40&rbrack;;
@@ -3156,28 +3119,27 @@ const index = numbers.findIndex(number =&gt; number > 25);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk42">sk42. String Methods (split, trim, replace, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The String object in JavaScript provides a variety of methods for
-manipulating and working with text strings. Here’s a description of some
-of the most common String methods:</p>
+<p>The String object in JavaScript provides a variety of methods for manipulating and working 
+with text strings. Here’s a description of some of the most common String methods:</p>
 
-<p><b>String.length:</b> The length property returns the length (number of
-characters) of a text string.</p>
+<p><b>String.length:</b> The length property returns the length (number of characters) of a 
+text string.</p>
 
 <pre>
 const text = 'Hello, world!';
 const length = text.length;  // Result: 12
 </pre>
 
-<p><b>String.charAt(index):</b> The charAt method returns the character at the
-specified position in the string.</p>
+<p><b>String.charAt(index):</b> The charAt method returns the character at the specified position 
+in the string.</p>
 
 <pre>
 const text = 'Hello';
 const firstCharacter = text.charAt(0);  // Result: 'H'
 </pre>
 
-<p><b>String.concat(strl, str2,...):</b> The concat method combines two or more
-strings into a single string.</p>
+<p><b>String.concat(strl, str2,...):</b> The concat method combines two or more strings into a 
+single string.</p>
 
 <pre>
 const greeting = 'Hello';
@@ -3186,25 +3148,24 @@ const message = greeting.concat(', ', name);
 // Result: 'Hello, John'
 </pre>
 
-<p><b>String.indexOf(substring, start):</b> The indexOf method returns the first
-position at which a substring is found within the string. If not found, it
-returns -1.</p>
+<p><b>String.indexOf(substring, start):</b> The indexOf method returns the first position at which 
+a substring is found within the string. If not found, it returns -1.</p>
 
 <pre>
 const phrase = 'Hello, world!';
 const position - phrase.indexOf('world');  // Result: 7
 </pre>
 
-<p><b>String.substring(start, end):</b> The substring method extracts a substring
-from start to end (exclusive) of the string.</p>
+<p><b>String.substring(start, end):</b> The substring method extracts a substring from start to 
+end (exclusive) of the string.</p>
 
 <pre>
 const text = 'Hello, world!';
 const substring = text.substring(6, 11);  // Result: 'world'
 </pre>
 
-<p><b>String.split(separator, limit):</b> The split method divides a string into an
-array of substrings using the separator as the splitting point.</p>
+<p><b>String.split(separator, limit):</b> The split method divides a string into an array of 
+substrings using the separator as the splitting point.</p>
 
 <pre>
 const text = 'Apple,Orange,Pear';
@@ -3212,16 +3173,15 @@ const fruits - text.split(',');
 //Result: &lbrack;'Apple', 'Orange', 'Pear'&rbrack;
 </pre>
 
-<p><b>String.trim():</b> The trim method removes leading and trailing whitespaces
-from a string.</p>
+<p><b>String.trim():</b> The trim method removes leading and trailing whitespaces from a string.</p>
 
 <pre>
 const text = ' Hello, world! ';
 const cleanText = text.trim();  // Result: 'Hello, world!'
 </pre>
 
-<p><b>String.replace(search, replacement):</b> The replace method replaces a
-search substring with another replacement string in the original string.</p>
+<p><b>String.replace(search, replacement):</b> The replace method replaces a search substring with 
+another replacement string in the original string.</p>
 
 <pre>
 const text = 'Hello, name!';
@@ -3229,9 +3189,8 @@ const newText = text.replace('name', 'John');
 // Result: 'Hello, John!'
 </pre>
 
-<p><b>String.toUpperCase() and String.toLowerCase():</b> The toUpperCase and
-toLowerCase methods convert a string to uppercase or lowercase,
-respectively.</p>
+<p><b>String.toUpperCase() and String.toLowerCase():</b> The toUpperCase and toLowerCase methods 
+convert a string to uppercase or lowercase, respectively.</p>
 
 <pre>
 const text = 'Hello, World!';
@@ -3241,28 +3200,27 @@ const lowercase = text.toLowerCase();  // Result: 'hello, world!'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk43">sk43. Object Methods (keys, values, entries, etc.)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Object object in JavaScript provides several useful methods for working with 
-object properties and values. Here’s a description of some of the most common methods 
-of Object:</p>
+<p>The Object object in JavaScript provides several useful methods for working with object 
+properties and values. Here’s a description of some of the most common methods of Object:</p>
 
-<p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys
-(properties) of an object.</p>
+<p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys (properties) 
+of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
 const keys = Object.keys(object);  // Result: &lbrack;'a', 'b', 'c'&rbrack;
 </pre>
 
-<p><b>Object, values(obj):</b> The values method returns an array of values of the
-enumerable properties of an object.</p>
+<p><b>Object, values(obj):</b> The values method returns an array of values of the enumerable 
+properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
 const values = Object.values(object);  // Result: &lbrack;1, 2, 3&rbrack;
 </pre> 
 
-<p><b>Object.entries(obj):</b> The entries method returns on array of arrays with
-key-value pairs ofthe enumerable properties of an object.</p>
+<p><b>Object.entries(obj):</b> The entries method returns on array of arrays with key-value pairs 
+of the enumerable properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
@@ -3270,9 +3228,8 @@ const entries = Object.entries(object);
 // Result: &lbrack;&lbrack;'a', 1&rbrack;, &lbrack;'b', 2&rbrack;, &lbrack;'c', 3&rbrack;&rbrack;
 </pre>
 
-<p><b>Object.assign(target, sourcel, source2,...):</b> The assign method copies the 
-enumerable properties of one or more source objects into a target object It returns the 
-target object.</p>
+<p><b>Object.assign(target, sourcel, source2,...):</b> The assign method copies the enumerable 
+properties of one or more source objects into a target object It returns the target object.</p>
 
 <pre>
 const target = { a: 1 };
@@ -3281,8 +3238,8 @@ Object.assign(target, source);
 console.log(target);  // Result: { a: 1, b: 2, c: 3 }
 </pre>
 
-<p><b>Object.hasOwnProperty(prop):</b> The hasOwnProperty method checks if an object has 
-an own property with the specified name.</p>
+<p><b>Object.hasOwnProperty(prop):</b> The hasOwnProperty method checks if an object has an own property 
+with the specified name.</p>
 
 <pre>
 const object = { a: 1, b: 2 };
@@ -3290,8 +3247,8 @@ const hasPropertyA = object.hasOwnProperty('a');  // Result: true
 const hasPropertyC = object.hasOwnPropertyC'c');  // Result: false
 </pre>
 
-<p><b>Object.freeze(obj):</b> The freeze method freezes an object, meaning that its
-existing properties cannot be added, deleted, or modified.</p>
+<p><b>Object.freeze(obj):</b> The freeze method freezes an object, meaning that its existing properties 
+cannot be added, deleted, or modified.</p>
 
 <pre>
 const object = { a: 1, b: 2 };
@@ -3299,24 +3256,23 @@ Object.freeze(object);
 object.a - 10;  // No effect
 </pre>
 
-<p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys
-(properties) of an object.</p>
+<p><b>Object.keys(obj):</b> The keys method returns an array of enumerable keys (properties) of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
 const keys = Object.keys(object);  // Result: &lbrack;'a', 'b', 'c'&rbrack;
 </pre>
 
-<p><b>Object, values(obj):</b> The values method returns an array of values of the
-enumerable properties of an object.</p>
+<p><b>Object, values(obj):</b> The values method returns an array of values of the enumerable 
+properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
 const values = Object.values(object);  // Result: &lbrack;1, 2, 3&rbrack;
 </pre>
 
-<p><b>Object.entries(obj):</b> The entries method returns an array of arrays with
-key-value pairs ofthe enumerable properties of an object.</p>
+<p><b>Object.entries(obj):</b> The entries method returns an array of arrays with key-value pairs 
+of the enumerable properties of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2, c: 3 };
@@ -3324,8 +3280,8 @@ const entries = Object.entries(object);
 // Result: &lbrack;&lbrack;'a', 1&rbrack;, &lbrack;'b', 2&rbrack;, &lbrack;'c', 3&rbrack;&rbrack;
 </pre>
 
-<p><b>Object.getOwnPropertyNames(obj):</b> The getOwnPropertyNames method returns an 
-array with all properties (enumerable or not) of an object.</p>
+<p><b>Object.getOwnPropertyNames(obj):</b> The getOwnPropertyNames method returns an array with 
+all properties (enumerable or not) of an object.</p>
 
 <pre>
 const object = { a: 1, b: 2 };
@@ -3417,7 +3373,7 @@ a JavaScript object</b>. This is useful when receiving JSON data from the server
 convert it back into objects for manipulation in the code. The JSON.parse() function is used for
 deserialization.</p>
 
-<p><b>Deserialization Example:</b></p>
+<h4>Deserialization Example:</h4>
 
 <pre>
 const personJSON = '{"name":"Juan","age":30,"city":"Mexico"}';
@@ -3464,7 +3420,7 @@ a more elegant and flexible way to make HTTP requests and handle responses. It u
 request and response. The Fetch API supports a variety of data types and response 
 formats, such as JSON, text, blobs, and more.</p>
 
-<p><b>Features of the Fetch API:</b></p>
+<h4>Features of the Fetch API:</h4>
 
 <ul>
   <li>Promise-based: It uses promises to handle asynchronous responses.</li>
@@ -3472,7 +3428,7 @@ formats, such as JSON, text, blobs, and more.</p>
   <li>Support for different formats: It can handle responses in JSON, text, blobs, forms, etc.</li>
 </ul>
 
-<p><b>Fetch API Example:</b></p>
+<h4>Fetch API Example:</h4>
 
 <pre>
 fetch('https://api.example.com/data')
@@ -3487,13 +3443,14 @@ suggests it is related to XML, it can actually be used for any type of response,
 JSON or plain text AJAX was very popular before the arrival of the Fetch API and is still 
 used in many projects.</p>
 
-<p><b>Features of AJAX:</b></p>
+<h4>Features of AJAX:</h4>
+
 <ul>
   <li>Uses the XMLHttpRequest object: It is older and uses a slightly more complex syntax.<li>
   <li>Higher compatibility: It works in older browser versions that do not fully support the Fetch API.</li>
 </ul>
  
-<p><b>AJAX example:</b></p>
+<h4>AJAX example:</h4>
 
 <pre>
 const xhr = new XMLHttpRequest();
@@ -3519,14 +3476,15 @@ value pairs</b> persistently in the browser. Data stored in LocalStorage
 <b>persists even after closing the browser</b> and reopening it. This data is
 available to all open tabs and windows of the same domain.</p>
 
-<p><b>Features of Localstorage:</b></p>
+<h4>Features of Localstorage:</h4>
+
 <ul>
   <li><b>Persistence:</b> Stored data remains even after closing the browser.</li>
   <li><b>Domain scope:</b> Data is available to all tabs and windows of the same domain.</li>
   <li><b>Capacity:</b> Storage of several megabytes (depending on the browser).</li>
 </ul>
 
-<p><b>Example of Localstorage:</b></p>
+<h4>Example of Localstorage:</h4>
 
 <pre>
 // Save data to LocalStorage
@@ -3545,14 +3503,15 @@ stored in SessionStorage is <b>only available during the current browser
 session</b>. If the browser or tab is closed, the data stored in SessionStorage
 will be automatically cleared.</p>
 
-<p><b>Features of SessionStorage:</b></p>
+<h4>Features of SessionStorage:</h4>
+
 <ul>
   <li><b>Session duration:</b> Data is only available during the current browser session.</li>
   <li><b>Domain scope:</b> Data is available to all tabs and windows of the same domain in the same session.</li>
   <li><b>Capacity:</b> Storage of several megabytes (depending on the browser).</li>
 </ul>
 
-<p><b>Example of SessionStorage:</b></p>
+<h4>Example of SessionStorage:</h4>
 
 <pre>
 // Save data to SessionStorage
@@ -3579,7 +3538,7 @@ enable real-time communication between the client and server in web
 applications. Although they have similar purposes, they differ in terms of
 functionality and use.</p>
 
-<p><b>WebSockets:</b></p>
+<h4>WebSockets:</h4>
 
 <p>WebSockets are a real-time communication protocol that provides a persistent 
 bi-directional communication channel between the client and server. Unlike HTTP, 
@@ -3592,7 +3551,7 @@ chats, because they enable a persistent, two-way communication channel between a
 client and server, allowing for immediate data exchange without the need for constant 
 polling or refreshing, making them perfect for live messaging features.</p>
 
-<p><b>Features of WebSockets:</b></p>
+<h4>Features of WebSockets:</h4>
 
 <ul>
   <li><b>Bi-directional communication:</b> Both the client and server can send and 
@@ -3603,7 +3562,7 @@ polling or refreshing, making them perfect for live messaging features.</p>
     ends (client and server).</li>
 </ul>
 
-<p><b>Example of WebSockets:</b></p>
+<h4>Example of WebSockets:</h4>
 
 <pre>
 // Client
@@ -3631,13 +3590,13 @@ wss.on('connection', ws -> {
 });
 </pre>
 
-<p><b>Socket.IO:</b> SocketIO is a Library built on top of WebSockets but adds
-layers of abstraction and fallback handling to ensure real-time
-communication works even in environments where WebSockets are not
-supported. SocketIO also includes features such as chat rooms,
+<p><b>Socket.IO:</b> SocketIO is a Library built on top of WebSockets but adds layers of 
+abstraction and fallback handling to ensure real-time communication works even in environments 
+where WebSockets are not supported. SocketIO also includes features such as chat rooms, 
 broadcasting, and automatic reconnection.</p>
 
-<p><b>Features of Socket.IO:</b></p>
+<h4>Features of Socket.IO:</h4>
+
 <ul>
   <li><b>Based on WebSockets:</b> Uses WebSockets as the main method of communication when possible.</li>
   <li><b>Automatic fallback:</b> Uses other technologies Like Long Polling when WebSockets are not available.</li>
@@ -3645,7 +3604,7 @@ broadcasting, and automatic reconnection.</p>
   <li><b>Simplified implementation:</b> Offers a simpler API for handling communication.</li>
 </ul>
 
-<p><b>Example of Socket.IO:</b></p>
+<h4>Example of Socket.IO:</h4>
 
 <pre>
 // Client
@@ -3683,17 +3642,16 @@ to use.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk49">sk49. Canvas and WebGL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Both Canvas and WebGL are technologies used in JavaScript to <b>render
-graphics in web browsers</b>, but they differ in terms of functionality and
-complexity.</p>
+<p>Both Canvas and WebGL are technologies used in JavaScript to <b>render graphics in web 
+browsers</b>, but they differ in terms of functionality and complexity.</p>
 
 <p><b>Canvas:</b> Canvas is an HTML5 API that provides a <b>drawing area</b> in which
-2D graphics can be created using JavaScript. It is ideal for creating simple
-graphics, visualizations, 2D games, and visual design elements on a web
-page. You can draw lines, shapes, text, and work with images on the
-canvas.</p>
+2D graphics can be created using JavaScript. It is ideal for creating simple graphics, 
+visualizations, 2D games, and visual design elements on a web page. You can draw lines, 
+shapes, text, and work with images on the canvas.</p>
  
-<p><b>Features of Canvas:</b></p>
+<h4>Features of Canvas:</h4>
+
 <ul>
   <li><b>2D graphics:</b> Focuses on two-dimensional graphics.</li>
   <li><b>2D context:</b> Uses the 2d context for drawing operations.</li>
@@ -3701,7 +3659,7 @@ canvas.</p>
   <li><b>Ideal for:</b> 2D graphics, visualizations, 2D games.</li>
 </ul>
 
-<p><b>Canvas Example:</b></p>
+<h4>Canvas Example:</h4>
 
 <pre>
 &lt;canvas id="myCanvas" width="400" height="300"&gt;&lt;/canvas&gt;
@@ -3719,7 +3677,8 @@ that provides access to hardware acceleration for <b>rendering 3D graphics
 in web browsers</b>. It uses a specification similar to OpenGL and is perfect
 for creating immersive 3D experiences, complex visualizations, and 3D games.</p>
 
-<p><b>Features of WebGL:</b></p>
+<h4>Features of WebGL:</h4>
+
 <ul>
   <li><b>3D graphics:</b> Focuses on three-dimensional graphics.</li>
   <li><b>Based on OpenGL:</b> Uses a specification similar to OpenGL.</li>
@@ -3727,14 +3686,13 @@ for creating immersive 3D experiences, complex visualizations, and 3D games.</p>
   <li><b>Ideal for 3D graphics:</b> 3D names, interactive simulations.</li>
 </ul>
 
-<p><b>WebGL Example:</b></p>
+<h4>WebGL Example:</h4>
 
 <pre>
 &lt;canvas id="myCanvas" width="800" height="600"&gt;&lt;/canvas&gt;
 &lt;script&gt;
   const canvas = document.getElementById('myCanvas');
   const g1 = canvas.getContext('webgl');
-  
   // Here, you would write code to render 3D content with WebGL
 &lt;/script&gt;
 </pre>
@@ -3759,7 +3717,7 @@ many useful features, such as built-in assertions, automatic module
 mocking, and a simple structure for organizing tests. It also comes with its
 own test runner, meaning you don't need to set up an additional runner.</p>
  
-<p><b>Features of Jest:</b></p>
+<h4>Features of Jest:</h4>
 
 <ul>
   <li><b>Simple Configuration:</b> Jest comes with a default configuration that is 
@@ -3809,7 +3767,7 @@ to choose assertion Libraries and mocking tools according to their preferences. 
 itself does not include built-in assertions or mocking, so it is commonly used in 
 conjunction with libraries like Chai (for assertions) and Sinon (for mocking).</p>
 
-<p><b>Features of Mocha:</b></p>
+<h4>Features of Mocha:</h4>
 
 <ul>
   <li><b>Flexibility:</b> Mocha is more flexible and allows developers to choose 
@@ -10727,11 +10685,11 @@ development. Servers often provide data in JSON format through APIs.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>In PHP, JSON data can be encoded and decoded using json_encode() and json.decode() 
 functions respectively, to convert data to and from JSON format.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>Example of Encoding and Decoding JSON in PHP:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>PHP code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>
 // Encoding PHP array to JSON
 $data = array("name " =&gt; " Peter ", " age " =&gt; 28 );
@@ -10746,11 +10704,11 @@ $decodedData = json.decode($jsonString, true);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="consolas">JSON</span> data can be used in <span class="consolas">HTML</span> to 
 dynamically generate content on webpages using JavaScript.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>Example of Using JSON Data in HTML:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>HTML code</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>
 &lt;ul id ="userList"&gt;&lt;/ul&gt;
 &lt;script&gt;
@@ -10772,9 +10730,9 @@ users.forEach(user =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="consolas">JSONP (JSON with Padding)</span> is a technique for requesting JSON 
 data from a different domain in web development to bypass the same - origin policy limitations.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>Example of JSONP Request:</h4>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>
 function handleData(data) {
   console.log(data);
@@ -10996,6 +10954,7 @@ let mappedData = data.map(item =&gt; ({itemId: item.id, itemName: item.name}));
 console.log(mappedData);
 // Output: &lbrack;{"itemId": 1, "itemName":" Item1"}, {"itemId": 2, "itemName":"Item2"}, {"itemId": 3, "itemName":"Item3"} &rbrack;
 </pre>
+
 <p>These examples showcase different aspects of using JSON in JavaScript, including 
 creating, manipulating, parsing, and working with JSON data in various scenarios.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11012,6 +10971,7 @@ interactivity on web pages. It&apos;s a core technology in web development, enab
 content updates, user interactions, and handling client-side functionalities.</p>
 
 <h4>Example of JavaScript Functionality:</h4>
+
 <pre>
 // JavaScript code to change text color on button click
 function changeColor() {
@@ -11029,6 +10989,7 @@ simplify the process of client-side scripting and DOM manipulation. It abstracts
 complexities of JavaScript and provides a concise syntax for common tasks.</p>
 
 <h4>Example of jQuery Functionality:</h4>
+
 <pre>
 // jQuery code to change text color on button click
 $("#text").css("color", "blue");
@@ -11046,21 +11007,27 @@ JavaScript.</p>
   <li>jQuery: Offers a simpler syntax and concise methods for common tasks, making code 
     shorter and more readable.</li>
 </ul>
+
 <h4>2. DOM Manipulation:</h4>
+
 <ul>
   <li>JavaScript: Provides direct DOM manipulation using methods like getElementById and 
     querySelector.</li>
   <li>jQuery: Simplifies DOM traversal and manipulation with methods like $ (), allowing 
     easier element selection and modification.</li>
 </ul>
+
 <h4>3. Browser Compatibility:</h4>
+
 <ul>
   <li>JavaScript: Works across all modern browsers, but handling cross - browser 
     compatibility may require additional code.</li>
   <li>jQuery: Provides cross - browser compatibility out-of-the-box, reducing the need 
     for explicit compatibility handling.</li>
 </ul>
+
 <h4>04. Learning Curve:</h4>
+
 <ul>
   <li>JavaScript: Requires understanding core language concepts, which might have a 
     steeper learning curve for beginners.</li>
@@ -11070,10 +11037,11 @@ JavaScript.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>jQuery Selectors</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>jQuery provides powerful selectors that allow developers to efficiently target and 
-manipulate HTML elements.</p>
+<p>jQuery provides powerful selectors that allow developers to efficiently target and manipulate 
+HTML elements.</p>
 
 <h4>Example of jQuery Selectors:</h4>
+
 <pre>
 // Selecting elements with class 'example'
 $(".example").css("font-size","16px");
@@ -11091,6 +11059,7 @@ on IDs, classes, attributes, element types, and more.</p>
 and modify HTML elements and their content.</p>
 
 <h4>Example of jQuery HTML Manipulation:</h4>
+
 <pre>
 // Appending a new &lt;li&gt; element to an unordered list
 $("ul").append("&lt;li&gt;New Item&lt;/li&gt;");
@@ -11107,6 +11076,7 @@ modify HTML content on the fly.</p>
 <p>jQuery facilitates CSS manipulation, allowing changes to element styles dynamically.</p>
 
 <h4>Example of jQuery CSS Manipulation:</h4>
+
 <pre>
 // Changing the background color of an element
 $("#box").css("background-color", "#f2f2f2");
@@ -11117,8 +11087,8 @@ $("#toggleBtn").click(function() {
 });
 </pre>
 
-<p>jQuery&apos;s css, addClass, removeclass, and toggleClass methods simplify applying, 
-removing, and toggling CSS styles.</p>
+<p>jQuery&apos;s css, addClass, removeclass, and toggleClass methods simplify applying, removing, 
+and toggling CSS styles.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>jQuery DOM Traversal</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11157,9 +11127,9 @@ to choose the right tool for the job and build robust, interactive web applicati
 let element = document.getElementById("myElement");
 element.style.color = "blue";
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>jQuery:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>$("#myElement").css("color ", "blue");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>2. Selecting Multiple Elements by Class:</h4>
@@ -11170,10 +11140,11 @@ for (let i = 0; i &lt; elements.length; i ++) {
   elements&lbrack;i&rbrack;.style.fontWeight = "bold";
 }
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>jQuery:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>$(".myClass").css("font - weight", "bold");</pre>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>3. Adding Event Listeners:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11182,9 +11153,9 @@ document.getElementById("myButton").addEventListener("click", function() {
   alert("Button clicked!");
 });
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>jQuery:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>
 $("#myButton").on("click", function() {
   alert("Button clicked!");
@@ -11198,9 +11169,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // Code to execute when JS DOM is ready
 });
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>jQuery:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>
 $(document).ready(function() {
   // Code to execute when jQuery DOM is ready
@@ -11214,7 +11185,9 @@ let newElement = document.createElement("div");
 newElement.textContent = "New Content";
 document.body.appendChild(newElement);
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>$("body").append("&lt;div&gt;New Content&lt;/div&gt;");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>6. Removing an Element:</h4>
@@ -11223,27 +11196,33 @@ document.body.appendChild(newElement);
 let elementToRemove = document.getElementById("toBeRemoved");
 elementToRemove.parentNode.removechild(elementToRemove);
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>$("#toBeRemoved").remove();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Manipulating CSS Class:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("myDiv").classList.add("active");</pre>
+
 <h5>jQuery:</h5>
-<pre>
-$("#myDiv").addClass("active");
-</pre>
+
+<pre>$("#myDiv").addClass("active");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>8. Changing Text Content:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("mySpan").textContent = "Updated Text";</pre>
+
 <h5>jQuery:</h5>
+
 <pre>$("#mySpan").text("Updated Text");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Hiding an Element:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("toHide").style.display = "none";</pre>
+
 <h5>jQuery:</h5>
+
 <pre>$("#toHide").hide();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>10. Fading In an Element:</h4>
@@ -11254,7 +11233,9 @@ elementToFade.style.opacity = 0;
 elementToFade.style.transition = "opacity Is";
 elementToFade.style.opacity = 1;
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>$ (" #toFade ").fadein( 1000 );</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>11. AJAX GET Request:</h4>
@@ -11287,7 +11268,9 @@ xhr.open("POST", "saveData", true);
 xhr.setRequestHeader("Content - Type", || application / json");
 xhr.send(JSON.stringify({name:"John", age: 30}));
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>
 $ .ajax ({
 url:" saveData",
@@ -11303,24 +11286,33 @@ url:" saveData",
 <h4>13. Getting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let linkHref = document.getElementById("myLink").getAttribute("href");</pre>
+
 <h5>jQuery:</h5>
+
 <pre>let linkHref = $("#myLink").attr("href");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>14. Setting Attribute Value:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>document.getElementById("myImage").setAttribute("src", "new_image.jpg");</pre>
+
 <h5>jQuery:</h5>
+
 <pre>$ ("#myImage").attr("src", "newimage.jpg");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>15. Getting Form Values:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let inputValue = document.getElementById("myInput").value;</pre>
+
 <h5>jQuery:</h5>
+
 <pre>let inputValue = $("#myInput").val();</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>16. Checking Checkbox State:</h4>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>let isChecked = document.getElementById("myCheckbox").checked;</pre>
+
 <h5>jQuery:</h5>
+
 <pre>let isChecked = $("#myCheckbox").prop("checked");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>17. Iterating Over NodeList:</h4>
@@ -11331,7 +11323,9 @@ elements.forEach(function(element) {
   console.log(element.textContent);
 });
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>
 $ (".myClass").each(function() {
   console.log($(this).text());
@@ -11347,7 +11341,9 @@ document.getElementById("myForm").addEventListener("submit"  function(event) {
   // Process form data
 });
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>
 $("#myForm").submit(function(event) {
   event.preventDefault();
@@ -11363,7 +11359,9 @@ let element = document.getElementById("myElement");
 element.style.transition = " transform 2s 11";
 element.style.transform = " rotate(360deg)";
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>$ (" #myElement").animate({rotate :" 360deg "}, 2000);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>20. Changing Background Color on Click:</h4>
@@ -11374,7 +11372,9 @@ myDiv.addEventListener("click", function() {
   this.style.backgroundcolor = "red";
 });
 </pre>
+
 <h5>jQuery:</h5>
+
 <pre>
 $("#myDiv").click (function() {
   $(this).css("background-color ", "red");
@@ -11415,9 +11415,9 @@ ctx.stroke();
 and publication-quality graphs. It supports various chart types, including line plots, 
 bar charts, pie charts, scatter plots, and more. Plotly provides easy-to-use APIs for 
 customization and interactivity.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>Example - Creating a Line Chart with Plotly:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>
 const data = &lbrack;{x: &lbrack;1, 2, 3, 4&rbrack;, y:&lbrack;10, 15, 13, 18&rbrack;, type: 'scatter'}&rbrack;;
 Plotly.newPlot('myDiv', data);
@@ -11428,9 +11428,9 @@ Plotly.newPlot('myDiv', data);
 <p>Chart.js is a popular JavaScript library for creating simple yet flexible charts. It 
 supports various chart types and provides easy integration. With Chart.js, developers 
 can create responsive and visually appealing charts.</p>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h5>Example - Creating a Bar Chart with Chart.js:</h5>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <pre>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
@@ -11497,14 +11497,14 @@ interactive and dynamic visualizations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
 const svg = d3.select('body')
-.append('svg')
-.attr('width', 100)
-.attr('height', 100);
+  .append('svg')
+  .attr('width', 100)
+  .attr('height', 100);
 svg.append('circle')
-.attr ('ex', 50)
-.attr ('ey', 50)
-.attr ('r', 40)
-.attr ('fill', 'blue1);
+  .attr ('ex', 50)
+  .attr ('ey', 50)
+  .attr ('r', 40)
+  .attr ('fill', 'blue1);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Conclusion</h4>
@@ -11554,8 +11554,9 @@ Plotly.newPlot('myDiv', data);
 const data = &lbrack;{x: &lbrack;'A', 'B', 'C'&rbrack;, y: &lbrack;10, 20, 15&rbrack;, type: 'bar'}&rbrack;;
 Plotly.newPlot('myDiv', data);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>Chart.js Examples:</h4>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Bar Chart:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -11595,7 +11596,7 @@ const myChart = new Chart(ctx, {
   }&rbrack;
 });
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>Google Charts Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>7. Pie Chart:</h4>
@@ -11642,7 +11643,7 @@ const options = {
 const chart = new google.visualization.AreaChart(document.getElementById('curve_chart'));
 chart.draw(data, options);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>D3.js Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>9. Create SVG Circle:</h4>
@@ -11673,7 +11674,7 @@ svg.append('rect*)
 .attr('height; 50 )
 .attr('fill; 'green*);
 </pre>
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
 <h4>Canvas Examples:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>1. Draw a Rectangle:</h4>
@@ -13943,10 +13944,10 @@ predefined rules. It&apos;s optional but highly recommended.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>4. Create a JavaScript Project:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Open Visual Studio Code.</b></p>
+<h4>Open Visual Studio Code</h4>
 <p>Create a new folder for your project or open an existing one.</p>
-<p>Inside the folder, create a new JavaScript file with the .js extension .Right-click 
-in the Explorer panel New File > script.js.</p>
+<p>Inside the folder, create a new JavaScript file with the .js extension. Right-click in 
+the Explorer panel New File &gt; script.js.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>5. Writing and Running JavaScript Code:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -24388,13 +24389,17 @@ button.addEventListener('click', () =&gt; {
 <h2 id="js-266">js-266. GoTo toc (table-of-contents)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>window.scrollTo(x-coordinate, y-coordinate)</pre>
-<p>Another example:</p>
+
+<h4>Another example:</h4>
+
 <pre>
 function scrollToTop() {
   window.scrollTo(0, 0);
 }
 </pre>
+
 <p><small><small>/* the end */</small></small></p>
+
 <footer>
 <p>In every line of code, they have woven a story of innovation and creativity.
 This website is your starting line for racing into a vast new world of JavaScript.
@@ -24407,6 +24412,9 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 <p>Last changed 2/24/2025 Mon 10:54a</p>
 <p>Last changed 8/6/2025 Wed 1:49p</p>
 </footer>
+
+</body>
 </html>
+
 
 
