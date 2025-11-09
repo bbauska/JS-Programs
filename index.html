@@ -965,16 +965,15 @@ let colors = &lbrack;"red", "green", "blue"&rbrack;;  // Reference type (Array)
 function greet() { console.log("Hello"); }  // Reference type (Function)
 </pre>
 
-<p><b>Key Difference:</b> The main difference between value types and reference types 
-lies in how they are stored and manipulated in memory. Value types are immutable, 
-meaning that modifying them creates a new instance in memory. In contrast, reference 
-types are passed by reference, so modifying them also modifies the original object in 
-memory.</p>
+<p><b>Key Difference:</b> The main difference between value types and reference types lies in how 
+they are stored and manipulated in memory. Value types are immutable, meaning that modifying them 
+creates a new instance in memory. In contrast, reference types are passed by reference, so modifying 
+them also modifies the original object in memory.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk04">sk04. Implicit, Explicit, Nominal, Structural, and Duck Typing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The concepts of typing refer to how data types are managed and assigned in a language. 
-Here is a description of the different types of typing:</p>
+<p>The concepts of typing refer to how data types are managed and assigned in a language. Here is 
+a description of the different types of typing:</p>
 
 <p><b>Implicit Typing:</b> In Languages with implicit typing, a variable&apos;s data type is 
 automatically determined based on the assigned value. No explicit type declaration is 
@@ -982,13 +981,13 @@ needed.</p>
 
 <pre>let number = 42;  // Type is inferred as Number</pre>
 
-<p><b>Explicit Typing:</b> In languages with explicit typing, the programmer must 
-explicitly declare the data type of a variable during its creation.</p>
+<p><b>Explicit Typing:</b> In languages with explicit typing, the programmer must explicitly declare 
+the data type of a variable during its creation.</p>
 
 <pre>let name = string = "Juan";  // Type is declared as String</pre>
 
-<p><b>Nominal Typing:</b> Nominal typing relies on type names and focuses on nominal 
-differences between types, even if their internal structure is identical.</p>
+<p><b>Nominal Typing:</b> Nominal typing relies on type names and focuses on nominal differences 
+between types, even if their internal structure is identical.</p>
 
 <pre>
 type User = { name: string };
@@ -1829,13 +1828,13 @@ external variables, perform input/output operations, and don't depend on externa
   <li><b>No side effects:</b> They don't alter data outside the function.</li>
 </ul>
 
-<p><b>Side Effects:</b> Side effects are observable changes outside a function due to its 
-execution. These changes can include modifying external variables, accessing external 
-resources (network, files), and manipulating the DOM.</p>
+<p><b>Side Effects:</b> Side effects are observable changes outside a function due to its execution. 
+These changes can include modifying external variables, accessing external resources (network, 
+files), and manipulating the DOM.</p>
 
-<p><b>State Mutation:</b> State mutation occurs when mutable data, such as objects or arrays, 
-is modified directly instead of creating new ones. It can lead to unwanted side effects and 
-make tracking changes difficult.</p>
+<p><b>State Mutation:</b> State mutation occurs when mutable data, such as objects or arrays, is 
+modified directly instead of creating new ones. It can lead to unwanted side effects and make 
+tracking changes difficult.</p>
 
 <p><b>Event Propagation</b> In the context of the DOM and interactions on a web page, event 
 propagation refers to the flow of an event through the hierarchy of elements. Events can 
@@ -1856,11 +1855,10 @@ essential for managing interaction in web applications.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk21">sk21. Closures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Closures are an important concept in programming, referring to a function&apos;s ability 
-to access and remember variables from its lexical scope even after that function has 
-finished execution and Left that scope. Closures enable the creation of functions that 
-maintain access to variables even when they are no Longer in the scope of the function 
-that created them.</p>
+<p>Closures are an important concept in programming, referring to a function&apos;s ability to 
+access and remember variables from its lexical scope even after that function has finished 
+execution and Left that scope. Closures enable the creation of functions that maintain access to 
+variables even when they are no Longer in the scope of the function that created them.</p>
 
 <pre>
 function counter() {
@@ -1878,10 +1876,9 @@ counter1();  // Prints: 1
 counter1();  // Prints: 2
 </pre>
 
-<p>In this example, the counter function returns the increment function. The
-count variable is retained in the Lexical scope of the counter function but
-remains accessible through the increment function even after the counter
-function has finished execution. This is made possible by closures.</p>
+<p>In this example, the counter function returns the increment function. The count variable is 
+retained in the Lexical scope of the counter function but remains accessible through the increment 
+function even after the counter function has finished execution. This is made possible by closures.</p>
 
 <pre>
 function makeCounter() {
@@ -1905,34 +1902,32 @@ console.log(counter());  // 2
 <h4>makeCounter function:</h4>
 <ul>
   <li>It creates a local variable count initialized to 0.</li>
-  <li>It defines and returns an inner function that increments and returns the value 
-    of count.</li>
+  <li>It defines and returns an inner function that increments and returns the value of count.</li>
 </ul>
 <h4>counter variable:</h4>
 <ul>
   <li>It stores the function returned by makeCounter.</li>
-  <li>This function has access to the count variable in the outer scope, even after 
-    makeCounter has finished executing.</li>
+  <li>This function has access to the count variable in the outer scope, even after makeCounter has 
+    finished executing.</li>
 </ul>
 <h4>Calling counter:</h4>
 <ul>
-  <li>Each time counter is called, it increments the count variable and returns the 
-    updated value.</li>
-  <li>This is possible because the inner function "remembers" its surrounding state (the 
-    count variable) due to the closure mechanism.</li>
+  <li>Each time counter is called, it increments the count variable and returns the updated value.</li>
+  <li>This is possible because the inner function "remembers" its surrounding state (the count 
+    variable) due to the closure mechanism.</li>
 </ul>
 </blockquote>
 
 <p>Closures ore particularly useful for creating functions with private states, maintaining 
-encapsulation in JavaScript. They are also used in patterns like modules and callback functions 
-in events.</p>
+encapsulation in JavaScript. They are also used in patterns like modules and callback functions in 
+events.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk22">sk22. High Order Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>High Order Functions are functions that can accept other functions as arguments and/or 
-return functions as results. These functions are a fundamental part of functional programming 
-and enable the creation of more modular, reusable, and expressive code. High Order Functions 
-make it easier to use common programming patterns such as mapping, filtering, and reducing data.</p>
+<p>High Order Functions are functions that can accept other functions as arguments and/or return 
+functions as results. These functions are a fundamental part of functional programming and enable 
+the creation of more modular, reusable, and expressive code. High Order Functions make it easier to 
+use common programming patterns such as mapping, filtering, and reducing data.</p>
 
 <p>Here are some examples and key concepts related to High Order Functions:</p>
 
@@ -2686,22 +2681,22 @@ try {
 }
 </pre>
 
-<p>In this example, if the divide function throws an error while attempting to divide by 
-zero, the catch block will capture the error and display an error message.</p>
+<p>In this example, if the divide function throws an error while attempting to divide by zero, the 
+catch block will capture the error and display an error message.</p>
 
-<p>It&apos;s important to note that you shouldn't use try...catch to control normal program 
-flows but to handle exceptional situations.</p>
+<p>It&apos;s important to note that you shouldn't use try...catch to control normal program flows 
+but to handle exceptional situations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk35">sk35. ES6 Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>In ECMAScript 6 (ES6) and later versions, modules are a built-in feature that allows 
-organizing and structuring code into smaller, reusable units.<br>
-Modules provide a mechanism for exporting and importing functionality between different 
-JavaScript files, making it easier to separate concerns and build more maintainable 
-applications. Here&apos;s an overview of how ES6 modules work:</p>
+<p>In ECMAScript 6 (ES6) and later versions, modules are a built-in feature that allows organizing 
+and structuring code into smaller, reusable units.<br>
+Modules provide a mechanism for exporting and importing functionality between different JavaScript 
+files, making it easier to separate concerns and build more maintainable applications. Here&apos;s 
+an overview of how ES6 modules work:</p>
 
 <p><b>Export from a Module:</b> You can export values, functions, and classes from a module 
-using the export keyword.</p>
+using the <b>export</b> keyword.</p>
 
 <pre>
 // file: module.js
@@ -2718,8 +2713,8 @@ export default class Person {
 }
 </pre>
 
-<p><b>Import into Another Module:</b> You con import exported values into another module using 
-the import keyword.</p>
+<p><b>Import into Another Module:</b> You con import exported values into another module using the 
+<b>import</b> keyword.</p>
 
 <pre>
 // file: app.js
@@ -2733,8 +2728,8 @@ const person = new Person('John');
 console.log(person.name);  // Prints: John
 </pre>
 
-<p><b>Import Everything as an Alias:</b> You can import all exported values as an object 
-using an alias.</p>
+<p><b>Import Everything as an Alias:</b> You can import all exported values as an object using an 
+<b>alias</b>.</p>
 
 <pre>
 // file: app.js
@@ -2758,16 +2753,16 @@ const person = new Person('Peter');
 console.log(person.name);  // Prints: Peter
 </pre>
 
-<p>ES6 modules promote modifying and code reuse, making it easier to build organized and 
-maintainable applications. However, keep in mind that ES6 module support may vary across 
-different runtime environments (browsers, Node.js, etc.), so you might need transpilers 
-or additional configurations in certain cases.</p>
+<p>ES6 modules promote modifying and code reuse, making it easier to build organized and maintainable 
+applications. However, keep in mind that ES6 module support may vary across different runtime 
+environments (browsers, Node.js, etc.), so you might need transpilers or additional configurations 
+in certain cases.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk36">sk36. Ternary Operator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The ternary operator, also known as the conditional operator, is a construct that allows 
 for a conditional evaluation in a single Line of code. It is a concise way to express an 
-if...else statement in a single Line. The basic syntax of the ternary operator is as follows:</p>
+<b>if...else</b> statement in a single Line. The basic syntax of the ternary operator is as follows:</p>
 
 <pre>condition ? true.expression : false.expression;</pre>
 
@@ -2853,21 +2848,19 @@ console.log(first);  // Prints: 1
 console.log(rest);  // Prints: &lbrack;2, 3, 4&rbrack;
 </pre>
 
-<p>In the example of the sum function, the rest operator gathers all arguments into an 
-array named numbers. In destructuring, the rest operator gathers the remaining elements 
-into a new array named rest.</p>
+<p>In the example of the sum function, the rest operator gathers all arguments into an array named 
+numbers. In destructuring, the rest operator gathers the remaining elements into a new array named 
+rest.</p>
 
-<p>Both the spread and rest operators are powerful tools that make manipulation and 
-handling of arrays and objects in JavaScript more readable and concise, leading to 
-cleaner code.</p>
+<p>Both the spread and rest operators are powerful tools that make manipulation and handling of 
+arrays and objects in JavaScript more readable and concise, leading to cleaner code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk38">sk38. Destructuring</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Destructuring assignment is a feature in JavaScript introduced in ES6 (ECMAScript 
-2015) that allows for extracting values from arrays and objects and assigning them to 
-variables in a more concise and readable way. This feature is useful for working with 
-complex data structures and avoiding code repetition when accessing properties and 
-elements.</p>
+<p>Destructuring assignment is a feature in JavaScript introduced in ES6 (ECMAScript 2015) that 
+allows for extracting values from arrays and objects and assigning them to variables in a more 
+concise and readable way. This feature is useful for working with complex data structures and 
+avoiding code repetition when accessing properties and elements.</p>
 
 <h4>Destructuring with Arrays:</h4>
 
@@ -2892,7 +2885,7 @@ console.log(name);  // Prints: Ana
 console.log(age);  // Prints: 30
 </pre>
 
-<p><b>Nested Destructuring:</b> You con destructure nested objects and arrays:</p>
+<p><b>Nested Destructuring:</b> You can destructure nested objects and arrays:</p>
 
 <pre>
 const product = {
@@ -2910,9 +2903,8 @@ console.log(color);  // Prints: Red
 console.log(sizes);  //Prints:  &lbrack;'S', 'M', 'L'&rbrack;
 </pre>
 
-<p>Destructuring assignment is especially handy when working with functions that return 
-objects or arrays, as you can extract the necessary values directly into the function 
-parameters:</p>
+<p>Destructuring assignment is especially handy when working with functions that return objects or 
+arrays, as you can extract the necessary values directly into the function parameters:</p>
 
 <pre>
 function getInformation() {
@@ -4028,21 +4020,25 @@ Buzz
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>You can build the string by starting with an empty one ("") and repeatedly
 adding characters. A newline character is written "\n".</p>
+
 <p>To work with two dimensions, you will need a loop inside of a loop. Put
 braces around the bodies of both loops to make it easy to see where they start
 and end. Try to properly indent these bodies. The order of the loops must
 follow the order in which we build up the string (line by line, left to right, top
 to bottom). So the outer loop handles the lines, and the inner loop handles the
 characters on a line.</p>
+
 <p>You’ll need two bindings to track your progress. To know whether to put a
 space or a hash sign at a given position, you could test whether the sum of the
 two counters is even (% 2).</p>
+
 <p>Terminating a line by adding a newline character must happen after the line
 has been built up, so do this after the inner loop but inside the outer loop.</p>
 <p>Write a program that creates a string that represents an 8×8 grid, using newline 
 characters to separate lines. At each position of the grid there is either a space or 
 a "#" character. The characters should form a chess board. Passing this string to 
 console.log should show something like Solution (below):</p>
+
 <pre>
 let size = 8;
 let board = "";
@@ -4075,9 +4071,9 @@ console.log(board);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el04">el04. Functions: Minimum</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>If you have trouble putting braces and parentheses in the right place to get a
-valid function definition, start by copying one of the examples in this chapter
-and modifying it.</p>
+<p>If you have trouble putting braces and parentheses in the right place to get a valid function 
+definition, start by copying one of the examples in this chapter and modifying it.</p>
+
 <p>A function may contain multiple return statements.</p>
 
 <pre>
@@ -4091,29 +4087,28 @@ console.log(min(0, -10));  // → -10
 
 <pre>console.log(Math.min(2, 4) + 100);  // → 102</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Some functions produce a value, such as power and square, and some don’t, such as 
-makeNoise, which produces only a side effect. A return statement determines the value the 
-function returns. When control comes across such a statement, it immediately jumps out of 
-the current function and gives the returned value to the code that called the function.
-The return keyword without an expression after it will cause the function to return 
-undefined. Parameters and scopes</p>
+<p>Some functions produce a value, such as power and square, and some don’t, such as makeNoise, 
+which produces only a side effect. A return statement determines the value the function returns. 
+When control comes across such a statement, it immediately jumps out of the current function and 
+gives the returned value to the code that called the function. The return keyword without an 
+expression after it will cause the function to return undefined. Parameters and scopes</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el05">el05. Functions: Recursion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Your function will likely look somewhat similar to the inner find function in the
-recursive <a href="findSolution">findSolution example</a> in this chapter, with an 
-if/else if/else chain that tests which of the three cases applies. The final else, 
-corresponding to the third case, makes the recursive call. Each of the branches should 
-contain a return statement or in some other way arrange for a specific value to be
-returned.</p>
-<p>When given a negative number, the function will recurse again and again,
-passing itself an ever more negative number, thus getting further and further
-away from returning a result. It will eventually run out of stack space and
-abort.</p>
-<p>It is perfectly okay for a function to call itself, as long as it doesn’t do it so
-often that it overflows the stack. A function that calls itself is called recursive.
-Recursion allows some functions to be written in a different style. Take, for
-example, this alternative implementation of power.</p>
+<p>Your function will likely look somewhat similar to the inner find function in the recursive 
+<a href="findSolution">findSolution example</a> in this chapter, with an if/else if/else chain that 
+tests which of the three cases applies. The final else, corresponding to the third case, makes the 
+recursive call. Each of the branches should contain a return statement or in some other way arrange 
+for a specific value to be returned.</p>
+
+<p>When given a negative number, the function will recurse again and again, passing itself an ever 
+more negative number, thus getting further and further away from returning a result. It will 
+eventually run out of stack space and abort.</p>
+
+<p>It is perfectly okay for a function to call itself, as long as it doesn’t do it so often that it 
+overflows the stack. A function that calls itself is called recursive. Recursion allows some 
+functions to be written in a different style. Take, for example, this alternative implementation 
+of power.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3 id="findSolution">function findSolution</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -4174,14 +4169,13 @@ console.log(isEven(-1));  // → false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el06">el06. Functions: Bean counting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Your function will need a loop that looks at every character in the string. It
-can run an index from zero to one below its length (&lt; string.length). If the
-character at the current position is the same as the one the function is looking
-for, it adds 1 to a counter variable. Once the loop has finished, the counter can
-be returned.</p>
+<p>Your function will need a loop that looks at every character in the string. It can run an index 
+from zero to one below its length (&lt; string.length). If the character at the current position 
+is the same as the one the function is looking for, it adds 1 to a counter variable. Once the loop 
+has finished, the counter can be returned.</p>
 
-<p>Take care to make all the bindings used in the function local to the function
-by properly declaring them with the let or const keyword</p>
+<p>Take care to make all the bindings used in the function local to the function by properly 
+declaring them with the let or const keyword</p>
 
 <p>You can get the Nth character, or letter, from a string by writing "string".charAt(N), 
 similar to how you get its length with "s".length. The returned value will be a string
@@ -4290,19 +4284,17 @@ var list = {
 <h2 id="el08">el08. Data Structures: The sum of a range</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Building up an array is most easily done by first initializing a binding to &lbrack;&rbrack;
-(a fresh, empty array) and repeatedly calling its push method to add a value.
-Don’t forget to return the array at the end of the function.
+(a fresh, empty array) and repeatedly calling its push method to add a value. Don’t forget to 
+return the array at the end of the function.
 
-<p>Since the end boundary is inclusive, you’ll need to use the &lt;= operator rather
-than &lt; to check for the end of your loop.</p>
+<p>Since the end boundary is inclusive, you’ll need to use the &lt;= operator rather than &lt; to 
+check for the end of your loop.</p>
 
-<p>The step parameter can be an optional parameter that defaults (using the =
-operator) to 1.</p>
+<p>The step parameter can be an optional parameter that defaults (using the = operator) to 1.</p>
 
-<p>Having range understand negative step values is probably best done by writ-
-ing two separate loops—one for counting up and one for counting down—
-because the comparison that checks whether the loop is finished needs to be >=
-rather than &lt;= when counting downward.</p>
+<p>Having range understand negative step values is probably best done by writing two separate 
+loops—one for counting up and one for counting down because the comparison that checks whether 
+the loop is finished needs to be &gt;= rather than &lt;= when counting downward.</p>
 
 <p>It might also be worthwhile to use a different default step, namely, -1, when
 the end of the range is smaller than the start. That way, range(5, 2) returns 
@@ -4334,26 +4326,22 @@ console.log(sum(range(1, 77)));  // → 3003
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el09">el09. Data-Structures: Reversing an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>There are two obvious ways to implement reverseArray. The first is to simply
-go over the input array from front to back and use the unshift method on
-the new array to insert each element at its start. The second is to loop over
-the input array backwards and use the push method. Iterating over an array
-backwards requires a (somewhat awkward) for specification, like (let i =
-array.length - 1; i >= 0; i--).</p>
+<p>There are two obvious ways to implement reverseArray. The first is to simply go over the input 
+array from front to back and use the unshift method on the new array to insert each element at its 
+start. The second is to loop over the input array backwards and use the push method. Iterating over 
+an array backwards requires a (somewhat awkward) for specification, like (let i = array.length - 1; 
+i >= 0; i--).</p>
 
-<p>Reversing the array in place is harder. You have to be careful not to overwrite
-elements that you will later need. Using reverseArray or otherwise copying
-the whole array (array.slice(0) is a good way to copy an array) works but is
-cheating.</p>
+<p>Reversing the array in place is harder. You have to be careful not to overwrite elements that you 
+will later need. Using reverseArray or otherwise copying the whole array (array.slice(0) is a good 
+way to copy an array) works but is cheating.</p>
 
-<p>The trick is to swap the first and last elements, then the second and second-
-to-last, and so on. You can do this by looping over half the length of the array
-(use Math.floor to round down—you don’t need to touch the middle element
-in an array with an odd number of elements) and swapping the element at
-position i with the one at position array.length - 1 - i. You can use a local
-binding to briefly hold on to one of the elements, overwrite that one with its
-mirror image, and then put the value from the local binding in the place where
-the mirror image used to be.</p>
+<p>The trick is to swap the first and last elements, then the second and second-to-last, and so on. 
+You can do this by looping over half the length of the array (use Math.floor to round down—you don’t 
+need to touch the middle element in an array with an odd number of elements) and swapping the element 
+at position i with the one at position array.length - 1 - i. You can use a local binding to briefly 
+hold on to one of the elements, overwrite that one with its mirror image, and then put the value 
+from the local binding in the place where the mirror image used to be.</p>
 
 <pre>
 function reverseArray(array) {
@@ -4379,27 +4367,25 @@ console.log(arrayValue);  // → &lbrack;5, 4, 3, 2, 1&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el10">el10. Data-Structures: A list</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Building up a list is easier when done back to front. So arrayToList could iter-
-ate over the array backwards (see the previous exercise) and, for each element,
-add an object to the list. You can use a local binding to hold the part of the
-list that was built so far and use an assignment like list = {value: X, rest:
-list} to add an element.</p>
+<p>Building up a list is easier when done back to front. So arrayToList could iterate over the array 
+backwards (see the previous exercise) and, for each element, add an object to the list. You can use 
+a local binding to hold the part of the list that was built so far and use an assignment like list 
+= {value: X, rest: list} to add an element.</p>
 
-<p>To run over a list (in listToArray and nth), a for loop specification like this
-can be used:</p>
+<p>To run over a list (in listToArray and nth), a for loop specification like this can be used:</p>
 
 <pre>for (let node = list; node; node = node.rest) {}</pre>
-<p>Can you see how that works? Every iteration of the loop, node points to the
-current sublist, and the body can read its value property to get the current
-element. At the end of an iteration, node moves to the next sublist. When that
-is null, we have reached the end of the list, and the loop is finished.</p>
 
-<p>The recursive version of nth will, similarly, look at an ever smaller part of
-the "tail" of the list and at the same time count down the index until it reaches
-zero, at which point it can return the value property of the node it is looking
-at. To get the zeroth element of a list, you simply take the value property of
-its head node. To get element N + 1, you take the _N_th element of the list
-that’s in this list’s rest property.</p>
+<p>Can you see how that works? Every iteration of the loop, node points to the current sublist, and 
+the body can read its value property to get the current element. At the end of an iteration, node 
+moves to the next sublist. When that is null, we have reached the end of the list, and the loop is 
+finished.</p>
+
+<p>The recursive version of nth will, similarly, look at an ever smaller part of the "tail" of the 
+list and at the same time count down the index until it reaches zero, at which point it can return 
+the value property of the node it is looking at. To get the zeroth element of a list, you simply 
+take the value property of its head node. To get element N + 1, you take the _N_th element of the 
+list that’s in this list’s rest property.</p>
 
 <pre>
 function arrayToList(array) {
@@ -4436,21 +4422,18 @@ console.log(nth(arrayToList(&lbrack;10, 20, 30&rbrack;), 1));  // → 20
 
 <pre>typeof x == "object" && x != null</pre>
 
-<p>Be careful to compare properties only
-when both arguments are objects. In all other cases you can just immediately
-return the result of applying ===.</p>
+<p>Be careful to compare properties only when both arguments are objects. In all other cases you 
+can just immediately return the result of applying ===.</p>
 
-<p>Use Object.keys to go over the properties. You need to test whether both
-objects have the same set of property names and whether those properties have
-identical values. One way to do that is to ensure that both objects have the
-same number of properties (the lengths of the property lists are the same).
-And then, when looping over one of the object’s properties to compare them,
-always first make sure the other actually has a property by that name. If they
-have the same number of properties and all properties in one also exist in the
-other, they have the same set of property names.</p>
-<p>Returning the correct value from the function is best done by immediately
-returning false when a mismatch is found and returning true at the end of the
-function.</p>
+<p>Use Object.keys to go over the properties. You need to test whether both objects have the same 
+set of property names and whether those properties have identical values. One way to do that is to 
+ensure that both objects have the same number of properties (the lengths of the property lists are 
+the same). And then, when looping over one of the object’s properties to compare them, always first 
+make sure the other actually has a property by that name. If they have the same number of properties 
+and all properties in one also exist in the other, they have the same set of property names.</p>
+
+<p>Returning the correct value from the function is best done by immediately returning false when 
+a mismatch is found and returning true at the end of the function.</p>
 
 <pre>
 function deepEqual(a, b) {
@@ -4472,20 +4455,17 @@ console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));  // → true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el12">el12. Higher-Order Functions: Flattening</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Use the reduce method in combination with the concat method to “flatten”
-an array of arrays into a single array that has all the elements of the original
-arrays.</p>
+<p>Use the reduce method in combination with the concat method to “flatten” an array of arrays into 
+a single array that has all the elements of the original arrays.</p>
 
-<p>Functions that operate on other functions, either by taking them as arguments
-or by returning them, are called higher-order functions. Since we have already
-seen that functions are regular values, there is nothing particularly remarkable
-about the fact that such functions exist. The term comes from mathemat-
-ics, where the distinction between functions and other values is taken more
-seriously.</p>
+<p>Functions that operate on other functions, either by taking them as arguments or by returning 
+them, are called higher-order functions. Since we have already seen that functions are regular 
+values, there is nothing particularly remarkable about the fact that such functions exist. The 
+term comes from mathematics, where the distinction between functions and other values is taken 
+more seriously.</p>
 
-<p>Higher-order functions allow us to abstract over actions, not just values.
-They come in several forms. For example, we can have functions that create
-new functions.</p>
+<p>Higher-order functions allow us to abstract over actions, not just values. They come in several 
+forms. For example, we can have functions that create new functions.</p>
 
 <pre>
 function greaterThan(n) {
@@ -4542,15 +4522,13 @@ console.log(arrays.reduce((flat, current) =&gt; flat.concat(current), &lbrack;&r
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el13">el13. Higher-Order Functions: Your own loop</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Write a higher-order function loop that provides something like a for loop
-statement. It takes a value, a test function, an update function, and a body
-function. Each iteration, it first runs the test function on the current loop value
-and stops if that returns false. Then it calls the body function, giving it the
-current value. Finally, it calls the update function to create a new value and
-starts from the beginning.</p>
+<p>Write a higher-order function loop that provides something like a for loop statement. It takes 
+a value, a test function, an update function, and a body function. Each iteration, it first runs 
+the test function on the current loop value and stops if that returns false. Then it calls the body 
+function, giving it the current value. Finally, it calls the update function to create a new value 
+and starts from the beginning.</p>
 
-<p>When defining the function, you can use a regular loop to do the actual
-looping.</p>
+<p>When defining the function, you can use a regular loop to do the actual looping.</p>
 
 <pre>
 function loop(start, test, update, body) {
@@ -4566,26 +4544,22 @@ loop(3, n =&gt; n > 0, n =&gt; n - 1, console.log);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el14">el14. Higher-Order Functions: Everything</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Analogous to the some method, arrays also have an every method. This one
-returns true when the given function returns true for every element in the array.
-In a way, some is a version of the || operator that acts on arrays, and every is
-like the && operator.</p>
+<p>Analogous to the some method, arrays also have an every method. This one returns true when the 
+given function returns true for every element in the array. In a way, some is a version of the || 
+operator that acts on arrays, and every is like the && operator.</p>
 
-<p>Implement every as a function that takes an array and a predicate function
-as parameters. Write two versions, one using a loop and one using the some
-method.</p>
+<p>Implement every as a function that takes an array and a predicate function as parameters. Write 
+two versions, one using a loop and one using the some method.</p>
 
-<p>Like the && operator, the every method can stop evaluating further elements
-as soon as it has found one that doesn’t match. So the loop-based version
-can jump out of the loop—with break or return—as soon as it runs into an
-element for which the predicate function returns false. If the loop runs to its
-end without finding such an element, we know that all elements matched and
-we should return true.</p>
+<p>Like the && operator, the every method can stop evaluating further elements as soon as it has 
+found one that doesn’t match. So the loop-based version can jump out of the loop—with break or 
+return—as soon as it runs into an element for which the predicate function returns false. If the 
+loop runs to its end without finding such an element, we know that all elements matched and we 
+should return true.</p>
 
-<p>To build every on top of some, we can apply De Morgan’s laws, which state
-that a && b equals !(!a || !b). This can be generalized to arrays, where all
-elements in the array match if there is no element in the array that does not
-match.</p>
+<p>To build every on top of some, we can apply De Morgan’s laws, which state that a && b equals 
+!(!a || !b). This can be generalized to arrays, where all elements in the array match if there is 
+no element in the array that does not match.</p>
 
 <pre>
 function every(array, predicate) {
@@ -4620,6 +4594,7 @@ characters.</p>
 <p>Finding the direction with the highest character count can be done with
 reduce. If it’s not clear how, refer to the example earlier in the chapter, where
 reduce was used to find the script with the most characters.</p>
+
 <pre>
 function countBy(items, groupName) {
   let counts = &lbrack;&rbrack;;
@@ -4634,7 +4609,8 @@ function countBy(items, groupName) {
   }
   return counts;
 }
-console.log(countBy(&lbrack;1, 2, 3, 4, 5&rbrack;, n =&gt; n > 2));  // → &lbrack;{name: false, count: 2}, {name: true, count: 3}&rbrack;
+console.log(countBy(&lbrack;1, 2, 3, 4, 5&rbrack;, n =&gt; n > 2));  // → &lbrack;{name: false, 
+  count: 2}, {name: true, count: 3}&rbrack;
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>
@@ -4672,6 +4648,7 @@ function makeRabbit(type) {
 of methods together. Any number of methods may be written inside the declaration’s braces. This 
 code has the effect of defining a binding called Rabbit, which holds a function that runs the 
 code in constructor, and has a prototype property which holds the speak method.</p>
+
 <p>This function cannot be called normally. Constructors, in JavaScript, are called by putting the 
 keyword new in front of them. Doing so creates a fresh object with the object held in the function’s 
 prototype property as prototype, then runs the function with this bound to the new object, and 
@@ -4687,17 +4664,15 @@ ArchaicRabbit.prototype.speak = function(line) {
 let oldSchoolRabbit = new ArchaicRabbit("old school");
 </pre>
 
-<p>For this reason, all non-arrow functions start with a prototype property holding
-an empty object.</p>
+<p>For this reason, all non-arrow functions start with a prototype property holding an empty object.</p>
 
-<p>By convention, the names of constructors are capitalized so that they can
-easily be distinguished from other functions.</p>
+<p>By convention, the names of constructors are capitalized so that they can easily be distinguished 
+from other functions.</p>
 
-<p>It is important to understand the distinction between the way a prototype
-is associated with a constructor (through its prototype property) and the way
-objects have a prototype (which can be found with Object.getPrototypeOf).
-The actual prototype of a constructor is Function.prototype since constructors
-are functions. Its prototype property holds the prototype used for instances
+<p>It is important to understand the distinction between the way a prototype is associated with a 
+constructor (through its prototype property) and the way objects have a prototype (which can be 
+found with Object.getPrototypeOf). The actual prototype of a constructor is Function.prototype 
+since constructors are functions. Its prototype property holds the prototype used for instances 
 created through it.</p>
 
 <pre>
@@ -4708,9 +4683,9 @@ console.log(Object.getPrototypeOf(killerRabbit) ==
   Rabbit.prototype);  // → true
 </pre>
 
-<p>Constructors will typically add some per-instance properties to this. It is also
-possible to declare properties directly in the class declaration. Unlike methods,
-such properties are added to instance objects, not the prototype.</p>
+<p>Constructors will typically add some per-instance properties to this. It is also possible to 
+declare properties directly in the class declaration. Unlike methods, such properties are added to 
+instance objects, not the prototype.</p>
 
 <pre>
 class Particle {
@@ -4721,9 +4696,9 @@ class Particle {
 }
 </pre>
 
-<p>Like function, class can be used both in statements and in expressions. When
-used as an expression, it doesn’t define a binding but just produces the con-
-structor as a value. You are allowed to omit the class name in a class expression.</p>
+<p>Like function, class can be used both in statements and in expressions. When used as an expression, 
+it doesn’t define a binding but just produces the constructor as a value. You are allowed to omit the 
+class name in a class expression.</p>
 
 <pre>
 let object = new class { getWord() { return "hello"; } };
@@ -4737,12 +4712,11 @@ manipulate its prototype property.</p>
 
 <p>Look above to the Rabbit class example if you’re unsure how class declarations look.</p>
 
-<p>Adding a <span class="consolas">getter property</span> to the constructor can be done by putting the word
-<b>get</b> before the method name. To compute the distance from (0, 0) to (x, y), you
-can use the <b>Pythagorean</b> theorem, which says that the square of the distance
-we are looking for is equal to the square of the x-coordinate plus the square of
-the y-coordinate. Thus, √ x2 + y2 is the number you want, and <b>Math.sqrt</b> is 
-the way you compute a square root in JavaScript.</p>
+<p>Adding a <span class="consolas">getter property</span> to the constructor can be done by putting 
+the word <b>get</b> before the method name. To compute the distance from (0, 0) to (x, y), you can 
+use the <b>Pythagorean</b> theorem, which says that the square of the distance we are looking for is 
+equal to the square of the x-coordinate plus the square of the y-coordinate. Thus, √ x2 + y2 is the 
+number you want, and <b>Math.sqrt</b> is the way you compute a square root in JavaScript.</p>
 
 <pre>
 class Vec {
@@ -4767,21 +4741,18 @@ console.log(new Vec(3, 4).length);  // → 5
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el17">el17. Objects: Groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The easiest way to do this is to store an array of group members in an instance
-property. The includes or indexOf methods can be used to check whether a
-given value is in the array.</p>
+<p>The easiest way to do this is to store an array of group members in an instance property. The 
+includes or indexOf methods can be used to check whether a given value is in the array.</p>
 
-<p>Your class’s constructor can set the member collection to an empty array.
-When add is called, it must check whether the given value is in the array or
-add it, for example with push, otherwise.</p>
+<p>Your class’s constructor can set the member collection to an empty array. When add is called, it 
+must check whether the given value is in the array or add it, for example with push, otherwise.</p>
 
-<p>Deleting an element from an array, in delete, is less straightforward, but
-you can use filter to create a new array without the value. Don’t forget to
-overwrite the property holding the members with the newly filtered version of
-the array.</p>
+<p>Deleting an element from an array, in delete, is less straightforward, but you can use filter to 
+create a new array without the value. Don’t forget to overwrite the property holding the members 
+with the newly filtered version of the array.</p>
 
-<p>The from method can use a for/of loop to get the values out of the iterable
-object and call add to put them into a newly created group.</p>
+<p>The from method can use a for/of loop to get the values out of the iterable object and call add 
+to put them into a newly created group.</p>
 
 <pre>
 class Group {
@@ -4818,12 +4789,12 @@ console.log(group.has(10));
 <h2 id="el18">el18. Objects: Iterable groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>It is probably worthwhile to define a <span class="consolas">new class GroupIterator</span>. 
-Iterator instances should have a property that tracks the current position in the group.
-Every time next is called, it checks whether it is done and, if not, moves past
-the current value and returns it.</p>
+Iterator instances should have a property that tracks the current position in the group. Every 
+time next is called, it checks whether it is done and, if not, moves past the current value and 
+returns it.</p>
 
-<p>The Group class itself gets a method named by Symbol.iterator that, when
-called, returns a new instance of the iterator class for that group.</p>
+<p>The Group class itself gets a method named by Symbol.iterator that, when called, returns a new 
+instance of the iterator class for that group.</p>
 
 <pre>
 class Group {
@@ -4884,9 +4855,9 @@ for (let value of Group.from(&lbrack;"a", "b", "c"&rbrack;)) {
 by using its <span class="consolas">call method</span>.</p>
 
 <p>It is probably worthwhile to define a new <span class="consolas">class GroupIterator</span>. 
-Iterator instances should have a property that tracks the current position in the group.
-Every time <b>next</b> is called, it checks whether it is done and, if not, moves past 
-the current value and returns it.</p>
+Iterator instances should have a property that tracks the current position in the group. Every time 
+<b>next</b> is called, it checks whether it is done and, if not, moves past the current value and 
+returns it.</p>
 
 <p>The <b>Group class</b> itself gets a method named by <span class="consolas">Symbol.iterator</span> 
 that, when called, returns a new instance of the iterator class for that group.</p>
@@ -5016,7 +4987,8 @@ complete the task.</p>
 
 <p>Your measurement function can then, in a loop, generate new states and count the steps each of 
 the robots takes. When it has generated enough measurements, it can use console.log to output the 
-average for each robot, which is the total number of steps taken divided by the number of measurements.</p>
+average for each robot, which is the total number of steps taken divided by the number of 
+measurements.</p>
 
 <pre>
 function countSteps(state, robot, memory) {
@@ -5042,9 +5014,10 @@ compareRobots(routeRobot, &lbrack;&rbrack;, goalOrientedRobot, &lbrack;&rbrack;)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el21">el21. A Robot: Robot efficiency</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The main limitation of <span class="consolas">goalOrientedRobot</span> is that it considers only one parcel
-at a time. It will often walk back and forth across the village because the parcel it happens to be 
-looking at happens to be at the other side of the map, even if there are others much closer.</p>
+<p>The main limitation of <span class="consolas">goalOrientedRobot</span> is that it considers only 
+one parcel at a time. It will often walk back and forth across the village because the parcel it 
+happens to be looking at happens to be at the other side of the map, even if there are others much 
+closer.</p>
 
 <p>One possible solution would be to compute routes for all packages and then take the shortest one. 
 Even better results can be obtained, if there are multiple shortest routes, by preferring the ones 
@@ -5078,23 +5051,23 @@ runRobotAnimation(VillageState.random(), lazyRobot, &lbrack;&rbrack;);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el22">el22. A Robot: Persistent group</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The most convenient way to represent the set of member values is still as an 
-array since arrays are easy to copy.</p>
+<p>The most convenient way to represent the set of member values is still as an array since arrays 
+are easy to copy.</p>
 
-<p>When a value is added to the group, you can create a new group with a copy
-of the original array that has the value added (for example, using <span class="consolas">concat</span>).</p>
+<p>When a value is added to the group, you can create a new group with a copy of the original array 
+that has the value added (for example, using <span class="consolas">concat</span>).</p>
 
 <p>When a value is deleted, you filter it from the array.</p>
 
-<p>The class’s constructor can take such an array as argument and store it as
-the instance’s (only) property. This array is never updated.</p>
+<p>The class’s constructor can take such an array as argument and store it as the instance’s (only) 
+property. This array is never updated.</p>
 
-<p>To add a property (empty) to a constructor that is not a method, you have
-to add it to the constructor after the class definition, as a regular property.</p>
+<p>To add a property (empty) to a constructor that is not a method, you have to add it to the 
+constructor after the class definition, as a regular property.</p>
 
-<p>You need only one empty instance because all empty groups are the same
-and instances of the class don’t change. You can create many different groups
-from that single empty group without affecting it.</p>
+<p>You need only one empty instance because all empty groups are the same and instances of the 
+class don’t change. You can create many different groups from that single empty group without 
+affecting it.</p>
 
 <pre>
 class PGroup {
@@ -6771,30 +6744,26 @@ Whenever the user makes such a change, the client makes an HTTP request to
 tell the server about it.</p>
 
 <!-- skill sharing image - page 370 -->
-<p>The application will be set up to show a live view of the current proposed
-talks and their comments. Whenever someone, somewhere, submits a new talk
-or adds a comment, all people who have the page open in their browsers should
-immediately see the change. This poses a bit of a challenge—there is no way
-for a web server to open a connection to a client, nor is there a good way to
-know which clients are currently looking at a given website.</p>
+<p>The application will be set up to show a live view of the current proposed talks and their 
+comments. Whenever someone, somewhere, submits a new talk or adds a comment, all people who have 
+the page open in their browsers should immediately see the change. This poses a bit of a 
+challenge—there is no way for a web server to open a connection to a client, nor is there a 
+good way to know which clients are currently looking at a given website.</p>
 
-<p>A common solution to this problem is called long polling, which happens to
-be one of the motivations for Node’s design.</p>
+<p>A common solution to this problem is called long polling, which happens to be one of the 
+motivations for Node’s design.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The simplest solution I can come up with is to encode the whole talks object as
-JSON and dump it to a file with writeFile. There is already a method (updated
-) that is called every time the server’s data changes. It can be extended to write
-the new data to disk.</p>
+<p>The simplest solution I can come up with is to encode the whole talks object as JSON and dump it 
+to a file with writeFile. There is already a method (updated) that is called every time the server’s 
+data changes. It can be extended to write the new data to disk.</p>
 
-<p>Pick a filename, for example ./talks.json. When the server starts, it can
-try to read that file with readFile, and if that succeeds, the server can use the
-file’s contents as its starting data.</p>
+<p>Pick a filename, for example ./talks.json. When the server starts, it can try to read that file 
+with readFile, and if that succeeds, the server can use the file’s contents as its starting data.</p>
 
-<p>Beware, though. The talks object started as a prototype-less object so that
-the in operator could reliably be used. JSON.parse will return regular objects
-with Object.prototype as their prototype. If you use JSON as your file format,
-you’ll have to copy the properties of the object returned by JSON.parse into a
-new, prototype-less object.</p>
+<p>Beware, though. The talks object started as a prototype-less object so that the in operator could 
+reliably be used. JSON.parse will return regular objects with Object.prototype as their prototype. 
+If you use JSON as your file format, you’ll have to copy the properties of the object returned by 
+JSON.parse into a new, prototype-less object.</p>
 
 <pre>
 // This isn't a stand-alone file, only a redefinition of a few
@@ -6824,53 +6793,51 @@ new SkillShareServer(loadTalks()).start(8000);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Long Polling</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>To be able to immediately notify a client that something changed, we need a
-connection to that client. Since web browsers do not traditionally accept con-
-nections and clients are often behind routers that would block such connections
-anyway, having the server initiate this connection is not practical.</p>
+<p>To be able to immediately notify a client that something changed, we need a connection to that 
+client. Since web browsers do not traditionally accept connections and clients are often behind 
+routers that would block such connections anyway, having the server initiate this connection is 
+not practical.</p>
 
-<p>We can arrange for the client to open the connection and keep it around so
-that the server can use it to send information when it needs to do so.</p>
+<p>We can arrange for the client to open the connection and keep it around so that the server can 
+use it to send information when it needs to do so.</p>
 
-<p>But an HTTP request allows only a simple flow of information: the client
-sends a request, the server comes back with a single response, and that is it.
-There is a technology called WebSockets, supported by modern browsers, that
-makes it possible to open connections for arbitrary data exchange. But using
-them properly is somewhat tricky.</p>
+<p>But an HTTP request allows only a simple flow of information: the client sends a request, the 
+server comes back with a single response, and that is it. There is a technology called WebSockets, 
+supported by modern browsers, that makes it possible to open connections for arbitrary data 
+exchange. But using them properly is somewhat tricky.</p>
 
-<p>In this chapter, we use a simpler technique—long polling—where clients con-
-tinuously ask the server for new information using regular HTTP requests, and
-the server stalls its answer when it has nothing new to report.</p>
+<p>In this chapter, we use a simpler technique—long polling—where clients continuously ask the 
+server for new information using regular HTTP requests, and the server stalls its answer when it 
+has nothing new to report.</p>
 
-<p>As long as the client makes sure it constantly has a polling request open, it
-will receive information from the server quickly after it becomes available. For
-example, if Fatma has our skill-sharing application open in her browser, that
-browser will have made a request for updates and will be waiting for a response
-to that request. When Iman submits a talk on Extreme Downhill Unicycling,
-the server will notice that Fatma is waiting for updates and send a response
-containing the new talk to her pending request. Fatma’s browser will receive
-the data and update the screen to show the talk.</p>
+<p>As long as the client makes sure it constantly has a polling request open, it will receive 
+information from the server quickly after it becomes available. For example, if Fatma has our 
+skill-sharing application open in her browser, that browser will have made a request for updates 
+and will be waiting for a response to that request. When Iman submits a talk on Extreme Downhill 
+Unicycling, the server will notice that Fatma is waiting for updates and send a response 
+containing the new talk to her pending request. Fatma’s browser will receive the data and update 
+the screen to show the talk.</p>
 
-<p>To prevent connections from timing out (being aborted because of a lack of
-activity), long polling techniques usually set a maximum time for each request,
-after which the server will respond anyway, even though it has nothing to
-report, after which the client will start a new request. Periodically restarting
-the request also makes the technique more robust, allowing clients to recover
-from temporary connection failures or server problems.
-<p>A busy server that is using long polling may have thousands of waiting
-requests, and thus TCP connections, open. Node, which makes it easy to
-manage many connections without creating a separate thread of control for
-each one, is a good fit for such a system.</p>
+<p>To prevent connections from timing out (being aborted because of a lack of activity), long polling 
+techniques usually set a maximum time for each request, after which the server will respond anyway, 
+even though it has nothing to report, after which the client will start a new request. Periodically 
+restarting the request also makes the technique more robust, allowing clients to recover from 
+temporary connection failures or server problems.</p>
+
+<p>A busy server that is using long polling may have thousands of waiting requests, and thus TCP 
+connections, open. Node, which makes it easy to manage many connections without creating a separate 
+thread of control for each one, is a good fit for such a system.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>HTTP Interface</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Before we start designing either the server or the client, let’s think about the
-point where they touch: the HTTP interface over which they communicate.</p>
-<p>We will use JSON as the format of our request and response body. Like in
-the file server from Chapter 20, we’ll try to make good use of HTTP methods
-and headers. The interface is centered around the /talks path. Paths that
-do not start with /talks will be used for serving static files—the HTML and
-JavaScript code for the client-side system.</p>
+<p>Before we start designing either the server or the client, let’s think about the point where they 
+touch: the HTTP interface over which they communicate.</p>
+
+<p>We will use JSON as the format of our request and response body. Like in the file server from 
+Chapter 20, we’ll try to make good use of HTTP methods and headers. The interface is centered 
+around the /talks path. Paths that do not start with /talks will be used for serving static 
+files—the HTML and JavaScript code for the client-side system.</p>
+
 <p>A GET request to /talks returns a JSON document like this:</p>
 
 <pre>
@@ -6880,13 +6847,12 @@ JavaScript code for the client-side system.</p>
 "comments": &lbrack;&rbrack;}&rbrack;
 </pre>
 
-<p>Creating a new talk is done by making a PUT request to a URL like /talks/
-Unituning, where the part after the second slash is the title of the talk. The PUT
-request’s body should contain a JSON object that has presenter and summary
-properties.</p>
-<p>Since talk titles may contain spaces and other characters that may not appear
-normally in a URL, title strings must be encoded with the encodeURIComponent
-function when building up such a URL.</p>
+<p>Creating a new talk is done by making a PUT request to a URL like /talks/Unituning, where the 
+part after the second slash is the title of the talk. The PUT request’s body should contain a JSON 
+object that has presenter and summary properties.</p>
+
+<p>Since talk titles may contain spaces and other characters that may not appear normally in a URL, 
+title strings must be encoded with the encodeURIComponent function when building up such a URL.</p>
 
 <pre>
 console.log("/talks/" + encodeURIComponent("How to Idle"));
@@ -6899,11 +6865,9 @@ Content-Length: 92
 "summary": "Standing still on a unicycle"}
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Such URLs also support GET requests to retrieve the JSON representation of
-a talk and DELETE requests to delete a talk.
-Adding a comment to a talk is done with a POST request to a URL like /
-talks/Unituning/comments, with a JSON body that has author and message
-properties.</p>
+<p>Such URLs also support GET requests to retrieve the JSON representation of a talk and DELETE 
+requests to delete a talk. Adding a comment to a talk is done with a POST request to a URL like 
+/ talks/Unituning/comments, with a JSON body that has author and message properties.</p>
 
 <pre>
 POST /talks/Unituning/comments HTTP/1.1
@@ -6913,29 +6877,28 @@ Content-Length: 72
 "message": "Will you talk about raising a cycle?"}
 </pre>
 
-<p>To support long polling, GET requests to /talks may include extra headers
-that inform the server to delay the response if no new information is available.
-We’ll use a pair of headers normally intended to manage caching: ETag and
-If-None-Match.</p>
-<p>Servers may include an ETag (“entity tag”) header in a response. Its value is
-a string that identifies the current version of the resource. Clients, when they
-later request that resource again, may make a conditional request by including
-an If-None-Match header whose value holds that same string. If the resource
-hasn’t changed, the server will respond with status code 304, which means “not
-modified”, telling the client that its cached version is still current. When the
-tag does not match, the server responds as normal.</p>
-<p>We need something like this, where the client can tell the server which version
-of the list of talks it has, and the server responds only when that list has
-changed.</p>
-<p>But instead of immediately returning a 304 response, the server
-should stall the response and return only when something new is available or
-a given amount of time has elapsed. To distinguish long polling requests from
-normal conditional requests, we give them another header, Prefer: wait=90,
-which tells the server that the client is willing to wait up to 90 seconds for the
+<p>To support long polling, GET requests to /talks may include extra headers that inform the server 
+to delay the response if no new information is available. We’ll use a pair of headers normally 
+intended to manage caching: ETag and If-None-Match.</p>
+
+<p>Servers may include an ETag (“entity tag”) header in a response. Its value is a string that 
+identifies the current version of the resource. Clients, when they later request that resource 
+again, may make a conditional request by including an If-None-Match header whose value holds that 
+same string. If the resource hasn’t changed, the server will respond with status code 304, which 
+means “not modified”, telling the client that its cached version is still current. When the tag 
+does not match, the server responds as normal.</p>
+
+<p>We need something like this, where the client can tell the server which version of the list of 
+talks it has, and the server responds only when that list has changed.</p>
+
+<p>But instead of immediately returning a 304 response, the server should stall the response and 
+return only when something new is available or a given amount of time has elapsed. To distinguish 
+long polling requests from normal conditional requests, we give them another header, Prefer: 
+wait=90, which tells the server that the client is willing to wait up to 90 seconds for the
 response.</p>
-<p>The server will keep a version number that it updates every time the talks
-change and will use that as the ETag value. Clients can make requests like this
-to be notified when the talks change:</p>
+
+<p>The server will keep a version number that it updates every time the talks change and will use 
+that as the ETag value. Clients can make requests like this to be notified when the talks change:</p>
 
 <pre>
 GET /talks HTTP/1.1
@@ -6949,32 +6912,30 @@ Content-Length: 295
 &lbrack;....&rbrack;
 </pre>
 
-<p>The protocol described here does not do any access control. Everybody can
-comment, modify talks, and even delete them. (Since the Internet is full of
-hooligans, putting such a system online without further protection probably
-wouldn’t end well.)</p>
+<p>The protocol described here does not do any access control. Everybody can comment, modify talks, 
+and even delete them. (Since the Internet is full of hooligans, putting such a system online without 
+further protection probably wouldn’t end well.)</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>The server</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Let’s start by building the server-side part of the program. The code in this
-section runs on Node.js.</p>
+<p>Let’s start by building the server-side part of the program. The code in this section runs on 
+Node.js.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Routing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Our server will use createServer to start an HTTP server. In the function
-that handles a new request, we must distinguish between the various kinds of
-requests (as determined by the method and the path) that we support. This
-can be done with a long chain of if statements, but there is a nicer way.</p>
-<p>A router is a component that helps dispatch a request to the function that
-can handle it. You can tell the router, for example, that PUT requests with
-a path that matches the regular expression /^\/talks\/(&lbrack;^\/&rbrack;+)$/ (/talks/
-followed by a talk title) can be handled by a given function. In addition, it
-can help extract the meaningful parts of the path (in this case the talk title),
-wrapped in parentheses in the regular expression, and pass them to the handler
-function.</p>
-<p>There are a number of good router packages on NPM, but here we’ll write
-one ourselves to illustrate the principle.
-This is router.js, which we will later require from our server module:</p>
+<p>Our server will use createServer to start an HTTP server. In the function that handles a new 
+request, we must distinguish between the various kinds of requests (as determined by the method 
+and the path) that we support. This can be done with a long chain of if statements, but there is 
+a nicer way.</p>
+
+<p>A router is a component that helps dispatch a request to the function that can handle it. You 
+can tell the router, for example, that PUT requests with a path that matches the regular expression 
+/^\/talks\/(&lbrack;^\/&rbrack;+)$/ (/talks/ followed by a talk title) can be handled by a given 
+function. In addition, it can help extract the meaningful parts of the path (in this case the talk 
+title), wrapped in parentheses in the regular expression, and pass them to the handler function.</p>
+
+<p>There are a number of good router packages on NPM, but here we’ll write one ourselves to 
+illustrate the principle. This is router.js, which we will later require from our server module:</p>
 
 <pre>
 const {parse} = require("url");
@@ -7003,9 +6964,11 @@ resolve(context, request) {
 <p>The module exports the Router class. A router object allows new handlers
 to be registered with the add method and can resolve requests with its resolve
 method.</p>
+
 <p>The latter will return a response when a handler was found, and null other-
 wise. It tries the routes one at a time (in the order in which they were defined)
 until a matching one is found.</p>
+
 <p>The handler functions are called with the context value (which will be the
 server instance in our case), match strings for any groups they defined in their
 regular expression, and the request object. The strings have to be URL-decoded
@@ -24434,7 +24397,3 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 
 </body>
 </html>
-
-
-
-
