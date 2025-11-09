@@ -8077,9 +8077,11 @@ represent integers <b>with arbitrary precision</b>.</p>
 <h3>Examples of JS BigInt:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a BigInt:</h4>
+
 <pre>let bigNumber = 12345678912345678901234567890n;</pre>
 
 <h4>Performing Operations with a BigInt:</h4>
+
 <pre>let bigSum = bigNumber + 1n;  // Answer: 12345678912345678901234567891n</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex20">ex20. JS Number Methods</h2>
@@ -8090,12 +8092,14 @@ manipulations with numbers</b>.</p>
 <h3>Examples of JS Number Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>toFixed() Method:</h4>
+
 <pre>
 let number = 3.14159;
 let roundedNumber = number.toFixed(2);  // roundedNumber = '3.14'
 </pre>
 
 <h4>parseInt() Method:</h4>
+
 <pre>
 let stringNumber = '42';
 let parsedNumber = parseInt(stringNumber);  // parsedNumber = 42
@@ -8103,21 +8107,22 @@ let parsedNumber = parseInt(stringNumber);  // parsedNumber = 42
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex21">ex21. JS Number Properties</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript has some <span class="consolas">built-in properties</span> associated with 
-numbers.</p>
+<p>JavaScript has some <span class="consolas">built-in properties</span> associated with numbers.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Number Properties:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Number.MAX_VALUE Property:</h4>
+
 <pre>console.log(Number.MAX_VALUE);  // Output: 1.7976931348623157e + 308</pre>
 
 <h4>Number.MIN_VALUE Property:</h4>
+
 <pre>console.log(Number.MIN_VALUE);  // Output: 5e-324</pre>
 
-<p>This comprehensive guide covers various aspects of JavaScript, including arithmetic 
-operations, assignnment, data types, fuctions, objects, events, strings, string methods, 
-string search, string templates, numbers, BigInt, number methods, and number properties, 
-providing examples and explanations for each topic.</p>
+<p>This comprehensive guide covers various aspects of JavaScript, including arithmetic operations, 
+assignnment, data types, fuctions, objects, events, strings, string methods, string search, string 
+templates, numbers, BigInt, number methods, and number properties, providing examples and explanations 
+for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex22">ex22. JS Arrays</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8127,15 +8132,18 @@ in a single variable</b>.</p>
 <h3>Examples of JS Arrays:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaration:</h4>
+
 <pre>
 let numbers = &lbrack;1,2,3,4,5&rbrack;;  // Array of numbers
 let fruits = &lbrack;'apple','banana','orange'&rbrack;;  // Array of strings
 </pre>
 
 <h4>Accessging Elements:</h4>
+
 <pre>console.log(fruits&lbrack;0&rbrack;);  // Output: 'apple'</pre>
 
 <h4>Modifying Elements:</h4>
+
 <pre>fruits&lbrack;1&rbrack; = 'grapes';  // Changing 'banana' to 'grapes'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex23">ex23. JS Array Methods</h2>
@@ -8146,12 +8154,15 @@ efficiently.</p>
 <h3>Examples of JS Array Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>push() Method:</h4>
+
 <pre>fruits.push('melon');  // Adds 'melon' to the end of the array</pre>
 
 <h4>pop() Method:</h4>
+
 <pre>let removedFruit = fruits.pop();  // Removes and returns the last element ('melon')</pre>
 
 <h4>splice() Method:</h4>
+
 <pre>numbers.splice(2,1);  // Removes 1 element at index 2 (removes '3')</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex24">ex24. JS Array Sort </h2>
@@ -8161,19 +8172,22 @@ efficiently.</p>
 <h3>Examples of JS Array Sort:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Sorting Numbers:</h4>
+
 <pre>numbers.sort((a, b) =&gt; a - b);  // Ascending order</pre>
 
 <h4>Sorting Strings:</h4>
+
 <pre>fruits.sort();  // Alphabetic Order</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex25">ex25. JS Array Iteration</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Array iteration</span> involves <b>looping through arrays to 
-perform operations on each element</b>.</p>
+<p><span class="consolas">Array iteration</span> involves <b>looping through arrays to perform 
+operations on each element</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Array Iteration:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>forEach() Method:</h4>
+
 <pre>
 numbers.forEach(number =&gt; {
   console.log(number);
@@ -8181,12 +8195,13 @@ numbers.forEach(number =&gt; {
 </pre>
 
 <h4>map() Method:</h4>
+
 <pre>let doubledNumbers = numbers.map(number =&gt; number * 2);</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex26">ex26. JS Array Const</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Arrays declared with const</span> <b>can&apos;t be reassigned</b> but their 
-<b>elements can</b> be modified.</p>
+<p><span class="consolas">Arrays declared with const</span> <b>can&apos;t be reassigned</b> but 
+their <b>elements can</b> be modified.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Array Const:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8198,15 +8213,16 @@ weekdays&lbrack;'Monday','Thursday','Wednesday'&rbrack;;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex27">ex27. JS Dates</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript provides a <span class="consolas">Date object</span> to work with <b>dates 
-and times</b>.</p>
+<p>JavaScript provides a <span class="consolas">Date object</span> to work with <b>dates and times</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Dates:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Date Object:</h4>
+
 <pre>let specificDate = new Date();  // Current date and time</pre>
 
 <h4>Creating a Specific Date:</h4>
+
 <pre>let specificDate = new Date('2024-12-25');  // December 25, 2024</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex28">ex28. JS Date Formats</h2>
@@ -8217,6 +8233,7 @@ to different formats.</p>
 <h3>Examples of JS Date Formats:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Formatting to String:</h4>
+
 <pre>let dateString = specificDate.toDateString();  // Convert to a human - readable string</pre>
 
 <h4>Formatting to Locale String:</h4>
@@ -8224,41 +8241,47 @@ to different formats.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex29">ex29. JS Date Get Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript <span class="consolas">Date object</span> provides various methods to 
-<span class="consolas">retrieve specific date components</span>.</p>
+<p>JavaScript <span class="consolas">Date object</span> provides various methods to <span 
+class="consolas">retrieve specific date components</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Date Get Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>getFullYear() Method:</h4>
+
 <pre>let year = specificDate.getFullYear();  // Get the year (2023)</pre>
 
 <h4>getMonth() Method:</h4>
+
 <pre>let month = specificDate.getMonth();  // Get the month (11 for December)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex30">ex30. JS Date Set Methods</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript <span class="consolas">Date object</span> also has methods to 
+
 <span class="consolas">set specific date components</span>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Date Set Methods:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>setFullYear() Method:</h4>
+
 <pre>specificDate.setFullYear(2024);  // Set the year to 2024</pre>
 
 <h4>setMonth() Method:</h4>
+
 <pre>specificDate.setMonth(0);  // Set the month to January (0 index)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex31">ex31. JS Math</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript <span class="consolas">Math object</span> provides mathematical constants 
-and functions.</p>
+<p>JavaScript <span class="consolas">Math object</span> provides mathematical constants and functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Math:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Math.PI Property:</h4>
+
 <pre>let piValue = Math.PI;  // Value of PI & piValue (3.141592653589793)</pre>
 
 <h4>Math.sqrt() Method:</h4>
+
 <pre>let squareRoot = Math.sqrt(25);  // Square root of 25 (5)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex32">ex32. JS Random</h2>
@@ -8268,9 +8291,11 @@ and functions.</p>
 <h3>Examples of JS Random:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Generating Random Number:</h4>
+
 <pre>let randomNumber = Math.random();  // Random number between 0 and 1</pre>
 
 <h4>Generating Random Integer:</h4>
+
 <pre>let randomInteger = Math.floor(Math.random() * 10);  // Random integer between 0 and 9</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex33">ex33. JS Booleans</h2>
@@ -8280,10 +8305,12 @@ and functions.</p>
 <h3>Examples of JS Booleans:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Declaration:</h4>
+
 <pre>
 let isTrue = true;
 let isFalse = false;
 </pre>
+
 <h4>Comparison:</h4>
 
 <pre>
@@ -8293,16 +8320,18 @@ let equalTo = 5 === 5;  // true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex34">ex34. JS Comparisons</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript offers various <span class="consolas">comparison operators</span> to 
-compare values.</p>
+<p>JavaScript offers various <span class="consolas">comparison operators</span> to compare values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Comparisons:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>== (Equality Operator):</h4>
+
 <pre>console.log(5 == '5');  // true (coerces types)</pre>
 
 <h4> === (Strict Equality Operator):</h4>
+
 <pre>console.log(5 === '5');  // false (compares both value and type)</pre>
+
 <p>This comprehensive guide covers various aspects of JavaScript including arrays, array 
 methods, array sort, array iteration, array const, dates, date formats, date get methods, 
 date set methods, math, random, booleans, and comparisons, providing examples and 
@@ -8310,13 +8339,13 @@ explanations for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex35">ex35. JS If Else</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">if...else</span> statement in JavaScript executes a block 
-of code if a specified condition is true and another block of code if the condition is 
-false.</p>
+<p>The <span class="consolas">if...else</span> statement in JavaScript executes a block of code 
+if a specified condition is true and another block of code if the condition is false.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS If Else:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic if...else:</h4>
+
 <pre>
 let num = 10;
 if (num > 0) {
@@ -8327,6 +8356,7 @@ if (num > 0) {
 </pre>
 
 <h4>Nested if...else:</h4>
+
 <pre>
 let x = 5;
 if (x &gt; 0) {
@@ -8340,12 +8370,13 @@ if (x &gt; 0) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex36">ex36. JS Switch</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">switch</span> statement in JavaScript executes different 
-actions based on different conditions.</p>
+<p>The <span class="consolas">switch</span> statement in JavaScript executes different actions based 
+on different conditions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Switch:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic switch:</h4>
+
 <pre>
 let day = 2;
 switch (day) {
@@ -8363,12 +8394,13 @@ switch (day) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex37">ex37. JS Loop For</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">for loop</span> in JavaScript repeatedly executes a block 
-of code until a specified condition evaluates to false.</p>
+<p>The <span class="consolas">for loop</span> in JavaScript repeatedly executes a block of code 
+until a specified condition evaluates to false.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Loop For:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic for Loop:</h4>
+
 <pre>
 for (let i = 0; i &lt; 10; i++) {
   console.log(i);
@@ -8376,6 +8408,7 @@ for (let i = 0; i &lt; 10; i++) {
 </pre>
 
 <h4>Looping Array Elements:</h4>
+
 <pre>
 let arr = &lbrack;'apple', 'banana', 'orange'&rbrack;;
 for (let i = 0; i &lt; arr.length; i++) {
@@ -8385,12 +8418,13 @@ for (let i = 0; i &lt; arr.length; i++) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex38">ex38. JS Loop For In</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">for...in loop</span> in JavaScript iterates over the 
-enumerable properties of an object.</p>
+<p>The <span class="consolas">for...in loop</span> in JavaScript iterates over the enumerable 
+properties of an object.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Loop For In:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Iterating Object Properties:</h4>
+
 <pre>
 let person = {
   name : 'Alice',
@@ -8404,12 +8438,13 @@ for (let prop in person) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex39">ex39. JS Loop For Of</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">for...of loop</span> in JavaScript iterates over iterable 
-objects such as arrays, strings, etc.</p>
+<p>The <span class="consolas">for...of loop</span> in JavaScript iterates over iterable objects 
+such as arrays, strings, etc.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Loop For Of:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Iterating Over Array Elements:</h4>
+
 <pre>
 let numbers = &lbrack;1, 2, 3, 4, 5&rbrack;;
 for (let num of numbers) {
@@ -8419,12 +8454,13 @@ for (let num of numbers) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex40">ex40. JS Loop While</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">while loop</span> in JavaScript executes a block of code 
-while a specified condition is true.</p>
+<p>The <span class="consolas">while loop</span> in JavaScript executes a block of code while a 
+specified condition is true.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Loop While:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic while Loop:</h4>
+
 <pre>
 let count = 0;
 while (count &lt; 5 ) {
@@ -8435,12 +8471,13 @@ console.log(count);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex41">ex41. JS Break</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">break statement</span> in JavaScript terminates the current 
-loop or switch statement.</p>
+<p>The <span class="consolas">break statement</span> in JavaScript terminates the current loop or 
+switch statement.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Break:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using break in a Loop:</h4>
+
 <pre>
 for (let i = 0; i &lt; 10; i++) {
   if (i === 5) {
@@ -8458,6 +8495,7 @@ iterated over using loops.</p>
 <h3>Examples of JS Iterables:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Iterables with for...of:</h4>
+
 <pre>
 let iterable = &lbrack;10,20,30&rbrack;;
   for (let value of iterable) {
@@ -8472,6 +8510,7 @@ let iterable = &lbrack;10,20,30&rbrack;;
 <h3>Examples of JS Sets:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Set:</h4>
+
 <pre>
 let mySet = new Set();
 mySet.add(1);
@@ -8494,6 +8533,7 @@ where keys can be any type.</p>
 <h3>Examples of JS Maps:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Map:</h4>
+
 <pre>
 let myMap = new Map();
 myMap.set('keyl', 'value1');
@@ -8501,6 +8541,7 @@ myMap.set('key2', 'value2');
 </pre>
 
 <h4>Iterating Over a Map:</h4>
+
 <pre>
 for (let &lbrack;key, value&rbrack; of myMap) {
   console.log(key + ' = ' + value);
@@ -8509,12 +8550,13 @@ for (let &lbrack;key, value&rbrack; of myMap) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex45">ex45. JS Typeof</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">typeof operator</span> in JavaScript returns the data type 
-of its operand.</p>
+<p>The <span class="consolas">typeof operator</span> in JavaScript returns the data type of its 
+operand.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Typeof:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using typeof:</h4>
+
 <pre>
 console.log(typeof 5);  // Output: 'number'
 console.log(typeof 'Hello');  // Output: 'string'
@@ -8523,18 +8565,20 @@ console.log(typeof true);  // Output: 'boolean'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex46">ex46. JS Type Conversion</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Type conversion</span> in JavaScript involves converting values 
-from one data type to another.</p>
+<p><span class="consolas">Type conversion</span> in JavaScript involves converting values from one 
+data type to another.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Type Conversion:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>String to Number:</h4>
+
 <pre>
 let strNumber = '10';
 let num = parseInt(strNumber);
 </pre>
 
 <h4>Number to String:</h4>
+
 <pre>
 let number = 15;
 let str = number.toString();  // Output: '15'
@@ -8542,22 +8586,26 @@ let str = number.toString();  // Output: '15'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex47">ex47. JS Bitwise</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">bitwise AND (&)</span> operator returns a number or BigInt 
-whose binary representation has a 1 in each bit position for which the corresponding bits 
-of both operands are 1.</p>
-<p>The <span class="consolas">bitwise NOT (~)</span> operator returns a number or BigInt 
-whose binary representation has a 1 in each bit position for which the corresponding bit 
-of the operand is 0, and a 0 otherwise.</p>
-<p>The <span class="consolas">bitwise OR (|)</span> operator returns a number or BigInt 
-whose binary representation has a 1 in each bit position for which the corresponding bits 
-of either or both operands are 1.</p>
-<p>The <span class="consolas">bitwise XOR (^)</span> operator returns a number or BigInt 
-whose binary representation has a 1 in each bit position for which the corresponding bits 
-of either but not both operands are 1.</p>
+<p>The <span class="consolas">bitwise AND (&)</span> operator returns a number or BigInt whose 
+binary representation has a 1 in each bit position for which the corresponding bits of both operands 
+are 1.</p>
+
+<p>The <span class="consolas">bitwise NOT (~)</span> operator returns a number or BigInt whose 
+binary representation has a 1 in each bit position for which the corresponding bit of the operand 
+is 0, and a 0 otherwise.</p>
+
+<p>The <span class="consolas">bitwise OR (|)</span> operator returns a number or BigInt whose 
+binary representation has a 1 in each bit position for which the corresponding bits of either or 
+both operands are 1.</p>
+
+<p>The <span class="consolas">bitwise XOR (^)</span> operator returns a number or BigInt whose 
+binary representation has a 1 in each bit position for which the corresponding bits of either but 
+not both operands are 1.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Bitwise:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Bitwise AND Operator (&):</h4>
+
 <pre>
 const a = 5;  // 00000000000000000000000000000101
 const b = 3;  // 00000000000000000000000000000011
@@ -8566,6 +8614,7 @@ let result = 5 & 3;  // Output: 1
 </pre>
 
 <h4>Bitwise NOT Operator (~):</h4>
+
 <pre>
 const a = 5;  // 00000000000000000000000000000101
 const b = -3;  // 11111111111111111111111111111101
@@ -8576,6 +8625,7 @@ console.log(~b);  // 00000000000000000000000000000010
 </pre>
 
 <h4>Bitwise OR Operator (|):</h4>
+
 <pre>
 const a = 5;  // 00000000000000000000000000000101
 const b = 3;  // 00000000000000000000000000000011
@@ -8584,6 +8634,7 @@ let result = 5 | 3;  // Output: 7
 </pre>
 
 <h4>Bitwise XOR Operator (^):</h4>
+
 <pre>
 const a = 5;  // 00000000000000000000000000000101
 const b = 3;  // 00000000000000000000000000000011
@@ -8594,12 +8645,13 @@ let result = 5 ^ 3;  // Output: 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex48">ex48. JS RegExp</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Regular expressions</span> in JavaScript are used for pattern 
-matching within strings.</p>
+<p><span class="consolas">Regular expressions</span> in JavaScript are used for pattern matching 
+within strings.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS RegExp:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Regular Expression:</h4>
+
 <pre>let pattern = / hello /i;  // Case - insensitive 'hello'</pre>
 
 <h4>Testing a String with RegExp:</h4>
@@ -8616,6 +8668,7 @@ console.log(pattern.test(str));  // Output: true
 <h3>Examples of JS Precedence:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Arithmetic Precedence:</h4>
+
 <pre>let result = 5 + 3 * 2;  // Output: 11 (Multiplication has higher precedence)</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex50">ex50. JS Errors</h2>
@@ -8625,11 +8678,13 @@ console.log(pattern.test(str));  // Output: true
 <h3>Examples of JS Errors:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Syntax Error:</h4>
+
 <pre>let x = 10</pre>
 
 <p>This will throw a syntax error due to the missing semicolon.</p>
 
 <h4>Reference Error:</h4>
+
 <pre>console.log(undefinedVariable);</pre>
 
 <p>This will throw a reference error as undefinedVariable is not defined.</p>
@@ -8641,6 +8696,7 @@ console.log(pattern.test(str));  // Output: true
 <h3>Examples of JS Scope:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Global Scope:</h4>
+
 <pre>
 let globalVar = 'I am global';
 function test() {
@@ -8651,12 +8707,13 @@ console.log(globalVar);  // Accessible outside function
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex52">ex52. JS Hoisting</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Hoisting</span> in JavaScript allows variables and functions to 
-be used before they are declared.</p>
+<p><span class="consolas">Hoisting</span> in JavaScript allows variables and functions to be used 
+before they are declared.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Hoisting:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Variable Hoisting:</h4>
+
 <pre>
 console.log(myVar);  // Outputs : undefined
 varmyVar = 10;
@@ -8675,9 +8732,11 @@ better error handling.</p>
 <h3>Examples of JS Strict Mode:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Enabling Strict Mode:</h4>
+
 <pre>'use strict’;</pre>
 
 <h4>Using Strict Mode Inside a Function:</h4>
+
 <pre>
 function myFunction() {
   'use strict';  // Strict mode only applies inside this function
@@ -8691,6 +8750,7 @@ function myFunction() {
 <h3>Examples of JS this Keyword:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using this in an Object:</h4>
+
 <pre>
 let person = {
   name: 'Alice',
@@ -8703,15 +8763,17 @@ person.greet();  // Outputs : 'Hello, my name is Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex55">ex55. JS Arrow Function</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Arrow functions</span> in JavaScript provide a concise syntax for 
-writing functions.</p>
+<p><span class="consolas">Arrow functions</span> in JavaScript provide a concise syntax for writing 
+functions.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Arrow Function:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Basic Arrow Function:</h4>
+
 <pre>let multiply = (a, b) =&gt; a * b;</pre>
 
 <h4>Arrow Function with Multiple Lines:</h4>
+
 <pre>
 let greet = (name) =&gt; {
   return 'Hello, ' + name + '!'
@@ -8720,12 +8782,13 @@ let greet = (name) =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex56">ex56. JS Classes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Classes</span> in JavaScript provide a way to create objects using 
-a blueprint.</p>
+<p><span class="consolas">Classes</span> in JavaScript provide a way to create objects using a 
+blueprint.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Classes:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Class Declaration:</h4>
+
 <pre>
 class Person {
   constructor(name) {
@@ -8741,19 +8804,22 @@ alice.greet();  // Outputs : 'Hello, my name is Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex57">ex57. JS Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Modules</span> in JavaScript allow splitting code into separate 
-files or modules for better organization.</p>
+<p><span class="consolas">Modules</span> in JavaScript allow splitting code into separate files or 
+modules for better organization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Modules:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Exporting a Module:</h4>
+
 <pre>
 // Module.js
 export function greet(name) {
   console.log('Hello,' + name + '!');
 }
 </pre>
+
 <h4>Importing a Module:</h4>
+
 <pre>
 // Main.js
 import {greet} from './Module.js';
@@ -8762,18 +8828,21 @@ greet('Alice');  // Outputs : 'Hello, Alice !'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex58">ex58. JS JSON</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">JSON (JavaScript Object Notation)</span> is a lightweight data 
-interchange format.</p>
+<p><span class="consolas">JSON (JavaScript Object Notation)</span> is a lightweight data interchange 
+format.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS JSON:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Parsing JSON:</h4>
+
 <pre>
 let jsonStr = '{"name": "Alice", "age": 30}';
 let obj = JSON.parse(jsonStr);
 console.log(obj.name);  // Output: 'Alice'
 </pre>
+
 <h4>Stringify Object to JSON:</h4>
+
 <pre>
 let obj = {name: 'Alice',age: 30};  // {name: 'Alice', age: 30}
 let jsonString = JSON.stringify(obj);  // '{"name":"Alice","age":30}'
@@ -8781,23 +8850,26 @@ let jsonString = JSON.stringify(obj);  // '{"name":"Alice","age":30}'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex59">ex59. JS Debugging</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Debugging</span> in JavaScript involves identifying and fixing 
-errors or issues in the code.</p>
+<p><span class="consolas">Debugging</span> in JavaScript involves identifying and fixing errors or 
+issues in the code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Debugging:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using console.log() for Debugging:</h4>
+
 <pre>
 let x = 5;
 console.log(x);
 </pre>
+
 <h4>Using Browser Developer Tools:</h4>
+
 <p>Inspect elements, view console logs, set breakpoints, etc.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex60">ex60. JS Style Guide</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>A JavaScript style guide defines a set of rules and conventions for writing clean 
-and maintainable code.</p>
+<p>A JavaScript style guide defines a set of rules and conventions for writing clean and maintainable 
+code.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Examples of JS Style Guide:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8864,9 +8936,10 @@ console.log(y);  // Outputs : undefined
 <h3>Examples of JS Reserved Words:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>let, const, function, class, etc.</h4>
-<p>This comprehensive guide covers a wide range of JavaScript topics including conditional 
-statements, loops, data structures, type handling, advanced features, error handling, best 
-practices, common mistakes, and performance optimization.</p>
+
+<p>This comprehensive guide covers a wide range of JavaScript topics including conditional statements, 
+loops, data structures, type handling, advanced features, error handling, best practices, common 
+mistakes, and performance optimization.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex65">ex65. JS Objects</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8876,6 +8949,7 @@ pairs. They store data as properties (variables) and functionality as methods (f
 <h3>Object Definitions:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating an Object Literally:</h4>
+
 <pre>
 let person = {
   name: 'Alice',
@@ -8887,6 +8961,7 @@ let person = {
 </pre>
 
 <h4>Using the Object Constructor:</h4>
+
 <pre>
 let car = new Object();
 car.brand = 'Toyota';
@@ -8901,9 +8976,11 @@ are variables that hold values.</p>
 <h3>Object Properties Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Properties:</h4>
+
 <pre>console.log(person.name);  // Accessing property 'name'</pre>
 
 <h4>Adding or Modifying Properties:</h4>
+
 <pre>
 car.color = 'blue';  // Adding property 'color'
 car.model = 'Corolla';  // Modifying property 'model'
@@ -8917,9 +8994,11 @@ are functions that define behavior.</p>
 <h3>Object Methods Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing Object Methods:</h4>
+
 <pre>console.log(person.greet());  // Accessing method 'greet'</pre>
 
 <h4>Adding Methods to an Object:</h4>
+
 <pre>
 car.start = function() {
   return 'Car started';
@@ -8933,9 +9012,11 @@ car.start = function() {
 <h3>Object Display Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using console.log():</h4>
+
 <pre>console.log(person);  // Output the entire object</pre>
 
 <h4>Stringify with JSON:</h4>
+
 <pre>
 let carString = JSON.stringify(car);
 console.log(carString);  // Output the string representation of the object
@@ -8949,6 +9030,7 @@ provide a way to <b>get</b> and <b>set</b> the values of object properties.</p>
 <h3>Object Accessors Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Getters and Setters:</h4>
+
 <pre>
 let user = {
   firstName: 'John',
@@ -8969,7 +9051,8 @@ console.log(user.firstName);  // Output: 'Alice'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex70">ex70. JS Object Constructors</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Constructors</span> in JavaScript are functions used for creating objects and setting initial values.</p>
+<p><span class="consolas">Constructors</span> in JavaScript are functions used for creating objects 
+and setting initial values.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Object Constructors Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -8995,6 +9078,7 @@ and methods between <span class="consolas">objects</span>.</p>
 <h3>Object Prototypes Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding Methods to the Prototype:</h4>
+
 <pre>
 Person.prototype.info = function() {
   return 'Name: ' + this.name + ', Age: ' + this.age;
@@ -9010,12 +9094,15 @@ that can be iterated using loops.</p>
 <h3>Object Iterables Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using for ... in Loop:</h4>
+
 <pre>
 for (let key in person) {
   console.log(key + ': ' + person&lbrack;key&rbrack;);
 }
 </pre>
+
 <h4>Using Object.keys():</h4>
+
 <pre>let keys = Object.keys(person);  // Get an array of object keys</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex73">ex73. JS Object Sets</h2>
@@ -9025,13 +9112,16 @@ for (let key in person) {
 <h3>Object Sets Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Set:</h4>
+
 <pre>
 let mySet = new Set();
 mySet.add(1);
 mySet.add(2);
 mySet.add(3);
 </pre>
+
 <h4>Checking Set Membership:</h4>
+
 <pre>console.log(mySet.has(2));  // Output: true</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex74">ex74. JS Object Maps</h2>
@@ -9042,12 +9132,15 @@ where keys can be any type.</p>
 <h3>Object Maps Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Map:</h4>
+
 <pre>
 let myMap = new Map();
 myMap.set('key1', 'value1');
 myMap.set('key2', 'value2');
 </pre>
+
 <h4>Getting Values from a Map:</h4>
+
 <pre>console.log(myMap.get('key1'));  // Output: 'value1'</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex75">ex75. JS Object Reference</h2>
@@ -9058,12 +9151,14 @@ by <span class="consolas">reference</span>.</p>
 <h3>Object Reference Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Referencing an Object:</h4>
+
 <pre>
 let object1 = {name: 'John'};
 let object2 = objectl;  // object2 points to the same object as object 1
 </pre>
 
 <h4>Changing Object through Reference:</h4>
+
 <pre>
 object2.name = 'Alice';
 console.log(objectl.name);  // Output: Alice'
@@ -9082,18 +9177,23 @@ that perform a specific task when called.</p>
 <h3>Function Definitions:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Function Declaration:</h4>
+
 <pre>
 function greet() {
   return 'Hello!';
 }
 </pre>
+
 <h4>Function Expression:</h4>
+
 <pre>
 let greet = function() {
   return 'Hello!';
 };
 </pre>
+
 <h4>Arrow Function:</h4>
+
 <pre>
 let greet = () =&gt; {
   return 'Hello!';
@@ -9102,18 +9202,21 @@ let greet = () =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex77">ex77. JS Function Parameters</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Function parameters</span> are <b>placeholders for values</b> that 
-a function will receive when it&apos;s called.</p>
+<p><span class="consolas">Function parameters</span> are <b>placeholders for values</b> that a 
+function will receive when it&apos;s called.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Parameters Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Single Parameter:</h4>
+
 <pre>
 function greet(name) {
   return 'Hello,' + name + '!';
 }
 </pre>
+
 <h4>Multiple Parameters:</h4>
+
 <pre>
 function sum(a, b) {
   return a + b;
@@ -9128,6 +9231,7 @@ function sum(a, b) {
 <h3>Function Invocation Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Calling a Function:</h4>
+
 <pre>
 greet();  // Function call
 let result = sum(5,3);  // Function call with arguments
@@ -9135,13 +9239,14 @@ let result = sum(5,3);  // Function call with arguments
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex79">ex79. JS Function Call</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">call() method</span> in JavaScript allows a function to be 
-called with a specified <span class="consolas">this</span> value and <b>arguments</b> provided 
+<p>The <span class="consolas">call() method</span> in JavaScript allows a function to be called 
+with a specified <span class="consolas">this</span> value and <b>arguments</b> provided 
 <b>individually</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Call Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using call():</h4>
+
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9152,13 +9257,13 @@ let message = greet.call(person);
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex80">ex80. JS Function Apply</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <span class="consolas">apply() method</span> in JavaScript allows a function to be 
-called with a specified <span class="consolas">this</span> value and arguments provided as an 
-<b>array</b>.</p>
+<p>The <span class="consolas">apply() method</span> in JavaScript allows a function to be called 
+with a specified <span class="consolas">this</span> value and arguments provided as an <b>array</b>.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Function Apply Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using apply():</h4>
+
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9176,6 +9281,7 @@ called, has its <span class="consolas">this keyword</span> set to a <b>specified
 <h3>Function Bind Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using bind():</h4>
+
 <pre>
 function greet() {
   return 'Hello,' + this.name + '!';
@@ -9193,6 +9299,7 @@ let message = newGreet();
 <h3>Function Closures Examples:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Closure Example:</h4>
+
 <pre>
 function outerFunction() {
   let outerVariable = 'I am from the outer function';
@@ -9217,6 +9324,7 @@ using a <b>blueprint</b>.</p>
 <h3>Class Intro:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Class Declaration:</h4>
+
 <pre>
 class Animal {
   constructor(name, age) {
@@ -9228,7 +9336,9 @@ class Animal {
   }
 }
 </pre>
+
 <h4>Creating Instances:</h4>
+
 <pre>
 let dog = new Animal('Buddy', 3);
 console.log(dog.sound());  // Output: 'Animal sound'
@@ -9242,6 +9352,7 @@ to <b>inherit properties and methods</b> from a <b>superclass</b>.</p>
 <h3>Class Inheritance Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Extending a Class:</h4>
+
 <pre>
 class Dog extends Animal {
   constructor(name, age, breed) {
@@ -9253,7 +9364,9 @@ class Dog extends Animal {
   }
 }
 </pre>
+
 <h4>Using Inherited Methods:</h4>
+
 <pre>
 let puppy = new Dog('Max', 1, 'Labrador');
 console.log(puppy.sound());  // Output: 'Woof!'
@@ -9267,6 +9380,7 @@ the class itself rather than on instances of the class.</p>
 <h3>Class Static Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Adding a Static Method:</h4>
+
 <pre>
 class Calculator {
   static add(a, b) {
@@ -9279,14 +9393,16 @@ console.log(result);  // Output: 8
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex86">ex86. JS Async</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Asynchronous</span> programming in JavaScript involves handling 
-operations that don't execute immediately.</p>
+<p><span class="consolas">Asynchronous</span> programming in JavaScript involves handling operations 
+that don't execute immediately.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Callbacks</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p><span class="consolas">Callbacks</span> in JavaScript are <b>functions passed as arguments</b> 
 to another function to be executed later.</p>
+
 <h4>Callbacks Example:</h4>
+
 <pre>
 function fetchData(callback) {
   setTimeout(() =&gt; {
@@ -9302,10 +9418,11 @@ fetchData(processData);  // Output after 2 seconds : 'Data received : Some data'
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Asynchronous</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><span class="consolas">Asynchronous operations</span> in JavaScript allow 
-<b>non - blocking execution</b> of code.</p>
+<p><span class="consolas">Asynchronous operations</span> in JavaScript allow <b>non - blocking 
+execution</b> of code.</p>
 
 <h4>Asynchronous Example:</h4>
+
 <pre>
 console.log('Start');
 setTimeout(() =&gt; {
@@ -9317,12 +9434,13 @@ console.log('End');
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex87">ex87. JS Promises</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Promises in JavaScript represent a value that might not be available yet but will 
-resolve or reject in the future.</p>
+<p>Promises in JavaScript represent a value that might not be available yet but will resolve or 
+reject in the future.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Promises Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Promise:</h4>
+
 <pre>
 let myPromise = new Promise((resolve, reject) =&gt; {
   setTimeout (() =&gt; {
@@ -9336,12 +9454,13 @@ myPromise.then((result) =&gt; {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex88">88. JS Async / Await</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Async / await in JavaScript provides a more synchronous way to write asynchronous code 
-using promises.</p>
+<p>Async / await in JavaScript provides a more synchronous way to write asynchronous code using 
+promises.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Async / Await Example:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using Async / Await:</h4>
+
 <pre>
 async function fetchData() {
   return new Promise((resolve) =&gt; {
@@ -9356,20 +9475,23 @@ async function processData() {
 }
 processData();
 </pre>
-<p>This comprehensive guide covers JavaScript classes, including an introduction to 
-classes, inheritance, and static methods, as well as asynchronous programming concepts 
-such as callbacks, asynchronous operations, promises, and async I await, with examples 
-and explanations for each concept.</p>
+
+<p>This comprehensive guide covers JavaScript classes, including an introduction to classes, 
+inheritance, and static methods, as well as asynchronous programming concepts such as callbacks, 
+asynchronous operations, promises, and async I await, with examples and explanations for each 
+concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex89">ex89. JS HTML DOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JavaScript interacts with HTML documents through the Document Object Model (DOM), 
-representing the document as a tree structure.</p>
+<p>JavaScript interacts with HTML documents through the Document Object Model (DOM), representing 
+the document as a tree structure.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>DOM Intro:</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Accessing an Element by ID:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9386,7 +9508,9 @@ representing the document as a tree structure.</p>
 <h3>DOM Methods</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>DOM methods provide various ways to manipulate HTML elements.</p>
+
 <h4>Changing Element Content:</h4>
+
 <h5>HTML code</h5>
 <pre>
 &lt;!DOCTYPE html&gt;
@@ -9420,8 +9544,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Elements</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Elements in the DOM represent HTML tags.</p>
+
 <h4>Changing Element Styles:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9439,8 +9566,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM HTML</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM HTML includes properties that deal with the HTML content.</p>
+
 <h4>Changing HTML Attributes:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9457,8 +9587,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Forms</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows manipulation of HTML forms.</p>
+
 <h4>Accessing Form Elements:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9478,8 +9611,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM CSS</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM CSS allows manipulation of CSS styles.</p>
+
 <h4>Changing CSS Classes:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9496,8 +9632,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Animations</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM supports creating simple animations.</p>
+
 <h4>Animating an Element:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9522,8 +9661,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Events</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Events in the DOM represent interactions by users or by the browser.</p>
+
 <h4>Click Event Handling:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9541,8 +9683,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Event Listener</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The addEventListener method is used to attach an event to an element.</p>
+
 <h4>Mouseover Event Handling:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9560,8 +9705,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Navigation</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The DOM allows navigation between elements.</p>
+
 <h4>Traversing Child Elements:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9583,8 +9731,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Nodes</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Nodes are the fundamental building blocks in the DOM.</p>
+
 <h4>Creating a New Node:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9603,8 +9754,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Collections</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Collections in the DOM are arrays of HTML elements.</p>
+
 <h4>Accessing Collection Elements:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9623,8 +9777,11 @@ console.log(document.URL);  // Output: Document URL
 <h3>DOM Node Lists</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Node lists in the DOM are similar to collections and contain nodes or elements.</p>
+
 <h4>Accessing Node List Elements:</h4>
+
 <h5>HTML code</h5>
+
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -9637,6 +9794,7 @@ console.log(document.URL);  // Output: Document URL
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+
 <p>This comprehensive guide covers JavaScript&apos;s HTML DOM, including an introduction to 
 the DOM, methods, document, elements, HTML, forms, CSS, animations, events, event 
 listeners, navigation, nodes, collections, and node lists, with examples and explanations 
@@ -9644,13 +9802,14 @@ for each topic.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex90">90. JS Browser BOM</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Browser Object Model (BOM) in JavaScript represents the browser window and its 
-components.</p>
+<p>The Browser Object Model (BOM) in JavaScript represents the browser window and its components.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Window</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The window object is the global object in a browser&apos;s JavaScript environment.</p>
+
 <h4>Accessing Window Properties:</h4>
+
 <pre>
 console.log(window.innerHeight);  // Output: Inner height of the window
 console.log(window.innerWidth);  // Output: Inner width of the window
@@ -9659,7 +9818,9 @@ console.log(window.innerWidth);  // Output: Inner width of the window
 <h3>JS Screen</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The screen object represents the screen of a device.</p>
+
 <h4>Accessing Screen Properties:</h4>
+
 <pre>
 console.log(screen.width);  // Output: Screen width in pixels
 console.log(screen.height);  // Output: Screen height in pixels
@@ -9668,7 +9829,9 @@ console.log(screen.height);  // Output: Screen height in pixels
 <h3>JS Location</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The location object contains information about the current URL.</p>
+
 <h4>Accessing Location Information:</h4>
+
 <pre>
 console.log(location.href);  // Output: Full URL of the current page
 console.log(location.hostname);  // Output: Hostname of the current URL
@@ -9677,7 +9840,9 @@ console.log(location.hostname);  // Output: Hostname of the current URL
 <h3>JS History</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The history object contains the browsing history of the window.</p>
+
 <h4>Accessing History Methods:</h4>
+
 <pre>
 history.back();  // Go back to the previous page
 history.forward();  // Go forward to the next page
@@ -9686,7 +9851,9 @@ history.forward();  // Go forward to the next page
 <h3>JS Navigator</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The navigator object contains information about the browser.</p>
+
 <h4>Accessing Navigator Properties:</h4>
+
 <pre>
 console.log(navigator.userAgent);  // Output: User - Agent header of the browser
 console.log(navigator.platform);  // Output: Platform of the browser
@@ -9695,19 +9862,25 @@ console.log(navigator.platform);  // Output: Platform of the browser
 <h3>JS Popup Alert</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Popup alerts in JavaScript display messages to users.</p>
+
 <h4>Displaying an Alert:</h4>
+
 <pre>alert("This is an alert message");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>JS Timing</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>JavaScript&apos;s timing functions allow scheduling of code execution.</p>
+
 <h4>Using setTimeout():</h4>
+
 <pre>
 setTimeout(() =&gt; {
   console.log("Delayed message");
 }, 2000);  // Execute after 2 seconds
 </pre>
+
 <h4>Using setInterval():</h4>
+
 <pre>
 setInterval(() =&gt; {
   console.log("Repeated message");
@@ -9717,26 +9890,33 @@ setInterval(() =&gt; {
 <h3>JS Cookies</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Cookies in JavaScript store small pieces of information on the client&apos;s machine.</p>
+
 <h4>Setting a Cookie:</h4>
+
 <pre>document.cookie="username = John Doe; expires = Thu, 18 Dec 2023 12:00:00 UTC; path=/";</pre>
+
 <h4>Accessing a Cookie:</h4>
+
 <pre>
 let username = document.cookie.split(';')&lbrack;0&rbrack;.split('=')&lbrack;1&rbrack;;
 console.log(username);  // Output: 'John Doe'
 </pre>
-<p>This comprehensive guide covers JavaScript&apos;s Browser Object Model (BOM), including 
-the window object, screen, location, history, navigator, popup alerts, timing functions, 
-and cookies, with examples and explanations for each concept.</p>
+
+<p>This comprehensive guide covers JavaScript&apos;s Browser Object Model (BOM), including the window 
+object, screen, location, history, navigator, popup alerts, timing functions, and cookies, with 
+examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex91">ex91. JS Web APIs</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Web APIs are sets of tools and interfaces provided by web browsers to interact with 
-various functionalities of the browser or device.</p>
+<p>Web APIs are sets of tools and interfaces provided by web browsers to interact with various 
+functionalities of the browser or device.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web API Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Web APIs enable web developers to access various browser features and functionalities.</p>
+
 <h4>Accessing the Web API:</h4>
+
 <pre>
 // Example: Using the Geolocation API
 if ("geolocation" in navigator) {
@@ -9750,7 +9930,9 @@ if ("geolocation" in navigator) {
 <h3>Web Forms API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Forms API provides methods and properties to manipulate HTML form elements.</p>
+
 <h4>Accessing Form Elements:</h4>
+
 <pre>
 let form = document.getElementById("myForm");
 let inputField = form.elements&lbrack;"username"&rbrack;;
@@ -9761,13 +9943,17 @@ console.log(inputField.value);
 <h3>Web History API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web History API allows manipulation of the browser&apos;s history.</p>
+
 <h4>Changing Browser History:</h4>
+
 <pre>window.history.pushState({page: 1}, "Title", "?page = 1");</pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Storage API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Web Storage API provides methods to store data in the browser.</p>
+
 <h4>Using localstorage:</h4>
+
 <pre>
 localstorage.setItem("key", "value");
 let data = localstorage.getItem("key");
@@ -9775,8 +9961,8 @@ let data = localstorage.getItem("key");
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Web Worker API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The Web Worker API enables running scripts in the background to handle time - 
-consuming tasks without blocking the UI.</p>
+<p>The Web Worker API enables running scripts in the background to handle time - consuming tasks 
+without blocking the UI.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Creating a Web Worker:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9798,7 +9984,9 @@ worker.postMessage("Message from main");
 <h3>Web Fetch API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Fetch API provides a way to make HTTP requests.</p>
+
 <h4>Making a GET Request:</h4>
+
 <pre>
 fetch("https://api.example.com/data")
   .then((response) =&gt; response.json())
@@ -9809,22 +9997,24 @@ fetch("https://api.example.com/data")
 <h3>Web Geolocation API</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The Geolocation API retrieves geographical information about the user&apos;s device.</p>
+
 <h4>Getting User&apos;s Location:</h4>
+
 <pre>
 navigator.geolocation.getCurrentPosition ((position) =&gt; {
   console.log("Latitude:", position.coords.latitude);
   console.log("Longitude:", position.coords.longitude);
 });
 </pre>
-<p>This comprehensive guide covers various Web APIs in JavaScript, including an 
-introduction to Web APIs, Web Forms API, Web History API, Web Storage API, Web Worker 
-API, Web Fetch API, and Web Geolocation API, with examples and explanations for each 
-concept.</p>
+
+<p>This comprehensive guide covers various Web APIs in JavaScript, including an introduction to Web 
+APIs, Web Forms API, Web History API, Web Storage API, Web Worker API, Web Fetch API, and Web 
+Geolocation API, with examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="ex92">ex92. JS AJAX</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>AJAX (Asynchronous JavaScript and XML) is a technique used to send and receive data 
-asynchronously between a web browser and a server.</p>
+<p>AJAX (Asynchronous JavaScript and XML) is a technique used to send and receive data asynchronously 
+between a web browser and a server.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX Intro</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -9845,8 +10035,8 @@ xhttp.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>AJAX XMLHttp</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data 
-between a web browser and a server.</p>
+<p>The XMLHttpRequest object (XHR) is a core component of AJAX used to exchange data between a web 
+browser and a server.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>Using XMLHttpRequest:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10016,11 +10206,11 @@ setInterval(() =&gt; {
 <h4>AJAX Example 2:</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <pre>// Fetch user - specific data and update profile information dynamically</pre>
-<p>This comprehensive guide covers AJAX (Asynchronous JavaScript and XML), including an 
-introduction to AJAX, using XMLHttp, making AJAX requests and handling responses, 
-fetching XML files, interacting with server - side technologies like PHP and ASP, working 
-with databases, building AJAX applications, and providing examples and explanations for 
-each concept.</p>
+
+<p>This comprehensive guide covers AJAX (Asynchronous JavaScript and XML), including an introduction 
+to AJAX, using XMLHttp, making AJAX requests and handling responses, fetching XML files, interacting 
+with server - side technologies like PHP and ASP, working with databases, building AJAX applications, 
+and providing examples and explanations for each concept.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 3: Dynamic Content Loading</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10059,9 +10249,9 @@ function loadContent() {
 &lt;h2&gt;Welcome to Dynamic Content&lt;/h2&gt;
 &lt;p&gt;This content was loaded dynamically using AJAX.&lt;/p&gt;
 </pre>
-<p>This example demonstrates a simple 
-button that triggers an AJAX request to load content from an external HTML file and 
-displays it on the webpage without refreshing the entire page.</p>
+
+<p>This example demonstrates a simple button that triggers an AJAX request to load content from an 
+external HTML file and displays it on the webpage without refreshing the entire page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 4: Form Submission with AJAX</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10113,10 +10303,9 @@ if ($_SERVER&lbrack;"REQUEST-METHOD"&rbrack; == "POST") {
 }
 ?&gt;
 </pre>
-<p>This example demonstrates a form submission using AJAX. When the form is submitted, 
-the data is sent asynchronously to a server - side PHP script for processing. The 
-response from the server is displayed on the webpage without refreshing the entire 
-page.</p>
+<p>This example demonstrates a form submission using AJAX. When the form is submitted, the data is 
+sent asynchronously to a server - side PHP script for processing. The response from the server is 
+displayed on the webpage without refreshing the entire page.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 5: Fetching JSON Data</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10141,11 +10330,11 @@ fetch('data.json')
   "city": "New York"
 }
 </pre>
-<p>This example utilizes the Fetch API to make an AJAX request to fetch JSON data from a 
-file. Upon successful retrieval, the JSON data is processed and used within the JavaScript 
-code.</p>
-<p>These additional examples showcase various use cases of AJAX, such as loading dynamic 
-content, form submission without page refresh, and fetching and using JSON data asynchronously.</p>
+<p>This example utilizes the Fetch API to make an AJAX request to fetch JSON data from a file. 
+Upon successful retrieval, the JSON data is processed and used within the JavaScript code.</p>
+
+<p>These additional examples showcase various use cases of AJAX, such as loading dynamic content, 
+form submission without page refresh, and fetching and using JSON data asynchronously.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 6: Image Gallery with AJAX</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10198,9 +10387,9 @@ function loadimages() {
   // Add more image objects as needed
 &rbrack;
 </pre>
-<p>This example demonstrates loading images dynamically into an image gallery on a 
-webpage using AJAX. The images and their respective URLs are stored in a JSON file, 
-which is fetched asynchronously, and the images are displayed in the gallery.</p>
+<p>This example demonstrates loading images dynamically into an image gallery on a webpage using 
+AJAX. The images and their respective URLs are stored in a JSON file, which is fetched asynchronously, 
+and the images are displayed in the gallery.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 7: Autocomplete Search</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10252,13 +10441,14 @@ $results = &lbrack;
 echo json.encode($results);  // Return results as JSON
 ?&gt;
 </pre>
-<p>This example demonstrates an autocomplete search feature using AJAX. As the user types 
-in the search input field, an AJAX request is made to a server-side PHP script (search.php) 
-that processes the search query and returns matching results in JSON format, which are then 
-displayed as autocomplete suggestions.</p>
-<p>These additional examples showcase different functionalities of AJAX, such as creating 
-an image gallery dynamically and implementing an autocomplete search feature, using 
-asynchronous data fetching and manipulation on a webpage.</p>
+
+<p>This example demonstrates an autocomplete search feature using AJAX. As the user types in the 
+search input field, an AJAX request is made to a server-side PHP script (search.php) that processes 
+the search query and returns matching results in JSON format, which are then displayed as autocomplete suggestions.</p>
+
+<p>These additional examples showcase different functionalities of AJAX, such as creating an image 
+gallery dynamically and implementing an autocomplete search feature, using asynchronous data fetching 
+and manipulation on a webpage.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 8: Live Data Update</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10300,9 +10490,10 @@ Sdata = &lbrack;'value' =&gt; rand (1,100)&rbrack;;  // Generate random value
 echo json_encode($data);  // Return live data as JSON
 ?&gt;
 </pre>
-<p>This example demonstrates updating live data on a webpage at regular intervals using 
-AJAX. The JavaScript function updateData uses setInterval to fetch updated data from the 
-server - side PHP script (live_data. php ) every 5 seconds and displays it on the webpage.</p>
+
+<p>This example demonstrates updating live data on a webpage at regular intervals using AJAX. The 
+JavaScript function updateData uses setInterval to fetch updated data from the server - side PHP 
+script (live_data. php ) every 5 seconds and displays it on the webpage.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 9: Infinite Scroll</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10365,14 +10556,15 @@ foreach ($results as $result) {
 }
 ?&gt;
 </pre>
-<p>This example demonstrates an infinite scroll functionality using AJAX. As the user 
-scrolls down the page, the loadMoreContent function detects when the user reaches the 
-bottom of the content area and triggers an AJAX request to fetch more content (content.php) 
-from the server - side PHP script, which is then dynamically appended to the existing 
-content on the webpage.</p>
-<p>These additional examples showcase different functionalities of AJAX, such as live 
-data updates and implementing infinite scroll behavior on a webpage, demonstrating how 
-AJAX can be used to fetch and display data dynamically without page reloads.</p>
+
+<p>This example demonstrates an infinite scroll functionality using AJAX. As the user scrolls down 
+the page, the loadMoreContent function detects when the user reaches the bottom of the content area 
+and triggers an AJAX request to fetch more content (content.php) from the server - side PHP script, 
+which is then dynamically appended to the existing content on the webpage.</p>
+
+<p>These additional examples showcase different functionalities of AJAX, such as live data updates 
+and implementing infinite scroll behavior on a webpage, demonstrating how AJAX can be used to fetch 
+and display data dynamically without page reloads.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 10: File Upload with Progress Bar</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -10435,10 +10627,10 @@ if ($_SERVER&lbrack;'REQUEST-METHOD'&rbrack; === 'POST' && isset($_FILES&lbrack;
 }
 ?&gt;
 </pre>
-<p>This example demonstrates a file upload functionality using AJAX with a progress bar. 
-When a user selects a file and clicks the "Upload" button, the file is uploaded 
-asynchronously to the server using an <span class="consolas">XMLHttpRequest</span>. The 
-progress bar visually indicates the upload progress.</p>
+<p>This example demonstrates a file upload functionality using AJAX with a progress bar. When a user 
+selects a file and clicks the "Upload" button, the file is uploaded asynchronously to the server 
+using an <span class="consolas">XMLHttpRequest</span>. The progress bar visually indicates the 
+upload progress.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h4>AJAX Example 11: Displaying Time Dynamically</h4>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -14779,7 +14971,7 @@ function getDeck() {
         let card = {Value: values&lbrack;x&rbrack;, Suit: suits&lbrack;i&rbrack;};
         deck.push(card);
       }
-	}
+    }
   }
   return deck;
 }
@@ -17043,7 +17235,7 @@ function romanToNumber(roman) {
       result -= currentValue;
     } else {
       result += currentValue;
-	}
+    }
   }
   return result;
 }
@@ -22042,9 +22234,8 @@ console.log(rectanglePerimeter(5, 10));  // Output: 30
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-120">js-120. Find the Longest Common Prefix in an Array of Strings</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The longestCommonPrefix function finds the longest common prefix
-among an array of strings. It starts by assuming the first string in the array
-as the initial common prefix.</p>
+<p>The longestCommonPrefix function finds the longest common prefix among an array of strings. It 
+starts by assuming the first string in the array as the initial common prefix.</p>
 
 <pre>
 const longestCommonPrefix = (strs) =&gt; {
@@ -22064,9 +22255,9 @@ console.log(longestCommonPrefix(&lbrack;'apple', 'apricot', 'appetizer'&rbrack;)
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-121">js-121. Get the ASCII Value of a Character</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The getASCIIValue function retrieves the ASCII value of a given character.
-It employs the charCodeAt method, which returns the ASCII code of the
-character at the specified index (0 in this case).</p>
+<p>The getASCIIValue function retrieves the ASCII value of a given character. It employs the 
+<b>charCodeAt method</b>, which returns the ASCII code of the character at the specified index (0 
+in this case).</p>
 
 <pre>
 const getASCIIValue = (char) =&gt; char.charCodeAt(0);
@@ -22077,10 +22268,9 @@ console.log(getASCIIValue('A'));  // Output: 65
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-122">js-122. Find the First Non-Repeated Character in a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The firstNonRepeatedChar function identifies the first non-repeated
-character within a given string. It accomplishes this by iterating through the
-string, building a character count object, and then using the find method to
-locate the first character with a count of 1.</p>
+<p>The <b>firstNonRepeatedChar</b> function identifies the first non-repeated character within a 
+given string. It accomplishes this by iterating through the string, building a character count 
+object, and then using the <b>find</b> method to locate the first character with a count of 1.</p>
 
 <pre>
 const firstNonRepeatedChar = (str) =&gt; {
@@ -22097,9 +22287,9 @@ console.log(firstNonRepeatedChar('abacabad'));  // Output: "c"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-123">js-123. Sort an Array of Objects by a Property Value</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The sortByProperty function arranges an array of objects based on a
-specified property&apos;s value. It employs the sort method with a custom
-comparison function that compares the property values of two objects.</p>
+<p>The sortByProperty function arranges an array of objects based on a specified property&apos;s 
+value. It employs the sort method with a custom comparison function that compares the property 
+values of two objects.</p>
 
 <pre>
 const sortByProperty = (arr, prop) =&gt; arr.sort((a, b) =&gt; a&lbrack;prop&rbrack; - b&lbrack;prop&rbrack;);
@@ -22118,8 +22308,8 @@ console.log(sortByProperty(people, 'age'));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-124">js-124. Calculate the Exponential of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The exponential function calculates the result of raising a given base to a
-specified exponent using the exponentiation operator (**).</p>
+<p>The exponential function calculates the result of raising a given base to a specified exponent 
+using the exponentiation operator (**).</p>
 
 <pre>
 const exponential = (base, exponent) =&gt; base ** exponent;
@@ -22130,9 +22320,9 @@ console.log(exponential(2, 3));  // Output: 8
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-125">js-125. Check if a String is an Anagram of Another String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isAnagram function determines whether two given strings are anagrams of each 
-other. An anagram is a word or phrase formed by rearranging the letters of another, 
-using all the original letters exactly once.</p>
+<p>The isAnagram function determines whether two given strings are anagrams of each other. An 
+anagram is a word or phrase formed by rearranging the letters of another, using all the original 
+letters exactly once.</p>
 
 <pre>
 const isAnagram = (str1, str2) =&gt; 
@@ -22145,8 +22335,8 @@ console.log(isAnagram('hello', 'world'));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-126">js-126. Find the Factors of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The factors function calculates and returns an array of all the factors of a given 
-number. Factors are the positive integers that evenly divide the input number.</p>
+<p>The factors function calculates and returns an array of all the factors of a given number. 
+Factors are the positive integers that evenly divide the input number.</p>
 
 <pre>
 const factors = (num) =&gt; {
@@ -22165,8 +22355,8 @@ console.log(factors(12));  // Output: &lbrack;1, 2, 3, 4, 6, 12&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-127">js-127. Check if a Number is a Neon Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isNeonNumber function determines whether a given number is a neon number. A neon 
-number is a number where the sum of the digits of its square is equal to the number itself.</p>
+<p>The isNeonNumber function determines whether a given number is a neon number. A neon number is 
+a number where the sum of the digits of its square is equal to the number itself.</p>
 
 <pre>
 const isNeonNumber = (num) =&gt; {
@@ -22183,8 +22373,8 @@ console.log(isNeonNumber(12));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-128">js-128. Find the Power Set of a Set</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The powerSet function generates the power set of a given set, which includes all 
-possible subsets of the set, including the empty set and the set itself.</p>
+<p>The powerSet function generates the power set of a given set, which includes all possible 
+subsets of the set, including the empty set and the set itself.</p>
 
 <pre>
 const powerSet = (set) =&gt; {
@@ -22221,9 +22411,8 @@ console.log(isDisariumNumber(23));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-130">js-130. Remove Vowels from a String</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The removeVowels function eliminates all vowels (both uppercase and
-lowercase) from a given string using the replace method along with a
-regular expression.</p>
+<p>The removeVowels function eliminates all vowels (both uppercase and lowercase) from a given 
+string using the replace method along with a regular expression.</p>
 
 <pre>
 const removeVowels = (str) =&gt; 
@@ -22235,8 +22424,7 @@ console.log(removeVowels("Hello, World!"));  // Output: "Hll, Wrld!"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-131">js-131. Generate an Array of Consecutive Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The consecutiveNumbers function generates an array of consecutive
-numbers within a specified range.</p>
+<p>The consecutiveNumbers function generates an array of consecutive numbers within a specified range.</p>
 
 <pre>
 const consecutiveNumbers = (start, end) =&gt; 
@@ -22248,8 +22436,8 @@ console.log(consecutiveNumbers(1, 5));  // Output: &lbrack;1, 2, 3, 4, 5&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-132">js-132. Check if a Number is a Pronic Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isPronicNumber function determines whether a given number is a pronic number 
-(also known as an oblong number or rectangular number).</p>
+<p>The isPronicNumber function determines whether a given number is a pronic number (also known as 
+an oblong number or rectangular number).</p>
 
 <pre>
 const isPronicNumber = (num) =&gt; {
@@ -22265,8 +22453,8 @@ console.log(isPronicNumber(7));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-133">js-133. Check if a String is a Pangram</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isPangram function checks whether a given string is a pangram, which
-is a sentence that contains every letter of the alphabet at least once.</p>
+<p>The isPangram function checks whether a given string is a pangram, which is a sentence that 
+contains every letter of the alphabet at least once.</p>
 
 <pre>
 const isPangram = (str) =&gt; {
@@ -22292,9 +22480,8 @@ console.log(reverseSentence("Hello, how are you doing?"));  // Output: "doing? y
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-135">js-135. Calculate the Hypotenuse of a Right-Angled Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The binaryToDecimalWithParseInt function converts a binary number to a
-decimal number using the built-in parseInt function with the base parameter
-set to 2.</p>
+<p>The <b>binaryToDecimalWithParseInt</b> function converts a binary number to a decimal number 
+using the built-in <b>parseInt</b> function with the base parameter set to 2.</p>
 
 <pre>
 const binaryToDecimalWithParseInt = (binary) =&gt; parseInt(binary, 2);
@@ -22305,9 +22492,9 @@ console.log(binaryToDecimalWithParseInt("1101"));  // Output: 13
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-136">js-136. Find the Average of Odd Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The averageOfOddNumbers function calculates the average of odd numbers
-within a given array. It does so by filtering the odd numbers from the array,
-then computing their sum and dividing by the count of odd numbers.</p>
+<p>The <b>averageOfOddNumbers</b> function calculates the average of odd numbers within a given 
+array. It does so by filtering the odd numbers from the array, then computing their sum and dividing 
+by the count of odd numbers.</p>
 
 <pre>
 const averageOfOddNumbers = (arr) =&gt; {
@@ -22321,9 +22508,8 @@ console.log(averageOfOddNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-137">js-137. Count the Letters in a String (case-insensitive)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The countLetters function calculates the count of each letter in a given
-string, considering both uppercase and lowercase versions as the same
-letter.</p>
+<p>The <b>countLetters</b> function calculates the count of each letter in a given string, 
+considering both uppercase and lowercase versions as the same letter.</p>
 
 <pre>
 const countLetters = (str) =&gt; {
@@ -22341,8 +22527,8 @@ console.log(countLetters("Hello, World!"));  // Output: { h: 1, e: 1, l: 3, o: 2
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-138">js-138. Convert Seconds to Days, Hours, Minutes, and Seconds</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The secsToDaysHoursMinsSecs function converts a given number of
-seconds into days, hours, minutes, and remaining seconds.</p>
+<p>The <b>secsToDaysHoursMinsSecs</b> function converts a given number of seconds into days, hours, 
+minutes, and remaining seconds.</p>
 
 <pre>
 const secsToDaysHoursMinsSecs = (seconds) =&gt; {
@@ -22361,8 +22547,7 @@ console.log(secsToDaysHoursMinsSecs(100000));  // Output: "1 days, 3 hours, 46 m
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-139">js-139. Check if a Number is a Prime Factor of Another Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isPrimeFactor function checks if a given number is a prime factor of
-another number.</p>
+<p>The <b>isPrimeFactor</b> function checks if a given number is a prime factor of another number.</p>
 
 <pre>
 const isPrimeFactor = (num, factor) =&gt; num % factor === 0 &&
@@ -22375,7 +22560,7 @@ console.log(isPrimeFactor(20, 3));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-140">js-140. Find the Largest Prime Factor of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The largestPrimeFactor function calculates the largest prime factor of a given number.</p>
+<p>The <b>largestPrimeFactor</b> function calculates the largest prime factor of a given number.</p>
 
 <pre>
 const largestPrimeFactor = (num) =&gt; {
@@ -22396,7 +22581,7 @@ console.log(largestPrimeFactor(48));  // Output: 3
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-141">js-141. Check if a Number is a Pronic Square</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isPronicSquare function checks if a given number is a pronic square.</p>
+<p>The <b>isPronicSquare</b> function checks if a given number is a pronic square.</p>
 
 <pre>
 const isPronicSquare = (num) =&gt; Number.isInteger(Math.sqrt(num));
@@ -22409,7 +22594,7 @@ console.log(isPronicSquare(21));  // Output: true
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-142">js-142. Find the Sum of the Digits of a Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The sumOfDigits function calculates the sum of the digits of a given number.</p>
+<p>The <b>sumOfDigits</b> function calculates the sum of the digits of a given number.</p>
 
 <pre>
 const sumOfDigits = (num) =&gt; &lbrack;...String(num)&rbrack;.reduce((sum, digit) =&gt; 
@@ -22421,8 +22606,8 @@ console.log(sumOfDigits(12345));  // Output: 15
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-143">js-143. Calculate the Median of an Array of Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The median function calculates the median of an array of numbers. The
-median is the middle value of a dataset when it is ordered.</p>
+<p>The <b>median</b> function calculates the median of an array of numbers. The <b>median</b> is 
+the middle value of a dataset when it is ordered.</p>
 
 <pre>
 const median = (arr) =&gt; {
@@ -22438,8 +22623,8 @@ console.log(median(&lbrack;1, 3, 5, 7, 9&rbrack;));  // Output: 5
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-144">js-144. Find the Greatest Common Divisor (GCD) of Two Numbers (Recursive)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The gcd function calculates the greatest common divisor (GCD) of two
-given numbers using a recursive approach.</p>
+<p>The <b>gcd</b> function calculates the greatest common divisor (GCD) of two given numbers using 
+a recursive approach.</p>
 
 <pre>
 const gcd = (num1, num2) =&gt; (num2 === 0 ? num1 : gcd(num2, num1 % num2));
@@ -22450,9 +22635,9 @@ console.log(gcd(48, 18));  // Output: 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-145">js-145. Check if a Number is a Happy Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isHappyNumber function checks if a given number is a "happy number" or not. A 
-happy number is a number where the sequence of repeatedly summing the squares of its 
-digits eventually reaches the number 1.</p>
+<p>The <b>isHappyNumber</b> function checks if a given number is a "happy number" or not. A 
+<b>happy</b> number is a number where the sequence of repeatedly summing the squares of its digits 
+eventually reaches the number 1.</p>
 
 <pre>
 const isHappyNumber = (num) =&gt; {
@@ -22471,7 +22656,7 @@ console.log(isHappyNumber(4));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-146">js-146. Find the First N Prime Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The firstNPrimes function generates an array of the first n prime numbers.</p>
+<p>The <b>firstNPrimes</b> function generates an array of the first n prime numbers.</p>
 
 <pre>
 const isPrime = (num) =&gt; {
@@ -22497,7 +22682,7 @@ console.log(firstNPrimes(5));  // Output: &lbrack;2, 3, 5, 7, 11&rbrack;
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-147">js-147. Calculate the Volume of a Sphere</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The sphereVolume function calculates the volume of a sphere given its radius. It uses 
+<p>The <b>sphereVolume</b> function calculates the volume of a sphere given its radius. It uses 
 the formula (4/3) * π * r^3, where r is the radius of the sphere.</p>
 
 <pre>
@@ -22509,10 +22694,9 @@ console.log(sphereVolume(5));  // Output: 523.5987755982989
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-148">js-148. Find the Longest Word in a Sentence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The longestWord function determines the longest word in a given sentence.
-It does this by splitting the sentence into words using spaces as separators
-and then using the reduce method to compare the length of each word and
-keep track of the longest one.</p>
+<p>The <b>longestWord</b> function determines the longest word in a given sentence. It does this by 
+splitting the sentence into words using spaces as separators and then using the reduce method to 
+compare the length of each word and keep track of the longest one.</p>
 
 <pre>
 const longestWord = (sentence) =&gt; sentence.split(' ').reduce((longest, word) =&gt; 
@@ -22524,11 +22708,13 @@ console.log(longestWord("The quick brown fox jumped over the lazy dog"));  // Ou
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-149">js-149. Check if a Number is an Armstrong Number (Narcissistic Number)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>An Armstrong number of three digits is an integer such that the sum of the cubes of 
+<p>An <b>Armstrong number</b> of three digits is an integer such that the sum of the cubes of 
 its digits is equal to the number itself. For example, 153 and 371 are Armstrong numbers.</p>
-<p>(3&ast;3&ast;3) + (7&ast;7&ast;7) + (1&ast;1&ast;1) = 371</p>
-<p>The isArmstrongNumber function checks if a number is an Armstrong number, also known 
-as a narcissistic number.</p>
+
+<pre>(3&ast;3&ast;3) + (7&ast;7&ast;7) + (1&ast;1&ast;1) = 371</pre>
+
+<p>The <b>isArmstrongNumber</b> function checks if a number is an Armstrong number, also known as a 
+<b>narcissistic number</b>.</p>
 
 <pre>
 const isArmstrongNumber = (num) =&gt; {
@@ -22548,9 +22734,9 @@ console.log(isArmstrongNumber(155));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-150">js-150. Find the Length of the Longest Word in a Sentence</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The longestWordLength function calculates the length of the longest word in a given 
-sentence. It splits the sentence into words using spaces as separators, and then uses 
-the reduce method to find the maximum length among all the words.</p>
+<p>The <b>longestWordLength</b> function calculates the length of the longest word in a given sentence. 
+It splits the sentence into words using spaces as separators, and then uses the reduce method to find 
+the maximum length among all the words.</p>
 
 <pre>
 const longestWordLength = (sentence) =&gt; 
@@ -22563,9 +22749,8 @@ console.log(longestWordLength("The quick brown fox jumped over the lazy dog")); 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-151">js-151. Check if a Number is a Strong Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isStrongNumber function checks if a number is a strong number. A
-strong number is a number whose sum of factorials of its digits is equal to
-the number itself.</p>
+<p>The <b>isStrongNumber</b> function checks if a number is a strong number. A strong number is a 
+number whose sum of factorials of its digits is equal to the number itself.</p>
 
 <pre>
 const factorial = (num) =&gt; (num === 0 ? 1 : num * factorial(num - 1));
@@ -22582,7 +22767,8 @@ console.log(isStrongNumber(123));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-152">js-152. Reverse the Order of an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The reverseArray function reverses the order of elements in an array using the reverse method.</p>
+<p>The <b>reverseArray</b> function reverses the order of elements in an array using the reverse 
+method.</p>
 
 <pre>
 const reverseArray = (arr) =&gt; arr.reverse();
@@ -22593,8 +22779,8 @@ console.log(reverseArray(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: &lbrack;5,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-153">js-153. Find the Area of a Rectangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The rectangleArea function calculates the area of a rectangle given its
-length and width using the formula: length * width.</p>
+<p>The <b>rectangleArea</b> function calculates the area of a rectangle given its length and width 
+using the formula: length * width.</p>
 
 <pre>
 const rectangleArea = (length, width) =&gt; length * width;
@@ -22605,9 +22791,9 @@ console.log(rectangleArea(5, 10));  // Output: 50
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-154">js-154. Calculate the Sum of Even Numbers in an Array</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The sumOfEvenNumbers function calculates the sum of even numbers
-within an array. It first filters the array to keep only the even numbers, and
-then uses the reduce method to compute their sum.</p>
+<p>The <b>sumOfEvenNumbers</b> function calculates the sum of even numbers within an array. It 
+first filters the array to keep only the even numbers, and then uses the reduce method to compute 
+their sum.</p>
 
 <pre>
 const sumOfEvenNumbers = (arr) =&gt; 
@@ -22619,9 +22805,8 @@ console.log(sumOfEvenNumbers(&lbrack;1, 2, 3, 4, 5, 6, 7, 8, 9, 10&rbrack;));  /
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-155">js-155. Find the Greatest Common Divisor (GCD) of Two Numbers (Iterative)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The gcdIterative function calculates the greatest common divisor (GCD) of two numbers 
-using an iterative approach. It employs the Euclidean algorithm to iteratively find the 
-GCD.</p>
+<p>The <b>gcdIterative</b> function calculates the greatest common divisor (GCD) of two numbers 
+using an iterative approach. It employs the Euclidean algorithm to iteratively find the GCD.</p>
 
 <pre>
 const gcdIterative = (num1, num2) =&gt; {
@@ -22639,7 +22824,7 @@ console.log(gcdIterative(48, 18));  // Output: 6
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-156">js-156. Calculate the Volume of a Cylinder</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The cylinderVolume function calculates the volume of a cylinder using the formula: π 
+<p>The <b>cylinderVolume</b> function calculates the volume of a cylinder using the formula: π 
 * radius^2 * height.</p>
 
 <pre>
@@ -22651,7 +22836,7 @@ console.log(cylinderVolume(5, 10));  // Output: 785.3981633974483
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-157">js-157. Check if a Number is a Smith Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isSmithNumber function checks whether a given number is a Smith number.</p>
+<p>The <b>isSmithNumber</b> function checks whether a given number is a Smith number.</p>
 
 <pre>
 const sumOfDigits = (num) =&gt; &lbrack;...String(num)&rbrack;.reduce((sum, digit) =&gt; 
@@ -22679,8 +22864,8 @@ console.log(isSmithNumber(123));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-158">js-158. Convert Decimal Number to Octal</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The decimalToOctal function converts a decimal (base 10) number to its octal (base 8) 
-representation using the .toString() method with the base argument set to 8.</p>
+<p>The <b>decimalToOctal</b> function converts a decimal (base 10) number to its octal (base 8) 
+representation using the <b>.toString()</b> method with the base argument set to 8.</p>
 
 <pre>
 const decimalToOctal = (num) =&gt; num.toString(8);
@@ -22985,9 +23170,9 @@ console.log(isValidCreditCard("1234-5678-9012-3456"));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-179">js-179. Calculate the Perimeter of a Triangle</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The trianglePerimeter function calculates the perimeter of a triangle given its three 
-side lengths. It simply adds up the lengths of all three sides and returns the result as 
-the perimeter of the triangle.</p>
+<p>The <b>trianglePerimeter</b> function calculates the perimeter of a triangle given its three 
+side lengths. It simply adds up the lengths of all three sides and returns the result as the 
+perimeter of the triangle.</p>
 
 <pre>
 const trianglePerimeter = (side1, side2, side3) =&gt; side1 + side2 + side3;
@@ -22998,7 +23183,7 @@ console.log(trianglePerimeter(5, 10, 7));  // Output: 22
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-180">js-180. Check if a Number is a Vampire Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isVampireNumber function checks if a given number is a vampire number.</p>
+<p>The <b>isVampireNumber</b> function checks if a given number is a <b>vampire number</b>.</p>
 
 <pre>
 const isVampireNumber = (num) =&gt; {
@@ -23025,7 +23210,7 @@ console.log(isVampireNumber(1250));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-181">js-181. Find the Sum of Digits Raised to the Power of their Respective Position</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>sumOfDigitsRaisedToPower calculates the sum of digits raised to the power of their 
+<p><b>sumOfDigitsRaisedToPower</b> calculates the sum of digits raised to the power of their 
 respective positions.</p>
 
 <pre>
@@ -23040,8 +23225,8 @@ console.log(sumOfDigitsRaisedToPower(12345));  // Output: 115
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-182">js-182. Check if a Number is a Duck Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isDuckNumber function checks whether a given number is a duck number. A duck 
-number is a number that contains the digit "0" but does not start with "0".</p>
+<p>The <b>isDuckNumber</b> function checks whether a given number is a <b>duck number</b>. A <b>duck 
+number</b> is a number that contains the digit "0" but does not start with "0".</p>
 
 <pre>
 const isDuckNumber = (num) =&gt; 
@@ -23055,7 +23240,7 @@ console.log(isDuckNumber(12345));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-183">js-183. Generate a Random Password</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The randomPassword function generates a random password of the specified length.</p>
+<p>The <b>randomPassword</b> function generates a random password of the specified length.</p>
 
 <pre>
 const randomPassword = (length) =&gt; Array.from({ length }, () =&gt;
@@ -23067,7 +23252,7 @@ console.log(randomPassword(8));  // Output: "3klS0p9x"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-184">js-184. Calculate the Area of a Trapezoid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The trapezoidArea function calculates the area of a trapezoid using the formula: 
+<p>The <b>trapezoidArea</b> function calculates the area of a trapezoid using the formula: 
 0.5 * (base1 + base2) * height.</p>
 
 <pre>
@@ -23080,7 +23265,7 @@ console.log(trapezoidArea(4, 8, 6));  // Output: 36
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-185">js-185. Check if a Number is a Kaprekar Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isKaprekarNumber function checks if a given number is a Kaprekar number.</p>
+<p>The <b>isKaprekarNumber</b> function checks if a given number is a <b>Kaprekar number</b>.</p>
 
 <pre>
 const isKaprekarNumber = (num) =&gt; {
@@ -23100,9 +23285,9 @@ console.log(isKaprekarNumber(45));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-186">js-186. Calculate the Volume of a Cone</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The coneVolume function calculates the volume of a cone using its base
-radius and height. It applies the formula for the volume of a cone: <br>
-V = (1/3) * π * r² * h, <br>
+<p>The <b>coneVolume</b> function calculates the volume of a cone using its base radius and height. 
+It applies the formula for the volume of a cone:<br>
+V = (1/3) * π * r² * h,<br>
 where r is the radius of the base and h is the height of the cone.</p>
 
 <pre>
@@ -23114,7 +23299,7 @@ console.log(coneVolume(5, 10));  // Output: 261.79938779914943
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-187">js-187. Check if a String is a Valid US Phone Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isValidUSPhoneNumber function uses a regular expression to validate US phone numbers.</p>
+<p>The <b>isValidUSPhoneNumber</b> function uses a regular expression to validate US phone numbers.</p>
 
 <pre>
 const isValidUSPhoneNumber = (phone) =&gt; /^(?:(?:\+1\s?)?(?:\(?\d{3}\)?
@@ -23128,7 +23313,7 @@ console.log(isValidUSPhoneNumber("1-800-ABC-DEFG"));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-188">js-188. Find the Sum of Digits Raised to the Power of their Respective Position (Up to 1000)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The sumOfDigitsRaisedToPowerUpToThousand function calculates the sum of numbers where 
+<p>The <b>sumOfDigitsRaisedToPowerUpToThousand</b> function calculates the sum of numbers where 
 each digit raised to the power of its respective position is equal to the number itself.</p>
 
 <pre>
@@ -23148,7 +23333,7 @@ console.log(sumOfDigitsRaisedToPowerUpToThousand());  // Output: 443839
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-189">js-189. Check if a Number is a Carol Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isCarolNumber function checks if a given number is a Carol number.</p>
+<p>The <b>isCarolNumber</b> function checks if a given number is a <b>Carol number</b>.</p>
 
 <pre>
 const isCarolNumber = (num) =&gt; {
@@ -23164,8 +23349,8 @@ console.log(isCarolNumber(6));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-190">js-190. Check if a Number is a Catalan Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isCatalanNumber function checks if a given number is a Catalan number. It first 
-ensures that the input number is a non-negative integer.</p>
+<p>The <b>isCatalanNumber</b> function checks if a given number is a <b>Catalan number</b>. It 
+first ensures that the input number is a non-negative integer.</p>
 
 <pre>
 const isCatalanNumber = (num) =&gt; num >= 0 && Number.isInteger(num)
@@ -23178,7 +23363,7 @@ console.log(isCatalanNumber(10));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-191">js-191. Calculate the Volume of a Cuboid</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The cuboidVolume function calculates the volume of a cuboid given its length, width, 
+<p>The <b>cuboidVolume</b> function calculates the volume of a <b>cuboid</b> given its length, width, 
 and height.</p>
 
 <pre>
@@ -23190,7 +23375,7 @@ console.log(cuboidVolume(5, 10, 8));  // Output: 400
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-192">js-192. Check if a Number is a Dudeney Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The isDudeneyNumber function checks if a number is a Dudeney number.</p>
+<p>The <b>isDudeneyNumber</b> function checks if a number is a <b>Dudeney number</b>.</p>
 
 <pre>
 const isDudeneyNumber = (num) =&gt; num === sumOfDigitsCube(num);
@@ -23249,8 +23434,8 @@ console.log(removeDuplicates(&lbrack;1, 2, 3, 3, 4, 4, 5, 5, 6&rbrack;));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-197">js-197. Calculate the Area of an Ellipse</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Calculate the area of an ellipse using its semi-major axis length (a) and semi-minor 
-axis length (b).</p>
+<p>Calculate the area of an ellipse using its semi-major axis length (a) and semi-minor axis 
+length (b).</p>
 
 <pre>
 const ellipseArea = (a, b) =&gt; Math.PI * a * b;
@@ -23261,7 +23446,7 @@ console.log(ellipseArea(5, 10));  // Output: 157.07963267948966
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-198">js-198. Check if a Number is a Leyland Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a Leyland number.</p>
+<p>Check if a given number is a <b>Leyland number</b>.</p>
 
 <pre>
 const isLeylandNumber = (num) =&gt; {
@@ -23284,7 +23469,7 @@ console.log(isLeylandNumber(100));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-199">js-199. Generate a Random UUID</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Generate a random Universally Unique Identifier (UUID).</p>
+<p>Generate a random <b>Universally Unique Identifier (UUID)</b>.</p>
 
 <pre>
 const randomUUID = () =&gt; {
@@ -23302,7 +23487,7 @@ console.log(randomUUID());  // Output: "a0f768f5-6bf2-4f6b-a512-c9121ea1b44a"
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-200">js-200. Check if a String is a Valid IPv6 Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given string represents a valid IPv6 address.</p>
+<p>Check if a given string represents a <b>valid IPv6 address</b>.</p>
 
 <pre>
 const isValidIPv6 = (ip) =&gt; /^(&lbrack;0-9a-fA-F&rbrack;{1,4}:){7}&lbrack;0-9a-fA-F&rbrack;
@@ -23327,7 +23512,7 @@ console.log(parallelogramArea(5, 10));  // Output: 50
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-202">js-202. Check if a String is a Valid MAC Address</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given string is a valid MAC address.</p>
+<p>Check if a given string is a <b>valid MAC address</b>.</p>
 
 <pre>
 const isValidMACAddress = (mac) =&gt; 
@@ -23340,7 +23525,7 @@ console.log(isValidMACAddress("00:1A:2B:3C:4D"));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-203">js-203. Convert RGB to HSL (Hue, Saturation, Lightness)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Convert an RGB color value to its corresponding HSL representation (Hue, Saturation, 
+<p>Convert an <b>RGB color value</b> to its corresponding <b>HSL representation</b> (Hue, Saturation, 
 Lightness).</p>
 
 <pre>
@@ -23364,7 +23549,7 @@ console.log(rgbToHSL(0, 0, 255));  // Output: { h: 240, s: 100, l: 50 }
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-204">js-204. Check if a Number is a Pandigital Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a pandigital number.</p>
+<p>Check if a given number is a <b>pandigital number</b>.</p>
 
 <pre>
 const isPandigitalNumber = (num) =&gt; {
@@ -23405,7 +23590,7 @@ console.log(sumOfProperDivisors(12));  // Output: 16
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-206">js-206. Find the Least Common Multiple (LCM) of an Array of Numbers</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Find the least common multiple (LCM) of an array of numbers.</p>
+<p>Find the <b>least common multiple (LCM)</b> of an array of numbers.</p>
 
 <pre>
 const lcmArray = (arr) =&gt; arr.reduce((lcm, num) =&gt; 
@@ -23428,7 +23613,7 @@ console.log(sumOfSquares(5));  // Output: 55
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-208">js-208. Check if a Number is a Powerful Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a powerful number.</p>
+<p>Check if a given number is a <b>powerful number</b>.</p>
 
 <pre>
 const isPowerfulNumber = (num) =&gt; {
@@ -23456,7 +23641,7 @@ console.log(productOfDigits(12345));  // Output: 120
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-210">js-210. Check if a Number is a Practical Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a practical number.</p>
+<p>Check if a given number is a <b>practical number</b>.</p>
 
 <pre>
 const isPracticalNumber = (num) =&gt; {
@@ -23488,7 +23673,7 @@ console.log(sumOfCubes(5));  // Output: 225
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-212">js-212. Check if a Number is a Strange Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a strange number.</p>
+<p>Check if a given number is a <b>strange number</b>.</p>
 
 <pre>
 const isStrangeNumber = (num) =&gt; {
@@ -23505,7 +23690,7 @@ console.log(isStrangeNumber(20));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-213">js-213. Check if a Number is a Tau Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a Tau number.</p>
+<p>Check if a given number is a <b>Tau number</b>.</p>
 
 <pre>
 const isTauNumber = (num) =&gt; {
@@ -23566,7 +23751,7 @@ console.log(sumOfDivisors(12));  // Output: 28
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-217">js-217. Check if a Number is a Zeisel Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a Zeisel number.</p>
+<p>Check if a given number is a <b>Zeisel number</b>.</p>
 
 <pre>
 const isZeiselNumber = (num) =&gt; {
@@ -23645,7 +23830,7 @@ console.log(sumOfProperDivisors(12));  // Output: 16
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-223">js-223. Check if a Number is a Unitary Perfect Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a unitary perfect number.</p>
+<p>Check if a given number is a <b>unitary perfect number</b>.</p>
 
 <pre>
 const isUnitaryPerfectNumber = (num) =&gt; 
@@ -23658,8 +23843,7 @@ console.log(isUnitaryPerfectNumber(28));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-224">js-224. Calculate the Perimeter of a Regular Polygon</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Calculate the perimeter of a regular polygon using its side length and the
-number of sides.</p>
+<p>Calculate the perimeter of a regular polygon using its side length and the number of sides.</p>
 
 <pre>
 const regularPolygonPerimeter = (sideLength, numSides) =&gt; 
@@ -23683,7 +23867,7 @@ console.log(equilateralTriangleArea(5));  // Output: 10.825317547305486
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-226">js-226. Check if a Number is a Harshad Smith Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is both a Harshad number and a Smith number.</p>
+<p>Check if a given number is both a <b>Harshad number</b> and a <b>Smith number</b>.</p>
 
 <pre>
 const isHarshadSmithNumber = (num) =&gt; 
@@ -23694,7 +23878,7 @@ console.log(isHarshadSmithNumber(10));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-227">js-227. Check if a Number is a Perfect Power</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a perfect power.</p>
+<p>Check if a given number is a <b>perfect power</b>.</p>
 
 <pre>
 const isPerfectPower = (num) =&gt; {
@@ -23732,7 +23916,7 @@ console.log(sumOfDigitsToPower(4150, 5));  // Output: 4150
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-229">js-229. Check if a Number is a Dudeney Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a Dudeney number.</p>
+<p>Check if a given number is a <b>Dudeney number</b>.</p>
 
 <pre>
 const isDudeneyNumber = (num) =&gt; Math.cbrt(num) === sumOfDigits(num);
@@ -23767,7 +23951,7 @@ console.log(pyramidVolume(25, 10));  // Output: 83.33333333333333
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-232">js-232. Check if a Number is a Wedderburn-Etherington Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given number is a Wedderburn-Etherington number.</p>
+<p>Check if a given number is a <b>Wedderburn-Etherington</b> number.</p>
 
 <pre>
 const isWedderburnEtheringtonNumber = (num) =&gt; {
@@ -23816,7 +24000,9 @@ const regularOctagonArea = (sideLength) =&gt; 2 * (1 + Math.sqrt(2)) * sideLengt
 // Example usage - <b>different for some reason</b>
 console.log(regularOctagonArea(5));  // Output: 86.60254037844387 (120.71067811865474)
 </pre>
+
 <h4>Or, with a 5 sideLength;</h4>
+
 <pre>
 function calculateOctagonArea(sideLength) {
   if (sideLength &lt;= 0) {
@@ -23869,7 +24055,7 @@ console.log(isValidURLAlt("invalid url"));  // Output: false
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-239">js-239. Check if a String is a Valid Tax Identification Number (TIN)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given string is a valid Tax Identification Number (TIN).</p>
+<p>Check if a given string is a valid Tax Identification Number (TIN). Used in Canada.</p>
 
 <pre>
 const isValidTIN = (tin) =&gt; /^&lbrack;A-Z&rbrack;{2}\d{6}&lbrack;A-Z\d&rbrack;{2}$/.test(tin);
@@ -23990,7 +24176,7 @@ console.log(sumSquares(&lbrack;1, 2, 3, 4, 5&rbrack;));  // Output: 55
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-249">js-249. Check if a String is a Palindrome (Ignoring Non-Alphanumeric Characters)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Check if a given string is a palindrome, ignoring non-alphanumeric characters and 
+<p>Check if a given string is a <b>palindrome</b>, ignoring non-alphanumeric characters and 
 considering case-insensitivity.</p>
 
 <pre>
