@@ -35,7 +35,7 @@
     Silus,Gaming,World,SilusGamingWorldLuccasNeto,T-Series,SETIndia,Cocomelon,Mr,Beast,MrBeast,
     Beast,CE1,C-E-1,MRBEAST,BEAST,SilusGamingWorld,Silus,SilusSpider,NickAR,Nick,NY,NYNick,
     NewYorkNick,NYNick,URCristiano,UR,Cristiano,KidsDimaShow,VladandNiki,LuisitoComunica,
-    BrightSide,ZeeTV,DudePerfect,TipsOfficial,TipsOfficial,FNAF,FiveNightsatFreddies,
+    BrightSide,ZeeTV,DudePerfect,TipsOfficial,TipsOfficial,FNAF,FiveNightsatFreddies,#roblox,roblox,
     TheMusicCompany,PewDiePie,5minutecrafts,A4,Sambucha,Sam&Colby,Sam&ColbyReacts,JuiceWorld,
     RayWilliamJohnson,FGTV,KaicenatLive,IShowSpeed,Jelly,DanTDM,KSI,LoganPaul,JackSucksAtLife,
     PackGOD,JakePaul,Jake,PaulJakePaul,SamGaming01,Veshreny,WWE,WorldWrestlingEntertainment,
@@ -862,7 +862,7 @@ They are concepts that you should know if you want to be at a higher level.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk01">sk01. Call Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>A call stack is a data structure that stores information about the active subroutines 
+<p>A <b>call stack</b> is a data structure that stores information about the active subroutines 
 or function calls in a computer program. It operates on a Last In, First Out (LIFO) basis, 
 meaning that the last function called is the first one to be resolved or completed.</p>
 
@@ -894,11 +894,10 @@ from dryDish(), and it also gets added to the call stack.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk02">sk02. Primitive Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Primitive types refer to the fundamental data types that are not composed of other 
-types. They are the simplest and most basic data entities directly supported by the 
-programming language. Primitive types are usually built-in and include fundamental 
-data categories such as integers, floating-point numbers, characters, and boolean
-values.</p>
+<p><b>Primitive types</b> refer to the fundamental data types that are not composed of other types. 
+They are the simplest and most basic data entities directly supported by the programming language. 
+Primitive types are usually built-in and include fundamental data categories such as integers, 
+floating-point numbers, characters, and boolean values.</p>
 
 <h4>Integer:</h4>
 <pre>let age = 25;  // Integer</pre>
@@ -921,8 +920,8 @@ blocks for more complex data structures.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk03">sk03. Value Types and Reference Types</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Values can be classified into two categories: value types and reference types. This 
-distinction is crucial to understand how data is handled and stored in memory.</p>
+<p>Values can be classified into two categories: <b>value types</b> and <b>reference types</b>. 
+This distinction is crucial to understand how data is handled and stored in memory.</p>
 
 <p><b>Value Types (Primitives):</b> Value types represent simple data and are stored 
 directly in the variable. When you assign a primitive value to a variable, the actual 
@@ -972,7 +971,7 @@ them also modifies the original object in memory.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk04">sk04. Implicit, Explicit, Nominal, Structural, and Duck Typing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The concepts of typing refer to how data types are managed and assigned in a language. Here is 
+<p>The concepts of <b>typing</b> refer to how data types are managed and assigned in a language. Here is 
 a description of the different types of typing:</p>
 
 <p><b>Implicit Typing:</b> In Languages with implicit typing, a variable&apos;s data type is 
@@ -4742,7 +4741,7 @@ console.log(new Vec(3, 4).length);  // → 5
 <h2 id="el17">el17. Objects: Groups</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The easiest way to do this is to store an array of group members in an instance property. The 
-includes or indexOf methods can be used to check whether a given value is in the array.</p>
+<b>includes</b> or <b>indexOf methods</b> can be used to check whether a given value is in the array.</p>
 
 <p>Your class’s constructor can set the member collection to an empty array. When add is called, it 
 must check whether the given value is in the array or add it, for example with push, otherwise.</p>
@@ -4751,7 +4750,7 @@ must check whether the given value is in the array or add it, for example with p
 create a new array without the value. Don’t forget to overwrite the property holding the members 
 with the newly filtered version of the array.</p>
 
-<p>The from method can use a for/of loop to get the values out of the iterable object and call add 
+<p>The <b>from method</b> can use a for/of loop to get the values out of the iterable object and call add 
 to put them into a newly created group.</p>
 
 <pre>
@@ -4793,8 +4792,8 @@ Iterator instances should have a property that tracks the current position in th
 time next is called, it checks whether it is done and, if not, moves past the current value and 
 returns it.</p>
 
-<p>The Group class itself gets a method named by Symbol.iterator that, when called, returns a new 
-instance of the iterator class for that group.</p>
+<p>The Group class itself gets a method named by <b>Symbol.iterator</b> that, when called, returns 
+a new instance of the iterator class for that group.</p>
 
 <pre>
 class Group {
@@ -5237,23 +5236,21 @@ function verify(regexp, yes, no) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el26">el26. Regular Expressions: Quoting style</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Imagine you have written a story and used single quotation marks throughout
-to mark pieces of dialogue. Now you want to replace all the dialogue quotes
-with double quotes, while keeping the single quotes used in contractions like
-aren’t.</p>
+<p>Imagine you have written a story and used single quotation marks throughout to mark pieces of 
+dialogue. Now you want to replace all the dialogue quotes with double quotes, while keeping the 
+single quotes used in contractions like aren’t.</p>
 
-<p>Think of a pattern that distinguishes these two kinds of quote usage and
-craft a call to the replace method that does the proper replacement.</p>
+<p>Think of a pattern that distinguishes these two kinds of quote usage and craft a call to the 
+replace method that does the proper replacement.</p>
 
-<p>The most obvious solution is to replace only quotes with a nonword character
-on at least one side—something like /\W'|'\W/. But you also have to take the
-start and end of the line into account.</p>
+<p>The most obvious solution is to replace only quotes with a nonword character on at least one 
+side—something like /\W'|'\W/. But you also have to take the start and end of the line into 
+account.</p>
 
-<p>In addition, you must ensure that the replacement also includes the charac-
-ters that were matched by the \W pattern so that those are not dropped. This
-can be done by wrapping them in parentheses and including their groups in
-the replacement string ($1, $2). Groups that are not matched will be replaced
-by nothing.</p>
+<p>In addition, you must ensure that the replacement also includes the characters that were matched 
+by the \W pattern so that those are not dropped. This can be done by wrapping them in parentheses 
+and including their groups in the replacement string ($1, $2). Groups that are not matched will be 
+replaced by nothing.</p>
 
 <pre>
 let text = "'I'm the cook,' he said, 'it's my job.'";<br>
@@ -5263,26 +5260,24 @@ console.log(text.replace(/(^|\W)'|'(\W|$)/g, '$1"$2'));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el27">el27. Regular Expressions: Numbers again</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Write an expression that matches only JavaScript-style numbers. It must sup-
-port an optional minus or plus sign in front of the number, the decimal dot,
-and exponent notation—5e-3 or 1E10—again with an optional sign in front of
-the exponent. Also note that it is not necessary for there to be digits in front
-of or after the dot, but the number cannot be a dot alone. That is, .5 and 5.
-are valid JavaScript numbers, but a lone dot isn’t.</p>
+<p>Write an expression that matches only JavaScript-style numbers. It must support an optional 
+minus or plus sign in front of the number, the decimal dot, and exponent notation—5e-3 or 1E10—again 
+with an optional sign in front of the exponent. Also note that it is not necessary for there to be 
+digits in front of or after the dot, but the number cannot be a dot alone. That is, .5 and 5. are 
+valid JavaScript numbers, but a lone dot isn’t.</p>
 
 <p>First, do not forget the backslash in front of the period.</p>
 
-<p>Matching the optional sign in front of the number, as well as in front of the
-exponent, can be done with &lbrack;+\-&rbrack;? or (\+|-|) (plus, minus, or nothing).</p>
+<p>Matching the optional sign in front of the number, as well as in front of the exponent, can be 
+done with &lbrack;+\-&rbrack;? or (\+|-|) (plus, minus, or nothing).</p>
 
-<p>The more complicated part of the exercise is the problem of matching both
-"5." and ".5" without also matching ".". For this, a good solution is to use
-the | operator to separate the two cases—either one or more digits optionally
-followed by a dot and zero or more digits or a dot followed by one or more
-digits.</p>
+<p>The more complicated part of the exercise is the problem of matching both "5." and ".5" without 
+also matching ".". For this, a good solution is to use the | operator to separate the two cases—
+either one or more digits optionally followed by a dot and zero or more digits or a dot followed 
+by one or more digits.</p>
 
-<p>Finally, to make the e case insensitive, either add an i option to the regular
-expression or use &lbrack;eE&rbrack;.</p>
+<p>Finally, to make the e case insensitive, either add an i option to the regular expression or use 
+&lbrack;eE&rbrack;.</p>
 
 <pre>
 // Fill in this regular expression.
@@ -5304,13 +5299,13 @@ for (let str of &lbrack;"1a", "+-1", "1.2.3", "1+1", "1e4.5",
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el28">el28. Modules: Roads module</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Since this is a CommonJS module, you have to use require to import the graph
-module. That was described as exporting a buildGraph function, which you
-can pick out of its interface object with a destructuring const declaration.</p>
+<p>Since this is a CommonJS module, you have to use require to import the graph module. That was 
+described as exporting a <b>buildGraph</b> function, which you can pick out of its interface object 
+with a destructuring const declaration.</p>
 
-<p>To export roadGraph, you add a property to the exports object. Because
-buildGraph takes a data structure that doesn’t precisely match roads, the split-
-ting of the road strings must happen in your module.</p>
+<p>To export <b>roadGraph</b>, you add a property to the exports object. Because <b>buildGraph</b> 
+takes a data structure that doesn’t precisely match roads, the splitting of the road strings must 
+happen in your module.</p>
 
 <pre>
 const {buildGraph} = require("./graph");
@@ -5328,29 +5323,24 @@ exports.roadGraph = buildGraph(roads.map(r =&gt; r.split("-")));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el29">el29. Asynchronous Programming: Tracking the scalpel</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>This can be done with a single loop that searches through the nests, moving
-forward to the next when it finds a value that doesn’t match the current nest’s
-name and returning the name when it finds a matching value. In the async
-function, a regular for or while loop can be used.</p>
+<p>This can be done with a single loop that searches through the nests, moving forward to the next 
+when it finds a value that doesn’t match the current nest’s name and returning the name when it 
+finds a matching value. In the <b>async</b> function, a regular for or while loop can be used.</p>
 
-<p>To do the same in a plain function, you will have to build your loop using
-a recursive function. The easiest way to do this is to have that function re-
-turn a promise by calling then on the promise that retrieves the storage value.
-Depending on whether that value matches the name of the current nest, the
-handler returns that value or a further promise created by calling the loop
-function again.</p>
+<p>To do the same in a plain function, you will have to build your loop using a recursive function. 
+The easiest way to do this is to have that function return a promise by calling then on the promise 
+that retrieves the storage value. Depending on whether that value matches the name of the current 
+nest, the handler returns that value or a further promise created by calling the loop function 
+again.</p>
 
-<p>Don’t forget to start the loop by calling the recursive function once from the
-main function.</p>
+<p>Don’t forget to start the loop by calling the recursive function once from the main function.</p>
 
-<p>In the async function, rejected promises are converted to exceptions by await. 
-When an async function throws an exception, its promise is rejected. So that
-works.</p>
+<p>In the async function, rejected promises are converted to exceptions by await. When an <b>async</b> 
+function throws an exception, its promise is rejected. So that works.</p>
 
-<p>If you implemented the non-async function as outlined earlier, the way then
-works also automatically causes a failure to end up in the returned promise.
-If a request fails, the handler passed to then isn’t called, and the promise it
-returns is rejected with the same reason.</p>
+<p>If you implemented the <b>non-async</b> function as outlined earlier, the way then works also 
+automatically causes a failure to end up in the returned promise. If a request fails, the handler 
+passed to then isn’t called, and the promise it returns is rejected with the same reason.</p>
 
 <pre>
 async function locateScalpel(nest) {
@@ -5376,21 +5366,20 @@ locateScalpel2(bigOak).then(console.log);  // → Butcher's Shop
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el30">el30. Asynchronous Programming: Building Promise.all</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The function passed to the Promise constructor will have to call then on each
-of the promises in the given array. When one of them succeeds, two things
-need to happen. The resulting value needs to be stored in the correct position
-of a result array, and we must check whether this was the last pending promise
-and finish our own promise if it was.</p>
+<p>The function passed to the Promise constructor will have to call then on each of the promises 
+in the given array. When one of them succeeds, two things need to happen. The resulting value needs 
+to be stored in the correct position of a result array, and we must check whether this was the last 
+pending promise and finish our own promise if it was.</p>
 
-<p>The latter can be done with a counter that is initialized to the length of
-the input array and from which we subtract 1 every time a promise succeeds.
-When it reaches 0, we are done. Make sure you take into account the situation
-where the input array is empty (and thus no promise will ever resolve).</p>
+<p>The latter can be done with a counter that is initialized to the length of the input array and 
+from which we subtract 1 every time a promise succeeds. When it reaches 0, we are done. Make sure 
+you take into account the situation where the input array is empty (and thus no promise will ever 
+resolve).</p>
 
-<p>Handling failure requires some thought but turns out to be extremely simple.
-Just pass the reject function of the wrapping promise to each of the promises
-in the array as a catch handler or as a second argument to then so that a failure
-in one of them triggers the rejection of the whole wrapper promise.</p>
+<p>Handling failure requires some thought but turns out to be extremely simple. Just pass the 
+<b>reject</b> function of the wrapping promise to each of the promises in the array as a catch 
+handler or as a second argument to then so that a failure in one of them triggers the rejection 
+of the whole wrapper promise.</p>
 
 <pre>
 function Promise_all(promises) {
@@ -5432,8 +5421,8 @@ Promise_all(&lbrack;soon(1), Promise.reject("X"), soon(3)&rbrack;).then(array =&
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The easiest way to do this is to represent Egg arrays with JavaScript arrays.</p>
 
-<p>The values added to the top scope must be functions. By using a rest argu-
-ment (with triple-dot notation), the definition of array can be very simple.</p>
+<p>The values added to the top scope must be functions. By using a rest argument (with triple-dot 
+notation), the definition of array can be very simple.</p>
 
 <pre>
 topScope.array = (...values) =&gt; values;
@@ -5454,13 +5443,13 @@ do(define(sum, fun(array,
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el32">el32. A Programming Language: Comments</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Make sure your solution handles multiple comments in a row, with potentially
-whitespace between or after them.</p>
+<p>Make sure your solution handles multiple comments in a row, with potentially whitespace between 
+or after them.</p>
 
-<p>A regular expression is probably the easiest way to solve this. Write some-
-thing that matches “whitespace or a comment, zero or more times”. Use the
-exec or match method and look at the length of the first element in the returned
-array (the whole match) to find out how many characters to slice off.</p>
+<p>A regular expression is probably the easiest way to solve this. Write something that matches 
+“whitespace or a comment, zero or more times”. Use the exec or match method and look at the length 
+of the first element in the returned array (the whole match) to find out how many characters to 
+slice off.</p>
 
 <pre>
 function skipSpace(string) {
@@ -5517,16 +5506,15 @@ run(`set(quux, true)`);  // → Some kind of ReferenceError
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el34">el34. The Document Object Model: Build a table</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>You can use document.createElement to create new element nodes, document.
-createTextNode to create text nodes, and the appendChild method to put nodes
-into other nodes.</p>
+<p>You can use <b>document.createElement</b> to create new element nodes, document. <b>createTextNode</b> 
+to create text nodes, and the <b>appendChild</b> method to put nodes into other nodes.</p>
 
-<p>You’ll want to loop over the key names once to fill in the top row and then
-again for each object in the array to construct the data rows. To get an array
-of key names from the first object, Object.keys will be useful.</p>
+<p>You’ll want to loop over the key names once to fill in the top row and then again for each object 
+in the array to construct the data rows. To get an array of key names from the first object, 
+<b>Object.keys</b> will be useful.</p>
 
-<p>To add the table to the correct parent node, you can use document.getElementById
-or document.querySelector to find the node with the proper id attribute.</p>
+<p>To add the table to the correct parent node, you can use <b>document.getElementById</b> or 
+<b>document.querySelector</b> to find the node with the proper id attribute.</p>
 
 <pre>
 &lt;!doctype html&gt;<br>
@@ -5574,19 +5562,18 @@ or document.querySelector to find the node with the proper id attribute.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el35">el35. The Document Object Model: Elements by tag name</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The solution is most easily expressed with a recursive function, similar to the
-talksAbout function defined earlier in this chapter.</p>
+<p>The solution is most easily expressed with a recursive function, similar to the <b>talksAbout</b> 
+function defined earlier in this chapter.</p>
 
-<p>You could call byTagname itself recursively, concatenating the resulting arrays
-to produce the output. Or you could create an inner function that calls itself
-recursively and that has access to an array binding defined in the outer function,
-to which it can add the matching elements it finds. Don’t forget to call the
-inner function once from the outer function to start the process.</p>
+<p>You could call <b>byTagname</b> itself recursively, concatenating the resulting arrays to produce 
+the output. Or you could create an inner function that calls itself recursively and that has access 
+to an array binding defined in the outer function, to which it can add the matching elements it finds. 
+Don’t forget to call the inner function once from the outer function to start the process.</p>
 
-<p>The recursive function must check the node type. Here we are interested only
-in node type 1 (Node.ELEMENT_NODE). For such nodes, we must loop over their
-children and, for each child, see whether the child matches the query while also
-doing a recursive call on it to inspect its own children.</p>
+<p>The recursive function must check the node type. Here we are interested only in node type 1 
+(Node.ELEMENT_NODE). For such nodes, we must loop over their children and, for each child, see 
+whether the child matches the query while also doing a recursive call on it to inspect its own 
+children.</p>
 
 <pre>
 &lt;!doctype html&gt;<br>
@@ -5935,11 +5922,13 @@ either that function value or a method that handles the unregistering directly.<
 <p>If you want to implement a type of motion that is stateful, such as bouncing, make sure you 
 store the necessary state in the actor object—include it as constructor argument and add it as 
 a property.</p>
+
 <p>Remember that update returns a new object, rather than changing the old one.</p>
+
 <p>When handling collision, find the player in state.actors and compare its position to the 
 monster’s position. To get the bottom of the player, you have to add its vertical size to its 
-vertical position. The creation of an updated state will resemble either Coin’s collide method 
-(removing the actor) or Lava’s (changing the status to "lost"), depending on the player 
+vertical position. The creation of an updated state will resemble either <b>Coin’s collide</b> method 
+(removing the actor) or <b>Lava’s (changing the status to "lost")</b>, depending on the player 
 position.</p>
 
 <pre>
@@ -6531,42 +6520,37 @@ boundaries.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el52">el52. A Pixel Art Editor: Proper lines</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The thing about the problem of drawing a pixelated line is that it is really four
-similar but slightly different problems. Drawing a horizontal line from the left
-to the right is easy—you loop over the x-coordinates and color a pixel at every
-step. If the line has a slight slope (less than 45 degrees or ¼π radians), you
-can interpolate the y-coordinate along the slope. You still need one pixel per
-x position, with the y position of those pixels determined by the slope.</p>
+<p>The thing about the problem of drawing a pixelated line is that it is really four similar but 
+slightly different problems. Drawing a horizontal line from the left to the right is easy—you loop 
+over the x-coordinates and color a pixel at every step. If the line has a slight slope (less than 
+45 degrees or ¼π radians), you can interpolate the y-coordinate along the slope. You still need one 
+pixel per x position, with the y position of those pixels determined by the slope.</p>
 
-<p>But as soon as your slope goes across 45 degrees, you need to switch the way
-you treat the coordinates. You now need one pixel per y position since the line
-goes up more than it goes left. And then, when you cross 135 degrees, you
-have to go back to looping over the x-coordinates, but from right to left.
-You don’t actually have to write four loops. Since drawing a line from A to
-B is the same as drawing a line from B to A, you can swap the start and end
-positions for lines going from right to left and treat them as going left to right.</p>
+<p>But as soon as your slope goes across 45 degrees, you need to switch the way you treat the 
+coordinates. You now need one pixel per y position since the line goes up more than it goes left. 
+And then, when you cross 135 degrees, you have to go back to looping over the x-coordinates, but 
+from right to left. You don’t actually have to write four loops. Since drawing a line from A to 
+B is the same as drawing a line from B to A, you can swap the start and end positions for lines 
+going from right to left and treat them as going left to right.</p>
 
-<p>So you need two different loops. The first thing your line drawing function
-should do is check whether the difference between the x-coordinates is larger
-than the difference between the y-coordinates. If it is, this is a horizontal-ish
-line, and if not, a vertical-ish one.</p>
+<p>So you need two different loops. The first thing your line drawing function should do is check 
+whether the difference between the x-coordinates is larger than the difference between the y-coordinates. 
+If it is, this is a horizontal-ish line, and if not, a vertical-ish one.</p>
 
-<p>Make sure you compare the absolute values of the x and y difference, which
-you can get with Math.abs.</p>
+<p>Make sure you compare the absolute values of the x and y difference, which you can get with 
+<b>Math.abs</b>.</p>
 
-<p>Once you know along which axis you will be looping, you can check whether
-the start point has a higher coordinate along that axis than the endpoint and
-swap them if necessary. A succinct way to swap the values of two bindings in
-JavaScript uses destructuring assignment like this:</p>
+<p>Once you know along which axis you will be looping, you can check whether the start point has a 
+higher coordinate along that axis than the endpoint and swap them if necessary. A succinct way to 
+swap the values of two bindings in JavaScript uses destructuring assignment like this:</p>
 
 <pre>&lbrack;start, end&rbrack; = &lbrack;end, start&rbrack;;</pre>
 
-<p>Then you can compute the slope of the line, which determines the amount
-the coordinate on the other axis changes for each step you take along your main
-axis. With that, you can run a loop along the main axis while also tracking
-the corresponding position on the other axis, and you can draw pixels on every
-iteration. Make sure you round the non-main axis coordinates since they are
-likely to be fractional and the draw method doesn’t respond well to fractional
+<p>Then you can compute the slope of the line, which determines the amount the coordinate on the 
+other axis changes for each step you take along your main axis. With that, you can run a loop 
+along the main axis while also tracking the corresponding position on the other axis, and you 
+can draw pixels on every iteration. Make sure you round the non-main axis coordinates since they 
+are likely to be fractional and the <b>draw</b> method doesn’t respond well to fractional 
 coordinates.</p>
 
 <pre>
@@ -6641,7 +6625,7 @@ if you use fs.promises again to get promise-returning functions and write an
 async function, the code looks similar.</p>
 
 <p>To figure out whether something is a directory, you can again use stat (or
-statSync) and the stats object’s isDirectory method.</p>
+statSync) and the stats object’s <b>isDirectory</b> method.</p>
 
 <p>Exploring a directory is a branching process. You can do it either by using
 a recursive function or by keeping an array of work (files that still need to be
@@ -6673,17 +6657,17 @@ function search(file) {
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el54">el54. Node.js: Directory creation</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Though the DELETE method in our file server is able to delete directories (using
+<p>Though the <b>DELETE</b> method in our file server is able to delete directories (using
 rmdir), the server currently does not provide any way to create a directory.</p>
-<p>Add support for the MKCOL method (“make column”), which should create a
-directory by calling mkdir from the fs module. MKCOL is not a widely used HTTP
+<p>Add support for the <b>MKCOL</b> method (“make column”), which should create a
+directory by calling <b>mkdir</b> from the fs module. <b>MKCOL</b> is not a widely used HTTP
 method, but it does exist for this same purpose in the WebDAV standard, which
 specifies a set of conventions on top of HTTP that make it suitable for creating
 documents.</p>
 
-<p>You can use the function that implements the DELETE method as a blueprint
-for the MKCOL method. When no file is found, try to create a directory with
-mkdir. When a directory exists at that path, you can return a 204 response
+<p>You can use the function that implements the <b>DELETE</b> method as a blueprint
+for the <b>MKCOL</b> method. When no file is found, try to create a directory with
+<b>mkdir</b>. When a directory exists at that path, you can return a 204 response
 so that directory creation requests are idempotent. If a nondirectory file exists
 here, return an error code. Code 400 (“bad request”) would be appropriate.</p>
 
@@ -6961,18 +6945,15 @@ resolve(context, request) {
 };
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The module exports the Router class. A router object allows new handlers
-to be registered with the add method and can resolve requests with its resolve
-method.</p>
+<p>The module exports the Router class. A router object allows new handlers to be registered with 
+the <b>add</b> method and can resolve requests with its resolve method.</p>
 
-<p>The latter will return a response when a handler was found, and null other-
-wise. It tries the routes one at a time (in the order in which they were defined)
-until a matching one is found.</p>
+<p>The latter will return a response when a handler was found, and null otherwise. It tries the 
+routes one at a time (in the order in which they were defined) until a matching one is found.</p>
 
-<p>The handler functions are called with the context value (which will be the
-server instance in our case), match strings for any groups they defined in their
-regular expression, and the request object. The strings have to be URL-decoded
-since the raw URL may contain %20-style codes.</p>
+<p>The handler functions are called with the context value (which will be the server instance in 
+our case), match strings for any groups they defined in their regular expression, and the request 
+object. The strings have to be URL-decoded since the raw URL may contain %20-style codes.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h3>Serving files</h3>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -22398,7 +22379,7 @@ console.log(powerSet(&lbrack;1, 2, 3&rbrack;));
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js-129">js-129. Check if a Number is a Disarium Number</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The <b>isDisariumNumbe</b>r function determines whether a given number is a <b>disarium number</b>.</p>
+<p>The <b>isDisariumNumber</b> function determines whether a given number is a <b>disarium number</b>.</p>
 
 <pre>
 const isDisariumNumber = (num) =&gt; {
@@ -22983,7 +22964,7 @@ console.log(isValidSSN("123-45-678"));  // Output: false
 <h2 id="js-166">js-166. Generate an Array of Random Numbers within a Range</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The <b>randomArrayInRange</b> function generates an array of random numbers within a 
-specified range and of a specified length. It uses the Array.from method with a mapping 
+specified range and of a specified length. It uses the Array.from method with a <b>mapping</b> 
 function to create the desired array.</p>
 
 <pre>
@@ -24595,4 +24576,5 @@ Every solution is a step toward mastery. Practice, practice, then practice.</p>
 
 </body>
 </html>
+
 
