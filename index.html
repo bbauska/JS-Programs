@@ -99,13 +99,16 @@
 the most important thing writing code, starting from the first program to the last will 
 help you quickly increase your skills as a programmer and will give you the knowledge
 necessary to understand:</p>
+
 <blockquote>
 The flow of a program, the syntax, the direction, how it works, what Add keywords to your
 code, make great decisions, and much more.
 </blockquote>
+
 <p>This is a very essential guide with which you can learn to create more than... Once 
 you have solved a certain number of programs, you will be able to develop yourself and 
 turn your own ideas into a reality without even having to think about it.</p>
+
 <p>I've always considered JavaScript a 4th generation language. Perhaps even 5th.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~ 50 javascript concepts every developer should know ~~~~~~~~~~~~~~~~~~~~~-->
@@ -857,8 +860,8 @@ concepts such as:</p>
   <li>Partial Application, Currying, Composition, and Pipe</li>
 </ul>
 
-<p>Learning these concepts will help you level up quickly as a JavaScript developer. 
-They are concepts that you should know if you want to be at a higher level.</p>
+<p>Learning these concepts will help you level up quickly as a JavaScript developer. They are concepts 
+that you should know if you want to be at a higher level.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk01">sk01. Call Stack</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -923,9 +926,9 @@ blocks for more complex data structures.</p>
 <p>Values can be classified into two categories: <b>value types</b> and <b>reference types</b>. 
 This distinction is crucial to understand how data is handled and stored in memory.</p>
 
-<p><b>Value Types (Primitives):</b> Value types represent simple data and are stored 
-directly in the variable. When you assign a primitive value to a variable, the actual 
-value is copied into the variable.</p>
+<p><b>Value Types (Primitives):</b> Value types represent simple data and are stored directly in 
+the variable. When you assign a primitive value to a variable, the actual value is copied into the 
+variable.</p>
 
 <h4>Example:</h4>
 
@@ -945,9 +948,9 @@ let text = "Hello";  // Value type (String)
 let isTrue = true;  // Value type (Boolean)
 </pre>
 
-<p><b>Reference Types (Objects):</b> Reference types represent more complex objects and 
-are stored by reference, meaning the variable contains a reference to the memory 
-location where the object is stored.</p>
+<p><b>Reference Types (Objects):</b> Reference types represent more complex objects and are stored 
+by reference, meaning the variable contains a reference to the memory location where the object is 
+stored.</p>
 
 <ol type="1">
   <li>Literal Objects</li>
@@ -971,8 +974,8 @@ them also modifies the original object in memory.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk04">sk04. Implicit, Explicit, Nominal, Structural, and Duck Typing</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The concepts of <b>typing</b> refer to how data types are managed and assigned in a language. Here is 
-a description of the different types of typing:</p>
+<p>The concepts of <b>typing</b> refer to how data types are managed and assigned in a language. 
+Here is a description of the different types of typing:</p>
 
 <p><b>Implicit Typing:</b> In Languages with implicit typing, a variable&apos;s data type is 
 automatically determined based on the assigned value. No explicit type declaration is 
@@ -2367,10 +2370,10 @@ on the problem and available resources, so choosing the right approach for each 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk30">sk30. Inheritance, Polymorphism, and Code Reusability</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Inheritance:</b> Inheritance is a fundamental concept in object-oriented programming 
-(OOP) that allows the creation of new classes based on existing classes. A class that inherits 
-from another (called a base class or superclass) acquires its attributes and methods, enabling 
-code reuse and functionality extension.</p>
+<p><b>Inheritance:</b> Inheritance is a fundamental concept in object-oriented programming (OOP) 
+that allows the creation of new classes based on existing classes. A class that inherits from 
+another (called a base class or superclass) acquires its attributes and methods, enabling code 
+reuse and functionality extension.</p>
 
 <pre>
 class Animal {
@@ -2505,32 +2508,31 @@ well-known design patterns:</p>
       different data sources.</li>
     </ul>
   </li>
-  <li><b>Concurrency Patterns:</b> These patterns focus on handling concurrency and 
-    parallel execution in software.
+  <li><b>Concurrency Patterns:</b> These patterns focus on handling concurrency and parallel 
+    execution in software.
     <ul>
-    <li><b>Mutex:</b> Provides mutual exclusion to protect shared data in concurrent 
-      environments.</li>
-    <li><b>Read-Write Lock:</b> Allows multiple threads to access data for reading, but 
-      only one for writing.</li>
-    <li><b>Producer-Consumer:</b> Coordinates between producer and consumer threads or 
-      processes to avoid race conditions.</li>
+    <li><b>Mutex:</b> Provides mutual exclusion to protect shared data in concurrent environments.</li>
+    <li><b>Read-Write Lock:</b> Allows multiple threads to access data for reading, but only one 
+      for writing.</li>
+    <li><b>Producer-Consumer:</b> Coordinates between producer and consumer threads or processes to 
+      avoid race conditions.</li>
     </ul>
   </li>
 </ol>
 
-<p>Each of these patterns has its own purpose and context of use. By understanding and 
-applying the appropriate design patterns, you can enhance the quality, maintainability, 
-and scalability of your applications.</p>
+<p>Each of these patterns has its own purpose and context of use. By understanding and applying the 
+appropriate design patterns, you can enhance the quality, maintainability, and scalability of your 
+applications.</p>
+
 <p>However, it&apos;s important to note that not all patterns are applicable in every situation, 
-and evaluating the suitability of a pattern for the specific problem you're facing is 
-crucial.</p>
+and evaluating the suitability of a pattern for the specific problem you're facing is crucial.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk32">sk32. Partial Application, Currying, Composition, and Pipe</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p><b>Partial Application:</b> Partial application is a technique in functional 
-programming where you provide some, but not all, arguments to a function. The resulting 
-function expects the remaining arguments to complete the call This is useful for creating 
-more specific functions from more general ones.</p>
+<p><b>Partial Application:</b> Partial application is a technique in functional programming where 
+you provide some, but not all, arguments to a function. The resulting function expects the remaining 
+arguments to complete the call This is useful for creating more specific functions from more general 
+ones.</p>
 
 <pre>
 function sum(a, b) {
@@ -2541,12 +2543,12 @@ const sum5 = sum.bind(null, 5);  // Partial application of 'a'
 console.log(sum5(3));  // Prints: 8
 </pre>
 
-<p>In this example, sum5 is a function that already has the first argument preset to 5. 
-When calling sum5(3), you get the result of adding 5 and 3.</p>
+<p>In this example, sum5 is a function that already has the first argument preset to 5. When calling 
+sum5(3), you get the result of adding 5 and 3.</p>
 
-<p><b>Currying:</b> Currying is a related technique that converts a function with 
-multiple arguments into a sequence of functions that take a single argument. Each can 
-return a new function that expects the next argument.</p>
+<p><b>Currying:</b> Currying is a related technique that converts a function with multiple arguments 
+into a sequence of functions that take a single argument. Each can return a new function that expects 
+the next argument.</p>
 
 <pre>
 function sum(a) {
@@ -2559,13 +2561,12 @@ const sum5 = sum(5);
 console.log(sum5(3));  // Prints: 8
 </pre>
 
-<p>In this case, sum is transformed into a curried function. The first call sum(5) 
-returns a function that expects the next argument. Then, sum5(3) produces the desired 
-result.</p>
+<p>In this case, sum is transformed into a curried function. The first call sum(5) returns a function 
+that expects the next argument. Then, sum5(3) produces the desired result.</p>
 
-<p><b>Composition:</b> Composition is a technique for combining two or more functions to 
-form a new function. You can think of it as the sequence of function execution, where the 
-output of one function becomes the input to the next.</p>
+<p><b>Composition:</b> Composition is a technique for combining two or more functions to form a new 
+function. You can think of it as the sequence of function execution, where the output of one function 
+becomes the input to the next.</p>
 
 <pre>
 function double(x) {
@@ -2580,12 +2581,12 @@ const doubleIncrement = x =&gt; increment(double(x));
 console.log(doubleIncrement(3));  // Prints: 7
 </pre>
 
-<p>In this example, doubleIncrement is a function that first doubles the value and then 
+<p>In this example, <b>doubleIncrement</b> is a function that first doubles the value and then 
 adds 1.</p>
 
-<p><b>Pipe:</b> Pipe is a technique that combines functions in a sequence, passing the 
-output of one function as the input to the next. This allows you to create chains of 
-transformations in a more readable syntax.</p>
+<p><b>Pipe:</b> Pipe is a technique that combines functions in a sequence, passing the output of 
+one function as the input to the next. This allows you to create chains of transformations in a 
+more readable syntax.</p>
 
 <pre>
 const pipe = (...funcs) =&gt; input =&gt; 
@@ -2601,19 +2602,18 @@ const result = pipe(
 console.log(result);  // Prints: 14 (3 * 2 + 1) * 2
 </pre>
 
-<p>In this example, the pipe function takes a series of functions and returns a new 
-function that executes each one in sequence.</p>
+<p>In this example, the <b>pipe</b> function takes a series of functions and returns a new function 
+that executes each one in sequence.</p>
 
-<p>ALL of these techniques (partial application, currying, composition, and pipe) are 
-fundamental in functional programming and enable building more modular, readable, and 
-maintainable programs by breaking operations into smaller, reusable units.</p>
+<p>ALL of these techniques (partial application, currying, composition, and pipe) are fundamental 
+in functional programming and enable building more modular, readable, and maintainable programs by 
+breaking operations into smaller, reusable units.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk33">sk33. Clean Code</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Clean code is a fundamental concept in programming that refers to writing code that is 
-easy to understand, maintain, and collaborate on. Clean code is readable, clear, 
-well-structured, and follows good programming practices. Below are some principles and 
-practices to achieve clean code:</p>
+<p>Clean code is a fundamental concept in programming that refers to writing code that is easy to 
+understand, maintain, and collaborate on. Clean code is readable, clear, well-structured, and 
+follows good programming practices. Below are some principles and practices to achieve clean code:</p>
 
 <ol type="1">
   <li><b>Meaningful Names:</b> Use descriptive names for variables, functions, and classes. 
@@ -2644,16 +2644,16 @@ practices to achieve clean code:</p>
     its usaae and ouroose. This is esoeciallu useful for Libraries or collaborative projects.</li>
 </ol>
 
-<p>The goal of clean code is not only to make it work but also to make it easily 
-understandable for other developers and yourself in the future. By following these 
-practices, you can improve the quality and maintainability of your code, ultimately 
-making problem-solving and project evolution more straightforward.</p>
+<p>The goal of clean code is not only to make it work but also to make it easily understandable for 
+other developers and yourself in the future. By following these practices, you can improve the 
+quality and maintainability of your code, ultimately making problem-solving and project evolution 
+more straightforward.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk34">sk34. Error Handling (try...catch)</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>Error handling is an essential part of programming to manage unexpected or exceptional 
-situations that may occur during program execution. In JavaScript, you can use the 
-try...catch statements to capture and handle errors in a controlled manner.</p>
+situations that may occur during program execution. In JavaScript, you can use the <b>try...catch</b> 
+statements to capture and handle errors in a controlled manner.</p>
 
 <pre>
 try {
@@ -2667,8 +2667,7 @@ try {
 <ul>
   <li>The try block contains the code where an error might occur.</li>
   <li>If an error occurs within the try block, the control flow moves to the catch block.</li>
-  <li>The error parameter in the catch block is a variable that will hold the thrown 
-    error object.</li>
+  <li>The error parameter in the catch block is a variable that will hold the thrown error object.</li>
 </ul>
 
 <pre>
@@ -2680,11 +2679,11 @@ try {
 }
 </pre>
 
-<p>In this example, if the divide function throws an error while attempting to divide by zero, the 
-catch block will capture the error and display an error message.</p>
+<p>In this example, if the <b>divide</b> function throws an error while attempting to divide by zero, 
+the catch block will capture the error and display an error message.</p>
 
-<p>It&apos;s important to note that you shouldn't use try...catch to control normal program flows 
-but to handle exceptional situations.</p>
+<p>It&apos;s important to note that you shouldn't use <b>try...catch</b> to control normal program 
+flows but to handle exceptional situations.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk35">sk35. ES6 Modules</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -2759,9 +2758,9 @@ in certain cases.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk36">sk36. Ternary Operator</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The ternary operator, also known as the conditional operator, is a construct that allows 
-for a conditional evaluation in a single Line of code. It is a concise way to express an 
-<b>if...else</b> statement in a single Line. The basic syntax of the ternary operator is as follows:</p>
+<p>The ternary operator, also known as the conditional operator, is a construct that allows for a 
+conditional evaluation in a single Line of code. It is a concise way to express an <b>if...else</b> 
+statement in a single Line. The basic syntax of the ternary operator is as follows:</p>
 
 <pre>condition ? true.expression : false.expression;</pre>
 
@@ -2800,8 +2799,7 @@ console.log(finalPrice);  // Prints: 80
 <h2 id="sk37">sk37. Spread and Rest Operators</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <p>The spread and rest operators are powerful features in JavaScript introduced in ES6 
-(ECMAScript 2015) that allow for more flexible and concise manipulation of arrays and 
-objects.</p>
+(ECMAScript 2015) that allow for more flexible and concise manipulation of arrays and objects.</p>
 
 <p><b>Spread Operator (...):</b> The spread operator is used to spread or unpack elements 
 from arrays and objects. It is also used to create shallow copies of arrays and objects, 
@@ -2847,7 +2845,7 @@ console.log(first);  // Prints: 1
 console.log(rest);  // Prints: &lbrack;2, 3, 4&rbrack;
 </pre>
 
-<p>In the example of the sum function, the rest operator gathers all arguments into an array named 
+<p>In the example of the <b>sum</b> function, the rest operator gathers all arguments into an array named 
 numbers. In destructuring, the rest operator gathers the remaining elements into a new array named 
 rest.</p>
 
@@ -2920,12 +2918,11 @@ codewhen accessing values from arrays and objects.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk39">sk39. Template Literals</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Template Literals are a feature introduced in ECMAScript 6 (ES6) that allows for 
-creating strings in a more readable and flexible way in JavaScript Template literals are 
-defined using backticks ('') instead of traditional single or double quotes ('1 or \"'). 
-This enables the interpolation of variables and expressions directly into the string, as 
-well as the inclusion of Line breaks and special characters without the need for manual 
-concatenation.</p>
+<p>Template Literals are a feature introduced in ECMAScript 6 (ES6) that allows for creating 
+strings in a more readable and flexible way in JavaScript Template literals are defined using 
+backticks ('') instead of traditional single or double quotes ('1 or \"'). This enables the 
+interpolation of variables and expressions directly into the string, as well as the inclusion 
+of Line breaks and special characters without the need for manual concatenation.</p>
 
 <h4>Here&apos;s a basic example of how template literals work:</h4>
 
@@ -2939,9 +2936,9 @@ const message = `Hello, my name is ${name} and I am ${age} years old.`
 console.log(message);  // Prints "Hello, my name is Juan and I am 30 years old."
 </pre>
 
-<p>The ${} are placeholders that indicate variables or expressions to be
-interpolated within them. Template literals also allow for including line
-breaks and special characters without the need for escaping:</p>
+<p>The ${} are placeholders that indicate variables or expressions to be interpolated within them. 
+Template literals also allow for including line breaks and special characters without the need for 
+escaping:</p>
 
 <h4>Multiline and Special Characters:</h4>
 
@@ -2965,12 +2962,12 @@ readable and avoids manual string concatenation, which can be error-prone and co
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk40">sk40. Arrow Functions</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Arrow functions ore a feature introduced in ECMAScript 6 (ES6) that provide a more concise 
+<p><b>Arrow</b> functions ore a feature introduced in ECMAScript 6 (ES6) that provide a more concise 
 and clear syntax for defining functions in JavaScript Arrow functions are especially useful 
 when working with anonymous functions or functions that do not require a special this context. 
 Here&apos;s an overview of how arrow functions are used:</p>
 
-<p><b>Basic Syntax:</b> An arrow function is defined using the syntax 0 =&gt; where the parentheses 
+<p><b>Basic Syntax:</b> An <b>arrow</b> function is defined using the syntax 0 =&gt; where the parentheses 
 contain the function parameters, and the arrow (=&gt;) separates the parameters from the function body.</p>
 
 <pre>
