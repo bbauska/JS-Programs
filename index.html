@@ -2079,51 +2079,47 @@ function* counter() {
     yield num++;
   }
 }
-</pre>
-
 const generator = counter(); 
 console.log(generator.next().value);  // Prints: 0 
 console.log(generator.next().value);  // Prints: 1
+</pre>
 
-<p>Generators are useful when you need to generate a sequence of values
-on-demand, rather than generating all values at once. This can be
-beneficial for handling Large data streams or iterating over complex data
-structures.</p>
+<p>Generators are useful when you need to generate a sequence of values on-demand, rather than 
+generating all values at once. This can be beneficial for handling Large data streams or iterating 
+over complex data structures.</p>
 
-<p>Both collections and generators are powerful tools in JavaScript that
-allow you to handle and manipulate data more efficiently and flexibly.</p> 
+<p>Both collections and generators are powerful tools in JavaScript that allow you to handle and 
+manipulate data more efficiently and flexibly.</p> 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk25">sk25. Promises</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Promises ore a design pattern and feature in JavaScript that allows for a
-more elegant and efficient handling of asynchronous operations, such as
-network requests, fie read/write, and other tasks that may take time and
-block execution.</p>
+<p>Promises ore a design pattern and feature in JavaScript that allows for a more elegant and 
+efficient handling of asynchronous operations, such as network requests, fie read/write, and other 
+tasks that may take time and block execution.</p>
 
-<p>Promises were introduced to address the issue of "callback hell" (excessive
-callback nesting) and to make asynchronous code more readable and
-manageable.</p>
+<p>Promises were introduced to address the issue of "callback hell" (excessive callback nesting) 
+and to make asynchronous code more readable and manageable.</p>
 
-<p><b>Creating a Promise:</b> You can create a promise using its constructor. The
-constructor takes a function with two parameters, resolve and reject,
-which are functions to fulfill or reject the promise.</p>
+<p><b>Creating a Promise:</b> You can create a promise using its constructor. The constructor takes 
+a function with two parameters, resolve and reject, which are functions to fulfill or reject the 
+promise.</p>
 
 <pre>
-const promise = new Promise((resolve, reject) =&gt; {
+const promise = new Promise((resolve, reject) =&gt; { 
   // Perform an asynchronous operation here
-  // If the operation is successful, call resolve(value)
-  // If the operation fails, call reject(error)
+  // If the operation is successful, 
+  call resolve(value)
+  // If the operation fails, 
+  call reject(error)
 });
 </pre>
 
-<p><b>Handling Promises:</b> You can chain methods to a promise to handle the
-result These methods include then to handle resolution and catch to
-handle rejection.</p>
+<p><b>Handling Promises:</b> You can chain methods to a promise to handle the result These methods 
+include then to handle resolution and catch to handle rejection.</p>
 
 <pre>
-nnomiqp.thpnfvalue =&gt; 4
-// Do something with the resolved value }).catch(error =&gt; {
-// Handle the error if the promise is rejected
+nnomiqp.thpnfvalue =&gt; 4  // Do something with the resolved value 
+  }).catch(error =&gt; {  // Handle the error if the promise is rejected
 });
 </pre>
 
@@ -2147,12 +2143,15 @@ const promisel = fetchData1();
 const promise2 = fetchData2();
 
 Promise.all(&lbrack;promisel, promise2&rbrack;)
-.then(results =&gt; {
-  const result1 = results&lbrack;0&rbrack;;
-  const result2 = results&lbrack;l&rbrack;;
-  // Do something with the results
-})
-.catch(error =&gt; console.error(error));
+  .then(results =&gt; {
+    const result1 = results&lbrack;0&rbrack;;
+    const result2 = results&lbrack;l&rbrack;;
+    // Do something with the results
+	console.log(result1, result2);
+  })
+  .catch(error) =&gt; {
+    console.error(error));  // Runs immediately if EITHER promise fails
+  });
 </pre>
 
 <p>Promises are a powerful and flexible way to handle asynchronous operations in JavaScript. 
@@ -2171,15 +2170,15 @@ promise. You can use the await keyword within an async function to wait for the 
 a promise without blocking the main thread&apos;s execution.</p>
 
 <pre>
-async function fetchDataQ 1
+async function fetchData() { 
 
-const response = await fetch('https://api.example.com/data'); 
-const data = await response.jsonQ;
-return data;
+  const response = await fetch('https://api.example.com/data'); 
+  const data = await response.json();
+  return data;
 
 fetchData()
-.then(data =&gt; console.log(data))
-.catch(error =&gt; console.error(error));
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error(error));
 </pre>
 
 <p>In this example, fetchData is an asynchronous function that waits for the response of an API 
@@ -2221,27 +2220,30 @@ async/await.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk27">sk27. Data Structures</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Data structures are organized and efficient ways to store and manage
-data in a program. These structures allow operations such as insertion,
-search, modification, and deletion of data to be performed efficiently. In
-JavaScript, there are several data structures that can be used for different
-purposes.</p>
+<p>Data structures are organized and efficient ways to store and manage data in a program. These 
+structures allow operations such as insertion, search, modification, and deletion of data to be 
+performed efficiently. In JavaScript, there are several data structures that can be used for 
+different purposes.</p>
 
-<p><b>Arrays:</b> Arrays are ordered collections of elements. Each element in an
-array has a numeric index indicating its position. Arrays are used to store
-Lists of elements and are suitable for accessing elements by their index.</p>
+<p><b>Arrays:</b> Arrays are ordered collections of elements. Each element in an array has a numeric 
+index indicating its position. Arrays are used to store Lists of elements and are suitable for accessing 
+elements by their index.</p>
 
 <pre>const fruits = &lbrack;'apple', 'orange', 'banana'&rbrack;;</pre>
 
-<p><b>Objects:</b> Objects are collections of key-value pairs. Keys are strings, and
-values can be of any type. Objects are useful for representing entities with properties and methods.</p>
+<p><b>Objects:</b> Objects are collections of key-value pairs. Keys are strings, and values can be 
+of any type. Objects are useful for representing entities with properties and methods.</p>
 
 <pre>
 const person = {
-name: 'John',
-age: 30,
-greet: functionO {
-console.logCHello, my name is Sfthis.name}');
+  name: 'John',
+  age: 30,
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+
+person.greet();  // Output: Hello, my name is John
 </pre>
 
 <p><b>Maps:</b> Maps are collections of key-value pairs where keys can be of any
@@ -20402,7 +20404,7 @@ The program iterates through the array from right to left and identifies the rig
 round number, if any.</p>
 
 <pre>
-function rightmostRoundNumberPosition(arr) {
+function rKe9UDk2eYoMm9CAJhsv2CBGW7CUFSPNhu(arr) {
   for (let i = arr.length -1; i > = 0; i--) {
     if (arr&lbrack;i&rbrack; % 10 ===0){
       console.log(`Rightmost Round Number: ${arr&lbrack;i&rbrack;}, Position: ${i + 1}`);
@@ -20413,7 +20415,7 @@ function rightmostRoundNumberPosition(arr) {
 }
 
 // Example: Find the position of the rightmost round number
-rightmostRoundNumberPosition(&lbrack;123,450,678,900&rbrack;);
+rKe9UDk2eYoMm9CAJhsv2CBGW7CUFSPNhu(&lbrack;123,450,678,900&rbrack;);
 </pre>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="js212">js212. Reverse Bits of 16-Bit Unsigned Short Integer</h2>
