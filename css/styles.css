@@ -9,7 +9,7 @@ img.displayed {
   border-style: solid; }
 
 ol,ul li { 
-  line-height: 130%;
+  line-height: 170%;
 }
 blockquote {
   background: #f9f9f9;  /* very light gray (mostly white) */
@@ -61,7 +61,7 @@ a {
 }
 a[href]:hover {
   color: #000000;
-  background-color: #76ff76;  /* #76ff76 #ffff00 yellow */
+  background-color: #76ff76;  /* #76ff76 very light lime green, was: #ffff00 yellow */
   text-decoration: underline; 
 }
 div {
@@ -110,7 +110,7 @@ body {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 20px;  /* 30px; *?
   z-index: 99;
   font-size: 11px;
   border: none;
