@@ -3352,19 +3352,17 @@ its value without a sign.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk45">sk45. JSON and Object Serialization/Deserialization</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>JSON (JavaScript Object Notation) is a Lightweight and widely used <b>data
-interchange format</b> in programming. It allows for the representation of
-data structures in a readable and organized way and is common in
-communication between client and server applications. Serialization and
-deserialization of objects in JSON are essential processes for converting
-objects into a format that can be transmitted and then recovered in their
-originalform.</p>
+<p>JSON (JavaScript Object Notation) is a Lightweight and widely used <b>data interchange format</b> 
+in programming. It allows for the representation of data structures in a readable and organized way 
+and is common in communication between client and server applications. Serialization and deserialization 
+of objects in JSON are essential processes for converting objects into a format that can be transmitted 
+and then recovered in their originalform.</p>
 
-<p><b>Serialization:</b> Serialization refers to the <b>conversion of a JavaScript object
-into a JSON string</b>. This is useful for sending data over a network or saving
-it in a file. The JSON.stringify() function is used for serialization.</p>
+<p><b>Serialization:</b> Serialization refers to the <b>conversion of a JavaScript object into a JSON 
+string</b>. This is useful for sending data over a network or saving it in a file. The JSON.stringify() 
+function is used for serialization.</p>
 
-<pre> 
+<pre>
 const person = {
   name: 'Juan',
   age: 30,
@@ -3410,10 +3408,9 @@ const bookParsed = JSON.parse(bookJSON);
 console.log(bookParsed);
 </pre>
 
-<p>In summary, JSON is a key format in web data communication.
-Serialization and deserialization allow for the conversion of JavaScript
-objects into JSON strings and vice versa, facilitating the transfer of data
-between different systems and the persistence of information.</p>
+<p>In summary, JSON is a key format in web data communication. Serialization and deserialization 
+allow for the conversion of JavaScript objects into JSON strings and vice versa, facilitating the 
+transfer of data between different systems and the persistence of information.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk46">sk46. Fetch API and AJAX</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -3440,16 +3437,15 @@ formats, such as JSON, text, blobs, and more.</p>
 
 <pre>
 fetch('https://api.example.com/data')
-.then(response =&gt; response.json())
-.then(data =&gt; console.log(data))
-.catch(error =&gt; console.error('Error:', error));
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error('Error:', error));
 </pre>
 
-<p><b>AJAX: AJAX (Asynchronous JavaScript and XML)</b> is an older approach to making 
-asynchronous requests to the server using the <b>XMLHttpRequest object</b>. Although the name 
-suggests it is related to XML, it can actually be used for any type of response, such as 
-JSON or plain text AJAX was very popular before the arrival of the Fetch API and is still 
-used in many projects.</p>
+<p><b>AJAX: AJAX (Asynchronous JavaScript and XML)</b> is an older approach to making asynchronous 
+requests to the server using the <b>XMLHttpRequest object</b>. Although the name suggests it is 
+related to XML, it can actually be used for any type of response, such as JSON or plain text AJAX 
+was very popular before the arrival of the Fetch API and is still used in many projects.</p>
 
 <h4>Features of AJAX:</h4>
 
@@ -3474,15 +3470,13 @@ xhr.send();
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk47">sk47. Localstorage and Sessionstorage</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Both LocalStorage and SessionStorage are mechanisms for Local storage
-in the browser that allow web applications to save data in the browser for
-later retrieval. Although they have similarities, they differ in terms of data
-duration and scope. Here is a description of each:</p>
+<p>Both LocalStorage and SessionStorage are mechanisms for Local storage in the browser that allow 
+web applications to save data in the browser for later retrieval. Although they have similarities, 
+they differ in terms of data duration and scope. Here is a description of each:</p>
 
-<p><b>LocalStorage:</b> LocaLStorage is an object that <b>provides a way to store key­
-value pairs</b> persistently in the browser. Data stored in LocalStorage
-<b>persists even after closing the browser</b> and reopening it. This data is
-available to all open tabs and windows of the same domain.</p>
+<p><b>LocalStorage:</b> LocaLStorage is an object that <b>provides a way to store key­ value pairs</b> 
+persistently in the browser. Data stored in LocalStorage <b>persists even after closing the browser</b> 
+and reopening it. This data is available to all open tabs and windows of the same domain.</p>
 
 <h4>Features of Localstorage:</h4>
 
@@ -3506,10 +3500,9 @@ console.log(name);  // Prints "John"
 localStorage.removeItem('name');
 </pre>
 
-<p><b>SessionStorage:</b> SessionStorage is similar to LocalStorage, but the data
-stored in SessionStorage is <b>only available during the current browser
-session</b>. If the browser or tab is closed, the data stored in SessionStorage
-will be automatically cleared.</p>
+<p><b>SessionStorage:</b> SessionStorage is similar to LocalStorage, but the data stored in 
+SessionStorage is <b>only available during the current browser session</b>. If the browser or 
+tab is closed, the data stored in SessionStorage will be automatically cleared.</p>
 
 <h4>Features of SessionStorage:</h4>
 
@@ -3533,10 +3526,9 @@ console.log(language);  // Prints "Spanish"
 sessionStorage.removeItem('language');
 </pre>
 
-<p>In summary, both LocalStorage and SessionStorage are useful ways to
-store data Locally in the browser. The choice between them will depend on
-whether you want the data to persist beyond the current browser session
-(LocalStorage) or if you only need it to be available during the current
+<p>In summary, both LocalStorage and SessionStorage are useful ways to store data Locally in the 
+browser. The choice between them will depend on whether you want the data to persist beyond the 
+current browser session (LocalStorage) or if you only need it to be available during the current 
 session (SessionStorage).</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk48">sk48. WebSockets and Socket.IO</h2>
@@ -3559,12 +3551,12 @@ exchange without the need for constant polling or refreshing, making them perfec
 <h4>Features of WebSockets:</h4>
 
 <ul>
-  <li><b>Bi-directional communication:</b> Both the client and server can send and 
-    receive data at any time.</li>
+  <li><b>Bi-directional communication:</b> Both the client and server can send and receive data at 
+    any time.</li>
   <li><b>Persistence:</b> The connection remains open, allowing continuous communication.</li>
   <li><b>Low latency:</b> Minimizes delay in data transmission.</li>
-  <li><b>Manual implementation:</b> Requires manual configuration and handling on both 
-    ends (client and server).</li>
+  <li><b>Manual implementation:</b> Requires manual configuration and handling on both ends (client 
+    and server).</li>
 </ul>
 
 <h4>Example of WebSockets:</h4>
@@ -3595,10 +3587,10 @@ wss.on('connection', ws -> {
 });
 </pre>
 
-<p><b>Socket.IO:</b> SocketIO is a Library built on top of WebSockets but adds layers of 
-abstraction and fallback handling to ensure real-time communication works even in environments 
-where WebSockets are not supported. SocketIO also includes features such as chat rooms, 
-broadcasting, and automatic reconnection.</p>
+<p><b>Socket.IO:</b> SocketIO is a Library built on top of WebSockets but adds layers of abstraction 
+and fallback handling to ensure real-time communication works even in environments where WebSockets 
+are not supported. SocketIO also includes features such as chat rooms, broadcasting, and automatic 
+reconnection.</p>
 
 <h4>Features of Socket.IO:</h4>
 
@@ -3637,23 +3629,21 @@ io.on('connection', socket -> {
 });
 </pre>
 
-<p>Both WebSockets and Socket.IO allow real-time communication between
-the client and server in web applications. WebSockets are the underlying
-protocol that enables real-time communication, while Socket.IO adds
-additional functionality and fallback handling to improve compatibility
-and the developer experience. The choice between them depends on the
-specific needs of your application and the level of abstraction you prefer
-to use.</p>
+<p>Both WebSockets and Socket.IO allow real-time communication between the client and server in web 
+applications. WebSockets are the underlying protocol that enables real-time communication, while 
+Socket.IO adds additional functionality and fallback handling to improve compatibility and the 
+developer experience. The choice between them depends on the specific needs of your application and 
+the level of abstraction you prefer to use.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk49">sk49. Canvas and WebGL</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Both Canvas and WebGL are technologies used in JavaScript to <b>render graphics in web 
-browsers</b>, but they differ in terms of functionality and complexity.</p>
+<p>Both Canvas and WebGL are technologies used in JavaScript to <b>render graphics in web browsers</b>, 
+but they differ in terms of functionality and complexity.</p>
 
-<p><b>Canvas:</b> Canvas is an HTML5 API that provides a <b>drawing area</b> in which
-2D graphics can be created using JavaScript. It is ideal for creating simple graphics, 
-visualizations, 2D games, and visual design elements on a web page. You can draw lines, 
-shapes, text, and work with images on the canvas.</p>
+<p><b>Canvas:</b> Canvas is an HTML5 API that provides a <b>drawing area</b> in which 2D graphics can 
+be created using JavaScript. It is ideal for creating simple graphics, visualizations, 2D games, and 
+visual design elements on a web page. You can draw lines, shapes, text, and work with images on the 
+canvas.</p>
  
 <h4>Features of Canvas:</h4>
 
@@ -3677,10 +3667,10 @@ shapes, text, and work with images on the canvas.</p>
 &lt;/script&gt;
 </pre>
 
-<p><b>WebGL:</b> WebGL (Web Graphics Library) is a more advanced technology
-that provides access to hardware acceleration for <b>rendering 3D graphics
-in web browsers</b>. It uses a specification similar to OpenGL and is perfect
-for creating immersive 3D experiences, complex visualizations, and 3D games.</p>
+<p><b>WebGL:</b> WebGL (Web Graphics Library) is a more advanced technology that provides access to 
+hardware acceleration for <b>rendering 3D graphics in web browsers</b>. It uses a specification 
+similar to OpenGL and is perfect for creating immersive 3D experiences, complex visualizations, 
+and 3D games.</p>
 
 <h4>Features of WebGL:</h4>
 
@@ -3702,45 +3692,39 @@ for creating immersive 3D experiences, complex visualizations, and 3D games.</p>
 &lt;/script&gt;
 </pre>
 
-<p>In summary, if you need simple 2D graphics or visual elements on your
-website, Canvas is an excellent choice. If you want to create complex 3D
-graphics, 3D games, or interactive visualizations, WebGL is the technology
-to use. Your choice will depend on the type of visual experience you want
-to provide in your web application.</p>
+<p>In summary, if you need simple 2D graphics or visual elements on your website, Canvas is an excellent 
+choice. If you want to create complex 3D graphics, 3D games, or interactive visualizations, WebGL is the 
+technology to use. Your choice will depend on the type of visual experience you want to provide in your 
+web application.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="sk50">sk50. Testing with Jest or Mocha</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>Jest and Mocha are two popular frameworks for unit and integration
-testing in JavaScript Both allow for automated testing to ensure that the
-code functions correctly and behaves as expected. However, they have
-some differences in terms of their approach and features. Here&apos;s a
+<p>Jest and Mocha are two popular frameworks for unit and integration testing in JavaScript Both 
+allow for automated testing to ensure that the code functions correctly and behaves as expected. 
+However, they have some differences in terms of their approach and features. Here&apos;s a 
 description of each:</p>
 
-<p><b>Jest:</b> Jest is a testing framework developed by Facebook. It is designed to
-be easy to set up and use, especially in projects using React. Jest includes
-many useful features, such as built-in assertions, automatic module
-mocking, and a simple structure for organizing tests. It also comes with its
-own test runner, meaning you don't need to set up an additional runner.</p>
+<p><b>Jest:</b> Jest is a testing framework developed by Facebook. It is designed to be easy to set 
+up and use, especially in projects using React. Jest includes many useful features, such as built-in 
+assertions, automatic module mocking, and a simple structure for organizing tests. It also comes with 
+its own test runner, meaning you don't need to set up an additional runner.</p>
  
 <h4>Features of Jest:</h4>
 
 <ul>
-  <li><b>Simple Configuration:</b> Jest comes with a default configuration that is 
-    suitable for most projects.</li>
-  <li><b>Assertions and Matchers:</b> Provides built-in assertions and multiple matchers 
-    to verify results.</li>
-  <li><b>Automatic Mocking:</b> Allows for automatic creation of module mocks, making it 
-    easy to simulate dependencies.</li>
-  <li><b>Snapshot Testing:</b> Enables creating snapshots of components and verifying 
-    changes in them.</li>
-  <li><b>Parallel Testing:</b> Can run tests in parallel, improving speed in Large 
+  <li><b>Simple Configuration:</b> Jest comes with a default configuration that is suitable for most 
     projects.</li>
-  <li><b>Integration with React:</b> Particularly good for React projects and has 
-    specific tools for component testing.</li>
+  <li><b>Assertions and Matchers:</b> Provides built-in assertions and multiple matchers to verify 
+    results.</li>
+  <li><b>Automatic Mocking:</b> Allows for automatic creation of module mocks, making it easy to simulate 
+    dependencies.</li>
+  <li><b>Snapshot Testing:</b> Enables creating snapshots of components and verifying changes in them.</li>
+  <li><b>Parallel Testing:</b> Can run tests in parallel, improving speed in Large projects.</li>
+  <li><b>Integration with React:</b> Particularly good for React projects and has specific tools for 
+    component testing.</li>
 </ul>
 
-<p><b>Example with Jest:</b> Let&apos;s assume we want to test a simple function that adds two 
-numbers:</p>
+<p><b>Example with Jest:</b> Let&apos;s assume we want to test a simple function that adds two numbers:</p>
 
 <pre>
 // math.js
@@ -3762,9 +3746,8 @@ test('Correctly adds negative numbers', () =&gt; {
 });
 </pre>
 
-<p>In this example, we are using Jest for testing along with Jest&apos;s built-in
-assertions. In the second example, we use Mocha, Chai for assertions, and
-Sinon for HTTP request mocking.</p>
+<p>In this example, we are using Jest for testing along with Jest&apos;s built-in assertions. In 
+the second example, we use Mocha, Chai for assertions, and Sinon for HTTP request mocking.</p>
 
 <p><b>Mocha:</b> Mocha is a more flexible and extensible testing framework compared to 
 Jest. It focuses on providing a solid structure for writing tests and allows developers 
@@ -5979,8 +5962,8 @@ position.</p>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <h2 id="el43">el43. Drawing on Canvas: Shapes</h2>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<p>The trapezoid (1) is easiest to draw using a path. Pick suitable center coordi-
-nates and add each of the four corners around the center.</p>
+<p>The trapezoid (1) is easiest to draw using a path. Pick suitable center coordinates and add each 
+of the four corners around the center.</p>
 
 <p>The diamond (2) can be drawn the straightforward way, with a path, or the
 interesting way, with a rotate transformation. To use rotation, you will have to
